@@ -1,0 +1,143 @@
+{
+  "certificate_count": 656,
+  "certificate_kinds": {
+    "LEAF": 168,
+    "ROOT": 488
+  },
+  "coverage_input_sha256_observed": "ed317be035941cd22eae0272bd703ea7caef4e337e3795e884ae1df9d3e84d28",
+  "coverage_input_sha256_recorded": "ed317be035941cd22eae0272bd703ea7caef4e337e3795e884ae1df9d3e84d28",
+  "created_at": "2026-09-02T22:23:24+02:00",
+  "format": "CONWAY99-O3-TASK03-FINAL-AUDIT-1",
+  "freeze_started_at": "2026-09-02T22:23:25+02:00",
+  "fresh_coverage_checker": {
+    "command": [
+      "/home/rb/miniforge3/bin/python3",
+      "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_coverage_check_1_1.py",
+      "--manifest",
+      "/home/rb/conway99_workspace/o3_qsat_runs/task03_fullcert_1.1_20260829/certificate_manifest.json"
+    ],
+    "exitcode": 0,
+    "stderr": "",
+    "stdout": "COVERAGE_CHECK_OK mode=LEMMA_CNF roots=512 direct488=488 hard24=24 hard_direct=4 hard_by_leaves=20 eo_groups_used=16\n"
+  },
+  "hard_fail": [],
+  "largest_gzip_proof": {
+    "bytes_observed": 45198735325,
+    "gib_observed": 42.09460255224258,
+    "key": "LEAF_D1_001000000_001"
+  },
+  "largest_raw_proof": {
+    "bytes_recorded": 136270294564,
+    "gib_recorded": 126.91160157695413,
+    "key": "LEAF_D1_001000000_001"
+  },
+  "lemma_coverage_complete": true,
+  "manifest_format": "O3-QSAT-TASK03-FULLCERT-MANIFEST-1.1",
+  "manifest_phase": "LEMMA_CNF_CERTIFIED",
+  "modular_state_counts": {
+    "CERTIFIED": 656
+  },
+  "pass": true,
+  "proof_total_gzip_bytes_observed": 215565834084,
+  "proof_total_gzip_gib_observed": 200.76132759824395,
+  "proof_total_raw_bytes_recorded": 700098914068,
+  "proof_total_raw_gib_recorded": 652.0179231353104,
+  "relevant_process_snapshot": [
+    "   4728     298 S     209016 python3 ./task03_endgame_report_10m_20260831.py"
+  ],
+  "reporter_freeze_action": {
+    "detail": "reporter pid 4728 stopped after audit PASS",
+    "found": true,
+    "stopped": true
+  },
+  "roundtrip_metadata_missing_count": 0,
+  "roundtrip_metadata_ok_count": 656,
+  "scientific_active_processes": [],
+  "scope": {
+    "full_fpf_exclusion_requires_remaining_types": true,
+    "no_claim_about_asymmetric_graphs_or_total_existence": true,
+    "symmetry_case": "type (6,3^7) at tau=6",
+    "tau6_focus_condition": "documented a1=18 conditionality; later tau in {13,20,27}"
+  },
+  "source_cnf": "/home/rb/conway99_workspace/o3_qsat_runs/task03_lemma_rescout_20260828/source_task03_triangle_eo.cnf",
+  "source_cnf_sha256_observed": "aa53a775d986f0aaff08aa968eaf7b98660b9038a8d2a122b0eb583a3200e3b1",
+  "source_cnf_sha256_recorded": "aa53a775d986f0aaff08aa968eaf7b98660b9038a8d2a122b0eb583a3200e3b1",
+  "stage1_claim": "source_task03_triangle_eo.cnf is UNSAT",
+  "stage2_claim_label": "machine-verified modulo documented Lemma-B transfer",
+  "state_phase": "LEMMA_CNF_CERTIFIED",
+  "state_stop_reason": null,
+  "toolchain": [
+    {
+      "match": true,
+      "name": "cadical",
+      "path_recorded": "/home/rb/.local/bin/cadical",
+      "sha256_observed": "d24720982bdd81989212ba786e3005b2e6f481101967a250d4bfdd69973d8fad",
+      "sha256_recorded": "d24720982bdd81989212ba786e3005b2e6f481101967a250d4bfdd69973d8fad"
+    },
+    {
+      "match": true,
+      "name": "cake_lpr",
+      "path_recorded": "/home/rb/conway99_workspace/conway99_o3_qsat_preflight_0.1.12/dependencies/bin/cake_lpr",
+      "sha256_observed": "e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a",
+      "sha256_recorded": "e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a"
+    },
+    {
+      "match": true,
+      "name": "lrat-check",
+      "path_recorded": "/home/rb/.local/bin/lrat-check",
+      "sha256_observed": "49f0bf5b418fec38dad3a199a9ae7eb52a4617269a6d360d49d3f580a9b98dfa",
+      "sha256_recorded": "49f0bf5b418fec38dad3a199a9ae7eb52a4617269a6d360d49d3f580a9b98dfa"
+    }
+  ],
+  "used_sources": [
+    {
+      "bytes": 8015,
+      "name": "task03_coverage_check_1_1.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_coverage_check_1_1.py",
+      "sha256": "d75e5c963b7231e3e02948192a4b518e919b14970fa167e0f28a12403b865577"
+    },
+    {
+      "bytes": 87387,
+      "name": "task03_fullcert_1_1_salvage_v4_floor70_20260830.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_fullcert_1_1_salvage_v4_floor70_20260830.py",
+      "sha256": "b6ed077948ab8e3027c280254b8a620792439843f77fd9959b0bafcae1bb56e1"
+    },
+    {
+      "bytes": 4881,
+      "name": "task03_fullcert_1_1_endgame_notimeout_20260830.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_fullcert_1_1_endgame_notimeout_20260830.py",
+      "sha256": "b4689a1ff6b47a6c9a9ba5982731757a1d0855d3bae64bdb2d8af0682cae33e5"
+    },
+    {
+      "bytes": 5700,
+      "name": "task03_fullcert_1_1_endgame_5plus3_20260831.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_fullcert_1_1_endgame_5plus3_20260831.py",
+      "sha256": "ac3b3e9acdc89be531cdd3d523ffc43dd810589a88389f9a647639dafa31c8c4"
+    },
+    {
+      "bytes": 7911,
+      "name": "task03_endgame_report_10m_20260831.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_endgame_report_10m_20260831.py",
+      "sha256": "cae7af5fb6234f886efd19905f50bebfd02da75b83c550656dbf85f71c9a0e51"
+    },
+    {
+      "bytes": 6853,
+      "name": "task03_rescue_cake16_20260831.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_rescue_cake16_20260831.py",
+      "sha256": "c7766c6fd291ab762c498c08793cd9375d39a7cb5ada5c21fecf07fe9371fc1b"
+    },
+    {
+      "bytes": 8422,
+      "name": "task03_endgame_resume16_20260901.py",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/task03_endgame_resume16_20260901.py",
+      "sha256": "966f88ee383857b40dfa40184135fe58084ab8636628418c7af23094c7ccb316"
+    },
+    {
+      "bytes": 154,
+      "name": "cake_lpr_16g_wrapper_20260901.sh",
+      "path": "/home/rb/conway99_workspace/conway99_o3_lemma_1.0/cake_lpr_16g_wrapper_20260901.sh",
+      "sha256": "336dca0ae6190ad2906bdd0f88e6dd99c82295dd35aa77efd33122da2cbde415"
+    }
+  ],
+  "warnings": []
+}

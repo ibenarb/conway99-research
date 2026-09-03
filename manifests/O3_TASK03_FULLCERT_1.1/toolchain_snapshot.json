@@ -1,0 +1,63 @@
+{
+  "audit": {
+    "certificate_count": 656,
+    "fresh_coverage_checker_exitcode": 0,
+    "pass": true,
+    "state_phase": "LEMMA_CNF_CERTIFIED"
+  },
+  "execution_profiles": {
+    "cadical_lrat": [
+      "--lrat",
+      "--no-binary"
+    ],
+    "cake_lpr_rescue": {
+      "environment_parsed": {
+        "CML_HEAP_SIZE": 16384,
+        "CML_STACK_SIZE": 4096
+      },
+      "scope_note": "Rescue profile for exceptional large-proof CakeML checks.",
+      "wrapper": "cake_lpr_16g_wrapper_20260901.sh",
+      "wrapper_sha256": "336dca0ae6190ad2906bdd0f88e6dd99c82295dd35aa77efd33122da2cbde415"
+    }
+  },
+  "format": "CONWAY99-O3-TASK03-TOOLCHAIN-SNAPSHOT-1",
+  "freeze_id": "O3_TASK03_FULLCERT_1.1_20260902",
+  "frozen_sources": {
+    "AUDIT/final_audit.json": {
+      "sha256": "e15806b6dfa7184c94d14f3e5658f39d5208ced71f1c95786aaf190622abe943"
+    },
+    "PROVENANCE/run_top_level/toolchain.json": {
+      "sha256": "6e45ba3d335633add203f2c4b9f878bdfb913c6293b1779c4f6c68e111f755f9"
+    },
+    "SOURCE/used/cake_lpr_16g_wrapper_20260901.sh": {
+      "sha256": "336dca0ae6190ad2906bdd0f88e6dd99c82295dd35aa77efd33122da2cbde415"
+    }
+  },
+  "purpose": "Proof-free verifier provenance for Git milestone o3-task03-fullcert-1.1",
+  "tools": {
+    "cadical": {
+      "audit_match": true,
+      "audit_sha256_observed": "d24720982bdd81989212ba786e3005b2e6f481101967a250d4bfdd69973d8fad",
+      "bytes_recorded": 1715128,
+      "path_recorded": "/home/rb/.local/bin/cadical",
+      "sha256_recorded": "d24720982bdd81989212ba786e3005b2e6f481101967a250d4bfdd69973d8fad",
+      "version_output_recorded": "2.2.1"
+    },
+    "cake_lpr": {
+      "audit_match": true,
+      "audit_sha256_observed": "e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a",
+      "bytes_recorded": 571952,
+      "path_recorded": "/home/rb/conway99_workspace/conway99_o3_qsat_preflight_0.1.12/dependencies/bin/cake_lpr",
+      "sha256_recorded": "e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a",
+      "version_output_recorded": "c Input file: --version no such file or directory"
+    },
+    "lrat-check": {
+      "audit_match": true,
+      "audit_sha256_observed": "49f0bf5b418fec38dad3a199a9ae7eb52a4617269a6d360d49d3f580a9b98dfa",
+      "bytes_recorded": 22064,
+      "path_recorded": "/home/rb/.local/bin/lrat-check",
+      "sha256_recorded": "49f0bf5b418fec38dad3a199a9ae7eb52a4617269a6d360d49d3f580a9b98dfa",
+      "version_output_recorded": "c expecting proof in stdin\nCouldn't open file '--version'"
+    }
+  }
+}

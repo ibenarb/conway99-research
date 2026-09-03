@@ -1,0 +1,611 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newcommand{\srg}{\operatorname{srg}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\taskthree}{\textsc{Task 03}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{\textbf{Conway 99}\\Statusbericht des Projekts\\[2mm]
+\large Revidierte Fassung nach Peer-Review}
+\author{}
+\date{Stand: 3. September 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Dieser Bericht fasst den bisherigen Stand unseres Projekts zum Conway-99-Problem zusammen. Er trennt bewusst zwischen publizierter bzw.\ standardtheoretischer Grundlage, eigenen mathematischen Ableitungen, explorativen Rechenexperimenten und vollständig zertifizierten Resultaten. Die Fassung wurde nach einem projektinternen Peer-Review durch ClaudeAI überarbeitet. Der Reviewer hat die im ersten Statusbericht aufgelisteten zwanzig Kernbehauptungen unabhängig nachgerechnet und keine Zahlenfehler gefunden, zugleich aber mehrere Begründungs-, Provenienz- und Scope-Punkte präzisiert.
+
+Der gegenwärtig wichtigste abgeschlossene Meilenstein ist der Ausschluss des fixpunktfreien Ordnung-$3$-Quotiententyps $(6,3^7)$ bei $\tau=6$. Dabei ist zwischen zwei Stufen zu unterscheiden: Erstens ist die lemma-verstärkte CNF \code{source\_task03\_triangle\_eo.cnf} durch 656 modulare LRAT-Zertifikate vollständig maschinell als unerfüllbar zertifiziert. Zweitens folgt daraus zusammen mit dem mathematischen Lemma-B-Transfer, dass kein entsprechender Ordnung-$3$-Quotient existiert. Der Meilenstein ist durch unabhängige Coverage-Prüfung, zwei Proof-Checker, vollständigen Hash-Audit, einen unveränderlichen Freeze und eine extern verifizierte Sicherung dokumentiert. Er ist ein echter Ausschlusssatz für einen Teilraum des Problems, aber ausdrücklich kein Nichtexistenzbeweis für den Conway-99-Graphen.
+\end{abstract}
+
+\section{Ziel, Scope und Evidenzklassen}
+
+Gesucht ist ein stark regulärer Graph
+\[
+G=\srg(99,14,1,2).
+\]
+Das allgemeine Existenzproblem ist nach aktuellem publiziertem Stand weiterhin offen \cite{CesarzWoldar2025}. Ein zweiter, hiervon logisch unabhängiger Motivationsstrang unseres Projekts ist die Frage, ob ein solcher Graph zusätzlich als $1$-Skelett eines einfachen konvexen $14$-Polytops auftreten könnte.
+
+Für diesen Bericht unterscheiden wir vier Evidenzklassen:
+\begin{description}[style=nextline,leftmargin=0mm]
+\item[Publizierte bzw.\ Standardtheorie.]
+Allgemeine SRG-Identitäten, Spektraltheorie und publizierte Aussagen über Automorphismen.
+\item[Eigene mathematische Ableitung.]
+Formale Folgerungen aus den SRG- und Quotientengleichungen, insbesondere Blockgleichungen, Zyklusrestriktionen und Lemma B.
+\item[Explorative Rechnung.]
+Scouts, Timeouts, CP-SAT-, memetische und sonstige Suchläufe ohne vollständige Zertifikatskette. Sie dienen zur Strukturfindung, nicht als Beweis.
+\item[Zertifizierte Rechnung.]
+Nur Aussagen, deren vollständige SAT-Fallabdeckung vorliegt und deren UNSAT-Teile durch die dokumentierte LRAT-Prüfkette verifiziert wurden.
+\end{description}
+
+Diese Trennung ist zentral: Ein Solver-UNSAT, ein plausibler Suchausschluss und ein formal geprüftes Zertifikat sind verschiedene Aussageklassen.
+
+\section{Algebraische Grundstruktur}
+
+Für die Adjazenzmatrix $A$ eines $\srg(v,k,\lambda,\mu)$ gilt
+\[
+A^2=(k-\mu)I+(\lambda-\mu)A+\mu J.
+\]
+Für die Conway-Parameter folgt
+\[
+\boxed{A^2+A=12I+2J.}
+\]
+Damit ist das Graphproblem äquivalent zu einem symmetrischen $0$-$1$-Matrizenproblem mit Null-Diagonale, Zeilensumme $14$ und dieser quadratischen Matrixgleichung.
+
+Die nichttrivialen Eigenwerte sind die Nullstellen von
+\[
+x^2+x-12=0,
+\]
+also $3$ und $-4$. Die Vielfachheiten ergeben
+\[
+\operatorname{Spec}(A)=\{14^1,3^{54},(-4)^{44}\}.
+\]
+
+\subsection{Root-Zerlegung $1+14+84$}
+
+Fixiert man einen Knoten $v$, so zerfallen die übrigen $98$ Knoten in $14$ Nachbarn und $84$ Nichtnachbarn. Wegen $\lambda=1$ besitzt jeder Nachbar von $v$ innerhalb $N(v)$ genau einen Nachbarn. Der lokale Graph ist daher
+\[
+G[N(v)]\cong 7K_2.
+\]
+Mit geeigneter Nummerierung:
+\[
+A=
+\begin{pmatrix}
+0 & \mathbf 1^T & 0\\
+\mathbf 1 & C & P\\
+0 & P^T & H
+\end{pmatrix},
+\]
+wobei $C$ die Adjazenzmatrix des perfekten Matchings $7K_2$ ist.
+
+Aus den Parametern folgen die Margins
+\[
+P\mathbf 1=12\mathbf 1,\qquad
+P^T\mathbf 1=2\mathbf 1,\qquad
+H\mathbf 1=12\mathbf 1.
+\]
+Das heißt: Jede der $14$ Zeilen von $P$ enthält $12$ Einsen, jede der $84$ Spalten genau $2$ Einsen und jede Zeile von $H$ genau $12$ Einsen.
+
+Da $C^2=I$, liefert die Blockauswertung von $A^2+A=12I+2J$:
+\[
+\boxed{PP^T=11I+J-C,}
+\]
+\[
+\boxed{CP+PH+P=2J,}
+\]
+\[
+\boxed{P^TP+H^2+H=12I+2J.}
+\]
+Die Marginbedingungen sind also nur der lineare Rand des Problems; die eigentliche Starrheit liegt in den quadratischen Bedingungen für gemeinsame Nachbarn.
+
+\section{Literaturstand zu Automorphismen}
+
+Die Symmetrierichtung unseres Projekts baut auf publizierten Vorarbeiten auf. Behbahani und Lam entwickelten Orbitmatrixmethoden für SRGs mit vorgegebener Primordnungsautomorphie \cite{BehbahaniLam2011}. Crnković und Maksimović übernehmen für den Conway-99-Fall insbesondere die Aussage, dass bei einer Automorphie der Ordnung $3$ keine Fixpunkte auftreten; sie zeigen außerdem, dass Automorphismengruppen der Ordnungen $6$ und $9$ in den von ihnen untersuchten Formen nicht auftreten \cite{CrnkovicMaksimovic2020}. Die Fixpunktfreiheit ist daher \emph{kein} eigenes Projektresultat, sondern ein publizierter Eingangssatz.
+
+Makhnev und Minakova untersuchten mögliche Automorphismen für Parameter $\lambda=1,\mu=2$ und leiteten Gruppeneinschränkungen ab \cite{MakhnevMinakova2004}. Cesarz und Woldar geben 2025 neue computerfreie Beweise zu Teilen der Automorphismenstruktur; insbesondere gilt nach ihrem Resultat: ist $2\mid|\Aut(G)|$, so teilt $|\Aut(G)|$ die Zahl $6$, und aus $7\mid|\Aut(G)|$ folgt $\Aut(G)\cong\mathbb Z_7$ \cite{CesarzWoldar2025}.
+
+Für ein späteres Asymmetrieargument werden wir die exakten Literaturvoraussetzungen erneut quellengetreu auditieren. Insbesondere soll nicht aus verkürzten Sekundärzitaten vorschnell geschlossen werden, der Ausschluss der Ordnungen $2$ und $3$ allein erzwinge bereits $\Aut(G)=1$. Die Literaturrestriktionen werden im Projekt als \emph{externe Eingaben} gekennzeichnet und erst nach einem gesonderten Quellen-Audit in einen Endsatz eingebaut.
+
+\section{Geometrisch motivierter Defektzweig}
+
+Jede Nichtkante eines $\srg(99,14,1,2)$ besitzt genau zwei gemeinsame Nachbarn. Die Zahl der Kanten beträgt
+\[
+E=\frac{99\cdot14}{2}=693,
+\]
+also gibt es
+\[
+\binom{99}{2}-693=4158
+\]
+Nichtkanten. Jede Nichtkante bestimmt zusammen mit ihren beiden gemeinsamen Nachbarn einen $4$-Zyklus; jeder $4$-Zyklus hat zwei Nichtkanten-Diagonalen. Damit ergeben sich
+\[
+\frac{4158}{2}=2079
+\]
+Vierzyklen.
+
+Für die zusätzliche Polytop-Hypothese wurde $q$ als Zahl der Vierzyklen betrachtet, die tatsächlich $2$-Flächen begrenzen, und
+\[
+\delta:=2079-q
+\]
+als Defekt eingeführt.
+
+\subsection{Wichtige Voraussetzung der Flächenidentität}
+
+Die im Projekt benutzte Identität
+\[
+\sum_{|F|\ge5}|F|=4\delta
+\]
+ist \emph{bedingt}. Sie setzt voraus, dass im betrachteten polytopalen Teilfall jedes der $231$ Graphdreiecke tatsächlich eine $2$-Fläche berandet, also $n_3=231$. Die SRG-Bedingung $\lambda=1$ garantiert zwar die Eindeutigkeit eines Graphdreiecks zu jeder Kante, aber nicht allein die Umkehrung ``jedes Graphdreieck ist eine $2$-Fläche''.
+
+Unter dieser Zusatzannahme gilt für ein einfaches $14$-Polytop:
+\[
+\sum_F |F|=99\binom{14}{2}=9009.
+\]
+Mit $n_3=231$ und $n_4=q=2079-\delta$ folgt
+\[
+\sum_{|F|\ge5}|F|
+=9009-3\cdot231-4(2079-\delta)
+=4\delta.
+\]
+Der untersuchte Fall $\delta=5$ war daher ein stark verengter \emph{geometrischer Spezialzweig}. Mehrere SAT-/CP-SAT-Signale waren dort negativ; sie sind jedoch kein globaler Nichtexistenzbeweis für den SRG.
+
+\section{Memetischer Zweig und Grad-erhaltende Switches}
+
+Parallel wurde ein konstruktiv-heuristischer Ansatz für $H$ untersucht. Einzelne Matrixeinträge können nicht beliebig geflippt werden, wenn die $12$ Einsen pro Zeile und Spalte erhalten bleiben sollen.
+
+Der elementare Operator ist ein $2$-Switch auf vier Knoten $a,b,c,d$: Zwei vorhandene und zwei fehlende ungeordnete Knotenpaare entlang eines alternierenden $4$-Zyklus werden vertauscht. Damit ändern sich \emph{vier ungeordnete Knotenpaare}; in der vollständigen symmetrischen Matrix sind dies \emph{vier symmetrische Positionspaare, also acht Matrixeinträge}. In der oberen Dreieckshälfte erscheinen entsprechend vier Flips.
+
+Längere gerade alternierende Zyklen verallgemeinern diesen Operator. Solche Switches erhalten die Gradfolge und damit die $12$-Regularität von $H$, aber nicht automatisch die SRG-Bedingungen für gemeinsame Nachbarn. Der memetische Zweig bleibt deshalb ausdrücklich heuristisch und wird vom Zertifizierungszweig getrennt geführt.
+
+\section{Ordnung-$3$-Quotienten}
+
+Nach \cite{BehbahaniLam2011,CrnkovicMaksimovic2020} ist eine Ordnung-$3$-Automorphie im hypothetischen Conway-99-Graphen fixpunktfrei. Die $99$ Knoten zerfallen folglich in
+\[
+33
+\]
+Orbits der Größe $3$.
+
+Die Quotientenanalyse führt auf
+\[
+\boxed{\tau\in\{6,13,20,27\}.}
+\]
+Eine nützliche Konsistenzrechnung ist die Spurbeziehung
+\[
+14+3a-4b=2\tau,\qquad a+b=32,
+\]
+woraus
+\[
+a=\frac{2\tau+114}{7}
+\]
+folgt. Ganzzahligkeit erzwingt $\tau\equiv6\pmod 7$, und im zulässigen Bereich bleiben genau die vier Werte oben.
+
+Im Fall $\tau=6$ verbleibt ein Hilfsgraph $L$ auf $27$ Nicht-Dreieckorbits, der $2$-regulär ist. Sein Typ ist daher eine Partition von $27$ in Zykluslängen $\ge3$.
+
+\subsection{Zyklustypen}
+
+Die projektinterne Enumeration, im Peer-Review erneut unabhängig nachgerechnet, ergibt:
+\[
+\begin{array}{c|r|r}
+\tau & \text{alle Typen} & \text{$C_4$-frei}\\
+\hline
+6  & 191 & 103\\
+13 & 49  & 28\\
+20 & 10  & 6\\
+27 & 2   & 2\\
+\hline
+\text{gesamt} & 252 & 139
+\end{array}
+\]
+
+\subsection{Ausschluss von $C_4$-Komponenten}
+
+Seien $x,y$ gegenüberliegende Knoten einer $C_4$-Komponente von $L$. Sie besitzen zwei gemeinsame $L$-Nachbarn. Jeder dieser Nachbarn trägt in der Quotientenquadratik mit Gewicht $2\cdot2=4$ zu $(Q^2)_{xy}$ bei. Daher
+\[
+(Q^2)_{xy}\ge8.
+\]
+Für dieses Paar verlangt die Quotientengleichung jedoch
+\[
+(Q^2)_{xy}+q_{xy}=6,\qquad q_{xy}\ge0,
+\]
+ein Widerspruch. Somit sind sämtliche $C_4$-haltigen Zyklustypen ausgeschlossen.
+
+\subsection{Lemma B: Exact-One an Dreieckskomponenten}
+
+\paragraph{Lemma B.}
+Sei $T=\{t_1,t_2,t_3\}$ eine $C_3$-Komponente von $L$. Dann besitzt jeder der übrigen $30$ Quotientenknoten \emph{genau eine} $S$-Kante nach $T$.
+
+\paragraph{Bemerkung zur Reichweite.}
+Das Lemma ist nicht auf $\tau=6$ beschränkt. Es gilt in der verwendeten Quotientenstruktur für jedes zulässige $\tau$ und jede $C_3$-Komponente von $L$.
+
+\paragraph{Beweis.}
+Für zwei in $L$ benachbarte Dreiecksknoten $t_i,t_j$ ist der zulässige gemeinsame Beitrag in der Paargleichung bereits durch den dritten Dreiecksknoten ausgeschöpft. In der im Projekt verwendeten Gewichtung steht rechts
+\[
+6-4\cdot1-2\cdot1=0.
+\]
+Alle verbleibenden Beiträge sind nichtnegativ. Daher können $t_i$ und $t_j$ keinen gemeinsamen $S$-Nachbarn außerhalb des Dreiecks haben. Ein Außenknoten ist somit mit höchstens einem der drei Dreiecksknoten durch $S$ verbunden.
+
+Jeder Dreiecksknoten hat $S$-Grad $10$; innerhalb der $L$-Dreieckskomponente liegen keine $S$-Kanten. Also verlassen insgesamt
+\[
+3\cdot10=30
+\]
+$S$-Kanten das Dreieck. Es gibt genau $33-3=30$ Außenknoten, jeder mit Kapazität höchstens $1$. Folglich trifft jeder Außenknoten genau einmal nach $T$.
+\hfill$\square$
+
+Für den Typ $(6,3^7)$ ergeben sieben Dreieckskomponenten
+\[
+7\cdot30=210
+\]
+Exact-One-Gruppen.
+
+\section{\taskthree: Exploration, Zerlegung und Coverage}
+
+Der untersuchte Typ ist
+\[
+(6,3^7),\qquad \tau=6.
+\]
+
+\subsection{Herkunft der $512$ Roots}
+
+Die $C_6$-Komponente enthält $\binom62-6=9$ ungeordnete Paare, die keine $L$-Kanten sind. Die binäre Festlegung dieser neun Root-Entscheidungen erzeugt
+\[
+2^9=512
+\]
+disjunkte Root-Cubes und damit eine vollständige Partition der Quell-CNF.
+
+Der Re-Scout ergab:
+\[
+488
+\]
+direkt behandelbare Roots und
+\[
+24
+\]
+schwere Roots.
+
+\subsection{Propositionales Überdeckungsargument}
+
+Jeder schwere Knoten wurde an einer Exact-One-Gruppe verzweigt. Die ALO- und AMO-Klauseln dieser Gruppe stehen bereits syntaktisch in der Eltern-CNF. Für drei Boolesche Variablen sind daher genau die drei Muster
+\[
+001,\qquad010,\qquad100
+\]
+zulässig. Diese drei Kinder partitionieren die Modellmenge des Elternknotens exakt.
+
+Dasselbe Argument wird rekursiv auf jeden Timeout-Innenknoten angewandt. Die vollständige Verzweigung der $24$ schweren Roots endet in $168$ terminalen Leaves. Folglich gilt rein aussagenlogisch:
+\[
+\left(
+\bigwedge_{\text{488 direkte Roots}}\mathrm{UNSAT}
+\right)
+\wedge
+\left(
+\bigwedge_{\text{168 terminale Leaves}}\mathrm{UNSAT}
+\right)
+\Longrightarrow
+\mathrm{UNSAT}(\text{Quell-CNF}).
+\]
+Der Coverage-Checker trägt hierbei keine zusätzliche mathematische Beweislast; er prüft mechanisch, dass genau diese Partition und Eltern-Kind-Zuordnung vollständig und ohne Lücke vorliegt.
+
+Damit waren
+\[
+488+168=\boxed{656}
+\]
+modulare Teilprobleme vollständig zu zertifizieren.
+
+\section{Vollzertifizierung}
+
+\subsection{Proof-Kette}
+
+Für jedes der $656$ Teilprobleme wurde dieselbe Kette verwendet:
+\[
+\text{CaDiCaL 2.2.1}
+\longrightarrow
+\text{LRAT}
+\longrightarrow
+\code{lrat-check}
+\longrightarrow
+\code{cake\_lpr}.
+\]
+CaDiCaL lief mit
+\[
+\code{--lrat --no-binary}.
+\]
+Ein Solver-Resultat wurde erst akzeptiert, wenn beide nachgelagerten Prüfer erfolgreich waren und die Artefakte samt Hashbindungen persistiert waren.
+
+Die Runner der FULLCERT-1.1-Familie erfassen für CaDiCaL, \code{lrat-check} und \code{cake\_lpr} jeweils Pfad, Dateigröße, SHA256 und Versionsausgabe in \code{toolchain.json}. Der Abschlussaudit prüfte diese Tool-Hashes erneut. Vor dem Git-Meilenstein soll dieser kompakte Toolchain-Datensatz explizit in den proof-freien Export übernommen werden, damit die Prüferidentität ohne Zugriff auf das 206-GiB-Archiv sichtbar bleibt.
+
+\subsection{Technische Grenzfälle und Lernpunkte}
+
+Ein schwerer Leaf erzeugte einen rohen LRAT-Proof von etwa $59.5$ GiB. \code{lrat-check} verifizierte ihn; \code{cake\_lpr} scheiterte zunächst an zu kleinem Heap und bestand anschließend mit vergrößerter CakeML-Konfiguration
+\[
+\code{CML\_HEAP\_SIZE=16384},
+\]
+im Rescue-Lauf zusammen mit vergrößertem Stack.
+
+Der letzte besonders schwere Leaf lief mehr als einen Tag und erzeugte einen rohen Proof von über $125$ GiB. Diese Fälle führten zu einer wichtigen Prozesskorrektur: starre Wallclock-Timeouts sind für deterministische Zertifizierungs- und Read-only-Prüfschritte kein geeigneter Sicherheitsmechanismus. Im Endgame wurde daher nur noch bei echten Fehlern oder Ressourcengefahr abgebrochen.
+
+\section{Abgeschlossenes Resultat: zwei Stufen}
+
+Am Ende standen
+\[
+\boxed{656/656\ \text{CERTIFIED}}
+\]
+und
+\[
+\code{phase=LEMMA\_CNF\_CERTIFIED}.
+\]
+
+\subsection*{Stufe 1: vollständig maschinell verifiziert}
+
+Die CNF
+\[
+\boxed{\code{source\_task03\_triangle\_eo.cnf}}
+\]
+ist unerfüllbar. Die Beweisbasis besteht aus den $656$ modularen LRAT-Zertifikaten und dem oben dargestellten propositionalen Überdeckungsargument.
+
+\subsection*{Stufe 2: Kompositsatz}
+
+Lemma B ist eine bewiesene notwendige Quotientenbedingung. Daher folgt aus Stufe 1:
+\[
+\boxed{\text{Kein fixpunktfreier Ordnung-$3$-Quotient vom Typ $(6,3^7)$ bei $\tau=6$.}}
+\]
+Das korrekte Beweisetikett lautet:
+\[
+\text{\emph{machine-verified modulo documented Lemma-B transfer}.}
+\]
+
+Zusammen mit dem bereits früher zertifizierten Typ $3^9$ sind damit zwei der $103$ $C_4$-freien $\tau=6$-Typen ausgeschlossen. Es verbleiben dort $101$ Typen. Ohne zusätzliche Reduktion auf $\tau=6$ verbleiben in der gegenwärtigen Typzählung
+\[
+101+28+6+2=137
+\]
+$C_4$-freie Ordnung-$3$-Typen.
+
+\subsection{Was daraus nicht folgt}
+
+Der Task-03-Abschluss beweist nicht
+\begin{itemize}[nosep]
+\item die Nichtexistenz eines $\srg(99,14,1,2)$,
+\item den Ausschluss aller Ordnung-$3$-Automorphismen,
+\item die Asymmetrie eines hypothetischen Conway-99-Graphen,
+\item die Nichtexistenz einer polytopalen Realisierung.
+\end{itemize}
+
+\section{Audit, Freeze und Datensicherung}
+
+Nach Abschluss der $656$ Zertifikate wurde ein frischer Read-only-Audit ausgeführt. Er prüfte unter anderem:
+\begin{itemize}[nosep]
+\item Phase, Zustands- und Manifestkonsistenz,
+\item vollständige Coverage,
+\item alle $656$ persistierten \code{proof.lrat.gz} gegen Größe und SHA256,
+\item alle $656$ Zertifikats-CNFs gegen SHA256,
+\item die Checker-Exitcodes,
+\item Toolchain- und Quellhashes.
+\end{itemize}
+
+Der unabhängige Coverage-Lauf dekomprimierte die Proofarchive zur Kontrolle der aufgezeichneten Roh-Proof-SHA256. Der finale Audit endete mit
+\[
+\boxed{\code{AUDIT=PASS}}
+\]
+und ohne Warnungen. Damit liegt für alle $656$ finalen Zertifikate sowohl eine geprüfte gzip-Identität als auch die im Coverage-Lauf überprüfte Roh-Proof-Hashbindung vor.
+
+Der Zustand wurde eingefroren als
+\[
+\code{O3\_TASK03\_FULLCERT\_1.1\_20260902}
+\]
+mit
+\[
+\begin{aligned}
+\code{FREEZE\_MANIFEST\_SHA256}&={}\\[-1mm]
+&\code{8b438597af7199038fcc1de9e0bdff8ea706fff68544d54ec97c52e7d92b79d7}.
+\end{aligned}
+\]
+Das External-Archive-Manifest umfasst
+\[
+1313
+\]
+Einträge und
+\[
+206.19\ \mathrm{GiB}.
+\]
+Eine erste externe Kopie auf das Heim-NAS wurde vollständig erstellt und anschließend unabhängig geprüft:
+\[
+\boxed{1313/1313\ \mathrm{PASS}.}
+\]
+Eine zweite physisch unabhängige Kopie auf das Firmen-NAS ist vorgesehen; wegen der getrennten Netze soll sie voraussichtlich über ein Carrier-Laufwerk erfolgen. Die WSL-Originale werden bis zur erfolgreichen Verifikation dieser zweiten Kopie nicht gelöscht.
+
+\section{Peer-Review-Prozess}
+
+Die folgenden Reviews wurden projektintern mit \textbf{ClaudeAI} als Peer-Reviewer durchgeführt. Es handelt sich um ein unabhängiges AI-gestütztes Projekt-Review, \emph{nicht} um ein formales Journal-Peer-Review. Der Reviewer erhielt jeweils eingefrorene Pakete bzw.\ Quell- und Hashartefakte und wurde ausdrücklich angewiesen, zentrale Aussagen selbst nachzurechnen.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{20mm} >{\raggedright\arraybackslash}p{38mm} >{\raggedright\arraybackslash}p{85mm}}
+\toprule
+\textbf{Datum} & \textbf{Gegenstand} & \textbf{Ergebnis und Wirkung}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Datum} & \textbf{Gegenstand} & \textbf{Ergebnis und Wirkung}\\
+\midrule
+\endhead
+28.08.2026 &
+Mathematische Transferkette um Lemma B und Triangle-Exactly-One &
+Lemma B wurde als mathematischer Satz akzeptiert; die zugrunde liegenden Paargleichungen und die Gradbilanz wurden unabhängig kontrolliert. Dies legitimierte den EO-Layer als notwendige Quotientenbedingung und damit die spätere lemma-verstärkte CNF.\\[1mm]
+
+29.08.2026 &
+Task-03-Fullcert-Architektur, Encoder, Frontier und Runner &
+Der Reviewer regenerierte die Quell-CNF bitidentisch, glich alle $210$ EO-Gruppen mit Lemma B ab, rekonstruierte alle $512$ Root-CNFs und $216$ Frontier-CNFs einschließlich der $168$ Leaves ohne Hashabweichung und prüfte die Splitvariablen. Verdikt: \textbf{GO WITH FIXES}. Gefunden wurden insbesondere ein kritisches paralleles \code{cake\_lpr}-RAM-Risiko sowie mehrere Provenienz-, Fehlerpfad-, gzip-, Disk- und Coverage-Punkte. Daraus entstand FULLCERT 1.1 mit RAM-Admission/Heavy-Lane, stärkerem SAT-Witness-Pfad, gzip-Roundtrip-Prüfung, Toolchain-Hashbindung, eigenständigem Coverage-Checker und robusteren Zustandsübergängen. Die damalige Timeout-Empfehlung wurde im späteren Endgame aufgrund realer $60$--$125$-GiB-Proofs weiterentwickelt: deterministische Prüfer erhielten schließlich keine künstliche Wallclock-Grenze mehr.\\[1mm]
+
+03.09.2026 &
+Statusbericht nach abgeschlossenem Freeze &
+Der Reviewer rechnete alle $20$ Claims des Claim-Ledgers unabhängig nach und meldete \textbf{keinen Zahlenfehler}; Verdikt erneut \textbf{GO WITH FIXES}. Gefordert wurden vor allem: explizite Beweise für Coverage, Lemma B und $C_4$-Ausschluss; Zwei-Stufen-Formulierung des zertifizierten Resultats; korrekte Literaturzuschreibung der Ordnung-$3$-Fixpunktfreiheit; Korrektur der Ordnung-$2$- und 2-Switch-Formulierungen; Präzisierung der Polytop-Voraussetzung; sichtbarere Prüfer-Provenienz; sowie eine strategische Neubewertung der dreiecksarmen Typen. Diese Fassung setzt diese Punkte um.\\
+\bottomrule
+\end{longtable}
+
+Der Review-Prozess war damit nicht bloß redaktionell: Er veränderte sowohl die Beweisarchitektur als auch die Ressourcensteuerung und die wissenschaftliche Priorisierung.
+
+\section{Strategische Neubewertung nach dem Peer-Review}
+
+Der Reviewer enumerierte zusätzlich die Zahl der Dreieckskomponenten über alle $C_4$-freien Typen:
+
+\[
+\begin{array}{c|r|r|l}
+\tau & C_4\text{-frei} & \text{ohne }C_3 & \text{Verteilung der Zahl von }C_3\\
+\hline
+6 & 103 & 42 & 9{:}1,\ 7{:}1,\ 6{:}1,\ 5{:}3,\ 4{:}5,\ 3{:}9,\ 2{:}15,\ 1{:}26,\ 0{:}42\\
+13& 28  & 13 & 5{:}1,\ 4{:}1,\ 3{:}2,\ 2{:}4,\ 1{:}7,\ 0{:}13\\
+20& 6   & 3  & 2{:}1,\ 1{:}2,\ 0{:}3\\
+27& 2   & 1  & 2{:}1,\ 0{:}1\\
+\hline
+\text{gesamt}&139&59&
+\end{array}
+\]
+
+Daraus folgen zwei wichtige Korrekturen unserer Planung.
+
+Erstens besitzen
+\[
+\boxed{59/139}
+\]
+der $C_4$-freien Typen überhaupt keine Dreieckskomponente; bei weiteren $35$ Typen gibt es nur ein einziges Dreieck. Lemma B allein kann daher die Breitenkampagne nicht tragen.
+
+Zweitens sind die beiden bereits erledigten Typen strukturell besonders günstig: $3^9$ besitzt neun Dreieckskomponenten und $(6,3^7)$ sieben. Sie gehören damit zu den dreiecksreichsten Typen überhaupt. Laufzeit- oder Härteprognosen aus genau diesen beiden Fällen wären systematisch zu optimistisch.
+
+\subsection{Nächster mathematischer Schwerpunkt}
+
+Vor einer Massenzertifizierung der verbliebenen Typen sollen daher zykluslokale Gesetze für
+\[
+C_5,\ C_6,\ C_7,\ldots
+\]
+hergeleitet werden. Aus früheren Review-Arbeiten liegen insbesondere Kandidaten für Paritätsbedingungen an $C_6$ vor. Diese werden im nächsten Projektabschnitt zunächst unabhängig rederiviert, als Klauselfamilien formuliert und dann in einem billigen Breadth-Scout gemessen.
+
+Die sinnvolle Reihenfolge lautet damit:
+\begin{enumerate}[nosep]
+\item Papierableitung und mechanische Tests der $C_5$-/ $C_6$-lokalen Gesetze;
+\item Scout über die $59$ dreiecksfreien Typen mit den jeweils anwendbaren Lemma-Layern;
+\item breiter $\tau=6$-Scout zur Messung der Härte gegen Zyklus- und Dreiecksstruktur;
+\item erst danach Auswahl der nächsten Fullcert-Kandidaten;
+\item anschließend $\tau=13,20,27$;
+\item separater Ordnung-$2$-Zweig.
+\end{enumerate}
+
+\section{Ordnung $2$: korrigierte Ausgangslage}
+
+Da $99$ ungerade ist, besitzt jede Involution mindestens einen Fixpunkt. Fixieren wir einen solchen Root-Knoten $v$. Auf $N(v)\cong7K_2$ muss die Involution jedes Matching-Paar setweise erhalten oder Paare untereinander kompatibel permutieren; im einfachen Root-Fall, in dem die sieben lokalen Matching-Kanten jeweils setweise invariant betrachtet werden, treten fixe Nachbarn paarweise auf.
+
+Bezeichnen wir mit $2a$ die Zahl fixierter Nachbarn des Roots und mit $f_{\mathrm{out}}$ die Zahl fixierter Knoten im äußeren $84$-Block. Dann ist $f_{\mathrm{out}}$ gerade, und der entsprechende Orbittyp lässt sich schreiben als
+\[
+1
++(2a)\cdot1
++(7-a)\cdot2
++f_{\mathrm{out}}\cdot1
++\frac{84-f_{\mathrm{out}}}{2}\cdot2.
+\]
+Der früher genannte Typ
+\[
+1+7\cdot2+42\cdot2
+\]
+ist nur der Spezialfall $a=0$, $f_{\mathrm{out}}=0$, also genau ein Fixpunkt insgesamt. Vor einem Ordnung-$2$-Zensus muss daher zuerst die vollständige Fixpunktfallklassifikation unter Einbezug der publizierten Gruppenschranken erfolgen.
+
+\section{Git-Meilenstein: Freigabebedingungen}
+
+Der proof-freie Git-Export soll erst nach Abschluss dieses Review-Zyklus erzeugt werden. Vor dem ersten Tag
+\[
+\code{o3-task03-fullcert-1.1}
+\]
+sollen mindestens folgende Punkte erfüllt sein:
+\begin{enumerate}[nosep]
+\item diese revidierte Statusfassung und das ClaudeAI-Review werden aufgenommen;
+\item ein kompaktes Coverage-Manifest mit allen $656$ Endzertifikaten und ihrer Eltern-/Split-Zuordnung wird exportiert;
+\item der eingefrorene Toolchain-Datensatz mit Pfad, Größe, SHA256 und Versionsausgabe von CaDiCaL, \code{lrat-check} und \code{cake\_lpr} wird sichtbar in den proof-freien Export übernommen;
+\item die großen LRAT-Dateien bleiben außerhalb von Git und werden ausschließlich über Manifest, Größe und SHA256 referenziert;
+\item die WSL-Originale bleiben bestehen, bis die zweite unabhängige externe Kopie verifiziert wurde.
+\end{enumerate}
+
+\section*{Kurzfazit}
+
+Der bisherige Fortschritt besteht nicht nur in einem großen SAT-Lauf, sondern in einer inzwischen geschlossenen methodischen Kette:
+\[
+\begin{aligned}
+\text{Strukturtheorie}
+&\rightarrow \text{Quotientenreduktion}
+\rightarrow \text{lokale Lemmas}
+\rightarrow \text{modulare Zerlegung}\\
+&\rightarrow \text{LRAT-Zertifikate}
+\rightarrow \text{unabhängige Checker}
+\rightarrow \text{Coverage-Audit}
+\rightarrow \text{Freeze und Backup}.
+\end{aligned}
+\]
+
+Der Typ $(6,3^7)$ bei $\tau=6$ ist als fixpunktfreier Ordnung-$3$-Quotient ausgeschlossen, maschinell verifiziert modulo dem dokumentierten Lemma-B-Transfer. Zugleich zeigt das Peer-Review, dass die beiden bisher vollzertifizierten Typen die strukturell günstigsten, dreiecksreichsten Fälle sind. Die nächste Phase darf daher nicht als bloße Wiederholung von Task 03 geplant werden. Der wissenschaftlich aussichtsreichste Schritt ist zuerst die Herleitung zykluslokaler Gesetze für die dreiecksfreien bzw.\ dreiecksarmen Typen und erst danach eine gezielte neue Zertifizierungskampagne.
+
+\appendix
+
+\section{Drei tragende Kurzbeweise}
+
+\subsection{Coverage-Satz}
+
+Die neun binären Root-Entscheidungen partitionieren die Quell-CNF in $2^9=512$ disjunkte Root-Cubes. Für jeden der $24$ schweren Roots wird jeweils an einer syntaktisch vorhandenen Exact-One-Gruppe verzweigt. ALO+AMO lassen exakt $001,010,100$ zu; die drei Kinder partitionieren daher die Elternmodelle. Rekursive Anwendung bis zu den $168$ terminalen Leaves ergibt eine disjunkte vollständige Überdeckung. Sind die $488$ direkten Roots und alle $168$ Leaves unerfüllbar, so ist die Quell-CNF unerfüllbar.
+
+\subsection{Lemma B}
+
+Für zwei benachbarte Knoten einer $C_3$-Komponente ist in der Paargleichung der zulässige gemeinsame Beitrag bereits durch den dritten Dreiecksknoten verbraucht; alle weiteren nichtnegativen Terme müssen Null sein. Kein Außenknoten kann daher $S$-Nachbar zweier Dreiecksknoten sein. Die drei Dreiecksknoten besitzen insgesamt $30$ ausgehende $S$-Kanten und es gibt $30$ Außenknoten. Kapazität höchstens eins plus Gleichheit der Gesamtzahlen liefert genau eine $S$-Kante pro Außenknoten.
+
+\subsection{$C_4$-Ausschluss}
+
+Gegenüberliegende Knoten einer $C_4$-Komponente haben zwei gemeinsame $L$-Nachbarn. Beide liefern je $2\cdot2=4$ in $(Q^2)_{xy}$, also $(Q^2)_{xy}\ge8$. Die Quotientengleichung fordert für dieses Paar $(Q^2)_{xy}+q_{xy}=6$ mit $q_{xy}\ge0$. Widerspruch.
+
+\section{Literatur}
+
+\begin{thebibliography}{9}
+
+\bibitem{BehbahaniLam2011}
+M.~Behbahani und C.~W.~H.~Lam,
+\emph{Strongly regular graphs with non-trivial automorphisms},
+Discrete Mathematics 311 (2011), 132--144.
+DOI: \url{https://doi.org/10.1016/j.disc.2010.10.005}.
+
+\bibitem{CrnkovicMaksimovic2020}
+D.~Crnkovi\'c und M.~Maksimovi\'c,
+\emph{Construction of strongly regular graphs having an automorphism group of composite order},
+Contributions to Discrete Mathematics 15(1) (2020), 22--41.
+DOI: \url{https://doi.org/10.55016/ojs/cdm.v15i1.62323}.
+
+\bibitem{MakhnevMinakova2004}
+A.~A.~Makhnev und I.~M.~Minakova,
+\emph{On automorphisms of strongly regular graphs with the parameters $\lambda=1$ and $\mu=2$},
+Discrete Mathematics and Applications 14(2) (2004), 201--210.
+DOI: \url{https://doi.org/10.1515/156939204872374}.
+
+\bibitem{CesarzWoldar2025}
+P.~G.~Cesarz und A.~J.~Woldar,
+\emph{On the automorphism group of a putative Conway 99-graph},
+Algebraic Combinatorics 8(2) (2025), 379--398.
+DOI: \url{https://doi.org/10.5802/alco.418}.
+
+\bibitem{Wilbrink1984}
+H.~A.~Wilbrink,
+\emph{On the $(99,14,1,2)$ strongly regular graph},
+in: Papers dedicated to J.~J.~Seidel, Eindhoven University Tech. Report 84-WSK-03 (1984), 342--355.
+
+\bibitem{BrouwerVanMaldeghem2022}
+A.~E.~Brouwer und H.~Van Maldeghem,
+\emph{Strongly Regular Graphs},
+Encyclopedia of Mathematics and its Applications 182,
+Cambridge University Press, 2022.
+
+\end{thebibliography}
+
+\end{document}
