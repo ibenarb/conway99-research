@@ -1,0 +1,169 @@
+{
+  "chordless_c5": {
+    "all_d_at_most_2_possible": false,
+    "some_d_at_least_3": true,
+    "sum_choose_d_2": 30,
+    "sum_d": 50
+  },
+  "cycles": [
+    {
+      "chords": 5,
+      "distance_classes": {
+        "1": 5,
+        "2": 5
+      },
+      "local_edge_histogram": {
+        "0": 1,
+        "1": 5
+      },
+      "local_with_inner_consistency": 6,
+      "m": 5,
+      "moment_edge_histogram": {
+        "0": 1,
+        "1": 5
+      },
+      "moment_feasible": 6,
+      "mutated_mixed_coefficient_1": 21,
+      "total_assignments": 32,
+      "weak_without_inner_consistency": 6
+    },
+    {
+      "c6_counterexample_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "chords": 9,
+      "distance_classes": {
+        "1": 6,
+        "2": 6,
+        "3": 3
+      },
+      "false_c6_at_most_one_rejected": true,
+      "local_edge_histogram": {
+        "0": 1,
+        "1": 9,
+        "2": 21,
+        "3": 23,
+        "4": 12
+      },
+      "local_with_inner_consistency": 66,
+      "m": 6,
+      "moment_edge_histogram": {
+        "0": 1,
+        "1": 9,
+        "2": 21,
+        "3": 3
+      },
+      "moment_feasible": 34,
+      "mutated_mixed_coefficient_1": 239,
+      "total_assignments": 512,
+      "weak_without_inner_consistency": 66
+    },
+    {
+      "chords": 14,
+      "distance_classes": {
+        "1": 7,
+        "2": 7,
+        "3": 7
+      },
+      "local_edge_histogram": {
+        "0": 1,
+        "1": 14,
+        "2": 70,
+        "3": 133,
+        "4": 119,
+        "5": 56,
+        "6": 14,
+        "7": 1
+      },
+      "local_with_inner_consistency": 408,
+      "m": 7,
+      "moment_edge_histogram": {
+        "0": 1,
+        "1": 14,
+        "2": 70,
+        "3": 133,
+        "4": 91
+      },
+      "moment_feasible": 309,
+      "mutated_mixed_coefficient_1": 3930,
+      "total_assignments": 16384,
+      "weak_without_inner_consistency": 478
+    },
+    {
+      "chords": 20,
+      "distance_classes": {
+        "1": 8,
+        "2": 8,
+        "3": 12
+      },
+      "local_edge_histogram": {
+        "0": 1,
+        "1": 20,
+        "2": 166,
+        "3": 716,
+        "4": 1689,
+        "5": 2144,
+        "6": 1402,
+        "7": 484,
+        "8": 87,
+        "9": 8
+      },
+      "local_with_inner_consistency": 6717,
+      "m": 8,
+      "moment_edge_histogram": {
+        "0": 1,
+        "1": 20,
+        "2": 166,
+        "3": 716,
+        "4": 1689,
+        "5": 2144,
+        "6": 1018
+      },
+      "moment_feasible": 5754,
+      "mutated_mixed_coefficient_1": 116423,
+      "total_assignments": 1048576,
+      "weak_without_inner_consistency": 14615
+    }
+  ],
+  "format": "O3-BREADTH-1-CYCLE-LOCAL-CHECK-0.3",
+  "moment_cap_regression": {
+    "13": {
+      "cap12_accepts_degree12_signature": true,
+      "outside": 20,
+      "wrong_cap10_rejects_signature": true
+    },
+    "27": {
+      "cap12_accepts_degree12_signature": true,
+      "outside": 6,
+      "wrong_cap10_rejects_signature": true
+    }
+  },
+  "positive_control_rook9": {
+    "identity": "Q^2+Q=2I+6J",
+    "quotient": "Q=I+J",
+    "status": "PASS"
+  },
+  "scope": "necessary local quotient conditions; not a global certificate",
+  "template": {
+    "negative_control": "PASS",
+    "negative_witness_pair": [
+      27,
+      29
+    ],
+    "pairs_checked": 16896,
+    "per_tau": {
+      "13": 4224,
+      "20": 4224,
+      "27": 4224,
+      "6": 4224
+    },
+    "status": "PASS"
+  }
+}
