@@ -1,6 +1,6 @@
 # O3-BREADTH-1 — Semantik des Grundmodells A
 
-**Stand:** 6. September 2026  
+**Stand:** 6. September 2026, Revision 2  
 **Zweck:** explizite Spezifikation dessen, was Layer `A` im Breadth-Scout mathematisch kodiert — und was nicht.
 
 ## Kurzfassung
@@ -31,13 +31,15 @@ Ein `UNSAT` von A schließt daher den betreffenden **Quotiententyp** aus. Ein `S
 
 Für eine Instanz werden fest gewählt:
 
-- `tau in {6,13,20,27}`;
+- `tau` in der jeweils mathematisch zulässigen Menge;
 - `T={0,...,tau-1}` als kanonische Menge der Dreieckorbits (WLOG per Relabelling-Lemma);
 - `U={0,...,32}\T`;
 - ein kanonisch gelabelter einfacher 2-Faktor `L` auf `U` mit dem vorgegebenen `cycle_type`;
 - damit die Gewicht-2-Diagonale `2D_T` und alle Gewicht-2-Kanten `2L`.
 
 `L` besitzt genau `|U|=33-tau` Kanten.
+
+**Aktualisierung 2026-09-06:** Der neue elementare Satz `tau ≡ 0 (mod 3)` reduziert die frühere Spurmenge `{6,13,20,27}` auf `{6,27}`. Siehe `docs/breadth1/O3_tau_mod3_theorem.md`. Historische Scout-Artefakte über alle vier tau-Werte bleiben unverändert.
 
 ---
 
@@ -59,11 +61,9 @@ Die Zahl primärer `S`-Variablen ist
 
 `C(33,2) - (33-tau) = 495 + tau`,
 
-also nur
+also insbesondere
 
 - 501 bei `tau=6`,
-- 508 bei `tau=13`,
-- 515 bei `tau=20`,
 - 522 bei `tau=27`.
 
 Die ungefähr 120k CNF-Variablen der realen Instanzen sind daher überwiegend **Hilfsvariablen**, nicht 120k unabhängige Graphentscheidungen.
@@ -138,7 +138,7 @@ mit
 
 Der Core verschiebt die ausschließlich von `L,T` abhängigen festen Terme auf die rechte Seite und repräsentiert die `S^2`-Terme durch die Produktvariablen.
 
-`src/breadth1/o3_generic_core_regression.py` prüft diese Normalisierung unabhängig durch direkte ganzzahlige Matrixmultiplikation für alle vier `tau`-Klassen.
+`src/breadth1/o3_generic_core_regression.py` prüft diese Normalisierung unabhängig durch direkte ganzzahlige Matrixmultiplikation für alle vier historisch getesteten `tau`-Klassen.
 
 Zusammen mit Abschnitt 4 kodiert A damit die **gesamte** Matrixidentität
 
@@ -168,17 +168,21 @@ Wichtig für die Semantik: Lemma B ist aus den Quotientengleichungen und den S-G
 
 ---
 
-## 7. Was B gegenüber A hinzufügt
+## 7. Was B gegenüber A hinzufügt — und was nicht
 
 Layer B ist
 
 `A + generic cycle-local pair-budget inequalities for every C_m, m>=5`.
 
-Diese Ungleichungen entstehen, indem aus den bereits in A vorhandenen exakten Paargleichungen nur bestimmte nichtnegative interne Beiträge betrachtet werden. Sie sind daher ebenfalls **redundante Konsequenzen** von A und dienen der Propagation.
+Diese Ungleichungen entstehen aus den bereits in A vorhandenen **exakten** Paargleichungen, indem ausschließlich nichtnegative Terme außerhalb der betrachteten Zykluskomponente weggelassen werden. Daher gilt mathematisch
 
-Das erklärt, warum A und B dieselbe mathematische Feasibility-Frage stellen, obwohl B in `(6,3^7)` solvertechnisch deutlich schneller war.
+`A => B-extra`,
 
-Bei `(3^9)` gibt es keine `m>=5`-Komponente; dort waren A und B im Hauptlauf byte-identische CNFs und erzeugten exakt identische Solverstatistiken.
+und somit haben A und B **denselben mathematischen Lösungsraum**.
+
+B ist also keine stärkere mathematische Existenzbedingung, sondern ausschließlich eine **redundante Propagations-/Kodierungsschicht**. Der matched-seed A/B-Scout ist deshalb als Experiment zur Solverwirkung redundanter Klauseln zu interpretieren, nicht als Vergleich zweier mathematisch verschieden starker Modelle.
+
+Bei `(3^9)` gibt es keine `m>=5`-Komponente; dort waren A und B im Hauptlauf byte-identische CNFs und erzeugten exakt identische Solverstatistiken. Beim bekannten Kontrolltyp `(6,3^7)` war B mit gleichem Seed/CPU deutlich schneller als A; das ist ein einzelnes Solver-Performance-Signal, kein neuer mathematischer Ausschluss und für sich allein kein allgemeiner Strategiebeweis.
 
 ---
 
@@ -212,19 +216,40 @@ Aber im Allgemeinen gilt **nicht** die Umkehrung
 
 ---
 
-## 9. Provenienz und gegenwärtige Repository-Lücke
+## 9. Provenienz — Lücke geschlossen am 2026-09-06
 
-Der Produktionsrunner `src/breadth1/o3_ab_matched_scout_runner.py` lädt den historischen CNF-Encoder aus dem lokalen FULLCERT-Freeze:
+Der Produktionsrunner `src/breadth1/o3_ab_matched_scout_runner.py` lud den historischen CNF-Encoder im tatsächlich ausgeführten Lauf aus dem lokalen FULLCERT-Freeze:
 
 `O3_TASK03_FULLCERT_1.1_20260902/SOURCE/context/qsat/encode.py`.
 
-Diese exakte historische Datei ist zum Zeitpunkt dieses Dokuments **noch nicht als eigenständige Datei im öffentlichen Git-Repository enthalten**. Das ist eine Reproduzierbarkeits-/Dokumentationslücke, keine bekannte mathematische Abweichung.
+Der komplette historische `qsat`-Quellbaum aus diesem unveränderten Freeze ist jetzt content-exakt im Repository vendored unter
 
-Dagegen ist im Git bereits dokumentiert:
+`vendor/O3_TASK03_FULLCERT_1.1_20260902/qsat/`.
 
-- die vollständige semantische Core-Erzeugung in `o3_generic_core.py`;
-- die A/B/C-Schichtung in `o3_abc_encode.py`;
-- die direkte algebraische Regression in `o3_generic_core_regression.py`;
-- und in `o3_abc_dryrun.py` für alle 103 historischen `tau=6`-C4-freien Typen ein **byte-exakter CNF-Vergleich** zwischen dem historischen `lemma_triangle_eo=True`-Encoder und dem neu aufgebauten Layer A.
+Die Übertragung wurde über Dateiinhalts-Hashes auditiert. Insbesondere gilt für den tatsächlichen Base-Encoder:
 
-Für einen vollständigen externen Reproduzierbarkeitsaudit sollte der historische `qsat/encode.py` (und sinnvollerweise der dazugehörige historische `core.py`) noch aus dem unveränderten Freeze nach Git exportiert und gehasht werden.
+`SHA256(encode.py) = 131cf8aea1fbf6eeb76e363357b55498d084f109ec93b42c51d0d0c6abdbe6f1`.
+
+Die SHA256-Werte und Bytegrößen aller zehn Dateien stehen in
+
+`vendor/O3_TASK03_FULLCERT_1.1_20260902/PROVENANCE.json`.
+
+Zusätzlich wurden die Git-Blob-SHA1-Werte aller zehn vendorten Dateien gegen die aus dem hochgeladenen Freeze-Archiv lokal berechneten Werte geprüft; **10/10 stimmen exakt**.
+
+Das Transferarchiv hatte SHA256
+
+`85d331f6b45c79d166d45e784f8ea7dd722becceae73f2ff2f474b56f260e7b0`.
+
+### Wichtige Implementierungsnuance
+
+Der historische `encode.py` enthält selbst eine `triangle_components`-Hilfsfunktion mit hart codiertem Start `p=6`; sie stammt aus dem tau=6-Task03-Kontext. Im all-tau Breadth-Scout wird diese historische Triangle-Funktion **nicht** benutzt: `src/breadth1/o3_abc_encode.py` ruft
+
+`legacy_encode.cnf_from_core(core, lemma_triangle_eo=False)`
+
+auf und fügt die tau-generische C3-Exact-One-Schicht anschließend selbst hinzu.
+
+Für einen externen Breadth-Rerun kann der historische lokale Pfad ersetzt werden durch
+
+`--legacy-encode vendor/O3_TASK03_FULLCERT_1.1_20260902/qsat/encode.py`.
+
+Damit ist die zuvor offene Encoder-Provenienz-/Reproduzierbarkeitslücke für den Breadth-Scout geschlossen.
