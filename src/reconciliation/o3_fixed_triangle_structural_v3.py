@@ -281,6 +281,7 @@ def main():
         while True:
             if any(c['status']=='SAT' for c in st['cubes'].values()):
                 st['status']='SAT_QUOTIENT_VERIFIED';persist()
+                base.stop_children(signal.SIGINT);time.sleep(2);base.stop_children(signal.SIGKILL)
                 print('=== CAMPAIGN_COMPLETE_WITH_SAT_QUOTIENT ===',flush=True);break
             done,cv=progress()
             if len(done)==len(case_by_id):
