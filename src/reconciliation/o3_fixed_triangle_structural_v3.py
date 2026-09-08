@@ -180,7 +180,7 @@ def main():
     ap.add_argument('--root-cnf',default=str(home/'conway99_workspace/o3_reconciliation_runs/review_reconciled_20260907/fixed_triangle/fixed_triangle_o3_quotient.cnf'))
     ap.add_argument('--run-dir',default=str(home/'conway99_workspace/o3_reconciliation_runs/fixed_triangle_structural_v3_20260908'))
     ap.add_argument('--workers',type=int,default=21)
-    ap.add_argument('--leaf-seconds',type=int,default=180)
+    ap.add_argument('--leaf-seconds',type=int,default=300)
     ap.add_argument('--proof-max-gib',type=float,default=1.0)
     ap.add_argument('--status-seconds',type=int,default=600)
     ap.add_argument('--disk-floor-gib',type=float,default=150)
@@ -316,7 +316,7 @@ def main():
                          key=lambda c:(c['depth'],-case_by_id[c['case_id']]['raw_weight'],c['id']))
                 if q:
                     c=q[0];c['status']='CERT_ACTIVE';ccid=c['id']
-                    cfut=cpool.submit(base.certify,jobs[ccid],dict(c),a.lrat_check,a.cake)
+                    cfut=cpool.submit(base.certify,jobs/ccid,dict(c),a.lrat_check,a.cake)
             elif cfut.done():
                 c=st['cubes'][ccid];caseid=c['case_id'];was_done=case_done(st,caseid)
                 r=cfut.result();cfut=None
