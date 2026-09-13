@@ -166,7 +166,7 @@ def audit(main, star):
     return result, inventory, warnings, leaf_rows
 
 
-VERSION = 'K66-RYZEN-AUDIT-1.0'
+VERSION = 'K66-RYZEN-AUDIT-1.0.1'
 STAR_SHA = '11287fffa90e6700c7fea159d8c9e948e92418ca3b875c3a3e9556ff45bc3be0'
 
 
@@ -262,7 +262,7 @@ def checker_controls(output, manifest):
                 (case / 'stdout.txt').write_text(run.stdout)
                 (case / 'stderr.txt').write_text(run.stderr)
                 marker = bool(re.search(r'^(?:c VERIFIED|s VERIFIED UNSAT)\s*$', run.stdout, re.M))
-                diagnostic = bool(re.search(r'warn|error|invalid|fail|incorrect', run.stdout + run.stderr, re.I))
+                diagnostic = bool(re.search(r'warn|error|invalid|fail|incorrect|empty clause not derived at end of proof', run.stdout + run.stderr, re.I))
                 clean_accept = run.returncode == 0 and marker and not diagnostic and not run.stderr.strip()
                 explicit_reject = not marker and (run.returncode != 0 or diagnostic)
                 passed = clean_accept if valid else explicit_reject
