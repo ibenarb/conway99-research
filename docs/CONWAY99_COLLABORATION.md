@@ -7,3 +7,9 @@ Reviewer- und Partneraustausch erfolgt grundsätzlich über Git. Eingerichtet is
 Ergebnisberichte und reproduzierbare Prüfungen werden im öffentlichen Forschungsrepository dokumentiert. Ungeprüfte private Partnerunterlagen werden nicht automatisch öffentlich gespiegelt. Rückgaben erfolgen über Partnerbranches und Pull Requests. Repository-Einladungen erfordern die konkrete Zuordnung eines GitHub-Kontos; ein privater Repository-Link allein genügt nicht.
 
 Die allgemeine Freigabe ist keine pauschale Erlaubnis für Force-Pushes, Repository-Löschungen, beliebige neue Zugriffsfreigaben oder die Veröffentlichung vertraulicher Daten.
+
+## Reviewarchivierung ab 13. September 2026
+
+Auf ausdrückliche Anweisung von Ralph Beckmann wird jedes künftig eingehende Review in einem eigenen Git-Zweig archiviert, beispielsweise `reviews/YYYYMMDD-kurzbezeichnung`. Das erhaltene Original bleibt byteidentisch; Eingangsname, Länge, SHA256, geprüfte Forschungsreferenz und vorhandene beziehungsweise fehlende Begleitartefakte werden festgehalten. Eigene Bewertung, Korrekturen und Rechenergebnisse stehen in getrennten Dateien. Überarbeitete Rückgaben erhalten neue nachvollziehbare Versionen, keine stille Ersetzung des Originals.
+
+Auf dem aktiven Forschungszweig wird ein fester Commitverweis im Reviewindex ergänzt. Die Archivierung eines fremden Befunds bedeutet keine automatische Übernahme als bewiesenes Projektergebnis. Aussagen über vom Reviewer ausgeführte Rechnungen bleiben von eigenen Reproduktionen getrennt. Bestehende Vertraulichkeits- und Zugangsregeln gelten weiter; private Reviews werden im geeigneten privaten Repository mit eigenem Zweig archiviert.
