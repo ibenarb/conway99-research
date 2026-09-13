@@ -1,0 +1,111 @@
+{
+  "arithmetic": {
+    "basis": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      13
+    ],
+    "denominator": 62328,
+    "filter_counts": [
+      {
+        "filter": "entry_budget",
+        "remaining": 2196
+      },
+      {
+        "filter": "range",
+        "remaining": 712
+      },
+      {
+        "filter": "leverage",
+        "remaining": 494
+      },
+      {
+        "filter": "B_diagonal",
+        "remaining": 344
+      },
+      {
+        "filter": "nonempty_cell",
+        "remaining": 344
+      }
+    ],
+    "int64_absolute_bounds": {
+      "A": 32611,
+      "A:absolute_sum": 153580,
+      "D": 11,
+      "D:absolute_sum": 11,
+      "G": 12,
+      "H_squared": 11,
+      "H_squared:absolute_sum": 11,
+      "MZ": 6,
+      "MZ:absolute_sum": 14,
+      "W": 82529,
+      "W:absolute_sum": 170805,
+      "beta": 1219150,
+      "beta_abs_sum": 1528112,
+      "beta_lower": 870924,
+      "beta_products": 480090,
+      "beta_upper": 1161232,
+      "delta": 60344,
+      "delta:absolute_sum": 156268,
+      "eta": 147336,
+      "eta:absolute_sum": 841903,
+      "first": 279888,
+      "first_base": 208992,
+      "first_square": 78337292544,
+      "four_delta": 241376,
+      "four_slack": 156960,
+      "lev": 352636,
+      "lev_abs_sum": 352636,
+      "lev_products": 165058,
+      "r1": 147126,
+      "r1_product": 21646059876,
+      "r2": 153594,
+      "r2_product": 23591116836,
+      "range_lhs": 186984,
+      "range_lhs:absolute_sum": 2207992,
+      "range_rhs": 124656,
+      "scaled_inverse": 37550,
+      "second": 311640,
+      "second_base": 208992,
+      "second_square": 97119489600,
+      "slack": 290308,
+      "source_inverse_check": 62328,
+      "source_inverse_check:absolute_sum": 929288,
+      "three_delta": 181032,
+      "three_slack": 117720
+    },
+    "rank": 11,
+    "special_q2_filter": "VACUOUS_IN_K66",
+    "status": "EXACT_INTEGER_REFERENCE_PASS"
+  },
+  "case": "v4_09239",
+  "cnfs": [
+    {
+      "byte_identical": true,
+      "bytes": 3908275,
+      "certificate_input_sha256": "d4dcfbb8c5b2766cc2097436d276974d8e49732847c052a578d8124356cfb767",
+      "clauses": 219148,
+      "kind": "R2_GLOBAL",
+      "new": "/home/rb/conway99_workspace/k66_encoder_reproduction_v1/cases/v4_09239/r2_global.cnf",
+      "original": "/home/rb/conway99_workspace/o3_reconciliation_runs/k66_v4_cert_20260908_231256_132359/profile_conflict_cnf_scout_20260909_r2/v4_09239/model.cnf",
+      "original_sha256": "d4dcfbb8c5b2766cc2097436d276974d8e49732847c052a578d8124356cfb767",
+      "sha256": "d4dcfbb8c5b2766cc2097436d276974d8e49732847c052a578d8124356cfb767",
+      "variables": 52430
+    }
+  ],
+  "final_profiles": 344,
+  "identity": "8a9ed8646d9eb8e93cd5114be2d497192eb652e974dafe2bd0e3fabe7bb2010a",
+  "initial_profiles": 344,
+  "production_proofs_replayed": 0,
+  "rounds": [],
+  "status": "PASS",
+  "wall_seconds": 1.228
+}
