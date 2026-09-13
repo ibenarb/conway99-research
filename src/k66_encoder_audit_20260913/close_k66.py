@@ -17,7 +17,7 @@ from collections import Counter
 from fractions import Fraction
 from pathlib import Path
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 ANCHOR = "a85aabc475116c6cb5fa39a10d281767ab6f7cf5"
 REPO = "ibenarb/conway99-research"
 BRANCH = "research/algebra-memetic-20260912"
@@ -297,6 +297,16 @@ def small_controls():
     return {"status": "PASS", "determinant_controls": 4, "PSD_controls": 3, "canonical_label": "k66_s1_t225"}
 
 
+def published_case_bytes(result):
+    """Reproduce the exact published projection without changing the local report."""
+    compact = dict(result)
+    compact["rounds"] = [{k: v for k, v in r.items() if k not in ("before", "after")}
+                         for r in result["rounds"]]
+    compact["cnfs"] = [{k: v for k, v in c.items() if k != "depends_on_earlier_removed"}
+                       for c in result["cnfs"]]
+    return encoded(compact)
+
+
 def fetch_predecessors(output):
     fetched = {}
     for relative, expected in PINNED.items():
@@ -376,7 +386,7 @@ def main():
     if args.controls_only:
         return
     workspace = args.workspace
-    output = workspace / "k66_completion_proof_v1"
+    output = workspace / "k66_completion_proof_v1_0_1"
     output.mkdir(parents=True, exist_ok=True)
     import fcntl
     lock = (output / "audit.lock").open("w")
@@ -439,13 +449,16 @@ def main():
             require(job["units"] == complete_units(skeleton, h), "residual canonical primary assignment")
             rank = psd_rank(gram)
             result_path = workspace / "k66_encoder_reproduction_v1/cases" / job["id"] / "result.json"
-            require(sha(result_path.read_bytes()) == CASE_RESULT_HASHES[job["id"]], "pinned residual result bytes")
             previous = json.loads(result_path.read_text())
+            published_bytes = published_case_bytes(previous)
+            require(sha(published_bytes) == CASE_RESULT_HASHES[job["id"]],
+                    "pinned published residual projection: " + job["id"])
             require(previous["status"] == "PASS" and previous["case"] == job["id"] and
                     previous["identity"] == "8a9ed8646d9eb8e93cd5114be2d497192eb652e974dafe2bd0e3fabe7bb2010a" and
                     previous["arithmetic"]["rank"] == rank, "residual encoder-audit connection")
             record = dict(code=code, id=job["id"], orbit_size=orbit["size"], gram_sha256=matrix_hash,
                           PSD_rank=rank, primary_units_match=True, encoder_case_result_sha256=sha(result_path.read_bytes()),
+                          encoder_published_result_sha256=sha(published_bytes),
                           status="RESIDUAL_LINK_VERIFIED")
             save(case_path, record)
             residual_records.append(record)
