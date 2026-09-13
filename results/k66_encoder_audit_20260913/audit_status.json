@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "source_commit": "0a54ce594f89b948c77200328f5de7379bae4806",
+  "status": "MATHEMATICAL_DERIVATION_COMPLETE_LOCAL_REPRODUCTION_PENDING",
+  "scope": "k66_s1_t225 under fixed-triangle quotient assumptions",
+  "proven": [
+    "Profile universe necessity",
+    "Profile multiplicity at most one or two",
+    "Projector diagonal and pair restrictions",
+    "Neighbor-star weighted equations and both self-subtractions",
+    "Global moment/cell/conflict constraints",
+    "BDD existential equivalence for nonnegative integer weights"
+  ],
+  "computational_checks_completed": {
+    "small_BDD_projection_checks": 945,
+    "preflight_deep7_identical_AST_definitions": [
+      "CNF",
+      "build_H",
+      "encode_global",
+      "inverse_minor",
+      "make_profiles",
+      "prepare_case",
+      "require",
+      "write_dimacs"
+    ],
+    "profile_3520": {
+      "cell": 3,
+      "index_within_cell": 712,
+      "z": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "ell": 2,
+      "q": 0,
+      "S_degree": 8,
+      "L_degree": 0
+    }
+  },
+  "recorded_not_newly_replayed": {
+    "deep7_new_profile_removals": 0,
+    "quick_SAT": 4637,
+    "deep_SAT": 74,
+    "main_proofs": 897,
+    "restart_existing_proofs_replayed": 28,
+    "restart_new_star_certifications": 125
+  },
+  "new_production_proof_replays_this_audit": 0,
+  "pending": [
+    "Ryzen exact-integer comparison for 23 domains/pair masks",
+    "137 Star-CNF byte reproductions including requested 125",
+    "7 Deep7 plus 8 Preflight plus 15 R2 Global-CNF byte reproductions",
+    "Link supplemental CNF hashes to prior 09232/remaining15 replay reports",
+    "Independent 223 arithmetic witnesses audit",
+    "Independent 246-orbit coverage and 13824-labelled crossmatching audit"
+  ],
+  "dormant_filter": "q=2 pair condition is vacuous because K66 cell (1,1) has size zero; no general proof claimed"
+}
