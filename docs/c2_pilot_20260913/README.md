@@ -1,12 +1,12 @@
-# C2-Baseline-Pilot 1.0.0
+# C2-Baseline-Pilot 1.1.0
 
 Stand: 13. September 2026. Referenzencoder: Commit 578ce74871bbdd9d8a53444fe69c1f16d355da47. Dieser Commit stellt den Pilot bereit; er enthält kein Ergebnis einer tatsächlichen C2-Suche.
 
 ## Messfrage und Umfang
 
-Vier CaDiCaL-Seeds 0,1,2,3 bearbeiten dieselbe vollständige CNF mit LRAT-Ausgabe, je höchstens 7200 Sekunden Suchzeit. Vier Prozesse auf vier Kernen, keine Fallpartition. Gemessen werden Laufzeit, Solverstatistiken und Beweiswachstum; die vollständigen Logs bleiben erhalten. Der Matchingvergleich entfällt wegen byteidentischer CNFs.
+Elf CaDiCaL-Seeds 0 bis 10 bearbeiten dieselbe vollständige CNF mit LRAT-Ausgabe ohne feste Suchzeitgrenze. Elf Prozesse, keine Fallpartition. Gemessen werden Laufzeit, Solverstatistiken und Beweiswachstum; die vollständigen Logs bleiben erhalten. Der Matchingvergleich entfällt wegen byteidentischer CNFs.
 
-Ein einzelner gültiger UNSAT-Beweis genügt für die gesamte Referenz-CNF. Vier Timeouts schließen keinen mathematischen Teilfall aus. Ein Erfolg wird nicht aus Laufzeit oder Solvermeldung abgeleitet. Die Rückübertragung von CNF-UNSAT auf den Involutionsausschluss verwendet weiterhin den dokumentierten Encoderbeweis und den zitierten Fixpunktsatz.
+Ein einzelner gültiger UNSAT-Beweis genügt für die gesamte Referenz-CNF. Elf erfolglose Suchläufe schließen keinen mathematischen Teilfall aus. Ein Erfolg wird nicht aus Laufzeit oder Solvermeldung abgeleitet. Die Rückübertragung von CNF-UNSAT auf den Involutionsausschluss verwendet weiterhin den dokumentierten Encoderbeweis und den zitierten Fixpunktsatz.
 
 ## Vor Ort bestätigte Eingaben
 
@@ -23,17 +23,17 @@ Ein einzelner gültiger UNSAT-Beweis genügt für die gesamte Referenz-CNF. Vier
 
 Der Controller prüft die gepinnten Eingabe- und Prüferbytes, kopiert die CNF in das Laufverzeichnis und protokolliert Versionen, Hashes, Befehle und PIDs. Vor Produktion läuft genau ein kleiner UNSAT-LRAT-Positivtest mit dem wirklichen CaDiCaL und Cake. Derselbe Beweis muss gegen eine erfüllbare Kontroll-CNF abgelehnt werden. Schlägt dieser Verbindungstest fehl, startet keine Produktionssuche.
 
-Die vier Seeds laufen mit `--lrat --no-binary --seed=N -t 7200`. Status wird alle zwei Sekunden atomar gespeichert und mindestens alle zehn Minuten samt verbleibendem Suchbudget ausgegeben. Rohlogs und LRAT-Dateien bleiben bestehen. Keine Änderung an anderen Forschungsprozessen.
+Die elf Seeds laufen mit `--lrat --no-binary --seed=N`, ohne `-t`. Status wird alle zwei Sekunden atomar gespeichert und mindestens alle zehn Minuten ausgegeben. Nach einer und zwei Stunden Suchzeit werden Beobachtungspunkte gespeichert und gemeldet; sie beenden die Suche nicht. Rohlogs und LRAT-Dateien bleiben bestehen. Keine Änderung an anderen Forschungsprozessen.
 
 Nach einer terminalen Solverantwort werden die übrigen eigenen Prozesse beendet, um Platz für die Prüfung zu schaffen. UNSAT wird nur bei Exit 20 und passender Statuszeile zur Prüfung angenommen. Cake muss Exit 0, ausschließlich `s VERIFIED UNSAT` auf stdout und leeres stderr liefern. CNF und Proof werden an ihre Hashes gebunden. SAT wird durch den gepinnten Referenz-Graphprüfer kontrolliert, einschließlich sämtlicher gemeinsamer Nachbarzahlen; fehlende Modellbits werden nicht ergänzt.
 
 ## Ressourcen und Zeitrahmen
 
-Suchbudget: rund zwei Stunden Wandzeit bzw. maximal acht Kernstunden, zuzüglich kurzer Startkontrolle. Die abschließende Cake-Prüfung hat keine feste Zeitgrenze; ihr Zeitbedarf ist vor einem echten Proof unbekannt. Bei einem frühen Ergebnis kann die Suche entsprechend früher enden.
+Kein festes Suchbudget. Die ersten zwei Stunden entsprechen höchstens 22 Kernstunden. Elf einthreadige Solver nutzen nahezu alle zwölf physischen Kerne; SMT mit 24 Threads garantiert keinen höheren SAT-Durchsatz. Ein Kern bleibt als Kapazitätsreserve für Betriebssystem und I/O. Nach einer und zwei Stunden bewerten wir Solverfortschritt, RAM und LRAT-Wachstum und entscheiden über Fortsetzung oder Modifikation. Ohne Eingriff läuft die Suche weiter. Die abschließende Cake-Prüfung hat keine feste Zeitgrenze; ihr Zeitbedarf ist vor einem echten Proof unbekannt. Bei einem frühen Ergebnis kann die Suche entsprechend früher enden.
 
 Alle zwei Sekunden werden verfügbarer RAM und freier Plattenplatz geprüft. Unter 75 GiB freiem Plattenplatz oder unter 2 GiB MemAvailable werden nur eigene aktive Prozesse beendet; dies ist kein Ausschluss. Cake läuft nach dem Stoppen der Solver allein, um den verfügbaren Speicher nutzen zu können. Es gibt keine starre kleine Heap- oder Proofdateigrenze. Falls Cake selbst eine Allokationsgrenze meldet, bleibt das Ergebnis ungeprüft und der Fehler wird gespeichert.
 
-CaDiCaL erhält das explizite Pilot-Zeitbudget. Ein zusätzlicher Watchdog greift erst nach Budget plus 60 Sekunden ein. Dies ist kein Endgame ohne Zeitlimit. Beweise und Teilbeweise werden nicht automatisch gelöscht; die Plattenreserve bleibt deshalb entscheidend.
+Standard ist `--seconds 0 --workers 11`. Nur bei explizit positivem Suchbudget wird ein Zeitlimit gesetzt; dann greift ein zusätzlicher Watchdog nach Budget plus 60 Sekunden ein. Beweise und Teilbeweise werden nicht automatisch gelöscht; die Plattenreserve bleibt deshalb entscheidend.
 
 ## Ergebnisdateien
 
@@ -41,6 +41,7 @@ CaDiCaL erhält das explizite Pilot-Zeitbudget. Ein zusätzlicher Watchdog greif
 - `inputs.json`: Input-/Toolhashes und Befehlsparameter.
 - `jobs.json`, `seed_N/result.json`: Versuchszustände; endgültige Einzelzustände stehen in den Einzeldateien und in summary.json.
 - `status.json`: aktueller atomarer Stand oder Abschluss/Fehlermeldung.
+- `checkpoint_3600.json`, `checkpoint_7200.json`: Beobachtungspunkte während laufender Suche.
 - `summary.json`: Endergebnis aller Versuche.
 - `seed_N/solver.log`, `proof.lrat`: Originalausgaben.
 - `seed_N/cake.stdout`, `cake.stderr`: Prüferausgaben, soweit geprüft.
@@ -49,6 +50,6 @@ Mögliche Abschlüsse: C2_UNSAT_CERTIFIED (zertifizierte CNF), C2_GRAPH_FOUND (d
 
 ## Hier ausgeführte Tests
 
-`test_controller.py` prüft strikte Akzeptanzregeln, Statusklassifikation, Prozessbeendigung und die vollständigen Abläufe für Timeout, simulierte UNSAT-Akzeptanz und simulierte Prüferablehnung. Dafür werden ausdrücklich Fake-Solver und Fake-Prüfer benutzt. Diese Tests liefern keine LRAT-Verifikation und keinen Conway99-Befund. Die tatsächliche Werkzeugverbindung wird automatisch erst auf dem Ryzen geprüft.
+`test_controller.py` prüft strikte Akzeptanzregeln, Statusklassifikation, elf Worker ohne Zeitlimit, Prozessbeendigung und die vollständigen Abläufe für Timeout, simulierte UNSAT-Akzeptanz und simulierte Prüferablehnung. Dafür werden ausdrücklich Fake-Solver und Fake-Prüfer benutzt. Diese Tests liefern keine LRAT-Verifikation und keinen Conway99-Befund. Die tatsächliche Werkzeugverbindung wird automatisch erst auf dem Ryzen geprüft.
 
 Das flache ZIP enthält Controller, unveränderten Referenz-Graphprüfer, Testskript, README und Dateimanifest. Hashprüfung vor dem Entpacken ist Bestandteil des Startbefehls. Es müssen keine neuen Programme installiert werden.

@@ -24,6 +24,8 @@ def main():
     assert pilot.classify(10, 's SATISFIABLE\n') == 'SAT_PENDING_CHECK'
     assert pilot.classify(0, 's UNKNOWN\n') == 'TIMEOUT_OPEN'
     assert pilot.classify(20, '') == 'SOLVER_ERROR'
+    assert "-t" not in pilot.command("solver", "cnf", "proof", 0, 10)
+    assert "-t" in pilot.command("solver", "cnf", "proof", 30, 0)
     outcomes = {}
     original_hash, original_resources = pilot.CNF_HASH, pilot.resource_reason
     try:
@@ -56,10 +58,12 @@ print('s VERIFIED UNSAT')
                 out = root/mode
                 out.mkdir()
                 with contextlib.redirect_stdout(io.StringIO()):
-                    pilot.run(SimpleNamespace(out=out, solver=str(solver), cake=str(cake), cnf=str(cnf), seconds=2))
+                    pilot.run(SimpleNamespace(out=out, solver=str(solver), cake=str(cake), cnf=str(cnf), seconds=0, workers=11))
                 record = json.loads((out/'summary.json').read_text())
                 assert record['status'] == expected, record
                 assert (out/'inputs.json').is_file() and (out/'jobs.json').is_file()
+                inputs = json.loads((out/'inputs.json').read_text())
+                assert inputs['seeds'] == list(range(11)) and inputs['seconds_per_seed'] == 0
                 outcomes[mode] = 'EXPECTED_CONTROLLER_TRANSITION_PASS'
             proc = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(60)'])
             pilot.stop(proc)
@@ -68,7 +72,7 @@ print('s VERIFIED UNSAT')
         pilot.CNF_HASH, pilot.resource_reason = original_hash, original_resources
     report = {'status': 'CONTROLLER_TESTS_PASS', 'simulated_transitions': outcomes,
               'strict_acceptance_checks': 4, 'solver_status_checks': 4,
-              'child_termination': 'PASS', 'controller_sha256': pilot.sha(Path(pilot.__file__)),
+              'unlimited_search_and_eleven_workers': 'PASS', 'child_termination': 'PASS', 'controller_sha256': pilot.sha(Path(pilot.__file__)),
               'scope': 'Fake solver/checker process tests only; no actual LRAT verification or Conway99 result.'}
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, indent=2)+'\n')

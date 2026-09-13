@@ -1,4 +1,4 @@
-"""Bounded C2 baseline portfolio; only a checked proof establishes UNSAT."""
+"""C2 portfolio 1.1.0: eleven seeds, resource limits, timed observation points."""
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -79,8 +79,8 @@ def classify(code, log):
 
 
 def command(solver, cnf, proof, seconds, seed):
-    return [str(solver), "--lrat", "--no-binary", "--seed=" + str(seed),
-            "-t", str(seconds), str(cnf), str(proof)]
+    budget = ["-t", str(seconds)] if seconds else []
+    return [str(solver), "--lrat", "--no-binary", "--seed=" + str(seed)] + budget + [str(cnf), str(proof)]
 
 
 def controls(solver, cake, out):
@@ -159,13 +159,14 @@ def run(args):
          "solver": str(solver), "solver_sha256": sha(solver), "solver_version": version,
          "cake": str(cake), "cake_sha256": CAKE_HASH, "controller_sha256": sha(__file__),
          "reference_sha256": REF_HASH, "seconds_per_seed": args.seconds,
-         "seeds": [0, 1, 2, 3], "workers": 4, "scope": "Four seeds on the same complete CNF; no case partition"})
+         "seeds": list(range(getattr(args, "workers", 4))), "workers": getattr(args, "workers", 4), "scope": "Distinct seeds on the same complete CNF; no case partition"})
     controls(solver, cake, out)
     records, active = [], []
+    checkpoints = set()
     start, last = time.monotonic(), 0.0
     stop_reason = None
     try:
-        for seed in range(4):
+        for seed in range(getattr(args, "workers", 4)):
             folder = out / ("seed_" + str(seed))
             folder.mkdir()
             logfile = (folder / "solver.log").open("w")
@@ -183,7 +184,7 @@ def run(args):
             terminal = False
             for item in active[:]:
                 proc, logfile, folder, record, begun = item
-                if proc.poll() is None and now - begun > args.seconds + 60:
+                if args.seconds and proc.poll() is None and now - begun > args.seconds + 60:
                     stop(proc)
                     record["status"] = "WATCHDOG_TIMEOUT_OPEN"
                 if proc.poll() is not None:
@@ -199,13 +200,19 @@ def run(args):
                     if record["status"] in ("UNSAT_PENDING_CHECK", "SAT_PENDING_CHECK", "SOLVER_ERROR"):
                         terminal = True
             status = {"phase": "SEARCH", "elapsed_seconds": round(now-start),
-                      "ETA_search_seconds": max(0, round(args.seconds-(now-start))),
+                      "ETA_search_seconds": max(0, round(args.seconds-(now-start))) if args.seconds else None,
+                      "ETA_note": "no fixed search limit; 1h and 2h observation points",
                       "states": {str(r["seed"]): r["status"] for r in records},
                       "free_disk_GiB": round(shutil.disk_usage(out).free/1024**3, 1),
                       "available_RAM_GiB": round(memory_gib(), 1),
                       "proof_GiB": {str(r["seed"]): round((out/("seed_"+str(r["seed"]))/"proof.lrat").stat().st_size/1024**3, 3)
                                     for r in records if (out/("seed_"+str(r["seed"]))/"proof.lrat").exists()}}
             save(out / "status.json", status)
+            for checkpoint in (3600, 7200):
+                if now - start >= checkpoint and checkpoint not in checkpoints:
+                    save(out / ("checkpoint_" + str(checkpoint) + ".json"), status)
+                    print("C2_OBSERVATION_POINT " + json.dumps(status), flush=True)
+                    checkpoints.add(checkpoint)
             if now - last >= 600 or terminal or not active:
                 print("STATUS " + json.dumps(status), flush=True)
                 last = now
@@ -260,12 +267,13 @@ def main():
     parser.add_argument("--cnf", default=DEFAULT_INPUT)
     parser.add_argument("--cake", default=DEFAULT_CAKE)
     parser.add_argument("--solver", default=str(Path.home()/".local/bin/cadical"))
-    parser.add_argument("--seconds", type=int, default=7200)
+    parser.add_argument("--seconds", type=int, default=0)
+    parser.add_argument("--workers", type=int, default=11)
     parser.add_argument("--out", type=Path)
     parser.add_argument("--run", action="store_true")
     args = parser.parse_args()
-    if args.seconds <= 0:
-        parser.error("seconds must be positive")
+    if args.seconds < 0 or not 1 <= args.workers <= 24:
+        parser.error("seconds must be nonnegative; workers must be 1..24")
     if not args.run:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
         args.out = args.out or Path.home()/"conway99_workspace/c2_reference_v1"/("pilot_"+stamp)
@@ -273,13 +281,14 @@ def main():
         args.out.mkdir(parents=True, exist_ok=False)
         command_line = [sys.executable, str(Path(__file__).resolve()), "--run", "--out", str(args.out),
                         "--cnf", args.cnf, "--cake", args.cake, "--solver", args.solver,
-                        "--seconds", str(args.seconds)]
+                        "--seconds", str(args.seconds), "--workers", str(args.workers)]
         with (args.out/"driver.log").open("w") as log:
             proc = subprocess.Popen(command_line, stdin=subprocess.DEVNULL, stdout=log,
                                     stderr=subprocess.STDOUT, start_new_session=True)
         save(args.out/"launch.json", {"pid": proc.pid, "command": command_line})
         print("C2_PILOT_LAUNCHED " + json.dumps({"pid": proc.pid, "output": str(args.out),
-              "log": str(args.out/"driver.log"), "search_budget_seconds": args.seconds,
+              "log": str(args.out/"driver.log"), "search_budget_seconds": args.seconds or None, "workers": args.workers,
+              "observation_points_seconds": [3600, 7200],
               "note": "detached; startup and proof status are recorded in driver.log/status.json"}), flush=True)
         return
     if args.out is None:
