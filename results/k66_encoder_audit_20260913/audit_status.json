@@ -1,7 +1,7 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "source_commit": "0a54ce594f89b948c77200328f5de7379bae4806",
-  "status": "PRIMARY_ENCODER_AND_REDUCTION_AUDIT_PASS_SUPPLEMENTAL_REPLAY_LINKS_PENDING",
+  "status": "ENCODER_AND_REDUCTION_AUDIT_PASS",
   "scope": "k66_s1_t225 under fixed-triangle quotient assumptions",
   "proven": [
     "Profile universe necessity",
@@ -58,7 +58,6 @@
   },
   "new_production_proof_replays_this_audit": 0,
   "pending": [
-    "Explicit hash linkage to prior v4_09232 and remaining15 Cake-replay reports",
     "Independent 223 arithmetic witnesses audit",
     "Independent 246-orbit coverage and 13824-labelled crossmatching audit"
   ],
@@ -75,5 +74,14 @@
     "comparisons": 167,
     "distinct_sha256": 160,
     "seconds": 21
-  }
+  },
+  "replay_linkage": {
+    "status": "ALL_28_REPLAY_INPUT_LINKS_PASS",
+    "records": 28,
+    "star": 12,
+    "global": 16,
+    "new_proof_replays": 0,
+    "result": "results/k66_encoder_audit_20260913/replay_linkage.json"
+  },
+  "next_required_step": "Create an independent Ryzen checker reconstructing each of the 223 excluded Gram matrices and checking its negative principal minor exactly, then verify complete orbit coverage."
 }

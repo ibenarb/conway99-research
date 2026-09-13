@@ -1,6 +1,7 @@
 # K66: mathematischer Encoder- und Reduktionsaudit
 
-Stand: 13. September 2026, nach bestandener Ryzen-Reproduktion.
+Stand: 13. September 2026, nach bestandener Ryzen-Reproduktion und
+vollständiger Verknüpfung der 28 zusätzlichen früheren Cake-Replays.
 Ergebniscommit: `b38d4cb755505a67c01bcf87aff0e2dbf1f79524`.
 Geltungsbereich: ausschließlich `k66_s1_t225` innerhalb des Ordnung-3-Zweigs
 mit fixiertem Dreieck. Kein globaler Ausschluss von srg(99,14,1,2).
@@ -17,10 +18,12 @@ Das ist ein mathematischer Schluss unter den ausdrücklich angegebenen
 Quotientenannahmen. Die angeforderten 125 Star-CNFs und sieben Hauptlaufwurzeln sind jetzt
 **vollständig byteidentisch reproduziert und an die gesicherten Eingabehashes
 gebunden**. Alle 23 konkreten Profildomänen und Paarmasken stimmen mit der
-unabhängigen Ganzzahlgegenrechnung überein. Bei den zusätzlich reproduzierten
-zwölf Star-CNFs von v4_09232 fehlt im neuen Ergebnis noch die ausdrückliche
-Verknüpfung mit den früheren Cake-Replay-Hashes; diese Restpflicht ist separat
-aufgeführt. Es wird kein vollständiger K66-Fallabschluss behauptet.
+unabhängigen Ganzzahlgegenrechnung überein. Die zusätzlich reproduzierten zwölf Star-CNFs von v4_09232 und sämtliche
+16 Zusatz-Globalmodelle sind jetzt ausdrücklich mit den Eingaben der früheren
+Cake-Replays verknüpft. Der Encoder- und Reduktionsaudit ist damit im benannten
+Geltungsbereich abgeschlossen. Es wird kein vollständiger K66-Fallabschluss
+behauptet: Die 223 arithmetischen Ausschlüsse und die Bahnenvollständigkeit
+sind weiterhin eigenständig zu auditieren.
 
 | Gegenstand | Status dieser Fassung |
 | --- | --- |
@@ -31,8 +34,8 @@ aufgeführt. Es wird kein vollständiger K66-Fallabschluss behauptet.
 | Keine zusätzlichen Deep7-Entfernungen | In den neu eingesammelten Verlaufsdaten protokolliert |
 | Beliebig genaue Gegenrechnung aller konkreten Profile und Paarmasken | Für alle 23 Fälle rechnerisch bestanden |
 | 125 Star-CNFs und sieben Hauptlaufwurzeln erneut reproduziert | Vollständige Byte- und SHA256-Gleichheit; gesicherte Eingabehashes stimmen |
-| Zusätzliche zwölf Star-CNFs und reduzierte Global-CNF für v4_09232 | Byteidentisch; ausdrückliche Verknüpfung der zwölf Profilhashes mit dem früheren Replay noch offen |
-| 15 unreduzierte R2-Global-CNFs | Byteidentisch; Hashes stimmen mit separatem cert15_manifest überein |
+| Zusätzliche zwölf Star-CNFs und reduzierte Global-CNF für v4_09232 | Byteidentisch und mit den zwölf Profil- sowie dem Global-Replay verknüpft |
+| 15 unreduzierte R2-Global-CNFs | Byteidentisch; CNF-/Beweishashes verbinden cert15_manifest und die 15 früheren Replays |
 | 223 arithmetische Ausschlüsse und Vollständigkeit der 246 Bahnen | Eigenständige offene Pflichten |
 
 Es wird hier kein Produktionsbeweis erneut geprüft. Der gesicherte Neustartstand
@@ -446,7 +449,7 @@ PASS-Status, Bytegleichheit und gespeicherte Hashverknüpfungen geprüft.
 | Vergleichsgruppe | Anzahl | Ergebnis |
 | --- | ---: | --- |
 | Star-CNFs der sieben Hauptlaufwurzeln | 125 | Byteidentisch, einschließlich Bindung an Neustart-Inventar |
-| Zusätzliche Star-CNFs von v4_09232 | 12 | Byteidentisch; Replay-Hashverknüpfung noch zu ergänzen |
+| Zusätzliche Star-CNFs von v4_09232 | 12 | Byteidentisch und Replay-Hashverknüpfung bestanden |
 | Deep7-Global-CNFs | 7 | Byteidentisch, einschließlich Bindung an Hauptlaufmanifest |
 | Preflight-Global-CNFs | 8 | Byteidentisch; sieben stimmen außerdem mit Deep7 überein |
 | Separate R2-Global-CNFs | 15 | Byteidentisch; Hashbindung an cert15_manifest |
@@ -480,30 +483,81 @@ vorherige Schätzung 5–20 Minuten war deutlich zu konservativ. Der anschließe
 Git-Upload und vollständige Rückdownloadvergleich wurden vom lokalen Programm
 als bestanden gemeldet. Kein Produktionsbeweis wurde erneut geprüft.
 
-## 12. Verbleibende Abschlussbedingungen
+## 12. Ergänzende Replay-Verknüpfung: bestanden
 
-**Unmittelbar erforderlich:** die kompakten früheren Replay-Berichte
-`v4_09232_cake_replay.json` und `remaining15_cake_replay.json` aus dem
-Neustartverzeichnis heranziehen. Die zwölf zusätzlichen Star-Eingaben besitzen
-im neuen Ergebnis `certificate_input_sha256: null`; ihre Bytegleichheit ist
-bewiesen, die ausdrückliche Verbindung zum damaligen Replay fehlt in dieser
-Ergebnisfassung. Auch die bereits manifestgebundenen Zusatz-Globalhashes sollen
-den tatsächlich erneut geprüften Eingaben direkt zugeordnet werden. Dafür
-sind nur Berichtsdaten erforderlich, kein weiterer Solver- oder Checker-Lauf.
+Die nachgereichten Berichte wurden aus der Konsolenausgabe als JSON rekonstruiert.
+Ihre vollständigen Bytes stimmen bei Einrückung zwei und abschließendem
+Zeilenumbruch mit den auf dem Ryzen gemeldeten Längen und SHA256-Werten überein:
 
-**Danach eigenständig erforderlich:** die 223 arithmetischen Ausschlusszeugen
-mit vollständiger Matrixzuordnung nachprüfen und die 246 Bahnen einschließlich
-Stabilisatorwirkung, Repräsentanten, Disjunktheit und Überdeckung der 13.824
-beschrifteten Crossmatchings unabhängig nachweisen. Eine bloße disjunkte Liste
-223+23 erfüllt diese Pflicht nicht.
+| Bericht | Bytes | SHA256 |
+| --- | ---: | --- |
+| v4_09232_cake_replay.json | 14047 | 0749a7f93765cc934b32dd0e5ca7a548732ab8dc28e901a5ec50686f8f5645b1 |
+| remaining15_cake_replay.json | 14639 | 5e9178990d31df520a8ce5e3d2d224972a8d5b998b9247c34a0cbbcacedb6797 |
 
-**Gesondert zu bilanzieren:** Für v4_09232 und die 15 R2-Fälle müssen die
-reproduzierten Eingabehashes mit den bereits tatsächlich ausgeführten
-Cake-Replays verbunden bleiben. Ein Hash aus einer Scout-Zusammenfassung
-allein ist keine neue Checkerbestätigung. Für die 897 Hauptlaufbeweise bleibt
-der bekannte Status „archivierte Cake-Bestätigung und Integrität geprüft,
-kein Neustart-Replay“. Ein zusätzlicher Replay ist eine mögliche Verstärkung
-des Vertrauensniveaus, nicht ein hier bereits erfüllter Prüfschritt.
+Die exakten Berichtsdateien liegen unter
+`data/k66_encoder_audit_20260913/replay_reports`.
+Der ergänzte Metadatenprüfer in `reproduce.py` Version 1.0.1 besitzt einen
+separaten Modus `--link-reports`. Dieser ruft weder den Reproduktionslauf noch
+Solver oder Checker auf. Er wurde hier auf den kleinen Berichtsdateien ausgeführt.
+Der eigentliche Ryzen-Reproduktionslauf bleibt unverändert Version 1.0.0;
+seine gesicherte Eingabeidentität wird nicht nachträglich umgeschrieben.
+
+Das Ergebnis `results/k66_encoder_audit_20260913/replay_linkage.json` lautet
+`ALL_28_REPLAY_INPUT_LINKS_PASS`. Der Prüfer bestätigt:
+
+- genau zwölf Star- und eine Global-CNF für v4_09232 sowie genau 15 andere
+  R2-Global-CNFs, vollständig und ohne doppelte Zuordnungen;
+- identische ursprüngliche CNF-Pfade, Dateilängen und SHA256-Werte in den
+  Replay-Berichten und den byteidentischen Reproduktionen;
+- das erwartete Cake-Binary mit SHA256
+  `e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a`;
+- für jeden Eintrag Exitcode null, exakt `s VERIFIED UNSAT` mit Zeilenumbruch,
+  leeres stderr und einen positiven gespeicherten Replay-Status;
+- für die 15 R2-Fälle zusätzlich unveränderte Eingaben während des damaligen
+  Checks sowie Übereinstimmung von CNF-Hash, Beweishash und Beweislänge mit
+  dem separaten historischen `cert15_manifest.json`.
+
+Die zwölf ursprünglichen `certificate_input_sha256: null`-Felder im festen
+Reproduktionscommit bleiben als historische Ausgaben unverändert. Die neue,
+explizite Verknüpfung ergänzt sie nachvollziehbar, statt den früheren Lauf
+nachträglich umzudeuten. Die vorhandenen Beweisdateien wurden hier nicht gelesen
+oder erneut geprüft. Nachgewiesen ist die Metadatenverbindung zu den bereits
+im Neustart ausgeführten 28 Cake-Replays.
+
+Reproduzierbarer Aufruf aus einem Checkout des Forschungsrepositorys:
+
+```bash
+python3 src/k66_encoder_audit_20260913/reproduce.py --link-reports --reports-dir data/k66_encoder_audit_20260913/replay_reports --reproduction-dir results/k66_encoder_audit_20260913/reproduction --cert15-manifest data/k66_encoder_audit_20260913/source_evidence/9ac9e09591b23d90.json --link-output /tmp/k66_replay_linkage.json
+```
+
+## 13. Verbleibende Abschlussbedingungen und nächster Schritt
+
+**Abgeschlossen in diesem Audit:** mathematische Notwendigkeit der verwendeten
+Encoderrestriktionen im beschriebenen Quotientenmodell, Prüfung der
+CNF-Restriktionsfamilien, genaue Gegenrechnung aller 23 Profildomänen und
+Paarmasken, nichtzirkuläre Reduktionskette, byteidentische Reproduktion der
+angeforderten 125 Star- und sieben Hauptlauf-CNFs, zusätzliche getrennte
+Modellreproduktionen und Verknüpfung aller 28 Zusatz-Replay-Eingaben.
+
+**Nächster erforderlicher Arbeitsschritt:** einen unabhängigen lokalen Prüfer
+für die 223 arithmetischen Ausschlüsse erstellen. Er muss für jeden
+Ausschlusscode die zugehörige H- und Gram-Matrix aus den ursprünglichen
+Crossmatchings rekonstruieren, die angegebenen Hauptminor-Indizes prüfen und
+die behauptete negative Determinante exakt nachrechnen. Er darf weder die
+Manifestzahl 223 noch die gespeicherten Determinanten als Prüfergebnis übernehmen.
+
+**Danach bzw. als zweiter Teil desselben lokalen Prüfers:** die 246 Bahnen
+unabhängig rekonstruieren: Stabilisatorwirkung der Ordnung 64, Repräsentanten,
+Disjunktheit und Überdeckung sämtlicher 13.824 beschrifteten Crossmatchings.
+Eine bloße disjunkte Liste 223+23 erfüllt diese Pflicht nicht. Der Abgleich muss
+die hier erledigten 23 Restfälle exakt mit der ergänzenden Menge der 223
+arithmetischen Ausschlüsse verbinden.
+
+**Unveränderter Checkerstatus:** Für die 897 Hauptlaufbeweise gilt weiterhin
+„archivierte Cake-Bestätigung und Integrität geprüft, kein Neustart-Replay“.
+Ein zusätzlicher Replay wäre eine Verstärkung des Vertrauensniveaus, ist aber
+kein hier bereits erfüllter Prüfschritt. Das historische fehlerhafte lrat-check
+wird nicht als eigenständige positive Beweisinstanz verwendet.
 
 Ein vollständiger Abschluss dieses Falls würde nur `k66_s1_t225` ausschließen.
 Die übrigen strukturellen Fälle des fixierten-Dreieck-Zweigs, die anderen

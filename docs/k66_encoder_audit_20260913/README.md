@@ -4,7 +4,8 @@ Aktueller Bericht: `MATHEMATISCHER_AUDIT.md`. Die neue Ryzen-Reproduktion
 bestand für alle 23 Fälle mit 167 byteidentischen CNF-Vergleichen; Ergebniscommit
 `b38d4cb755505a67c01bcf87aff0e2dbf1f79524`. Die angeforderten 125 Star-CNFs
 und sieben Hauptlaufwurzeln sind an die gesicherten Eingabehashes gebunden.
-Noch offen sind die ausdrücklichen Zusatz-Replay-Verknüpfungen sowie die
+Alle 28 ausdrücklichen Zusatz-Replay-Verknüpfungen sind ebenfalls bestanden.
+Der Encoder- und Reduktionsaudit ist abgeschlossen. Offen bleiben die
 eigenständigen 223 arithmetischen Ausschlüsse und die Bahnenvollständigkeit.
 
 Die nachfolgende Quellenbeschaffungsnotiz dokumentiert den früheren

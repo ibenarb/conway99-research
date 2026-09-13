@@ -18,7 +18,7 @@ import time
 from fractions import Fraction
 from pathlib import Path
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 SOURCE_COMMIT = "0a54ce594f89b948c77200328f5de7379bae4806"
 REPO = "ibenarb/conway99-research"
 BRANCH = "research/algebra-memetic-20260912"
@@ -514,13 +514,104 @@ def publish(output, workspace):
     print("GIT_REPRODUCTION_BACKUP_VERIFIED", json.dumps(state), flush=True)
 
 
+def link_replay_reports(reports_dir, reproduction_dir, cert15_path, output):
+    checker_sha = "e63d772e463265d26ace5f52125506024126b36c4a34901e2ed61c4378742d0a"
+    report_specs = {
+        "v4_09232_cake_replay.json": (14047, "0749a7f93765cc934b32dd0e5ca7a548732ab8dc28e901a5ec50686f8f5645b1"),
+        "remaining15_cake_replay.json": (14639, "5e9178990d31df520a8ce5e3d2d224972a8d5b998b9247c34a0cbbcacedb6797"),
+    }
+    reports = {}
+    for name, (size, sha) in report_specs.items():
+        data = (reports_dir / name).read_bytes()
+        require(len(data) == size and digest(data) == sha, "replay report bytes: " + name)
+        reports[name] = json.loads(data)
+    require(file_hash(cert15_path) == "9cf712b4ee16b26603c2a618088d7e170a4c4d9b6bd630d16813d369bc052f8a",
+            "cert15 manifest hash")
+    cert15 = {r["id"]: r for r in json.loads(cert15_path.read_text())["records"]}
+    require(len(cert15) == 15, "cert15 count")
+    expected = {}
+    input_files = {}
+    for path in sorted(reproduction_dir.glob("v4_*.json")):
+        case = json.loads(path.read_text())
+        require(case["status"] == "PASS" and case["identity"] ==
+                "8a9ed8646d9eb8e93cd5114be2d497192eb652e974dafe2bd0e3fabe7bb2010a", "reproduction identity")
+        input_files[path.name] = file_hash(path)
+        for cnf in case["cnfs"]:
+            if case["case"] == "v4_09232" or cnf["kind"] == "R2_GLOBAL":
+                require(cnf["original"] not in expected, "duplicate original CNF")
+                require(cnf["byte_identical"] is True and cnf["sha256"] == cnf["original_sha256"],
+                        "reproduction hash agreement")
+                expected[cnf["original"]] = (case["case"], cnf)
+    require(len(input_files) == 23 and len(expected) == 28, "reproduction coverage")
+    linked = []
+    seen = set()
+    def link(case, path, size, sha, proof_path, proof_size, proof_sha, result, source):
+        require(result["pass"] is True and result["exit"] == 0 and
+                result["stdout"] == "s VERIFIED UNSAT\n" and result["stderr"] == "", "Cake acceptance record")
+        require(path in expected and path not in seen, "replay coverage or duplicate")
+        expected_case, cnf = expected[path]
+        require(case == expected_case and size == cnf["bytes"] and sha == cnf["sha256"],
+                "replay/reproduction CNF mismatch")
+        require(proof_size > 0 and len(proof_sha) == 64 and all(c in "0123456789abcdef" for c in proof_sha),
+                "recorded proof identity")
+        seen.add(path)
+        linked.append(dict(case=case, kind=cnf["kind"], profile_id=cnf.get("global_profile_id"),
+                           cnf_path=path, cnf_bytes=size, cnf_sha256=sha, regenerated_path=cnf["new"],
+                           recorded_proof_path=proof_path, recorded_proof_bytes=proof_size,
+                           recorded_proof_sha256=proof_sha, checker_sha256=checker_sha,
+                           replay_report=source, status="REPLAY_INPUT_LINK_PASS"))
+    first = reports["v4_09232_cake_replay.json"]
+    require(first["checker_sha256"] == checker_sha and first["production_proofs_rechecked"] == 13 and
+            len(first["results"]) == 13, "09232 checker/count")
+    for result in first["results"]:
+        record = result["record"]
+        require(record["cake_verified"] is True, "09232 archived acceptance")
+        link("v4_09232", record["cnf_path"], record["cnf_bytes"], record["cnf_sha256"],
+             record["proof_path"], record["proof_bytes"], record["proof_sha256"], result,
+             "v4_09232_cake_replay.json")
+    second = reports["remaining15_cake_replay.json"]
+    require(set(second) == set(cert15), "remaining15 identity set")
+    for case, result in sorted(second.items()):
+        hashes = result["hashes"]
+        require(hashes["checker_sha256"] == checker_sha and result["unchanged_during_check"] is True,
+                "remaining15 checker or input stability")
+        manifest_record = cert15[case]
+        require(hashes["cnf"]["sha256"] == manifest_record["cnf_sha256"] and
+                hashes["proof"]["sha256"] == manifest_record["proof_sha256"] and
+                hashes["proof"]["bytes"] == manifest_record["proof_bytes"], "historical manifest hash linkage")
+        link(case, result["cnf_path"], hashes["cnf"]["bytes"], hashes["cnf"]["sha256"],
+             result["proof_path"], hashes["proof"]["bytes"], hashes["proof"]["sha256"], result,
+             "remaining15_cake_replay.json")
+    require(seen == set(expected), "complete 28-record linkage")
+    result = dict(status="ALL_28_REPLAY_INPUT_LINKS_PASS", version=VERSION,
+                  reproduction_commit="b38d4cb755505a67c01bcf87aff0e2dbf1f79524",
+                  linked_records=len(linked), supplemental_star_links=12, supplemental_global_links=16,
+                  reports={n: dict(bytes=v[0], sha256=v[1]) for n, v in report_specs.items()},
+                  reproduction_file_sha256=input_files, records=linked, new_proof_replays=0,
+                  scope="Metadata linkage to previous Cake replays, not a new proof replay.")
+    save(output, result)
+    print("K66_REPLAY_LINKAGE", json.dumps({k: v for k, v in result.items()
+          if k not in ("records", "reproduction_file_sha256", "reports")}), flush=True)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workspace", type=Path, default=Path.home() / "conway99_workspace")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--publish", action="store_true")
     parser.add_argument("--controls-only", action="store_true")
+    parser.add_argument("--link-reports", action="store_true")
+    parser.add_argument("--reports-dir", type=Path)
+    parser.add_argument("--reproduction-dir", type=Path)
+    parser.add_argument("--cert15-manifest", type=Path)
+    parser.add_argument("--link-output", type=Path)
     args = parser.parse_args()
+    if args.link_reports:
+        require(all([args.reports_dir, args.reproduction_dir, args.cert15_manifest, args.link_output]),
+                "link mode requires reports-dir, reproduction-dir, cert15-manifest and link-output")
+        link_replay_reports(args.reports_dir, args.reproduction_dir, args.cert15_manifest, args.link_output)
+        return
     os.environ["OPENBLAS_NUM_THREADS"] = "1"
     os.environ["OMP_NUM_THREADS"] = "1"
     workspace = args.workspace
