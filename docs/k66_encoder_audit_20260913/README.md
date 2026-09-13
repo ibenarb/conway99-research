@@ -1,4 +1,14 @@
-# K66: Encoder- und Reduktionsaudit – Quellenzuordnung begonnen
+# K66: Encoder- und Reduktionsaudit
+
+Aktueller Bericht: `MATHEMATISCHER_AUDIT.md`. Die neue Ryzen-Reproduktion
+bestand für alle 23 Fälle mit 167 byteidentischen CNF-Vergleichen; Ergebniscommit
+`b38d4cb755505a67c01bcf87aff0e2dbf1f79524`. Die angeforderten 125 Star-CNFs
+und sieben Hauptlaufwurzeln sind an die gesicherten Eingabehashes gebunden.
+Noch offen sind die ausdrücklichen Zusatz-Replay-Verknüpfungen sowie die
+eigenständigen 223 arithmetischen Ausschlüsse und die Bahnenvollständigkeit.
+
+Die nachfolgende Quellenbeschaffungsnotiz dokumentiert den früheren
+Arbeitsstand vor der inzwischen bestandenen Reproduktion.
 
 Stand: 13. September 2026. Dies ist eine Arbeitsnotiz zur Quellenbeschaffung,
 kein abgeschlossener mathematischer Audit und keine neue Zertifizierung.

@@ -1,6 +1,7 @@
 # K66: mathematischer Encoder- und Reduktionsaudit
 
-Stand: 13. September 2026, vor Ausführung der neuen Ryzen-Reproduktion.
+Stand: 13. September 2026, nach bestandener Ryzen-Reproduktion.
+Ergebniscommit: `b38d4cb755505a67c01bcf87aff0e2dbf1f79524`.
 Geltungsbereich: ausschließlich `k66_s1_t225` innerhalb des Ordnung-3-Zweigs
 mit fixiertem Dreieck. Kein globaler Ausschluss von srg(99,14,1,2).
 
@@ -13,10 +14,13 @@ Gewichten korrekt um. Die Multiplizitätsschranke zwei lässt sich kombinatorisc
 beweisen; sie muss nicht aus einem fremden Kommentar übernommen werden.
 
 Das ist ein mathematischer Schluss unter den ausdrücklich angegebenen
-Quotientenannahmen. Die Verbindung zu sämtlichen konkreten zertifizierten
-Dateien ist noch **offen**, bis der neue Ryzen-Prüfer bestanden hat.
-Insbesondere ersetzen weder Quelltextgleichheit noch identische historische
-Hashangaben einen jetzt ausgeführten Bytevergleich.
+Quotientenannahmen. Die angeforderten 125 Star-CNFs und sieben Hauptlaufwurzeln sind jetzt
+**vollständig byteidentisch reproduziert und an die gesicherten Eingabehashes
+gebunden**. Alle 23 konkreten Profildomänen und Paarmasken stimmen mit der
+unabhängigen Ganzzahlgegenrechnung überein. Bei den zusätzlich reproduzierten
+zwölf Star-CNFs von v4_09232 fehlt im neuen Ergebnis noch die ausdrückliche
+Verknüpfung mit den früheren Cake-Replay-Hashes; diese Restpflicht ist separat
+aufgeführt. Es wird kein vollständiger K66-Fallabschluss behauptet.
 
 | Gegenstand | Status dieser Fassung |
 | --- | --- |
@@ -25,10 +29,10 @@ Hashangaben einen jetzt ausgeführten Bytevergleich.
 | Preflight-Quelltext im ursprünglichen PYZ und Repository | SHA256-/Blob-Gleichheit anhand neuer Quellensammlung festgestellt |
 | Acht zentrale Definitionen in Preflight und Deep7 | AST-Gleichheit rechnerisch festgestellt |
 | Keine zusätzlichen Deep7-Entfernungen | In den neu eingesammelten Verlaufsdaten protokolliert |
-| Beliebig genaue Gegenrechnung aller konkreten Profile und Paarmasken | Ryzen-Prüfer vorbereitet, noch nicht ausgeführt |
-| 125 Star-CNFs und sieben Hauptlaufwurzeln erneut reproduziert | Noch offen in diesem Audit |
-| Zusätzliche zwölf Star-CNFs und reduzierte Global-CNF für v4_09232 | Reproduktion im selben Prüfer vorgesehen |
-| 15 unreduzierte R2-Global-CNFs | Eigene Reproduktion im selben Prüfer vorgesehen |
+| Beliebig genaue Gegenrechnung aller konkreten Profile und Paarmasken | Für alle 23 Fälle rechnerisch bestanden |
+| 125 Star-CNFs und sieben Hauptlaufwurzeln erneut reproduziert | Vollständige Byte- und SHA256-Gleichheit; gesicherte Eingabehashes stimmen |
+| Zusätzliche zwölf Star-CNFs und reduzierte Global-CNF für v4_09232 | Byteidentisch; ausdrückliche Verknüpfung der zwölf Profilhashes mit dem früheren Replay noch offen |
+| 15 unreduzierte R2-Global-CNFs | Byteidentisch; Hashes stimmen mit separatem cert15_manifest überein |
 | 223 arithmetische Ausschlüsse und Vollständigkeit der 246 Bahnen | Eigenständige offene Pflichten |
 
 Es wird hier kein Produktionsbeweis erneut geprüft. Der gesicherte Neustartstand
@@ -361,7 +365,7 @@ stützen die allgemeine Induktion; sie ersetzen sie nicht.
 | Summe | 4836 | 124 | 1 | 4711 |
 
 Die Zahlen sind aus den neu gesammelten Quellen und Metadaten rekonstruiert;
-die vollständige lokale Reproduktion steht noch aus. Der zusätzliche Fall
+sie sind jetzt zusätzlich durch die vollständige lokale Reproduktion bestätigt. Der zusätzliche Fall
 v4_09232 beginnt mit 350 Profilen, entfernt zwölf in Runde eins und endet mit 338.
 
 Im Preflight wird `ACTIVE` während einer Runde nicht geändert. Erst nachdem
@@ -424,19 +428,68 @@ Schur-Zeile auf null zu prüfen. Als allgemeiner PSD-Test ist das unzureichend.
 Es ist hier kein nachgewiesener Fehl-Ausschluss: Der neue unabhängige Prüfer
 kontrolliert diese Zeile, die positive Pivotfolge sowie die vollständige
 Rangrekonstruktion. Außerdem werden die konkreten Einzelprofil- und Paarmasken
-gegen die unbeschränkte Ganzzahlarithmetik verglichen. Sein Ergebnis steht aus.
+gegen die unbeschränkte Ganzzahlarithmetik verglichen. Alle 23 Fälle bestanden;
+der allgemeine Schwachpunkt des historischen Nullpivot-Tests hat in diesen
+konkreten Eingaben keinen abweichenden Befund verursacht.
 
 Entwicklungsprüfung ohne Produktionsdaten: Die 945 BDD-Kontrollen bestanden.
 Kleine definite und singulär-PSD-Matrizen bestanden den Inversenprüfer;
 zwei indefinite Gegenkontrollen wurden abgelehnt. Der Bytevergleich erkannte
 sowohl identische als auch gezielt veränderte kleine CNFs.
 
-## 11. Verbleibende Abschlussbedingungen
+## 11. Bestätigte Reproduktionsergebnisse
 
-**Unmittelbar erforderlich:** neuen Ryzen-Prüfer ausführen, dessen tatsächliche
-Ergebnisse lesen und diesen Bericht um die erfolgten bzw. gescheiterten
-Reproduktionen ergänzen. Erst dann lässt sich die Verbindung der bewiesenen
-Modellnotwendigkeit zu den zertifizierten Eingaben als geschlossen bewerten.
+Die 23 einzelnen Ergebnisdateien und der Gesamtbericht wurden am festen
+Ergebniscommit vollständig gelesen und auf konsistente Auditidentität,
+PASS-Status, Bytegleichheit und gespeicherte Hashverknüpfungen geprüft.
+
+| Vergleichsgruppe | Anzahl | Ergebnis |
+| --- | ---: | --- |
+| Star-CNFs der sieben Hauptlaufwurzeln | 125 | Byteidentisch, einschließlich Bindung an Neustart-Inventar |
+| Zusätzliche Star-CNFs von v4_09232 | 12 | Byteidentisch; Replay-Hashverknüpfung noch zu ergänzen |
+| Deep7-Global-CNFs | 7 | Byteidentisch, einschließlich Bindung an Hauptlaufmanifest |
+| Preflight-Global-CNFs | 8 | Byteidentisch; sieben stimmen außerdem mit Deep7 überein |
+| Separate R2-Global-CNFs | 15 | Byteidentisch; Hashbindung an cert15_manifest |
+| Summe der Vergleiche | 167 | Alle bestanden |
+
+Die 167 Vergleiche umfassen 160 verschiedene SHA256-Werte: Die sieben
+Preflight-/Deep7-Globalmodelle sind erwartungsgemäß paarweise gleich.
+Die genaue Ganzzahlgegenrechnung bestätigt vier Gram-Matrizen vom Rang elf
+und 19 vom Rang zwölf. Der größte protokollierte Absolutwert bzw.
+Absolutsummen-Bound ist 143046661868010000 (`v4_09332`, `second_square`).
+Er liegt mehr als Faktor 64 unter 9223372036854775807, der int64-Obergrenze.
+Damit sind die überprüften konkreten Rechenschritte und Masken abgesichert;
+dies ist keine allgemeine Zusicherung für andere Parameter oder Encoder.
+
+Profil 3520 wurde mit 1152 Variablen, 4200 Klauseln und 59175 Bytes
+reproduziert. SHA256:
+`b002e7887ebbff1813dbf60c52db1d1aae142f9bded0c9c03f8c5f504482ac23`.
+Der Vergleich erfolgte vor seiner Entfernung und nach genau diesen
+34 Entfernungen aus Runde eins:
+
+    1395, 1875, 1984, 1991, 1994, 2001, 2004, 2011, 2014, 2021,
+    2084, 2091, 2094, 2101, 2104, 2114, 2135, 2136, 2184, 2191,
+    2194, 2204, 2214, 2284, 2291, 2294, 2304, 2314, 2495, 2519,
+    2871, 3037, 3156, 3411.
+
+Dies belegt die nichtzirkuläre, rundenweise Reproduktion. Es ist keine
+Behauptung über eine minimale logische Abhängigkeitsmenge.
+
+Der eigentliche Prüflauf benötigte laut Gesamtbericht 21 Sekunden; die
+vorherige Schätzung 5–20 Minuten war deutlich zu konservativ. Der anschließende
+Git-Upload und vollständige Rückdownloadvergleich wurden vom lokalen Programm
+als bestanden gemeldet. Kein Produktionsbeweis wurde erneut geprüft.
+
+## 12. Verbleibende Abschlussbedingungen
+
+**Unmittelbar erforderlich:** die kompakten früheren Replay-Berichte
+`v4_09232_cake_replay.json` und `remaining15_cake_replay.json` aus dem
+Neustartverzeichnis heranziehen. Die zwölf zusätzlichen Star-Eingaben besitzen
+im neuen Ergebnis `certificate_input_sha256: null`; ihre Bytegleichheit ist
+bewiesen, die ausdrückliche Verbindung zum damaligen Replay fehlt in dieser
+Ergebnisfassung. Auch die bereits manifestgebundenen Zusatz-Globalhashes sollen
+den tatsächlich erneut geprüften Eingaben direkt zugeordnet werden. Dafür
+sind nur Berichtsdaten erforderlich, kein weiterer Solver- oder Checker-Lauf.
 
 **Danach eigenständig erforderlich:** die 223 arithmetischen Ausschlusszeugen
 mit vollständiger Matrixzuordnung nachprüfen und die 246 Bahnen einschließlich
