@@ -44,3 +44,5 @@ Die drei derzeit im Gespräch vorgeschlagenen Selektionsvarianten sind (W,L1), (
 
 Mistral/Vibe v01: sechs eingereichte Datensätze, null aufgenommene Kandidaten.
 Alle sechs graph6-Angaben sind ungültig. Details im [Prüfbericht](submissions/20260914_mistral_v01/REVIEW.md).
+
+Mistral/Vibe v02: drei Beschreibungen, keine Graphdaten oder Generatoren, null aufgenommene Kandidaten. [Prüfbericht](submissions/20260914_mistral_v02/REVIEW.md). Original und eigene Rekonstruktion getrennt archiviert.

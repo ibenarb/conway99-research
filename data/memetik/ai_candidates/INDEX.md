@@ -7,3 +7,13 @@
 [Original](submissions/20260914_mistral_v01/original.md) · [Prüfbericht](submissions/20260914_mistral_v01/REVIEW.md) · [Prüfdaten](submissions/20260914_mistral_v01/audit.json)
 
 Die Modellkennung ist eine Selbstangabe, keine externe Verifikation. Die empfangene Datei endet nach dem JSON; mögliche Übertragungsverkürzung ungeklärt. Mathematische und Datenformatfehler sind unabhängig davon belegt.
+
+## Mistral v02 — gekürzter Auftrag
+
+| Eingang | Ansätze | Graphdaten | Generatoren | Aufgenommen | Entscheidung | Festes Archiv |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| 2026-09-14, Vibe v02 | 3 | 0 | 0 | 0 | REJECTED_AS_SUBMITTED | [9bbbbfe](https://github.com/ibenarb/conway99-research/tree/9bbbbfece7511c96cdc9103c42318b89c3a64f08/data/memetik/ai_candidates/submissions/20260914_mistral_v02/) |
+
+[Original](submissions/20260914_mistral_v02/original.md) · [Prüfbericht](submissions/20260914_mistral_v02/REVIEW.md) · [Prüfdaten](submissions/20260914_mistral_v02/audit.json)
+
+Schlussmarker vorhanden; angekündigter Code fehlt. Eigene Rekonstruktion der Ω-Regel: H-Grad 2 statt 12 und 840 verletzte PH-Gleichungen. Keine Kandidaten übernommen.
