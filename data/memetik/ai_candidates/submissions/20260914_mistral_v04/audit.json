@@ -1,0 +1,44 @@
+{
+    "first_edge_accepted": false,
+    "target_entry_range": [
+        1,
+        2
+    ],
+    "bounded_result_is_none": true,
+    "bounded_check_calls": 21,
+    "bounded_distinct_edges": [
+        [
+            0,
+            1
+        ]
+    ],
+    "runs": [
+        {
+            "budget": 20,
+            "exit_code": 1,
+            "stdout": "NO_CANDIDATE_FOUND\n",
+            "stderr_tail": ""
+        },
+        {
+            "budget": 1000000,
+            "exit_code": 1,
+            "stdout": "",
+            "stderr_tail": "Traceback (most recent call last):\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 247, in <module>\n    main()\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 217, in main\n    result_H = backtrack_omega(H, P, C, degrees, 0, max_steps)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 117, in backtrack_omega\n    return backtrack_omega(H, P, C, degrees, step + 1, max_steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 117, in backtrack_omega\n    return backtrack_omega(H, P, C, degrees, step + 1, max_steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 117, in backtrack_omega\n    return backtrack_omega(H, P, C, degrees, step + 1, max_steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  [Previous line repeated 992 more times]\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 103, in backtrack_omega\n    if check_omega_conditions(H, P, C, i, j):\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3468300bdb19/mistral_v04/generator_normalized.py\", line 53, in check_omega_conditions\n    J = np.ones((14, 84))\n        ^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/numpy/_core/numeric.py\", line 234, in ones\n    multiarray.copyto(a, 1, casting='unsafe')\nRecursionError: maximum recursion depth exceeded\n"
+        }
+    ],
+    "graph6_header99": "~?@b",
+    "graph6_length99": 813,
+    "encoder_roundtrip_equal": false,
+    "input_edges": [
+        [
+            0,
+            3
+        ]
+    ],
+    "decoded_edges": [
+        [
+            1,
+            2
+        ]
+    ]
+}
