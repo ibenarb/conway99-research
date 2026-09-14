@@ -1,0 +1,99 @@
+{
+  "status": "EXHAUSTIVE_PARTITION_PREPARED_NOT_SOLVED",
+  "version": "1.0.0",
+  "cnf_sha256": "f9d6011c5e6eb8a0fab971fa324d159e94b8bc4526b7b17dc31ee55aee1c25ba",
+  "mapping_sha256": "cd78938cc0fd6c4b2239ddd2b67054e1ea754b41be4dc6eeaef6849b97e0bc0e",
+  "source_sha256": "73d07f789a1df35dc1465651a361a6fcaec929190f5451ef5ebffb214510b311",
+  "split_variables": [
+    22,
+    36,
+    685
+  ],
+  "cases": [
+    {
+      "id": "cube_000",
+      "assumptions": [
+        -22,
+        -36,
+        -685
+      ],
+      "sha256": "441c231bb7ad557056ab49efaa99f29c06c169d61ef0c2d0d9e23ddb8ebfeb0d",
+      "bytes": 42747979
+    },
+    {
+      "id": "cube_001",
+      "assumptions": [
+        -22,
+        -36,
+        685
+      ],
+      "sha256": "cce55188bca5f831ce54fccb2959494427be2a51eeb2a72f4628fd59148c1fe3",
+      "bytes": 42747978
+    },
+    {
+      "id": "cube_010",
+      "assumptions": [
+        -22,
+        36,
+        -685
+      ],
+      "sha256": "427c1ae27c743ebf98ff091dab6360c087b35ca05428e195a83ff7f876118e98",
+      "bytes": 42747978
+    },
+    {
+      "id": "cube_011",
+      "assumptions": [
+        -22,
+        36,
+        685
+      ],
+      "sha256": "4bb2d812c2885b2d0b431ef76cd621a140a23f07899413a1601cf471c2807a0b",
+      "bytes": 42747977
+    },
+    {
+      "id": "cube_100",
+      "assumptions": [
+        22,
+        -36,
+        -685
+      ],
+      "sha256": "a177b6db961e2e5f160b038f8fdc1e9d5d24cb190737246cb3b5c5bb31b6253b",
+      "bytes": 42747978
+    },
+    {
+      "id": "cube_101",
+      "assumptions": [
+        22,
+        -36,
+        685
+      ],
+      "sha256": "2490dd63a79935335e2c1d012bfd9cdb5de0b89d58d5fa5936bf09efa4747fbb",
+      "bytes": 42747977
+    },
+    {
+      "id": "cube_110",
+      "assumptions": [
+        22,
+        36,
+        -685
+      ],
+      "sha256": "313f5c5f70c1e94bc4bad04ac0f006a754f81d34ee2671695711e805882ad8ce",
+      "bytes": 42747977
+    },
+    {
+      "id": "cube_111",
+      "assumptions": [
+        22,
+        36,
+        685
+      ],
+      "sha256": "4efc534075933b770df489ae77a209c06b9d4a339cab14b84f828ab79440412c",
+      "bytes": 42747976
+    }
+  ],
+  "coverage_assignments_checked": 8,
+  "solver_runs": 0,
+  "scope": "Every baseline assignment belongs to exactly one cube; no symmetry reduction or exclusion.",
+  "next_benchmark": "Eight cubes with seed 0 plus three baseline controls, matched search budgets and LRAT settings.",
+  "output": "/tmp/c2_partition_checked"
+}
