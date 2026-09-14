@@ -1,6 +1,6 @@
 # Unabhängig geprüfte Kandidaten
 
-Derzeit keine Kandidaten aus der neuen KI-Sammlung aufgenommen.
+Ein Ω-Kandidat aus eigener Ausführung des Gemini-Generators aufgenommen: [gemini_v01_seed42.g6](omega/gemini_v01_seed42.g6), [Abnahmemetadaten](omega/gemini_v01_seed42.json). Zulässigkeit unabhängig bestätigt; Isomorphie- und Einzugsgebietsneuheit nicht festgestellt.
 
 Bei Aufnahme je Graph:
 - `lambda/<id>.g6` bzw. `omega/<id>.g6`;

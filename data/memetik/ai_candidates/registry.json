@@ -86,7 +86,37 @@
             "accepted_count": 0,
             "candidates": [],
             "notes": "Full original received. Premature equality check and repeated first zero prevent search; default RecursionError. graph6 order still incorrect."
+        },
+        {
+            "submission_id": "20260914_gemini_v01",
+            "archive_commit": "007fa996be815756e83aa129807e1603dab06d2d",
+            "archive_branch": "reviews/20260914-gemini-candidates-v01",
+            "path": "submissions/20260914_gemini_v01",
+            "status": "ACCEPTED",
+            "submitted_count": 0,
+            "supplied_generators": 1,
+            "locally_generated_count": 1,
+            "accepted_count": 1,
+            "candidates": [
+                {
+                    "id": "gemini_v01_seed42",
+                    "admission": "ACCEPTED",
+                    "validation": "PASS",
+                    "novelty": "not established"
+                }
+            ],
+            "notes": "Successful bounded local execution; complete independent Omega/score/graph6 validation. No new basin or isomorphism class claimed."
         }
     ],
-    "accepted_candidates": []
+    "accepted_candidates": [
+        {
+            "id": "gemini_v01_seed42",
+            "arm": "omega",
+            "path": "accepted/omega/gemini_v01_seed42.g6",
+            "metadata_path": "accepted/omega/gemini_v01_seed42.json",
+            "sha256": "5dbfad84a90aa1622f51c171c0b72857ad8721173b74f23ed21473616c91dffb",
+            "source_archive_commit": "007fa996be815756e83aa129807e1603dab06d2d",
+            "novelty": "not established"
+        }
+    ]
 }

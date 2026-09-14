@@ -23,3 +23,5 @@ Korrektur Mistral v02: Code ging beim Kopieren verloren, nicht bei Mistrals Ausg
 Mistral v03: [Archiv 8e8769a](https://github.com/ibenarb/conway99-research/tree/8e8769a39b9b66b12247378a9d7ed5280ec2e95c/data/memetik/ai_candidates/submissions/20260914_mistral_v03/), Zweig `reviews/20260914-mistral-candidates-v03`. Zwei Generatoren ausgeführt, null Kandidaten. Eigener begrenzter Ausschluss zirkulärer λ-Gründer dokumentiert, keine Literatur-Neuheit behauptet.
 
 Mistral v04: [Archiv cb3687e](https://github.com/ibenarb/conway99-research/tree/cb3687eb3a1e544717f633e11533e6454d9d574f/data/memetik/ai_candidates/submissions/20260914_mistral_v04/), Zweig `reviews/20260914-mistral-candidates-v04`. Vollständiger Eingang; nicht fortschreitende Backtracking-Implementierung nachgewiesen, null Kandidaten.
+
+Gemini v01: [Archiv 007fa99](https://github.com/ibenarb/conway99-research/tree/007fa996be815756e83aa129807e1603dab06d2d/data/memetik/ai_candidates/submissions/20260914_gemini_v01/), Zweig `reviews/20260914-gemini-candidates-v01`. Generator lokal ausgeführt; ein Ω-Graph unabhängig validiert und aufgenommen. Keine Neuheitsbehauptung.

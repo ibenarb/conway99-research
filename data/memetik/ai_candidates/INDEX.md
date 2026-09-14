@@ -29,3 +29,7 @@ Zwei Generatoren im Chat empfangen und nach dokumentierter Kopierkorrektur ausge
 ## Mistral v04 — letzter Korrekturversuch
 
 Original mit Code erhalten und archiviert. Ω-Backtracking: mit Limit 20 ausschließlich 21 Wiederholungen derselben Zelle; beim Standardlimit RecursionError. Header korrigiert, graph6-Bitreihenfolge nicht. Null Aufnahme. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/cb3687eb3a1e544717f633e11533e6454d9d574f/data/memetik/ai_candidates/submissions/20260914_mistral_v04/).
+
+## Gemini v01 — gültiger Ω-Kandidat
+
+Ein bereitgestellter CP-SAT-Generator, keine von Gemini vorgetäuschte Ausführung. Eigener Probelauf Seed 42, ein Worker: Lösung nach etwa 2,47 s. Alle harten Bedingungen und Scores unabhängig geprüft. W=3107, L1=5310, F=11504, Linf=8. Ein Graph aufgenommen; Isomorphie-/Einzugsgebietsneuheit offen. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/007fa996be815756e83aa129807e1603dab06d2d/data/memetik/ai_candidates/submissions/20260914_gemini_v01/). [Validierter Graph](accepted/omega/gemini_v01_seed42.g6).
