@@ -17,3 +17,5 @@ Historische Reviews vor dieser Regel verbleiben an ihren bisherigen Referenzen. 
 Laufender [Kandidatenkatalog](../../data/memetik/ai_candidates/INDEX.md).
 
 Mistral/Vibe v02, 2026-09-14: [festes Archiv 9bbbbfe](https://github.com/ibenarb/conway99-research/tree/9bbbbfece7511c96cdc9103c42318b89c3a64f08/data/memetik/ai_candidates/submissions/20260914_mistral_v02/), Zweig `reviews/20260914-mistral-candidates-v02`. Drei Beschreibungen, kein Code/Graph, null Aufnahme. Ω-Regel unabhängig widerlegt; siehe Prüfbericht.
+
+Korrektur Mistral v02: Code ging beim Kopieren verloren, nicht bei Mistrals Ausgabe. [Code-Nachtrag und Ausführung, d58dbcc](https://github.com/ibenarb/conway99-research/tree/d58dbccb3dce418f57bfb05325cc8cfaec782e65/data/memetik/ai_candidates/submissions/20260914_mistral_v02/code_supplement/); eigener Archivzweig `reviews/20260914-mistral-v02-code-supplement`. Drei Assertion-Abbrüche; Metrikfunktion bestätigt.

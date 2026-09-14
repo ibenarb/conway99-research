@@ -17,3 +17,7 @@ Die Modellkennung ist eine Selbstangabe, keine externe Verifikation. Die empfang
 [Original](submissions/20260914_mistral_v02/original.md) · [Prüfbericht](submissions/20260914_mistral_v02/REVIEW.md) · [Prüfdaten](submissions/20260914_mistral_v02/audit.json)
 
 Schlussmarker vorhanden; angekündigter Code fehlt. Eigene Rekonstruktion der Ω-Regel: H-Grad 2 statt 12 und 840 verletzte PH-Gleichungen. Keine Kandidaten übernommen.
+
+## Korrektur zu v02: Code-Nachtrag
+
+Die Oberfläche hatte Code angezeigt; er wurde beim Kopieren nicht übernommen. Drei nachgereichte Generatoren tatsächlich ausgeführt: jeweils Grad-AssertionError. Metrikfunktion auf allen drei Zwischenständen unabhängig bestätigt. Null Aufnahme; fehlenden Code nicht mehr Mistral zuschreiben. [Nachtrag und Ausführungsbericht](https://github.com/ibenarb/conway99-research/tree/d58dbccb3dce418f57bfb05325cc8cfaec782e65/data/memetik/ai_candidates/submissions/20260914_mistral_v02/code_supplement/) (Archivzweig `reviews/20260914-mistral-v02-code-supplement`).

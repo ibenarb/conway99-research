@@ -1,3 +1,5 @@
+> **Korrektur nach Code-Nachreichung:** Mistral hatte Code angezeigt; dieser ging beim Kopieren verloren. Die folgende Bewertung beschreibt den früheren unvollständigen Eingang. Drei Generatoren und die Metrikfunktion wurden inzwischen tatsächlich ausgeführt. Siehe [Korrektur und Ausführungsbericht](code_supplement/REVIEW.md). Die pauschale Zuschreibung fehlender Codelieferung wird zurückgenommen.
+
 # Mistral/Vibe v02: Befunde, Analyse, Schlussfolgerungen
 
 Stand: 14. September 2026. Original: `original.md`; eigene Reproduktion: `audit_submission.py`, Ergebnisse: `audit.json`.
