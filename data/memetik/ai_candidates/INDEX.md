@@ -21,3 +21,7 @@ Schlussmarker vorhanden; angekündigter Code fehlt. Eigene Rekonstruktion der Ω
 ## Korrektur zu v02: Code-Nachtrag
 
 Die Oberfläche hatte Code angezeigt; er wurde beim Kopieren nicht übernommen. Drei nachgereichte Generatoren tatsächlich ausgeführt: jeweils Grad-AssertionError. Metrikfunktion auf allen drei Zwischenständen unabhängig bestätigt. Null Aufnahme; fehlenden Code nicht mehr Mistral zuschreiben. [Nachtrag und Ausführungsbericht](https://github.com/ibenarb/conway99-research/tree/d58dbccb3dce418f57bfb05325cc8cfaec782e65/data/memetik/ai_candidates/submissions/20260914_mistral_v02/code_supplement/) (Archivzweig `reviews/20260914-mistral-v02-code-supplement`).
+
+## Mistral v03
+
+Zwei Generatoren im Chat empfangen und nach dokumentierter Kopierkorrektur ausgeführt. Beide melden NO_CANDIDATE_FOUND; null Aufnahme. D tatsächlich Sidon, aber 594 Kanten verletzen λ. Ω-H hat Grad 22. Eigene Herleitung: keine 14-regulären zirkulären λ-Gründer auf Z99. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/8e8769a39b9b66b12247378a9d7ed5280ec2e95c/data/memetik/ai_candidates/submissions/20260914_mistral_v03/).
