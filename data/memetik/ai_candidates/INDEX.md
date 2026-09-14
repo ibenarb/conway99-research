@@ -25,3 +25,7 @@ Die Oberfläche hatte Code angezeigt; er wurde beim Kopieren nicht übernommen. 
 ## Mistral v03
 
 Zwei Generatoren im Chat empfangen und nach dokumentierter Kopierkorrektur ausgeführt. Beide melden NO_CANDIDATE_FOUND; null Aufnahme. D tatsächlich Sidon, aber 594 Kanten verletzen λ. Ω-H hat Grad 22. Eigene Herleitung: keine 14-regulären zirkulären λ-Gründer auf Z99. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/8e8769a39b9b66b12247378a9d7ed5280ec2e95c/data/memetik/ai_candidates/submissions/20260914_mistral_v03/).
+
+## Mistral v04 — letzter Korrekturversuch
+
+Original mit Code erhalten und archiviert. Ω-Backtracking: mit Limit 20 ausschließlich 21 Wiederholungen derselben Zelle; beim Standardlimit RecursionError. Header korrigiert, graph6-Bitreihenfolge nicht. Null Aufnahme. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/cb3687eb3a1e544717f633e11533e6454d9d574f/data/memetik/ai_candidates/submissions/20260914_mistral_v04/).
