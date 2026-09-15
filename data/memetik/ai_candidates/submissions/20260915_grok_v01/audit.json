@@ -1,0 +1,92 @@
+{
+    "versions": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "networkx": "3.6.1",
+        "numpy": "2.5.3"
+    },
+    "F01_linear_hypergraph_counterexample": {
+        "triples": [
+            [
+                0,
+                1,
+                2
+            ],
+            [
+                0,
+                3,
+                4
+            ],
+            [
+                1,
+                3,
+                5
+            ]
+        ],
+        "common_neighbors_edge_0_1": [
+            2,
+            3
+        ],
+        "lambda_check": false
+    },
+    "networkx_is_regular_signature": "(G, *, backend=None, **backend_kwargs)",
+    "networkx_is_simple_path_signature": "(G, nodes, *, backend=None, **backend_kwargs)",
+    "F02_direct_regularity_call": {
+        "status": "ERROR",
+        "type": "TypeError",
+        "message": "is_regular() takes 1 positional argument but 2 were given"
+    },
+    "verifier_check_hard": {
+        "status": "ERROR",
+        "type": "TypeError",
+        "message": "is_simple_path() missing 1 required positional argument: 'nodes'"
+    },
+    "helper_encoder_placeholder": {
+        "status": "RETURNED",
+        "value": "None"
+    },
+    "F01_encoder_matches_networkx_on_99_vertex_fixture": true,
+    "score_helpers_agree_with_independent_fixture": true,
+    "bounded_runs": [
+        {
+            "script": "gen_F01.py",
+            "args": [
+                "--seed",
+                "42",
+                "--max_tries",
+                "1"
+            ],
+            "exit_code": 1,
+            "stdout": "",
+            "stderr": "FAILED\n",
+            "wall_seconds": 0.26877496099768905
+        },
+        {
+            "script": "gen_F02.py",
+            "args": [
+                "--seed",
+                "1",
+                "--max_tries",
+                "1"
+            ],
+            "exit_code": 1,
+            "stdout": "",
+            "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/3468300bdb19/grok_v01/gen_F02.py\", line 52, in <module>\n    main()\n  File \"/workspace/scratch/3468300bdb19/grok_v01/gen_F02.py\", line 42, in main\n    if nx.is_regular(G, DEG) and check_lambda1(G):\n       ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/3468300bdb19/gemini_deps/networkx/utils/decorators.py\", line 784, in func\n    return argmap._lazy_compile(__wrapper)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: is_regular() takes 1 positional argument but 2 were given\n",
+            "wall_seconds": 0.20663459099887405
+        },
+        {
+            "script": "verify_candidates.py",
+            "args": [
+                "/workspace/scratch/3468300bdb19/grok_v01/original.md"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "wall_seconds": 0.17646745999809355
+        }
+    ],
+    "Z99_elements_satisfying_3d_equals_0_nonzero": [
+        33,
+        66
+    ],
+    "source_sha256": "50a80366200db796b47beacd74e1d2839e4639829f72e6bb12b7871dd30ffb57"
+}
