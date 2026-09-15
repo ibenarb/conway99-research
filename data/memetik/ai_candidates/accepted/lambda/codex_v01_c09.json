@@ -1,0 +1,67 @@
+{
+    "id": "codex_v01_c09",
+    "submission_id": "20260915_codex_v01",
+    "source_candidate_id": "C09",
+    "source_family_id": "F04",
+    "source_archive_commit": "c10038a3baa23145b666d5e5251e81c139877f83",
+    "source_path": "data/memetik/ai_candidates/submissions/20260915_codex_v01/original.md",
+    "arm": "lambda",
+    "status": "PASS",
+    "sha256": "9a289dc01928217cca40edcd39635045645001305388a863bc76b5eb153ceef6",
+    "scores": {
+        "W": 2871,
+        "L1": 3828,
+        "F": 6072,
+        "Linf": 4,
+        "Nmax": 33,
+        "lambda_bad_edges": 0,
+        "residual_histogram": {
+            "0": 1980,
+            "1": 1056,
+            "2": 264,
+            "3": 66,
+            "4": 33,
+            "-2": 462,
+            "-1": 990
+        }
+    },
+    "hard_checks": {
+        "order_99": true,
+        "simple_undirected": true,
+        "regular_14": true,
+        "lambda_edge_condition": true,
+        "omega_frame_condition": null
+    },
+    "omega_frame": null,
+    "generator_id": "G01",
+    "generator_args": [
+        "--kind",
+        "offset",
+        "--seed",
+        "402",
+        "--restarts",
+        "1000",
+        "--out",
+        "C09_run.json"
+    ],
+    "parents": [],
+    "validation": {
+        "script": "data/memetik/ai_candidates/submissions/20260915_codex_v01/audit.py",
+        "helper": "data/memetik/ai_candidates/submissions/20260915_codex_v01/audit_helpers.py",
+        "archive_commit": "c10038a3baa23145b666d5e5251e81c139877f83",
+        "report": "data/memetik/ai_candidates/submissions/20260915_codex_v01/audit.json",
+        "environment": "data/memetik/ai_candidates/submissions/20260915_codex_v01/environment.json",
+        "byte_identical_reproduction": true
+    },
+    "isomorphism": {
+        "pairwise_nonisomorphic_within_submission": true,
+        "nonisomorphic_to_18_listed_references": true,
+        "reference_manifest": "data/memetik/ai_candidates/submissions/20260915_codex_v01/reference_manifest.json",
+        "reference_base_commit": "bb43b0ab4fad36e142832923b83dcf3f6a186652",
+        "automorphism_order": 33,
+        "vertex_orbits": 3,
+        "certificate_sha256": "4a2e16e508bf94c92815a6216430a957e2ccf5497c90e06e9935a8f827e0a05d",
+        "global_novelty": "not established",
+        "basin_novelty": "not established"
+    }
+}

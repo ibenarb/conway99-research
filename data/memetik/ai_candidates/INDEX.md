@@ -39,3 +39,9 @@ Ein bereitgestellter CP-SAT-Generator, keine von Gemini vorgetäuschte Ausführu
 Zwei Ω-Kandidaten (A/B), ein λ-Kandidat (C); alle Scores unabhängig bestätigt, paarweise Nichtisomorphie belegt. final/cayley byteidentisch reproduziert. Cayley-Ausschluss über alle Gruppen der Ordnung 99 zusätzlich unabhängig geprüft. Herkunft A→B beachten; Fluchtlängenschwelle nicht belegt. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6/data/memetik/ai_candidates/submissions/20260915_claude_v01/).
 
 Validierte Graphen: [Claude-A](accepted/omega/claude_v01_a.g6), [Claude-B](accepted/omega/claude_v01_b.g6), [Claude-C](accepted/lambda/claude_v01_c.g6). Gesamtbestand der neuen KI-Sammlung: vier gültige Graphen einschließlich Gemini; kein Nachweis vier unabhängiger Familien.
+
+## Codex v01 — zehn gültige, reproduzierte Kandidaten
+
+C01–C05 im Ω-Arm, C06–C10 im λ-Arm. Alle harten Bedingungen und Kennzahlen unabhängig bestätigt; zehn byteidentische Wiedererzeugungen. Untereinander und zu 18 benannten Referenzgraphen nichtisomorph. C02 verbessert die dokumentierten Office-Ω-Bestwerte W/L1/F auf 2074/2506/3472. F02 liefert fünf asymmetrische Graphen; die λ-Lifts benötigen Suchbewegungen außerhalb ihrer festen Dreiteilung. Familienvielfalt und Einzugsgebiete bleiben gesondert zu untersuchen. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/c10038a3baa23145b666d5e5251e81c139877f83/data/memetik/ai_candidates/submissions/20260915_codex_v01/).
+
+Aktueller Bestand: **14 validierte KI-Kandidaten (8 Ω, 6 λ)**. Aufnahme ist keine automatische Pilot-Auswahl und kein Nachweis von 14 unabhängigen Familien.
