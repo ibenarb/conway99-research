@@ -25,3 +25,5 @@ Mistral v03: [Archiv 8e8769a](https://github.com/ibenarb/conway99-research/tree/
 Mistral v04: [Archiv cb3687e](https://github.com/ibenarb/conway99-research/tree/cb3687eb3a1e544717f633e11533e6454d9d574f/data/memetik/ai_candidates/submissions/20260914_mistral_v04/), Zweig `reviews/20260914-mistral-candidates-v04`. Vollständiger Eingang; nicht fortschreitende Backtracking-Implementierung nachgewiesen, null Kandidaten.
 
 Gemini v01: [Archiv 007fa99](https://github.com/ibenarb/conway99-research/tree/007fa996be815756e83aa129807e1603dab06d2d/data/memetik/ai_candidates/submissions/20260914_gemini_v01/), Zweig `reviews/20260914-gemini-candidates-v01`. Generator lokal ausgeführt; ein Ω-Graph unabhängig validiert und aufgenommen. Keine Neuheitsbehauptung.
+
+Claude v01: [Archiv bfb4f62](https://github.com/ibenarb/conway99-research/tree/bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6/data/memetik/ai_candidates/submissions/20260915_claude_v01/), Zweig `reviews/20260915-claude-candidates-v01`. Drei gültige paarweise nichtisomorphe Graphen; Cayley-Ausschluss unabhängig bestätigt. Aussagen zu Starrheit bleiben unbestätigt.

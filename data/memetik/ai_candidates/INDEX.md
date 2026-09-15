@@ -33,3 +33,9 @@ Original mit Code erhalten und archiviert. Ω-Backtracking: mit Limit 20 ausschl
 ## Gemini v01 — gültiger Ω-Kandidat
 
 Ein bereitgestellter CP-SAT-Generator, keine von Gemini vorgetäuschte Ausführung. Eigener Probelauf Seed 42, ein Worker: Lösung nach etwa 2,47 s. Alle harten Bedingungen und Scores unabhängig geprüft. W=3107, L1=5310, F=11504, Linf=8. Ein Graph aufgenommen; Isomorphie-/Einzugsgebietsneuheit offen. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/007fa996be815756e83aa129807e1603dab06d2d/data/memetik/ai_candidates/submissions/20260914_gemini_v01/). [Validierter Graph](accepted/omega/gemini_v01_seed42.g6).
+
+## Claude v01 — drei gültige Kandidaten
+
+Zwei Ω-Kandidaten (A/B), ein λ-Kandidat (C); alle Scores unabhängig bestätigt, paarweise Nichtisomorphie belegt. final/cayley byteidentisch reproduziert. Cayley-Ausschluss über alle Gruppen der Ordnung 99 zusätzlich unabhängig geprüft. Herkunft A→B beachten; Fluchtlängenschwelle nicht belegt. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6/data/memetik/ai_candidates/submissions/20260915_claude_v01/).
+
+Validierte Graphen: [Claude-A](accepted/omega/claude_v01_a.g6), [Claude-B](accepted/omega/claude_v01_b.g6), [Claude-C](accepted/lambda/claude_v01_c.g6). Gesamtbestand der neuen KI-Sammlung: vier gültige Graphen einschließlich Gemini; kein Nachweis vier unabhängiger Familien.

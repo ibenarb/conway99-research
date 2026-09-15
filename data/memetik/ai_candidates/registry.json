@@ -106,6 +106,40 @@
                 }
             ],
             "notes": "Successful bounded local execution; complete independent Omega/score/graph6 validation. No new basin or isomorphism class claimed."
+        },
+        {
+            "submission_id": "20260915_claude_v01",
+            "archive_commit": "bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6",
+            "archive_branch": "reviews/20260915-claude-candidates-v01",
+            "path": "submissions/20260915_claude_v01",
+            "status": "ACCEPTED",
+            "submitted_count": 3,
+            "supplied_generators": 1,
+            "accepted_count": 3,
+            "candidates": [
+                {
+                    "id": "claude_v01_a",
+                    "arm": "omega",
+                    "admission": "ACCEPTED",
+                    "validation": "PASS",
+                    "novelty": "pairwise nonisomorphic within submission; full archive comparison pending"
+                },
+                {
+                    "id": "claude_v01_b",
+                    "arm": "omega",
+                    "admission": "ACCEPTED",
+                    "validation": "PASS",
+                    "novelty": "pairwise nonisomorphic within submission; full archive comparison pending"
+                },
+                {
+                    "id": "claude_v01_c",
+                    "arm": "lambda",
+                    "admission": "ACCEPTED",
+                    "validation": "PASS",
+                    "novelty": "pairwise nonisomorphic within submission; full archive comparison pending"
+                }
+            ],
+            "notes": "All scores/hard conditions and mutual nonisomorphism independently confirmed. final and cayley stages byte-reproduced. Long searches not replayed."
         }
     ],
     "accepted_candidates": [
@@ -117,6 +151,33 @@
             "sha256": "5dbfad84a90aa1622f51c171c0b72857ad8721173b74f23ed21473616c91dffb",
             "source_archive_commit": "007fa996be815756e83aa129807e1603dab06d2d",
             "novelty": "not established"
+        },
+        {
+            "id": "claude_v01_a",
+            "arm": "omega",
+            "path": "accepted/omega/claude_v01_a.g6",
+            "metadata_path": "accepted/omega/claude_v01_a.json",
+            "sha256": "3620c9d10034fb130ac4b6f6529f31f9de9481089c1ad4291ba1d3011369a6d5",
+            "source_archive_commit": "bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6",
+            "novelty": "not established against project archive"
+        },
+        {
+            "id": "claude_v01_b",
+            "arm": "omega",
+            "path": "accepted/omega/claude_v01_b.g6",
+            "metadata_path": "accepted/omega/claude_v01_b.json",
+            "sha256": "ca1de4bcd2d22b631ce4c8058dcdebddc1d62e143e2d2c70abc563b8b44c0774",
+            "source_archive_commit": "bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6",
+            "novelty": "not established against project archive"
+        },
+        {
+            "id": "claude_v01_c",
+            "arm": "lambda",
+            "path": "accepted/lambda/claude_v01_c.g6",
+            "metadata_path": "accepted/lambda/claude_v01_c.json",
+            "sha256": "138e640c4e6f982f5773acc78b4c80d7ec12169bb59efd6ea2a0c5afad33be66",
+            "source_archive_commit": "bfb4f623ad66a8e52373c6ba972b5c5f9e60adb6",
+            "novelty": "not established against project archive"
         }
     ]
 }
