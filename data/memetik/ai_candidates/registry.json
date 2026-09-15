@@ -237,6 +237,38 @@
             "mode_user_report": "schnell",
             "candidates": [],
             "notes": "No graph data. F03-F06 explicitly omitted, F02 export absent, checker crashes and lacks Omega check. Bounded executions and mathematical counterexamples documented. Existing accepted collection unchanged."
+        },
+        {
+            "submission_id": "20260915_qwen_v01",
+            "archive_commit": "cbf364b2ff9c0e92a1477581e33a6affffe261de",
+            "archive_branch": "reviews/20260915-qwen-candidates-v01",
+            "path": "submissions/20260915_qwen_v01",
+            "status": "REJECTED_AS_SUBMITTED",
+            "submitted_count": 3,
+            "accepted_count": 0,
+            "model_self_report": "Qwen3.7",
+            "report_date_self_report": "2026-09-16",
+            "candidates": [
+                {
+                    "id": "20260915_qwen_v01/C01",
+                    "admission": "REJECTED",
+                    "validation": "FAIL",
+                    "reason": "Nonstandard graph6; required arm condition false. Independent diagnostic decoding also fails admission."
+                },
+                {
+                    "id": "20260915_qwen_v01/C02",
+                    "admission": "REJECTED",
+                    "validation": "FAIL",
+                    "reason": "Nonstandard graph6; required arm condition false. Independent diagnostic decoding also fails admission."
+                },
+                {
+                    "id": "20260915_qwen_v01/C03",
+                    "admission": "REJECTED",
+                    "validation": "FAIL",
+                    "reason": "Nonstandard graph6; required arm condition false. Independent diagnostic decoding also fails admission."
+                }
+            ],
+            "notes": "All SHA256 values match. Supplied verifier rejects C01/C03 and incorrectly passes C02. Diagnostic C03 has 45 edges, not 693. No candidate repair/admission."
         }
     ],
     "accepted_candidates": [

@@ -49,3 +49,7 @@ Aktueller Bestand: **14 validierte KI-Kandidaten (8 Ω, 6 λ)**. Aufnahme ist ke
 ## Grok v01 — Modus schnell, keine Kandidaten
 
 Null Graphdaten; sechs beschriebene Familien, nur zwei Generatorblöcke und ein unvollständiger Prüfer. Kleine Ausführungsprüfungen bestätigen API-Abbrüche. Dreieckszerlegung allein garantiert λ nicht; gewöhnlicher Lift erhält Grad 4; zyklischer 14-regulärer λ-Suchraum leer. Keine Aufnahme, Bestand weiterhin 14 Graphen. [Original, Prüfbericht und Ausführungsdaten](https://github.com/ibenarb/conway99-research/tree/0cc61d3c87f7b6ea09418023398570d5403a3290/data/memetik/ai_candidates/submissions/20260915_grok_v01).
+
+## Qwen v01 — drei Datensätze, null Aufnahme
+
+Prüfsummen stimmen, aber alle graph6-Strings sind nichtstandardmäßig und die erforderlichen Arm-Bedingungen selbst als false angegeben. Eigener Decoder rekonstruiert für C03 nur 45 Kanten; C02 ist 14-regulär mit 495 λ-Verletzungen. Mitgelieferter Prüfer gibt dennoch für C02 PASS aus (fehlerhafte A²-Berechnung und fehlende harte Arm-Prüfung). [Original, Befunde und Analyse](https://github.com/ibenarb/conway99-research/tree/cbf364b2ff9c0e92a1477581e33a6affffe261de/data/memetik/ai_candidates/submissions/20260915_qwen_v01). Bestand weiterhin 14 akzeptierte Graphen.
