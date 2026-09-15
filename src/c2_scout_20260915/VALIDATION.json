@@ -1,0 +1,19 @@
+{
+  "status": "LOCAL_CONTROLS_PASS",
+  "production_solver_runs": 0,
+  "UNSAT_proofs": 0,
+  "reference_CNF_sha256": "f9d6011c5e6eb8a0fab971fa324d159e94b8bc4526b7b17dc31ee55aee1c25ba",
+  "reference_mapping_sha256": "cd78938cc0fd6c4b2239ddd2b67054e1ea754b41be4dc6eeaef6849b97e0bc0e",
+  "checks": [
+    "all Python files compile",
+    "real pinned CaDiCaL tiny SAT and UNSAT controls",
+    "real worker reconstructs valid nine-vertex graph",
+    "five status classification controls",
+    "RLIMIT_FSIZE enforcement",
+    "changed CNF rejected before solver invocation",
+    "solver killed on worker death",
+    "24 exhaustive partition assignments",
+    "27 tiny UNSAT controller jobs, no proof files"
+  ],
+  "Windows_observer": "Simulated in local controller test; real PowerShell execution required by setup on target WSL host."
+}
