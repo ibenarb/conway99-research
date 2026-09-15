@@ -45,3 +45,7 @@ Validierte Graphen: [Claude-A](accepted/omega/claude_v01_a.g6), [Claude-B](accep
 C01–C05 im Ω-Arm, C06–C10 im λ-Arm. Alle harten Bedingungen und Kennzahlen unabhängig bestätigt; zehn byteidentische Wiedererzeugungen. Untereinander und zu 18 benannten Referenzgraphen nichtisomorph. C02 verbessert die dokumentierten Office-Ω-Bestwerte W/L1/F auf 2074/2506/3472. F02 liefert fünf asymmetrische Graphen; die λ-Lifts benötigen Suchbewegungen außerhalb ihrer festen Dreiteilung. Familienvielfalt und Einzugsgebiete bleiben gesondert zu untersuchen. [Archiv und Prüfbericht](https://github.com/ibenarb/conway99-research/tree/c10038a3baa23145b666d5e5251e81c139877f83/data/memetik/ai_candidates/submissions/20260915_codex_v01/).
 
 Aktueller Bestand: **14 validierte KI-Kandidaten (8 Ω, 6 λ)**. Aufnahme ist keine automatische Pilot-Auswahl und kein Nachweis von 14 unabhängigen Familien.
+
+## Grok v01 — Modus schnell, keine Kandidaten
+
+Null Graphdaten; sechs beschriebene Familien, nur zwei Generatorblöcke und ein unvollständiger Prüfer. Kleine Ausführungsprüfungen bestätigen API-Abbrüche. Dreieckszerlegung allein garantiert λ nicht; gewöhnlicher Lift erhält Grad 4; zyklischer 14-regulärer λ-Suchraum leer. Keine Aufnahme, Bestand weiterhin 14 Graphen. [Original, Prüfbericht und Ausführungsdaten](https://github.com/ibenarb/conway99-research/tree/0cc61d3c87f7b6ea09418023398570d5403a3290/data/memetik/ai_candidates/submissions/20260915_grok_v01).
