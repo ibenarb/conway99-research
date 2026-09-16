@@ -1,0 +1,941 @@
+{
+    "Codex_C08__neutral_W": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "Codex_C08__neutral_W",
+            "founder": "Codex_C08",
+            "mode": "neutral",
+            "objective": "W"
+        },
+        "status": "IMPROVEMENT_FOUND",
+        "arm": "lambda",
+        "source_sha256": "cc39043a75d31be24fe9f6e96410180fb6a12e3bf258511fd070cc44f18173fe",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 1.3617048600000001,
+        "utc": "2026-09-16T06:44:28Z",
+        "last_completed_depth": 0,
+        "shortest_length_in_search_scope": true,
+        "shortest_scope": "Neutral prefixes followed by one improving move; no claim about paths using deterioration",
+        "discovered": 35,
+        "expanded": 1,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 33,
+                "expanded": 0
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 0
+            }
+        ],
+        "path_length": 2,
+        "endpoint": {
+            "W": 2668,
+            "L1": 3504,
+            "F": 5428,
+            "Linf": 3,
+            "Nmax": 126
+        },
+        "barrier_above_start": 0
+    },
+    "Codex_C02__descent_L1": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "Codex_C02__descent_L1",
+            "founder": "Codex_C02",
+            "mode": "descent",
+            "objective": "L1"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "7f4ff150f5b49c6acde3222b30a952eea7b4fa70f6f62c45771bc0c5a0ea41d7",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 136.203908638,
+        "utc": "2026-09-16T06:46:40Z",
+        "last_completed_depth": 5,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 6,
+        "expanded": 6,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 5,
+        "endpoint": {
+            "W": 2065,
+            "L1": 2450,
+            "F": 3292,
+            "Linf": 4,
+            "Nmax": 2
+        },
+        "barrier_above_start": 0
+    },
+    "HoG57338__bfs_F": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "HoG57338__bfs_F",
+            "founder": "HoG57338",
+            "mode": "bfs",
+            "objective": "F"
+        },
+        "status": "CPU_BUDGET",
+        "arm": "lambda",
+        "source_sha256": "18a7bf225053c8c3c180ac9e01b65b733143ff22430b479c056f1e3241673bdd",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 180.005002356,
+        "utc": "2026-09-16T06:47:18Z",
+        "last_completed_depth": 2,
+        "discovered": 2959,
+        "expanded": 130,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 46,
+                "expanded": 46
+            },
+            {
+                "depth": 2,
+                "discovered": 1101,
+                "expanded": 83
+            },
+            {
+                "depth": 3,
+                "discovered": 1811,
+                "expanded": 0
+            }
+        ],
+        "fully_expanded_through_depth": 1,
+        "no_improvement_through_depth": 2
+    },
+    "B_original__bfs_W": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "B_original__bfs_W",
+            "founder": "B_original",
+            "mode": "bfs",
+            "objective": "W"
+        },
+        "status": "CPU_BUDGET",
+        "arm": "omega",
+        "source_sha256": "1c39edc85e85e0c41c2de323fcd2665c8872d946fe2dd8c1b9ace8c2ac4e1bfb",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 180.00459947599998,
+        "utc": "2026-09-16T06:47:18Z",
+        "last_completed_depth": 1,
+        "discovered": 1855,
+        "expanded": 7,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 277,
+                "expanded": 6
+            },
+            {
+                "depth": 2,
+                "discovered": 1577,
+                "expanded": 0
+            }
+        ],
+        "fully_expanded_through_depth": 0,
+        "no_improvement_through_depth": 1
+    },
+    "Codex_C02__descent_W": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "Codex_C02__descent_W",
+            "founder": "Codex_C02",
+            "mode": "descent",
+            "objective": "W"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "7f4ff150f5b49c6acde3222b30a952eea7b4fa70f6f62c45771bc0c5a0ea41d7",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 72.925985038,
+        "utc": "2026-09-16T06:48:38Z",
+        "last_completed_depth": 2,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 3,
+        "expanded": 3,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 2,
+        "endpoint": {
+            "W": 2031,
+            "L1": 2428,
+            "F": 3298,
+            "Linf": 4,
+            "Nmax": 2
+        },
+        "barrier_above_start": 0
+    },
+    "Codex_C02__descent_Linf": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "Codex_C02__descent_Linf",
+            "founder": "Codex_C02",
+            "mode": "descent",
+            "objective": "Linf"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "7f4ff150f5b49c6acde3222b30a952eea7b4fa70f6f62c45771bc0c5a0ea41d7",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 97.78457154899996,
+        "utc": "2026-09-16T06:48:58Z",
+        "last_completed_depth": 7,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 8,
+        "expanded": 8,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 7,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 7,
+        "endpoint": {
+            "W": 2154,
+            "L1": 2572,
+            "F": 3452,
+            "Linf": 3,
+            "Nmax": 22
+        },
+        "barrier_above_start": null
+    },
+    "Codex_C02__descent_F": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "Codex_C02__descent_F",
+            "founder": "Codex_C02",
+            "mode": "descent",
+            "objective": "F"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "7f4ff150f5b49c6acde3222b30a952eea7b4fa70f6f62c45771bc0c5a0ea41d7",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 143.08849941900002,
+        "utc": "2026-09-16T06:49:06Z",
+        "last_completed_depth": 5,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 6,
+        "expanded": 6,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 5,
+        "endpoint": {
+            "W": 2108,
+            "L1": 2486,
+            "F": 3292,
+            "Linf": 3,
+            "Nmax": 25
+        },
+        "barrier_above_start": 0
+    },
+    "B_end_F__descent_F": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "B_end_F__descent_F",
+            "founder": "B_end_F",
+            "mode": "descent",
+            "objective": "F"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "0c0b0f3f943dd0d7e3f92d79142003a0314e5cdc111f3ca5acae5c4ececbd5f3",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 58.18267990999999,
+        "utc": "2026-09-16T06:49:56Z",
+        "last_completed_depth": 4,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 5,
+        "expanded": 5,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 4,
+        "endpoint": {
+            "W": 2287,
+            "L1": 3062,
+            "F": 5218,
+            "Linf": 8,
+            "Nmax": 1
+        },
+        "barrier_above_start": 0
+    },
+    "B_end_F__descent_W": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "B_end_F__descent_W",
+            "founder": "B_end_F",
+            "mode": "descent",
+            "objective": "W"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "0c0b0f3f943dd0d7e3f92d79142003a0314e5cdc111f3ca5acae5c4ececbd5f3",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 79.31692788700002,
+        "utc": "2026-09-16T06:51:14Z",
+        "last_completed_depth": 6,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 7,
+        "expanded": 7,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 6,
+        "endpoint": {
+            "W": 2214,
+            "L1": 3168,
+            "F": 6052,
+            "Linf": 8,
+            "Nmax": 6
+        },
+        "barrier_above_start": 0
+    },
+    "B_end_F__descent_L1": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "B_end_F__descent_L1",
+            "founder": "B_end_F",
+            "mode": "descent",
+            "objective": "L1"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "0c0b0f3f943dd0d7e3f92d79142003a0314e5cdc111f3ca5acae5c4ececbd5f3",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 166.85076791600002,
+        "utc": "2026-09-16T06:51:21Z",
+        "last_completed_depth": 6,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 7,
+        "expanded": 7,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 6,
+        "endpoint": {
+            "W": 2280,
+            "L1": 3078,
+            "F": 5292,
+            "Linf": 8,
+            "Nmax": 1
+        },
+        "barrier_above_start": 0
+    },
+    "lambda_Linf2__descent_L1": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "lambda_Linf2__descent_L1",
+            "founder": "lambda_Linf2",
+            "mode": "descent",
+            "objective": "L1"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "lambda",
+        "source_sha256": "f25b75e0d8cdfd61731d6249aed1265bee5d3616d1c4f3ab2118853eb4d19aeb",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 10.253587384000014,
+        "utc": "2026-09-16T06:51:33Z",
+        "last_completed_depth": 8,
+        "local_scope": [
+            "apex",
+            "rotation"
+        ],
+        "discovered": 9,
+        "expanded": 9,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 7,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 8,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 8,
+        "endpoint": {
+            "W": 2182,
+            "L1": 2398,
+            "F": 2836,
+            "Linf": 3,
+            "Nmax": 3
+        },
+        "barrier_above_start": 0
+    },
+    "lambda_Linf2__descent_Linf": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "lambda_Linf2__descent_Linf",
+            "founder": "lambda_Linf2",
+            "mode": "descent",
+            "objective": "Linf"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "lambda",
+        "source_sha256": "f25b75e0d8cdfd61731d6249aed1265bee5d3616d1c4f3ab2118853eb4d19aeb",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 4.433732256999974,
+        "utc": "2026-09-16T06:51:34Z",
+        "last_completed_depth": 2,
+        "local_scope": [
+            "apex",
+            "rotation"
+        ],
+        "discovered": 3,
+        "expanded": 3,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 2,
+        "endpoint": {
+            "W": 2314,
+            "L1": 2616,
+            "F": 3220,
+            "Linf": 2,
+            "Nmax": 302
+        },
+        "barrier_above_start": null
+    },
+    "lambda_Linf2__descent_F": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "lambda_Linf2__descent_F",
+            "founder": "lambda_Linf2",
+            "mode": "descent",
+            "objective": "F"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "lambda",
+        "source_sha256": "f25b75e0d8cdfd61731d6249aed1265bee5d3616d1c4f3ab2118853eb4d19aeb",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 21.237445339999965,
+        "utc": "2026-09-16T06:51:48Z",
+        "last_completed_depth": 8,
+        "local_scope": [
+            "apex",
+            "rotation"
+        ],
+        "discovered": 9,
+        "expanded": 9,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 7,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 8,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 8,
+        "endpoint": {
+            "W": 2182,
+            "L1": 2398,
+            "F": 2836,
+            "Linf": 3,
+            "Nmax": 3
+        },
+        "barrier_above_start": 0
+    },
+    "B_end_F__descent_Linf": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "B_end_F__descent_Linf",
+            "founder": "B_end_F",
+            "mode": "descent",
+            "objective": "Linf"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "omega",
+        "source_sha256": "0c0b0f3f943dd0d7e3f92d79142003a0314e5cdc111f3ca5acae5c4ececbd5f3",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 164.21866283100002,
+        "utc": "2026-09-16T06:51:49Z",
+        "last_completed_depth": 6,
+        "local_scope": [
+            "4x4",
+            "4x6",
+            "6x6"
+        ],
+        "discovered": 7,
+        "expanded": 7,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 6,
+        "endpoint": {
+            "W": 2280,
+            "L1": 3078,
+            "F": 5292,
+            "Linf": 8,
+            "Nmax": 1
+        },
+        "barrier_above_start": null
+    },
+    "lambda_Linf2__descent_W": {
+        "version": "escape-0.2.0",
+        "task": {
+            "id": "lambda_Linf2__descent_W",
+            "founder": "lambda_Linf2",
+            "mode": "descent",
+            "objective": "W"
+        },
+        "status": "LOCAL_MINIMUM_VERIFIED",
+        "arm": "lambda",
+        "source_sha256": "f25b75e0d8cdfd61731d6249aed1265bee5d3616d1c4f3ab2118853eb4d19aeb",
+        "scope": "Labelled graph6 identity; current finite operator catalog; all families rechecked at each expansion.",
+        "component_complete": false,
+        "cpu_seconds": 15.158905497999967,
+        "utc": "2026-09-16T06:51:48Z",
+        "last_completed_depth": 8,
+        "local_scope": [
+            "apex",
+            "rotation"
+        ],
+        "discovered": 9,
+        "expanded": 9,
+        "depth_counts": [
+            {
+                "depth": 0,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 1,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 2,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 3,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 4,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 5,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 6,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 7,
+                "discovered": 1,
+                "expanded": 1
+            },
+            {
+                "depth": 8,
+                "discovered": 1,
+                "expanded": 1
+            }
+        ],
+        "path_length": 8,
+        "endpoint": {
+            "W": 2182,
+            "L1": 2398,
+            "F": 2836,
+            "Linf": 3,
+            "Nmax": 3
+        },
+        "barrier_above_start": 0
+    }
+}

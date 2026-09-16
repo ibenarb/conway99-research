@@ -1,0 +1,9 @@
+# Prüfung der Auslieferung 0.2.1
+
+- Vier gezielte Steuerungstests bestanden: BFS-Länge und Barriere; Tiefenschranke ohne falschen Komponentenschluss; Ausschluss schlechterer Präfixe im neutralen Modus; Rollback einer unvollständigen Expansion.
+- Echte Prozessprüfung bestanden: Start in eigener Sitzung, SIGHUP, danach Prozessgruppe während laufender Suche beendet, Wiederaufnahme im selben Verzeichnis. Vor Abbruch eine Expansion gespeichert, danach vier; SQLite integrity_check=ok, Abschluss CPU_BUDGET, keine behauptete Komponentenerschöpfung.
+- Technischer Kurzlauf der finalen Zipapp: 15 Aufgaben, drei Worker, je zwei CPU-Sekunden, maximal 100 Zustände und Tiefe zwei. C08-Verbesserung gefunden; sonst kontrollierte CPU-/Zustandsgrenzen. Alle gespeicherten SQL-Zählungen mit JSON konsistent, alle vorhandenen Pfade unabhängig geprüft. Roharchiv: `results/memetik/escape_followup_20260916/release_021_smoke.zip`.
+- Hauptrechnung 0.2.0: zwölf lokale Abstiegsendpunkte, C08-Zeuge, zwei unvollständige BFS-Aufgaben. Vier SQLite-Endstände widersprachen zunächst den fertigen JSON-Berichten. Die betreffenden finalen Nachbarschaften wurden vollständig erneut berechnet und bestätigt; ursprünglicher und korrigierter Stand getrennt archiviert. Ursache nicht abschließend geklärt. 0.2.1 verwendet deshalb Rollback-Journal statt WAL.
+- Nachprüfungen des Hauptlaufs: 13 Pfade, 82 Graphvorkommen, 69 Kantenübergänge mit unabhängigem Decoder/Mengenkern geprüft. Alle harten Bedingungen, Metriken, Prüfsummen, Zielverläufe und Barrieren stimmen.
+
+Die technischen Kurzläufe sind keine zusätzlichen mathematischen Nichtexistenzbefunde. Keine alten Generatorfamilien umgeschrieben, kein vollständiger Alttestzyklus wiederholt. Die optionalen Reparatursolver und nauty gehören nicht zum dependency-freien Office-Paket.
