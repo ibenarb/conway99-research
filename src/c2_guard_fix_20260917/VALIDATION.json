@@ -1,0 +1,28 @@
+{
+  "status": "LOCAL_CONTROLS_PASS",
+  "tests": {
+    "check_guard.py": {
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"GUARD_FAULT_CONTROLS_PASS\",\n  \"checks\": [\n    \"transient_replace_recovers_preserving_old_heartbeat\",\n    \"transient_temp_write_recovers\",\n    \"persistent_permission_fails_bounded_old_heartbeat_retained\",\n    \"fatal_errno_28_not_retried\",\n    \"fatal_errno_5_not_retried\",\n    \"fatal_errno_2_not_retried\",\n    \"reject_stale\",\n    \"reject_WINDOWS_DISK_RESERVE\",\n    \"reject_CONTROLLER_HEARTBEAT_STALE\"\n  ],\n  \"scope\": \"Linux fault injection; Windows sharing tested separately on target.\"\n}\n",
+      "stderr": ""
+    },
+    "check_controller.py": {
+      "returncode": 0,
+      "stdout": "{\"output_bytes\": 0, \"phase\": \"TOTALIZER_LONG_SEARCH\", \"utc\": \"2026-09-17T18:50:45.071190+00:00\", \"elapsed_seconds\": 0, \"active\": [\"totalizer__tiny_0\", \"totalizer__tiny_1\", \"totalizer__tiny_2\", \"totalizer__tiny_3\", \"totalizer__tiny_4\", \"totalizer__tiny_5\", \"totalizer__tiny_6\", \"totalizer__tiny_7\", \"totalizer__tiny_8\", \"totalizer__tiny_9\", \"totalizer__tiny_10\"], \"queued\": 0, \"completed\": 0, \"windows_free_GiB\": 100.0, \"proof_files_created\": 0, \"guard_read_retries\": 0, \"guard_write_retries\": 0, \"ETA_note\": \"Single wave; time budget only, decision time unknown\"}\n{\"status\": \"TOTALIZER_LONG_COMPLETE_NO_CERTIFICATION\", \"error\": null, \"output\": \"/tmp/counter_ab_control__moib3e7/run\"}\n{\"status\": \"PASS\", \"completed\": 11, \"budget_limit_seconds\": 64800, \"solver\": \"dummy; control-flow test only\", \"Windows_guard\": \"simulated\"}\n",
+      "stderr": ""
+    },
+    "check_shutdown.py": {
+      "returncode": 0,
+      "stdout": "{\"output_bytes\": 0, \"phase\": \"TOTALIZER_LONG_SEARCH\", \"utc\": \"2026-09-17T18:50:48.469765+00:00\", \"elapsed_seconds\": 0, \"active\": [\"totalizer__tiny_0\", \"totalizer__tiny_1\", \"totalizer__tiny_2\", \"totalizer__tiny_3\", \"totalizer__tiny_4\", \"totalizer__tiny_5\", \"totalizer__tiny_6\", \"totalizer__tiny_7\", \"totalizer__tiny_8\", \"totalizer__tiny_9\", \"totalizer__tiny_10\"], \"queued\": 0, \"completed\": 0, \"windows_free_GiB\": 100.0, \"proof_files_created\": 0, \"guard_read_retries\": 0, \"guard_write_retries\": 0, \"ETA_note\": \"Single wave; time budget only, decision time unknown\"}\n{\"status\": \"TOTALIZER_LONG_FAILED\", \"error\": \"WINDOWS_HEARTBEAT_WRITE_FAILED after 5s: /tmp/tmpktacngjy/heartbeat.tmp -> /tmp/tmpktacngjy/heartbeat; retries=97\", \"output\": \"/tmp/tmpktacngjy/run\"}\n{\"status\": \"GUARD_FAILURE_SHUTDOWN_PASS\", \"dummy_solver_children\": 11, \"remaining_live_solver_children\": 0, \"proof_files\": 0, \"scope\": \"Real Linux controller cleanup and parent-death signals; Windows killer not exercised.\"}\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/c74bed3d4564/c2_guard_fix_20260917/windows_guard.py\", line 180, in beat\n    temporary.replace(self.directory/'heartbeat')\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1139, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1143, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1204, in _execute_mock_call\n    result = effect(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/c74bed3d4564/c2_guard_fix_20260917/check_shutdown.py\", line 46, in deny\n    raise PermissionError(errno.EACCES, 'persistent injected')\nPermissionError: [Errno 13] persistent injected\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/scratch/c74bed3d4564/c2_guard_fix_20260917/run_matching.py\", line 93, in controller\n    guard.beat()\n  File \"/workspace/scratch/c74bed3d4564/c2_guard_fix_20260917/check_shutdown.py\", line 49, in beat\n    actual.beat()\n  File \"/workspace/scratch/c74bed3d4564/c2_guard_fix_20260917/windows_guard.py\", line 184, in beat\n    raise RuntimeError(\nRuntimeError: WINDOWS_HEARTBEAT_WRITE_FAILED after 5s: /tmp/tmpktacngjy/heartbeat.tmp -> /tmp/tmpktacngjy/heartbeat; retries=97\n\n"
+    }
+  },
+  "unchanged_files": {
+    "worker.py": "96a815e8d6a25f1874be6e867efdbe5be1d911807ab1247c4b17c361450f09d1",
+    "c2_reference.py": "3a88f356831a4f955c79639bfe86aac5eea2a80febdd676cbd1009e86f1e9b29",
+    "prepare_long.py": "81bb9044316ab95a2f5e64223419f70d73f78b1d35f6fa46e90d7a7e30e49f16"
+  },
+  "initial_environment_issue": "Both controller tests initially stopped on local disk reserve; only test telemetry then simulated. Production resource thresholds unchanged.",
+  "windows_target_selftest": "PREPARED_NOT_EXECUTED",
+  "scope": "No new mathematical result; no production solver runs."
+}
