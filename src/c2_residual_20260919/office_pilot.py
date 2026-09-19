@@ -1,4 +1,4 @@
-"""Office-only C2 technical pilot 1.0.0: four sequential, bounded, proof-free jobs."""
+"""Office-only C2 technical pilot 1.0.1: four sequential, bounded, proof-free jobs."""
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -11,7 +11,7 @@ import signal
 import subprocess
 import time
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 GIB = 1024 ** 3
 SOLVER_SHA = '82c88e3027d35e7c60293ea9440fc97576e1161ee9e103785bdb6962748ba996'
 SOLVER_COMMIT = '4198d817d0dcde5b1240eefbff70b555b7df2af9'
@@ -118,7 +118,31 @@ def live_guard(root):
     return None
 
 
-def run_job(command, output, guard, wall_limit=75):
+def classify_exit(returncode, text, wall, cpu, stop_reason=None, solver_wall_limit=None):
+    announced = [s.strip() for s in text.splitlines() if s.startswith('s ')]
+    if stop_reason:
+        state = 'STOPPED_' + stop_reason
+    elif returncode == 10 and 's SATISFIABLE' in announced:
+        state = 'SAT_UNVERIFIED'
+    elif returncode == 20 and 's UNSATISFIABLE' in announced:
+        state = 'UNSAT_UNCERTIFIED'
+    elif returncode == 0 and ('s UNKNOWN' in announced or 'c UNKNOWN' in text.splitlines()):
+        state = 'UNKNOWN'
+    elif (returncode == -signal.SIGALRM and solver_wall_limit is not None
+          and solver_wall_limit > 0
+          and wall >= solver_wall_limit - min(1.0, 0.05 * solver_wall_limit)
+          and f'c setting time limit to {solver_wall_limit} seconds real time' in text
+          and f'c raising signal {int(signal.SIGALRM)} (SIGALRM)' in text.splitlines()
+          and not any(s in announced for s in ('s SATISFIABLE', 's UNSATISFIABLE'))):
+        state = 'WALL_TIME_LIMIT'
+    elif returncode == -signal.SIGKILL and cpu >= 59:
+        state = 'CPU_LIMIT'
+    else:
+        state = 'EXECUTION_ERROR'
+    return state
+
+
+def run_job(command, output, guard, wall_limit=75, solver_wall_limit=None):
     """Own process group only; wait4 provides per-process CPU and peak RSS."""
     started = time.monotonic()
     peak = 0
@@ -168,19 +192,7 @@ def run_job(command, output, guard, wall_limit=75):
     wall = time.monotonic() - started
     cpu = usage.ru_utime + usage.ru_stime
     text = output.read_text(errors='replace')
-    announced = [s.strip() for s in text.splitlines() if s.startswith('s ')]
-    if stop_reason:
-        state = 'STOPPED_' + stop_reason
-    elif proc.returncode == 10 and 's SATISFIABLE' in announced:
-        state = 'SAT_UNVERIFIED'
-    elif proc.returncode == 20 and 's UNSATISFIABLE' in announced:
-        state = 'UNSAT_UNCERTIFIED'
-    elif proc.returncode == 0 and ('s UNKNOWN' in announced or 'c UNKNOWN' in text.splitlines()):
-        state = 'UNKNOWN'
-    elif proc.returncode == -signal.SIGKILL and cpu >= 59:
-        state = 'CPU_LIMIT'
-    else:
-        state = 'EXECUTION_ERROR'
+    state = classify_exit(proc.returncode, text, wall, cpu, stop_reason, solver_wall_limit)
     statistics = [line for line in text.splitlines() if line.startswith('c ') and any(
         token in line.lower() for token in ('conflicts:', 'decisions:', 'maximum resident',
                                             'process time', 'real time', 'seconds total'))]
@@ -236,13 +248,13 @@ def main():
                        str(directory / f'matching_6__{variant}.cnf')]
             print('START ' + variant + ' (max 60 CPU-s, one process)', flush=True)
             save(out / (variant + '_job.json'), {'command': command, 'resources': resources})
-            result = run_job(command, out / (variant + '.log'), lambda: live_guard(root))
+            result = run_job(command, out / (variant + '.log'), lambda: live_guard(root), solver_wall_limit=55)
             result['variant'] = variant
             result['command'] = command
             report['jobs'].append(result)
             save(out / 'summary.json', report)
             print('DONE ' + json.dumps(result), flush=True)
-            if result['status'] not in ('UNKNOWN', 'CPU_LIMIT'):
+            if result['status'] not in ('UNKNOWN', 'CPU_LIMIT', 'WALL_TIME_LIMIT'):
                 report['status'] = 'STOPPED_FOR_REVIEW'
                 break
         else:

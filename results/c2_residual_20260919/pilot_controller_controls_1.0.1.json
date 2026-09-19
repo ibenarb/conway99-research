@@ -1,0 +1,63 @@
+{
+  "status": "OFFICE_PILOT_CONTROLLER_CONTROLS_PASS",
+  "controls": [
+    {
+      "control": "field_alarm_and_five_negative_controls",
+      "status": "PASS"
+    },
+    {
+      "control": "sat",
+      "status": "SAT_UNVERIFIED"
+    },
+    {
+      "control": "unsat",
+      "status": "UNSAT_UNCERTIFIED"
+    },
+    {
+      "control": "unknown",
+      "status": "UNKNOWN"
+    },
+    {
+      "control": "bad_code",
+      "status": "EXECUTION_ERROR"
+    },
+    {
+      "control": "silent",
+      "status": "EXECUTION_ERROR"
+    },
+    {
+      "control": "real_alarm_child",
+      "status": "WALL_TIME_LIMIT"
+    },
+    {
+      "control": "wall_timeout",
+      "status": "STOPPED_WALL_LIMIT"
+    },
+    {
+      "control": "guard_abort",
+      "status": "STOPPED_RAM_RESERVE"
+    },
+    {
+      "control": "existing_log",
+      "status": "REJECTED"
+    },
+    {
+      "control": "hard_output_limit",
+      "status": "BOUNDED"
+    },
+    {
+      "control": "bad_or_low_host_free",
+      "status": "REJECTED"
+    },
+    {
+      "control": "bad_or_low_host_free",
+      "status": "REJECTED"
+    },
+    {
+      "control": "host_probe_timeout",
+      "status": "REJECTED"
+    }
+  ],
+  "runner_sha256": "f05ee83ccf495d56229ee4da69f53fd87d18925a596bf86d29cc173cfae94844",
+  "scope": "Local disposable process tests; no Office execution and no real solver pilot."
+}

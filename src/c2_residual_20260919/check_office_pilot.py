@@ -6,13 +6,25 @@ import subprocess
 import sys
 import tempfile
 from unittest.mock import patch
-from office_pilot import run_job, windows_free
+from office_pilot import classify_exit, run_job, windows_free
 
 
 def check():
     if not __debug__:
         raise RuntimeError('Assertions required')
     records = []
+    alarm_log = ('c setting time limit to 55 seconds real time (due to \'-t 55\')\n'
+                 'c raising signal 14 (SIGALRM)\n')
+    assert classify_exit(-14, alarm_log, 55.109039233997464, 50.75014,
+                         solver_wall_limit=55) == 'WALL_TIME_LIMIT'
+    assert classify_exit(-14, alarm_log, 20, 15, solver_wall_limit=55) == 'EXECUTION_ERROR'
+    assert classify_exit(-14, alarm_log, 55.1, 50.7) == 'EXECUTION_ERROR'
+    assert classify_exit(-15, alarm_log, 55.1, 50.7, solver_wall_limit=55) == 'EXECUTION_ERROR'
+    assert classify_exit(-14, 'c raising signal 14 (SIGALRM)\n', 55.1, 50.7,
+                         solver_wall_limit=55) == 'EXECUTION_ERROR'
+    assert classify_exit(-14, alarm_log+'s UNSATISFIABLE\n', 55.1, 50.7,
+                         solver_wall_limit=55) == 'EXECUTION_ERROR'
+    records.append({'control': 'field_alarm_and_five_negative_controls', 'status': 'PASS'})
     with tempfile.TemporaryDirectory() as temporary:
         root = Path(temporary)
         fixtures = [
@@ -27,6 +39,15 @@ def check():
             assert result['status'] == expected, result
             assert result['cpu_seconds'] >= 0 and result['peak_rss_bytes'] > 0
             records.append({'control': name, 'status': result['status']})
+        program = ('import os,signal,time; '
+                   'print("c setting time limit to 1 seconds real time",flush=True); '
+                   'time.sleep(1); '
+                   'print("c raising signal 14 (SIGALRM)",flush=True); '
+                   'os.kill(os.getpid(),signal.SIGALRM)')
+        result = run_job([sys.executable, '-c', program], root / 'alarm.log', lambda: None,
+                         solver_wall_limit=1)
+        assert result['status'] == 'WALL_TIME_LIMIT' and result['returncode'] == -14
+        records.append({'control': 'real_alarm_child', 'status': result['status']})
         sleeping = [sys.executable, '-c', 'import time; time.sleep(20)']
         result = run_job(sleeping, root / 'wall.log', lambda: None, wall_limit=0.1)
         assert result['status'] == 'STOPPED_WALL_LIMIT' and result['wall_seconds'] < 5
