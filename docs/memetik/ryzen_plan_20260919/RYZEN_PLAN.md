@@ -1,3 +1,5 @@
+> Historischer Entwurf vor Eingang des tatsächlichen Reviews. Für die aktuelle Empfehlung gilt [Plan V2](RYZEN_PLAN_V2.md); siehe [Reviewabgleich](REVIEWABGLEICH.md).
+
 # Memetik auf Ryzen: konkrete Fortsetzungsplanung
 Stand 19.09.2026. Planungsauftrag, kein gestarteter Lauf. Basis memetik/958744f8b53ce66894a8b29e9bdfa033871574b0 sowie neu geprüfter Dateneingang; siehe EINGANG_UND_ABGLEICH.md.
 
