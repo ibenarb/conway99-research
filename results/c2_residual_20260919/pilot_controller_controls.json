@@ -1,0 +1,55 @@
+{
+  "status": "OFFICE_PILOT_CONTROLLER_CONTROLS_PASS",
+  "controls": [
+    {
+      "control": "sat",
+      "status": "SAT_UNVERIFIED"
+    },
+    {
+      "control": "unsat",
+      "status": "UNSAT_UNCERTIFIED"
+    },
+    {
+      "control": "unknown",
+      "status": "UNKNOWN"
+    },
+    {
+      "control": "bad_code",
+      "status": "EXECUTION_ERROR"
+    },
+    {
+      "control": "silent",
+      "status": "EXECUTION_ERROR"
+    },
+    {
+      "control": "wall_timeout",
+      "status": "STOPPED_WALL_LIMIT"
+    },
+    {
+      "control": "guard_abort",
+      "status": "STOPPED_RAM_RESERVE"
+    },
+    {
+      "control": "existing_log",
+      "status": "REJECTED"
+    },
+    {
+      "control": "hard_output_limit",
+      "status": "BOUNDED"
+    },
+    {
+      "control": "bad_or_low_host_free",
+      "status": "REJECTED"
+    },
+    {
+      "control": "bad_or_low_host_free",
+      "status": "REJECTED"
+    },
+    {
+      "control": "host_probe_timeout",
+      "status": "REJECTED"
+    }
+  ],
+  "runner_sha256": "549790000331b0ddebf151d4f5bb6079acceb380505c31be6a60d5be50678732",
+  "scope": "Local disposable process tests; no Office execution and no real solver pilot."
+}
