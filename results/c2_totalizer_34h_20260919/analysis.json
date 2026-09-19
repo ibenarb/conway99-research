@@ -1,0 +1,498 @@
+{
+  "archive_sha256": "a4cb49271e2b98f7b322f068cda41ddb220fa06e1629848eb9dca61ad1a89be8",
+  "archive_bytes": 724032,
+  "entries": 38,
+  "checks": "CRC, eleven summary/result/job agreements, log lengths, UNKNOWN and exit 0, budgets, group totals",
+  "scope": "Archive consistency only; CNFs and solver binary absent, not rehashed here; no proofs.",
+  "config": {
+    "version": "totalizer-long-1.0.2",
+    "source": "/home/rb_debian/conway99_workspace/c2_totalizer_long_v1/source_34h_wkkbezt7",
+    "controller_sha256": "b36e76d966bf746f208f25160bc0bdb52b9cc8f271916d620ecdba5d41997226",
+    "guard_sha256": "930fe990e1d5d04699b7dd86208fd4e307c8eef30d99a31de5dd58127c680c8f",
+    "case_wall_budget": 122400,
+    "total_allocated_wall_budget": 1346400,
+    "case_count": 11,
+    "workers": 11,
+    "solver_sha256": "51e256422129042b730eff10a5c0e91e70c69ddc878c65ed332dd56902a57e3c",
+    "windows_guard_directory": "C:\\Users\\rb\\AppData\\Local\\Conway99\\guards\\44593787347949ff9664383df3ee9372",
+    "proof_logging": false,
+    "limits": {
+      "log_MiB_per_job": 64,
+      "AS_GiB_per_solver": 4,
+      "host_reserve_GiB": 50,
+      "linux_reserve_GiB": 25,
+      "RAM_reserve_GiB": 4
+    },
+    "scope": "Single wave: eleven totalizer matching cases, bounded 34-hour scout; no certification."
+  },
+  "cpu_hours": 373.9789922222222,
+  "wall_seconds": 122405,
+  "guard_read_retries": 12,
+  "guard_write_retries": 0,
+  "rows": [
+    {
+      "id": "totalizer__matching_1_1_1_1_1_1",
+      "counts": {
+        "conflicts": 68547758,
+        "decisions": 201744586,
+        "propagations": 186904683392,
+        "restarts": 1988908,
+        "fixed": 161405,
+        "eliminated": 265629
+      },
+      "search_percent": 97.08,
+      "peak_rss_MiB": 621.5390625,
+      "cpu_seconds": 122393.853,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3590.51,
+          "remaining_variables": 129251,
+          "irredundant_clauses": 1006628
+        },
+        "8": {
+          "cpu_seconds": 28735.5,
+          "remaining_variables": 103948,
+          "irredundant_clauses": 852597
+        },
+        "24": {
+          "cpu_seconds": 86327.76,
+          "remaining_variables": 77802,
+          "irredundant_clauses": 874531
+        },
+        "34": {
+          "cpu_seconds": 122393.6,
+          "remaining_variables": 77345,
+          "irredundant_clauses": 869020
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.6,
+        "remaining_variables": 77345,
+        "irredundant_clauses": 869020
+      },
+      "cnf_sha256": "5af7aaa4e17092ae8b1fe420beb2d0c38e411433db1e79338cdcdf8e3f383ead"
+    },
+    {
+      "id": "totalizer__matching_1_1_1_1_2",
+      "counts": {
+        "conflicts": 64426484,
+        "decisions": 197017407,
+        "propagations": 179671930467,
+        "restarts": 1951285,
+        "fixed": 150145,
+        "eliminated": 280478
+      },
+      "search_percent": 97.1,
+      "peak_rss_MiB": 596.08203125,
+      "cpu_seconds": 122393.686,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3491.7,
+          "remaining_variables": 136001,
+          "irredundant_clauses": 1059989
+        },
+        "8": {
+          "cpu_seconds": 28752.12,
+          "remaining_variables": 111726,
+          "irredundant_clauses": 899366
+        },
+        "24": {
+          "cpu_seconds": 86296.97,
+          "remaining_variables": 81531,
+          "irredundant_clauses": 927948
+        },
+        "34": {
+          "cpu_seconds": 122393.42,
+          "remaining_variables": 80989,
+          "irredundant_clauses": 922112
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.42,
+        "remaining_variables": 80989,
+        "irredundant_clauses": 922112
+      },
+      "cnf_sha256": "4f9c16d268b9fa4a100167714287fed0ba7787e23d2d63d9db8593d088631757"
+    },
+    {
+      "id": "totalizer__matching_1_1_1_3",
+      "counts": {
+        "conflicts": 55485229,
+        "decisions": 170022179,
+        "propagations": 222421246506,
+        "restarts": 1648106,
+        "fixed": 145863,
+        "eliminated": 274940
+      },
+      "search_percent": 96.95,
+      "peak_rss_MiB": 621.90234375,
+      "cpu_seconds": 122393.009,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3513.53,
+          "remaining_variables": 150209,
+          "irredundant_clauses": 1076294
+        },
+        "8": {
+          "cpu_seconds": 28678.96,
+          "remaining_variables": 130553,
+          "irredundant_clauses": 932463
+        },
+        "24": {
+          "cpu_seconds": 86337.23,
+          "remaining_variables": 122613,
+          "irredundant_clauses": 874942
+        },
+        "34": {
+          "cpu_seconds": 122392.78,
+          "remaining_variables": 94327,
+          "irredundant_clauses": 891887
+        }
+      },
+      "last": {
+        "cpu_seconds": 122392.78,
+        "remaining_variables": 94327,
+        "irredundant_clauses": 891887
+      },
+      "cnf_sha256": "64eee15610df17394f7bc48265ba1fc6f28a8956bbfe4d2db346be58d3467007"
+    },
+    {
+      "id": "totalizer__matching_1_1_2_2",
+      "counts": {
+        "conflicts": 59863820,
+        "decisions": 188742786,
+        "propagations": 135978137777,
+        "restarts": 1959423,
+        "fixed": 137606,
+        "eliminated": 310567
+      },
+      "search_percent": 96.78,
+      "peak_rss_MiB": 680.57421875,
+      "cpu_seconds": 122393.752,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3575.71,
+          "remaining_variables": 107840,
+          "irredundant_clauses": 1193619
+        },
+        "8": {
+          "cpu_seconds": 28791.27,
+          "remaining_variables": 80232,
+          "irredundant_clauses": 1209693
+        },
+        "24": {
+          "cpu_seconds": 86353.47,
+          "remaining_variables": 70437,
+          "irredundant_clauses": 1230231
+        },
+        "34": {
+          "cpu_seconds": 122393.5,
+          "remaining_variables": 70138,
+          "irredundant_clauses": 1212492
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.5,
+        "remaining_variables": 70138,
+        "irredundant_clauses": 1212492
+      },
+      "cnf_sha256": "1998f04135c965492eaee6b6d0c329c0eee6f971a5a7c72654c2dd7e0eec419b"
+    },
+    {
+      "id": "totalizer__matching_1_1_4",
+      "counts": {
+        "conflicts": 60079066,
+        "decisions": 194356661,
+        "propagations": 167856651127,
+        "restarts": 1949645,
+        "fixed": 139188,
+        "eliminated": 294496
+      },
+      "search_percent": 97.08,
+      "peak_rss_MiB": 677.72265625,
+      "cpu_seconds": 122393.982,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3580.08,
+          "remaining_variables": 146564,
+          "irredundant_clauses": 1130459
+        },
+        "8": {
+          "cpu_seconds": 28640.72,
+          "remaining_variables": 103042,
+          "irredundant_clauses": 998551
+        },
+        "24": {
+          "cpu_seconds": 86380.11,
+          "remaining_variables": 85108,
+          "irredundant_clauses": 1012628
+        },
+        "34": {
+          "cpu_seconds": 122393.73,
+          "remaining_variables": 84418,
+          "irredundant_clauses": 1003473
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.73,
+        "remaining_variables": 84418,
+        "irredundant_clauses": 1003473
+      },
+      "cnf_sha256": "16f3f51ff0209c182dfe26ce552a1d7c10733e364cc26dbfac49ee048b87347f"
+    },
+    {
+      "id": "totalizer__matching_1_2_3",
+      "counts": {
+        "conflicts": 56502055,
+        "decisions": 189494299,
+        "propagations": 184707413856,
+        "restarts": 1880337,
+        "fixed": 134918,
+        "eliminated": 300737
+      },
+      "search_percent": 96.77,
+      "peak_rss_MiB": 686.5625,
+      "cpu_seconds": 122393.953,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3574.48,
+          "remaining_variables": 161076,
+          "irredundant_clauses": 1146054
+        },
+        "8": {
+          "cpu_seconds": 28797.67,
+          "remaining_variables": 124462,
+          "irredundant_clauses": 999305
+        },
+        "24": {
+          "cpu_seconds": 86393.66,
+          "remaining_variables": 85493,
+          "irredundant_clauses": 986212
+        },
+        "34": {
+          "cpu_seconds": 122393.69,
+          "remaining_variables": 84888,
+          "irredundant_clauses": 979825
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.69,
+        "remaining_variables": 84888,
+        "irredundant_clauses": 979825
+      },
+      "cnf_sha256": "4caa993bbea0407e50b36f1091eb2cc672b8f974110c1b81ba42fd25d1ddf580"
+    },
+    {
+      "id": "totalizer__matching_1_5",
+      "counts": {
+        "conflicts": 56346387,
+        "decisions": 193972912,
+        "propagations": 180077297375,
+        "restarts": 1960443,
+        "fixed": 134560,
+        "eliminated": 301591
+      },
+      "search_percent": 97.03,
+      "peak_rss_MiB": 696.44140625,
+      "cpu_seconds": 122393.371,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3577.41,
+          "remaining_variables": 149616,
+          "irredundant_clauses": 1156589
+        },
+        "8": {
+          "cpu_seconds": 28702.83,
+          "remaining_variables": 122285,
+          "irredundant_clauses": 989834
+        },
+        "24": {
+          "cpu_seconds": 86261.06,
+          "remaining_variables": 85058,
+          "irredundant_clauses": 984597
+        },
+        "34": {
+          "cpu_seconds": 122393.14,
+          "remaining_variables": 84517,
+          "irredundant_clauses": 978390
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.14,
+        "remaining_variables": 84517,
+        "irredundant_clauses": 978390
+      },
+      "cnf_sha256": "b75d077e918b807f8e707a3406fdfa171927471ecfc74d4b9615c065786f3686"
+    },
+    {
+      "id": "totalizer__matching_2_2_2",
+      "counts": {
+        "conflicts": 52827355,
+        "decisions": 183572941,
+        "propagations": 172151478371,
+        "restarts": 1835727,
+        "fixed": 127318,
+        "eliminated": 314886
+      },
+      "search_percent": 97.11,
+      "peak_rss_MiB": 652.19140625,
+      "cpu_seconds": 122393.877,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3555.87,
+          "remaining_variables": 126639,
+          "irredundant_clauses": 1206508
+        },
+        "8": {
+          "cpu_seconds": 28721.17,
+          "remaining_variables": 111146,
+          "irredundant_clauses": 1061750
+        },
+        "24": {
+          "cpu_seconds": 86340.19,
+          "remaining_variables": 88800,
+          "irredundant_clauses": 1069601
+        },
+        "34": {
+          "cpu_seconds": 122393.62,
+          "remaining_variables": 81333,
+          "irredundant_clauses": 1079979
+        }
+      },
+      "last": {
+        "cpu_seconds": 122393.62,
+        "remaining_variables": 81333,
+        "irredundant_clauses": 1079979
+      },
+      "cnf_sha256": "4fedd9489642446098dbd1504e0d014f6533909934d683c08e7de453a60b564a"
+    },
+    {
+      "id": "totalizer__matching_2_4",
+      "counts": {
+        "conflicts": 53429776,
+        "decisions": 189031819,
+        "propagations": 157384349531,
+        "restarts": 1978413,
+        "fixed": 126572,
+        "eliminated": 315685
+      },
+      "search_percent": 96.58,
+      "peak_rss_MiB": 708.80078125,
+      "cpu_seconds": 122391.631,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3572.85,
+          "remaining_variables": 127407,
+          "irredundant_clauses": 1220682
+        },
+        "8": {
+          "cpu_seconds": 28754.38,
+          "remaining_variables": 93389,
+          "irredundant_clauses": 1149457
+        },
+        "24": {
+          "cpu_seconds": 86063.98,
+          "remaining_variables": 89816,
+          "irredundant_clauses": 1107440
+        },
+        "34": {
+          "cpu_seconds": 122391.39,
+          "remaining_variables": 81361,
+          "irredundant_clauses": 1122512
+        }
+      },
+      "last": {
+        "cpu_seconds": 122391.39,
+        "remaining_variables": 81361,
+        "irredundant_clauses": 1122512
+      },
+      "cnf_sha256": "eeaafc241416608505b10608efffee4bbf60c315749067e255814ae4f5e10dc7"
+    },
+    {
+      "id": "totalizer__matching_3_3",
+      "counts": {
+        "conflicts": 52959472,
+        "decisions": 183531552,
+        "propagations": 186731987967,
+        "restarts": 1801910,
+        "fixed": 128013,
+        "eliminated": 309051
+      },
+      "search_percent": 96.95,
+      "peak_rss_MiB": 637.6328125,
+      "cpu_seconds": 122391.434,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3525.21,
+          "remaining_variables": 154092,
+          "irredundant_clauses": 1185831
+        },
+        "8": {
+          "cpu_seconds": 28728.13,
+          "remaining_variables": 127060,
+          "irredundant_clauses": 1024323
+        },
+        "24": {
+          "cpu_seconds": 85905.91,
+          "remaining_variables": 87014,
+          "irredundant_clauses": 1006330
+        },
+        "34": {
+          "cpu_seconds": 122391.15,
+          "remaining_variables": 86439,
+          "irredundant_clauses": 999657
+        }
+      },
+      "last": {
+        "cpu_seconds": 122391.15,
+        "remaining_variables": 86439,
+        "irredundant_clauses": 999657
+      },
+      "cnf_sha256": "e8e99f528af2912a64d8b48a5b1a4043aadfacf5bf192a857862409dbe971baf"
+    },
+    {
+      "id": "totalizer__matching_6",
+      "counts": {
+        "conflicts": 53858318,
+        "decisions": 184076777,
+        "propagations": 124993900789,
+        "restarts": 2012052,
+        "fixed": 125460,
+        "eliminated": 322832
+      },
+      "search_percent": 96.44,
+      "peak_rss_MiB": 797.31640625,
+      "cpu_seconds": 122391.824,
+      "snapshots": {
+        "1": {
+          "cpu_seconds": 3525.69,
+          "remaining_variables": 77295,
+          "irredundant_clauses": 1489326
+        },
+        "8": {
+          "cpu_seconds": 28766.6,
+          "remaining_variables": 76890,
+          "irredundant_clauses": 1473980
+        },
+        "24": {
+          "cpu_seconds": 86242.23,
+          "remaining_variables": 76144,
+          "irredundant_clauses": 1456207
+        },
+        "34": {
+          "cpu_seconds": 122391.57,
+          "remaining_variables": 75239,
+          "irredundant_clauses": 1437107
+        }
+      },
+      "last": {
+        "cpu_seconds": 122391.57,
+        "remaining_variables": 75239,
+        "irredundant_clauses": 1437107
+      },
+      "cnf_sha256": "5b4c87e8ce377f0e9f9b8714e461cf1a8a77897e87773dd1978b7069470b7134"
+    }
+  ],
+  "conflicts_total": 634325720,
+  "search_percent_median": 96.95
+}
