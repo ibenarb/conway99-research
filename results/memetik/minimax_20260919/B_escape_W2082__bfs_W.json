@@ -1,0 +1,446 @@
+{
+    "version": "minimax-0.3.0",
+    "task": "B_escape_W2082__bfs_W",
+    "arm": "omega",
+    "objective": "W",
+    "baseline": 2082,
+    "status": "IMPROVEMENT_FOUND",
+    "discovered": 9241,
+    "expanded": 37,
+    "relaxations": 0,
+    "frontier_peak": 2094,
+    "necessary_barrier_at_least": 12,
+    "no_improvement_below_objective_height": 2094,
+    "frontier_node_value": 2080,
+    "cpu_seconds": 367.96707630000003,
+    "remaining_wall_seconds": 122026.83680510521,
+    "utc": "2026-09-17T19:37:00Z",
+    "scope": "Current operator catalogue; labelled states; minimax barrier, no shortest-length claim",
+    "witness": {
+        "path": [
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI??E?c??@`C??D@A?W??__A?GGA@?O`?Go??C?OK?GG?OgC?G?GB@?B??K?O_g?c??BC_CA@??P??Aw??`??GOAO__GAC??OC?@cA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACE????@?GG?@cA?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?OGOGA?_@A?C_W?G@P?__C_A_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_D?_?@?H_?AGGO?c??Aac?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@_@G@__??S?B@?C_CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?AO?OO?pOO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?G?s?o?CWC??E?P??`?c?AOAA?D?E?G@_OACA???AOCG?HCO_?OG?_?a?D?`A@?G_S???CJ??@?CO?o@@W??K@_ACO?_A???KO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`?L?A???@?_GgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2082,
+                    "L1": 3368,
+                    "F": 9060,
+                    "Linf": 10,
+                    "Nmax": 38
+                },
+                "transition": null
+            },
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI??E?c??@`C??D@A?W??__A?GGA@?O`?Go??C?OK?GG?OgC?G?GB@?B??K?O_g?c??BC_CA@??P??Aw??`??GOAO__GAC??OC?@cA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACE????@?GG?@cA?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?W?OGA?_@A?C_W?G@P?__?cA_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_D?_?@?H_?AGGO?c??Aac?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@_@G@_G??S?B@?C_CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?AO?OO?pOO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?G?s?o?OWC??E?P??`?c?AOAA?D?E?G@_OACA???AO?K?HCO_?OW???a?D?`A@?G_S???CJ??@?CO?o@@W??K@_ACO?_A???KO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`GD?A???@??HgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2094,
+                    "L1": 3376,
+                    "F": 9140,
+                    "Linf": 10,
+                    "Nmax": 42
+                },
+                "transition": {
+                    "family": "4x4",
+                    "deleted": [
+                        [
+                            20,
+                            62
+                        ],
+                        [
+                            20,
+                            86
+                        ],
+                        [
+                            26,
+                            60
+                        ],
+                        [
+                            26,
+                            93
+                        ],
+                        [
+                            60,
+                            72
+                        ],
+                        [
+                            62,
+                            83
+                        ],
+                        [
+                            72,
+                            93
+                        ],
+                        [
+                            83,
+                            86
+                        ]
+                    ],
+                    "added": [
+                        [
+                            20,
+                            60
+                        ],
+                        [
+                            20,
+                            93
+                        ],
+                        [
+                            26,
+                            62
+                        ],
+                        [
+                            26,
+                            86
+                        ],
+                        [
+                            60,
+                            83
+                        ],
+                        [
+                            62,
+                            72
+                        ],
+                        [
+                            72,
+                            86
+                        ],
+                        [
+                            83,
+                            93
+                        ]
+                    ]
+                }
+            },
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI??E?c??@`C?@C@A?W??__A?GGA@?O`?Go??C?OK?GG?O_K?G?GB@?B??K?O_g?c??BC_CA@??P??Aw??`??GOAO__GAC??OC?@cA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACE????@?GG?@cA?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?W?OGA?_@A?C_W?G@P?__?cA_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_C@_?@?H_?AGGO?c??Aac?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@?`G@_GO?S?B@?C_CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?AO?OO?pOO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?GOc?o?OOC??E?P??`?c?AOAA?D?E?G@_OACA???AO?K?HCO_?OW???a@C?`A@?G_O?G?CJ??@?CO?o@@W??K@_ACO?_A???KO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`GD?A???@??HgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2094,
+                    "L1": 3448,
+                    "F": 9492,
+                    "Linf": 10,
+                    "Nmax": 42
+                },
+                "transition": {
+                    "family": "4x4",
+                    "deleted": [
+                        [
+                            20,
+                            36
+                        ],
+                        [
+                            20,
+                            67
+                        ],
+                        [
+                            26,
+                            30
+                        ],
+                        [
+                            26,
+                            87
+                        ],
+                        [
+                            30,
+                            72
+                        ],
+                        [
+                            36,
+                            83
+                        ],
+                        [
+                            67,
+                            83
+                        ],
+                        [
+                            72,
+                            87
+                        ]
+                    ],
+                    "added": [
+                        [
+                            20,
+                            30
+                        ],
+                        [
+                            20,
+                            87
+                        ],
+                        [
+                            26,
+                            36
+                        ],
+                        [
+                            26,
+                            67
+                        ],
+                        [
+                            30,
+                            83
+                        ],
+                        [
+                            36,
+                            72
+                        ],
+                        [
+                            67,
+                            72
+                        ],
+                        [
+                            83,
+                            87
+                        ]
+                    ]
+                }
+            },
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI??E?c??@`C?@C@A?W??__A?GGA@?O`?Go??C?OK?GG?O_K?G?GB@?B??GCO_g?c??BC_CA@??P??Aw??`??GOAO__GAC??OC?`CA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACE????@?GG?`CA?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?W?OGA?_@A?C_W?G@P?__?cA_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_C@_?@?H_?AGGO?c??Aac?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@?h??_GO?S?B@?C_CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?AO?OO?pOO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?GO_Co_OOC??E?P??`?c?AOAA?D?E?G@_OACA???AO?K?HCO_?OW???a@C?`A@?G_O?G?CJ??@?CO?o@@W??K@?aCO?_A?A?GO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`GD?A???@??HgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2086,
+                    "L1": 3408,
+                    "F": 9396,
+                    "Linf": 10,
+                    "Nmax": 42
+                },
+                "transition": {
+                    "family": "4x4",
+                    "deleted": [
+                        [
+                            20,
+                            38
+                        ],
+                        [
+                            20,
+                            89
+                        ],
+                        [
+                            26,
+                            44
+                        ],
+                        [
+                            26,
+                            53
+                        ],
+                        [
+                            38,
+                            83
+                        ],
+                        [
+                            44,
+                            72
+                        ],
+                        [
+                            53,
+                            72
+                        ],
+                        [
+                            83,
+                            89
+                        ]
+                    ],
+                    "added": [
+                        [
+                            20,
+                            44
+                        ],
+                        [
+                            20,
+                            53
+                        ],
+                        [
+                            26,
+                            38
+                        ],
+                        [
+                            26,
+                            89
+                        ],
+                        [
+                            38,
+                            72
+                        ],
+                        [
+                            44,
+                            83
+                        ],
+                        [
+                            53,
+                            83
+                        ],
+                        [
+                            72,
+                            89
+                        ]
+                    ]
+                }
+            },
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI??E?c??@`C?@C@A?W??__A?GGA@?O`?Go??C?OK?GG?O_K?G?GB@?B??GCo?g?c??BC_CA?@?P??Aw??`??GOAO__GAC??OC?`CA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACE????@?GG?`?E?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?W?OAA@_@A?C_W?G@P?__?cA_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_C@_?@?H_?AGGOC_??A_c?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@?h??_GO?S?B@?C_CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?AO?OO?pOO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?GO_Co_OOC??E?P??`?c?AOAA?D?E?G@_OACA???AO?K?KCO??SW???a@C?`A@?G_O?G?CJ??@?CO?o@@W??K@?aCO?_A?A?GO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`GD?A???@??HgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2090,
+                    "L1": 3380,
+                    "F": 9156,
+                    "Linf": 10,
+                    "Nmax": 38
+                },
+                "transition": {
+                    "family": "4x4",
+                    "deleted": [
+                        [
+                            29,
+                            40
+                        ],
+                        [
+                            29,
+                            53
+                        ],
+                        [
+                            35,
+                            38
+                        ],
+                        [
+                            35,
+                            68
+                        ],
+                        [
+                            38,
+                            60
+                        ],
+                        [
+                            40,
+                            86
+                        ],
+                        [
+                            53,
+                            86
+                        ],
+                        [
+                            60,
+                            68
+                        ]
+                    ],
+                    "added": [
+                        [
+                            29,
+                            38
+                        ],
+                        [
+                            29,
+                            68
+                        ],
+                        [
+                            35,
+                            40
+                        ],
+                        [
+                            35,
+                            53
+                        ],
+                        [
+                            38,
+                            86
+                        ],
+                        [
+                            40,
+                            60
+                        ],
+                        [
+                            53,
+                            60
+                        ],
+                        [
+                            68,
+                            86
+                        ]
+                    ]
+                }
+            },
+            {
+                "graph6": "~?@bsaCCB?gC_P?`?__OGB??S?@G?IG?AC?@@??OC?a?O?G?_@O?c?O?OGG?CG@_?AGI?AC?c??@`C?@C@A?GO?__A?GGA@?O`?Go??C?OK?GG?O_K?G?GB@?B??GCo?g?c??BC_CA?@?P??Aw??`??GAAO__GAC??OC?`CA?C?_C_W?G_AO_@G?A?CS?B?GB?@GD?A?A_?_QOD?@G?Q?SD??P??O_AC?ACCA???`?GG?`?E?O?OC?H?gAO_OAAC?Q?gOG?oA?A?gC@_@A?A`_A?I?AOO_E?@?cA??O?a?K@C?W?OAA@_@A?C_W?G@P?__?cA_HA?OGAOGS??G_O@?I?SA??IC?B?CO?`OI???D?@?G_BAG?OC_C@_?@?H_?AGGOC_??A_c?`?O_AODA@O?CCOGS??G_O??OE?_G@AAOK??W?O@?h??_GO?SA@@?C?CO@C?H?S?B?G@GAB?AG_C?C@OGWB??Oa?SA??IC?_?@@OC@?GOQ@_??@_?C?Oo?PG?Gg@OG?OO?O??pQO?cG?@O@A?OC?@?G_C?Gc@W??OG?@A?@_H??AS?c??CC?GO_Co_OOC??E?P??`?c?AOAA?D?E?G@_OACA???AO?K?KCO??SW???a@C?`A@?G_O?G?CJ??@?CO?o@@W??K@?aCO?_A?A?GO?Sc??B?A??GAC_G?Q_OG?CD???GK@??G_Aw??@?S?A?B??@`GD?A???@??HgO?ICAQ?g???C??aT??cQ?SD???@?@AAg??pA?A`_A?AOAG?G??gQAC?o?GCACAO???Ka?CI@O??CGC?Q?",
+                "metrics": {
+                    "W": 2080,
+                    "L1": 3360,
+                    "F": 8980,
+                    "Linf": 10,
+                    "Nmax": 34
+                },
+                "transition": {
+                    "family": "4x4",
+                    "deleted": [
+                        [
+                            16,
+                            31
+                        ],
+                        [
+                            16,
+                            52
+                        ],
+                        [
+                            22,
+                            28
+                        ],
+                        [
+                            22,
+                            73
+                        ],
+                        [
+                            28,
+                            42
+                        ],
+                        [
+                            31,
+                            79
+                        ],
+                        [
+                            42,
+                            73
+                        ],
+                        [
+                            52,
+                            79
+                        ]
+                    ],
+                    "added": [
+                        [
+                            16,
+                            28
+                        ],
+                        [
+                            16,
+                            73
+                        ],
+                        [
+                            22,
+                            31
+                        ],
+                        [
+                            22,
+                            52
+                        ],
+                        [
+                            28,
+                            79
+                        ],
+                        [
+                            31,
+                            42
+                        ],
+                        [
+                            42,
+                            52
+                        ],
+                        [
+                            73,
+                            79
+                        ]
+                    ]
+                }
+            }
+        ],
+        "path_length": 5,
+        "maximum_objective": 2094,
+        "barrier_above_start": 12,
+        "minimum_barrier_in_catalogue": true,
+        "shortest_path_length_claimed": false
+    },
+    "component_complete": false,
+    "minimum_escape_barrier": 12
+}
