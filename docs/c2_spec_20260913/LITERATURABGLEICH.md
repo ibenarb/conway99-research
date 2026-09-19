@@ -35,3 +35,13 @@ Zusätzlich zu den konkreten Quellen wurden unter anderem folgende Ausdrücke ge
 ## Forschungsentscheidung
 
 Der angekündigte erste Schritt ist abgeschlossen: C2-Scope und direkte Modellgleichungen sind festgelegt; die vollständige Plus/Minus-Darstellung samt Kopplung liegt vor. Als nächste Implementierung dient ein deterministischer zertifikatsfähiger Referenzencoder. Der erste Vergleich soll den praktischen Nutzen des bewiesenen Doppelmatchings gegenüber derselben Baseline ohne explizite redundante Matchingbedingungen messen. Es wird keine neue Ausschlussaussage aus bloßer Modellverkleinerung oder Pilot-Timeouts abgeleitet.
+
+## Ergänzung 19. September 2026 nach externem C2-Review
+
+Der [Abgleich und Fortsetzungsplan](../symmetries_plan_20260919/ABGLEICH_UND_PLAN.md) enthält die nachgeholten Quellenprüfungen. Die ursprüngliche Notiz bleibt als datierter Stand erhalten.
+
+- Crnković–Maksimović, Sätze 7.1–7.3, wurden im Volltext geprüft: C3 ist fixpunktfrei; Gruppen der Ordnung 6 und 9 sind ausgeschlossen. Zusammen mit Cesarz–Woldar Kor. 3.13 bleibt die bisherige Liste 1,C2,C3 bestehen, unter Verwendung der publizierten Ausschlüsse.
+- Ishida, arXiv:2606.29183 PDF v2 (8. Juli 2026), §8.4 ergänzt den Quellenbestand. Die schwächere C3-Alternative einschließlich K3 widerlegt den stärkeren Satz 7.3 nicht. Sein neuer allgemeiner Beweis wurde hier nicht vollständig auditiert.
+- Thakkars 48h-Experiment gehört laut §5 zu C7, nicht C2. Es ist keine unabhängige 48h-C2-Benchmarkbestätigung.
+- Anđelić–Koledin–Stanić, DOI 10.7151/dmgt.2279, eröffnet eine konkrete Literaturspur zu regulären signed graphs mit drei Eigenwerten; bislang kein auf unseren Fall anwendbarer Ausschlusssatz.
+- Makhnev–Minakova: Originalbeweis weiterhin nicht intern auditiert; erneuter DOI-Abruf technisch gescheitert. Veröffentlichtes Literaturresultat und eigene Reproduktion bleiben getrennt.
