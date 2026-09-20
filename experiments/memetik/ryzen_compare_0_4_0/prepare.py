@@ -100,10 +100,10 @@ def registry():
 
 def jobs():
     result = []
-    for replicate in range(12):
+    for replicate in range(9):
         seed = core.derive_seed(2026092004, ["confirmation", replicate])
         for arm in ("omega", "lambda"):
-            for target in ("L1", "F", "Linf"):
+            for target in ("W", "L1", "F", "Linf"):
                 for variant in ("A0", "A1"):
                     result.append(dict(id=f"{arm}-{target}-{replicate:02d}-{variant}",
                                        replicate=replicate, seed=seed, arm=arm, target=target,
@@ -111,9 +111,9 @@ def jobs():
     return {"version": VERSION, "jobs": result,
             "total_worker_cpu_seconds": sum(j["worker_cpu_seconds"] for j in result),
             "independent_unit": "complete paired run seed", "launch_enabled": False,
-            "decision": {"primary": "best active objective at CPU endpoint; Linf lexicographic",
+            "decision": {"primary": "best active objective at CPU endpoint; W/L1 and Linf/Nmax/L1 lexicographic",
                          "test": "one-sided exact sign test; ties excluded and reported",
-                         "multiplicity": "Holm over six arm/target tests", "alpha": 0.05,
+                         "multiplicity": "Holm over eight arm/target tests", "alpha": 0.05,
                          "unclear_default": "A0"}}
 
 

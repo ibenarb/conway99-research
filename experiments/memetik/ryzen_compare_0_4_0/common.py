@@ -8,7 +8,7 @@ import resource
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[3]
-VERSION = "ryzen-compare-0.4.0"
+VERSION = "ryzen-compare-0.4.1"
 BASE = "c54d4a1369f2f2b6f1289692c5001f49712a91a5"
 
 

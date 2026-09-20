@@ -24,7 +24,7 @@ class Controls(unittest.TestCase):
             self.assertEqual(a["arm"], b["arm"])
             self.assertEqual(a["target"], b["target"])
             self.assertEqual((a["variant"], b["variant"]), ("A0", "A1"))
-        self.assertEqual(len({j["seed"] for j in manifest["jobs"]}), 12)
+        self.assertEqual(len({j["seed"] for j in manifest["jobs"]}), 9)
 
     def test_physical_full_despite_virtual_free(self):
         with patch.object(resources.shutil, "disk_usage") as disk, patch.object(resources, "memory", return_value={"MemAvailable": 40*resources.GIB}):

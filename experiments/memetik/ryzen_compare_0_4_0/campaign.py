@@ -46,8 +46,8 @@ def pick(pool, arm, exclude):
     if len(candidates) < 16:
         raise RuntimeError(f"Only {len(candidates)} distinct {arm} founders after training/holdout split; no cloned filler")
     selected = []
-    # Three quality anchors, then representation, then balanced source counts.
-    for target in ("L1", "F", "Linf"):
+    # Four quality anchors, then representation, then balanced source counts.
+    for target in ("W", "L1", "F", "Linf"):
         best = min(candidates, key=lambda p: (key(p["scores"], target), p["line"]))
         if best not in selected:
             selected.append(best)
@@ -105,7 +105,7 @@ def calibrate(directory, pool):
     thresholds, observations = {}, {}
     for arm in TRAINING:
         thresholds[arm], observations[arm] = {}, {}
-        for target in ("L1", "F"):
+        for target in ("W", "L1", "F"):
             values = sorted(v for t, r in zip(training, trained["results"]) if t["arm"] == arm
                             for v in r["positive_deltas"][target])
             if len(values) < 32:
@@ -118,7 +118,7 @@ def calibrate(directory, pool):
     transfer = [{"id": f"transfer-{arm}-{target}-{variant}", "kind": "benchmark", "arm": arm,
                  "target": target, "variant": variant, "seed": 2026092005, "parent": holdout[arm],
                  "worker_cpu_seconds": 130, "episode_limit": 1, "config": config}
-                for arm in holdout for target in ("L1", "F", "Linf") for variant in ("A0", "A1")]
+                for arm in holdout for target in ("W", "L1", "F", "Linf") for variant in ("A0", "A1")]
     pool.run(transfer, 12, "transfer")
     # The transfer outcomes are reported, never used to retune thresholds.
     benchmarks = []
@@ -130,7 +130,7 @@ def calibrate(directory, pool):
         tasks = [{"id": f"bench-{workers}-{arm}-{target}-{variant}-{rep}", "kind": "benchmark",
                   "arm": arm, "target": target, "variant": variant, "seed": 2026092010+rep,
                   "parent": original[TRAINING[arm][rep]], "worker_cpu_seconds": 130, "config": config}
-                 for rep in range(2) for arm in ("omega", "lambda") for target in ("L1", "F", "Linf")
+                 for rep in range(2) for arm in ("omega", "lambda") for target in ("W", "L1", "F", "Linf")
                  for variant in ("A0", "A1")]
         measured = pool.run(tasks, workers, f"throughput_{workers}")
         if any(r["status"] != "VALID" for r in measured["results"]):
@@ -227,7 +227,7 @@ def main():
             rows, scores = checked(entry["graph6"], entry["arm"])
             if scores != entry["scores"] or core.canonical(rows) != entry["class_sha256"]:
                 raise ValueError("Intake file changed or canonicalizer differs: " + entry["id"])
-        run = Path(tempfile.mkdtemp(prefix="ryzen_compare_040_", dir=Path.home() / "conway99_workspace"))
+        run = Path(tempfile.mkdtemp(prefix="ryzen_compare_041_", dir=Path.home() / "conway99_workspace"))
         atomic(run / "intake.json", intake)
         signature = fingerprint()
         atomic(run / "fingerprint.json", signature)

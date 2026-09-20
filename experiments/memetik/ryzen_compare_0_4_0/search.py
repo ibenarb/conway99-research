@@ -9,7 +9,7 @@ from moves import MoveSource
 
 
 def key(scores, target):
-    return tuple(scores[k] for k in (("Linf", "Nmax", "L1") if target == "Linf" else (target,)))
+    return tuple(scores[k] for k in (("Linf", "Nmax", "L1") if target == "Linf" else ("W", "L1") if target == "W" else (target,)))
 
 
 def identity(graph6):
@@ -60,7 +60,8 @@ def escape_allowed(value, current, anchor, target, step, level):
                 and value["Nmax"] <= anchor["Nmax"] + max(1, math.ceil(anchor["Nmax"] / 10))
                 and value["L1"] <= anchor["L1"] * 105 // 100)
     cap = min(int(step) * (1 << level), anchor[target] // 10)
-    return value[target] <= anchor[target] + cap
+    return (value[target] <= anchor[target] + cap
+            and (target != "W" or value["L1"] <= anchor["L1"] * 110 // 100))
 
 
 def sampled(rows, arm, rng, guard, costs, count):

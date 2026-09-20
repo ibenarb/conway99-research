@@ -45,5 +45,28 @@
     "A1 advantage not measured",
     "Controller crash without authoritative CPU receipt blocks automatic resume",
     "Historical generation costs remain unknown where absent"
-  ]
+  ],
+  "revision_0_4_1": {
+    "status": "TARGETED_CONTROLS_PASS",
+    "tests": 13,
+    "duration_seconds": 12.171,
+    "targets": [
+      "W_then_L1",
+      "L1",
+      "F",
+      "Linf_then_Nmax_then_L1"
+    ],
+    "paired_seeds": 9,
+    "jobs": 144,
+    "worker_cpu_seconds": 518400,
+    "controls": [
+      "W lexicographic ordering and anchored escape caps",
+      "eight-test Holm and W practical effect",
+      "144-job synthetic audit and export",
+      "quiet progress, 25-column indentation, partial lines, no duplicate events",
+      "real W worker pause/resume CPU accounting"
+    ],
+    "ryzen_calibration": "not yet observed",
+    "full_reduced_workflow": "previous 0.4.0 only"
+  }
 }

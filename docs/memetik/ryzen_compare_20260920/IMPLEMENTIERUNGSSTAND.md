@@ -1,4 +1,4 @@
-# Ryzen-Vergleich 0.4.0: ausführbare Vorbereitung
+# Ryzen-Vergleich 0.4.1: ausführbare Vorbereitung
 
 Fachlicher Vertrag: `docs/memetik/ryzen_plan_20260919/FORTSETZUNG_RYZEN.md`
 und Plan V2. Unveränderter Eingangscommit:
@@ -25,7 +25,7 @@ Verzeichnis unter dem Linux-Workspace:
 - ein unabhängig auf beide jeweiligen Verträge und fünf Scores geprüftes
   Gründerregister mit Quellhashes, exakten nauty-Zertifikaten, Abstammung und
   getrenntem Ω-Rahmen;
-- ein Manifest mit 144 Aufträgen: zwölf gepaarte Seeds, zwei Arme, drei Ziele,
+- ein Manifest mit 144 Aufträgen: neun gepaarte Seeds, zwei Arme, vier Ziele,
   zwei Varianten, je 3600 Worker-CPU-Sekunden, insgesamt 518400 Sekunden;
 - einen lokalen Ressourcenbericht. Systempfade und Prozesslisten werden nicht
   automatisch veröffentlicht.
@@ -101,7 +101,7 @@ Stichprobenstillstand heißt STALLED_SAMPLED, niemals lokales Minimum.
 4. Schwellen: nächster Rang des 75-%-Quantils positiver Einzeltradeänderungen,
    wenigstens 32 Beobachtungen je Arm/Ziel aus dem Trainingspool; sonst Stopp.
    Übertragungsproben führen nicht zu nachträglichem Nachstellen der Schwellen.
-5. 12/18/24 Worker: jeweils dieselben 24 gepaarten Trainingsaufträge mit bis
+5. 12/18/24 Worker: jeweils dieselben 32 gepaarten Trainingsaufträge mit bis
    zu 130 Worker-CPU-Sekunden, die mehrere echte Episoden ausführen. Auswahl
    nach gültigen abgeschlossenen Episoden pro Wandzeit, zusätzlich tatsächliche
    Längen und Zielkosten. Kurze λ-Jobs werden damit nicht nur einmal gestartet,
@@ -111,7 +111,7 @@ Stichprobenstillstand heißt STALLED_SAMPLED, niemals lokales Minimum.
    den Vergleich ausdrücklich nicht automatisch.
 
 Die oberen Worker-CPU-Kontingente dieser Kalibrierung summieren sich auf
-14700 Sekunden = 4,0833 Stunden (einschließlich der Generatorgrenzen).
+18340 Sekunden = 5,0944 Stunden (einschließlich der Generatorgrenzen).
 Das liegt unter den beschlossenen separaten Rahmenbudgets. Tatsächlich
 verbrauchte CPU wird über alle eigenen Worker einschließlich Fehlversuchen
 gezählt; ungenutzte Kontingente sind keine verbrauchte Rechenzeit.
@@ -166,7 +166,7 @@ Klassen je Lauf und die Verteilung tatsächlich erreichter Störlängen.
 ### Auswertung und Export
 
 Primär: bester aktiver Zielwert je vollständigem Laufseed. Einseitiger exakter
-Vorzeichentest, Bindungen ausgeschlossen und sichtbar, Holm über sechs Tests,
+Vorzeichentest, Bindungen ausgeschlossen und sichtbar, Holm über acht Tests,
 Gesamtalpha 0,05. Zusätzlich vorab festgelegt: mindestens 0,5 % medianer
 relativer Gewinn zur Empfehlung von A1. Bei Linf wird der relative Gewinn an
 der ersten unterschiedlichen Tupelkomponente berechnet; der primäre Test
@@ -197,3 +197,48 @@ von keinem dieser Befehle gestartet oder freigegeben.
 
 Der nächste lokale Schritt ist die reale Kalibrierung. Der 144-Stunden-
 Vergleich ist implementiert, aber noch nicht auf dem Ryzen gestartet.
+
+
+## Revision 0.4.1: vier Ziele und ereignisbasierter Fortschritt
+
+Am 20.09.2026 vom Nutzer beauftragt: zusätzlich W mit nachrangigem L1,
+lexikografisch. Neun gepaarte Seeds je Arm/Ziel, unverändert 144 × 3600
+Worker-CPU-Sekunden. Alle vier Ziele verwenden denselben Gründerbestand je Arm;
+die Auswahl enthält nun auch einen W/L1-Qualitätsanker. Keine Migration.
+W/L1 gilt für Elternwahl, Abstieg, Neutralität, Überlebensauswahl, Bestkurve und
+Endpunkttest. Bei A1 wird eine eigene positive W-Änderungsschwelle trainiert
+(gepoolt mindestens 32 Beobachtungen, 75-%-Quantil). Nicht verbessernde W-Schritte
+bleiben am festen Episodenanker auf höchstens +10 % W und +10 % L1 begrenzt.
+Strikte lexikografische Verbesserung bleibt zulässig. Der praktische Effekt
+verwendet bei W-Gleichstand die relative L1-Änderung; Holm umfasst acht Tests.
+Mit neun Paaren ist die Entscheidung konservativ: neun Siege ohne Niederlage
+haben p=1/512, bei acht gleich kleinen p-Werten Holm p=1/64; acht Siege und eine
+Niederlage allein reichen bei achtfacher Korrektur nicht (10/512 × 8 = 5/32).
+
+Jeder neue unabhängig geprüfte aktive Bestwert wird mit Worker-CPU-Zeit,
+Wanduhrzeit, Zielwert und Wanduhrabstand zum vorherigen Bestwert dieses Laufs
+in improvements.jsonl gespeichert. Der Controller zeigt nach fünf Minuten
+stiller Bestwert-Anlaufphase alle neuen Ereignisse, Polling alle zwei Sekunden.
+Die Ziele stehen bei Einrückung 0/25/50/75 Zeichen; Arm, Variante und Replikat
+stehen in jeder Zeile. Der erste Abstand läuft ab Initialisierung der Population;
+Pausen zählen zum Wanduhrabstand. Die CPU-Zeit bleibt separat sichtbar.
+Die zehnminütigen Status-/Ressourcenmeldungen bleiben erhalten. Nach Resume
+beginnt die Konsolen-Anlaufphase erneut; alte Ereignisse werden nicht wiederholt.
+Plateauabstände verschiedener Replikate dürfen nicht zusammengerechnet werden.
+
+13 gezielte Kontrollen bestanden, einschließlich W/L1-Reihenfolge,
+W-Ausweichgrenzen, Holm für acht Tests, synthetischer 144-Läufe-Auswertung,
+Zeileneinrückung, stiller Phase, unvollständigen Logzeilen und CPU-Wiederaufnahme.
+Der vollständige verkürzte Workflow weiter oben bezieht sich auf 0.4.0;
+dieser ist kein gemessener Ryzen-Durchsatz der Revision.
+
+Walltime: 144/n Stunden ist die Idealrechnung für n kontinuierlich ausgelastete
+Worker (24: 6 h; 18: 8 h; 12: 12 h), keine Garantie. Vorbereitung separat:
+18340 CPU-Sekunden an oberen Taskkontingenten, darunter ein serieller Zensus
+bis 900 CPU-Sekunden. Vor Ryzen-Messung grob 0,5–1 h dafür einplanen und für
+Vorbereitung plus Vergleich insgesamt etwa 7–14 h. Auswahl 12/18/24 erfolgt
+nach gemessenem Episodendurchsatz. Keine Ableitung einer 48-h-Hauptkampagne.
+
+Bereits eingefrorene 0.4.0-Bundles bleiben unverändert; Git-Pull migriert keine
+laufende Kalibrierung. Revision benötigt ein neues Vorbereitungsverzeichnis;
+alte und neue Vergleichsresultate dürfen nicht gemischt werden.

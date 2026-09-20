@@ -91,7 +91,7 @@ def main():
         parent = task["parent"]
         rows = core.decode_g6(parent["graph6"])
         rng = random.Random(task["seed"])
-        deltas = {"F": [], "L1": []}
+        deltas = {"W": [], "F": [], "L1": []}
         guard = Guard(deadline, stop_requested)
         examined, escaped_template = 0, False
         try:
@@ -155,7 +155,7 @@ def main():
         population = task["founders"]
         state = {"population": population, "children": [], "epoch": 0, "episodes": 0,
                  "best": min(population, key=lambda p: key(p["scores"], target)),
-                 "curves": [], "memory": {}, "failures": {}, "class_hashes": [],
+                 "last_improvement_wall": time.time(), "curves": [], "memory": {}, "failures": {}, "class_hashes": [],
                  "histogram": {}, "costs": fresh_costs(), "best_validation_cpu": 0.0,
                  "task_sha256": sha((directory / "task.json").read_bytes())}
         state["curves"].append({"cpu": 0.0, "scores": state["best"]["scores"]})
@@ -179,6 +179,15 @@ def main():
         if cpu() <= deadline:
             state["best"] = item
             state["curves"].append({"cpu": base+cpu(), "scores": item["scores"]})
+            now = time.time()
+            event = {"id": task["id"], "arm": arm, "target": target, "variant": task["variant"],
+                     "replicate": task.get("replicate", 0), "scores": item["scores"],
+                     "cpu": base+cpu(), "wall": now,
+                     "gap_wall_seconds": max(0, now-state.get("last_improvement_wall", now))}
+            with (directory / "improvements.jsonl").open("a") as log:
+                log.write(json.dumps(event)+"\n")
+                log.flush()
+            state["last_improvement_wall"] = now
 
     while not stop_requested() and cpu() < deadline:
         parent = parent_choice(state["population"], target, rng)

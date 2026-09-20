@@ -72,6 +72,49 @@ class Controls(unittest.TestCase):
         self.assertEqual(adjusted, [Fraction(6, 4096)]*6)
         self.assertEqual(holm([Fraction(1, 8)]*6), [Fraction(3, 4)]*6)
 
+    def test_w_lexicographic_and_progress(self):
+        from evaluate import practical
+        from progress import render, Progress
+        from contextlib import redirect_stdout
+        import io
+        a = {"W": 100, "L1": 200}
+        b = {"W": 100, "L1": 198}
+        self.assertLess(key(b, "W"), key(a, "W"))
+        self.assertGreater(key({"W": 101, "L1": 150}, "W"), key(a, "W"))
+        self.assertAlmostEqual(practical([(a, b)], "W"), 0.01)
+        self.assertFalse(escape_allowed({"W": 111, "L1": 200}, a, a, "W", 50, 2))
+        self.assertFalse(escape_allowed({"W": 101, "L1": 221}, a, a, "W", 50, 2))
+        self.assertTrue(escape_allowed(b, a, a, "W", 50, 2))
+        self.assertEqual(holm([sign_test(9, 0)]*8), [Fraction(1, 64)]*8)
+        self.assertEqual(holm([sign_test(8, 1)]*8), [Fraction(5, 32)]*8)
+        event = dict(id="test", arm="omega", variant="A1", replicate=0,
+                     target="L1", scores=a, cpu=45, wall=1000, gap_wall_seconds=8)
+        self.assertTrue(render(event).startswith(" "*25))
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            root = directory / "tasks/test"
+            root.mkdir(parents=True)
+            monitor = Progress(directory, quiet_seconds=300)
+            path = root / "improvements.jsonl"
+            path.write_text(json.dumps(event)+"\n")
+            output = io.StringIO()
+            with redirect_stdout(output):
+                monitor.poll(force=True)
+            self.assertEqual(output.getvalue(), "")
+            monitor.quiet_seconds = 0
+            payload = json.dumps(event)
+            with path.open("a") as f:
+                f.write(payload[:10])
+            with redirect_stdout(output):
+                monitor.poll(force=True)
+            self.assertEqual(output.getvalue(), "")
+            with path.open("a") as f:
+                f.write(payload[10:]+"\n")
+            with redirect_stdout(output):
+                monitor.poll(force=True)
+                monitor.poll(force=True)
+            self.assertEqual(output.getvalue().count("Abstand="), 1)
+
     def test_synthetic_export_and_missing_pair_rejection(self):
         # Synthetic CPU receipts test the audit, NOT a measured experiment.
         with tempfile.TemporaryDirectory() as temp:
@@ -90,7 +133,8 @@ class Controls(unittest.TestCase):
                     "result_sha256": sha((root / "result.json").read_bytes())})
             report = evaluate(directory)
             self.assertEqual(report["status"], "PAIRED_COMPARISON_VERIFIED")
-            self.assertTrue(all(d["ties"] == 12 and d["recommended_variant"] == "A0" for d in report["decisions"]))
+            self.assertEqual(len(report["decisions"]), 8)
+            self.assertTrue(all(d["ties"] == 9 and d["recommended_variant"] == "A0" for d in report["decisions"]))
             path = Path(export(directory))
             self.assertTrue(path.exists())
             self.assertTrue(path.with_suffix(path.suffix+".sha256").exists())
@@ -104,10 +148,10 @@ class Controls(unittest.TestCase):
             pool.append(candidate(rows, "lambda", "Z33_lift", str(seed), None, fresh_costs()))
         founders = pick(pool, "lambda", [])
         config = dict(BASE_CONFIG, perturb_cpu=0.01, descent_cpu=0.03,
-                      thresholds={"lambda": {"L1": 10, "F": 20}})
+                      thresholds={"lambda": {"W": 10, "L1": 10, "F": 20}})
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)
-            task = {"id": "control", "kind": "compare", "arm": "lambda", "target": "Linf", "variant": "A1",
+            task = {"id": "control", "kind": "compare", "arm": "lambda", "target": "W", "variant": "A1",
                     "seed": 1123, "worker_cpu_seconds": 3, "config": config, "founders": founders}
             atomic(directory / "task.json", task)
 

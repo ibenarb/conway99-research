@@ -11,6 +11,7 @@ import sys
 import time
 
 from common import ROOT, atomic, cpu, sha
+from progress import Progress
 from resources import GIB, GROUP_LIMIT, RAM_RESERVE, memory, snapshot
 
 HERE = Path(__file__).resolve().parent
@@ -178,6 +179,7 @@ class Pool:
         infrastructure_cpu += sum(read(p)["cpu_seconds"] for p in self.directory.glob("controller_cpu_*.json"))
         if categories["generate"] > 32*3600 or categories["technical"] + infrastructure_cpu > 16*3600:
             raise RuntimeError("Preparation CPU ceiling exceeded")
+        progress = Progress(self.directory) if phase == "confirmation" else None
         wall_started = time.monotonic()
         atomic(timing_path, {"wall_seconds": timing["wall_seconds"], "clean": False})
         while pending or self.active:
@@ -224,12 +226,16 @@ class Pool:
                     self.last_reason = ["WORKER_FAILED", entry["task"]["id"]]
             usage = {pid: process(pid) for pid in self.active}
             self.status(phase, pending, usage)
+            if progress:
+                progress.poll()
             if self.stop and not self.active:
                 self.status(phase, pending, usage, force=True)
                 atomic(timing_path, {"wall_seconds": timing["wall_seconds"]+time.monotonic()-wall_started, "clean": True})
                 raise RuntimeError("PAUSED: " + str(self.last_reason or "requested"))
             if pending or self.active:
                 time.sleep(0.25)
+        if progress:
+            progress.poll(force=True)
         self.status(phase, [], {}, force=True)
         wall = timing["wall_seconds"]+time.monotonic()-wall_started
         atomic(timing_path, {"wall_seconds": wall, "clean": True})

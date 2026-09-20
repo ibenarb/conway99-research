@@ -33,7 +33,10 @@ def practical(pairs, target):
     # Nmax relative improvement; final L1 tie-break evaluated only if both tie.
     gains = []
     for a0, a1 in pairs:
-        if target != "Linf":
+        if target == "W":
+            component = "W" if a0["W"] != a1["W"] else "L1"
+            gains.append((a0[component]-a1[component])/max(1, a0[component]))
+        elif target != "Linf":
             gains.append((a0[target]-a1[target])/max(1, a0[target]))
         elif a0["Linf"] != a1["Linf"]:
             gains.append((a0["Linf"]-a1["Linf"])/max(1, a0["Linf"]))
@@ -81,14 +84,14 @@ def evaluate(directory):
         return {"status": "INCOMPLETE_OR_INVALID", "issues": issues, "main_campaign_authorized": False}
     decisions, probabilities = [], []
     for arm in ("omega", "lambda"):
-        for target in ("L1", "F", "Linf"):
+        for target in ("W", "L1", "F", "Linf"):
             pairs = [(results[f"{arm}-{target}-{i:02d}-A0"]["best"]["scores"],
-                      results[f"{arm}-{target}-{i:02d}-A1"]["best"]["scores"]) for i in range(12)]
+                      results[f"{arm}-{target}-{i:02d}-A1"]["best"]["scores"]) for i in range(9)]
             wins = sum(key(b, target) < key(a, target) for a, b in pairs)
             losses = sum(key(b, target) > key(a, target) for a, b in pairs)
             p = sign_test(wins, losses)
             probabilities.append(p)
-            decisions.append({"arm": arm, "target": target, "wins_A1": wins, "ties": 12-wins-losses,
+            decisions.append({"arm": arm, "target": target, "wins_A1": wins, "ties": 9-wins-losses,
                               "losses_A1": losses, "p_exact": str(p), "p": float(p),
                               "median_relative_gain": practical(pairs, target),
                               "paired_scores": [{"A0": a, "A1": b} for a, b in pairs]})
@@ -99,7 +102,7 @@ def evaluate(directory):
     return {"status": "PAIRED_COMPARISON_VERIFIED", "decisions": decisions,
             "nominal_worker_cpu_hours": 144, "actual_worker_cpu_hours": actual_cpu/3600,
             "unused_budget_seconds": 518400-actual_cpu,
-            "scope": "Twelve independent paired seeds per arm/target; no universal superiority claim",
+            "scope": "Nine independent paired seeds per arm/target; no universal superiority claim",
             "main_campaign_authorized": False}
 
 
