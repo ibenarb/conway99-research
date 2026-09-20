@@ -1,0 +1,49 @@
+{
+  "status": "DEVELOPMENT_CONTROLS_PASS",
+  "scope": "Targeted development tests; no Ryzen benchmark and no 144h comparison performed",
+  "python": "3.12.14",
+  "packages": {
+    "ortools": "9.15.6755",
+    "pynauty": "2.8.8.1",
+    "numpy": "2.3.5"
+  },
+  "test_prepare": {
+    "tests": 6,
+    "result": "PASS"
+  },
+  "test_campaign": {
+    "tests": 6,
+    "result": "PASS",
+    "includes": [
+      "byte-identical F02 C02 and F04 C08",
+      "16 nonisomorphic founders without training overlap",
+      "anchored and lexicographic acceptance",
+      "exact sign test and Holm",
+      "real worker pause/resume with shared CPU ceiling",
+      "synthetic export and missing-pair rejection"
+    ]
+  },
+  "pool_control": {
+    "result": "PASS",
+    "processes": 2,
+    "scope": "wait4 CPU receipts and no reexecution of completed tasks"
+  },
+  "workflow_control": {
+    "result": "PASS",
+    "max_workers": 4,
+    "comparison_jobs_created": 144,
+    "nominal_comparison_cpu_seconds": 518400,
+    "real_comparison_started": false,
+    "scope": "Reduced phase budgets; not used for Ryzen worker choice"
+  },
+  "frozen_bundle_control": {
+    "result": "PASS",
+    "hashed_files": 15
+  },
+  "known_limits": [
+    "Actual Ryzen 12/18/24 throughput measurement pending",
+    "A1 advantage not measured",
+    "Controller crash without authoritative CPU receipt blocks automatic resume",
+    "Historical generation costs remain unknown where absent"
+  ]
+}

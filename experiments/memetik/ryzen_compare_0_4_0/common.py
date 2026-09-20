@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import resource
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[3]
 VERSION = "ryzen-compare-0.4.0"
@@ -35,8 +36,9 @@ def sha(data):
 def atomic(path, value):
     path = Path(path)
     data = (json.dumps(value, sort_keys=True, indent=2, ensure_ascii=False) + "\n").encode()
-    temporary = path.with_name(path.name + ".tmp")
-    with temporary.open("xb") as handle:
+    fd, name = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=path.parent)
+    temporary = Path(name)
+    with os.fdopen(fd, "wb") as handle:
         handle.write(data)
         handle.flush()
         os.fsync(handle.fileno())
