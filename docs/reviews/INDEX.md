@@ -33,3 +33,7 @@ Codex v01: [Archiv c10038a](https://github.com/ibenarb/conway99-research/tree/c1
 Grok v01 (Modus schnell laut Nutzer): [Archiv 0cc61d3](https://github.com/ibenarb/conway99-research/tree/0cc61d3c87f7b6ea09418023398570d5403a3290/data/memetik/ai_candidates/submissions/20260915_grok_v01), Zweig `reviews/20260915-grok-candidates-v01`. Null Kandidaten; unvollständiger Code, nachgewiesene Laufzeitfehler und mathematische Konstruktionsfehler. Keine Aufnahme.
 
 Qwen v01, Eingang 2026-09-15 (Berichtsdatum laut Antwort 2026-09-16): [Archiv cbf364b](https://github.com/ibenarb/conway99-research/tree/cbf364b2ff9c0e92a1477581e33a6affffe261de/data/memetik/ai_candidates/submissions/20260915_qwen_v01), Zweig `reviews/20260915-qwen-candidates-v01`. Drei Datensätze, passende SHA256, null zulässig. Nichtstandard-graph6, Regularitätsfehler und falscher PASS des mitgelieferten Prüfers unabhängig dokumentiert.
+
+## λ-Suchstrategie, 21. September 2026
+
+Reviewerbericht: [byteidentisches Original und Eingangsmetadaten](https://github.com/ibenarb/conway99-research/tree/52ad622dfa5d04ba0a0d26dd39e4aa7fc6927ce7/docs/reviews/20260921_lambda), Zweig `reviews/20260921-lambda`. [Eigener Abgleich](../memetik/lambda_review_20260921/ABGLEICH.md) mit unabhängig geprüften Rekordgraphen, reproduzierten Pivot-Abstiegen und Abgrenzung nicht reproduzierter BFS-/Tabu-Aussagen. Der frühere 18-CPU-h-Vorschlag soll nicht unverändert gestartet werden.

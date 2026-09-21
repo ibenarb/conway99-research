@@ -1,5 +1,10 @@
 # λ-Suche: Diagnose, neuer Dreieckstausch und begrenzter Vergleich
 
+> Nachtrag: Die Versuchsempfehlung wurde nach dem Reviewer-Abgleich geändert.
+> Den hier beschriebenen 18-CPU-h-Versuch nicht unverändert starten; siehe
+> [Abgleich und neue Priorität](../lambda_review_20260921/ABGLEICH.md).
+> Die nachfolgend dokumentierten ursprünglichen Prüfungen bleiben erhalten.
+
 Stand: 21.09.2026. Eigenständige Codex-Bearbeitung des gemeinsamen Auftrags A–E.
 Referenzcode: `6cf206b7a7942672ef806c70d9e590bf27a1973c`, Zweig `memetik`.
 
