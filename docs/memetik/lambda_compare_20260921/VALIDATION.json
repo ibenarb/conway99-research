@@ -1,0 +1,45 @@
+{
+  "status": "LOCAL_VALIDATION_PASS",
+  "source_files_sha256": {
+    "experiments/memetik/lambda_compare_0_2_0/README.md": "c73e58a7c3c311bd472d95bff76743573c512a3c5f1307f630d1f4992a86b824",
+    "experiments/memetik/lambda_compare_0_2_0/archive.py": "1a4cb14051d93e913f7109ec74c8bb4780c453074b26bfcc48bde719dc443d57",
+    "experiments/memetik/lambda_compare_0_2_0/bootstrap.py": "b661eec365cf7061bd7e37e069f1a699d2f6b8b11894f2a720e944ad1df2bf82",
+    "experiments/memetik/lambda_compare_0_2_0/config.json": "48350c31c9ce566c049e62bb1e49ded6c51c8430ead8b72c5cc8dcc40dec80ff",
+    "experiments/memetik/lambda_compare_0_2_0/controls.py": "a5eef6a8cd8107110821f4365051daf43699c46940121b2d9884bc671265dcb2",
+    "experiments/memetik/lambda_compare_0_2_0/engine.py": "f961e0b0a76f6e238a03c26596e77a45f4688bf23a2530aca1eb349229a8c620",
+    "experiments/memetik/lambda_compare_0_2_0/founders.json": "a2238f2624d3a28378c48d4d52d870508a42e116c40f134e1ccc1d0654cdafd9",
+    "experiments/memetik/lambda_compare_0_2_0/integration_tests.py": "14bcada125a7983bde356e76b0fe5aa4423958badeb367835f5d384d3e3c9a34",
+    "experiments/memetik/lambda_compare_0_2_0/kernel.py": "2ec4cee961163878ef981b872548bd7282cef5aec8c95e90837f41b0ea28e579",
+    "experiments/memetik/lambda_compare_0_2_0/preparation_tests.py": "7004bd10399eed5ff6cbade7f76d2d7defa1eb4ee558cb76dfaa56b6c02474e6",
+    "experiments/memetik/lambda_compare_0_2_0/queueing.py": "f4f3d59d138aac451735a6002e906578475a02d26bd960e986e669eeb954e3fb",
+    "experiments/memetik/lambda_compare_0_2_0/run.py": "843f082bbce1ae95f0fe1daeb5451b1e4ba330cef37f5f5e8a6dd2a6b418305a",
+    "experiments/memetik/lambda_compare_0_2_0/worker.py": "eff4345b5c5507a9e80ac2fbb89709b1a105b5136822fff199d54d1fdf640610"
+  },
+  "control_report_sha256": {
+    "CONTROLS.json": "adb583ea4d93033a8ee2f5dbcd66fde92029625e967dc28440d316e1d9a79990",
+    "INTEGRATION.json": "a7b4d262bf7f28bc7ef6430d3b6e9ccb07377b2ae83ca4b283631173ec4216c0",
+    "PREPARATION.json": "c08996cf84404a64f49bed513001fcbb6f62d0c7584faa57d796a0c3eb5a3251"
+  },
+  "checked_moves": 6414,
+  "checked_real_states": 19,
+  "controls_cpu_seconds": 65.823992,
+  "actual_ryzen_run_started": false,
+  "limitations": [
+    "Windows physical volume guard must run on Ryzen; process integration used a test host probe.",
+    "Positive success plumbing uses explicit srg(9,4,1,2) fixture, not a Conway99 solution.",
+    "CPU-bound trajectories may diverge after pauses because replay is charged."
+  ],
+  "streaming_archive_hash_checks": {
+    "status": "PASS",
+    "byte_lengths": [
+      0,
+      1,
+      1048575,
+      1048576,
+      1048577,
+      4194305
+    ],
+    "reference": "hashlib.sha256 whole-file equality",
+    "process_integration_rechecked": true
+  }
+}

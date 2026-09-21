@@ -190,6 +190,12 @@ hohe oder unüberwindbare Barriere.
 
 ## 4. Meine geänderte Empfehlung
 
+**Nachtrag nach Nutzerentscheidung:** Der nachfolgende damalige 16-h-Vorschlag
+ist durch den freigegebenen [192-h-Vergleich mit fortsetzbaren Zuständen](../lambda_compare_20260921/DESIGN.md)
+ersetzt. Insbesondere gelten die sechs Seeds, 600-s-Endpunkte, das 64-Klassen-Limit
+und die damalige Auswahlschwelle nicht für die neue Umsetzung. Die historische
+Empfehlung bleibt nachfolgend als Entscheidungsverlauf sichtbar.
+
 ### Unmittelbar
 
 - Den alten vorbereiteten 18-h-Vergleich unverändert **nicht starten**.
