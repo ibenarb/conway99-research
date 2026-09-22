@@ -37,3 +37,8 @@ Qwen v01, Eingang 2026-09-15 (Berichtsdatum laut Antwort 2026-09-16): [Archiv cb
 ## λ-Suchstrategie, 21. September 2026
 
 Reviewerbericht: [byteidentisches Original und Eingangsmetadaten](https://github.com/ibenarb/conway99-research/tree/52ad622dfa5d04ba0a0d26dd39e4aa7fc6927ce7/docs/reviews/20260921_lambda), Zweig `reviews/20260921-lambda`. [Eigener Abgleich](../memetik/lambda_review_20260921/ABGLEICH.md) mit unabhängig geprüften Rekordgraphen, reproduzierten Pivot-Abstiegen und Abgrenzung nicht reproduzierter BFS-/Tabu-Aussagen. Der frühere 18-CPU-h-Vorschlag soll nicht unverändert gestartet werden.
+
+
+## λ-Fortsetzung, 22. September 2026
+
+Unabhängiger Reviewerbericht und ursprünglicher Prüfsatz: [festes Originalarchiv 07a8290](https://github.com/ibenarb/conway99-research/tree/07a82903e029b58d31f496a96e3464dc0798678c/docs/reviews/20260922_lambda), Zweig `reviews/20260922-lambda-next`. [Eigener Abgleich und konkreter Laufvorschlag](../memetik/lambda_synthesis_20260922/ABGLEICH_UND_LAUFVORSCHLAG.md): Reviewer-Zeuge W=2116 unabhängig bestätigt, eigener Pivot verbessert auf W=2114; Tiefe-2-Prüfungen reproduziert. Vorschlag 121 neue CPU-h, 39 Suchjobs, noch nicht gestartet. Technische und statistische Einschränkungen des Reviewerentwurfs sind ausdrücklich dokumentiert.
