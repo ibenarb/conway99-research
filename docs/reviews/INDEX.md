@@ -46,3 +46,7 @@ Unabhängiger Reviewerbericht und ursprünglicher Prüfsatz: [festes Originalarc
 ## λ-Folgelauf, 23.–24. September 2026
 
 [Byteidentisches Revieweroriginal und Prüfsatz](https://github.com/ibenarb/conway99-research/tree/c7215b3d16c99169381cac3175506bd6480748d2/docs/reviews/20260923_lambda_followup), Zweig `reviews/20260923-lambda-followup`. [Eigener Abgleich und Entscheidung](../memetik/lambda_prechecks_20260924/ABGLEICH_UND_ENTSCHEIDUNG.md): Scores und Durchsatz reproduziert; Aussagen über Stillstand, vier Startgraphen, ein einziges Becken und V3-Herkunft korrigiert. Freigegebene Umsetzung: V1/V3, 24 Jobs, 34 CPU-h, kein V2 und kein Hauptlauf. [Startpaket und Dokumentation](../../experiments/memetik/lambda_prechecks_1_0_0/README.md).
+
+## λ-Hauptlaufkritik und begrenzte Entscheidungsetappe, 24. September 2026
+
+[Als Chattext übermittelter Review und Eingangsmetadaten](https://github.com/ibenarb/conway99-research/tree/6089dfe68fc254931c011a82931c0adb914fa879/docs/reviews/20260924_lambda_mainrun), Zweig `reviews/20260924-lambda-mainrun`. [Eigener Abgleich](../memetik/lambda_decision_20260924/ENTSCHEIDUNG.md): großer Hauptlauf zurückgezogen, Histogramme nachgerechnet, Überdehnungen begrenzt. Autorisiert: V2 (12 CPU-h) plus unveränderte V3-Fortsetzung (48 zusätzliche CPU-h), feste Kriterien, kein automatischer Folgelauf. [Geprüftes Startpaket](../../experiments/memetik/lambda_decision_1_0_0/README.md).
