@@ -42,3 +42,7 @@ Reviewerbericht: [byteidentisches Original und Eingangsmetadaten](https://github
 ## λ-Fortsetzung, 22. September 2026
 
 Unabhängiger Reviewerbericht und ursprünglicher Prüfsatz: [festes Originalarchiv 07a8290](https://github.com/ibenarb/conway99-research/tree/07a82903e029b58d31f496a96e3464dc0798678c/docs/reviews/20260922_lambda), Zweig `reviews/20260922-lambda-next`. [Eigener Abgleich und konkreter Laufvorschlag](../memetik/lambda_synthesis_20260922/ABGLEICH_UND_LAUFVORSCHLAG.md): Reviewer-Zeuge W=2116 unabhängig bestätigt, eigener Pivot verbessert auf W=2114; Tiefe-2-Prüfungen reproduziert. Vorschlag 121 neue CPU-h, 39 Suchjobs, noch nicht gestartet. Technische und statistische Einschränkungen des Reviewerentwurfs sind ausdrücklich dokumentiert.
+
+## λ-Folgelauf, 23.–24. September 2026
+
+[Byteidentisches Revieweroriginal und Prüfsatz](https://github.com/ibenarb/conway99-research/tree/c7215b3d16c99169381cac3175506bd6480748d2/docs/reviews/20260923_lambda_followup), Zweig `reviews/20260923-lambda-followup`. [Eigener Abgleich und Entscheidung](../memetik/lambda_prechecks_20260924/ABGLEICH_UND_ENTSCHEIDUNG.md): Scores und Durchsatz reproduziert; Aussagen über Stillstand, vier Startgraphen, ein einziges Becken und V3-Herkunft korrigiert. Freigegebene Umsetzung: V1/V3, 24 Jobs, 34 CPU-h, kein V2 und kein Hauptlauf. [Startpaket und Dokumentation](../../experiments/memetik/lambda_prechecks_1_0_0/README.md).

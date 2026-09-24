@@ -1,0 +1,67 @@
+{
+  "status": "LOCAL_TESTS_PASS",
+  "mechanism": {
+    "status": "CONTROLS_PASS",
+    "bank": {
+      "populations": 4,
+      "canonical_distinct_per_population": 16,
+      "replayed_AP_steps": 60,
+      "no_HoG": true
+    },
+    "scheduling": {
+      "no_cycle_in_perturbation": true,
+      "no_cycle_before_AP_minimum": true,
+      "cycle_prefix_resume_without_duplicate_adoption": true
+    },
+    "witness": {
+      "real_pivot_cycle_witness_replayed": true,
+      "reverse_moves_valid": true
+    },
+    "differential": {
+      "episodes": 17,
+      "frozen_P_equals_instrumented_P": true,
+      "disabled_cycle_same_moves_rng_population": true
+    },
+    "budget_cpu_hours": 34,
+    "scope": "Finite controls, not a production WSL host calibration",
+    "cpu_seconds": 387.535843
+  },
+  "integration": {
+    "real_workers": {
+      "variants": [
+        "P",
+        "PCesc"
+      ],
+      "pause_resume_extend": true,
+      "completed_jobs_skipped": true,
+      "closed_reserves_retained": true,
+      "old_curves_milestones_unchanged": true
+    },
+    "tamper_rejections": [
+      "task",
+      "result",
+      "checkpoint",
+      "archive"
+    ],
+    "unresolved_cpu_rejected": true,
+    "global_solution": {
+      "both_roots": true,
+      "double_saved": true,
+      "wrong_order_rejected": true,
+      "positive_plumbing": "real rook graph with explicit fixture injection"
+    },
+    "host_disk_guard_fixture": true,
+    "status": "INTEGRATION_PASS",
+    "real_wsl_host_test": false,
+    "own_cpu": 0.051343,
+    "waited_child_cpu": 24.048795000000002
+  },
+  "waves": {
+    "status": "WAVE_PASS",
+    "V3_waits_for_all_V1": true,
+    "isolated_selection_and_real_workers": true,
+    "test_host_is_fixture": true,
+    "child_cpu": 12.053344999999998
+  },
+  "production_Windows_WSL_gate": "NOT_RUN_IN_CONTAINER_REQUIRED_ON_RYZEN"
+}
