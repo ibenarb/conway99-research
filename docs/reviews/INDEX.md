@@ -50,3 +50,7 @@ Unabhängiger Reviewerbericht und ursprünglicher Prüfsatz: [festes Originalarc
 ## λ-Hauptlaufkritik und begrenzte Entscheidungsetappe, 24. September 2026
 
 [Als Chattext übermittelter Review und Eingangsmetadaten](https://github.com/ibenarb/conway99-research/tree/6089dfe68fc254931c011a82931c0adb914fa879/docs/reviews/20260924_lambda_mainrun), Zweig `reviews/20260924-lambda-mainrun`. [Eigener Abgleich](../memetik/lambda_decision_20260924/ENTSCHEIDUNG.md): großer Hauptlauf zurückgezogen, Histogramme nachgerechnet, Überdehnungen begrenzt. Autorisiert: V2 (12 CPU-h) plus unveränderte V3-Fortsetzung (48 zusätzliche CPU-h), feste Kriterien, kein automatischer Folgelauf. [Geprüftes Startpaket](../../experiments/memetik/lambda_decision_1_0_0/README.md).
+
+## λ-Frontier und Übernachtlauf, 26. September 2026
+
+[Byteidentisches Review und Prüfsatz](https://github.com/ibenarb/conway99-research/tree/7a00a6a93227eb7eb09980355b4d3129975489fc/docs/reviews/20260926_lambda), Zweig `reviews/20260926-lambda`. [Eigener Abgleich und Fortsetzungsvorschlag](../memetik/lambda_review_20260926/ABGLEICH_UND_VORSCHLAG.md): 1465 Graphen samt Klassen nachgerechnet; Tiefe-2-Minima und zwei kürzeste Vier-Zug-Abstände reproduziert. Tiefe 3 bleibt in dieser Runde Reviewerbefund. Kausale Bankaussage, Herkunft, späte Klassen und endgültige Schließung präzisiert. Empfehlung: P-Kampagne pausieren, begrenzte Tiefe-4-Diagnose mit vorangehender Tiefe-3-Reproduktion; noch nicht implementiert oder gestartet.
