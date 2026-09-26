@@ -20,3 +20,9 @@ Tiefe-3/4-Rechnung und Windows-Interop finden erst auf dem Ryzen statt.
 
 Status beim Veröffentlichen: geprüftes Paket bereitgestellt, nicht auf
 dem Ryzen gestartet; für den Start ist ein lokaler Befehl des Nutzers nötig.
+
+## Abschluss am 26.09.2026
+
+Der Ryzen-Lauf ist vollständig beendet. Beide Arme melden keine Verbesserung
+im Radius vier; das kompakte Rückgabepaket besteht den Quellen-, Metadaten-
+und Abrechnungsaudit. [Ergebnis mit Prüfgrenzen](../lambda_radius_20260926/ERGEBNIS.md).

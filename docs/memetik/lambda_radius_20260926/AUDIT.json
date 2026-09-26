@@ -1,0 +1,53 @@
+{
+  "status": "METADATA_SOURCE_ACCOUNTING_AND_CONTROL_REPLAY_PASS",
+  "source_files_verified": 67,
+  "jobs_verified": 2934,
+  "worker_sessions": 2934,
+  "coverage": {
+    "depth3_2076": {
+      "jobs": 41,
+      "parents": 5222,
+      "children": 526476,
+      "contiguous_intervals": true
+    },
+    "depth3_2077": {
+      "jobs": 38,
+      "parents": 4768,
+      "children": 459185,
+      "contiguous_intervals": true
+    },
+    "depth4_2076": {
+      "jobs": 1528,
+      "parents": 195508,
+      "children": 19873151,
+      "contiguous_intervals": true
+    },
+    "depth4_2077": {
+      "jobs": 1321,
+      "parents": 169048,
+      "children": 16408393,
+      "contiguous_intervals": true
+    }
+  },
+  "cpu_hours": {
+    "2076": 18.17642875055555,
+    "2077": 15.574587467500008,
+    "aux": 1.0372545247222225
+  },
+  "total_accounted_cpu_hours": 34.78827074277778,
+  "wall_seconds": 11185.7587786,
+  "aux_sum_difference_seconds": -6.000000212225132e-06,
+  "max_self_vs_wait4_difference_seconds": 0.02907399999999427,
+  "start_scores_and_classes_verified": 3,
+  "positive_four_move_witness_replayed": true,
+  "host_stderr_streams": {
+    "progress": 724
+  },
+  "sqlite_files_in_return": 0,
+  "limits": [
+    "SQLite databases omitted: actual hashes and contents not checked.",
+    "No independent replay of 36,281,544 depth-4 child evaluations.",
+    "Intervals checked against reported layer bounds, not against absent layer contents.",
+    "CPU receipts internally checked; host counters not independently remeasured."
+  ]
+}
