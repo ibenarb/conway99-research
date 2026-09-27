@@ -3,6 +3,13 @@
 27.09.2026. Ralph Beckmann hat dem Pilotversuch zugestimmt und ausdrücklich
 eine breitere Startpopulation sowie ausreichende Ryzen-Ressourcen verlangt.
 Dieser Plan ersetzt den Zwei-Start-/Drei-CPU-Stunden-Vorschlag vom selben Tag.
+
+**Umsetzungsnachtrag:** Das Solverpaket ist inzwischen unter Commit
+`71d06c2fbfd7866bf42bca16a2295517a9cdd965` veröffentlicht. Siehe
+[Implementierung und Prüfungen](IMPLEMENTIERUNG_UND_PRUEFUNG.md) sowie
+[Fortsetzungsprompt](FORTSETZUNG_RYZEN_LAMBDA_REPAIR_20260927.md).
+Der folgende ursprüngliche Planungsstand bleibt zur Nachvollziehbarkeit erhalten.
+
 Vorbereitet und geprüft sind Startbank und Fenster. Ein ausführbares
 Solver-/Ryzen-Paket ist hiermit noch nicht veröffentlicht; kein neuer
 Suchlauf wurde gestartet.
