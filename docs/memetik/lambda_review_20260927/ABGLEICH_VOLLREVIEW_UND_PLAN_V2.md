@@ -1,5 +1,7 @@
 # Vollständiges Radiusreview: Abgleich und revidierter Plan
 
+> Umsetzung nach Nutzerfreigabe: [geprüftes Ryzen-Startpaket](../lambda_profile_20260927/UMSETZUNG.md). Der folgende Text dokumentiert den zuvor freigegebenen Plan.
+
 27.09.2026. **Dieser Plan ersetzt den vorläufigen 12-CPU-h-Längenmischungsvergleich. Kein neuer Suchlauf ist implementiert oder gestartet.**
 
 ## Empfehlung
