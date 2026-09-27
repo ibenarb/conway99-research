@@ -1,4 +1,5 @@
 # λ-Memetik: Reviewabgleich und nächster Schritt, 27.09.2026
+> Nachtrag: Der vollständige Reviewtext ist inzwischen eingegangen. Der unten stehende vorläufige Versuchsplan wird durch [Abgleich und Plan V2](ABGLEICH_VOLLREVIEW_UND_PLAN_V2.md) ersetzt; die dokumentierten Prüfungen bleiben gültig.
 
 **Empfehlung:** Ein begrenzter, instrumentierter Vergleich von drei Perturbationslängen-Verteilungen an den beiden fixierten Rekordgraphen. 24 Jobs mit je 30 CPU-Minuten, zusammen 12 Such-CPU-h plus höchstens 1 CPU-h Vorbereitung/Kontrollen. Keine adaptive Population während dieses Diagnosetests. Kein Tiefe-5-Lauf, kein großer unveränderter P-Lauf und kein gleichzeitiger Wechsel von Operator oder Zielfunktion. Dies ist ein Vorschlag, noch nicht implementiert oder gestartet.
 
