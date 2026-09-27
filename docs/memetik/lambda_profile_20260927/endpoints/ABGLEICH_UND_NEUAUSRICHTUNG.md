@@ -2,6 +2,12 @@
 
 27.09.2026. Eigene Bewertung, getrennt vom unveränderten Reviewertext.
 
+Nachtrag: Nach Zustimmung des Nutzers und seinem Wunsch nach mehr
+Startklassen und Ryzen-Ressourcen ersetzt
+[Pilotplan V2](../../lambda_repair_pilot_20260927/PLAN_V2.md)
+den unten dokumentierten Drei-CPU-Stunden-Vorschlag. Der ursprüngliche
+Reviewabgleich bleibt nachvollziehbar erhalten.
+
 ## Entscheidung
 
 **Die unveränderte Apex/Pivot-P-Linie pausieren. Den nächsten Versuch nicht
