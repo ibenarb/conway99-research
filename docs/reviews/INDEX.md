@@ -54,3 +54,7 @@ Unabhängiger Reviewerbericht und ursprünglicher Prüfsatz: [festes Originalarc
 ## λ-Frontier und Übernachtlauf, 26. September 2026
 
 [Byteidentisches Review und Prüfsatz](https://github.com/ibenarb/conway99-research/tree/7a00a6a93227eb7eb09980355b4d3129975489fc/docs/reviews/20260926_lambda), Zweig `reviews/20260926-lambda`. [Eigener Abgleich und Fortsetzungsvorschlag](../memetik/lambda_review_20260926/ABGLEICH_UND_VORSCHLAG.md): 1465 Graphen samt Klassen nachgerechnet; Tiefe-2-Minima und zwei kürzeste Vier-Zug-Abstände reproduziert. Tiefe 3 bleibt in dieser Runde Reviewerbefund. Kausale Bankaussage, Herkunft, späte Klassen und endgültige Schließung präzisiert. Empfehlung: P-Kampagne pausieren, begrenzte Tiefe-4-Diagnose mit vorangehender Tiefe-3-Reproduktion; noch nicht implementiert oder gestartet.
+
+## λ-Radiusprüfung, 27. September 2026
+
+[Byteidentischer Prüfsatz und Eingang](https://github.com/ibenarb/conway99-research/tree/6d5004ce0669930ea858f04f0d4c64a01c1a6f7c/docs/reviews/20260927_lambda_radius), Zweig `reviews/20260927-lambda-radius`. Enthält Reproduktionen, aber keinen separaten strategischen Reviewtext. [Eigener Abgleich und konkreter Vorschlag](../memetik/lambda_review_20260927/ABGLEICH_UND_VORSCHLAG.md): Root-2-Switch-Vollständigkeit, cycle3-Census und Rückkehrquoten nachgerechnet; externe Tiefe-3-Nachzählung eingeordnet. Vorschlag: kontrollierter Episodenvergleich der Längenverteilungen an zwei festen Starts, 12 Such-CPU-h plus höchstens 1 CPU-h Kontrollen; noch nicht implementiert oder gestartet.

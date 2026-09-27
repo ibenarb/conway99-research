@@ -1,0 +1,182 @@
+{
+  "status": "PASS_SMALL_CHECKS",
+  "archive_sha256": "2299db62ac1b77ed90b2e83a7be6101970f7725e4d73e539f032497c0d1d9f69",
+  "files": 20,
+  "manifest_entries": 19,
+  "source_hashes": 9,
+  "prompt_byteidentical": true,
+  "scores": {
+    "2079": {
+      "scores": {
+        "W": 2079,
+        "L1": 2484,
+        "F": 3328,
+        "Linf": 3,
+        "Nmax": 17
+      },
+      "Q": 2911,
+      "hist": {
+        "0": 2772,
+        "-1": 904,
+        "-2": 169,
+        "1": 787,
+        "2": 202,
+        "3": 17
+      }
+    },
+    "2076": {
+      "scores": {
+        "W": 2076,
+        "L1": 2488,
+        "F": 3352,
+        "Linf": 3,
+        "Nmax": 20
+      },
+      "Q": 2917,
+      "hist": {
+        "0": 2775,
+        "-1": 906,
+        "-2": 169,
+        "1": 778,
+        "2": 203,
+        "3": 20
+      }
+    },
+    "2077": {
+      "scores": {
+        "W": 2077,
+        "L1": 2436,
+        "F": 3180,
+        "Linf": 3,
+        "Nmax": 13
+      },
+      "Q": 2874,
+      "hist": {
+        "0": 2774,
+        "-2": 150,
+        "-1": 918,
+        "1": 813,
+        "2": 183,
+        "3": 13
+      }
+    }
+  },
+  "replayed": {
+    "twoswitch_completeness": {
+      "2076": {
+        "candidate_pairs_checked": 239778,
+        "lambda_preserving_2switches_bruteforce": 56,
+        "pivot_catalogue": 56,
+        "apex_catalogue": 43,
+        "bruteforce_minus_pivot": 0,
+        "pivot_minus_bruteforce": 0
+      },
+      "2077": {
+        "candidate_pairs_checked": 239778,
+        "lambda_preserving_2switches_bruteforce": 60,
+        "pivot_catalogue": 60,
+        "apex_catalogue": 35,
+        "bruteforce_minus_pivot": 0,
+        "pivot_minus_bruteforce": 0
+      }
+    },
+    "cycle3_census": {
+      "2076": {
+        "catalogue_with_cycle3": {
+          "apex": 43,
+          "pivot": 56,
+          "cycle3": 43
+        },
+        "cycle3_depth1_improving": 0,
+        "best_cycle3_child": [
+          2099,
+          2506
+        ],
+        "base": [
+          2076,
+          2488
+        ]
+      },
+      "2077": {
+        "catalogue_with_cycle3": {
+          "apex": 35,
+          "pivot": 60,
+          "cycle3": 35
+        },
+        "cycle3_depth1_improving": 0,
+        "best_cycle3_child": [
+          2090,
+          2454
+        ],
+        "base": [
+          2077,
+          2436
+        ]
+      }
+    }
+  },
+  "episodes": {
+    "F": {
+      "total": {
+        "episodes": 19597,
+        "returned": 15068,
+        "iso": 15068,
+        "short": 8677,
+        "mid": 6480,
+        "long": 4440
+      },
+      "jobs": 8,
+      "return_fraction": 0.76889319793846,
+      "joint_length_return_histogram_available": false,
+      "min_returns_length_ge5": 6391,
+      "min_return_fraction_length_ge5": 0.5852564102564103
+    },
+    "O": {
+      "total": {
+        "episodes": 33477,
+        "returned": 26527,
+        "iso": 26527,
+        "short": 15140,
+        "mid": 11009,
+        "long": 7328
+      },
+      "jobs": 8,
+      "return_fraction": 0.792394778504645,
+      "joint_length_return_histogram_available": false,
+      "min_returns_length_ge5": 11387,
+      "min_return_fraction_length_ge5": 0.6209848939303049
+    }
+  },
+  "depth3_internal_consistency": {
+    "2076": {
+      "parents": 5222,
+      "children": 526476,
+      "new3": 195508,
+      "minimum_exact_depth3": [
+        2082,
+        2498
+      ],
+      "sample_upper_transition_index_exclusive": 450000,
+      "unsampled_tail_transitions": 76477,
+      "replayed_here": false
+    },
+    "2077": {
+      "parents": 4768,
+      "children": 459185,
+      "new3": 169048,
+      "minimum_exact_depth3": [
+        2085,
+        2450
+      ],
+      "sample_upper_transition_index_exclusive": 450000,
+      "unsampled_tail_transitions": 9186,
+      "replayed_here": false
+    }
+  },
+  "limits": [
+    "No new depth3/depth4 enumeration",
+    "Graph6 decoder shared for independent score check",
+    "Reviewer recommendation text absent",
+    "No state checkpoint or SQLite in submission"
+  ]
+}
