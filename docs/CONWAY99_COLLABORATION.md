@@ -23,3 +23,7 @@ Auf dem aktiven Forschungszweig wird ein fester Commitverweis im Reviewindex erg
 ## Forschungsziel ab 13. September 2026
 
 Ralph Beckmann priorisiert ausdrücklich neue mathematische Beiträge mit dem Fernziel des Symmetrieausschlusses. Bereits bekannte Ausschlüsse werden zitiert; ihre interne Nachimplementierung wird auf notwendige Kontrollen der neuen Beweiskette begrenzt. Ein neuer Encoder oder die Wiederholung eines bekannten Falles ist für sich kein neuer mathematischer Beitrag. Vor neuen Kampagnen sind die genaue Zielaussage und ihr Unterschied zu vorhandener Literatur zu dokumentieren. Der Forschungsplan steht unter `docs/symmetry_research_20260913/FORSCHUNGSPLAN.md`; C2 wird zunächst durch einen begrenzten Pilot bewertet, C3 bleibt die zweite offene Route. Eine Laufzeitgarantie für den Gesamtausschluss besteht nicht.
+
+## Experimentpräferenzen und übergreifendes Lernen, 28.09.2026
+
+Auf ausdrücklichen Wunsch von Ralph Beckmann gelten `docs/EXPERIMENT_RULES.md` und das Register `docs/operations/GLOBAL_CONCLUSIONS.md` als dauerhafte Arbeitsgrundlage. Toleranz gegenüber erklärbaren Betriebsabweichungen, großzügige Ressourcen und lokale Fehlerbehandlung sind Standard. Erfahrungen werden mit Evidenz, Regel und Regressionstest weitergegeben. Neue Projekt-/Reviewerübergaben verweisen auf einen fixierten Commit dieser Dateien.

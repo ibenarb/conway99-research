@@ -1,0 +1,24 @@
+{
+  "active_host_wall_limit_seconds": 86400,
+  "attempt_shutdown_grace_cpu_seconds": 20,
+  "aux_cpu_limit_seconds": 43200,
+  "minimum_search_attempt_seconds": 5,
+  "policy": "Soft search targets; explicit local shutdown grace; all actual CPU charged; no global stop for known local overshoot",
+  "receipt_measurement_tolerance_seconds": 5,
+  "restart_of": "1.0.0 technically aborted; no inherited task outcomes or CPU accounts",
+  "rules": [
+    "GC-01",
+    "GC-02",
+    "GC-04",
+    "GC-05",
+    "GC-06",
+    "GC-08",
+    "GC-09"
+  ],
+  "shutdown_host_seconds": 60,
+  "task_measurement_tolerance_seconds": 5,
+  "task_search_cpu_seconds": 3600,
+  "task_shutdown_grace_cpu_seconds": 60,
+  "total_cpu_limit_seconds": 561600,
+  "version": "1.1.0"
+}

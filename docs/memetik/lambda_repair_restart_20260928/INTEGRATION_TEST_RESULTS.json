@@ -1,0 +1,52 @@
+{
+  "clock": "FakeHost; not a Windows validation",
+  "pause_resume": true,
+  "source_corruption_rejected": true,
+  "status": "PASS",
+  "unresolved_cpu_rejected": true,
+  "wait4_audit": {
+    "best_W": 2076,
+    "cpu_seconds": {
+      "2076_01_s24_defect": 7.04076,
+      "2076_01_s40_defect": 50.531046999999994,
+      "2076_01_s60_defect": 51.315163,
+      "aux": 167.152873
+    },
+    "distinct_labelled_candidates": 1,
+    "host_wall_seconds": 100.51570983699958,
+    "local_hard_overruns": [],
+    "scope": "Full graph/score/fixed-edge and resource audit; no canonical classes or solver exclusion certificates.",
+    "soft_target_deviations": [
+      {
+        "allocation": 12,
+        "category": "aux",
+        "cpu_seconds": 5.023391999999999,
+        "receipt": "2",
+        "soft_target_cpu_seconds": 2
+      },
+      {
+        "allocation": 12,
+        "category": "aux",
+        "cpu_seconds": 5.027569000000001,
+        "receipt": "3",
+        "soft_target_cpu_seconds": 2
+      },
+      {
+        "allocation": 68.44373300000001,
+        "category": "2076_01_s40_defect",
+        "cpu_seconds": 48.974779999999996,
+        "receipt": "20",
+        "soft_target_cpu_seconds": 48.443733
+      },
+      {
+        "allocation": 68.553107,
+        "category": "2076_01_s60_defect",
+        "cpu_seconds": 49.868269999999995,
+        "receipt": "21",
+        "soft_target_cpu_seconds": 48.553107
+      }
+    ],
+    "status": "PASS_WITH_RECORDED_LOCAL_DEVIATIONS",
+    "total_cpu_hours": 0.07667773416666668
+  }
+}
