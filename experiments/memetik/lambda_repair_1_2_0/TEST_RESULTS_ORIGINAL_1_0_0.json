@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "small_exhaustive": [
+    {
+      "labelled_graphs": 1,
+      "lambda": 0,
+      "objective": 1158,
+      "size": 3
+    },
+    {
+      "labelled_graphs": 2,
+      "lambda": 0,
+      "objective": 1158,
+      "size": 4
+    },
+    {
+      "labelled_graphs": 60,
+      "lambda": 0,
+      "objective": 1158,
+      "size": 6
+    },
+    {
+      "labelled_graphs": 1,
+      "lambda": 1,
+      "objective": 702,
+      "size": 3
+    },
+    {
+      "labelled_graphs": 1,
+      "lambda": 1,
+      "objective": 702,
+      "size": 4
+    },
+    {
+      "labelled_graphs": 10,
+      "lambda": 1,
+      "objective": 702,
+      "size": 6
+    }
+  ],
+  "all_144_boundary_counts_reproduced": true,
+  "founders_independently_scored": 24,
+  "positive_control": {
+    "start": [
+      2077,
+      2488
+    ],
+    "end": {
+      "F": 3352,
+      "L1": 2488,
+      "Linf": 3,
+      "Nmax": 20,
+      "W": 2076
+    },
+    "state": "8169eba8e1f2bf78eb655d99b94844a1eb5056df828e8c610a3778d537a7d0fe",
+    "status": "OPTIMAL_UNCERTIFIED"
+  },
+  "integration": {
+    "clock": "FakeHost; not a Windows validation",
+    "pause_resume": true,
+    "source_corruption_rejected": true,
+    "status": "PASS",
+    "unresolved_cpu_rejected": true,
+    "wait4_audit": {
+      "best_W": 2076,
+      "cpu_seconds": {
+        "2076_01_s24_defect": 4.507444,
+        "2076_01_s40_defect": 17.198432999999998,
+        "2076_01_s60_defect": 17.570369,
+        "aux": 57.639686
+      },
+      "distinct_labelled_candidates": 1,
+      "host_wall_seconds": 35.742287213000054,
+      "scope": "Full graph/score/fixed-edge and resource audit; no canonical classes or solver exclusion certificates.",
+      "status": "PASS",
+      "total_cpu_hours": 0.02692109222222222
+    }
+  },
+  "bootstrap": {
+    "hash_locked_install": "PASS",
+    "pip_check": "PASS",
+    "separate_environment": true,
+    "prepare_only": true,
+    "aux_charged_including_setup": 41.820772
+  },
+  "corrections_during_testing": [
+    "Complete assignment evaluator now handles CP-SAT implicit constants and bool_or constraints.",
+    "Explicit CPU/stop guards now cover model construction and assignment checks before CP-SAT.",
+    "Terminal status no longer adds already settled session CPU twice.",
+    "Production rejects mismatched PID/procfs namespaces; cloud integration uses FakeHost and does not validate real Windows/procfs monitoring."
+  ],
+  "limitations": [
+    "No production Ryzen campaign executed.",
+    "Windows Stopwatch, VHDX-volume lookup and production resource monitoring are checked on Ryzen at launch.",
+    "No independently checked CP-SAT exclusion certificates.",
+    "Resume retains incumbents and accounting but rebuilds model and solver search state."
+  ],
+  "export": {
+    "status": "PASS",
+    "sha256": "db0cec9dbbef681d056f62cbb08ab6de72f8854591c2ffca3685b70bf5a39be7",
+    "members": 101,
+    "internal_audit": "PASS"
+  }
+}

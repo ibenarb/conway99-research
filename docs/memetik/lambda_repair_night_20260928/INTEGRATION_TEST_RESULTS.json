@@ -1,0 +1,38 @@
+{
+  "clock": "FakeHost; not a Windows validation",
+  "pause_resume": true,
+  "source_corruption_rejected": true,
+  "status": "PASS",
+  "unresolved_cpu_rejected": true,
+  "wait4_audit": {
+    "best_W": 2076,
+    "cpu_seconds": {
+      "2076_01_s24_defect": 1.310757,
+      "2076_01_s40_defect": 50.189302000000005,
+      "2076_01_s60_defect": 50.23303799999999,
+      "aux": 144.54740599999997
+    },
+    "distinct_labelled_candidates": 1,
+    "host_wall_seconds": 84.92355044100009,
+    "local_hard_overruns": [],
+    "scope": "Full graph/score/fixed-edge and resource audit; no canonical classes or solver exclusion certificates.",
+    "soft_target_deviations": [
+      {
+        "allocation": 12,
+        "category": "aux",
+        "cpu_seconds": 5.007408,
+        "receipt": "2",
+        "soft_target_cpu_seconds": 2
+      },
+      {
+        "allocation": 12,
+        "category": "aux",
+        "cpu_seconds": 5.006266,
+        "receipt": "3",
+        "soft_target_cpu_seconds": 2
+      }
+    ],
+    "status": "PASS_WITH_RECORDED_LOCAL_DEVIATIONS",
+    "total_cpu_hours": 0.06841125083333333
+  }
+}

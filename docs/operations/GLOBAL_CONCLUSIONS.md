@@ -52,3 +52,9 @@ Fallregister vor Kampagnen und Trennung wissenschaftlicher/technischer Erfolge.
 Nicht jeder Fehler rechtfertigt neue globale Komplexität. Nur wiederkehrende
 oder folgenreiche Mechanismen werden zu allgemeinen Regeln. Veraltete Regeln
 werden mit Begründung ersetzt, nicht kommentarlos weitergeschleppt.
+
+## Ergänzung aus dem abgeschlossenen Reparaturpiloten, 28.09.2026 abends
+
+- **GC-10 — Kalibrierung ist kein Aufgabenabschluss.** In1.1.0 wurden zwei Kalibrierungsversuche nach60 statt3600 CPU s als endgültig geschlossen markiert. Graph-/CPU-Audit bestand trotzdem. Regel: Versuch, Aufgabe und Planerfüllung separat prüfen.1.2.0 entfernt den unbedingten CPU_TARGET-Abschluss; Audit weist CPU_LIMIT_UNKNOWN mit>=5 Restsekunden zurück. Regression durchläuft kurze Kalibrierung, Hauptsuche und Pause/Resume mit echten Prozessen. Belege: docs/memetik/lambda_repair_night_20260928.
+- **GC-11 — Budgetprojektion ist keine erwartete Fertigstellungszeit.**12–16h prognostiziert, tatsächlich5h03; viele Fenster früh beendet. Alte ETA zog laufende CPU nicht ab und berücksichtigte die letzte Aufgabenwelle unzureichend. Regel: aktive Arbeit abziehen, längste Restaufgabe berücksichtigen, frühzeitige Solverabschlüsse als unsichere Größe benennen.1.2.0 korrigiert Projektion; keine Garantie von Restlaufzeiten.
+- **GC-02 Zielhardwarebeleg:**1.1.0 lief ohne globale Unterbrechung durch,52 dokumentierte weiche Zielwarnungen (inklusive2 absichtlicher Vorabtest-Verzögerungen), keine harten lokalen Budgetüberschreitungen. Dies bestätigt die Nachlauftoleranz, nicht vollständige Planerfüllung oder Langzeitstabilität aller Gastuhren.
