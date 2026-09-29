@@ -1,0 +1,507 @@
+
+Starting CP-SAT solver v9.14.6206
+Parameters: random_seed: 1234 log_search_progress: true linearization_level: 0 num_search_workers: 1
+
+Initial optimization model '': (model_fingerprint: 0x2bce80d15072078c)
+#Variables: 84 (#bools: 15 #ints: 15 in objective) (41 primary variables)
+  - 39 Booleans in [0,1]
+  - 15 in [-2,3]
+  - 15 in [0,2]
+  - 15 in [0,4]
+#kLinMax: 15 (#expressions: 30)
+#kLinear1: 40 (#enforced: 38)
+#kLinear2: 51
+#kLinear3: 30
+#kLinearN: 5 (#terms: 51)
+
+Starting presolve at 0.00s
+The solution hint is complete and is feasible. Its objective value is 702.
+  3.00e-05s  0.00e+00d  [DetectDominanceRelations] 
+  6.19e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=4 #num_dual_strengthening=1 
+  3.46e-06s  0.00e+00d  [ExtractEncodingFromLinear] #potential_subsets=5 
+  5.18e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  1.31e-05s  0.00e+00d  [DetectDuplicateConstraints] #duplicates=1 
+[Symmetry] Graph for symmetry has 183 nodes and 280 arcs.
+[Symmetry] Symmetry computation done. time: 0.000111368 dtime: 0.00010922
+[Symmetry] #generators: 6, average support size: 9
+[Symmetry] 9 orbits on 34 variables with sizes: 4,4,4,4,4,4,4,4,2
+[Symmetry] Num fixable by binary propagation in orbit: 2 / 4
+[Symmetry] Found orbitope of size 1 x 2
+[SAT presolve] num removable Booleans: 2 / 31
+[SAT presolve] num trivial clauses: 0
+[SAT presolve] [0s] clauses:32 literals:70 vars:13 one_side_vars:2 simple_definition:8 singleton_clauses:0
+[SAT presolve] [9.314e-06s] clauses:28 literals:54 vars:13 one_side_vars:2 simple_definition:8 singleton_clauses:2
+[SAT presolve] [1.5744e-05s] clauses:24 literals:46 vars:12 one_side_vars:2 simple_definition:8 singleton_clauses:2
+  6.00e-06s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  1.04e-04s  7.64e-06d  [Probe] #probed=30 #fixed_bools=17 #new_bounds=5 
+  2.02e-05s  2.45e-07d  [MaxClique] 
+  1.01e-05s  0.00e+00d  [DetectDominanceRelations] 
+  3.38e-05s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  7.11e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.38e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  8.01e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  5.91e-07s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  5.41e-07s  0.00e+00d  [DetectDifferentVariables] 
+  8.41e-07s  0.00e+00d  [ProcessSetPPC] 
+  1.10e-06s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  2.96e-06s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  4.50e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  7.91e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  1.13e-06s  0.00e+00d  [MergeClauses] 
+  8.91e-07s  0.00e+00d  [PresolveToFixPoint] 
+  7.41e-07s  0.00e+00d  [PresolveToFixPoint] 
+  1.11e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  6.91e-07s  0.00e+00d  [DetectDuplicateConstraints] 
+[Symmetry] Graph for symmetry has 84 nodes and 0 arcs.
+[Symmetry] Symmetry computation done. time: 7.251e-06 dtime: 5.04e-06
+  9.61e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  4.29e-05s  5.84e-06d  [Probe] #probed=30 
+  8.51e-07s  0.00e+00d  [MaxClique] 
+  8.71e-07s  0.00e+00d  [PresolveToFixPoint] 
+  5.50e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.81e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  7.01e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  5.10e-07s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  4.61e-07s  0.00e+00d  [DetectDifferentVariables] 
+  6.91e-07s  0.00e+00d  [ProcessSetPPC] 
+  6.21e-07s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  2.50e-06s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  4.21e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  4.20e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  6.51e-07s  0.00e+00d  [MergeClauses] 
+  7.11e-07s  0.00e+00d  [PresolveToFixPoint] 
+  2.28e-06s  0.00e+00d  [ExpandObjective] 
+
+Presolve summary:
+  - 32 affine relations were detected.
+  - rule 'TODO dual: only one blocking constraint?' was applied 4 times.
+  - rule 'TODO linear2: contains a Boolean.' was applied 80 times.
+  - rule 'affine: new relation' was applied 32 times.
+  - rule 'at_most_one: empty or all false' was applied 1 time.
+  - rule 'at_most_one: removed literals' was applied 1 time.
+  - rule 'at_most_one: satisfied' was applied 22 times.
+  - rule 'bool_or: always true' was applied 2 times.
+  - rule 'bool_or: implications' was applied 32 times.
+  - rule 'bool_or: only one literal' was applied 2 times.
+  - rule 'bool_or: removed enforcement literal' was applied 8 times.
+  - rule 'deductions: 66 stored' was applied 1 time.
+  - rule 'dual: make encoding equiv' was applied 5 times.
+  - rule 'duplicate: removed constraint' was applied 1 time.
+  - rule 'enforcement: false literal' was applied 5 times.
+  - rule 'enforcement: true literal' was applied 5 times.
+  - rule 'lin_max: affine_max target domain reduced' was applied 21 times.
+  - rule 'lin_max: all exprs fixed during copy' was applied 2 times.
+  - rule 'lin_max: converted to equality' was applied 13 times.
+  - rule 'linear1: x in domain' was applied 4 times.
+  - rule 'linear2: implied ax + by = cte has only one solution' was applied 8 times.
+  - rule 'linear: always true' was applied 19 times.
+  - rule 'linear: divide by GCD' was applied 1 time.
+  - rule 'linear: extracted at most one (min).' was applied 1 time.
+  - rule 'linear: fixed or dup variables' was applied 19 times.
+  - rule 'linear: negative clause' was applied 26 times.
+  - rule 'linear: positive clause' was applied 26 times.
+  - rule 'linear: reduced variable domains' was applied 21 times.
+  - rule 'linear: remapped using affine relations' was applied 92 times.
+  - rule 'linear: remove irrelevant part' was applied 1 time.
+  - rule 'linear: variable substitution 3' was applied 8 times.
+  - rule 'objective: variable not used elsewhere' was applied 2 times.
+  - rule 'presolve: 43 unused variables removed.' was applied 1 time.
+  - rule 'presolve: iteration' was applied 2 times.
+  - rule 'symmetry: added orbit symmetry breaking implications' was applied 1 time.
+  - rule 'symmetry: fixed to false in general orbit' was applied 2 times.
+  - rule 'variables: detect fully reified value encoding' was applied 21 times.
+  - rule 'variables: detect half reified value encoding' was applied 42 times.
+
+Presolved optimization model '': (model_fingerprint: 0xabf67fdbb0e34509)
+#Variables: 0 ( in objective) (0 primary variables)
+
+[Symmetry] Graph for symmetry has 0 nodes and 0 arcs.
+
+Preloading model.
+#Bound   0.00s best:inf   next:[702,702]  initial_domain
+The solution hint is complete and is feasible. Its objective value is 702.
+
+Starting search at 0.00s with 1 workers.
+1 full problem subsolver: [main]
+
+[Precedences] num_relations=0 num_clauses=0
+[Probing] deterministic_time: 0 (limit: 1) wall_time: 5.11e-07 (0/0)
+Initial num_bool: 0
+
+Starting subsolver 'main' hint search at 0.00s
+#1       0.00s best:702   next:[]         main [hint]
+Starting subsolver 'main' search at 0.00s
+
+Task timing           n [     min,      max]      avg      dev     time         n [     min,      max]      avg      dev    dtime
+      'main':         1 [186.01us, 186.01us] 186.01us   0.00ns 186.01us         0 [  0.00ns,   0.00ns]   0.00ns   0.00ns   0.00ns
+
+Search stats    Bools  Conflicts  Branches  Restarts  BoolPropag  IntegerPropag
+       'main':      0          0         0         0           0              0
+
+SAT stats    ClassicMinim  LitRemoved  LitLearned  LitForgotten  Subsumed  MClauses  MDecisions  MLitTrue  MSubsumed  MLitRemoved  MReused
+    'main':             0           0           0             0         0         0           0         0          0            0        0
+
+Solutions (1)    Num   Rank
+        'main':    1  [1,1]
+
+Objective bounds     Num
+  'initial_domain':    1
+
+Solution repositories    Added  Queried  Synchro
+  'feasible solutions':      1        0        1
+   'fj solution hints':      0        0        0
+
+CpSolverResponse summary:
+status: OPTIMAL
+objective: 702
+best_bound: 702
+integers: 1
+booleans: 0
+conflicts: 0
+branches: 0
+propagations: 0
+integer_propagations: 0
+restarts: 0
+lp_iterations: 0
+walltime: 0.0020404
+usertime: 0.00204043
+deterministic_time: 1.3726e-05
+gap_integral: 0
+solution_fingerprint: 0xed897789ee4d2dd3
+
+
+Starting CP-SAT solver v9.14.6206
+Parameters: random_seed: 1234 log_search_progress: true linearization_level: 2 num_search_workers: 1
+
+Initial optimization model '': (model_fingerprint: 0x2bce80d15072078c)
+#Variables: 84 (#bools: 15 #ints: 15 in objective) (41 primary variables)
+  - 39 Booleans in [0,1]
+  - 15 in [-2,3]
+  - 15 in [0,2]
+  - 15 in [0,4]
+#kLinMax: 15 (#expressions: 30)
+#kLinear1: 40 (#enforced: 38)
+#kLinear2: 51
+#kLinear3: 30
+#kLinearN: 5 (#terms: 51)
+
+Starting presolve at 0.00s
+The solution hint is complete and is feasible. Its objective value is 702.
+  2.66e-05s  0.00e+00d  [DetectDominanceRelations] 
+  6.27e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=4 #num_dual_strengthening=1 
+  2.86e-06s  0.00e+00d  [ExtractEncodingFromLinear] #potential_subsets=5 
+  5.02e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  1.24e-05s  0.00e+00d  [DetectDuplicateConstraints] #duplicates=1 
+[Symmetry] Graph for symmetry has 183 nodes and 280 arcs.
+[Symmetry] Symmetry computation done. time: 0.000110476 dtime: 0.00010922
+[Symmetry] #generators: 6, average support size: 9
+[Symmetry] 9 orbits on 34 variables with sizes: 4,4,4,4,4,4,4,4,2
+[Symmetry] Num fixable by binary propagation in orbit: 2 / 4
+[Symmetry] Found orbitope of size 1 x 2
+[SAT presolve] num removable Booleans: 2 / 31
+[SAT presolve] num trivial clauses: 0
+[SAT presolve] [0s] clauses:32 literals:70 vars:13 one_side_vars:2 simple_definition:8 singleton_clauses:0
+[SAT presolve] [7.401e-06s] clauses:28 literals:54 vars:13 one_side_vars:2 simple_definition:8 singleton_clauses:2
+[SAT presolve] [1.3791e-05s] clauses:24 literals:46 vars:12 one_side_vars:2 simple_definition:8 singleton_clauses:2
+  6.00e-06s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  1.01e-04s  7.64e-06d  [Probe] #probed=30 #fixed_bools=17 #new_bounds=5 
+  1.77e-05s  2.45e-07d  [MaxClique] 
+  1.01e-05s  0.00e+00d  [DetectDominanceRelations] 
+  3.38e-05s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  7.41e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.32e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  8.12e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  6.01e-07s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  5.50e-07s  0.00e+00d  [DetectDifferentVariables] 
+  8.42e-07s  0.00e+00d  [ProcessSetPPC] 
+  8.21e-07s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  2.74e-06s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  5.00e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  5.81e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  8.31e-07s  0.00e+00d  [MergeClauses] 
+  1.46e-06s  0.00e+00d  [PresolveToFixPoint] 
+  1.05e-06s  0.00e+00d  [PresolveToFixPoint] 
+  1.61e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  1.30e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+[Symmetry] Graph for symmetry has 84 nodes and 0 arcs.
+[Symmetry] Symmetry computation done. time: 6.98e-06 dtime: 5.04e-06
+  1.09e-06s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  4.62e-05s  5.84e-06d  [Probe] #probed=30 
+  9.01e-07s  0.00e+00d  [MaxClique] 
+  1.02e-06s  0.00e+00d  [PresolveToFixPoint] 
+  5.71e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.81e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  6.91e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  5.81e-07s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  4.91e-07s  0.00e+00d  [DetectDifferentVariables] 
+  7.61e-07s  0.00e+00d  [ProcessSetPPC] 
+  6.92e-07s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  2.54e-06s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  4.51e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  4.91e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  7.22e-07s  0.00e+00d  [MergeClauses] 
+  7.02e-07s  0.00e+00d  [PresolveToFixPoint] 
+  2.16e-06s  0.00e+00d  [ExpandObjective] 
+
+Presolve summary:
+  - 32 affine relations were detected.
+  - rule 'TODO dual: only one blocking constraint?' was applied 4 times.
+  - rule 'TODO linear2: contains a Boolean.' was applied 80 times.
+  - rule 'affine: new relation' was applied 32 times.
+  - rule 'at_most_one: empty or all false' was applied 1 time.
+  - rule 'at_most_one: removed literals' was applied 1 time.
+  - rule 'at_most_one: satisfied' was applied 22 times.
+  - rule 'bool_or: always true' was applied 2 times.
+  - rule 'bool_or: implications' was applied 32 times.
+  - rule 'bool_or: only one literal' was applied 2 times.
+  - rule 'bool_or: removed enforcement literal' was applied 8 times.
+  - rule 'deductions: 66 stored' was applied 1 time.
+  - rule 'dual: make encoding equiv' was applied 5 times.
+  - rule 'duplicate: removed constraint' was applied 1 time.
+  - rule 'enforcement: false literal' was applied 5 times.
+  - rule 'enforcement: true literal' was applied 5 times.
+  - rule 'lin_max: affine_max target domain reduced' was applied 21 times.
+  - rule 'lin_max: all exprs fixed during copy' was applied 2 times.
+  - rule 'lin_max: converted to equality' was applied 13 times.
+  - rule 'linear1: x in domain' was applied 4 times.
+  - rule 'linear2: implied ax + by = cte has only one solution' was applied 8 times.
+  - rule 'linear: always true' was applied 19 times.
+  - rule 'linear: divide by GCD' was applied 1 time.
+  - rule 'linear: extracted at most one (min).' was applied 1 time.
+  - rule 'linear: fixed or dup variables' was applied 19 times.
+  - rule 'linear: negative clause' was applied 26 times.
+  - rule 'linear: positive clause' was applied 26 times.
+  - rule 'linear: reduced variable domains' was applied 21 times.
+  - rule 'linear: remapped using affine relations' was applied 92 times.
+  - rule 'linear: remove irrelevant part' was applied 1 time.
+  - rule 'linear: variable substitution 3' was applied 8 times.
+  - rule 'objective: variable not used elsewhere' was applied 2 times.
+  - rule 'presolve: 43 unused variables removed.' was applied 1 time.
+  - rule 'presolve: iteration' was applied 2 times.
+  - rule 'symmetry: added orbit symmetry breaking implications' was applied 1 time.
+  - rule 'symmetry: fixed to false in general orbit' was applied 2 times.
+  - rule 'variables: detect fully reified value encoding' was applied 21 times.
+  - rule 'variables: detect half reified value encoding' was applied 42 times.
+
+Presolved optimization model '': (model_fingerprint: 0xabf67fdbb0e34509)
+#Variables: 0 ( in objective) (0 primary variables)
+
+[Symmetry] Graph for symmetry has 0 nodes and 0 arcs.
+
+Preloading model.
+#Bound   0.00s best:inf   next:[702,702]  initial_domain
+The solution hint is complete and is feasible. Its objective value is 702.
+
+Starting search at 0.00s with 1 workers.
+1 full problem subsolver: [main]
+
+[Precedences] num_relations=0 num_clauses=0
+[Probing] deterministic_time: 0 (limit: 1) wall_time: 5.31e-07 (0/0)
+Initial num_bool: 0
+
+Starting subsolver 'main' hint search at 0.00s
+#1       0.00s best:702   next:[]         main [hint]
+Starting subsolver 'main' search at 0.00s
+
+Task timing           n [     min,      max]      avg      dev     time         n [     min,      max]      avg      dev    dtime
+      'main':         1 [156.99us, 156.99us] 156.99us   0.00ns 156.99us         0 [  0.00ns,   0.00ns]   0.00ns   0.00ns   0.00ns
+
+Search stats    Bools  Conflicts  Branches  Restarts  BoolPropag  IntegerPropag
+       'main':      0          0         0         0           0              0
+
+SAT stats    ClassicMinim  LitRemoved  LitLearned  LitForgotten  Subsumed  MClauses  MDecisions  MLitTrue  MSubsumed  MLitRemoved  MReused
+    'main':             0           0           0             0         0         0           0         0          0            0        0
+
+Solutions (1)    Num   Rank
+        'main':    1  [1,1]
+
+Objective bounds     Num
+  'initial_domain':    1
+
+Solution repositories    Added  Queried  Synchro
+  'feasible solutions':      1        0        1
+   'fj solution hints':      0        0        0
+
+CpSolverResponse summary:
+status: OPTIMAL
+objective: 702
+best_bound: 702
+integers: 1
+booleans: 0
+conflicts: 0
+branches: 0
+propagations: 0
+integer_propagations: 0
+restarts: 0
+lp_iterations: 0
+walltime: 0.0018937
+usertime: 0.00189373
+deterministic_time: 1.3726e-05
+gap_integral: 0
+solution_fingerprint: 0xed897789ee4d2dd3
+
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.115s
+
+OK
+{"status": "PASS", "small_mask_distance": 8, "linearization_levels": [0, 2], "C1_D_both_parents_complete_assignment": true, "star_witness_distance": 6, "negative_mask_and_radius_checks": true}
+{
+  "status": "PASS",
+  "rook_no_star": true,
+  "checked_moves": 6704,
+  "fixtures": [
+    {
+      "state": "8169eba8e1f2bf78eb655d99b94844a1eb5056df828e8c610a3778d537a7d0fe",
+      "ap": 99,
+      "star_raw": 184,
+      "combined": 227
+    },
+    {
+      "state": "136bad89e063ba84bbc4201cfa5be21db6d511852602ad861a4d2c0e0ef8e49c",
+      "ap": 95,
+      "star_raw": 157,
+      "combined": 192
+    },
+    {
+      "state": "e1edc9cb193240624c35e8a2fe0502f523349ec3b828ea31d6316c467a3ea72d",
+      "ap": 97,
+      "star_raw": 180,
+      "combined": 220
+    },
+    {
+      "state": "7acadd045b482adc296b57ee94153c5d84bef37031acd0425d9fcd11139b25ef",
+      "ap": 95,
+      "star_raw": 159,
+      "combined": 200
+    },
+    {
+      "state": "76d3d8d66362895684f0067d722e1a3c7c322176388367d258915337a891b302",
+      "ap": 94,
+      "star_raw": 163,
+      "combined": 201
+    },
+    {
+      "state": "d6b3a7b4d443d18c5740e7124f413766bf7d3e428ecd2b372f58bb581b43c93f",
+      "ap": 94,
+      "star_raw": 165,
+      "combined": 200
+    },
+    {
+      "state": "2ec9a15c88faa8b17f6f178df4b300c7553eb59115ce57f26b0107c286bd82e2",
+      "ap": 92,
+      "star_raw": 149,
+      "combined": 178
+    },
+    {
+      "state": "69e6aa3352e36b9a574cb0e18410ccf1ec17c0955c6bef7ff8a1cac93be61f3e",
+      "ap": 94,
+      "star_raw": 167,
+      "combined": 203
+    },
+    {
+      "state": "d190fb41b5ab0d76669263f8c68154804fe1e7e47d64b49f8b5df126858e5a5d",
+      "ap": 99,
+      "star_raw": 152,
+      "combined": 185
+    },
+    {
+      "state": "24cad03d093a40208f9c43916a7e009c1548672f02da36fff059d778dd4d0a1e",
+      "ap": 98,
+      "star_raw": 168,
+      "combined": 205
+    },
+    {
+      "state": "4ff6fb9fdc71a2556ccbca6cd388a8993bfabb183f74b1f38bb649577d0b427b",
+      "ap": 100,
+      "star_raw": 156,
+      "combined": 194
+    },
+    {
+      "state": "903cc618131980d83fe6f171c0c6c4e13f48a2d3c3ec2768a1cf6fd4b57d2ca2",
+      "ap": 93,
+      "star_raw": 160,
+      "combined": 192
+    },
+    {
+      "state": "b19fd5fc4dc9f35d9ea302d45bc24ca369ae0d053e498c5a0955f5b6d2667c31",
+      "ap": 96,
+      "star_raw": 204,
+      "combined": 241
+    },
+    {
+      "state": "2bdad65342677ff20fb667ba592502d4ea2701b94e114dd3e381acb64c36c4f5",
+      "ap": 105,
+      "star_raw": 198,
+      "combined": 237
+    },
+    {
+      "state": "b27186b31ab26f993671977d9da777c55503cb50afd067b5d8666d40462c58b7",
+      "ap": 92,
+      "star_raw": 164,
+      "combined": 195
+    },
+    {
+      "state": "d76f92c1517b7db7ba7c1102ae9f275f07abea612a789b917f7ed3881c873e8d",
+      "ap": 98,
+      "star_raw": 194,
+      "combined": 224
+    },
+    {
+      "state": "0127897ea3ad09915362a15e5a7da285a497580e55cdac46c40c719c3e968455",
+      "ap": 104,
+      "star_raw": 192,
+      "combined": 235
+    },
+    {
+      "state": "efdf1faae4fbeddfb2d9df25ba14a35b89420982f3ba59a5b1ef0bc37a3d924f",
+      "ap": 86,
+      "star_raw": 166,
+      "combined": 191
+    },
+    {
+      "state": "73f01149665372d500e219eeb06c3f6e1922042d3deea1c46423bd6df46a7bb6",
+      "ap": 91,
+      "star_raw": 184,
+      "combined": 221
+    },
+    {
+      "state": "fe6963987571025d7967b4967bbf04ce2907ea7c8b57dd392b93947364b65fcc",
+      "ap": 95,
+      "star_raw": 158,
+      "combined": 200
+    },
+    {
+      "state": "70723ff8bf98da235d6358f4daa1c0922ac7fc1b19822fdd71f13f382361e364",
+      "ap": 99,
+      "star_raw": 161,
+      "combined": 199
+    },
+    {
+      "state": "ffeffd9a45bba115faab0011e4e08d915c925032605d9ca796b7d2bb297a7655",
+      "ap": 96,
+      "star_raw": 176,
+      "combined": 208
+    },
+    {
+      "state": "fa66b684cd4dc7da715e3046229d10925742d23ce0711ebb94ceff698939f3e3",
+      "ap": 99,
+      "star_raw": 180,
+      "combined": 220
+    },
+    {
+      "state": "d453ec1971c6c5acf780a0e5506a4d57cdeab63b507351804504c7a9f2415797",
+      "ap": 101,
+      "star_raw": 158,
+      "combined": 200
+    },
+    {
+      "state": "ec29ce6067a9cc7d10c581f82943cb6a2e9a392020d32d732ec3daafe58ee96c",
+      "ap": 95,
+      "star_raw": 202,
+      "combined": 236
+    }
+  ],
+  "improving_star_witnesses": 13,
+  "durable_incumbent_resume_and_corruption_rejection": true
+}

@@ -1,0 +1,117 @@
+{
+  "catalog": {
+    "atomic_best_and_pause_resume": "PASS",
+    "improving_star_witnesses_in_25_pool": 13,
+    "independent_move_checks": 6704
+  },
+  "clock_scope": "Cloud FakeHost only; embedded Windows preflight must run on Ryzen",
+  "cp": {
+    "LP_levels": [
+      0,
+      2
+    ],
+    "both_D_parents_full_hint_checked": true,
+    "explicit_masks_and_fixed_radius": "PASS",
+    "real_99_star_difference_model_solved": true
+  },
+  "date": "2026-09-29",
+  "evidence_sha256": "8b61054834ea7760fa06501174c7f293b243c0589b21209a8d1e232c09f46194",
+  "faults": {
+    "status": "PASS",
+    "tests": [
+      {
+        "all_cpu_settled": true,
+        "clock": "FakeHost",
+        "mode": "local",
+        "reason": null,
+        "status": "PASS",
+        "terminal": "COMPLETED_WITH_LOCAL_ERRORS"
+      },
+      {
+        "all_cpu_settled": true,
+        "clock": "FakeHost",
+        "mode": "invalid",
+        "reason": "RESULT_INTEGRITY_ERROR",
+        "status": "PASS",
+        "terminal": "DIAGNOSIS_REQUIRED"
+      }
+    ]
+  },
+  "full_controls": {
+    "founders_checked": 57,
+    "largest_model": {
+      "constraints": 330735,
+      "proto_bytes": 18422541,
+      "variables": 120871
+    },
+    "paired_B_cells": 96,
+    "process_cpu_seconds": 49.406948,
+    "scope": "Kernel/constraint and witness controls; Windows scheduler test is separate; no full-size search guarantee",
+    "status": "PASS"
+  },
+  "integration": {
+    "all_four_families": true,
+    "audit": {
+      "best_W": 2076,
+      "best_packing_edges": 533,
+      "cpu_seconds": {
+        "A_00_AP": 15.015877999999999,
+        "B_00_1701_LP2_FREE": 15.506435999999999,
+        "C1_00_D": 0.7889740000000001,
+        "C2_00_lambda_descent_projection": 15.012444,
+        "C2_00_packing_tabu": 15.009167000000001,
+        "aux": 180.70259600000003
+      },
+      "distinct_labelled_candidates": 3,
+      "host_wall_seconds": 79.53783109600045,
+      "local_hard_overruns": [],
+      "scope": "Full graph/score/fixed-edge and resource audit; no canonical classes or solver exclusion certificates.",
+      "soft_target_deviations": [
+        {
+          "allocation": 12,
+          "category": "aux",
+          "cpu_seconds": 5.007383,
+          "receipt": "3",
+          "soft_target_cpu_seconds": 2
+        },
+        {
+          "allocation": 12,
+          "category": "aux",
+          "cpu_seconds": 5.007642,
+          "receipt": "2",
+          "soft_target_cpu_seconds": 2
+        },
+        {
+          "allocation": 43.887606,
+          "category": "B_00_1701_LP2_FREE",
+          "cpu_seconds": 14.394041999999999,
+          "receipt": "22",
+          "soft_target_cpu_seconds": 13.887606
+        }
+      ],
+      "status": "PASS_WITH_RECORDED_LOCAL_DEVIATIONS",
+      "total_cpu_hours": 0.06723208194444445
+    },
+    "clock": "FakeHost cloud; real Windows preflight still required",
+    "pause_resume": true,
+    "source_corruption_rejected": true,
+    "status": "PASS",
+    "unresolved_cpu_rejected": true
+  },
+  "limitations": [
+    "No full-budget cloud campaign",
+    "No measured K1 Ryzen ETA",
+    "No canonical classification inside runtime",
+    "No certificate for CP-SAT optimum",
+    "Packing projection is heuristic",
+    "Integration fixture has five short tasks; full production controls checked all96 B cells separately"
+  ],
+  "packing": {
+    "exhaustive_n5_graphs": 1024,
+    "independent_add_oracle": "PASS",
+    "n99_projection": "PASS",
+    "small_rook_target_and_corruption": "PASS",
+    "tests": 7
+  },
+  "status": "PASS"
+}

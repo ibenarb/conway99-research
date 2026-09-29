@@ -1,0 +1,32 @@
+{
+  "active_host_wall_limit_seconds": 345600,
+  "attempt_shutdown_grace_cpu_seconds": 30,
+  "aux_cpu_limit_seconds": 86400,
+  "calibration_cpu_seconds": 0,
+  "minimum_search_attempt_seconds": 5,
+  "policy": "Soft search targets; explicit local shutdown grace; all actual CPU charged; no global stop for known local overshoot",
+  "receipt_measurement_tolerance_seconds": 5,
+  "restart_of": "New K1 campaign; no inherited search CPU; source graphs explicitly retained",
+  "rules": [
+    "GC-01",
+    "GC-02",
+    "GC-03",
+    "GC-04",
+    "GC-05",
+    "GC-06",
+    "GC-07",
+    "GC-08",
+    "GC-09",
+    "GC-10",
+    "GC-11",
+    "GC-12",
+    "GC-13",
+    "GC-14"
+  ],
+  "shutdown_host_seconds": 90,
+  "task_measurement_tolerance_seconds": 5,
+  "task_search_cpu_seconds": "see each frozen task",
+  "task_shutdown_grace_cpu_seconds": 120,
+  "total_cpu_limit_seconds": 2419200,
+  "version": "K1-1.0.0"
+}
