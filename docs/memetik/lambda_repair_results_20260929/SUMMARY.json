@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "same_founders_and_tasks_except_cpu_budget": true,
+  "done_counts": {
+    "OPTIMAL_UNCERTIFIED": 88,
+    "CPU_LIMIT_UNKNOWN": 51,
+    "RIGID_BOUNDARY_VERIFIED": 5
+  },
+  "by_window": {
+    "24": {
+      "OPTIMAL_UNCERTIFIED": 43,
+      "RIGID_BOUNDARY_VERIFIED": 5
+    },
+    "40": {
+      "OPTIMAL_UNCERTIFIED": 45,
+      "CPU_LIMIT_UNKNOWN": 3
+    },
+    "60": {
+      "CPU_LIMIT_UNKNOWN": 48
+    }
+  },
+  "classes": 25,
+  "founder_classes": 24,
+  "new_classes_vs_110": 0,
+  "new_classes_vs_founders": 1,
+  "status_changes": [
+    {
+      "task": "2076_01_s40_defect",
+      "old": "CPU_LIMIT_UNKNOWN",
+      "new": "OPTIMAL_UNCERTIFIED"
+    },
+    {
+      "task": "2077_09_s40_random",
+      "old": "CPU_LIMIT_UNKNOWN",
+      "new": "OPTIMAL_UNCERTIFIED"
+    }
+  ],
+  "improvements": [
+    {
+      "task": "2077_08_s60_defect",
+      "before": {
+        "F": 3304,
+        "L1": 2516,
+        "Linf": 4,
+        "Nmax": 1,
+        "W": 2139
+      },
+      "after": {
+        "F": 3272,
+        "L1": 2498,
+        "Linf": 3,
+        "Nmax": 16,
+        "W": 2127
+      },
+      "state": "b27186b31ab26f993671977d9da777c55503cb50afd067b5d8666d40462c58b7"
+    }
+  ],
+  "pareto": [
+    {
+      "state": "8169eba8e1f2bf78eb655d99b94844a1eb5056df828e8c610a3778d537a7d0fe",
+      "scores": {
+        "F": 3352,
+        "L1": 2488,
+        "Linf": 3,
+        "Nmax": 20,
+        "W": 2076
+      }
+    },
+    {
+      "state": "136bad89e063ba84bbc4201cfa5be21db6d511852602ad861a4d2c0e0ef8e49c",
+      "scores": {
+        "F": 3180,
+        "L1": 2436,
+        "Linf": 3,
+        "Nmax": 13,
+        "W": 2077
+      }
+    }
+  ],
+  "campaign_cpu_hours": 105.12070632027778,
+  "export_ledger_cpu_hours": 105.17070632027777,
+  "host_wall_seconds": 36153.7796692,
+  "scope": "Local window results only; CP-SAT optimality is uncertified; timeouts remain unknown."
+}
