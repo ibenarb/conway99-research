@@ -62,3 +62,9 @@ werden mit Begründung ersetzt, nicht kommentarlos weitergeschleppt.
 ## Zielhardware-Abschluss 1.2.0, 29.09.2026
 
 GC-02/10: Vollständiger Neustart mit144 Aufgaben,51 verbuchten weichen Warnungen und ohne harte Überschreitungen abgeschlossen. Beide zuvor falsch geschlossenen Kalibrierungsaufgaben wurden weiterbearbeitet. GC-11: letzte Restzeitprojektion etwa11min17 gegenüber knapp10min tatsächlicher Restzeit. GC-08: doppeltes Budget erzeugte zwei weitere lokale Solveroptima, aber keine neue Graphklasse gegenüber1.1.0; alle48 großen Fenster bleiben UNKNOWN. Betriebserfolg und mathematischer Fortschritt getrennt bewerten. Belege: docs/memetik/lambda_repair_results_20260929.
+
+## GC-12/13 — Review-Abgleich, 29.09.2026
+
+**GC-12: Kontrollversuche brauchen erreichbare Störungen.** Der vorgeschlagene SRG-Rückkehrtest über gültige Sternzüge kann nicht starten: Fürλ=1 undμ≥2 existiert keine nichttriviale Sternneupaarung am exakten Zielgraphen. Vor Laufzeitplanung Erreichbarkeit, Invarianten und mindestens eine echte Störung prüfen. Nichtanwendbarkeit ist kein negatives Messergebnis. Einzelneλ-Defekte±1 bei festem Grad14 sind zudem durch Dreieckszählung ausgeschlossen. Beweis und9er-Rookkontrolle: docs/memetik/lambda_review_20260929.
+
+**GC-13: Operatornamen ersetzen keinen Katalogvergleich.** FrühereC3-Züge auf neun Knoten aus drei disjunkten Dreiecken unterscheiden sich von Sterndreierzyklen mit gemeinsamem Zentrum. Ein negativer VergleichP/PC darf nicht still gegen den neuen Sternkatalog verwendet werden. Neue Operatoren durch gelöschte/ergänzte Kanten und Zulässigkeitsbedingungen identifizieren.
