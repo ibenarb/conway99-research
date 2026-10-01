@@ -15,3 +15,19 @@ The search keeps a population through 8 independent DFS workers over row complet
 A prefix of depth d guarantees all fixed-border relations for completed rows and all pair relations among completed rows. Reaching depth 84 would yield a full SRG(99,14,1,2), hence W=0; partial depth is not interpreted as a smaller SRG.
 
 Office profile: 8 workers, 18 hours, atomic checkpoints every 60 s, controller status every 10 minutes (<80 chars).
+
+
+## Revision 0.2.4
+
+The first Office attempts exposed two search-control defects, not mathematical
+dead ends: duplicate subset enumeration and treating bounded scans as exhausted
+branches. 0.2.4 canonicalizes row subsets, pushes the current forward necessary
+conditions into the exact row subproblem as forced/forbidden edge values, and
+uses adaptive widening. Production limits are 128 retained alternatives per
+prefix, solution scans 4096 -> 65536 and node budgets 2,000,000 -> 32,000,000
+over four widening rounds. Hitting a bound is recorded as LIMIT_UNRESOLVED.
+
+Workers do not terminate merely because their currently retained sample is
+exhausted. They start another epoch with a fresh ordering and continue until the
+18 h wall budget, unless a complete 84-row construction is found. Checkpoints
+remain resumable.
