@@ -1,10 +1,14 @@
 {
-    "version": "0.2.3",
+    "version": "0.2.4",
     "seed": 2026100116,
     "workers": 8,
     "wall_seconds": 64800,
     "checkpoint_seconds": 60,
-    "alternatives_per_node": 64,
-    "raw_solution_limit": 4096,
-    "node_limit": 2000000
+    "alternatives_per_node": 128,
+    "solution_scan_initial": 4096,
+    "solution_scan_max": 65536,
+    "node_limit_initial": 2000000,
+    "node_limit_max": 32000000,
+    "adaptive_rounds": 4,
+    "adaptive_factor": 4
 }
