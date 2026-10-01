@@ -127,14 +127,17 @@ def enumerate_subsets(features,req,k,seed,mode,node_limit,raw_limit):
             rng.shuffle(opts)
         elif mode=='descending':
             opts.reverse()
+        excluded=0
         for i in opts:
+            bit=1<<i
             nr=list(rr); ok=True
             for c in features[i]:
                 nr[c]-=1
                 if nr[c]<0:
                     ok=False; break
             if ok:
-                rec(av&~(1<<i),tuple(nr),need-1,chosen|(1<<i))
+                rec(av&~excluded&~bit,tuple(nr),need-1,chosen|bit)
+            excluded|=bit
             if stop:
                 return
     rec((1<<m)-1,tuple(req),k,0)
@@ -146,12 +149,15 @@ def row_alternatives(prefix,seed,cfg,mode):
         return [],{'status':'EXACT_INFEASIBLE','nodes':0,'raw':0,'forward_rejects':0}
     u,L,k,req,cand,feat=prob
     raws,nodes,stop=enumerate_subsets(feat,req,k,seed,mode,cfg['node_limit'],cfg['raw_solution_limit'])
-    accepted=[]; rejects=0
+    accepted=[]; rejects=0; seen=set()
     for a in raws:
         r=L
         for i,w in enumerate(cand):
             if (a>>i)&1:
                 r|=1<<w
+        if r in seen:
+            continue
+        seen.add(r)
         q=prefix+(r,); check(q)
         if future_ok(q):
             accepted.append(r)
@@ -237,18 +243,29 @@ def selftest():
         raise SystemExit('enumeration regression failed')
     good=bad=0
     for i,r in enumerate(root):
-        child,m=row_alternatives((r,),9000+i,cfg,'random')
+        child,_=row_alternatives((r,),9000+i,cfg,'random')
         good+=bool(child); bad+=not bool(child)
     if not good or not bad:
         raise SystemExit('backtracking regression failed')
-    p=()
-    for u in range(6):
-        aa,_=row_alternatives(p,2000+u,cfg,'random')
-        if not aa:
-            raise SystemExit(f'constructive regression failed at {u}')
-        p=p+(aa[0],); check(p)
+    visited=0
+    def dfs(prefix,target,salt):
+        nonlocal visited
+        visited+=1
+        if len(prefix)>=target:
+            return prefix
+        aa,_=row_alternatives(prefix,salt^int(digest(prefix)[:16],16),cfg,'random')
+        for i,r in enumerate(aa):
+            got=dfs(prefix+(r,),target,salt+104729*(i+1))
+            if got is not None:
+                return got
+        return None
+    p=dfs((),6,777)
+    if p is None:
+        raise SystemExit('constructive backtracking regression failed')
+    check(p)
     print(json.dumps({'status':'PASS','depth':len(p),'root_alternatives':len(root),
-                      'child_good':good,'child_bad':bad,'sha256':digest(p)}))
+                      'child_good':good,'child_bad':bad,'dfs_nodes':visited,
+                      'sha256':digest(p)}))
 
 def main():
     a=argparse.ArgumentParser(); s=a.add_subparsers(dest='cmd',required=True)
