@@ -1,0 +1,92 @@
+{
+  "archive_tamper_rejected": true,
+  "existing_destination_rejected": true,
+  "integration": {
+    "audit": {
+      "best_W": 2077,
+      "best_packing_edges": null,
+      "cpu_seconds": {
+        "B_25_1701_LP0_FREE": 15.658993,
+        "B_25_1701_LP0_R16": 15.481822,
+        "B_25_1701_LP2_FREE": 15.721489,
+        "B_25_1701_LP2_R16": 15.686312999999998,
+        "aux": 301.548498
+      },
+      "distinct_labelled_candidates": 1,
+      "host_wall_seconds": 80.79215454799987,
+      "local_hard_overruns": [],
+      "recovery": {
+        "campaign_jobs_complete": 340,
+        "campaign_jobs_total": 520,
+        "exact_combined_cpu_hours": null,
+        "known_settled_combined_cpu_hours": 344.2149547697222,
+        "new_segment_completed_tasks": 4,
+        "predecessor_audit_scope": "Pinned partial audit; no closed-session CPU or host-wall certification for the interrupted predecessor.",
+        "predecessor_completed_tasks": 336,
+        "previous_settled_cpu_hours": 344.1138166822222,
+        "previous_unsettled_cpu_hours": null
+      },
+      "scope": "Full graph/score/fixed-edge and resource audit; no canonical classes or solver exclusion certificates.",
+      "soft_target_deviations": [
+        {
+          "allocation": 12,
+          "category": "aux",
+          "cpu_seconds": 5.006193,
+          "receipt": "3",
+          "soft_target_cpu_seconds": 2
+        },
+        {
+          "allocation": 12,
+          "category": "aux",
+          "cpu_seconds": 5.007639999999999,
+          "receipt": "2",
+          "soft_target_cpu_seconds": 2
+        },
+        {
+          "allocation": 44.374651,
+          "category": "B_25_1701_LP0_FREE",
+          "cpu_seconds": 15.033644,
+          "receipt": "22",
+          "soft_target_cpu_seconds": 14.374651
+        },
+        {
+          "allocation": 44.383251,
+          "category": "B_25_1701_LP0_R16",
+          "cpu_seconds": 14.865072999999999,
+          "receipt": "23",
+          "soft_target_cpu_seconds": 14.383251
+        },
+        {
+          "allocation": 44.361919,
+          "category": "B_25_1701_LP2_FREE",
+          "cpu_seconds": 15.083408,
+          "receipt": "20",
+          "soft_target_cpu_seconds": 14.361919
+        },
+        {
+          "allocation": 44.39774,
+          "category": "B_25_1701_LP2_R16",
+          "cpu_seconds": 15.084052999999999,
+          "receipt": "21",
+          "soft_target_cpu_seconds": 14.39774
+        }
+      ],
+      "status": "PASS_WITH_RECORDED_LOCAL_DEVIATIONS",
+      "total_cpu_hours": 0.10113808749999999
+    },
+    "heartbeat": true,
+    "pause_resume": true,
+    "real_children": true,
+    "scope": "Shortened four-cell test; FakeHost only. Real WSL preflight runs before production.",
+    "status": "PASS"
+  },
+  "ledger_tamper_rejected": true,
+  "no_old_hints": true,
+  "partition": {
+    "completed": 336,
+    "rerun": 12,
+    "unstarted": 172
+  },
+  "predecessor_unchanged": true,
+  "status": "PASS"
+}
