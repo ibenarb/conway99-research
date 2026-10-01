@@ -97,3 +97,20 @@ Regression: Original unverändert, beschädigtes Archiv/Ledger abgewiesen,
 bestehendes Ziel abgewiesen, korrekte336/12/172-Aufteilung und echte Kindprozesse
 mit Pause/Wiederaufnahme. Belege: docs/memetik/lambda_k1_recovery_20261001.
 Status: neuer Recovery-Abschnitt; Zielhardwarekontrollen vor Produktion.
+
+
+## GC-16 — Begrenzte Enumeration ist keine erschöpfte Verzweigung, 01.10.2026
+
+Der konstruktive Zeilenpilot 0.2.3 meldete bei Worker 1 nach 64
+Zeile-16-Alternativen `ENUMERATED_SAMPLE_EXHAUSTED`, obwohl für jede
+Zeile-17-Aufgabe lediglich das Limit von 4096 exakten Rohlösungen erreicht
+worden war. Es lag weder ein exakter Widerspruch noch eine vollständige
+Enumeration vor. Regel: Ein Lösungs-, Knoten- oder Zeitlimit markiert einen
+Suchast ausschließlich als `LIMIT_UNRESOLVED`; es darf weder lokal noch
+global als erschöpft behandelt werden. Wo billige notwendige
+Fortsetzungsbedingungen bekannt sind, werden sie vor der Enumeration in das
+Teilproblem eingebaut und anschließend unabhängig erneut geprüft. Begrenzte
+Alternativen werden durch adaptive Erweiterung oder neue Suchreihenfolgen
+ergänzt. Regression: absichtlich winziges Enumerationslimit muss
+`LIMIT_UNRESOLVED` ergeben. Beleg:
+`docs/memetik/row_constructive_20261001`.
