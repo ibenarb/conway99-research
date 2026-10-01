@@ -213,7 +213,7 @@ def scan_once(prefix,seed,cfg,mode,node_limit,solution_limit):
         else:
             rejects+=1
     if accepted:
-        status='FEASIBLE_SET'
+        status='FEASIBLE_SET' if stop else 'FEASIBLE_EXHAUSTIVE'
     elif stop:
         status='LIMITED'
     elif sols:
@@ -236,7 +236,7 @@ def row_alternatives(prefix,seed,cfg,mode):
                     meta['adaptive_round']=round_no
                     return allrows,meta
         last=meta
-        if meta['status'] in ('EXACT_INFEASIBLE','FORWARD_INFEASIBLE','POST_FORWARD_EXHAUSTED'):
+        if meta['status'] in ('EXACT_INFEASIBLE','FORWARD_INFEASIBLE','POST_FORWARD_EXHAUSTED','FEASIBLE_EXHAUSTIVE'):
             meta['adaptive_round']=round_no
             return allrows,meta
         node=min(cfg['node_limit_max'],node*cfg['adaptive_factor'])
@@ -252,6 +252,18 @@ def worker(cfg,wid,out):
     base_mode='ascending' if wid==0 else 'descending' if wid==1 else 'random'
     seed=cfg['seed']+1000003*wid
     prefix=(); frames=[]; best=(); bt=0; counts={}; epoch=0; unresolved=0
+    if cp.exists():
+        saved=json.loads(cp.read_text())
+        prefix=tuple(int(x,16) for x in saved.get('prefix',[]))
+        best=tuple(int(x,16) for x in saved.get('best',[]))
+        frames=saved.get('frames',[])
+        bt=int(saved.get('backtracks',0))
+        counts=saved.get('counts',{})
+        epoch=int(saved.get('epoch',0))
+        unresolved=int(saved.get('unresolved',0))
+        check(prefix)
+        if best:
+            check(best)
     t0=time.time(); last=0; status='TIME_BUDGET'
     while time.time()-t0<cfg['wall_seconds']:
         d=len(prefix)
