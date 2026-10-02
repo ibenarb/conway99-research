@@ -125,19 +125,28 @@ def run(cfgfile,out,run_dir):
         raise ValueError("cut_depths must be unique descending depths")
     out=Path(out); out.mkdir(parents=True,exist_ok=True)
     bank,errors=harvest(run_dir,cuts)
-    manifest={
-        "version":cfg["version"],"config":cfg,"source_run_dir":str(Path(run_dir).resolve()),
-        "rules":["GC-08","GC-15","GC-16","GC-17"],
-        "harvest_counts":{str(d):len(bank[d]) for d in cuts},
-        "harvest_errors":errors,
-        "started_realtime":time.time(),"boot_id":boot_id(),
-    }
-    atomic(out/"MANIFEST.json",manifest)
+    mp=out/"MANIFEST.json"
+    if mp.exists():
+        manifest=json.loads(mp.read_text())
+        if manifest.get("config")!=cfg:
+            raise ValueError("resume config differs from fixed campaign manifest")
+        if manifest.get("source_run_dir")!=str(Path(run_dir).resolve()):
+            raise ValueError("resume source_run_dir differs from fixed campaign manifest")
+    else:
+        manifest={
+            "version":cfg["version"],"config":cfg,
+            "source_run_dir":str(Path(run_dir).resolve()),
+            "rules":["GC-08","GC-15","GC-16","GC-17"],
+            "harvest_counts":{str(d):len(bank[d]) for d in cuts},
+            "harvest_errors":errors,
+            "started_realtime":time.time(),"boot_id":boot_id(),
+        }
+        atomic(mp,manifest)
     for d in cuts:
         for h,rec in bank[d].items():
             base_file(out,d,h,rec)
 
-    deadline=time.time()+cfg["campaign_wall_seconds"]
+    deadline=manifest["started_realtime"]+cfg["campaign_wall_seconds"]
     best=cfg["known_best_depth"]; all_results=[]
     for cut in cuts:
         if time.time()+cfg["shutdown_reserve_seconds"]>=deadline:
@@ -175,6 +184,21 @@ def run(cfgfile,out,run_dir):
               sum(r["status"] in ("TASK_TIMEOUT_UNKNOWN","LIMIT_UNRESOLVED","TASK_ERROR")
                   for r in all_results))
 
+def inventory(cfgfile,run_dir):
+    cfg=json.loads(Path(cfgfile).read_text())
+    cuts=list(cfg["cut_depths"])
+    bank,errors=harvest(run_dir,cuts)
+    out={
+        "source_run_dir":str(Path(run_dir).resolve()),
+        "counts":{str(d):len(bank[d]) for d in cuts},
+        "depth16":[
+            {"sha256":h,"sources":rec["sources"]}
+            for h,rec in sorted(bank.get(16,{}).items())
+        ],
+        "harvest_errors":errors,
+    }
+    print(json.dumps(out,indent=2,sort_keys=True))
+
 def selftest():
     cfg0={"alternatives_per_node":16,"node_limit_initial":250000,
           "node_limit_max":1000000,"solution_scan_initial":512,
@@ -203,9 +227,15 @@ def selftest():
 def main():
     ap=argparse.ArgumentParser(); sp=ap.add_subparsers(dest="cmd",required=True)
     sp.add_parser("selftest")
+    i=sp.add_parser("inventory"); i.add_argument("config"); i.add_argument("source_run_dir")
     r=sp.add_parser("run"); r.add_argument("config"); r.add_argument("outdir"); r.add_argument("source_run_dir")
     a=ap.parse_args()
-    selftest() if a.cmd=="selftest" else run(a.config,a.outdir,a.source_run_dir)
+    if a.cmd=="selftest":
+        selftest()
+    elif a.cmd=="inventory":
+        inventory(a.config,a.source_run_dir)
+    else:
+        run(a.config,a.outdir,a.source_run_dir)
 
 if __name__=="__main__":
     main()
