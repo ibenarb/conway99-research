@@ -11,6 +11,7 @@ def all_rows(rows,target,seed,node_limit,solution_limit):
     return rr,{"nodes":nodes,"stop":stop,"count":len(rr)}
 
 def probe(path,base_depth,seed,node_limit,solution_limit):
+    target_depth=base_depth+3
     full=load_best(path)
     if base_depth>len(full):
         raise ValueError("base depth exceeds witness")
@@ -71,9 +72,10 @@ def probe(path,base_depth,seed,node_limit,solution_limit):
                         if third:
                             verify({**s18,c:third[0]})
                             return {
-                                "status":"FOUND_DEPTH19",
+                                "status":f"FOUND_DEPTH{target_depth}",
                                 "source":path,
                                 "base_depth":base_depth,
+                                "target_depth":target_depth,
                                 "first_full_row":16+a,
                                 "second_full_row":16+b,
                                 "third_full_row":16+c,
@@ -98,9 +100,10 @@ def probe(path,base_depth,seed,node_limit,solution_limit):
                         })
 
     return {
-        "status":"LIMIT_UNRESOLVED" if unresolved else "EXHAUSTIVE_NO_DEPTH19",
+        "status":"LIMIT_UNRESOLVED" if unresolved else f"EXHAUSTIVE_NO_DEPTH{target_depth}",
         "source":path,
         "base_depth":base_depth,
+        "target_depth":target_depth,
         "depth17_summary":depth17,
         "depth18_states_examined":depth18_states,
         "depth18_by_first":depth18_by_first,
