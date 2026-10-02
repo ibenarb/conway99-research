@@ -114,3 +114,25 @@ Alternativen werden durch adaptive Erweiterung oder neue Suchreihenfolgen
 ergänzt. Regression: absichtlich winziges Enumerationslimit muss
 `LIMIT_UNRESOLVED` ergeben. Beleg:
 `docs/memetik/row_constructive_20261001`.
+
+
+## GC-17 — Starre Zeilenreihenfolge kann eine künstliche Tiefenbarriere erzeugen, 02.10.2026
+
+Der konstruktive H-Zeilenpilot 0.2.4 erreichte in zwei unabhängigen Workern Tiefe 17.
+Beide 17er waren gegen jede der jeweils 67 verbleibenden Zeilen exakt lokal maximal.
+Die Frontierprofile zeigten jedoch bei Tiefe 16 noch jeweils drei exakt anschließbare
+Zeilen. Für worker02 führte die starre nächste Vollzeile 32 in die Sackgasse, während
+die dynamische Wahl 68 gefolgt von 90 eine gültige Tiefe-18-Partialkonstruktion
+erzeugte. Damit war die beobachtete Tiefe-17-Barriere keine globale strukturelle
+Grenze, sondern hing wesentlich von der Zeilenreihenfolge ab.
+
+Regel: Bei konstruktiven Teilgraph-Suchen mit austauschbaren noch offenen Objekten
+darf eine feste Objekt-/Zeilenreihenfolge nicht als neutral behandelt werden.
+Rest-Erweiterbarkeit explizit messen und die Objektidentität selbst in die Suche
+aufnehmen. Lokale Maximalität eines Zustands ist von globaler Maximaltiefe und von
+Maximalität unter einer festen Reihenfolge zu unterscheiden.
+
+Regression/Anwendung: Die WALK-Kampagne 0.3.0 durchsucht dynamische Zeilenidentitäten,
+dedupliziert gespeicherte Basen und backtrackt zunächst über Schnitte 16 bis 8.
+Belege: `docs/memetik/row_constructive_walk_20261002/PLAN.md` und
+`experiments/memetik/row_constructive_0_2_0/probe_target_depth.py`.
