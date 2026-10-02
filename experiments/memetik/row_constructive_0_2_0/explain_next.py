@@ -12,16 +12,19 @@ from row_build import enumerate_subsets, OUTER, digest
 def labels_for(u):
     return [f"border[{a}]" for a in range(14)] + [f"pair_with_Hrow[{v}]" for v in range(u)]
 
-def projected(features, req, active):
+def projected(features, req, active, k):
     pos={c:i for i,c in enumerate(active)}
+    card=len(active)
     pf=[]
     for fs in features:
-        pf.append({pos[c] for c in fs if c in pos})
-    pr=[req[c] for c in active]
+        g={pos[c] for c in fs if c in pos}
+        g.add(card)
+        pf.append(g)
+    pr=[req[c] for c in active]+[k]
     return pf,pr
 
 def solve_active(features, req, k, active, node_limit=2_000_000):
-    pf,pr=projected(features,req,active)
+    pf,pr=projected(features,req,active,k)
     sols,nodes,stop=enumerate_subsets(
         pf,pr,k,123456789,"ascending",node_limit,1
     )
@@ -59,6 +62,15 @@ def irreducible_core(features,req,k,nc):
             elif status=="LIMIT":
                 limited+=1
     return active,{"full_status":"UNSAT","full_nodes":full_nodes,"shrink_tests":tests,"limited_tests":limited}
+
+def regression():
+    # A zero-only projected constraint must not make an otherwise possible
+    # cardinality choice UNSAT. This caught the 0.1 explainer bug.
+    features=[set(),set(),set()]
+    req=[0]
+    status,_=solve_active(features,req,2,[0],1000)
+    if status!="SAT":
+        raise SystemExit("projection-cardinality regression failed")
 
 def explain(path):
     prefix=load_best(path)
@@ -109,6 +121,7 @@ def explain(path):
     return base
 
 def main():
+    regression()
     ap=argparse.ArgumentParser()
     ap.add_argument("witness",nargs="+")
     args=ap.parse_args()
