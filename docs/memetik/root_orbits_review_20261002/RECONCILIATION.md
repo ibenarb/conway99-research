@@ -88,7 +88,7 @@ vollständige Graph muss mindestens einen Suchpfad besitzen.
 
 Nicht ausreichend sind:
 
-- eine Barriere unter nur einer festen Zeilenreihenfolge;
+- eine beobachtete Tiefenbarriere unter einer festen Zeilenreihenfolge, wenn die früheren Zeilenbelegungen nicht vollständig ausgeschöpft wurden;
 - eine Barriere nur für gespeicherte oder gesampelte Basen;
 - begrenzte Enumeration;
 - Timeout;
@@ -117,3 +117,11 @@ Der externe Review prüfte das ROOT-8105-Paket und seine eigenen unabhängigen
 Programme, nicht den gesamten Produktionssolver. Der Root-Konventionsabgleich
 gegen `row_build.py` wurde anschließend separat durchgeführt und bestand für
 alle 8105 Repräsentanten. Dies ist kein Audit der übrigen WALK-/DFS-Implementierung.
+
+## Präzisierung vom 03.10.2026
+
+Eine **vollständig** ausgeschöpfte und zertifizierte Suche in einer beliebigen
+festen Reihenfolge aller 84 Zeilen genügt zum Ausschluss vollständiger Graphen.
+Jeder hypothetische vollständige Graph besitzt auch in dieser Reihenfolge einen
+Pfad. Reihenfolgeabhängig sind dagegen erreichbare partielle Tiefen bei
+beschränkter Auswahl. Siehe [mathematischen Aussageumfang des Piloten](../root8105_pilot_20261003/MATHEMATICAL_SCOPE.md).

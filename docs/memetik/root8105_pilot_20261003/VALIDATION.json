@@ -1,0 +1,33 @@
+{
+  "status": "RELEASE_CONTROLS_PASS",
+  "version": "1.0.0",
+  "environment": "Cloud Linux, not Ryzen/Windows/WSL",
+  "root_classes_audited": 8105,
+  "independent_root_count": 56011010,
+  "selected_roots": 128,
+  "search_jobs": 256,
+  "search_cpu_hours": 256,
+  "campaign_cpu_ceiling_hours": 270,
+  "target_depth": 32,
+  "final_code_fingerprint": "a371c512037ea7e4b9c4fcc9ef30f79635d639df3bb23e377f08784cbba5a880",
+  "cloud_depth_probe": {
+    "root_id": 1,
+    "cpu_seconds_per_arm": 120,
+    "ordered_max_depth": 10,
+    "dynamic_max_depth": 14,
+    "observed_projections": 715795,
+    "closed_projections": 1297,
+    "certificates_checked": 4,
+    "certificates_initially_accepted": 3,
+    "certificates_after_independent_trivial_case_recheck": 4
+  },
+  "known_limits": [
+    "No exhaustive canonical-parent rule",
+    "Root-fixed canonical dedup; x/u swap measured separately",
+    "Beam/reservoir limits prevent global exclusion",
+    "Censored counts are lower bounds",
+    "Ryzen target preflight still required",
+    "Windows host clock not integrated",
+    "Abrupt WSL restart requires accounting recovery audit"
+  ]
+}
