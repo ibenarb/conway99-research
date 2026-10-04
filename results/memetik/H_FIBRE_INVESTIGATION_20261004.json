@@ -1,0 +1,71 @@
+{
+  "schema": "conway99.memetik.h_fibre_investigation.v1",
+  "date": "2026-10-04",
+  "branch": "memetik",
+  "status": "DOCUMENTED",
+  "conclusions": {
+    "minimal_exact_H_move": {
+      "vertex_support": 8,
+      "changed_edges": 16,
+      "sharp": true
+    },
+    "minimal_classification": "ALL_MINIMAL_8_16_CIRCUITS_ARE_OMEGA_4X4",
+    "cand_A": {
+      "baseline_W": 2338,
+      "exact_moves_distance_16_to_24": 0,
+      "extended_product_moves_4x8_4x10_4x12_6x8": 0
+    },
+    "cand_B": {
+      "baseline_W": 2333,
+      "exact_moves_distance_16": 2,
+      "exact_moves_distance_17_to_24": 0,
+      "extended_product_moves_4x8_4x10_4x12_6x8": 0
+    },
+    "roots": {
+      "root_witness_1": {
+        "baseline_W": 3083,
+        "moves_4x4": 49,
+        "moves_4x6": 0,
+        "moves_6x6": 4
+      },
+      "root_witness_2": {
+        "baseline_W": 3046,
+        "moves_4x4": 59,
+        "moves_4x6": 0,
+        "moves_6x6": 3
+      }
+    },
+    "nearest_H_0_7_0": {
+      "status": "PENDING_OR_TO_RUN",
+      "minimum_distance_constraint": 25,
+      "ortools_initially_missing_on_office": true
+    }
+  },
+  "augmentation_pilot_context": {
+    "package": "Conway99_ROOT8105_Pilot_1.0.1",
+    "status": "PILOT_COMPLETE",
+    "search_jobs": 256,
+    "proof_jobs": 512,
+    "cpu_hours": 276.26,
+    "search_status_counts": {
+      "CPU_LIMIT_UNKNOWN": 256
+    },
+    "proof_status_counts": {
+      "PROJECTED_COVERAGE_DRAT_VERIFIED": 512
+    },
+    "max_observed_depth": 16,
+    "observed_rows": 1447471813,
+    "projection_bytes": 33748941099,
+    "certified_projected_closures": 512,
+    "certified_root_exclusions": 0,
+    "interpretation": "Sampling/beam truncation/censored widths prevent any global depth-barrier or root-exhaustion claim."
+  },
+  "recommended_augmentation_handoff": [
+    "Use cand_A prefixes as planted guaranteed-completable stress controls at increasing depths.",
+    "Use cand_B as a nearly isolated contrast control with exactly two known distance-16 exact H moves.",
+    "Keep root witnesses as locally mobile controls.",
+    "Do not interpret Augmentation Pilot depth 16 as a structural H barrier.",
+    "Calibrate planted-prefix continuation before another large root-search campaign.",
+    "Consider global reconstruction or temporary H-defect/repair mechanisms rather than only small exact-H neighbourhood moves."
+  ]
+}
