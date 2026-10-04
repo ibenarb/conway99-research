@@ -136,3 +136,20 @@ Regression/Anwendung: Die WALK-Kampagne 0.3.0 durchsucht dynamische Zeilenidenti
 dedupliziert gespeicherte Basen und backtrackt zunächst über Schnitte 16 bis 8.
 Belege: `docs/memetik/row_constructive_walk_20261002/PLAN.md` und
 `experiments/memetik/row_constructive_0_2_0/probe_target_depth.py`.
+
+
+## GC-18 — Supervisor-Arbeit muss mit wachsendem Dateibestand begrenzt bleiben, 04.10.2026
+
+ROOT8105 1.0.1:251 Suchstunden abgeschlossen,19.3444 CPUh Nebenarbeit; globales
+270h-Budget verhindert fünf Suchaufträge und alle Zertifikatsprüfungen. Alter
+Controller prüfte rekursiv sämtliche Dateigrößen alle30Gastsekunden. Der genaue
+Kostenanteil dieses Vorgangs ist unprofiliert; die blockierende Skalierung ist
+im Code belegt. Gesamtüberschreitung1262.56CPU s einschließlich Abwicklung.
+Regel: Größenprüfungen in beschränkte Abschnitte zerlegen, Alter/Fortschritt und
+eigenen CPU-Aufwand melden; Supervisor- und Beweisreserven getrennt planen.
+Phasenanzeige darf Ressourcenstopp nicht als ausgeführte Beweisphase ausgeben.
+Regression:2040Einträge über121 begrenzte Aufrufe; Wachstum erkannt;
+PermissionError bleibt sichtbar; echte Pause/Resume- und Beweisfortsetzung.
+1.0.2 ist eine ausdrückliche Fortsetzung mit unveränderten mathematischen
+Quellen und maximal286CPUh Gesamtrahmen, erst nach explizitem Startargument.
+Belege:docs/memetik/root8105_recovery_20261004. Zielhardwareprüfung ausstehend.
