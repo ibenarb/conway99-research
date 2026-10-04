@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "scope": "cloud integration, NOT Ryzen calibration",
+  "completed_roots": 66,
+  "exact_counts": 5478,
+  "attempts_after_repeat": 66,
+  "all_wait4_receipts_exact": true,
+  "closed_sessions": 2,
+  "reviewer_counts_compared": 747,
+  "sessions": [
+    {
+      "id": "354839b4640d486d8fbad8258d6421fc",
+      "started": 1791142756.688174,
+      "ended": 1791142843.4597604,
+      "cpu": 2.5205297549999397,
+      "state": "CALIBRATION_COMPLETE",
+      "boot": "a8454b37-db75-4fa7-961d-d3185ac05bb8",
+      "pid": 41,
+      "identity": "5162729"
+    },
+    {
+      "id": "9767d44a9a5240379920d0744b32665d",
+      "started": 1791142843.5602207,
+      "ended": 1791142843.5614543,
+      "cpu": 0.071292226,
+      "state": "CALIBRATION_COMPLETE",
+      "boot": "a8454b37-db75-4fa7-961d-d3185ac05bb8",
+      "pid": 108,
+      "identity": "5171417"
+    }
+  ],
+  "preflight": {
+    "cpu_s": 64.85956002,
+    "dependencies": {
+      "numpy": "2.2.6",
+      "pynauty": "2.8.8.1",
+      "python-sat": "1.8.dev24"
+    },
+    "fingerprint": {
+      "code_hash": "8d3e411ce84935d513fef0e0b2a71689b640979c6db5e5af23175d19f1c87091",
+      "files": {
+        "census.py": "11519a611421922f047cb053a35ee4c5a981ef3afbc91fc5e934270cc8af0ae5",
+        "filters.py": "e133b9deca5b1341ab8ab44d8f584ce14cba14a55481ac30c71e3cee382d5f72",
+        "fixtures/bvls.json": "c8ae069eccfdcf85c15c387671c8b5708100e355ab5288e7f3490b5e9bde1b15",
+        "fixtures/reviewer_widths128.jsonl": "87fe44c075754149ff0e1d9c91ef71cf11048c9c329a61ada666c3be22b2f5b7",
+        "historical_core.py": "d3f0ada29e87cf42a2e827597c062504b9370e535b8ebe15cdd048cf057baac1",
+        "host_clock.ps1": "66b4de0bd0a7d94e248cd2297d23ceb2a44b21b4a73167886bfa067b6fba461b",
+        "kernel.py": "e046de7f5df0bf8912705fe1778be89b5b9f8cde1b8d390e92a538448ed77bf4",
+        "operations_test.py": "cf77735e90ba6c2a282585c57f6d86ca1204708fe13f43b030a24b46426886fb",
+        "preflight.py": "47d2d35d441d7c9305de66c141d22ec63f622dc35ce48fd630262672bae70de4",
+        "requirements.txt": "80a4b30811fe1bfef38e34fedf5a98f4878ea13c50cafc62aab7384be144c5f1",
+        "roots.tsv": "c525d03be144a7493c3239340c6263dcb8a29b5521e5d3b152ce43afe90cac41",
+        "runtime.py": "e0c6042e37ff9e569f8fdda36c302ef20cb5357b810926c2d4074cfc74b96ef9",
+        "setup.py": "3fd4d01318d141419b9d35bd8af97e59bfafe50e57a1d90f6129155601f5bf1d",
+        "validate.py": "9ac4aa6b95f143df568ee68479419c280839b54ad595b26d080dff52c7ccdca9",
+        "worker.py": "c63ee08af4f26d58d676ca5a303f02991f4121a98aaf15847db6c3347254a864"
+      }
+    },
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "records": [
+      {
+        "cpu_s_wait4": 5.967764999999999,
+        "returncode": 0,
+        "script": "validate.py"
+      },
+      {
+        "cpu_s_wait4": 58.774544000000006,
+        "returncode": 0,
+        "script": "operations_test.py"
+      }
+    ],
+    "resources": {
+      "disk_free_bytes": 30066118656,
+      "loadavg": [
+        1.60595703125,
+        2.05712890625,
+        0.9951171875
+      ],
+      "logical_cpus": 9,
+      "mem_available_bytes": 9725612032
+    },
+    "status": "PASS",
+    "timestamp": 1791142756.6067674
+  },
+  "summary": {
+    "aggregate_cpu_s": 737.202741276,
+    "auxiliary_cpu_s": 65.186208295,
+    "budget_cpu_s": 172800,
+    "completed_roots": 66,
+    "cpu_scope": "Linux workers wait4 + measured supervisor lifetime + non-worker child CPU + Windows clock process CPU + recorded preflight; task times are descriptive, never added twice",
+    "exact_counts": 5478,
+    "full_census": false,
+    "model": "F-historical-core-1.0.1-depth1",
+    "not_a_full_tree_size": true,
+    "open_attempts": 0,
+    "roots": {
+      "DONE": 66,
+      "PENDING": 8039
+    },
+    "run_id": "af58fa71aa26414296f1ea683a8ae2f5",
+    "sum_min_width_completed_roots": 22161417,
+    "supervisor_cpu_s": 2.59182198099994,
+    "worker_cpu_s": 669.424711
+  }
+}

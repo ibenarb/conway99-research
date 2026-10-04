@@ -1,0 +1,81 @@
+{
+  "status": "CLOUD_P0_P1_PACKAGE_VALIDATED",
+  "timestamp_berlin": "2026-10-04T21:41:41.785981+02:00",
+  "base_rules_commit": "a8c88807acb0e07aae1c102cce18facdbcbdfecb",
+  "fingerprint": {
+    "code_hash": "8d3e411ce84935d513fef0e0b2a71689b640979c6db5e5af23175d19f1c87091",
+    "files": {
+      "kernel.py": "e046de7f5df0bf8912705fe1778be89b5b9f8cde1b8d390e92a538448ed77bf4",
+      "filters.py": "e133b9deca5b1341ab8ab44d8f584ce14cba14a55481ac30c71e3cee382d5f72",
+      "runtime.py": "e0c6042e37ff9e569f8fdda36c302ef20cb5357b810926c2d4074cfc74b96ef9",
+      "census.py": "11519a611421922f047cb053a35ee4c5a981ef3afbc91fc5e934270cc8af0ae5",
+      "worker.py": "c63ee08af4f26d58d676ca5a303f02991f4121a98aaf15847db6c3347254a864",
+      "host_clock.ps1": "66b4de0bd0a7d94e248cd2297d23ceb2a44b21b4a73167886bfa067b6fba461b",
+      "validate.py": "9ac4aa6b95f143df568ee68479419c280839b54ad595b26d080dff52c7ccdca9",
+      "operations_test.py": "cf77735e90ba6c2a282585c57f6d86ca1204708fe13f43b030a24b46426886fb",
+      "preflight.py": "47d2d35d441d7c9305de66c141d22ec63f622dc35ce48fd630262672bae70de4",
+      "historical_core.py": "d3f0ada29e87cf42a2e827597c062504b9370e535b8ebe15cdd048cf057baac1",
+      "requirements.txt": "80a4b30811fe1bfef38e34fedf5a98f4878ea13c50cafc62aab7384be144c5f1",
+      "roots.tsv": "c525d03be144a7493c3239340c6263dcb8a29b5521e5d3b152ce43afe90cac41",
+      "setup.py": "3fd4d01318d141419b9d35bd8af97e59bfafe50e57a1d90f6129155601f5bf1d",
+      "fixtures/bvls.json": "c8ae069eccfdcf85c15c387671c8b5708100e355ab5288e7f3490b5e9bde1b15",
+      "fixtures/reviewer_widths128.jsonl": "87fe44c075754149ff0e1d9c91ef71cf11048c9c329a61ada666c3be22b2f5b7"
+    }
+  },
+  "math_checks": [
+    {
+      "SAT_DP_vertex_cases": 152,
+      "exhaustive_rank_bijections": 81
+    },
+    {
+      "m7_reviewer_count_matches": 249
+    },
+    {
+      "m7_independent_vertex_totals": 3,
+      "m7_ranked_rows_historical_F_SAT": 24
+    }
+  ],
+  "bvls": {
+    "forbidden_pairs_full": 3960,
+    "prefixes_LD_CAP_pass": 12,
+    "scope": "positive witness controls, not free completion performance",
+    "srg_243_verified_independently": true
+  },
+  "capacity_rejections_independent_SAT_UNSAT": 1,
+  "operations": {
+    "actual_process_tests": [
+      "EOF_and_no_answer_continue_scheduling",
+      "invalid_answer_continues",
+      "positive_extension_exactly_once",
+      "repeated_threshold_new_request",
+      "zero_graceful_checkpoint",
+      "resume_preserves_counts_and_cumulative_cpu",
+      "normal_completion_closes_request",
+      "live_CPU_never_regresses_beyond_tick_tolerance",
+      "open_request_survives_signal_resume",
+      "worker_failure_isolated_and_wait4_accounted",
+      "unclean_session_requires_accounting_reconciliation"
+    ],
+    "scope": "synthetic finite CPU workload; same controller, separate test model",
+    "status": "PASS"
+  },
+  "integration": {
+    "completed_roots": 66,
+    "exact_counts": 5478,
+    "attempts_after_repeat": 66,
+    "all_wait4_receipts_exact": true,
+    "closed_sessions": 2,
+    "reviewer_counts_compared": 747
+  },
+  "historical_core_sha256": "d3f0ada29e87cf42a2e827597c062504b9370e535b8ebe15cdd048cf057baac1",
+  "approved_scope": "P0/P1 historical F census plus LD/CAP development and controlled paired comparisons",
+  "full_census_run_here": false,
+  "full_census_counts_required": 672715,
+  "ryzen_controls_and_calibration": "NOT_YET_RUN",
+  "windows_stopwatch_path": "NOT_EXECUTED_IN_CLOUD; must validate on WSL; otherwise ETA unknown",
+  "crash_recovery": "controlled pause/resume validated; unclosed sessions require accounting reconciliation",
+  "first_workspace_persistence_run": "FAILED consistency check; preserved; cause not conclusively established",
+  "final_isolated_integration": "PASS, all 66 roots survive process restart without any extra attempt",
+  "formal_DP_certificate": false,
+  "additional_campaigns_started": false
+}
