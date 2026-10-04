@@ -1,0 +1,21 @@
+{
+  "candidate_fingerprint_matches": true,
+  "unchanged_files": {
+    "kernel.py": true,
+    "historical_core.py": true,
+    "roots.tsv": true,
+    "fixtures/bvls.json": true,
+    "fixtures/reviewer_widths128.jsonl": true
+  },
+  "audit_before": "ROOT_STATE_INCONSISTENT: RUNNING root without open attempt (torn or edited database). Preserve files; use reconcile-crash, never hand edits.",
+  "reconcile_apply": {
+    "run_id": "aae4f7ad9594461f8e5cf36e76b1fe27",
+    "boot_now": "a8454b37-db75-4fa7-961d-d3185ac05bb8",
+    "sessions": [],
+    "attempts": [],
+    "blocked": []
+  },
+  "root_after": "RUNNING",
+  "audit_after": "ROOT_STATE_INCONSISTENT: RUNNING root without open attempt (torn or edited database). Preserve files; use reconcile-crash, never hand edits.",
+  "test_scope": "synthetic torn-state database; no production run, no mathematical recomputation"
+}
