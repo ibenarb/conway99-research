@@ -1,7 +1,12 @@
 # Global conclusions: lernende Betriebs- und Forschungsregeln
 
-Version 1.0, 28.09.2026. Ziel: Fehlerklassen verhindern, nicht nur einzelne
+Fortgeschrieben bis 04.10.2026 (Grundfassung 28.09.2026). Ziel: Fehlerklassen verhindern, nicht nur einzelne
 Fehlerstellen reparieren. Nutzerpräferenzen stehen in ../EXPERIMENT_RULES.md.
+
+**Aktueller Vorrang:** GC-19 und EXPERIMENT_RULES Version1.1 ersetzen frühere
+Vorgaben, die allein bei ausgeschöpftem Zeitbudget einen automatischen
+Abschluss/Stopp vorsahen. Historische Laufberichte und fixierte Pakete bleiben
+als Belege unverändert.
 
 ## Register
 
@@ -153,3 +158,35 @@ PermissionError bleibt sichtbar; echte Pause/Resume- und Beweisfortsetzung.
 1.0.2 ist eine ausdrückliche Fortsetzung mit unveränderten mathematischen
 Quellen und maximal286CPUh Gesamtrahmen, erst nach explizitem Startargument.
 Belege:docs/memetik/root8105_recovery_20261004. Zielhardwareprüfung ausstehend.
+
+
+## GC-19 — Zeitbudgetende erfordert eine Nutzerentscheidung, 04.10.2026
+
+Explizite Nutzeranweisung: Kein Experiment allein wegen Erreichens eines
+Zeitbudgets abbrechen. Prompt: `time limit reached. ETA HH:MM. Extend [seconds] ?`.
+0 beendet kontrolliert; positive ganze Sekunden verlängern das betreffende
+Budget. Klarstellung12:37:54MESZ: Bis zur Antwort unverändert weiterrechnen, auch bei
+EOF oder ungültiger Eingabe. Keine Pause, Suspendierung oder Drosselung allein
+wegen der offenen Anfrage. Verbrauch und Budgetüberschreitung weiter verbuchen.
+Diese Weiterarbeit ist ausdrücklich autorisiert. Pro erreichtem Budget nur eine
+offene Anfrage; regulärer Aufgabenabschluss erledigt sie. Positive Sekunden
+werden auf das bisherige Budget aufgeschlagen, bereits verbrauchte Zeit bleibt
+angerechnet; nötigenfalls erneut abfragen und weiterrechnen.
+ETA ist verbleibende Walltime; bei unbestimmbarer Restlaufzeit `unknown`.
+Budgetart und kumulative Reservierung offenlegen. Hintergrundläufe benötigen
+einen dauerhaften Anfrage-/Antwortkanal mit einmaliger Verarbeitung.
+
+Diese Vorgabe löst den früheren automatischen Budgetstopp ab. GC-02/05/10/11/15
+bleiben hinsichtlich ehrlicher Abrechnung, Aufgabenabschluss, ETA und
+Zustandserhalt gültig. Ressourcen-/Integritätssicherheit bleibt unabhängig.
+Verbindliche Details: ../EXPERIMENT_RULES.md, Version1.1.
+
+Akzeptanztests für künftige Implementierungen: positive Verlängerung erhält
+Suchzustand;0 sichert und beendet; keine Antwort/EOF lässt die Berechnung weiterlaufen; ungültige Eingaben
+ändern das nominelle Budget nicht; wiederholte und doppelt zugestellte Antworten erhöhen Budgets
+nur einmal; Pause/Neustart erhält vollständige Abrechnung; Hintergrundlauf
+kann über einen getrennten Kanal beantwortet werden.
+
+Status: als Projektanweisung veröffentlicht, noch keine allgemeine technische
+Implementierung. Der am04.10.2026 bereits laufende ROOT8105-Recovery1.0.2 bleibt
+unverändert und besitzt diese interaktive Erweiterungsfunktion noch nicht.
