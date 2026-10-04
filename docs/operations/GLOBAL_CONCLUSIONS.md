@@ -190,3 +190,31 @@ kann über einen getrennten Kanal beantwortet werden.
 Status: als Projektanweisung veröffentlicht, noch keine allgemeine technische
 Implementierung. Der am04.10.2026 bereits laufende ROOT8105-Recovery1.0.2 bleibt
 unverändert und besitzt diese interaktive Erweiterungsfunktion noch nicht.
+
+## GC-20 — Positivkontrollen gelten nur für ihr geprüftes Modell, 04.10.2026
+
+Der H-Faser-Handoff empfahl vollständige H-lineare Zeugen als garantiert
+ergänzbare tiefe Präfixe. ROOT8105 verlangt jedoch schon in Geometry.verify
+Paarbedingungen gebauter Zeilen und im Encoder zusätzliche Sternbedingungen.
+XP=M allein garantiert diese Bedingungen nicht. Ein lineares H-Präfix ist
+daher nur für das lineare Completion-Modell automatisch positiv, nicht für
+den stärkeren Augmentation-Encoder. Auch das Scheitern eines konkreten
+vollständigen Zeugen an Zusatzbedingungen beweist noch kein UNSAT des Präfixes.
+
+Regel: Jede Positivkontrolle benennt die exakten Bedingungen, Labelabbildung
+und eine unabhängig geprüfte erfüllende Belegung. Bei Modellverschärfung die
+Garantie neu prüfen. UNKNOWN, ungültiger Kontrollinput und echter Widerspruch
+sind verschiedene Befunde. Kleine vollständige SRG-Kontrollen ersetzen keine
+Leistungsprognose für99Vertices.
+
+Belege:docs/augmentation/root8105_review_20261004/ERGEBNISSE_UND_ABGLEICH.md,
+Abschnitt7; Vergleich der drei H-Faser-Commits mit ROOT8105 core.py.
+Regression geplant: getrennte L-/F-Kontrollen, erfüllende Belegungen prüfen,
+absichtlich verletzte Paarbedingung erkennen, keine falsche SAT-Garantie.
+Status: Modellunterschied durch Quellen-/Codeprüfung belegt; neue Kontrollen
+noch nicht implementiert oder auf Zielhardware ausgeführt.
+
+GC-18 Zielhardwareergänzung:Recovery1.0.2 schloss mit256Such- und512Proofjobs ab;
+Gesamt276,262573CPUh. Diese Endbelege sind im obigen Reviewverzeichnis erhalten.
+Das bestätigt den konkreten Recoveryabschluss, keine vollständige Profilierung
+der alten Nebenarbeit und keine allgemeine Langzeitgarantie des Monitors.
