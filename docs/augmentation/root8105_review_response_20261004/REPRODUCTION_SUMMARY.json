@@ -1,0 +1,167 @@
+{
+  "status": "SELECTED_REPRODUCTIONS_PASS",
+  "scope": "Own cloud executions, no Ryzen benchmark, no general formal DP correctness certificate",
+  "archive_commit": "efcf4a1f068d86f4216ccbfdf501bd8955972c80",
+  "reviewed_commit": "ad92f0406c9f2e28eef59a326ecfbe76597ebcf0",
+  "python": "/tmp/root8105-recovery-audit/bin/python",
+  "numpy": "2.5.3",
+  "pynauty": "2.8.8.1",
+  "python_sat": "1.8.dev24",
+  "root_audit": {
+    "status": "PASS",
+    "group_order": 7680,
+    "roots": 8105,
+    "distinct_classes": 8105,
+    "stabiliser_or_duplicate_failures": [],
+    "orbit_sum": 56011010,
+    "independent_edge_dp_row_count": 56011010,
+    "seconds": 22.9
+  },
+  "level1_recomputed_cases": 332,
+  "level1_recomputed_root_ids": [
+    1,
+    64,
+    751,
+    3675
+  ],
+  "independent_vertex_dp_cases": 2,
+  "recounted_depth2_sample_target_widths": [
+    22410,
+    22403,
+    22399
+  ],
+  "new_depth3_sat_comparisons": [
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 4,
+      "target": 2,
+      "width": 0,
+      "match": true,
+      "cpu_s": 0.0007730270000010364,
+      "rows": {
+        "0": "0x224920",
+        "5": "0x892041",
+        "6": "0x10a224"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 4,
+      "target": 8,
+      "width": 0,
+      "match": true,
+      "cpu_s": 0.0005211140000014325,
+      "rows": {
+        "0": "0x224920",
+        "5": "0x892041",
+        "6": "0x10a224"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 5,
+      "target": 7,
+      "width": 47,
+      "match": true,
+      "cpu_s": 0.01252967200000299,
+      "rows": {
+        "0": "0x2420704002",
+        "1": "0xc108810201",
+        "9": "0x192040482"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 5,
+      "target": 10,
+      "width": 20,
+      "match": true,
+      "cpu_s": 0.004576911000000905,
+      "rows": {
+        "0": "0x2420704002",
+        "1": "0xc108810201",
+        "9": "0x192040482"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 6,
+      "target": 6,
+      "width": 0,
+      "match": true,
+      "cpu_s": 0.003248729999999256,
+      "rows": {
+        "0": "0x8400a0300508008",
+        "3": "0x4021410c1000401",
+        "10": "0x221008031002048"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 6,
+      "target": 13,
+      "width": 0,
+      "match": true,
+      "cpu_s": 0.0016027889999996603,
+      "rows": {
+        "0": "0x8400a0300508008",
+        "3": "0x4021410c1000401",
+        "10": "0x221008031002048"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 7,
+      "target": 24,
+      "width": 344295,
+      "match": true,
+      "cpu_s": 179.30883331400003,
+      "rows": {
+        "0": "0x580000050a0520020040",
+        "6": "0x6080980818005000001",
+        "17": "0x1802002a2000ac0000001"
+      }
+    },
+    {
+      "test": "new_depth3_exact_vs_sat",
+      "m": 7,
+      "target": 26,
+      "width": 328668,
+      "match": true,
+      "cpu_s": 174.784524445,
+      "rows": {
+        "0": "0x580000050a0520020040",
+        "6": "0x6080980818005000001",
+        "17": "0x1802002a2000ac0000001"
+      }
+    }
+  ],
+  "bvls": {
+    "golay_code_words": 729,
+    "min_distance": 5,
+    "srg_243_22_1_2": true,
+    "pilot_verify_all_220_rows": "PASS",
+    "pilot_verify_complete": "SRG_FOUND_VERIFIED",
+    "positive_prefix_tests": 33,
+    "positive_all_sat": true,
+    "negative_control": {
+      "codegree_wrong": 2,
+      "codegree_required": 1,
+      "verify": "common neighbors",
+      "encode_sat": false
+    },
+    "status": "PASS"
+  },
+  "not_included": [
+    "Full strategic reviewer text",
+    "All original crosscheck logs",
+    "Original complete sample child list"
+  ],
+  "remaining": [
+    "Nonempty m6 depth3 checks and broader m7 coverage",
+    "Certified DP counting chain if used as proof",
+    "Safe resume and exactly-once sample identities",
+    "Production GC-19 controller and Ryzen validation"
+  ],
+  "execution_note": "Audit scripts preserved as executed; their explicit /tmp and workspace paths must be adapted when reproducing elsewhere. Reviewer source unmodified."
+}
