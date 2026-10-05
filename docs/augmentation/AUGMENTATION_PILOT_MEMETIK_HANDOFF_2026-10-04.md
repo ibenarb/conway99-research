@@ -36,9 +36,9 @@ Maschinenlesbare Zusammenfassung:
 H-FIBRE-NEAREST 0.7.0 liefert zusätzlich:
 
 - cand_A: verifizierter anderer H-Zustand bei Distanz 184; zertifizierte Untergrenze 25, also derzeit **25 ≤ d_min ≤ 184**;
-- cand_B jenseits der beiden bekannten 16er-Nachbarn: verifizierter Zustand bei Distanz 28; Untergrenze 25, also **25 ≤ d_min^(>16) ≤ 28**.
+- cand_B jenseits der beiden bekannten 16er-Nachbarn: verifizierter Zustand bei Distanz 28. Da alle H-Zustände 504 Kanten besitzen, ist jede H-Kantendistanz gerade; effektiv gilt daher **26 ≤ d_min^(>16) ≤ 28**.
 
-Für cand_B sind damit nur noch die Shells 25, 26 und 27 offen. Dieser sehr enge Abstand ist für Augmentation besonders interessant: lokale exakte Moves fehlen bis 24, aber ein global anderer Zustand existiert bereits bei 28. Das ist ein guter Test dafür, ob eine konstruktive Präfixsuche solche kurzen, aber nicht durch den alten lokalen Move-Katalog sichtbaren Übergänge erschließen kann.
+Für cand_B ist damit nur noch **Shell 26** offen; 25 und 27 sind strukturell unmöglich. Dieser sehr enge Abstand ist für Augmentation besonders interessant: lokale exakte Moves fehlen bis 24, aber ein global anderer Zustand existiert bereits bei 28. Das ist ein guter Test dafür, ob eine konstruktive Präfixsuche solche kurzen, aber nicht durch den alten lokalen Move-Katalog sichtbaren Übergänge erschließen kann.
 
 ## Empfohlene Nutzung im nächsten Augmentation-Schritt
 
