@@ -264,31 +264,72 @@ Damit erklärt auch eine naheliegende Erweiterung des Omega-Produktkatalogs die 
 
 ---
 
-## 8. Aktueller nächster Schritt: H-FIBRE-NEAREST 0.7.0
+## 8. H-FIBRE-NEAREST 0.7.0 — globaler Distanzlauf abgeschlossen
 
-Statt die exakten Shells 25,26,27,… einzeln zu enumerieren, wurde ein globales 0/1-Optimierungsmodell vorbereitet:
+Statt die exakten Shells 25,26,27,… einzeln zu enumerieren, wurde ein globales 0/1-Optimierungsmodell gerechnet:
 
 - 3,486 binäre undirektionale H-Kantenvariablen;
 - 84 Gradgleichungen;
 - 1,176 Margin-Gleichungen;
 - Ziel: minimale H-Kantendistanz zum Ausgangszustand;
-- Untergrenze 25.
+- Untergrenze 25, gestützt auf die vollständigen Shell-Ausschlüsse bis 24;
+- OR-Tools 9.15.6755;
+- zwei parallele Jobs mit je 4 Workern;
+- nominelles Solverlimit 43,200 s; beobachtete Walltime ca. 47,468 s je Job.
 
-Geplante Jobs:
+### cand_B_next
 
-1. cand_A: nächster anderer exakter H-Zustand ab Distanz 25;
-2. cand_B_next: nächster exakter H-Zustand ab Distanz 25, also bewusst jenseits seiner beiden bekannten 16er-Nachbarn.
+Bekannt waren zwei Nachbarn bei Distanz 16 und keine bei 17–24. Der 0.7.0-Lauf suchte daher nur ab Distanz 25.
 
-Status 2026-10-04:
+Ergebnis:
 
-- Paket gebaut;
-- statischer Selbsttest PASS;
-- Office hatte zunächst keine auffindbare Python-Umgebung mit OR-Tools;
-- isolierte venv-Installation wurde als nächster technischer Schritt vorgesehen;
-- **noch kein 0.7.0-Solverresultat**.
+- verifizierter zulässiger H-Zustand bei Distanz **28**;
+- CP-SAT Best Bound **25**;
+- unabhängige H-Verifikation PASS;
+- Status FEASIBLE, Optimalität nicht bewiesen.
 
-Dieses offene Experiment darf daher nicht als Ergebnis interpretiert werden.
+Damit gilt
 
+\[
+25 \le d_{\min}^{>16}(\mathrm{cand\_B}) \le 28.
+\]
+
+Es bleiben genau die drei offenen Shells 25, 26 und 27.
+
+### cand_A
+
+Incumbents im Lauf:
+
+- 786;
+- 784;
+- 778;
+- 440;
+- 200;
+- schließlich **184**.
+
+Ergebnis:
+
+- verifizierter zulässiger H-Zustand bei Distanz **184**;
+- CP-SAT Best Bound **25**;
+- unabhängige H-Verifikation PASS;
+- Status FEASIBLE, Optimalität nicht bewiesen.
+
+Damit gilt
+
+\[
+25 \le d_{\min}(\mathrm{cand\_A}) \le 184.
+\]
+
+Die starke Verbesserung der konstruktiven Obergrenze ist nützlich, aber die Beweislücke bleibt groß.
+
+### Interpretation
+
+Der Befund bestätigt eine stark diskontinuierliche lokale H-Faser:
+
+- cand_B ist nach seinen beiden 16er-Nachbarn bis 24 leer, besitzt aber spätestens bei 28 wieder einen exakten H-Zustand;
+- cand_A ist bis 24 leer und der beste global gefundene andere Zustand liegt bislang erst bei 184.
+
+Das spricht gegen die Vorstellung einer allmählich dichter werdenden lokalen Nachbarschaft. Für weitere Arbeit sollte cand_B jetzt durch gezielte Shell-Entscheidungen 25/26/27 exakt geschlossen werden; cand_A braucht eher eine separate Feasibility-/Threshold-Strategie als einen weiteren identischen 12h-Minimierungslauf.
 ---
 
 ## 9. Wissenschaftliche Gesamtinterpretation
@@ -300,8 +341,9 @@ Dieses offene Experiment darf daher nicht als Ergebnis interpretiert werden.
 3. Der alte Operator war auf der minimalen Skala vollständig; es fehlte dort keine Move-Familie.
 4. Praktisch relevante H-Zustände können trotzdem extrem dünne exakte Nachbarschaften haben.
 5. cand_A ist vollständig isoliert in allen exakt geprüften Shells 16–24 und hat auch keine der getesteten größeren Produktmoves 4x8/4x10/4x12/6x8.
-6. cand_B besitzt nur zwei minimale 16er-Nachbarn und danach keine exakten Nachbarn bis 24; auch die erweiterten Produktfamilien sind leer.
-7. Die W≈2100-Barriere der früheren \(\lambda\)-Memetik ist daher nicht sinnvoll dadurch zu erklären, dass der Sucher den elementarsten exakten H-Move übersehen hätte.
+6. Für cand_A liefert die globale Suche inzwischen einen verifizierten anderen H-Zustand bei Distanz 184; damit gilt derzeit 25 ≤ d_min ≤ 184.
+7. cand_B besitzt nur zwei minimale 16er-Nachbarn und danach keine exakten Nachbarn bis 24; ein weiterer verifizierter H-Zustand wurde bei Distanz 28 gefunden, also 25 ≤ d_min^(>16) ≤ 28.
+8. Die W≈2100-Barriere der früheren \(\lambda\)-Memetik ist daher nicht sinnvoll dadurch zu erklären, dass der Sucher den elementarsten exakten H-Move übersehen hätte.
 
 ### Was ausdrücklich nicht gesichert ist
 
@@ -371,17 +413,19 @@ Wichtige im Verlauf erzeugte Pakete:
 - H-FIBRE-SMALLMOVE 0.5.2 — `dadef85288f1e4fa0eed11884ea12b00afaedae2093c09dbb7e005a433c32886`
 - H-FIBRE-SMALLMOVE 0.5.3 — `e573b1584fb7fcd05d9618d23ab66260d386b084c924d0189e2f1e06d7bc6a69`
 - H-FIBRE-OMEGA-EXTEND 0.6.0 — `9ee38380cbe7a4719c505e991a9ead25e08d8ef1198bc4be7993ba6d036db550`
-- H-FIBRE-NEAREST 0.7.0 — Paket vorbereitet, ZIP SHA256 `c6e3f2e1a8ec5efe5db7b082a6e3a9b89ff1486a9c35461a465c1fabff604f65`; Solverlauf noch offen.
+- H-FIBRE-NEAREST 0.7.0 — ZIP SHA256 `c6e3f2e1a8ec5efe5db7b082a6e3a9b89ff1486a9c35461a465c1fabff604f65`; Solverlauf abgeschlossen: cand_A 25≤d≤184, cand_B_next 25≤d≤28, beide FEASIBLE und unabhängig H-verifiziert.
 
 ---
 
 ## 12. Empfohlener nächster gemeinsamer Entscheidungspunkt
 
-Vor einer weiteren großen memetischen Kampagne sollte H-FIBRE-NEAREST 0.7.0 abgeschlossen werden.
+H-FIBRE-NEAREST 0.7.0 ist abgeschlossen. Der nächste kleine, hochinformative Schritt ist die exakte Entscheidung der drei offenen cand_B-Shells 25, 26 und 27; Distanz 28 ist bereits durch einen verifizierten Zustand belegt.
 
-Parallel kann der Augmentation-Zweig unmittelbar die planted-control-Idee aus Abschnitt 10 aufnehmen. Diese beiden Linien beantworten komplementäre Fragen:
+Für cand_A sollte statt eines identischen weiteren globalen Minimierungslaufs eine Feasibility-/Threshold-Kampagne mit harten Obergrenzen unter 184 verwendet werden, um entweder neue Incumbents zu finden oder die Untergrenze anzuheben.
 
-- **Nearest-H:** Wie weit ist der nächste exakte H-Zustand tatsächlich entfernt?
+Parallel kann der Augmentation-Zweig unmittelbar die planted-control-Idee aus Abschnitt 10 aufnehmen:
+
+- **Nearest-H:** cand_B kann voraussichtlich kurzfristig exakt geschlossen werden; cand_A bleibt ein tiefer lokaler Stressfall.
 - **Augmentation planted controls:** Kann die konstruktive Suche bekannte completable Präfixe zuverlässig tief weiterführen?
 
-Erst danach sollte entschieden werden, ob der nächste große Rechenblock in defektvermittelte Memetik, globale H-Rekonstruktion oder eine verbesserte Canonical-Augmentation fließt.
+Diese Resultate sollten vor dem nächsten großen Rechenblock gemeinsam bewertet werden.
