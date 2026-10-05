@@ -36,9 +36,25 @@
       }
     },
     "nearest_H_0_7_0": {
-      "status": "PENDING_OR_TO_RUN",
+      "status": "FEASIBLE_BOUNDS",
+      "ortools_version": "9.15.6755",
       "minimum_distance_constraint": 25,
-      "ortools_initially_missing_on_office": true
+      "cand_A": {
+        "incumbent_distance": 184,
+        "certified_lower_bound_edges": 25,
+        "gap_edges": 159,
+        "optimality_proved": false,
+        "independent_solution_verification": "PASS",
+        "wall_seconds": 47468.42410970386
+      },
+      "cand_B_next": {
+        "incumbent_distance": 28,
+        "certified_lower_bound_edges": 25,
+        "gap_edges": 3,
+        "optimality_proved": false,
+        "independent_solution_verification": "PASS",
+        "wall_seconds": 47468.40732821403
+      }
     }
   },
   "augmentation_pilot_context": {
@@ -67,5 +83,11 @@
     "Do not interpret Augmentation Pilot depth 16 as a structural H barrier.",
     "Calibrate planted-prefix continuation before another large root-search campaign.",
     "Consider global reconstruction or temporary H-defect/repair mechanisms rather than only small exact-H neighbourhood moves."
+  ],
+  "date_updated": "2026-10-05",
+  "recommended_next_steps": [
+    "Resolve cand_B exact shells 25, 26, and 27; distance 28 is already feasible.",
+    "For cand_A use bounded feasibility/threshold searches below 184 rather than repeating the same global minimization unchanged.",
+    "Use cand_A/cand_B/root witnesses as planted augmentation controls."
   ]
 }
