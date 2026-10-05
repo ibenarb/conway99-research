@@ -1,0 +1,735 @@
+{
+  "status": "CANDIDATE_1_0_1_RC2_CLOUD_VALIDATED_READY_FOR_TARGET_ACCEPTANCE_NOT_RELEASED",
+  "timestamp_berlin": "2026-10-05T00:28:10.384118+02:00",
+  "base_review_archive": "fd0e6a72e122be0a047f792dd6d9b0c4be49132b",
+  "base_plan": "f2fb0d98197d8d426b779819ae3158b3210df209",
+  "fingerprint": {
+    "code_hash": "d187340ca9d606ae74ed3bc87d363b62e1b3a62dddd494ab673ac4a709401dbe",
+    "files": {
+      "kernel.py": "e046de7f5df0bf8912705fe1778be89b5b9f8cde1b8d390e92a538448ed77bf4",
+      "filters.py": "8921239fe6b84748e22a6ccbed5005c45d301f25daefcf7caa49d0d42644f482",
+      "runtime.py": "503b8d32feae432a997b972124a1c3e4013bfd67916718c670327c457078f36b",
+      "census.py": "9951f05218b158ccceedb7201194405a91d420c9f950be3527469fd34c9d970e",
+      "worker.py": "b96a386750f234f390f82259daa030bf9db0e4b9e36fed6a04211180ba2b61ab",
+      "host_clock.ps1": "66b4de0bd0a7d94e248cd2297d23ceb2a44b21b4a73167886bfa067b6fba461b",
+      "validate.py": "fbaed2b57aebef4d6abe2828a70fd6d979f0e5aa22dc03c4dc740d06ff2ead2d",
+      "operations_test.py": "65c63dd64d7b7dfafe88307057f8f4e88764a7bacefb41471d4d803030b71407",
+      "recovery_test.py": "dd7d5b504556fd1591d75f9a7b16efb446df9e53319040d2c3f12d60b713f6bb",
+      "preflight.py": "ead220b2c0f4d9a57e4d98701ed2fa4566ff8252ad795be6863ff269b5807827",
+      "historical_core.py": "d3f0ada29e87cf42a2e827597c062504b9370e535b8ebe15cdd048cf057baac1",
+      "requirements.txt": "80a4b30811fe1bfef38e34fedf5a98f4878ea13c50cafc62aab7384be144c5f1",
+      "roots.tsv": "c525d03be144a7493c3239340c6263dcb8a29b5521e5d3b152ce43afe90cac41",
+      "setup.py": "3fd4d01318d141419b9d35bd8af97e59bfafe50e57a1d90f6129155601f5bf1d",
+      "fixtures/bvls.json": "c8ae069eccfdcf85c15c387671c8b5708100e355ab5288e7f3490b5e9bde1b15",
+      "fixtures/reviewer_widths128.jsonl": "87fe44c075754149ff0e1d9c91ef71cf11048c9c329a61ada666c3be22b2f5b7"
+    }
+  },
+  "unchanged_math_inputs_vs_1_0_0": {
+    "kernel.py": true,
+    "historical_core.py": true,
+    "roots.tsv": true,
+    "fixtures/bvls.json": true,
+    "fixtures/reviewer_widths128.jsonl": true
+  },
+  "own_math": {
+    "bvls": {
+      "forbidden_pairs_full": 3960,
+      "prefixes_LD_CAP_pass": 12,
+      "scope": "positive witness controls, not free completion performance",
+      "srg_243_verified_independently": true
+    },
+    "capacity_rejections_independent_SAT_UNSAT": 1,
+    "checks": [
+      {
+        "SAT_DP_vertex_cases": 152,
+        "exhaustive_rank_bijections": 81
+      },
+      {
+        "m7_reviewer_count_matches": 249
+      },
+      {
+        "m7_independent_vertex_totals": 3,
+        "m7_ranked_rows_historical_F_SAT": 24
+      }
+    ],
+    "cpu_s": 23.35791895,
+    "filter_model_ids_distinct": [
+      "F+CAP-v1-per-state",
+      "F+LD+CAP-v1-per-state",
+      "F+LD-v1-per-state",
+      "F-verify-only-per-state"
+    ],
+    "filter_predicate_negatives": 2,
+    "paired_filter_cases": [
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 0,
+        "root": 1,
+        "row": "0xe04001818000201800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 2280,
+        "root": 1,
+        "row": "0xa20201088800801800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 17840,
+        "root": 1,
+        "row": "0x300013022210002800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 75856,
+        "root": 1,
+        "row": "0x90000488880c011000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 83871,
+        "root": 1,
+        "row": "0x900040c40054041000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 86682,
+        "root": 1,
+        "row": "0x800303060008281000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 107966,
+        "root": 1,
+        "row": "0x404044100c10812000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000050a0520020040",
+        "rank": 173364,
+        "root": 1,
+        "row": "0x10d428180c0000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 0,
+        "root": 64,
+        "row": "0x6a400040c000201800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 13106,
+        "root": 64,
+        "row": "0xa04201282000202800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 28732,
+        "root": 64,
+        "row": "0x80904980400220800001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 74372,
+        "root": 64,
+        "row": "0x90000508840c011000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 102384,
+        "root": 64,
+        "row": "0x484002809002501000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 108996,
+        "root": 64,
+        "row": "0xa0400284418101000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 165337,
+        "root": 64,
+        "row": "0x80102901408430000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x580000400e1084400040",
+        "rank": 204767,
+        "root": 64,
+        "row": "0x21833018140000001",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 0,
+        "root": 8098,
+        "row": "0xcc0200a00040600001002",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 3204627,
+        "root": 8098,
+        "row": "0x24420400a020802001008",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 6322587,
+        "root": 8098,
+        "row": "0x600020541404000801020",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 7263448,
+        "root": 8098,
+        "row": "0x480040023004414080020",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 7729102,
+        "root": 8098,
+        "row": "0x680400226000200801080",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 7903428,
+        "root": 8098,
+        "row": "0xa00041062080010802080",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "model": "F+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 13785285,
+        "root": 8098,
+        "row": "0x30020006082460100400",
+        "target": 6
+      },
+      {
+        "CAP": {
+          "equation": "border:0",
+          "fixed_ones": 2,
+          "model": "F+CAP-v1-per-state",
+          "pass": false,
+          "possible_ones": 11,
+          "reason": "capacity",
+          "row": 11,
+          "target": 1
+        },
+        "LD": {
+          "model": "F+LD-v1-per-state",
+          "pass": true,
+          "reason": null
+        },
+        "LD_CAP": {
+          "equation": "border:0",
+          "fixed_ones": 2,
+          "model": "F+LD+CAP-v1-per-state",
+          "pass": false,
+          "possible_ones": 11,
+          "reason": "capacity",
+          "row": 11,
+          "target": 1
+        },
+        "parent": "0x41004208580c0010800",
+        "rank": 14526895,
+        "root": 8098,
+        "row": "0x60c1405030400800",
+        "target": 6
+      }
+    ],
+    "scope": "local validation, not Ryzen calibration",
+    "status": "PASS"
+  },
+  "own_operations": {
+    "actual_process_tests": [
+      "EOF_and_no_answer_continue_scheduling",
+      "invalid_answer_continues",
+      "positive_extension_exactly_once",
+      "repeated_threshold_new_request",
+      "zero_graceful_checkpoint",
+      "resume_preserves_counts_and_cumulative_cpu",
+      "normal_completion_closes_request",
+      "live_CPU_never_regresses_beyond_tick_tolerance",
+      "open_request_survives_signal_resume",
+      "open_request_reannounced_after_restart",
+      "worker_failure_isolated_and_wait4_accounted",
+      "unclean_session_requires_accounting_reconciliation",
+      "torn_running_root_rejected",
+      "orphaned_worker_stops_even_during_startup",
+      "crash_reconciled_lower_bound_then_resumed",
+      "externally_stopped_worker_reports_phase_incomplete",
+      "host_clock_ok_counting_continues",
+      "host_clock_missing_counting_continues",
+      "host_clock_corrupt_counting_continues",
+      "host_clock_ignore_stop_counting_continues"
+    ],
+    "scope": "synthetic finite CPU workload; same controller, separate test model",
+    "status": "PASS"
+  },
+  "own_recovery": {
+    "artifacts": "/tmp/root8105-recovery-tests-a90wnhvj",
+    "scope": "synthetic corrupt copies; no mathematical census",
+    "status": "PASS",
+    "tests": [
+      "orphan_dry_run_and_apply_rejected_without_account_changes",
+      "manifest_dry_run_and_apply_rejected_without_account_changes",
+      "fingerprint_dry_run_and_apply_rejected_without_account_changes",
+      "root-identity_dry_run_and_apply_rejected_without_account_changes",
+      "negative-cpu_dry_run_and_apply_rejected_without_account_changes",
+      "five_invalid_worker_cpu_values_rejected",
+      "clean_recovery_noop_and_lock_release"
+    ]
+  },
+  "own_integration": {
+    "calibration": {
+      "aggregate_cpu_s": 854.1260612319998,
+      "attempts": 77,
+      "auxiliary_cpu_s": 132.77684401000002,
+      "budget_cpu_s": 172800,
+      "cpu_is_lower_bound": false,
+      "cpu_scope": "Linux workers wait4 + measured supervisor lifetime + non-worker child CPU + Windows clock process CPU + recorded preflight; task times are descriptive, never added twice",
+      "latest_state": "CALIBRATION_COMPLETE",
+      "model": "F-historical-core-1.0.1-depth1",
+      "open_attempts": 0,
+      "open_sessions": 0,
+      "roots": {
+        "DONE": 66,
+        "PENDING": 8039
+      },
+      "run_id": "6b45b3cf321948f08dedebb8ed7c9747",
+      "supervisor_cpu_s": 5.012873221999844,
+      "worker_cpu_s": 716.3363439999999
+    },
+    "crash": {
+      "aggregate_cpu_s": 10.028014966,
+      "attempts": 2,
+      "auxiliary_cpu_s": 1.796578607,
+      "budget_cpu_s": 3600,
+      "cpu_is_lower_bound": true,
+      "cpu_scope": "Linux workers wait4 + measured supervisor lifetime + non-worker child CPU + Windows clock process CPU + recorded preflight; task times are descriptive, never added twice",
+      "latest_state": "COMPLETE",
+      "model": "F-historical-core-1.0.1-depth1",
+      "open_attempts": 0,
+      "open_sessions": 0,
+      "roots": {
+        "DONE": 1
+      },
+      "run_id": "ba9c517e5f9e43d685dfdd8e64b56d92",
+      "supervisor_cpu_s": 2.319170802,
+      "worker_cpu_s": 5.912265557
+    },
+    "driver_cpu_s": 47.246769209,
+    "exact_counts": 5478,
+    "fixture_regression_matches": 747,
+    "independent_comparisons": [
+      {
+        "independent_vertex_matches": 83,
+        "root": 702,
+        "type": 0
+      },
+      {
+        "independent_vertex_matches": 83,
+        "root": 58,
+        "type": 1
+      },
+      {
+        "independent_vertex_matches": 83,
+        "root": 2,
+        "type": 2
+      },
+      {
+        "independent_vertex_matches": 83,
+        "root": 672,
+        "type": 1
+      }
+    ],
+    "observed_active_workers": 11,
+    "package": "/tmp/root8105-release-20261005/experiments/memetik/root8105_census_1_0_1rc2",
+    "preserved_partial_counts": 390,
+    "scope": "Linux cloud; real kernel; NOT Windows/WSL or Ryzen",
+    "status": "PASS"
+  },
+  "preflight_scope": "unmodified code and resource gates; Linux overlay, NOT_WSL; no stand-in preflight",
+  "test_harness_failures": [
+    "First crash test: root 4696 finished before its first 5-second checkpoint; expected milestone was not reached.",
+    "Second crash test: root 672 also finished before 5 seconds at low load; expected milestone was not reached.",
+    "Final crash test: root 672 killed after >=1.5 observed worker CPU seconds; worker wrote STOPPED_PARTIAL with 37 targets; recovery/resume passed."
+  ],
+  "reviewer_only_evidence": {
+    "independent_vertex_comparisons": 2490,
+    "mismatches_reported": 0,
+    "not_rerun_here": true
+  },
+  "not_done": [
+    "Windows/WSL execution",
+    "Ryzen/C2 concurrent load acceptance",
+    "actual PowerShell de-DE and teardown",
+    "whole WSL/host failure",
+    "full 8105-root census",
+    "formal DP certificate"
+  ],
+  "no_production_run_started": true
+}
