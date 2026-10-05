@@ -45,7 +45,8 @@
         "gap_edges": 159,
         "optimality_proved": false,
         "independent_solution_verification": "PASS",
-        "wall_seconds": 47468.42410970386
+        "wall_seconds": 47468.42410970386,
+        "effective_lower_bound_edges": 26
       },
       "cand_B_next": {
         "incumbent_distance": 28,
@@ -53,8 +54,14 @@
         "gap_edges": 3,
         "optimality_proved": false,
         "independent_solution_verification": "PASS",
-        "wall_seconds": 47468.40732821403
+        "wall_seconds": 47468.40732821403,
+        "effective_lower_bound_edges": 26
       }
+    },
+    "distance_parity": {
+      "statement": "Any two H-linear states are 12-regular on 84 vertices and therefore have 504 edges; deleted and added edges are equal, so undirected H-edge distance is always even.",
+      "consequence_cand_A": "effective lower bound 26",
+      "consequence_cand_B_next": "only shell 26 remains open before feasible shell 28"
     }
   },
   "augmentation_pilot_context": {
@@ -86,8 +93,8 @@
   ],
   "date_updated": "2026-10-05",
   "recommended_next_steps": [
-    "Resolve cand_B exact shells 25, 26, and 27; distance 28 is already feasible.",
-    "For cand_A use bounded feasibility/threshold searches below 184 rather than repeating the same global minimization unchanged.",
+    "Resolve cand_B exact shell 26; distance 28 is feasible and odd distances 25/27 are structurally impossible.",
+    "For cand_A use bounded feasibility/threshold searches below 184, respecting even distance parity.",
     "Use cand_A/cand_B/root witnesses as planted augmentation controls."
   ]
 }
