@@ -288,13 +288,15 @@ Ergebnis:
 - unabhängige H-Verifikation PASS;
 - Status FEASIBLE, Optimalität nicht bewiesen.
 
-Damit gilt
+Da beide H-Zustände 12-regulär auf 84 Vertices sind, besitzen sie jeweils genau 504 H-Kanten. In jeder symmetrischen Differenz gilt daher Anzahl Löschungen = Anzahl Hinzufügungen; die H-Kantendistanz ist immer gerade.
+
+Damit gilt effektiv
 
 \[
-25 \le d_{\min}^{>16}(\mathrm{cand\_B}) \le 28.
+26 \le d_{\min}^{>16}(\mathrm{cand\_B}) \le 28.
 \]
 
-Es bleiben genau die drei offenen Shells 25, 26 und 27.
+Es bleibt genau **eine** offene Shell: Distanz 26. Distanzen 25 und 27 sind strukturell unmöglich.
 
 ### cand_A
 
@@ -314,10 +316,10 @@ Ergebnis:
 - unabhängige H-Verifikation PASS;
 - Status FEASIBLE, Optimalität nicht bewiesen.
 
-Damit gilt
+Unter derselben Geradheitsbedingung gilt effektiv
 
 \[
-25 \le d_{\min}(\mathrm{cand\_A}) \le 184.
+26 \le d_{\min}(\mathrm{cand\_A}) \le 184.
 \]
 
 Die starke Verbesserung der konstruktiven Obergrenze ist nützlich, aber die Beweislücke bleibt groß.
@@ -329,7 +331,7 @@ Der Befund bestätigt eine stark diskontinuierliche lokale H-Faser:
 - cand_B ist nach seinen beiden 16er-Nachbarn bis 24 leer, besitzt aber spätestens bei 28 wieder einen exakten H-Zustand;
 - cand_A ist bis 24 leer und der beste global gefundene andere Zustand liegt bislang erst bei 184.
 
-Das spricht gegen die Vorstellung einer allmählich dichter werdenden lokalen Nachbarschaft. Für weitere Arbeit sollte cand_B jetzt durch gezielte Shell-Entscheidungen 25/26/27 exakt geschlossen werden; cand_A braucht eher eine separate Feasibility-/Threshold-Strategie als einen weiteren identischen 12h-Minimierungslauf.
+Das spricht gegen die Vorstellung einer allmählich dichter werdenden lokalen Nachbarschaft. Für weitere Arbeit genügt bei cand_B jetzt **eine einzige gezielte Shell-Entscheidung bei Distanz 26**; Distanz 28 ist bereits realisiert. cand_A braucht eher eine separate Feasibility-/Threshold-Strategie als einen weiteren identischen 12h-Minimierungslauf.
 ---
 
 ## 9. Wissenschaftliche Gesamtinterpretation
@@ -419,7 +421,7 @@ Wichtige im Verlauf erzeugte Pakete:
 
 ## 12. Empfohlener nächster gemeinsamer Entscheidungspunkt
 
-H-FIBRE-NEAREST 0.7.0 ist abgeschlossen. Der nächste kleine, hochinformative Schritt ist die exakte Entscheidung der drei offenen cand_B-Shells 25, 26 und 27; Distanz 28 ist bereits durch einen verifizierten Zustand belegt.
+H-FIBRE-NEAREST 0.7.0 ist abgeschlossen. Der nächste kleine, hochinformative Schritt ist die exakte Entscheidung der einzigen noch offenen cand_B-Shell **26**; 25 und 27 sind wegen gleicher Kantenzahl unmöglich, Distanz 28 ist bereits durch einen verifizierten Zustand belegt.
 
 Für cand_A sollte statt eines identischen weiteren globalen Minimierungslaufs eine Feasibility-/Threshold-Kampagne mit harten Obergrenzen unter 184 verwendet werden, um entweder neue Incumbents zu finden oder die Untergrenze anzuheben.
 
