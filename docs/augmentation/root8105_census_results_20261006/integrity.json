@@ -1,0 +1,190 @@
+{
+  "status": "PASS",
+  "archive_sha256": "84751007d21c17f234cbc11a19b32a85c50a2ae29791ea959111a6a54ba5908d",
+  "summary": {
+    "aggregate_cpu_s": 435631.8486660008,
+    "auxiliary_cpu_s": 138.1883487,
+    "budget_cpu_s": 172800.0,
+    "completed_roots": 8105,
+    "cpu_is_lower_bound": false,
+    "cpu_scope": "Linux workers wait4 + measured supervisor lifetime + non-worker child CPU + Windows clock process CPU + recorded preflight; task times are descriptive, never added twice",
+    "exact_counts": 672715,
+    "full_census": true,
+    "model": "F-historical-core-1.0.1-depth1",
+    "not_a_full_tree_size": true,
+    "open_attempts": 0,
+    "roots": {
+      "DONE": 8105
+    },
+    "run_id": "53167b04133d421fa22e8191e218d3bf",
+    "sum_min_width_completed_roots": 4846403679,
+    "supervisor_cpu_s": 4497.326171300853,
+    "worker_cpu_s": 430996.334146
+  },
+  "sessions": [
+    {
+      "id": "f533bc1484ea4cb5ab37e5edb6bc3641",
+      "started": 1791180155.5260613,
+      "ended": 1791180501.304759,
+      "cpu": 31.184816499998902,
+      "state": "CALIBRATION_COMPLETE",
+      "boot": "1bc8978d-f3ec-4506-b554-acb18e74a0c9",
+      "pid": 1424186,
+      "identity": "32658314"
+    },
+    {
+      "id": "8944c6d606ff48faaf9bde6a0028f9e9",
+      "started": 1791203640.9211833,
+      "ended": 1791203641.4583368,
+      "cpu": 2.3259008,
+      "state": "CALIBRATION_COMPLETE",
+      "boot": "1bc8978d-f3ec-4506-b554-acb18e74a0c9",
+      "pid": 1425635,
+      "identity": "34897074"
+    },
+    {
+      "id": "2650612bf1444576a8f7cfb1f7cdcc74",
+      "started": 1791203877.8372576,
+      "ended": 1791244108.330309,
+      "cpu": 4463.8154540008545,
+      "state": "COMPLETE",
+      "boot": "1bc8978d-f3ec-4506-b554-acb18e74a0c9",
+      "pid": 1425687,
+      "identity": "34919313"
+    }
+  ],
+  "clock_meta": {
+    "helper_cpu_f533bc1484ea4cb5ab37e5edb6bc3641": {
+      "Linux_children_excluding_workers": 0.005792999998902815,
+      "Windows_clock_process": 15.953125
+    },
+    "host_clock_f533bc1484ea4cb5ab37e5edb6bc3641": {
+      "cpu_s": 15.953125,
+      "pid": 11192,
+      "source": "Windows Stopwatch",
+      "stopwatch_s": 345.4148019,
+      "utc_s": 1791180501.435
+    },
+    "helper_cpu_8944c6d606ff48faaf9bde6a0028f9e9": {
+      "Linux_children_excluding_workers": 0.004900999999999999,
+      "Windows_clock_process": 0.265625
+    },
+    "host_clock_8944c6d606ff48faaf9bde6a0028f9e9": {
+      "cpu_s": 0.265625,
+      "pid": 33236,
+      "source": "Windows Stopwatch",
+      "stopwatch_s": 0.0875116,
+      "utc_s": 1791203640.637
+    },
+    "helper_cpu_2650612bf1444576a8f7cfb1f7cdcc74": {
+      "Linux_children_excluding_workers": 0.013505000853911042,
+      "Windows_clock_process": 1272.5625
+    },
+    "host_clock_2650612bf1444576a8f7cfb1f7cdcc74": {
+      "cpu_s": 1272.5625,
+      "pid": 38284,
+      "source": "Windows Stopwatch",
+      "stopwatch_s": 40228.757254799995,
+      "utc_s": 1791244105.929
+    }
+  },
+  "requests": [
+    {
+      "id": "6601bbe6da954efc965dd7cad4f6e12d",
+      "scope": "entire P0/P1 census run",
+      "budget": 172800.0,
+      "used": 172812.6446583001,
+      "eta": "unknown",
+      "created": 1791219622.8928761,
+      "state": "CLOSED_COMPLETE",
+      "seconds": null,
+      "applied": null
+    }
+  ],
+  "request_file": {
+    "applied": null,
+    "budget": 172800.0,
+    "created": 1791219622.8928761,
+    "eta": "unknown",
+    "id": "6601bbe6da954efc965dd7cad4f6e12d",
+    "run_id": "53167b04133d421fa22e8191e218d3bf",
+    "scope": "entire P0/P1 census run",
+    "seconds": null,
+    "state": "OPEN",
+    "unit": "aggregate CPU seconds",
+    "used": 172812.6446583001
+  },
+  "inputs": [],
+  "stats": {
+    "0": {
+      "root_minima": {
+        "n": 7418,
+        "min": 515304,
+        "p25": 606072,
+        "median": 648108,
+        "p75": 668489,
+        "max": 689767,
+        "sum": 4706649635
+      },
+      "all_widths": {
+        "n": 615694,
+        "min": 515304,
+        "p25": 12576378,
+        "median": 12951101,
+        "p75": 15075860,
+        "max": 16314574,
+        "sum": 7627984103158
+      }
+    },
+    "1": {
+      "root_minima": {
+        "n": 630,
+        "min": 199108,
+        "p25": 205128,
+        "median": 206129,
+        "p75": 207057,
+        "max": 212670,
+        "sum": 129792039
+      },
+      "all_widths": {
+        "n": 52290,
+        "min": 199108,
+        "p25": 12493028,
+        "median": 12924685,
+        "p75": 15221226,
+        "max": 16344022,
+        "sum": 651393137797
+      }
+    },
+    "2": {
+      "root_minima": {
+        "n": 57,
+        "min": 172657,
+        "p25": 173387,
+        "median": 174549,
+        "p75": 175495,
+        "max": 179820,
+        "sum": 9962005
+      },
+      "all_widths": {
+        "n": 4731,
+        "min": 172657,
+        "p25": 12375186,
+        "median": 12862704,
+        "p75": 15447234,
+        "max": 16351213,
+        "sum": 59391458827
+      }
+    }
+  },
+  "all_root_minima": {
+    "n": 8105,
+    "min": 172657,
+    "p25": 601396,
+    "median": 641026,
+    "p75": 667714,
+    "max": 689767,
+    "sum": 4846403679
+  },
+  "audit_cpu_s": 11.142294125
+}
