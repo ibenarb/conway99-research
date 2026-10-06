@@ -257,25 +257,3 @@ Alle vier Uhrenszenarien verwenden den isolierten PATH; ein Startmarker der
 zusätzlichen Datei muss fehlen. Regulärer Hostuhrpfad und mathematischer Kern
 bleiben unverändert. Zielhardware-Preflight anschließend erneut ausführen.
 Belege: docs/augmentation/root8105_census_rc3_20261005.
-
-## GC-22 — Abschlussbeleg und Live-Datenbank getrennt prüfen, 06.10.2026
-
-ROOT8105 Matching-Kalibrierung: terminaler Export96 Ergebnisse, später persistierte
-SQLite-Datei95 Ergebnisse und ein offener Versuch; zwei Workerdateien ebenfalls
-älter als ihre bereits übernommenen Resultate. Ursache ungeklärt, Cloud-
-Synchronisation/Snapshot nur Hypothese.95 digestgesicherte Controllerergebnisse
-plus letzte vollständige Workerdatei reproduzieren die terminale Auswertung ohne
-neue Suchrechnung. Alte Datenbank unverändert, keine stille Kontenreparatur.
-
-Regel: Ein Abschlussstatus allein garantiert keinen konsistent persistierten
-Wiederaufnahmestand. Vollständige Identitäten, Ergebnisse und Endkonten zusätzlich
-als einen atomaren, prüfsummengesicherten Abschlussbeleg exportieren. Live-SQLite
-bei externen Statusabfragen nur lesend öffnen; bei Abweichungen Rohstände erhalten,
-Ergebnisrettung von Ledgerreparatur unterscheiden, fehlende Einzelbelege offenlegen.
-
-Regression: versiegeltes Resultat bleibt bei nachträglich veraltetem Livebestand
-prüfbar; Manipulation einer Zahl wird erkannt. Umgesetzt in
-`experiments/memetik/root8105_review_followup_1_0_1/seal.py`.
-Belege: `docs/augmentation/root8105_review_followup_20261006/ABSCHLUSS_ABWEICHUNG.md`.
-Status: lokale Regression bestanden; Ursache des Cloudvorfalls und echte
-WSL-Abschlussprüfung weiterhin offen. Keine Wiederholung abgeschlossener Mathematik.
