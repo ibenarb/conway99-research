@@ -1,0 +1,95 @@
+{
+  "attempts": [
+    {
+      "SAT": true,
+      "required_common_neighbor": 32,
+      "target": 29
+    }
+  ],
+  "cpu_s": 0.6418881599999999,
+  "max_rss_bytes": 45592576,
+  "process_lifetime_cpu_s": 1.15622374,
+  "scope": "post-pilot diagnostic, not added to the fixed sample or its rejection fractions",
+  "status": "VALID_F_LD_COUNTEREXAMPLE_FOUND",
+  "witness": {
+    "common_neighbor_label": [
+      2,
+      13
+    ],
+    "independent": {
+      "certified": false,
+      "clauses": 48,
+      "encoding_cpu_s": 0.00025838199999994593,
+      "model": "independent-local-necessary-CNF-v1",
+      "solve_cpu_s": 5.2407999999948274e-05,
+      "solver_stats": {
+        "conflicts": 0,
+        "decisions": 0,
+        "propagations": 19,
+        "restarts": 0
+      },
+      "status": "UNSAT_UNCERTIFIED",
+      "variables": 53
+    },
+    "parent": "0x580000050a0520020040",
+    "required_common_neighbor": 32,
+    "root": 1,
+    "row": "0xa00040600442100080011",
+    "target": 29,
+    "target_label": [
+      2,
+      10
+    ],
+    "type": 2,
+    "variants": {
+      "F": {
+        "model": "F-verify-only-per-state",
+        "pass": true,
+        "reason": null
+      },
+      "F_CAP": {
+        "equation": "pair:29",
+        "fixed_ones": 1,
+        "model": "F+CAP-v1-per-state",
+        "pass": false,
+        "possible_ones": 11,
+        "reason": "capacity",
+        "row": 32,
+        "target": 0
+      },
+      "F_LD": {
+        "model": "F+LD-v1-per-state",
+        "pair": [
+          29,
+          32
+        ],
+        "pass": false,
+        "reason": "label_disjoint"
+      },
+      "F_LD_CAP": {
+        "model": "F+LD+CAP-v1-per-state",
+        "pair": [
+          29,
+          32
+        ],
+        "pass": false,
+        "reason": "label_disjoint"
+      }
+    },
+    "independent_CAP": {
+      "status": "UNSAT_UNCERTIFIED",
+      "encoding_cpu_s": 0.006769643999999998,
+      "solve_cpu_s": 0.0030632160000000005,
+      "variables": 1981,
+      "clauses": 9705,
+      "solver_stats": {
+        "restarts": 0,
+        "conflicts": 0,
+        "decisions": 0,
+        "propagations": 342
+      },
+      "certified": false,
+      "model": "independent-local-necessary-CNF-v1"
+    }
+  }
+}

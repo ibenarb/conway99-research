@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "scope": "read-only receipt and fixed-selection audit, not a repeated calculation",
+  "code_hash": "8f1c9df83acf90c34577b78ef837f94026e1fd5f5cb1ae6a61ce0f9bf6ad5561",
+  "states": 4608,
+  "sample_jobs": 24,
+  "control_jobs": 1,
+  "independent_rejection_controls": "NOT_APPLICABLE_NO_REJECTIONS_IN_FIXED_SAMPLE",
+  "calibration_receipts_preserved": 3,
+  "variants": {
+    "F": {
+      "reject": 0,
+      "cpu_s": 0.18221901499999932
+    },
+    "F_LD": {
+      "reject": 0,
+      "cpu_s": 0.29518972399998605
+    },
+    "F_CAP": {
+      "reject": 0,
+      "cpu_s": 32.20822620499999
+    },
+    "F_LD_CAP": {
+      "reject": 0,
+      "cpu_s": 33.150839574999964
+    }
+  },
+  "selected_target_relation_counts": {
+    "(1, 1)": 24,
+    "(0, 0)": 48
+  },
+  "all_target_relation_counts_on_selected_roots": {
+    "(0, 1)": 480,
+    "(1, 1)": 48,
+    "(0, 0)": 1224,
+    "(1, 0)": 240
+  },
+  "relation_key": "(built-row adjacency e, label intersection cardinality)",
+  "session_wall_utc_seconds": 35.241626262664795,
+  "sessions": [
+    {
+      "id": "c7b2030865da42c4bc085adffaa2b92d",
+      "started": 1791268126.544916,
+      "ended": 1791268130.5723262,
+      "cpu": 1.1280543700000003,
+      "state": "CALIBRATION_COMPLETE"
+    },
+    {
+      "id": "eb1b65f255294e61bc96ccbb2e60dc2a",
+      "started": 1791268152.221434,
+      "ended": 1791268183.43565,
+      "cpu": 1.3625553210000039,
+      "state": "COMPLETE"
+    }
+  ],
+  "totals": {
+    "max_worker_peak_rss_bytes": 54575104,
+    "sampler_build_cpu_s": 8.540871330999998,
+    "samplers": 72,
+    "states": 4608,
+    "unrank_cpu_s": 0.5002450280000046
+  },
+  "accounts": {
+    "aggregate_cpu_s": 208.75378263200002,
+    "auxiliary_cpu_s": 129.221582941,
+    "budget_cpu_s": 14400,
+    "control_jobs_total": 1,
+    "cpu_is_lower_bound": false,
+    "cpu_scope": "Linux workers wait4 + measured supervisor lifetime + non-worker child CPU + Windows clock process CPU + recorded preflight; task times are descriptive, never added twice",
+    "model": "ROOT8105-paired-filter-pilot-1.0.0",
+    "open_attempts": 0,
+    "roots": {
+      "DONE": 25
+    },
+    "run_id": "92abc49a4139400d8a0a7780174a2fab",
+    "sample_roots_total": 24,
+    "supervisor_cpu_s": 2.490609691000004,
+    "worker_cpu_s": 77.04159
+  }
+}
