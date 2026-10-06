@@ -156,5 +156,22 @@
     "F": 160.80537454400013,
     "prefix_exclusions": 66.15109444599999
   },
-  "cpu_scope": "retained object measurements only; not whole-process or full recovery consumption"
+  "cpu_scope": "retained object measurements only; not whole-process or full recovery consumption",
+  "zero_width_scope": "Loc / RowProposal with LD and saved assignments A; not the number of independently UNSAT R targets",
+  "independent_R_target_checks": {
+    "total": 19,
+    "UNSAT_with_RUP": 17,
+    "SAT_solver_reports": 2,
+    "SAT_cases": [
+      {
+        "prefix": "prefix_r6682_w290",
+        "target": 13
+      },
+      {
+        "prefix": "prefix_r6682_w290",
+        "target": 15
+      }
+    ],
+    "SAT_witnesses_in_attempts": "not saved; targeted model clarification proposed"
+  }
 }

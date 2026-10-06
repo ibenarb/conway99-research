@@ -13,3 +13,15 @@ Dies ist ausschließlich die Audit-Umgebung. Laufende/fixierte Ryzen- oder Offic
 ## Dauerhafte Regeln für Experimente
 
 Vor Planung, Implementierung, Startanweisung oder Bewertung eines Rechenexperiments `docs/EXPERIMENT_RULES.md` und `docs/operations/GLOBAL_CONCLUSIONS.md` lesen. Ralph bevorzugt großzügige Ressourcen und ausdrücklich höhere Toleranz für kleine erklärbare Zeitüberschreitungen. Solche vollständig verbuchten Abweichungen lokal behandeln; globale Stopps für echte Ressourcen-/Integritätsprobleme reservieren. Erreichte Zeitbudgets lösen gemäß `docs/EXPERIMENT_RULES.md` die Abfrage `time limit reached. ETA HH:MM. Extend [seconds] ?` aus: 0 bedeutet kontrollierter Abbruch, positive Sekunden bedeuten Verlängerung; bis zur Antwort unverändert weiterrechnen, weder pausieren noch abbrechen; tatsächlichen Verbrauch und Überschreitung weiter verbuchen. Auch Hintergrundläufe brauchen einen dokumentierten Antwortkanal. Keine stillen Budgeterhöhungen und keine Abschwächung mathematischer Prüfungen. Relevante GC-IDs in Plan und Übergabe nennen. Neue Regeln ändern keine laufenden/fixierten Experimente automatisch.
+
+## Git-Lesezugriff am fixierten Stand
+
+Repository: https://github.com/ibenarb/conway99-research (öffentlich). Vorhandenes
+lokales Repository bevorzugen; andernfalls in der Rechenumgebung klonen. Dateien
+gezielt mit `git show <commit>:<pfad>` am ausdrücklich genannten Commit lesen.
+Web- oder API-Lesezugriffe nur bei Bedarf als Alternative verwenden; Sperren und
+Abruflimits sind umgebungsabhängig, keine pauschale GitHub-Eigenschaft.
+Authentifizierte Veröffentlichungen sind davon getrennt; GitHub-Schreibwerkzeuge
+bleiben ein zulässiger Weg, wenn direktem Git-Push Zugangsdaten fehlen.
+Keine Tokens oder Passwörter in Projektanweisungen, Chats oder Repositorydateien
+hinterlegen. Diese Datei muss in einem neuen Chat ausdrücklich gelesen werden.

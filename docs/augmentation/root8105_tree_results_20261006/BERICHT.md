@@ -38,7 +38,7 @@ Die Angaben zur Baumgröße sind Importance-Schätzungen, keine exakten Knotenza
 
 Die Punktverhältnisse betragen:
 
-- Reihenfolgenwechsel ohne Vorwärtsprüfung: rund1,03Millionen weniger geschätzte Knoten.
+- Reihenfolgenwechsel ohne Vorwärtsprüfung: geschätzte Knotenzahl um den Faktor rund1,03Millionen kleiner.
 - Vorwärtsprüfung bei numerischer Reihenfolge: Faktor53,7.
 - Vorwärtsprüfung bei Nachbarschaft zuerst: Faktor29,8.
 - Beide Änderungen gegenüber numerisch/F: Faktor30,8Millionen.
