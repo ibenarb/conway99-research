@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "sealed_receipt_payload_sha256": "a53cdd1a519ed13496dd579a5ce10f288f6156aeec13c99a5ea2bd0f6cef3fd3",
+  "original_receipt_artifact_hashes_checked": true,
+  "fixed_row_positive_controls": [
+    {
+      "prefix": "prefix_r0001_w321",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0020_w357",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0030_w063",
+      "target": 4,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0032_w307",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0051_w316",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0061_w224",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0061_w260",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0330_w151",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0330_w354",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0567_w249",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r0655_w138",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r4586_w170",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r6682_w037",
+      "target": 2,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r6682_w067",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r6682_w142",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r6682_w290",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    },
+    {
+      "prefix": "prefix_r7227_w388",
+      "target": 1,
+      "status": "FIXED_KNOWN_ROW_SAT"
+    }
+  ],
+  "F_rejection_certificates": [
+    {
+      "prefix": "prefix_r6682_w290",
+      "target": 7,
+      "rank": 1,
+      "cnf": "prefix_r6682_w290_t07_rank1_F_rejection.cnf",
+      "proof": "prefix_r6682_w290_t07_rank1_F_rejection.rup",
+      "verification": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 1,
+        "ignored_deletions": 0,
+        "cnf_sha256": "05543d7f0d2b50bcc8388797e01b9f404622e58bfec9970e583bc13c4c83d3e6",
+        "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "explicit_empty_added_and_RUP_checked": true,
+      "solver_proof_lines": 0
+    },
+    {
+      "prefix": "prefix_r6682_w290",
+      "target": 7,
+      "rank": 2,
+      "cnf": "prefix_r6682_w290_t07_rank2_F_rejection.cnf",
+      "proof": "prefix_r6682_w290_t07_rank2_F_rejection.rup",
+      "verification": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 1,
+        "ignored_deletions": 0,
+        "cnf_sha256": "28290a417cea24e0d37fb655474c0348bb81f940196dee168dc51e73411130f8",
+        "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "explicit_empty_added_and_RUP_checked": true,
+      "solver_proof_lines": 0
+    },
+    {
+      "prefix": "prefix_r6682_w290",
+      "target": 7,
+      "rank": 3,
+      "cnf": "prefix_r6682_w290_t07_rank3_F_rejection.cnf",
+      "proof": "prefix_r6682_w290_t07_rank3_F_rejection.rup",
+      "verification": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 1,
+        "ignored_deletions": 0,
+        "cnf_sha256": "7b4653c36c5bf9ad8981cd8f95d674bf18a6e31faa0655d29f40feb0d6d2100d",
+        "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      },
+      "explicit_empty_added_and_RUP_checked": true,
+      "solver_proof_lines": 0
+    }
+  ],
+  "RUP_checker_controls": [
+    {
+      "name": "unit_contradiction",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "name": "SAT_false_empty_clause",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "non_implied_lemma",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "missing_empty_clause",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "name": "deletions_ignored_soundly",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "name": "malformed_proof",
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "RUP_checker_sha256": "aadbc7b9692537bddc2410950307f0ce644c6f2bebc5c1639970a31ebf611b35"
+}

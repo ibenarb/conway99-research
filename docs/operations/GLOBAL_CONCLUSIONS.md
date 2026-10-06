@@ -279,3 +279,17 @@ prüfbar; Manipulation einer Zahl wird erkannt. Umgesetzt in
 Belege: `docs/augmentation/root8105_review_followup_20261006/ABSCHLUSS_ABWEICHUNG.md`.
 Status: lokale Regression bestanden; Ursache des Cloudvorfalls und echte
 WSL-Abschlussprüfung weiterhin offen. Keine Wiederholung abgeschlossener Mathematik.
+
+## GC-22 Ergänzung — Frontiercheckpoints, 06.10.2026
+
+Die neue ROOT8105-Frontieranalyse meldete vollständig abgeschlossene Präfixe,
+später gelesene Dateien enthielten aber einmal acht fehlende Breiten- und vier
+fehlende F-Datensätze, nach sequentieller Fortsetzung nochmals 13 fehlende
+F-Datensätze. Ursache unbekannt; kein Beleg, dass allein Parallelität oder ein
+konkretes Synchronisationssystem verantwortlich ist. Erhaltene Datensätze wurden
+übernommen und nur die fehlenden ergänzt. Abschluss in privatem temporärem
+Verzeichnis, gesamter Ergebnisbeleg mit Dateihashes und geschlossenes Datenarchiv.
+Alle 1207 Breiten-/F-Paare und 17 Ausschlussbelege vollständig abgeglichen.
+Das belegt den geretteten Abschluss, keine allgemeine Behebung der Speicherursache.
+Belege: docs/augmentation/root8105_frontier_20261006/FRONTIER_DATA.zip,
+CHECKPOINT_DISCREPANCY*.json und FINAL_RECEIPT.json darin.
