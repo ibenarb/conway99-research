@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "saved_prefixes_verified_without_replay_or_SAT": 17,
+  "distinct_labeled_prefixes": 17,
+  "distinct_root_ids": 12,
+  "positive_control": {
+    "graph": "srg(9,4,1,2), 3x3 rook",
+    "counts": {
+      "vertices": 9,
+      "full_vertices": 9,
+      "full_pairs": 36,
+      "pair_capacity_checks": 36,
+      "star_equations": 36
+    }
+  },
+  "negative_controls": [
+    {
+      "name": "swapped_labels",
+      "rejected": true,
+      "reason": "label_mapping"
+    },
+    {
+      "name": "self_loop",
+      "rejected": true,
+      "reason": "loop"
+    },
+    {
+      "name": "deleted_edge",
+      "rejected": true,
+      "reason": "H_degree"
+    },
+    {
+      "name": "duplicate_neighbor",
+      "rejected": true,
+      "reason": "duplicate_neighbor"
+    },
+    {
+      "name": "asymmetric_edge_preserving_row_degree",
+      "rejected": true,
+      "reason": "symmetry_or_assignment"
+    },
+    {
+      "name": "duplicate_matching_pair",
+      "rejected": true,
+      "reason": "matching_coverage"
+    },
+    {
+      "name": "contradictory_assignment",
+      "rejected": true,
+      "reason": "symmetry_or_assignment"
+    },
+    {
+      "name": "flipped_SAT_witness_edge",
+      "rejected": true,
+      "reason": "witness_star_equation"
+    },
+    {
+      "name": "missing_SAT_witness_edge",
+      "rejected": true,
+      "reason": "witness_edge_coverage"
+    }
+  ],
+  "independent_check_sha256": "6e9aff92fd1520a67738baecdf728954b7f53a164559bdd03405a65d9c08c6e1"
+}
