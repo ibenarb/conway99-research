@@ -1,0 +1,390 @@
+{
+  "complete": true,
+  "base_commit": "84180ad8bffe6905b8384e4acf889879b85a3fa9",
+  "input_sha256": "91f3cfa5485cf9f425837a26ba5f42ca7f3c8736bec63f312d7e6afecc8df938",
+  "results": [
+    {
+      "target": 13,
+      "mode": "R",
+      "cnf": "t13_R.cnf",
+      "variables": 903,
+      "clauses": 1751,
+      "solver_stats": {
+        "restarts": 1,
+        "conflicts": 72,
+        "decisions": 104,
+        "propagations": 9296
+      },
+      "LD_units": [],
+      "A_units": [],
+      "status": "SAT_DIRECT_VERIFIED",
+      "witness": "t13_R_witness.json",
+      "check": {
+        "status": "DIRECT_INTEGER_CHECK_PASS",
+        "degree": 12,
+        "margins": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "pair_codegrees": {
+          "0": 1,
+          "11": 2,
+          "18": 1,
+          "30": 2,
+          "32": 2,
+          "35": 1,
+          "39": 1,
+          "42": 1,
+          "47": 2,
+          "54": 2,
+          "59": 2,
+          "67": 2,
+          "72": 2
+        },
+        "LD_violations": [],
+        "A_violations": [
+          [
+            13,
+            74,
+            0
+          ]
+        ]
+      },
+      "cpu_s": 0.005596427000000001
+    },
+    {
+      "target": 13,
+      "mode": "R_LD",
+      "cnf": "t13_R_LD.cnf",
+      "variables": 903,
+      "clauses": 1755,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 1443,
+        "decisions": 1853,
+        "propagations": 175672
+      },
+      "LD_units": [
+        -1,
+        -25,
+        -42,
+        -53
+      ],
+      "A_units": [],
+      "status": "SAT_DIRECT_VERIFIED",
+      "witness": "t13_R_LD_witness.json",
+      "check": {
+        "status": "DIRECT_INTEGER_CHECK_PASS",
+        "degree": 12,
+        "margins": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2
+        ],
+        "pair_codegrees": {
+          "0": 1,
+          "11": 2,
+          "18": 1,
+          "30": 2,
+          "32": 2,
+          "35": 1,
+          "39": 1,
+          "42": 1,
+          "47": 2,
+          "54": 2,
+          "59": 2,
+          "67": 2,
+          "72": 2
+        },
+        "LD_violations": [],
+        "A_violations": [
+          [
+            13,
+            74,
+            0
+          ]
+        ]
+      },
+      "cpu_s": 0.026150553000000007
+    },
+    {
+      "target": 13,
+      "mode": "R_LD_A",
+      "cnf": "t13_R_LD_A.cnf",
+      "variables": 903,
+      "clauses": 1770,
+      "solver_stats": {
+        "restarts": 1,
+        "conflicts": 1017,
+        "decisions": 1299,
+        "propagations": 121003
+      },
+      "LD_units": [
+        -1,
+        -25,
+        -42,
+        -53
+      ],
+      "A_units": [
+        -12,
+        -19,
+        -25,
+        -34,
+        -37,
+        -42,
+        -47,
+        -53,
+        -55,
+        -59,
+        -60,
+        -61,
+        -68,
+        -73,
+        -75
+      ],
+      "status": "RUP_VERIFIED_UNSAT",
+      "proof": "t13_R_LD_A.rup",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 1018,
+        "ignored_deletions": 1152,
+        "cnf_sha256": "0aae5115c0a1e2de6fec9d50fad9d008413e0398fdd34d92435264f1e45dfcb0",
+        "proof_sha256": "2aaafedb7b8147b5570986ea6fd63cd93a8d0f556ce32eb5bba3c2f8d65060b5"
+      },
+      "cpu_s": 11.536748939
+    },
+    {
+      "target": 15,
+      "mode": "R",
+      "cnf": "t15_R.cnf",
+      "variables": 903,
+      "clauses": 1751,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 894,
+        "decisions": 1210,
+        "propagations": 104225
+      },
+      "LD_units": [],
+      "A_units": [],
+      "status": "SAT_DIRECT_VERIFIED",
+      "witness": "t15_R_witness.json",
+      "check": {
+        "status": "DIRECT_INTEGER_CHECK_PASS",
+        "degree": 12,
+        "margins": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "pair_codegrees": {
+          "0": 1,
+          "11": 2,
+          "18": 1,
+          "30": 2,
+          "32": 2,
+          "35": 1,
+          "39": 2,
+          "42": 1,
+          "47": 2,
+          "54": 1,
+          "59": 2,
+          "67": 2,
+          "72": 2
+        },
+        "LD_violations": [],
+        "A_violations": [
+          [
+            15,
+            25,
+            0
+          ],
+          [
+            15,
+            38,
+            0
+          ]
+        ]
+      },
+      "cpu_s": 0.01623475000000063
+    },
+    {
+      "target": 15,
+      "mode": "R_LD",
+      "cnf": "t15_R_LD.cnf",
+      "variables": 903,
+      "clauses": 1755,
+      "solver_stats": {
+        "restarts": 4,
+        "conflicts": 312,
+        "decisions": 444,
+        "propagations": 38736
+      },
+      "LD_units": [
+        -1,
+        -34,
+        -57,
+        -62
+      ],
+      "A_units": [],
+      "status": "SAT_DIRECT_VERIFIED",
+      "witness": "t15_R_LD_witness.json",
+      "check": {
+        "status": "DIRECT_INTEGER_CHECK_PASS",
+        "degree": 12,
+        "margins": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "pair_codegrees": {
+          "0": 1,
+          "11": 2,
+          "18": 1,
+          "30": 2,
+          "32": 2,
+          "35": 1,
+          "39": 2,
+          "42": 1,
+          "47": 2,
+          "54": 1,
+          "59": 2,
+          "67": 2,
+          "72": 2
+        },
+        "LD_violations": [],
+        "A_violations": [
+          [
+            15,
+            25,
+            0
+          ],
+          [
+            15,
+            38,
+            0
+          ]
+        ]
+      },
+      "cpu_s": 0.008547867000000764
+    },
+    {
+      "target": 15,
+      "mode": "R_LD_A",
+      "cnf": "t15_R_LD_A.cnf",
+      "variables": 903,
+      "clauses": 1771,
+      "solver_stats": {
+        "restarts": 3,
+        "conflicts": 748,
+        "decisions": 986,
+        "propagations": 87428
+      },
+      "LD_units": [
+        -1,
+        -34,
+        -57,
+        -62
+      ],
+      "A_units": [
+        -12,
+        -19,
+        -26,
+        -34,
+        -39,
+        -43,
+        -44,
+        -53,
+        -55,
+        -57,
+        -59,
+        -60,
+        -62,
+        -63,
+        -68,
+        -73
+      ],
+      "status": "RUP_VERIFIED_UNSAT",
+      "proof": "t15_R_LD_A.rup",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 749,
+        "ignored_deletions": 663,
+        "cnf_sha256": "b53312e535a8fa2b66583671850984c54f89876f2da0dbe8d3ed7e88b946c872",
+        "proof_sha256": "ecd51b07daf95b39a884de9cec33a2511ddca2b3a0a8f5da59b47bce460ca24a"
+      },
+      "cpu_s": 7.5579847309999995
+    }
+  ],
+  "cpu_s": 19.179228297999998,
+  "assignment_count": 1127,
+  "assignments_derived": true,
+  "new_walks": 0,
+  "root_exclusions": 0,
+  "files": {
+    "ASSIGNMENT_DERIVATION.json": "603051eb3e486ce8524fe425958c15994cd8e94d8647021d63ce60262221c73f",
+    "t13_R.cnf": "91472e9e1b5293e10e67bce59e791aadc2e053f27bb027a1bcc02a214bc5484b",
+    "t13_R_LD.cnf": "f7ca9762c7fbab6ba2254776fa341513940f8c6e3c3a9ceced0a937e41cee53e",
+    "t13_R_LD_A.cnf": "0aae5115c0a1e2de6fec9d50fad9d008413e0398fdd34d92435264f1e45dfcb0",
+    "t13_R_LD_A.rup": "2aaafedb7b8147b5570986ea6fd63cd93a8d0f556ce32eb5bba3c2f8d65060b5",
+    "t13_R_LD_A_result.json": "d7a084c55a35cafc11a74f55787f3027960eb21995473ef096bf7231b05d43ec",
+    "t13_R_LD_result.json": "6112e96ca1b7d2a01c2c073a3b67361136744eee187e07b2538577976860ea27",
+    "t13_R_LD_witness.json": "56af1f4dc8a179974e7e5cf004d4daa9d3c23eff28a0b1d5c6691df271955d33",
+    "t13_R_result.json": "38cf3acb4ac21ee0e3c6a50ebaa4bd53a822315a51b13957b4cac8529479e5db",
+    "t13_R_witness.json": "56af1f4dc8a179974e7e5cf004d4daa9d3c23eff28a0b1d5c6691df271955d33",
+    "t15_R.cnf": "33500442e3577884450539f7552f07221a4e658014f13fd65c4961b6e5a26bee",
+    "t15_R_LD.cnf": "33ba3ce452cbbf9f41f325d29f775c739336264a160a80155615dd1d5efa2f03",
+    "t15_R_LD_A.cnf": "b53312e535a8fa2b66583671850984c54f89876f2da0dbe8d3ed7e88b946c872",
+    "t15_R_LD_A.rup": "ecd51b07daf95b39a884de9cec33a2511ddca2b3a0a8f5da59b47bce460ca24a",
+    "t15_R_LD_A_result.json": "bbb9b86344d65b60735065e34314d2fdd7e732ba52ecbe0a49fca28d8dc8a8a0",
+    "t15_R_LD_result.json": "0400013f8a61a5ba90313b63a772b34668c5967d0d0ce94f68cb01527ea93ecd",
+    "t15_R_LD_witness.json": "3ef89005ec5534c6aad6a4557118cadf1ece899f6ad511642f9739857c724d6f",
+    "t15_R_result.json": "b1a6f87c21e674df89cd53fab5be242e4dccd32db194259cc65ac200c84c9dcc",
+    "t15_R_witness.json": "3ef89005ec5534c6aad6a4557118cadf1ece899f6ad511642f9739857c724d6f"
+  }
+}
