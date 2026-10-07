@@ -27,3 +27,15 @@ Ralph Beckmann priorisiert ausdrücklich neue mathematische Beiträge mit dem Fe
 ## Experimentpräferenzen und übergreifendes Lernen, 28.09.2026
 
 Auf ausdrücklichen Wunsch von Ralph Beckmann gelten `docs/EXPERIMENT_RULES.md` und das Register `docs/operations/GLOBAL_CONCLUSIONS.md` als dauerhafte Arbeitsgrundlage. Toleranz gegenüber erklärbaren Betriebsabweichungen, großzügige Ressourcen und lokale Fehlerbehandlung sind Standard. Erfahrungen werden mit Evidenz, Regel und Regressionstest weitergegeben. Neue Projekt-/Reviewerübergaben verweisen auf einen fixierten Commit dieser Dateien.
+
+## Begrenzte Bearbeitungsrunden und gesicherte Übergaben, 07.10.2026
+
+Auf ausdrückliche Anweisung von Ralph Beckmann gilt für die Chat-Bearbeitung:
+
+> Pro Bearbeitungsrunde genau ein abgegrenztes Arbeitspaket. Vor dessen Abschluss werden Ergebnisse, Prüfstatus und Fortsetzungsstand dauerhaft gesichert und die Sicherung überprüft. Danach endet die Antwort. Das nächste Paket beginnt erst mit „weiter“. Umfangreiche Rohdaten bleiben in Dateien; in den Chat kommen nur gezielte Auszüge und Zusammenfassungen.
+
+Das Arbeitspaket wird zu Beginn benannt und so begrenzt, dass nicht mehrere größere Entwicklungsphasen zu einer einzigen Bearbeitungsrunde zusammengezogen werden. Der Abschluss nennt den gesicherten Stand (bei Git mit fixiertem Commit), erledigte und offene Prüfungen sowie den nächsten Schritt. Eine angekündigte Sicherung oder Fortschrittsmeldung gilt nicht als überprüfter Abschlussbeleg. Bei einer Unterbrechung zunächst vorhandene Sicherungen prüfen, bevor Rechnungen wiederholt werden.
+
+Diese Regel ersetzt für die Chat-Bearbeitung ältere pauschale Aufforderungen, nach Paketabschluss automatisch entlang des Gesamtplans fortzufahren. Innerhalb des abgegrenzten Pakets sind keine zusätzlichen Bestätigungen für bereits autorisierte Teilschritte erforderlich. Das Ende einer Antwort ist kein Abbruchauftrag für laufende Rechenprozesse; insbesondere bleiben GC-19 und die Regeln für deren Überwachung und Abrechnung gültig.
+
+Anlass: Im Chat „Memetik III“ wurden laut dem am 07.10.2026 vorgelegten Arbeitsverlauf mehrere Entwicklungs-, Diagnose-, Kontroll- und Veröffentlichungsphasen in einer Bearbeitung verbunden; anschließend wurde eine Volumengrenze gemeldet. Die konkrete technische Fehlerursache und der tatsächliche Kontextverbrauch sind nicht belegt. Die Regel begrenzt Arbeit zwischen überprüften Sicherungen; sie garantiert weder Fehlerfreiheit der Anwendung noch eine zuverlässige Vorwarnung vor deren Grenzen.
