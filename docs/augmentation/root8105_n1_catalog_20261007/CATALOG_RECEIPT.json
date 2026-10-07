@@ -1,0 +1,88 @@
+{
+  "accounting_scope": "this verification process before receipt serialization; no solver started",
+  "negative_identity_checks": [
+    {
+      "changed": "root_id",
+      "rejected": true,
+      "root_id": 210
+    },
+    {
+      "changed": "class_id",
+      "rejected": true,
+      "root_id": 210
+    },
+    {
+      "changed": "matching",
+      "rejected": true,
+      "root_id": 210
+    },
+    {
+      "changed": "root_id",
+      "rejected": true,
+      "root_id": 6682
+    },
+    {
+      "changed": "class_id",
+      "rejected": true,
+      "root_id": 6682
+    },
+    {
+      "changed": "matching",
+      "rejected": true,
+      "root_id": 6682
+    }
+  ],
+  "peak_rss_kib": 190192,
+  "process_cpu_s_to_receipt": 3.6225657759999996,
+  "python_sat": "1.9.dev15",
+  "reference_commit": "bd0e5f301e02de2fe6180a88bb00d5259caaedb6",
+  "results": [
+    {
+      "binding_file": "r210_class000_binding.json",
+      "binding_sha256": "763ccb1daf71d003b792d10e5b0ddc58e472f3c4739d81bd04456100b6cf102b",
+      "catalog_identity_checked": true,
+      "class_id": 0,
+      "cnf_byte_identity": true,
+      "cnf_sha256": "29cc363e18630b603308665cdef29c6308f9e4f59ea94dd082431ddca254726e",
+      "coverage_sha256": "31cbb978133ecc60a87e3b56d429a7c09cde32f8a3bf2aa75e5b8794fd53956e",
+      "edge_map_identity": true,
+      "edge_map_sha256": "a165775455f4c9bdaeefddae920c65dc7cd53cf1e9871c8ca15c7e0b2efcb72a",
+      "full_coverage_reaudited": false,
+      "root_excluded": false,
+      "root_id": 210,
+      "root_row_hex": "0xe0000808058104004040",
+      "solved": false
+    },
+    {
+      "binding_file": "r6682_class000_binding.json",
+      "binding_sha256": "132b08df779f08ae7fe8ad59d19217608918ed1265cab801f84cd2ad8e92e405",
+      "catalog_identity_checked": true,
+      "class_id": 0,
+      "cnf_byte_identity": true,
+      "cnf_sha256": "faa3720f6828956b523d184993be45cb5443eb92d4630ffe2380201f15d7213d",
+      "coverage_sha256": "09741bc0349542042ed80f65303545466e95ed81f46df634827093cae4a66425",
+      "edge_map_identity": true,
+      "edge_map_sha256": "32e82f6db6b3a438a2cc39da97824eee1b800e043d93e48b16a882fd0277af28",
+      "full_coverage_reaudited": false,
+      "root_excluded": false,
+      "root_id": 6682,
+      "root_row_hex": "0x1080840848940040800",
+      "solved": false
+    }
+  ],
+  "rules": [
+    "GC-08",
+    "GC-16",
+    "GC-20",
+    "GC-22",
+    "GC-23"
+  ],
+  "schema": "N1_CATALOG_IDENTITY_1",
+  "source_sha256": {
+    "docs/augmentation/root8105_early_diagnostic_20261006/SELECTED_PATHS.json.gz": "807a7af96b1909eaf28901345cb3756b6a904b63173196ad9b5a13fe23cddfef",
+    "docs/augmentation/root8105_n1_20261006/CLASSES.tar.xz": "7313fa8b2e95e617a261a4269502f03e9843d651329490f3795603459a30a601",
+    "docs/augmentation/root8105_n1_20261006/CLASSES_RECEIPT.json": "97b9462339a22b61d4d4f72ceac375dfff610bbedfdd423b5610e6b51d93a573",
+    "experiments/memetik/root8105_review_followup_1_0_1/reference/roots.tsv": "c525d03be144a7493c3239340c6263dcb8a29b5521e5d3b152ce43afe90cac41"
+  },
+  "status": "PASS"
+}
