@@ -293,3 +293,22 @@ Alle 1207 Breiten-/F-Paare und 17 Ausschlussbelege vollständig abgeglichen.
 Das belegt den geretteten Abschluss, keine allgemeine Behebung der Speicherursache.
 Belege: docs/augmentation/root8105_frontier_20261006/FRONTIER_DATA.zip,
 CHECKPOINT_DISCREPANCY*.json und FINAL_RECEIPT.json darin.
+
+## GC-23 — Bibliotheksweiter Zustand bei unabhängigen CNFs, 06.10.2026
+
+Die ROOT8105-Frühdiagnostik unter python-sat1.9.dev15 wurde bei längeren Serien
+zunehmend langsamer. CNF.append/extend reserviert auch im globalen Formula-Pool;
+dessen Intervallliste wuchs im kontrollierten Test nach3x200 Formeln auf
+200/400/600 Einträge. Der konkrete Encoder verwendet eigene IDPools und benötigt
+diesen globalen Kontext nicht. Austausch nur des globalen Pools vor unabhängigen
+Formeln erhält die vollständige Klauselfolge und Variablenzahl und stabilisierte
+die beobachteten Pfadkosten. Keine nachgewiesene Verfälschung der SAT-Modelle.
+
+Regel: wiederholte unabhängige Modellaufbauten auf wachsendem Bibliothekszustand
+prüfen. Kontext nur zurücksetzen, wenn keine noch benötigte Formel ihn benutzt;
+explizite lokale Poolidentität und identische CNF kontrollieren. Nicht pauschal
+auf gemischte Formula-/CNF-Anwendungen übertragen oder laufende Nutzerkampagnen
+ändern. Belege und offen fehlende CPU-Schlussabrechnung des technisch
+unterbrochenen Aufrufs: docs/augmentation/root8105_early_diagnostic_20261006.
+Status: lokale Reproduktion und gezielte Korrektur; kein allgemeiner
+Bibliothekspatch und kein Zielhardwaretest.

@@ -6,7 +6,7 @@ GC-08/16/17/19/20/22. Keine neuen Zufallspfade und kein Vollcensus.
 
 Population: gespeicherte10000 Pfade von Zelle3, geschichtet nach24 festen Roots.
 40 Pfade pro Root ohne Zurücklegen, Python Random(8105202610063000+root_id).
-Auswahlreihenfolge in SELECTED_PATHS.json; Inklusionswahrscheinlichkeit40/n_r.
+Auswahlreihenfolge in SELECTED_PATHS.json.gz; Inklusionswahrscheinlichkeit40/n_r.
 Erste4 je Root bilden eine vorab feste Kostenkalibrierung (4/n_r), bevor der
 Rest gestartet wird. Beide Stufen sind keine Auflösung extrem seltener Ereignisse.
 Datei stammt aus dem hashgeprüften originalen Abschlussbeleg5e7f8273...;
@@ -41,7 +41,7 @@ Verhältnisschätzung, kein selbst erwartungstreuer Schätzer und keine Schranke
 Keine Aussage über8105 Roots. ESS, größter Gewichtsanteil und Prüfumfang melden.
 119 alte Endpunkte werden nicht beigemischt.
 
-Kalibrierumfang96 Pfade,192 Zustände, maximal31392 Einzelmodelle für zwei
+Kalibrierumfang96 Pfade,192 Zustände, maximal31296 Einzelmodelle für zwei
 Varianten und81/82 offene Zeilen. Die vollständige960er-Stufe ist zehnmal so
 groß. Laufzeit/Peak-RAM/Dateivolumen zuerst messen, dann entscheiden. Keine
 automatischen Zeitabbrüche; hier endliche vorab fixierte Aufgabenzahl, kein

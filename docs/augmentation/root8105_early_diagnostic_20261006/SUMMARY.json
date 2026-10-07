@@ -1,0 +1,125 @@
+{
+  "complete": true,
+  "paths": 960,
+  "per_root": 40,
+  "preregistered_commit": "cff611b49f33dda61e54174b3430b9db9401a3b4",
+  "selection_sha256": "807a7af96b1909eaf28901345cb3756b6a904b63173196ad9b5a13fe23cddfef",
+  "invocation_cpu_s": 295.757260584,
+  "path_cpu_s": 698.837400643,
+  "peak_rss_kib": 623792,
+  "statistics": {
+    "R_d2": {
+      "surviving_sample_paths": 960,
+      "sample_paths": 960,
+      "mean_nodes_equal_root_weight": 93469410.91875,
+      "unpruned_mean_nodes_same_sample": 93469410.91875,
+      "weighted_survival_ratio": 1.0,
+      "weight_ESS": 664.3511925584744,
+      "max_weight_fraction": 0.002849311948766924
+    },
+    "R_d3": {
+      "surviving_sample_paths": 958,
+      "sample_paths": 960,
+      "mean_nodes_equal_root_weight": 7700397611247.27,
+      "unpruned_mean_nodes_same_sample": 7700500575759.087,
+      "weighted_survival_ratio": 0.9999866288547343,
+      "weight_ESS": 427.56283851675505,
+      "max_weight_fraction": 0.004688533476418994
+    },
+    "R_LD_d2": {
+      "surviving_sample_paths": 960,
+      "sample_paths": 960,
+      "mean_nodes_equal_root_weight": 93469410.91875,
+      "unpruned_mean_nodes_same_sample": 93469410.91875,
+      "weighted_survival_ratio": 1.0,
+      "weight_ESS": 664.3511925584744,
+      "max_weight_fraction": 0.002849311948766924
+    },
+    "R_LD_d3": {
+      "surviving_sample_paths": 958,
+      "sample_paths": 960,
+      "mean_nodes_equal_root_weight": 7700397611247.27,
+      "unpruned_mean_nodes_same_sample": 7700500575759.087,
+      "weighted_survival_ratio": 0.9999866288547343,
+      "weight_ESS": 427.56283851675505,
+      "max_weight_fraction": 0.004688533476418994
+    }
+  },
+  "counts": {
+    "paths": 960,
+    "SAT_witnesses": 312756,
+    "UNSAT_certificates": 4
+  },
+  "negatives": [
+    {
+      "root_id": 51,
+      "index": 318,
+      "depth": 3,
+      "mode": "R",
+      "target": 32,
+      "status": "RUP_VERIFIED_UNSAT",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 29,
+        "ignored_deletions": 400,
+        "cnf_sha256": "aaef44de817e0e1e1b8b11f86cc8886bbb6d0eb4504a734896603b0985f2f074",
+        "proof_sha256": "419ad954280fa56cb300107259b64710ce2febee74191eba824603795826fefd"
+      },
+      "cnf": "r0051_w318_d3_t32_R.cnf",
+      "proof": "r0051_w318_d3_t32_R.rup"
+    },
+    {
+      "root_id": 51,
+      "index": 318,
+      "depth": 3,
+      "mode": "R_LD",
+      "target": 32,
+      "status": "RUP_VERIFIED_UNSAT",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 29,
+        "ignored_deletions": 400,
+        "cnf_sha256": "1dabcfe1854c8d20b448fc3fa87c876ec1984e42b94e25d401acf33fe0d1000c",
+        "proof_sha256": "419ad954280fa56cb300107259b64710ce2febee74191eba824603795826fefd"
+      },
+      "cnf": "r0051_w318_d3_t32_R_LD.cnf",
+      "proof": "r0051_w318_d3_t32_R_LD.rup"
+    },
+    {
+      "root_id": 210,
+      "index": 21,
+      "depth": 3,
+      "mode": "R",
+      "target": 32,
+      "status": "RUP_VERIFIED_UNSAT",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 9,
+        "ignored_deletions": 377,
+        "cnf_sha256": "eb80899d744f9f520b5ec269f7fbd476127cd2a9f44f2a9a46f7bc075e601d49",
+        "proof_sha256": "6a546ba0a2dc9d6d2c2d31ff983153b52c0fdd2dd4e41dea5dbcade5bcec9064"
+      },
+      "cnf": "r0210_w021_d3_t32_R.cnf",
+      "proof": "r0210_w021_d3_t32_R.rup"
+    },
+    {
+      "root_id": 210,
+      "index": 21,
+      "depth": 3,
+      "mode": "R_LD",
+      "target": 32,
+      "status": "RUP_VERIFIED_UNSAT",
+      "check": {
+        "status": "RUP_VERIFIED_UNSAT",
+        "additions": 9,
+        "ignored_deletions": 377,
+        "cnf_sha256": "2115cd42189076ba18e5036670d3af15d26903240ea623ec5194801f7db20dab",
+        "proof_sha256": "6a546ba0a2dc9d6d2c2d31ff983153b52c0fdd2dd4e41dea5dbcade5bcec9064"
+      },
+      "cnf": "r0210_w021_d3_t32_R_LD.cnf",
+      "proof": "r0210_w021_d3_t32_R_LD.rup"
+    }
+  ],
+  "representation": "all row witnesses retained; redundant evaluated equation values omitted",
+  "raw_receipt_scope": "hashes refer to original raw JSON; compact representation has separate hashes"
+}
