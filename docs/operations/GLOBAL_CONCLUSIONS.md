@@ -312,3 +312,34 @@ auf gemischte Formula-/CNF-Anwendungen übertragen oder laufende Nutzerkampagnen
 unterbrochenen Aufrufs: docs/augmentation/root8105_early_diagnostic_20261006.
 Status: lokale Reproduktion und gezielte Korrektur; kein allgemeiner
 Bibliothekspatch und kein Zielhardwaretest.
+
+## GC-24 — Reversibler Speicherdruck darf den Suchzustand nicht unnötig vernichten, 08.10.2026
+
+Root210/Klasse0, Runtime0.8.0: Ein einzelner Windows-Messwert unter der
+8-GiB-Reserve löste einen kontrollierten Solverabbruch aus. Die genaue auslösende
+Bytezahl wurde nicht separat archiviert. Ursache des Speicherdrucks ungeklärt;
+maximaler Solver-RSS379940KiB, native CPU11944.596729s. Alle drei
+CLI-Endabrechnungen vorhanden; die Klassifikation behandelte dennoch jedes
+Platform-Fault-Feld als Abrechnungslücke. Die letzte Hostmessung nach dem
+Stopp lag wieder über der Reserve. Das ist kein Beleg für eine falsche Messung.
+
+Regel: Ressourcenereignis und Integritäts-/Abrechnungsausfall unterscheiden.
+Für vorübergehenden Host-RAM-Druck denselben validierten Prozess pausieren;
+Auslösewert protokollieren und mit Hysterese fortsetzen. Pause erhält RAM-Zustand,
+ist aber kein Neustart-/Crash-Checkpoint und gibt keinen RAM frei. Echte OOM-,
+Datenträger-, Identitäts- und Uhrenfehler bleiben gesonderte Schutzfälle.
+
+Umsetzung0.8.1: pidfd-SIGSTOP unter8GiB; SIGCONT nach zehn frischen
+Host-Stopwatch-Sekunden mit mindestens9GiB. Keine Pause allein wegen Zeitbudget.
+Budgetantwort0 und fataler Plattformfehler lösen auch einen pausierten Prozess
+für kontrollierte Beendigung. Vollständig belegte HOST_MEMORY_RESERVE-Endkonten
+werden separat klassifiziert; alte versiegelte Belege bleiben unverändert.
+
+Regression: echte Linux-Prozessidentität und interner Zähler bleiben über zwei
+Pause-/Fortsetzungszyklen erhalten; Stillstand des CPU-Zählers während Pause;
+Stopp aus Pause; fremde Identität, fehlende/manipulierte Endbelege und andere
+Plattformfehler abgewiesen. 20 gezielte Tests bestanden in der Cloud; derselbe
+kurze Kontrollsatz wird vor dem Wiederholungslauf auf Ryzen ausgeführt.
+Belege: docs/augmentation/root8105_n1_memory_pause_20261008/.
+Status: Cloud geprüft, neue WSL-Pausekontrolle zum Veröffentlichungszeitpunkt
+ausstehend; alter Suchzustand nicht wiederherstellbar, Wiederholung neuer Lauf.

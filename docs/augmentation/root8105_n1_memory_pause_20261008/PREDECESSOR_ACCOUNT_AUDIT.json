@@ -1,0 +1,163 @@
+{
+  "schema": "N1_CLI_ACCOUNTING_REPORT_1",
+  "ledger_id": "149a0508cf8d4c328bb4b6e0313a037d",
+  "sessions": [
+    {
+      "session_id": "22ad8a5d80e64b24b76fc909cc16cd92",
+      "action": "preflight",
+      "inclusive_wait4_cpu_s": 0.314413,
+      "native_cpu_s": {
+        "search": 0.0,
+        "check": 0.0
+      },
+      "supervisor_cpu_s": 0.314413,
+      "partition_complete": true,
+      "platform": {
+        "adapter_complete": true,
+        "all_system_cpu_complete": false,
+        "exclusions": [
+          "Windows observer after its last sample",
+          "Linux observer tail and interop transport",
+          "unrelated host services"
+        ],
+        "fault": null,
+        "host": {
+          "birth": "639270511070606174",
+          "exit_code": 0,
+          "owner_birth": "639270511066879300",
+          "owner_cpu_lower_bound_s": 0.28125,
+          "owner_pid": 7140,
+          "owner_tail_complete": false,
+          "pid": 31592,
+          "sampler_cpu_end_s": 0.375,
+          "schema": "N1_WINDOWS_END_1",
+          "session_id": "22ad8a5d80e64b24b76fc909cc16cd92",
+          "synthetic": false
+        },
+        "samples": 4,
+        "schema": "N1_PLATFORM_END_1",
+        "session_id": "22ad8a5d80e64b24b76fc909cc16cd92"
+      },
+      "child_aggregation_rounding_s": 0.0,
+      "phase_gaps": [],
+      "returncode": 0
+    },
+    {
+      "session_id": "59daf1139ae946e2880d924fc48ff556",
+      "action": "run",
+      "inclusive_wait4_cpu_s": 12223.843488999999,
+      "native_cpu_s": {
+        "search": 11944.596729,
+        "check": 0.0
+      },
+      "supervisor_cpu_s": 279.2467599999982,
+      "partition_complete": true,
+      "platform": {
+        "adapter_complete": true,
+        "all_system_cpu_complete": false,
+        "exclusions": [
+          "Windows observer after its last sample",
+          "Linux observer tail and interop transport",
+          "unrelated host services"
+        ],
+        "fault": {
+          "reason": "ValueError: HOST_MEMORY_RESERVE",
+          "session_id": "59daf1139ae946e2880d924fc48ff556",
+          "utc_ns": 1791466257242831106
+        },
+        "host": {
+          "birth": "639270511138832815",
+          "exit_code": 0,
+          "owner_birth": "639270511135072981",
+          "owner_cpu_lower_bound_s": 0.34375,
+          "owner_pid": 31604,
+          "owner_tail_complete": false,
+          "pid": 37028,
+          "sampler_cpu_end_s": 58.046875,
+          "schema": "N1_WINDOWS_END_1",
+          "session_id": "59daf1139ae946e2880d924fc48ff556",
+          "synthetic": false
+        },
+        "samples": 86665,
+        "schema": "N1_PLATFORM_END_1",
+        "session_id": "59daf1139ae946e2880d924fc48ff556"
+      },
+      "child_aggregation_rounding_s": 0.0,
+      "phase_gaps": [],
+      "returncode": 0
+    },
+    {
+      "session_id": "ab05d92971fc48969e9d28f374b929a8",
+      "action": "init",
+      "inclusive_wait4_cpu_s": 2.0211629999999996,
+      "native_cpu_s": {
+        "search": 0.0,
+        "check": 0.0
+      },
+      "supervisor_cpu_s": 2.0211629999999996,
+      "partition_complete": true,
+      "platform": {
+        "adapter_complete": true,
+        "all_system_cpu_complete": false,
+        "exclusions": [
+          "Windows observer after its last sample",
+          "Linux observer tail and interop transport",
+          "unrelated host services"
+        ],
+        "fault": null,
+        "host": {
+          "birth": "639270511035688338",
+          "exit_code": 0,
+          "owner_birth": "639270511030400196",
+          "owner_cpu_lower_bound_s": 0.40625,
+          "owner_pid": 23320,
+          "owner_tail_complete": false,
+          "pid": 12872,
+          "sampler_cpu_end_s": 0.390625,
+          "schema": "N1_WINDOWS_END_1",
+          "session_id": "ab05d92971fc48969e9d28f374b929a8",
+          "synthetic": false
+        },
+        "samples": 18,
+        "schema": "N1_PLATFORM_END_1",
+        "session_id": "ab05d92971fc48969e9d28f374b929a8"
+      },
+      "child_aggregation_rounding_s": 0.0,
+      "phase_gaps": [],
+      "returncode": 0
+    }
+  ],
+  "inclusive_wait4_confirmed_s": 12226.179064999998,
+  "native_search_confirmed_s": 11944.596729,
+  "native_check_confirmed_s": 0.0,
+  "supervisor_confirmed_s": 281.5823359999982,
+  "observer_cpu_lower_bound_s": 214.9520182,
+  "accounted_lower_bound_s": 12500.974833199998,
+  "resource_stops": [
+    {
+      "session_id": "59daf1139ae946e2880d924fc48ff556",
+      "fault": {
+        "reason": "ValueError: HOST_MEMORY_RESERVE",
+        "session_id": "59daf1139ae946e2880d924fc48ff556",
+        "utc_ns": 1791466257242831106
+      }
+    }
+  ],
+  "observed_commands_complete": true,
+  "partition_complete": true,
+  "gaps": [],
+  "active": [],
+  "all_system_cpu_complete": false,
+  "host_cpu_s": null,
+  "host_sampler_end_confirmed_s": 58.8125,
+  "host_observer_lower_bound_s": 1.03125,
+  "history_includes_wrapped_init": true,
+  "current_inspection_session_excluded": null,
+  "child_rounding_tolerance_s": 1e-05,
+  "exclusions": [
+    "observer work after its last sample",
+    "unwrapped API calls",
+    "external host services and commands outside this CLI"
+  ],
+  "budget_scope": "native_children_cpu_seconds_unchanged"
+}

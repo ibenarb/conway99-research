@@ -1,0 +1,106 @@
+{
+  "runtime": "0.8.1",
+  "status": "PASS",
+  "pause_tests": 12,
+  "resource_account_tests": 8,
+  "gate_tests": {
+    "status": "PASS",
+    "tests": [
+      {
+        "test": "measured_Ryzen_unlimited_cgroup_with_finite_guest",
+        "passed": true
+      },
+      {
+        "test": "low_guest_available",
+        "passed": true
+      },
+      {
+        "test": "low_host_available",
+        "passed": true
+      },
+      {
+        "test": "low_disk",
+        "passed": true
+      },
+      {
+        "test": "oversized_RSS",
+        "passed": true
+      },
+      {
+        "test": "reduced_reserve",
+        "passed": true
+      },
+      {
+        "test": "missing_cgroup",
+        "passed": true
+      },
+      {
+        "test": "finite_cgroup_too_small",
+        "passed": true
+      },
+      {
+        "test": "finite_cgroup_sufficient",
+        "passed": true
+      },
+      {
+        "test": "accepted_evidence_archive",
+        "passed": true
+      },
+      {
+        "test": "altered_evidence_rejected",
+        "passed": true
+      },
+      {
+        "test": "parallel_calibration_rejected",
+        "passed": true
+      },
+      {
+        "test": "lock_released_after_return",
+        "passed": true
+      },
+      {
+        "test": "accepted_build_binding",
+        "passed": true
+      },
+      {
+        "test": "changed_core_rejected",
+        "passed": true
+      },
+      {
+        "test": "wrong_binary_rejected",
+        "passed": true
+      },
+      {
+        "test": "missing_host_adapter_rejected",
+        "passed": true
+      },
+      {
+        "test": "wrong_host_rejected",
+        "passed": true
+      },
+      {
+        "test": "runtime_dispatch_holds_lock",
+        "passed": true
+      },
+      {
+        "test": "control_dispatch_unchanged",
+        "passed": true
+      },
+      {
+        "test": "gate_source_binding",
+        "passed": true
+      },
+      {
+        "test": "changed_gate_source_rejected",
+        "passed": true
+      }
+    ],
+    "windows_executed": false,
+    "N1_searches": 0
+  },
+  "real_Linux_process_pause_resume": true,
+  "Windows_executed": false,
+  "pressure_samples": "synthetic",
+  "N1_searches": 0,
+  "old_mathematical_audits_repeated": false
+}
