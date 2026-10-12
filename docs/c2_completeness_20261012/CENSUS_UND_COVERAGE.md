@@ -121,15 +121,15 @@ Die Zahl der Grad-3-Anker in der Rest234691-Liste verteilt sich wie folgt:
 
 Beleg: [reduction_checks.json](../../results/c2_completeness_20261012/reduction_checks.json).
 Diese Teilmengenprüfung beweist noch nicht, dass jede Restliste **genau** das
-Komplement der vorherigen Musterabdeckung ist. Dafür sind Muster, Transport und
-Abdeckungsalgorithmus gesondert zu prüfen.
+Komplement der vorherigen Musterabdeckung ist. Diese gesonderte Prüfung ist inzwischen für den Abschnitt bis Rest234691 erfolgt;
+siehe die folgende Ergänzung. Für spätere Übergänge bleibt sie offen.
 
 ## 5. Offene Übergänge
 
 - Unabhängiges Review der neu hergeleiteten Encoderadäquanz und C4-/Profile46-Filterbindung.
   Die Formel-, Transport-, Census- und Belegprüfungen dazu sind abgeschlossen; die
   historischen Beweischecker und 2.170 externen Profile46-Beweise wurden nicht erneut geprüft.
-- Exakte Komplementbildung jeder historischen Coverage-Stufe, einschließlich Überschneidungen.
+- Exakte Komplementbildung der nachfolgenden Coverage-Stufen ab Rest234691; die vorangehenden Stufen sind inzwischen neu geprüft.
 - Korrekte Bindung der weiteren historischen Formeln und Kerne an die jetzt
   hergeleitete Adäquanz von F0/F46/F346 und an die tatsächlich verwendeten Variablen.
 - Durchgehende Bindung der früheren Zertifikate an die konkret transportierten Musteraussagen.
@@ -138,3 +138,14 @@ Abdeckungsalgorithmus gesondert zu prüfen.
 Ein erfolgreicher Abschluss der ersten vier Punkte würde den vollständigen
 Profil346-Ausschluss tragen. Der letzte Punkt ist zusätzlich für den allgemeinen
 C2-Satz erforderlich. Diese Punkte sind Prüfaufträge, keine festgestellten Fehler.
+
+## 6. Neuer vollständiger Audit bis Rest234691
+
+[Muster und Komplemente](../c2_coverage_audit_20261012/MUSTER_UND_KOMPLEMENTE.md)
+begründet den semantischen Transport partieller Muster, prüft den historischen
+Matcher im Quelltext und reproduziert sämtliche in Abschnitt 3 genannten
+Restlisten bis einschließlich Rest234691. Alle individuellen Mustertrefferzahlen
+stimmen ebenfalls. Die One3-/Two3-Restmengen entsprechen exakt den gebundenen
+Zertifikatsfallmengen. Alle sechs Generalize- und 86 Generalize2-Muster haben
+einen neu geprüften Formel-/Checkerbeleganschluss. Die historischen UNSAT-Prüfungen
+bleiben übernommen; es wurden keine Proofbytes erneut geprüft.

@@ -1,6 +1,6 @@
 # Involutionen im Conway-99-Problem: Rahmenreduktion und bedingte Profilausschlüsse
 
-**Arbeitsfassung 0.3 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
+**Arbeitsfassung 0.4 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
 
 ## Zusammenfassung und Aussagegrenze
 
@@ -298,3 +298,12 @@ keinen geschlossenen Beweis des Zielsatzes.
 - Referenzencoder: [ENCODER_BEWEIS.md](https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/docs/c2_reference_20260913/ENCODER_BEWEIS.md).
 - Totalizer: [THEOREM.md](https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/src/c2_counter_ab_20260916/THEOREM.md).
 - Unveränderte aktuelle Quellkopien und Herkunftshashes: [source_provenance.json](../../results/c2_completeness_20261012/source_provenance.json).
+
+## Eigene Fortsetzung: exakte Abdeckung bis Rest234691
+
+Die [Muster- und Komplementprüfung](../c2_coverage_audit_20261012/MUSTER_UND_KOMPLEMENTE.md)
+reproduziert jetzt alle Restlisten vom vollständigen Census bis zu genau
+234.691 Fällen bytegenau. Alle verwendeten Muster sind an ihre Formeln und
+historischen Checkerbelege gebunden; 1.373 Belegdatensätze wurden geprüft.
+Es gab keinen neuen Proof-Replay. Die nachfolgenden Übergänge bis Rest218
+und die niedrigen Ankergrade bleiben getrennte Aufgaben.

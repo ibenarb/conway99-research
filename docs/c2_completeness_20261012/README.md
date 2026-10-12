@@ -1,6 +1,6 @@
 # C2-Vollständigkeitsprüfung und Publikationsentwicklung
 
-Stand **12.10.2026**, Arbeitsfassung **0.3**. Ausschließlich der C2-Symmetriezweig.
+Stand **12.10.2026**, Arbeitsfassung **0.4**. Ausschließlich der C2-Symmetriezweig.
 Der allgemeine C2-Ausschluss ist **offen**.
 
 ## Einstieg
@@ -87,3 +87,12 @@ begründeter Ausschluss reduziert einen hypothetischen C2-Fall auf einen Minimum
 mit Grad 0, 1 oder 2. Hierzu gehören acht lokale Matchingtypen. Für diese Seite ist
 bislang keine vollständige Ausschlusskette lokalisiert. Die Veröffentlichung darf
 den allgemeinen C2-Satz erst beanspruchen, wenn auch dieser Übergang geschlossen ist.
+
+## Eigene Fortsetzung: exakte Abdeckung bis Rest234691
+
+Die [Muster- und Komplementprüfung](../c2_coverage_audit_20261012/MUSTER_UND_KOMPLEMENTE.md)
+reproduziert jetzt alle Restlisten vom vollständigen Census bis zu genau
+234.691 Fällen bytegenau. Alle verwendeten Muster sind an ihre Formeln und
+historischen Checkerbelege gebunden; 1.373 Belegdatensätze wurden geprüft.
+Es gab keinen neuen Proof-Replay. Die nachfolgenden Übergänge bis Rest218
+und die niedrigen Ankergrade bleiben getrennte Aufgaben.
