@@ -1,5 +1,10 @@
 # Conway 99 Research
 
+## C2-Vollständigkeitsprüfung — 12. Oktober 2026
+
+[Manuskript, Beweisregister und neue Censusprüfungen](docs/c2_completeness_20261012/README.md). Arbeitsfassung mit ausdrücklich offenen Beweispflichten; **kein allgemeiner C2-Ausschluss**.
+
+
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
 ## Kanonischer Stand

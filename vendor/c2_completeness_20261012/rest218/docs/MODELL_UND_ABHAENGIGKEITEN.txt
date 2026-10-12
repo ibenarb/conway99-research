@@ -1,0 +1,113 @@
+Conway99 C2 — Modell und Reichweite, 08.10.2026
+
+ERREICHTER STAND (aus geprüften Vorläufer-Metadaten)
+234691 Ausgangsprofile. seed_172_step_45: 228040 ausgeschlossen -> 6651.
+A=seed_042_step_44 und B=seed_172_step_49: Vereinigung 6245 -> 406.
+C=seed_172_step_47: weitere 188 -> 218. Insgesamt 234473 bedingt abgedeckt.
+C: LRAT, lrat-trim und cake_lpr; unabhängiger Coverage-Audit im C-Export.
+Die 218 Codes zerfallen in 181 Profile mit allen Ausgraden 3, 35 mit einem
+Ausgrad 4, zwei mit einem Ausgrad 6 (sonstige Ausgrade jeweils 3).
+Restliste SHA-256:
+ade2b458fbf77a272fa058eee97e49daf34f0de24e9fb37403e8a17dd18d87f5
+Gemeinsame Profilbasis F:
+33fc424d5e0ce00179a5abbde52c56b40e4e1fcbc272c36d595ef29354e3b030
+Der vollständige Verlauf hängt weiterhin von Census und früheren Ausschlüssen ab.
+"C4" meint hier einen Vierzyklus im gegenseitigen Ankergraphen, keine
+Automorphismenordnung 4.
+
+EIN-FIXPUNKT-LEMMA
+Sei G ein srg(99,14,1,2), sigma eine Involution mit genau einem Fixpunkt o.
+1. Für a in N(o) gilt a~sigma(a). Andernfalls hätten sie genau zwei gemeinsame
+Nachbarn. Einer ist o, der andere müsste unter sigma fix sein: Widerspruch.
+N(o) ist wegen lambda=1 die Vereinigung von sieben disjunkten Kanten.
+Beschrifte diese Paare mit (0,1),...,(12,13); sigma(a)=a XOR 1.
+2. Die 84 Nichtnachbarn von o haben jeweils genau zwei Nachbarn in N(o).
+Das sind keine gepaarten Nachbarn: solche teilen bereits o als einzigen
+gemeinsamen Nachbarn. Jedes ungepaarte Paar {a,b} hat genau einen weiteren
+gemeinsamen Nachbarn neben o. Dies liefert eine Bijektion der 84 Knoten mit
+den ungepaarten Zweiermengen. sigma wirkt darauf durch t({a,b})={a^1,b^1}.
+3. Für einen dieser Knoten x ist x nicht mit sigma(x) benachbart. Sonst wäre
+ihr einziger gemeinsamer Nachbar unter sigma fix, also o; o ist aber zu x
+nicht benachbart. Daher M[x,t(x)]=0. Auch M[x,x]=0 und M ist symmetrisch.
+Die Blockdarstellung B/C identifiziert ausschließlich durch diese Involution
+äquivalente Kanten. Die Wahl der 42 Vertreter ordnet Variablen, keine Lösungen.
+
+E1/E2/E3: NOTWENDIG UND HINREICHEND FÜR DIESE SPEZIFIKATION
+L_x ist das Zweierlabel von x, a*=a XOR 1. Für die 84x84-Matrix M gelten:
+E1: Sum_z M[x,z] = 12.
+E2: Sum_{z:a in L_z} M[x,z] = 2 - [a in L_x] - [a* in L_x].
+E3: Für x != y: Sum_z M[x,z]M[z,y] + M[x,y] = 2 - |L_x Schnitt L_y|.
+E1 gibt Grad 14 nach Hinzufügen der beiden Ankernachbarn. E2 zählt gemeinsame
+Nachbarn eines Ankers a und x, einschließlich des bekannten Partners a*.
+E3 zählt gemeinsame Nachbarn von x,y inklusive ihrer gemeinsamen Anker.
+Die Beziehungen o/Anker, o/Labelknoten und Anker/Anker sind schon durch den
+Frame korrekt. Deshalb ergeben diese Gleichungen zusammen mit dem festen
+Frame genau einen srg(99,14,1,2) mit der vorgeschriebenen Involution.
+
+S7-INVARIANZ AUF SPEZIFIKATIONSEBENE
+Eine Permutation der sieben Ankerpaare transportiert Labels und M-Einträge
+bijektiv, kommutiert mit t und erhält sämtliche Summen, Schnittgrößen und
+Festnullen in E1-E3. Die Einschränkung aller sieben Ausgrade auf {3,4,6} ist
+ebenfalls unter dieser Permutation invariant. Hilfsvariablen der Zählkodierung
+müssen nicht syntaktisch dieselbe Permutation besitzen: benötigt wird, dass
+die Projektion der CNF-Lösungen auf die primären Kanten genau diese Spezifikation
+darstellt. Deshalb sind Encoder-Provenienz und korrekte Zählkodierung Teil
+der Vertrauenskette; bloße Tests einiger Generatoren ersetzen das Lemma nicht.
+Partnerflips innerhalb eines Paares wirken auf die Ankerpfeile trivial:
+x_pq=M({2p,2q},{2p,2q+1}); Flip von q vertauscht die Enden, Flip von p ist
+nach Involutionsinvarianz dieselbe Kante. Auf Codes genügt daher S7, nicht
+eine zusätzliche 2^7-fache Enumeration.
+
+ENCODER-PROVENIENZ
+Die mitgelieferten alten Encoder erzeugten in dieser Umsetzung erneut die
+Totalizer-Basis mit SHA 7c105a67b0f7865f2ceec085ac9e5017213208e657e728381406323052acf3dd
+und F mit dem oben genannten identischen Hash. Reproduktionsskript:
+src/regenerate_base.py; Protokoll: evidence/base_regeneration.log.
+Das ist eine erfolgreiche deterministische Reproduktion, kein zweiter formal
+verifizierter Encoder und kein Nachweis der Census-Vollständigkeit.
+
+EXAKTPROFILE UND KERNE
+Ein Direktzertifikat beweist UNSAT(F AND U(D)), wobei U(D) alle 42 positiven
+oder negativen Anker-Units enthält. Durch das Invarianzlemma gilt der Ausschluss
+für die S7-Bahn dieses Codes.
+Die native Kernextraktion erzeugt H und einen Beweis für H, nicht notwendigerweise
+F AND U'. cake prüft H auf UNSAT. Ein separater Parser bestätigt klauselfürklausel
+H ist Teilformel von F vereinigt U', wobei U' eine Teilmenge der 42 Units ist.
+Somit impliziert F AND U' die unerfüllbare Formel H und ist ebenfalls UNSAT.
+Dies vermeidet eigenes Umschreiben von LRAT-IDs. Der Klausel-Teilformelprüfer,
+die Variablenzuordnung und die S7-Coverage sind explizite zusätzliche Glieder
+der Vertrauenskette; sie werden nicht durch cake allein verifiziert.
+Zwei getrennte Coverage-Algorithmen (Bitmengen-Schnitt versus permutierte
+Positiv-/Negativmasken je Code) müssen exakt dieselbe Restcode-Menge liefern.
+Sie teilen die aus variables.json gelesene Ankerzuordnung; die Formelerzeugung
+prüft diese zusätzlich durch unabhängige Rückabbildung aus Labels/B/C-Variablen.
+
+OFFENE VOLLSTÄNDIGKEITSKETTE K
+profile_346 ist eine geerbte Einschränkung und keine unmittelbare Konsequenz
+allein aus E1-E3. Ebenso fehlen hier die vollständige explizite Liste K der
+Censusfilter, deren Beweisreferenzen und die unabhängige Regeneration des
+gesamten 234691-Census unter genau diesen Bedingungen. Der vorhandene
+Restlistenhash ersetzt dies nicht. Frühere Ausschlussbeweise müssen jeweils
+an die richtige Basis und an gemeinsam zulässige Normalisierungen gebunden sein.
+Zusätzlich ist zu belegen, welche Fixpunktzahlen einer Involution möglich sind;
+das Ein-Fixpunkt-Lemma behauptet ausdrücklich nicht, jede Involution habe nur o.
+Der Hinweis des Reviewers auf Makhnev–Minakova ist noch kein geprüftes Zitat
+für diese Reduktion. Cesarz–Woldar allein schließen diese Lücke hier nicht.
+
+ERLAUBTE SCHLUSSFOLGERUNG BEI RESTZAHL 0
+Für alle 218 Restcodes besteht ein Direkt- oder geprüftes Kernzertifikat.
+Zusammen mit den korrekt gebundenen geerbten Ausschlüssen sind die S7-Bahnen
+der 234691 angegebenen Censuscodes unter der verwendeten Basis ausgeschlossen.
+Erst Census-Vollständigkeit unter bewiesenen Bedingungen rechtfertigt einen
+Ausschluss aller Profile dieser Spezifikation; erst die Fixpunktreduktion den
+Übergang zu sämtlichen C2-Automorphismen. C3 ist nicht Gegenstand dieses Laufs.
+
+REVIEWABGLEICH
+Übernommen: direkte Baseline, nachgeprüfte Kerne, SAT-Matrixprüfung, parallele
+Solver, externe Proofaufbewahrung, weiche Zeitmarken, unabhängige Coverage.
+Modifiziert: genau eine gemeinsame Prüfspur wegen gemessener trim-RSS bis
+18.275 GiB plus cake etwa 24.05 GiB; faire Stufenreihenfolge statt Proofgrößen-
+Priorisierung. Keine automatischen Kills/cgroup-Abbrüche. Tatsächliche RAM-/
+Plattenknappheit pausiert, kann aber ohne Benutzereingriff fortbestehen.
+Zur späteren Entscheidung: strukturelle Muster, inkrementelle Beweisführung,
+Cube-and-Conquer für Straggler, kleinerer cake-Heap nach eigenem Experiment.

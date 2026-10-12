@@ -1,0 +1,212 @@
+{
+  "project": "Conway_99",
+  "scope": "Nur C2-Symmetriezweig; Quellenverortung, kein neuer mathematischer Gesamtaudit",
+  "created_berlin": "2026-10-12",
+  "search_scope": {
+    "conversations": "Vier gezielte Suchabfragen über die zugängliche historische Kontextsuche: Gesamtkette, Git-Verortung, Census/C4/frühere Ausschlüsse, pfeilarme Matchingtypen. Treffer sind Suchauszüge, kein vollständiger Export aller Chats; Vollständigkeit sämtlicher Chatverläufe nicht nachgewiesen.",
+    "git": "Rekursive Dateibäume aller 38 sichtbaren Branchspitzen von ibenarb/conway99-research und beider Branchspitzen von ibenarb/conway99-review-exchange; keine abgeschnittenen Baumantworten. Zwei O3-Tags identifiziert. Nicht jeder historische Commit wurde vollständig gelesen; eine Committextsuche C2 lieferte trotz vorhandener C2-Dateien keine Treffer und wird nicht als Negativbeleg verwendet.",
+    "stored_files": "Titel- und Inhaltssuche; 16 ausgewählte C2-Archive/PYZ-Dateien geladen und inventarisiert, gezielte Originaldokumente und Programme gelesen.",
+    "computations": "Keine Solver oder Checker gestartet. Kein Zugriff auf Ryzen oder Office; ausschließlich Lese-, Hash- und Archivoperationen in der Arbeitsumgebung."
+  },
+  "primary_git_source": {
+    "branch": "reviews/20260919-c2",
+    "commit": "5a1d6108fab25e09eaeee99985879a6a388de560",
+    "files": [
+      {
+        "path": "docs/c2_spec_20260913/SPEZIFIKATION.md",
+        "purpose": "Fixpunktvoraussetzung, vollständiger Frame, E1/E2/E3, notwendige und hinreichende Modellgleichungen",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/docs/c2_spec_20260913/SPEZIFIKATION.md",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "docs/c2_reference_20260913/ENCODER_BEWEIS.md",
+        "purpose": "Projektionskorrektheit des BDD-Referenzencoders, Haupt-/Hilfsvariablen und feste Nullen",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/docs/c2_reference_20260913/ENCODER_BEWEIS.md",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "src/c2_matching_20260915/THEOREM.md",
+        "purpose": "Gemeinsame zulässige Umbenennung; vollständige elf lokale Matchingtypen",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/src/c2_matching_20260915/THEOREM.md",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "src/c2_counter_ab_20260916/THEOREM.md",
+        "purpose": "Korrektheitsargument für die später verwendete Totalizer-Variante",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/src/c2_counter_ab_20260916/THEOREM.md",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "src/c2_reference_20260913/c2_reference.py",
+        "purpose": "Byteidentisch zum Rest218 legacy/c2_reference.py",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/src/c2_reference_20260913/c2_reference.py",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "src/c2_counter_ab_20260916/counter.py",
+        "purpose": "Byteidentisch zum Rest218 legacy/counter.py",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/src/c2_counter_ab_20260916/counter.py",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      },
+      {
+        "path": "docs/c2_spec_20260913/LITERATURABGLEICH.md",
+        "purpose": "Früher Literaturstand, ausdrücklich damalige Abrufgrenzen",
+        "url": "https://github.com/ibenarb/conway99-research/blob/5a1d6108fab25e09eaeee99985879a6a388de560/docs/c2_spec_20260913/LITERATURABGLEICH.md",
+        "status": "Inhalt gelesen; kein neuer vollständiger Korrektheitsbeweis in dieser Quellenverortung"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "topic": "Ein-Fixpunkt-Literaturanschluss und Frame",
+      "file": "C2_RAHMEN_UND_OFFICE_EXPERIMENT_20260922.md",
+      "library_file_id": "libfile_858ecc66a2608191ad315b0832f3773b",
+      "status": "Volltext gelesen",
+      "details": "Dokument korrigiert ältere Reichweiteneinschätzung ausdrücklich. Verweist auf Makhnev–Minakova, Theorem 1, Originalseiten 96 und 100–101; verbindet den Fixpunktsatz mit 1+14+84, 42 Außenpaaren und festen Nullen. Originalpublikation in dieser Quellenverortung nicht erneut geprüft.",
+      "also_in": "Conway99_C2_AnchorProfile_1.0.0.pyz: payload/RAHMEN_UND_EXPERIMENT.md; payload/frame_audit.py",
+      "literature": [
+        "https://m.mathnet.ru/php/getFT.phtml?jrnid=dm&option_lang=eng&paperid=144&what=fullt",
+        "https://www.math.uni-bielefeld.de/~baumeist/sommerschule/makhnev.pdf"
+      ]
+    },
+    {
+      "topic": "Gemeinsame Normalisierungen / globale Ankerwahl",
+      "file": "C2_SYNTHESE_UND_FORTSETZUNG_20260922.md",
+      "library_file_id": "libfile_9123515d66c081919303d5f16c7b75ba",
+      "status": "Volltext gelesen",
+      "details": "Rahmengruppe, Wahl eines Ankers minimalen Grades, semantischer Transport, Einschränkung der Aussage zu Hilfsvariablen; ältere Fixpunktwarnung wurde im separaten Rahmendokument später am selben Tag korrigiert."
+    },
+    {
+      "topic": "Tatsächlich ausgelieferte Rest218-Quellen",
+      "file": "Conway99_C2_Rest218_1.0.0_install.pyz",
+      "library_file_id": "libfile_6a045cee11808191a829d3f0dc4c85d9",
+      "members": [
+        "payload/docs/MODELL_UND_ABHAENGIGKEITEN.txt",
+        "payload/docs/VALIDIERUNG.txt",
+        "payload/legacy/model.py",
+        "payload/legacy/c2_reference.py",
+        "payload/legacy/counter.py",
+        "payload/legacy/anchor_profile.py",
+        "payload/src/regenerate_base.py",
+        "payload/src/cases.py",
+        "payload/src/rest.py",
+        "payload/src/independent_coverage.py",
+        "payload/inputs/remaining_218.tsv",
+        "payload/MANIFEST.json"
+      ],
+      "status": "Alle 29 im enthaltenen Quellenmanifest aufgeführten Dateien SHA-256-geprüft; alle stimmen. Modellbeschreibung e1b58e09d671f1e3db134a95474fe56223b307add8a2ac21744062eb11a4b40d stimmt auch zum Manifest im Abschluss-Coveragepaket."
+    },
+    {
+      "topic": "C4-Originalbeweis und unabhängiger Office-Checkerbeleg",
+      "file": "Conway99_C2_Profile46Cert_1.0.0.pyz",
+      "library_file_id": "libfile_72619252c4f48191a8605c6565c071b0",
+      "members": [
+        "bi_c4_seed0.drat.gz",
+        "count46.c",
+        "coverage.py",
+        "cubes46.txt"
+      ],
+      "receipt_file": "C2_Profile46Cert_1.0.0_final_results.tar.gz",
+      "receipt_library_file_id": "libfile_0c5e2a60b33081918084dddc17b0f70d",
+      "receipt_member": "work/c4_certificate.json",
+      "status": "Beweisbytes vorhanden; komprimierten und dekomprimierten SHA-256 neu berechnet und mit gespeichertem Checkerbeleg übereinstimmend. Kein erneuter DRAT-Check.",
+      "formula_sha256": "9c38a75f8d9495dedea857f527f2fca5a2e860732eb8e3674356755eca0e3877",
+      "gzip_sha256": "00c83798645d151c85ca0a6518030b716612f2171e04c58c0c60f73e8569d426",
+      "raw_sha256": "ef350125025ee174abaf627042274ec8aa84e62f8185877d501b09926617c820",
+      "gzip_bytes": 52684894,
+      "raw_bytes": 137404285,
+      "office_path": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/bi_c4_seed0.drat.gz"
+    },
+    {
+      "topic": "Ursprünglicher Profile346-Census",
+      "file": "C2_Profile346Pilot_1.0.1_results.tar.gz",
+      "library_file_id": "libfile_09f393f61b90819190f32da8d719bcbc",
+      "members": [
+        "README.md",
+        "enumerate.cpp",
+        "census.py",
+        "expected_census.json",
+        "test_enumeration.py",
+        "profile46_dependency.json",
+        "work/enumeration/census.json"
+      ],
+      "installer": "Conway99_C2_Profile346Pilot_1.0.1.pyz",
+      "installer_library_file_id": "libfile_9459dd91ad4081918ad361fc440c2bb4",
+      "reported_orbits": 7388648,
+      "reported_labelled": 37030041152,
+      "degree_profiles": 28,
+      "scope": "C4-freie gerichtete Ankergraphen auf sieben Klassen; alle Ausgrade in {3,4,6}, mindestens ein Ausgrad 3",
+      "status": "Quellen und Censusbericht gefunden; Vollständigkeitsargument im README gelesen. Gesamte Enumeration nicht wiederholt. Vollständige Vertreterdatei und TSV-Teildateien fehlen im kompakten Ergebnisarchiv.",
+      "representatives_sha256": "d003dd431ce506b0bbf936441b970cf80d99027e7d35219b26763312bffbb538",
+      "office_path_from_code": "/home/rb/conway99_workspace/Conway99_C2_Profile346Pilot_1.0.1/work/enumeration/representatives.tsv"
+    },
+    {
+      "topic": "Frühere Coverage-Stufen",
+      "files": [
+        "C2_Generalize_1.0.1_results.tar.gz",
+        "C2_One3Cert_1.0.0_results.tar.gz",
+        "C2_Review_20261001_flat.zip",
+        "C2_Ryzen_Uebergabe_20261001_flat.zip"
+      ],
+      "details": "Generalize-Quellen und Coveragebericht; One3 Quellen, 1032 Zertifikatsmetadaten und Checkerlogs; Oktober-1-Pakete enthalten Generalize2- und Two3-Quellen/Belege sowie FILE_INDEX.json zur Rückabbildung der flachen Archivnamen. Vollständige alte Proofbytes nicht in diesen kompakten Exporten.",
+      "status": "Inventar und ausgewählte Quellen/Belege gelesen, keine vollständige erneute frühere Coverage-Prüfung",
+      "office_roots": [
+        "/home/rb/conway99_workspace/Conway99_C2_Generalize_1.0.1",
+        "/home/rb/conway99_workspace/Conway99_C2_One3Cert_1.0.0",
+        "/home/rb/conway99_workspace/Conway99_C2_Generalize2_1.0.0",
+        "/home/rb/conway99_workspace/Conway99_C2_Generalize2_1.0.1",
+        "/home/rb/conway99_workspace/Conway99_C2_Two3Cert_1.0.0"
+      ],
+      "version_note": "Generalize2 1.0.1 verwendet laut README weiterhin das work-Verzeichnis von Generalize2 1.0.0."
+    },
+    {
+      "topic": "Liste 234691 und spätere Coverage",
+      "files": [
+        "C2_Ryzen_Uebergabe_20261001_flat.zip",
+        "C2_Fortsetzung_C_Quellen.tar.gz"
+      ],
+      "members": [
+        "remaining_234691.tsv",
+        "inputs/remaining_234691.tsv",
+        "inputs/remaining_6651.tsv",
+        "legacy/coverage.cpp",
+        "src/independent_coverage.py"
+      ],
+      "status": "234691 Datenzeilen plus Header; beide gefundenen Ausgangslisten byteidentisch per SHA-256. Kompakte C-Quellen enthalten auch die früher angefragte coverage.cpp.",
+      "sha256": "3c4155233a8969ecbaa8dec288491aced9034b9af6ea606971f5c6c74c0074fb"
+    }
+  ],
+  "interpretation": {
+    "K": "Die Rest218-Modellbeschreibung verwendet K als noch vollständig zu dokumentierende Gesamtheit der Censusfilter samt Beweisreferenzen. Dies ist nicht ohne weiteres die ebenfalls K genannte 14x14-Matchingmatrix in der alten Spezifikation.",
+    "existing_derivations": "Die mathematischen Grundherleitungen sind nicht pauschal unauffindbar. Frühere Warnungen vom Oktober müssen mit der bereits vorhandenen September-Dokumentation abgeglichen werden.",
+    "scope_profile346": "Der Profile46-README erklärt d=0,1,2,3 zu diesem historischen Stand ausdrücklich für offen. Das Rahmendokument/Synthese behandelt profile_346 als verschachtelte Profilfamilie. In den hier gefundenen Quellen kein belegter späterer globaler Ausschluss der pfeilarmen Typen d=0,1,2. Das ist eine zu klärende Reichweitenfrage und kein neu festgestellter Fehler der Rest218-Zertifikate."
+  },
+  "remaining_requests": [
+    {
+      "priority": 1,
+      "host": "Office",
+      "need": "Aktuelle Existenz und Verortung der vollständigen representatives.tsv und der Census-Shards im Profile346Pilot_1.0.1; danach ggf. gezielter Export.",
+      "why": "Quellen, Sollhash und Abschlussbericht vorhanden, komplette ursprüngliche Datenbytes hier noch nicht vorhanden."
+    },
+    {
+      "priority": 2,
+      "host": "Office",
+      "need": "Beweisverzeichnisse von Profile46, Generalize, One3, Generalize2 und Two3 zunächst nur inventarisieren.",
+      "why": "Kompakte Belege vorhanden; für spätere vollständige Replay-/Aufbewahrungsprüfung müssen erhaltene Proofbytes verortet werden."
+    },
+    {
+      "priority": 3,
+      "host": "Ryzen",
+      "need": "Vorerst kein vollständiger neuer Baum erforderlich; bekannte Rest218- und C-Pfade genügen für die nächste Dokumentprüfung.",
+      "why": "Aktuelle Quellen wurden in gespeicherten Originalpaketen gefunden."
+    }
+  ],
+  "limits": "Quellenverortung und ausgewiesene Integritätsvergleiche sind keine abgeschlossene mathematische Vollständigkeitsprüfung; weiterhin kein allgemeiner C2-Ausschluss.",
+  "verified_source_hashes": {
+    "legacy/c2_reference.py": "3a88f356831a4f955c79639bfe86aac5eea2a80febdd676cbd1009e86f1e9b29",
+    "legacy/counter.py": "b9d97c440585d65799108a31ed42615de3f6821f34b32aafceae6f34a4c722dd",
+    "legacy/anchor_profile.py": "327d85c9b1dbd73aceab770fdb34f96abb056955fc12206ff984ee7fd0fb91fd",
+    "legacy/model.py": "370cb2766e78b19112ce4c92f8f1099b4053c80faa4020491cfbf00303888640"
+  },
+  "snapshot_note": "Historical source-location snapshot from the morning of 2026-10-12. Later status supersedes it: representative list recovered and audited; MM04 statement checked in original scan."
+}

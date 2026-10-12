@@ -1,0 +1,82 @@
+{
+  "archive_bytes": 34232779,
+  "archive_name": "C2_Profile346_Census_20261012_134101.zip",
+  "archive_sha256": "ae0176151802470715a8704d614d3e6ef4c9637ffbe9fdad5eac1bd994f327c7",
+  "audit_source_sha256": {
+    "audit_census.py": "112dc74651bfbb5395025db5706c27aa81920fa259e8930f4aa1f3c91601fbc0",
+    "validate_records.cpp": "8ebd7f656eb3ba0b2bf487ad99338696ff41810cc561044feaeea0c92551e540"
+  },
+  "checked_at": "2026-10-12T13:54:32.387987+02:00",
+  "checks": {
+    "all_28_profile_counts_and_stored_aut_weight_sums_match_both_json_files": true,
+    "all_codes_distinct": true,
+    "all_decoded_degree_sequences_match_records": true,
+    "all_degrees_in_3_4_6_with_at_least_one_3": true,
+    "all_mutual_edge_counts_match_records": true,
+    "all_mutual_graphs_have_no_four_cycle": true,
+    "all_rows_parse_and_codes_fit_42_bits": true,
+    "all_stored_automorphism_orders_positive_divisors_of_5040": true,
+    "all_stratum_labels_match_decoded_graphs": true,
+    "all_stratum_populations_match_census_json": true,
+    "label_multiplier_arithmetic_matches": true,
+    "representatives_hash_matches_prior_evidence": true,
+    "zip_crc_and_expected_members": true
+  },
+  "degree_profiles_nonempty": 18,
+  "degree_profiles_total": 28,
+  "distinct_codes": 7388648,
+  "documentation_note": "README heading says 1.0.0; installation path, export name and correction section say 1.0.1. README bytes equal earlier 1.0.1 result export.",
+  "files": {
+    "README.md": {
+      "bytes": 8992,
+      "sha256": "a481d54ad30433ff391fcb5862b2fd8e467a8493ca5a228dc4ddd63626372511"
+    },
+    "expected_census.json": {
+      "bytes": 4751,
+      "sha256": "bb4bc92dab769eb00b0c313cef64459e6e06ec0bc1438db6153af1b54a74d232"
+    },
+    "work/enumeration/census.json": {
+      "bytes": 42655,
+      "sha256": "cfeeeb207989b23a15ae4c668ee8007382a313ab5ab05e1e1676c2a7f4efbc7a"
+    },
+    "work/enumeration/representatives.tsv": {
+      "bytes": 279171105,
+      "sha256": "d003dd431ce506b0bbf936441b970cf80d99027e7d35219b26763312bffbb538"
+    }
+  },
+  "historical_archive_name": "C2_Profile346Pilot_1.0.1_results.tar.gz",
+  "historical_archive_sha256": "58ec61c185e33af44176381a049f3a7310c30202497d48cc6f0582a59fad507e",
+  "historical_companion_comparison": {
+    "README.md": true,
+    "expected_census.json": true,
+    "work/enumeration/census.json": true
+  },
+  "limitations": [
+    "No fresh exhaustive enumeration of all admissible directed graphs.",
+    "No fresh isomorphism or automorphism-order computation; exact code uniqueness is checked.",
+    "Orbit-weight sums use the automorphism orders stored in the TSV.",
+    "No fresh SAT solver or UNSAT certificate checking.",
+    "No proof here of mathematical admissibility of census filters or general C2 exclusion."
+  ],
+  "records": 7388648,
+  "result": "PASS",
+  "scope": "C4-free arrow digraphs with degrees in {3,4,6} and at least one degree 3; NOT SAT solutions.",
+  "stored_aut_weight_sum": 37030041152,
+  "stored_automorphism_order_histogram": {
+    "1": 7307109,
+    "10": 1,
+    "12": 39,
+    "18": 1,
+    "2": 78945,
+    "21": 1,
+    "24": 4,
+    "3": 281,
+    "36": 2,
+    "4": 2113,
+    "5": 1,
+    "6": 100,
+    "7": 3,
+    "8": 48
+  },
+  "strata_nonempty": 37
+}
