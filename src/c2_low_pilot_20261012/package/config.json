@@ -1,35 +1,37 @@
 {
-    "version": "C2_LOW_Pilot_1.0.0",
-    "solver_target_cpu_s": 1800,
-    "checker_target_cpu_s": 3600,
-    "aux_target_cpu_s": 86400,
-    "poll_s": 2,
-    "status_s": 600,
-    "checkpoint_s": 10,
-    "min_ram_gib": 8,
-    "min_disk_gib": 30,
-    "max_proof_gib": 40,
-    "rss_pause_gib": {
-        "solver": null,
-        "checker": null,
-        "aux": null
-    },
-    "admission_ram_gib": {
-        "solver": 4,
-        "checker": 4,
-        "aux": 2
-    },
-    "cake_heap_mb": 8192,
-    "cake_stack_mb": 512,
-    "timezone": "Europe/Berlin",
-    "rss_warning_gib": {
-        "solver": 12,
-        "checker": 36,
-        "aux": 12
-    },
-    "proof_warning_gib": 220,
-    "resource_policy": "CPU load never blocks; time targets request only; actual RAM/disk shortages pause without killing",
-    "loop_s": 1,
-    "solver_slots": 2,
-    "checker_slots": 1
+  "version": "C2_LOW_Pilot_1.0.1",
+  "solver_target_cpu_s": 1800,
+  "checker_target_cpu_s": 3600,
+  "aux_target_cpu_s": 86400,
+  "poll_s": 2,
+  "status_s": 600,
+  "checkpoint_s": 10,
+  "min_ram_gib": 8,
+  "min_disk_gib": 30,
+  "max_proof_gib": null,
+  "rss_pause_gib": {
+    "solver": null,
+    "checker": null,
+    "aux": null
+  },
+  "admission_ram_gib": {
+    "solver": 4,
+    "checker": 4,
+    "aux": 2
+  },
+  "cake_heap_mb": 8192,
+  "cake_stack_mb": 512,
+  "timezone": "Europe/Berlin",
+  "rss_warning_gib": {
+    "solver": 12,
+    "checker": 36,
+    "aux": 12
+  },
+  "proof_warning_gib": 220,
+  "resource_policy": "CPU load never blocks; time targets request only; actual RAM/disk shortages pause without killing",
+  "loop_s": 1,
+  "solver_slots": 2,
+  "checker_slots": 1,
+  "heartbeat_s": 900,
+  "observer_poll_s": 2
 }

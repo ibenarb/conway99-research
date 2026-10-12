@@ -5,6 +5,7 @@ import sys
 import time
 from pathlib import Path
 from common import alive, host, identity, lock, log_has, proc, read, require, save, sha
+from monitor import emit
 from encode import ROOT, model_values, verify_full, verify_x
 
 
@@ -67,6 +68,8 @@ def run(stage):
     cache = set()
     checked_formulas = set()
     last = 0
+    reported_states = {}
+    emit(work, 'STAGE_STARTED', stage=stage, tasks=len(tasks))
     try:
         while True:
             require(not (work / 'STOP').exists(), 'EXPLICIT_STOP')
@@ -99,16 +102,19 @@ def run(stage):
                 if not solved:
                     states[ident] = 'SOLVING' if (jobs / solve_id).exists() else 'PENDING'
                     if states[ident] == 'SOLVING' or active(jobs, 'solver') < config['solver_slots']:
-                        submit(solve_id, [ROOT / 'bin/solver', '--seed=0', '--lrat=1', formula, proof], 'solver',
+                        submit(solve_id, [ROOT / 'bin/solver', '--seed=0', '--report=true', '--lrat=1', formula, proof], 'solver',
                                [formula, ROOT / 'bin/solver'], [proof], config)
                     continue
                 if solved['returncode'] == 10:
+                    emit(work, 'MODEL_CHECK_STARTED', task=ident)
                     values = model_values(solved['log']['path'])
                     verdict = verify_x(values, meta['root'], meta) if t['mode'] == 'X' else verify_full(values, meta['root'], t['mode'])
                     save(directory / 'verdict.json', {**verdict, 'formula': identity(formula), 'solver_receipt': identity(jobs / solve_id / 'result.json')})
                     states[ident] = verdict['status']
+                    emit(work, verdict['status'], task=ident)
                     if verdict['status'] == 'GRAPH_VERIFIED':
                         save(work / 'FOUND_GRAPH.json', {**verdict, 'task': ident})
+                        emit(work, 'FOUND_GRAPH', task=ident, verified=True)
                         return
                     continue
                 require(solved['returncode'] == 20, 'SOLVER_UNKNOWN_OR_ERROR: ' + ident)
@@ -121,12 +127,19 @@ def run(stage):
                                f"--CML_STACK_SIZE={config['cake_stack_mb']}", formula, proof], 'checker',
                                [formula, proof, ROOT / 'bin/cake'], [], config)
                     continue
-                require(checked['returncode'] == 0 and log_has(checked['log']['path'], 's VERIFIED UNSAT'), 'PROOF_NOT_VERIFIED')
+                valid = checked['returncode'] == 0 and log_has(checked['log']['path'], 's VERIFIED UNSAT')
+                emit(work, 'CHECKER_SUCCESS' if valid else 'CHECKER_FAILURE', task=ident, returncode=checked['returncode'])
+                require(valid, 'PROOF_NOT_VERIFIED')
                 save(directory / 'verdict.json', {'status': 'UNSAT_CERTIFIED', 'task': t,
                      'scope': 'Necessary X model exclusion' if t['mode'] == 'X' else 'Normalized full-model case exclusion',
                      'formula': identity(formula), 'solver_receipt': identity(jobs / solve_id / 'result.json'),
                      'checker_receipt': identity(jobs / check_id / 'result.json')})
                 states[ident] = 'UNSAT_CERTIFIED'
+                emit(work, 'UNSAT_CERTIFIED', task=ident)
+            for ident, phase in states.items():
+                if reported_states.get(ident) != phase:
+                    emit(work, 'CASE_PHASE', task=ident, previous=reported_states.get(ident), phase=phase)
+            reported_states = dict(states)
             done = all(s in ('UNSAT_CERTIFIED', 'INTERFACE_VERIFIED_ONLY') for s in states.values())
             state = {'status': 'STAGE_COMPLETE' if done else 'RUNNING', 'stage': stage, 'tasks': states,
                      'controller': proc(os.getpid()), 'updated_unix': time.time(), 'ETA': None,
@@ -136,9 +149,11 @@ def run(stage):
                 print('LOW_STATUS', state, flush=True)
                 last = time.monotonic()
             if done:
+                emit(work, 'STAGE_COMPLETE', stage=stage, tasks=len(tasks))
                 return
             time.sleep(config['poll_s'])
     except BaseException as error:
+        emit(work, 'CONTROLLER_ERROR', error=repr(error))
         save(work / 'controller_error.json', {'error': repr(error), 'time': time.time(),
              'note': 'Existing detached supervisors continue or preserve their child; no automatic restart.'})
         raise

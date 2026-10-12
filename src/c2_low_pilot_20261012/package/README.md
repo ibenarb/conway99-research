@@ -1,4 +1,4 @@
-# C2 LOW Pilot 1.0.0
+# C2 LOW Pilot 1.0.1
 
 Dieses Paket bereitet 72 Aufgaben vor: 32 vollständige R-Fälle, dieselben 32
 notwendigen X-Modelle und acht vollständige MIN-Vergleichsfälle. Es ist keine
@@ -6,7 +6,7 @@ vollständige Ausschlusskampagne für die 3.152 LOW-Wurzeln.
 
 ## Installation und erster Schritt
 
-Der Installer installiert nach ~/conway99_workspace/C2_LOW_Pilot_1.0.0,
+Der Installer installiert nach ~/conway99_workspace/C2_LOW_Pilot_1.0.1,
 prüft Dateihashes, entpackt die festgelegte F0-Basis, erzeugt die 72 Formeln
 und führt die Kontrollsuite aus. Er startet keine Pilotaufgaben.
 Eine bestehende Installation wird nicht überschrieben.
@@ -62,7 +62,8 @@ Voreinstellung: zwei Solver, ein Checker. cake erhält 8 GiB Heap plus 512 MiB S
 Start-/Laufzeitwächter berücksichtigen freien Linux-RAM, unter WSL zusätzlich
 freien physischen Windows-RAM, Linux-Platte und freien Platz auf Windows C.
 Reserve: 8 GiB RAM, 30 GiB Platte. Bei Ressourcenmangel werden Kinder pausiert;
-bei Erholung fortgesetzt. 40 GiB Proofdaten pro Job lösen eine Prüf-Pause aus.
+bei Erholung fortgesetzt. Keine pauschale Proofgrößen-Abbruch- oder Pausengrenze;
+physischer freier Speicher bleibt maßgeblich, große Proofs lösen Informationsmeldungen aus.
 Keine CPU-Auslastungssperre und kein Zugriff auf andere bestehende Forschungsprozesse.
 
 Solver-Zielzeit 1.800 CPU-Sekunden, Checker-Zielzeit 3.600: Das sind Meldepunkte,
@@ -72,7 +73,26 @@ keine Laufzeitprognose und keine Abbruchgrenze. Ohne Antwort läuft der Job weit
 Ein pausenbedingter Dauerstillstand ist im Status mit Ursache sichtbar.
 
 `status` zeigt Aufgaben, aktive Jobs, CPU, Ressourcenpausen und Verlängerungsanfragen.
-Status- und Ressourcendaten werden laufend geschrieben; Herzschlag alle zehn Minuten.
+`start` öffnet automatisch die Liveansicht; `watch` verbindet sie erneut.
+Strg+C oder das Schließen des Terminals beendet nur die Ansicht, nicht Controller,
+Supervisoren oder den getrennten Beobachter. `start --detach` startet ohne Ansicht.
+Von Anfang an erscheint alle 15 Minuten ein Heartbeat, auch ohne neue Ergebnisse.
+Er nennt erledigte/offene/aktive Aufgaben, Wand- und CPU-Zeit, Änderungen seit dem
+vorherigen Heartbeat, Proofwachstum und gescannte Proofzähler (mit Scanrückstand),
+I/O-Aktivität, native Solver-Logzeilen, RAM/RSS, physischen freien Plattenplatz,
+Swap, Linux-Speicherdruck, Pausen und veraltete Telemetrie.
+Start, Phasenwechsel, SAT vor Prüfung, UNSAT vor Zertifizierung, Prüfstart und
+Prüfergebnis, verifizierte Modelle, Fehler sowie Budget- und Pausenänderungen werden
+unverzüglich protokolliert und in der Ansicht ausgegeben (typisch binnen 2 Sekunden).
+Ereignisse stehen dauerhaft in work/events.jsonl; Heartbeats in work/heartbeat.json.
+Der Pilot erzeugt derzeit keine adaptiven Teilbranches. Es werden deshalb keine
+fiktiven Branch-Ereignisse gemeldet. Interne SAT-Entscheidungen erscheinen nur in
+den nativen zusammengefassten Berichten, soweit der Solver sie ausgibt.
+Jeder Heartbeat weist eine unbekannte Abschluss-ETA mit Begründung und dem nächsten
+Kontrollzeitpunkt aus. CPU, Proofbytes und Checker-I/O beweisen Aktivität, keine
+bekannte Restarbeit. Für die endliche Formelvorbereitung gibt es eine ausdrücklich
+grobe Phasenhochrechnung. Eine unbekannte SAT-Laufzeit wird nicht aus den schneller
+abgeschlossenen Fällen hochgerechnet.
 Eine belastbare Fund- oder Abschluss-ETA wird nicht erfunden.
 `export` erzeugt ein Diagnose-ZIP mit Metadaten und Logs, ohne große CNF-/Proofdateien.
 Die Originalbeweise und Formeln bleiben lokal erhalten.
@@ -94,3 +114,11 @@ Historische Kosten: evidence/historical_costs.json, ausschließlich protokollier
 abgeschlossene Jobs einschließlich Mehrfachversuchen; keine LOW-Laufzeitprognose.
 Konfliktzahlen fehlen in den hier vorhandenen Metadaten, da die entsprechenden
 Textlogs nicht mit vorliegen. Fehlende Werte werden nicht geschätzt.
+
+## Änderung 1.0.1
+
+Nur Laufzeitüberwachung und Bedienung wurden erweitert. Alle 72 Formelhashes
+müssen mit 1.0.0 übereinstimmen. Keine historischen hohen Typen werden neu gerechnet.
+Die verbindlichen Rechenregeln liegen in MONITORING_POLICY.md. Diese Release erfüllt
+die dort für 1.0.0 noch als fehlend bezeichneten Punkte. Die Installation erzeugt
+einen eigenen Versionsordner; vorhandene Installationen bleiben erhalten.

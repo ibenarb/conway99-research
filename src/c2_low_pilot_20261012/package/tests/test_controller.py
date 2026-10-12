@@ -43,6 +43,9 @@ class ControllerTest(unittest.TestCase):
             self.assertEqual(read(root / 'work/status.json')['status'], 'STAGE_COMPLETE')
             for task in tasks:
                 self.assertEqual(read(root / 'work/cases' / task['id'] / 'verdict.json')['status'], 'UNSAT_CERTIFIED')
+            events = [json.loads(line) for line in (root / 'work/events.jsonl').read_text().splitlines()]
+            kinds = {e['event'] for e in events}
+            self.assertTrue({'UNSAT_UNCERTIFIED', 'CHECKER_SUCCESS', 'UNSAT_CERTIFIED', 'STAGE_COMPLETE'} <= kinds)
             second = subprocess.run(command, capture_output=True, text=True, timeout=30)
             self.assertEqual(second.returncode, 0, second.stdout + second.stderr)
             # A changed proof must invalidate re-entry rather than reuse verdict.

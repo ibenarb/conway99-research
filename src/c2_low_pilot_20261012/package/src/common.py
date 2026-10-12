@@ -75,7 +75,11 @@ def proc(pid):
                 return None
         data = Path(f'/proc/{actual}/stat').read_text()
         fields = data[data.rfind(')') + 2:].split()
-        return {'pid': pid, 'birth': fields[19], 'state': fields[0],
+        try:
+            io = {k: int(v) for k,v in (line.split(':') for line in Path(f'/proc/{actual}/io').read_text().splitlines())}
+        except OSError:
+            io = {}
+        return {'io': io, 'pid': pid, 'birth': fields[19], 'state': fields[0],
                 'boot': Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
                 'namespace': os.readlink('/proc/self/ns/pid'),
                 'cpu_s': (int(fields[11]) + int(fields[12])) / os.sysconf('SC_CLK_TCK'),
@@ -100,6 +104,7 @@ def host(work):
     if wsl and not Path('/mnt/c').is_mount():
         raise RuntimeError('WSL Windows C mount missing; cannot monitor physical disk')
     linux_ram = int(values['MemAvailable'].split()[0]) * 1024 / GIB
+    linux_available = linux_ram
     if wsl:
         import subprocess
         if time.monotonic() - _windows_cache[0] > 10:
@@ -109,7 +114,20 @@ def host(work):
                 capture_output=True, text=True, timeout=8, check=True)
             _windows_cache[:] = [time.monotonic(), int(result.stdout.strip()) * 1024 / GIB]
         linux_ram = min(linux_ram, _windows_cache[1])
+    vm = dict(line.split() for line in Path('/proc/vmstat').read_text().splitlines())
+    pressure = {}
+    try:
+        for line in Path('/proc/pressure/memory').read_text().splitlines():
+            parts = line.split()
+            pressure[parts[0]] = dict(x.split('=') for x in parts[1:])
+    except OSError:
+        pressure = {'unavailable': True}
     return {'available_ram_gib': linux_ram,
+            'linux_available_ram_gib': linux_available,
+            'windows_available_ram_gib': _windows_cache[1] if wsl else None,
+            'swap_used_gib': (int(values['SwapTotal'].split()[0]) - int(values['SwapFree'].split()[0])) * 1024 / GIB,
+            'swap_in_pages': int(vm.get('pswpin', 0)), 'swap_out_pages': int(vm.get('pswpout', 0)),
+            'memory_pressure': pressure,
             'linux_free_gib': shutil.disk_usage(work).free / GIB,
             'windows_c_free_gib': shutil.disk_usage('/mnt/c').free / GIB if wsl else None,
             'loadavg': list(os.getloadavg()), 'logical_cpus': os.cpu_count()}

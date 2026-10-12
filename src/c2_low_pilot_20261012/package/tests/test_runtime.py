@@ -64,6 +64,8 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(result['returncode'], 0)
         self.assertIsNone(result['reason'])
         self.assertGreater(result['cpu_seconds'], 0.7)
+        rows = [json.loads(line) for line in (self.root/'work/events.jsonl').read_text().splitlines()]
+        self.assertTrue(any(e.get('budget_request') for e in rows))
 
     def test_extend_and_explicit_zero(self):
         self.launch(seconds=20)
@@ -91,6 +93,10 @@ class RuntimeTests(unittest.TestCase):
         self.process.wait(timeout=10)
         self.assertEqual(read(self.job / 'result.json')['returncode'], 0)
         self.assertGreaterEqual(read(self.job / 'result.json')['resource_pause_events'], 1)
+        rows = [json.loads(line) for line in (self.root/'work/events.jsonl').read_text().splitlines()]
+        phases = [e.get('phase') for e in rows]
+        self.assertIn('RESOURCE_PAUSED', phases)
+        self.assertIn('RUNNING', phases[phases.index('RESOURCE_PAUSED')+1:])
 
     def test_supervisor_failure_preserves_child(self):
         self.launch(seconds=30, target=100)

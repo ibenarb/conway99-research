@@ -9,6 +9,7 @@ import sys
 import time
 
 from progress import ProofCounter
+from monitor import emit
 from common import GIB, alive, busy_cpu, cpu_clock, host, identity, lock, proc, read, require, save
 
 
@@ -51,6 +52,20 @@ def run(directory):
     spec = read(directory / 'spec.json')
     root = Path(spec['root'])
     work = root / 'work'
+    previous_event_state = None
+    def checkpoint(record):
+        nonlocal previous_event_state
+        key = (record.get('phase'), record.get('control_sequence'), record.get('time_extension_request'),
+               tuple(record.get('resource_reasons', [])), tuple(record.get('resource_warnings', [])))
+        save(directory / 'state.json', record)
+        if key != previous_event_state:
+            emit(work, 'JOB_STATE', job=spec['id'], phase=record.get('phase'),
+                 category=spec['category'], cpu_s=record.get('cpu_s'),
+                 target_cpu_s=record.get('target_cpu_s'), control_sequence=record.get('control_sequence'),
+                 budget_request=record.get('time_extension_request'),
+                 pause_reasons=record.get('resource_reasons', []), manual_pause=record.get('manual_pause'),
+                 warnings=record.get('resource_warnings', []), error=record.get('error'))
+            previous_event_state = key
     require(not (directory / 'result.json').exists(), 'Receipt exists; no duplicate execution')
     require(not (directory / 'launch.json').exists(), 'Prior launch exists; automatic restart forbidden')
     start_self_cpu = time.process_time()
@@ -62,7 +77,7 @@ def run(directory):
     pause_events = 0
     state = {'job': spec['id'], 'supervisor': proc(os.getpid()), 'phase': 'HASHING_INPUTS',
              'child': None, 'target_cpu_s': spec['target_cpu_s'], 'eta': None}
-    save(directory / 'state.json', state)
+    checkpoint(state)
     inputs = [identity(path) for path in spec.get('inputs', [])]
     started = time.time()
     child = None
@@ -87,7 +102,7 @@ def run(directory):
         state.update(child=live or {'pid': child.pid, 'birth': None}, phase='RUNNING')
         save(directory / 'launch.json', {'command': spec['command'], 'started_unix': started,
                                         'inputs': inputs, 'supervisor': state['supervisor'], 'child': state['child']})
-        save(directory / 'state.json', state)
+        checkpoint(state)
         while True:
             waited, status, usage = os.wait4(child.pid, os.WNOHANG)
             if waited:
@@ -132,13 +147,17 @@ def run(directory):
             exceeded = cpu_s >= target
             state.update(phase='STOP_REQUESTED' if stop_requested else 'RESOURCE_PAUSED' if paused else 'RUNNING',
                          child=state['child'], target_cpu_s=target, cpu_s=cpu_s,
-                         time_extension_request=(f'time limit reached. ETA unknown. Extend [seconds] ?'
+                         time_extension_request=(f'Softbudget erreicht; läuft weiter. ETA unbekannt. Verlängerung möglich.'
                                                  if exceeded and not stop_requested else None),
                          time_budget_action='REQUEST_ONLY_KEEP_RUNNING',
                          resources=resources, resource_reasons=resource_reasons, resource_warnings=warnings,
                          manual_pause=manual_pause, output_bytes=sizes, peak_output_bytes=peak_outputs,
                          peak_rss_bytes=peak_rss, updated_unix=time.time(), control_sequence=sequence,
                          eta=None, eta_scope='No prediction of SAT/UNSAT or checker completion')
+            event_key = (state.get('phase'), state.get('control_sequence'), state.get('time_extension_request'),
+                         tuple(state.get('resource_reasons', [])), tuple(state.get('resource_warnings', [])))
+            if event_key != previous_event_state:
+                checkpoint(state)
             current = cpu_clock()
             total_busy = busy_cpu(previous, current)
             elapsed = max(0.001, now - proof_previous_time)
@@ -154,7 +173,7 @@ def run(directory):
                 for telemetry in state['proof_counters']:
                     telemetry['prefix_additions_per_cpu_hour'] = telemetry['complete_addition_records_in_scanned_prefix'] * 3600 / max(cpu_s, 0.001)
                     telemetry['file_bytes_per_cpu_hour'] = telemetry['file_bytes'] * 3600 / max(cpu_s, 0.001)
-                save(directory / 'state.json', state)
+                checkpoint(state)
                 last_checkpoint = now
             # Lightweight OS samples only; no /proc/mem attach or memory probes.
             if now - last_status >= config['status_s']:
@@ -174,8 +193,12 @@ def run(directory):
                      {'local_time': stamp.isoformat(), 'state': state, 'log_tail': tail})
                 last_detail = slot
             time.sleep(config['poll_s'])
+        emit(work, 'SAT_UNVERIFIED' if spec['category'] == 'solver' and child.returncode == 10 else
+             'UNSAT_UNCERTIFIED' if spec['category'] == 'solver' and child.returncode == 20 else
+             'PROCESS_EXIT', job=spec['id'], category=spec['category'], returncode=child.returncode,
+             cpu_s=usage.ru_utime + usage.ru_stime)
         state.update(phase='FINALIZING', child=None, cpu_s=usage.ru_utime + usage.ru_stime)
-        save(directory / 'state.json', state)
+        checkpoint(state)
         require(inputs == [identity(path) for path in spec.get('inputs', [])], 'INPUT_CHANGED_DURING_JOB')
         outputs = [identity(path) for path in spec.get('outputs', []) if Path(path).is_file()]
         result = {'id': spec['id'], 'command': spec['command'], 'category': spec['category'],
@@ -190,6 +213,7 @@ def run(directory):
                   'peak_output_bytes': max(peak_outputs, sum(p['bytes'] for p in outputs)),
                   'log': identity(directory / 'output.log'), 'supervisor': state['supervisor']}
         save(directory / 'result.json', result)
+        emit(work, 'JOB_RECEIPT_READY', job=spec['id'], returncode=child.returncode, reason=result['reason'])
         save(directory / 'state.json', {**state, 'phase': 'FINISHED', 'child': None,
                                        'returncode': child.returncode, 'time_extension_request': None})
     except BaseException as error:
@@ -200,7 +224,7 @@ def run(directory):
             except ProcessLookupError:
                 pass
         state.update(phase='ERROR_PRESERVED', error=repr(error), updated_unix=time.time())
-        save(directory / 'state.json', state)
+        checkpoint(state)
         raise
 
 

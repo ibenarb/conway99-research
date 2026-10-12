@@ -11,6 +11,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / 'src'))
+from monitor import emit, ensure_observer, watch
 from common import alive, host, identity, lock, proc, read, require, save, sha, verify_manifest
 
 
@@ -20,6 +21,8 @@ def main():
     subs.add_parser('preflight')
     p = subs.add_parser('start')
     p.add_argument('--stage', choices=['initial', 'all'], default='initial')
+    p.add_argument('--detach', action='store_true', help='Start without attaching the live view')
+    subs.add_parser('watch')
     subs.add_parser('status')
     p = subs.add_parser('extend')
     p.add_argument('job')
@@ -58,13 +61,22 @@ def main():
         probe.close()
         if (work / 'controller_error.json').exists():
             (work / 'controller_error.json').rename(work / ('previous_controller_error_' + str(time.time_ns()) + '.json'))
+        offset = (work / 'events.jsonl').stat().st_size if (work / 'events.jsonl').exists() else 0
         with (work / 'controller.log').open('ab') as output:
             child = subprocess.Popen([sys.executable, '-u', str(ROOT / 'src/control.py'), args.stage],
                     stdin=subprocess.DEVNULL, stdout=output, stderr=subprocess.STDOUT, start_new_session=True)
         save(work / 'controller_launch.json', {'process': proc(child.pid), 'stage': args.stage, 'started_unix': time.time()})
         time.sleep(0.3)
         require(child.poll() is None or child.returncode == 0, 'CONTROLLER_START_FAILED; inspect work/controller.log')
-        print('LAUNCHED', child.pid, 'stage', args.stage)
+        print('LAUNCHED', child.pid, 'stage', args.stage, flush=True)
+        ensure_observer(ROOT, time.time())
+        guard.close()
+        if not args.detach:
+            watch(ROOT, offset)
+    elif args.action == 'watch':
+        require((work / 'controller_launch.json').exists(), 'NO_RUN_TO_WATCH')
+        ensure_observer(ROOT, read(work / 'controller_launch.json')['started_unix'])
+        watch(ROOT)
     elif args.action == 'status':
         jobs = {}
         for p in sorted((work / 'jobs').glob('*/state.json')):
@@ -77,6 +89,7 @@ def main():
         require(all(c.isalnum() or c in '_-' for c in args.job), 'BAD_JOB_ID')
         d = work / 'jobs' / args.job
         require((d / 'spec.json').exists(), 'UNKNOWN_JOB')
+        emit(work, 'USER_CONTROL', action=args.action, job=args.job, seconds=getattr(args, 'seconds', None))
         if args.action == 'extend':
             require(args.seconds >= 0, 'NONNEGATIVE_SECONDS_REQUIRED')
             previous = read(d / 'control.json', {})
