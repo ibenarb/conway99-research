@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "base_sha256": "7c105a67b0f7865f2ceec085ac9e5017213208e657e728381406323052acf3dd",
+  "profile_sha256": "5b251b4832904a3bd2ce7d804508e380794444f19c70ba8b26903cb1b4b02859",
+  "mapping_sha256": "cd78938cc0fd6c4b2239ddd2b67054e1ea754b41be4dc6eeaef6849b97e0bc0e",
+  "solver": "/home/rb/conway99_workspace/cadical_office_2.2.1/build/cadical",
+  "solver_sha256": "82c88e3027d35e7c60293ea9440fc97576e1161ee9e103785bdb6962748ba996",
+  "checker": "/home/rb/conway99_workspace/Conway99_C2_AnchorProfile_1.0.0/work/drat-trim",
+  "checker_sha256": "760e248a4dbafa9cd8834174cc8a2164e7f79dd60619f43070dba88cf8588130",
+  "group_check": {
+    "id": "frame_group",
+    "returncode": 0,
+    "reason": null,
+    "command": [
+      "/usr/bin/python3",
+      "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/anchor_profile.py",
+      "check"
+    ],
+    "cpu_seconds": 8.660061,
+    "last_sample_cpu_s": 8.41,
+    "max_rss_kib": 226708,
+    "started": {
+      "realtime": 1790417501.755143,
+      "monotonic": 362925.993104916,
+      "monotonic_raw": 330539.099323
+    },
+    "finished": {
+      "realtime": 1790417522.5847409,
+      "monotonic": 362935.522438231,
+      "monotonic_raw": 330547.7639711
+    },
+    "elapsed": {
+      "realtime": 20.82959794998169,
+      "monotonic": 9.529333314974792,
+      "monotonic_raw": 8.664648099977057
+    },
+    "log": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/operations/frame_group/1790417501736536924/output.log",
+    "log_sha256": "b1d6235c747f0d833a2296ac26ec5e8ebb081acf68d1cdd4aa85daede1f3d325",
+    "outputs": {}
+  },
+  "labelled_count": {
+    "id": "labelled_count",
+    "returncode": 0,
+    "reason": null,
+    "command": [
+      "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/count46"
+    ],
+    "cpu_seconds": 10.711444,
+    "last_sample_cpu_s": 10.62,
+    "max_rss_kib": 15032,
+    "started": {
+      "realtime": 1790417511.1957417,
+      "monotonic": 362936.434098129,
+      "monotonic_raw": 330548.5929075
+    },
+    "finished": {
+      "realtime": 1790417522.190849,
+      "monotonic": 362948.421477027,
+      "monotonic_raw": 330559.4925598
+    },
+    "elapsed": {
+      "realtime": 10.995107412338257,
+      "monotonic": 11.987378898018505,
+      "monotonic_raw": 10.899652299995068
+    },
+    "log": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/operations/labelled_count/1790417511191364197/output.log",
+    "log_sha256": "020bfb6926ac9e0ab020904a01ae3f1d01e556e56333741ad81b3a13b0242a4d",
+    "outputs": {}
+  },
+  "orbit_check": {
+    "id": "independent_orbits",
+    "returncode": 0,
+    "reason": null,
+    "command": [
+      "/usr/bin/python3",
+      "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/coverage.py",
+      "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/coverage.json"
+    ],
+    "cpu_seconds": 0.6561779999999999,
+    "last_sample_cpu_s": 0.5,
+    "max_rss_kib": 26788,
+    "started": {
+      "realtime": 1790417522.2193046,
+      "monotonic": 362948.449933663,
+      "monotonic_raw": 330559.5184342
+    },
+    "finished": {
+      "realtime": 1790417523.0545583,
+      "monotonic": 362949.28518643,
+      "monotonic_raw": 330560.2778968
+    },
+    "elapsed": {
+      "realtime": 0.8352537155151367,
+      "monotonic": 0.8352527669630945,
+      "monotonic_raw": 0.7594625999918208
+    },
+    "log": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/operations/independent_orbits/1790417522214114425/output.log",
+    "log_sha256": "53ac2b2296d84bc9773cb51a8ad5f691417b4cacc37169b3b9b2a18fb3cc0118",
+    "outputs": {
+      "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/coverage.json": "17288a741ecfa94e9a2abdd4ea7a4de16c437f5c1fb5aacc19afba8d3172cd2e"
+    }
+  },
+  "coverage_sha256": "17288a741ecfa94e9a2abdd4ea7a4de16c437f5c1fb5aacc19afba8d3172cd2e",
+  "lemma": {
+    "status": "UNSAT_VERIFIED",
+    "formula_sha256": "9c38a75f8d9495dedea857f527f2fca5a2e860732eb8e3674356755eca0e3877",
+    "units": [
+      [
+        1
+      ],
+      [
+        159
+      ],
+      [
+        862
+      ],
+      [
+        427
+      ],
+      [
+        1288
+      ],
+      [
+        672
+      ],
+      [
+        1020
+      ],
+      [
+        1533
+      ]
+    ],
+    "proof_archive": {
+      "file": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/bi_c4_seed0.drat.gz",
+      "gzip_sha256": "00c83798645d151c85ca0a6518030b716612f2171e04c58c0c60f73e8569d426",
+      "uncompressed_sha256": "ef350125025ee174abaf627042274ec8aa84e62f8185877d501b09926617c820"
+    },
+    "checker": {
+      "id": "c4_lemma_check",
+      "returncode": 0,
+      "reason": null,
+      "command": [
+        "/home/rb/conway99_workspace/Conway99_C2_AnchorProfile_1.0.0/work/drat-trim",
+        "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/bi_c4.cnf",
+        "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/bi_c4.drat"
+      ],
+      "cpu_seconds": 209.89854799999998,
+      "last_sample_cpu_s": 209.75,
+      "max_rss_kib": 465284,
+      "started": {
+        "realtime": 1790417524.6929696,
+        "monotonic": 362950.923598748,
+        "monotonic_raw": 330561.7676407
+      },
+      "finished": {
+        "realtime": 1790417735.2537506,
+        "monotonic": 363182.485225564,
+        "monotonic_raw": 330772.3175234
+      },
+      "elapsed": {
+        "realtime": 210.56078100204468,
+        "monotonic": 231.5616268159938,
+        "monotonic_raw": 210.5498827000265
+      },
+      "log": "/home/rb/conway99_workspace/Conway99_C2_Profile46Cert_1.0.0/work/operations/c4_lemma_check/1790417524688348324/output.log",
+      "log_sha256": "3fd6d6db4cf438775dd762b033fd0ca3330800f03aba1453d7b0cbf391183eb0",
+      "outputs": {}
+    },
+    "transport": "work/coverage.json: 105 clauses, semantic class permutations"
+  }
+}

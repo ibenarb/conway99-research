@@ -1,6 +1,6 @@
 # Involutionen im Conway-99-Problem: Rahmenreduktion und bedingte Profilausschlüsse
 
-**Arbeitsfassung 0.2 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
+**Arbeitsfassung 0.3 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
 
 ## Zusammenfassung und Aussagegrenze
 
@@ -18,9 +18,9 @@ Die abgeschlossenen Rechnungen decken eine Liste mit 234.691 Profilcodes unter
 mit 7.388.648 Vertretern und dessen historische Ausschlussstufen wird gesondert
 dokumentiert. Die Vollständigkeit des Census innerhalb seiner definierten Bedingungen
 wurde inzwischen durch eine neue Isomorphieprüfung und eine unabhängige vollständige
-beschriftete Aufzählung bestätigt. Die Rechtfertigung seiner mathematischen Filter
-und die vollständige Verbindung mit den historischen Ausschlüssen bleiben davon
-getrennte Beweispflichten.
+beschriftete Aufzählung bestätigt. Die Filter C4 und Profile46 sind inzwischen an ihre konkreten Formeln, vollständigen
+Fallmengen und historischen Checkerbelege gebunden. Die historischen Checkerprüfungen
+werden dabei übernommen. Die weiteren Coverage-Übergänge bleiben gesondert zu auditieren.
 
 ## 1. Begriffe und Ziel
 
@@ -238,9 +238,12 @@ Produkte müssen vollständig als $z\leftrightarrow(u\land v)$ kodiert werden.
 Durch die Orbitabbildung zusammenfallende Terme müssen mit ihrer korrekten
 Multiplizität gezählt werden. BDD- und Totalizer-Bausteine benötigen allgemeine
 Korrektheitsargumente; lokale Wahrheitstabellen allein beweisen keine vollständige
-Programmadäquanz. Die historischen Beweise für Referenzencoder und Totalizer sind
-verortet, ihre lückenlose Bindung an alle tatsächlich benutzten Formeln bleibt
-Teil des Audits.
+Programmadäquanz. Die allgemeinen Beweise für Referenzencoder und Totalizer sind in
+[ENCODER_ADAEQUANZ.md](../c2_filter_audit_20261012/ENCODER_ADAEQUANZ.md) auf die
+konkrete Basis F0 bezogen ausgearbeitet. Alle 4.746 Gleichungsaufrufe wurden
+mit einer unabhängigen E1–E3-Konstruktion verglichen; die dabei erzeugte Basis
+reproduziert den historischen Hash. Die Verbindung zu F46 und F346 ist ebenfalls
+neu geprüft. Andere historische Kerne und Formeln benötigen weiterhin ihre eigene Bindung.
 
 **Lemma L9 (Zertifikattransport).** Ein geprüftes UNSAT-Zertifikat für
 $F_{346}\land U(D)$ schließt bei Encoderadäquanz und L5 die gesamte $S_7$-Bahn von
@@ -260,7 +263,9 @@ Die genaue historische Fallmenge, die Zählkette und die neu ausgeführten
 Datenprüfungen stehen in [CENSUS_UND_COVERAGE.md](CENSUS_UND_COVERAGE.md).
 Der Census enthält C4-freie Pfeilgraphen mit allen Graden in $\{3,4,6\}$ und
 mindestens einem Grad 3. Der Zweig ohne Grad 3 benötigt den früheren Profile46-Ausschluss;
-der C4-Filter benötigt den korrekt gebundenen C4-Ausschluss.
+der C4-Filter benötigt den korrekt gebundenen C4-Ausschluss. Beide Bindungen sind
+unten beschrieben und im [Filteraudit](../c2_filter_audit_20261012/FILTER_UND_BELEGKETTE.md)
+neu ausgearbeitet. Die ursprünglichen Beweischecker wurden dabei nicht wiederholt.
 
 **Rechnerischer Satz CEN.** Die gehashte Vertreterliste enthält genau einen Vertreter
 jeder Isomorphieklasse dieser ausdrücklich eingeschränkten Pfeilgraphen. Es gibt
@@ -270,6 +275,14 @@ Isomorphiedublettenfreiheit und eine vollständige Zählung ohne Kanonisierung.
 Argument, Quellcode und ausgeführte Ergebnisse sind in
 [CENSUS_VOLLSTAENDIGKEIT.md](CENSUS_VOLLSTAENDIGKEIT.md) verbunden. Dieser Satz allein
 ist keine Aussage über die Existenz oder Nichtexistenz eines SRG.
+
+**Filterfolge.** Die historische C4-Prüfung betrifft F0 plus acht positive
+Pfeil-Units. Ihr semantischer Transport liefert alle 105 Vierzyklusverbote. Für
+F46 wurden die 2.170 C4-freien Bahnen durch unabhängige Zählung vollständig bestätigt;
+alle 2.170 Formelhashes und historischen Checkerbelege sind neu zugeordnet. Unter
+ENC0 und Anerkennung dieser historischen Checkerprüfungen ist F46 ausgeschlossen.
+Somit besitzt jeder hypothetische F346-Fall mindestens einen Grad-3-Anker und
+liegt in der Domäne von CEN. Dieser Schluss verwendet keinen späteren Profile346-Ausschluss.
 
 Der Status jeder Beweispflicht steht in [BEWEISREGISTER.md](BEWEISREGISTER.md).
 Die veröffentlichungsfähige Schlussfolgerung muss auf den schwächsten noch

@@ -1,6 +1,6 @@
 # C2-Vollständigkeitsprüfung und Publikationsentwicklung
 
-Stand **12.10.2026**, Arbeitsfassung **0.2**. Ausschließlich der C2-Symmetriezweig.
+Stand **12.10.2026**, Arbeitsfassung **0.3**. Ausschließlich der C2-Symmetriezweig.
 Der allgemeine C2-Ausschluss ist **offen**.
 
 ## Einstieg
@@ -15,6 +15,8 @@ Der allgemeine C2-Ausschluss ist **offen**.
    unveränderte ausgewählte Originaldateien aus den tatsächlich verwendeten Paketen.
 6. [Vollständigkeitsnachweis des Census](CENSUS_VOLLSTAENDIGKEIT.md): unabhängige
    Isomorphieprüfung, Automorphismenordnungen und vollständige beschriftete Zählung.
+7. [C4/Profile46 und Belegkette](../c2_filter_audit_20261012/FILTER_UND_BELEGKETTE.md) sowie
+   [Encoderadäquanz](../c2_filter_audit_20261012/ENCODER_ADAEQUANZ.md): eigene Fortsetzung nach dem ersten Reviewauftrag.
 
 ## Gesicherter Ausgangsstand und heutige Fortschritte
 
@@ -35,7 +37,11 @@ Am 12.10.2026 wurden zusätzlich ausgeführt:
 - vollständige Einbettung aller 234.691 Restdatensätze in den Census und aller 218 Schlussdatensätze in die Restliste;
 - vollständige lokale Enumeration der 10.395 Matchings mit Bestätigung aller elf Typen;
 - neue Ausarbeitung der Kompatibilität von Minimumankerwahl und lokaler Matchingnormalform;
-- arithmetischer Abgleich der historischen Abdeckungskette vom Census bis zur leeren Restliste.
+- arithmetischer Abgleich der historischen Abdeckungskette vom Census bis zur leeren Restliste;
+- neue Bindung sämtlicher 4.746 Gleichungsaufrufe an die konkrete Basiskodierung;
+- neue Rekonstruktion von F0, C4, F46 und F346; 105 vollständige C4-Transporte;
+- neuer vollständiger Censusaudit für die 2.170 Profile46-Bahnen und Rekonstruktion
+  sämtlicher Formelhashes mit Prüfung aller zugehörigen Solver-/Checkerbelege.
 
 Dabei wurden keine neuen Solverläufe und keine neuen Checker-Replays gestartet.
 Ryzen- und Office-Prozesse wurden nicht angesprochen.
@@ -66,8 +72,10 @@ Aufzählungsshards, nicht bereits eine Prüfung durch eine andere Person.
 ## Zwei Reviewphasen
 
 Das frühe Review konzentriert sich auf die Beweisstruktur und die Reichweite des
-Profil346-Zweigs. Ein erster konkreter Auftrag wird im privaten Review-Austausch
-unter `reviews/2026-10-12-c2-vollstaendigkeit` mit festem Forschungscommit abgelegt.
+Profil346-Zweigs. Der erste konkrete Auftrag liegt im privaten Review-Austausch
+unter `reviews/2026-10-12-c2-vollstaendigkeit` mit Forschungscommit
+`7dbacd7eed56e2bf73b3aa5f2648f00e5484adfa`. Ralph hat am 12.10.2026 um 14:43 Uhr
+mitgeteilt, dass er versandt wurde und in Arbeit ist.
 Das Abschlussreview folgt erst nach Schließen der für die endgültige Satzfassung
 notwendigen offenen Punkte. Eine Reviewerantwort liegt für diesen neuen Auftrag
 noch nicht vor.

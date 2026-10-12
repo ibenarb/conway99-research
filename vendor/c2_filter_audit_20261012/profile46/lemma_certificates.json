@@ -1,0 +1,36 @@
+{
+ "lemma": "no bidirected 4-cycle among classes 0-1-2-3 (arcs 0<->1,1<->2,2<->3,3<->0 positive)",
+ "formula_sha256": "9c38a75f8d9495dedea857f527f2fca5a2e860732eb8e3674356755eca0e3877",
+ "added_units": 8,
+ "solver": "CaDiCaL 2.2.1, source commit 4198d817d0dcde5b1240eefbff70b555b7df2af9, own build",
+ "options": "--seed=0",
+ "result": "UNSAT",
+ "conflicts": 559478,
+ "process_seconds": 132.22,
+ "proof_sha256_uncompressed": "ef350125025ee174abaf627042274ec8aa84e62f8185877d501b09926617c820",
+ "proof_gz_sha256": "00c83798645d151c85ca0a6518030b716612f2171e04c58c0c60f73e8569d426",
+ "checker": "drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985, own build",
+ "checker_verdict": "s VERIFIED",
+ "check_seconds": 251.03,
+ "reproductions": {
+  "u6": {
+   "conflicts": 48919,
+   "office": 48919,
+   "verdict": "s VERIFIED"
+  },
+  "two_omitted_opposite": {
+   "conflicts": 539185,
+   "office": 539185,
+   "proof_sha256": "46644b36c9850f0aa18e13dacfcff1fae3d212c25ae1772b8b362fc5ffa92346",
+   "identical_to_office_proof": true,
+   "verdict": "s VERIFIED"
+  },
+  "two_omitted_disjoint": {
+   "conflicts": 790124,
+   "office": 790124,
+   "proof_sha256": "457c6c8882ffdecaec86adf8161a971265df848607ecce22c16fdd5b0816e7d6",
+   "identical_to_office_proof": true,
+   "verdict": "s VERIFIED"
+  }
+ }
+}

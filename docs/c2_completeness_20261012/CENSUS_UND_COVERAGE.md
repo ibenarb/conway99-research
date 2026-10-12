@@ -11,8 +11,8 @@ Ankerpaaren mit 42 möglichen Pfeilen, modulo $S_7$, unter folgenden Bedingungen
 | Bedingung | Rolle | Für einen C2-Ausschluss zusätzlich erforderlich |
 |---|---|---|
 | Alle Ausgrade in {3,4,6} | Definition des Zweigs F346 | Die komplementären Fälle mit Grad 0, 1 oder 2 separat behandeln. |
-| Mindestens ein Grad 3 | Entfernt den Zweig Profile46 | Vollständigen früheren Ausschluss des Zweigs mit Graden nur 4 und 6 binden. |
-| Kein C4 im gegenseitigen Ankergraphen | Mathematisch begründeter Filter beansprucht | C4-Zertifikat an die richtige Basis, acht Pfeil-Units und zulässigen S7-Transport binden. |
+| Mindestens ein Grad 3 | Entfernt den Zweig Profile46 | Bindung inzwischen neu geprüft; historische Checkerprüfungen übernommen, siehe Filteraudit. |
+| Kein C4 im gegenseitigen Ankergraphen | Mathematisch begründeter Filter beansprucht | Bindung an F0 plus acht Units und 105 Transporte neu geprüft; historische Checkerprüfung übernommen. |
 | Gradfolge absteigend sortiert | Umbenennung der sieben Anker | S7 erhält E1–E3 und alle vorangehenden Bedingungen. |
 | Ein Vertreter je Bahn | Quotientierung | Vollständigkeit, Automorphismenordnungen und Isomorphiedublettenfreiheit sind neu geprüft; siehe CENSUS_VOLLSTAENDIGKEIT.md. |
 
@@ -62,7 +62,9 @@ die Zahlen für jedes einzelne Gradprofil mit den historischen Begleitdaten übe
 Zulässige, paarweise verschiedene Bahnen mit dieser Gesamtgröße füllen damit die
 gesamte unabhängig gezählte Domäne aus. Dies schließt die Censusvollständigkeit
 innerhalb seiner Bedingungen. Die Anwendung dieser Bedingungen auf SRG-Lösungen
-bedarf weiterhin der korrekt gebundenen Ausschlüsse P46 und C4.
+bedarf der korrekt gebundenen Ausschlüsse P46 und C4. Die eigene Fortsetzung
+[Filter- und Belegkette](../c2_filter_audit_20261012/FILTER_UND_BELEGKETTE.md) liefert
+diese Bindung unter den dort ausdrücklich übernommenen historischen Checkerprüfungen.
 
 Beweis und Reproduktionshinweise: [CENSUS_VOLLSTAENDIGKEIT.md](CENSUS_VOLLSTAENDIGKEIT.md).
 Neue Berichte: [isomorphism_audit.json](../../results/c2_completeness_20261012/isomorphism_audit.json)
@@ -124,9 +126,12 @@ Abdeckungsalgorithmus gesondert zu prüfen.
 
 ## 5. Offene Übergänge
 
-- Gemeinsame Zulässigkeit aller Filter; insbesondere C4 und Profile46 mit korrekter Basis.
+- Unabhängiges Review der neu hergeleiteten Encoderadäquanz und C4-/Profile46-Filterbindung.
+  Die Formel-, Transport-, Census- und Belegprüfungen dazu sind abgeschlossen; die
+  historischen Beweischecker und 2.170 externen Profile46-Beweise wurden nicht erneut geprüft.
 - Exakte Komplementbildung jeder historischen Coverage-Stufe, einschließlich Überschneidungen.
-- Encoderadäquanz und korrekte Variablenzuordnung sämtlicher verwendeter Formeln und Kerne.
+- Korrekte Bindung der weiteren historischen Formeln und Kerne an die jetzt
+  hergeleitete Adäquanz von F0/F46/F346 und an die tatsächlich verwendeten Variablen.
 - Durchgehende Bindung der früheren Zertifikate an die konkret transportierten Musteraussagen.
 - Ausschluss oder anderweitige vollständige Behandlung der niedrigen Ankergrade 0, 1 und 2.
 
