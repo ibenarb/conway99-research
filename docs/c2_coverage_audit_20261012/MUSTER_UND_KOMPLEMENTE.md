@@ -149,3 +149,10 @@ Checkerloghashes stehen zusätzlich im Belegregister. Dauerhafte
 öffentliche Downloadadressen für noch externe Beweis-/Datenarchive sind weiterhin
 eine eigene Aufgabe vor dem Publikationsrelease. Lokale Pfade sind keine
 öffentlichen Bezugsadressen.
+
+## Nachtrag zur Fassung 0.5
+
+Die in Abschnitt 5 noch offenen Übergänge bis Rest218 wurden in der
+[späten Fortsetzung](../c2_late_audit_20261012/ABSCHLUSS_PROFIL346.md) geschlossen.
+Die historischen Checkerprüfungen und der vorhandene Rest218-Abschlussaudit
+bleiben unter ihren ausdrücklich dokumentierten Grenzen übernommen.

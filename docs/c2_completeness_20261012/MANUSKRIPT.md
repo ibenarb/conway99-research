@@ -1,6 +1,6 @@
 # Involutionen im Conway-99-Problem: Rahmenreduktion und bedingte Profilausschlüsse
 
-**Arbeitsfassung 0.4 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
+**Arbeitsfassung 0.5 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
 
 ## Zusammenfassung und Aussagegrenze
 
@@ -20,7 +20,7 @@ dokumentiert. Die Vollständigkeit des Census innerhalb seiner definierten Bedin
 wurde inzwischen durch eine neue Isomorphieprüfung und eine unabhängige vollständige
 beschriftete Aufzählung bestätigt. Die Filter C4 und Profile46 sind inzwischen an ihre konkreten Formeln, vollständigen
 Fallmengen und historischen Checkerbelege gebunden. Die historischen Checkerprüfungen
-werden dabei übernommen. Die weiteren Coverage-Übergänge bleiben gesondert zu auditieren.
+werden dabei übernommen. Die Coverage-Übergänge bis Rest218 sind inzwischen neu geprüft; der dortige Abschlussaudit bleibt unter seinen dokumentierten Grenzen übernommen.
 
 ## 1. Begriffe und Ziel
 
@@ -305,5 +305,14 @@ Die [Muster- und Komplementprüfung](../c2_coverage_audit_20261012/MUSTER_UND_KO
 reproduziert jetzt alle Restlisten vom vollständigen Census bis zu genau
 234.691 Fällen bytegenau. Alle verwendeten Muster sind an ihre Formeln und
 historischen Checkerbelege gebunden; 1.373 Belegdatensätze wurden geprüft.
-Es gab keinen neuen Proof-Replay. Die nachfolgenden Übergänge bis Rest218
-und die niedrigen Ankergrade bleiben getrennte Aufgaben.
+Es gab keinen neuen Proof-Replay. Die nachfolgenden Übergänge bis Rest218 sind in der unten verlinkten Fortsetzung ebenfalls neu geprüft. Die niedrigen Ankergrade bleiben offen.
+
+## Eigene Fortsetzung: bedingter Abschluss von Profil346
+
+[Abschluss des Profil346-Zweigs](../c2_late_audit_20261012/ABSCHLUSS_PROFIL346.md)
+verbindet nun auch D, A, B und C mit den historischen Formel-/Checkerbelegen.
+Zwei Abdeckungsverfahren reproduzieren alle Restlisten bis Rest218 bytegenau.
+Alle 218 Schlussformelhashes sind erneut rekonstruiert und passen zum unverändert
+übernommenen Abschlussaudit. Daraus folgt H346 unter den ausdrücklich benannten
+historischen Zertifikatsvoraussetzungen. Für den allgemeinen C2-Ausschluss
+bleiben die acht niedrigen Matchingtypen offen.

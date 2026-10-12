@@ -79,13 +79,13 @@ keinen Mengenvergleich und keine Zertifikatsprüfung.
 | Stufe | Zusätzlich abgedeckt | Verbleibend | Belegstatus dieses Arbeitsstands |
 |---|---:|---:|---|
 | Ausgangscensus | — | 7.388.648 | Struktur, Isomorphieklassen, Aut-Ordnungen und Vollständigkeit innerhalb der Censusbedingungen neu geprüft. |
-| Generalize: sechs Musterausschlüsse | 4.686.633 | 2.702.015 | Original-Coverage-JSON; Beweise und Musterabdeckung übernommen. |
-| One3: verbleibende Fälle mit genau einem Grad-3-Anker | 1.032 | 2.700.983 | Originalbelege: 48.252 Gesamtfälle, 47.220 vorher erfasst, 1.032 zertifiziert. |
-| Generalize2: neue Muster und übernommene Pilotfälle | 2.466.285 | 234.698 | Original-Coverage-JSON; Vereinigungsabdeckung übernommen. |
-| Two3: sieben verbleibende Fälle mit genau zwei Grad-3-Ankern | 7 | 234.691 | Originalbelege und Abschlussaudit vom 01.10.; kein neuer Checker-Replay. |
-| seed_172_step_45 | 228.040 | 6.651 | Übernommener unabhängig DRAT-geprüfter Ausschluss. |
-| A=seed_042_step_44 und B=seed_172_step_49, Vereinigung | 6.245 | 406 | Übernommene geprüfte Ausschlüsse und Coverage. |
-| C=seed_172_step_47 | 188 | 218 | Übernommener geprüfter Ausschluss und Coverage. |
+| Generalize: sechs Musterausschlüsse | 4.686.633 | 2.702.015 | Exakte Abdeckung und Muster-/Formelbindungen neu geprüft; historische Checkerurteile übernommen. |
+| One3: verbleibende Fälle mit genau einem Grad-3-Anker | 1.032 | 2.700.983 | Exakte Restmenge und alle 1.032 Formel-/Checkerbindungen neu geprüft. |
+| Generalize2: neue Muster und übernommene Pilotfälle | 2.466.285 | 234.698 | Exakte Vereinigungsabdeckung und alle 86 Musterbindungen neu geprüft. |
+| Two3: sieben verbleibende Fälle mit genau zwei Grad-3-Ankern | 7 | 234.691 | Exakte Sieben-Fallmenge und Formel-/Checkerbindungen neu geprüft; kein neuer Replay. |
+| seed_172_step_45 | 228.040 | 6.651 | Formel-/Checkerbindung und exakte Abdeckung neu geprüft; historisches DRAT-Urteil übernommen. |
+| A=seed_042_step_44 und B=seed_172_step_49, Vereinigung | 6.245 | 406 | Beide Formel-/Checkerbindungen und exakte Vereinigungsabdeckung neu geprüft; historische Urteile übernommen. |
+| C=seed_172_step_47 | 188 | 218 | Formel-/Checkerbindung und exakte Abdeckung neu geprüft; historisches Urteil übernommen. |
 | Rest218, Trim/cake | 217 | 1 | Abschlussaudit: Metadaten, Formelrekonstruktion und Belegzuordnung. |
 | p525910250893, direktes cake-Zertifikat | 1 | 0 | Direkter Checkerbeleg vom 11.10.2026; im Abschlussaudit ergänzt. |
 
@@ -122,21 +122,19 @@ Die Zahl der Grad-3-Anker in der Rest234691-Liste verteilt sich wie folgt:
 Beleg: [reduction_checks.json](../../results/c2_completeness_20261012/reduction_checks.json).
 Diese Teilmengenprüfung beweist noch nicht, dass jede Restliste **genau** das
 Komplement der vorherigen Musterabdeckung ist. Diese gesonderte Prüfung ist inzwischen für den Abschnitt bis Rest234691 erfolgt;
-siehe die folgende Ergänzung. Für spätere Übergänge bleibt sie offen.
+siehe die folgende Ergänzung. Auch die späteren Übergänge sind inzwischen in der späten Fortsetzung geprüft.
 
 ## 5. Offene Übergänge
 
 - Unabhängiges Review der neu hergeleiteten Encoderadäquanz und C4-/Profile46-Filterbindung.
   Die Formel-, Transport-, Census- und Belegprüfungen dazu sind abgeschlossen; die
   historischen Beweischecker und 2.170 externen Profile46-Beweise wurden nicht erneut geprüft.
-- Exakte Komplementbildung der nachfolgenden Coverage-Stufen ab Rest234691; die vorangehenden Stufen sind inzwischen neu geprüft.
-- Korrekte Bindung der weiteren historischen Formeln und Kerne an die jetzt
-  hergeleitete Adäquanz von F0/F46/F346 und an die tatsächlich verwendeten Variablen.
-- Durchgehende Bindung der früheren Zertifikate an die konkret transportierten Musteraussagen.
+- Die exakten Komplementbildungen bis Rest218 sind nun neu geprüft. Der Rest218-Abschlussaudit bleibt mit seinen ursprünglichen Prüfgrenzen übernommen.
+- Die Musterformeln bis Rest218 sind nun an F346 gebunden. Externe Beweisdateien und ursprüngliche Checkerurteile wurden nicht erneut geprüft.
+- Unabhängiges Review der ausgearbeiteten Transport- und Zusammensetzungsargumente.
 - Ausschluss oder anderweitige vollständige Behandlung der niedrigen Ankergrade 0, 1 und 2.
 
-Ein erfolgreicher Abschluss der ersten vier Punkte würde den vollständigen
-Profil346-Ausschluss tragen. Der letzte Punkt ist zusätzlich für den allgemeinen
+Die ausgearbeitete Zusammensetzung trägt nun H346 unter den übernommenen historischen Zertifikatsvoraussetzungen; siehe späten Audit. Der letzte Punkt ist zusätzlich für den allgemeinen
 C2-Satz erforderlich. Diese Punkte sind Prüfaufträge, keine festgestellten Fehler.
 
 ## 6. Neuer vollständiger Audit bis Rest234691
@@ -149,3 +147,10 @@ stimmen ebenfalls. Die One3-/Two3-Restmengen entsprechen exakt den gebundenen
 Zertifikatsfallmengen. Alle sechs Generalize- und 86 Generalize2-Muster haben
 einen neu geprüften Formel-/Checkerbeleganschluss. Die historischen UNSAT-Prüfungen
 bleiben übernommen; es wurden keine Proofbytes erneut geprüft.
+
+## 7. Vollständige Verbindung bis Rest218
+
+[Späte Muster und bedingter Abschluss](../c2_late_audit_20261012/ABSCHLUSS_PROFIL346.md)
+schließt die weiteren Komplement- und Musterbindungsprüfungen ab und formuliert
+H346 unter den übernommenen historischen Prüfergebnissen. Der allgemeine
+C2-Ausschluss folgt daraus erst nach zusätzlichem Ausschluss der niedrigen Grade.

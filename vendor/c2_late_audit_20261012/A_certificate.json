@@ -1,0 +1,212 @@
+{
+    "candidate": "seed_042_step_44",
+    "chain": "trim_cake",
+    "checked_proof": {
+        "bytes": 7823184941,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/trimmed.lrat",
+        "sha256": "46b38c04ba02fb432cc2f5ddb2d7fcf4cd0786677ba55a32f08d64069db15df7"
+    },
+    "checks": [
+        {
+            "category": "checker",
+            "command": [
+                "stdbuf",
+                "-oL",
+                "-eL",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/tools/lrat-trim/lrat-trim",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/proof.lrat",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/trimmed.lrat"
+            ],
+            "cpu_seconds": 220.568218,
+            "finished_unix": 1791287944.027645,
+            "id": "seed_042_step_44_trim",
+            "inputs": [
+                {
+                    "bytes": 36949731,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+                    "sha256": "baec336d801b67e7c380c2d2bd61524db8a216574ce5b38dd9dc5b10b093b820"
+                },
+                {
+                    "bytes": 14541823107,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/proof.lrat",
+                    "sha256": "fa6664bc44d1c36fa5980b71e39957056e525dda82d93d8ebd9d4fb54cde134f"
+                }
+            ],
+            "log": {
+                "bytes": 1416,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/output.log",
+                "sha256": "3d71825b3a0402b193812ed3866e419c3e5a24343944377d8991942e1a72b3b3"
+            },
+            "max_rss_kib": 19162448,
+            "mean_background_cpu_equivalents": 0.008801132173345567,
+            "outputs": [
+                {
+                    "bytes": 7823184941,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/trimmed.lrat",
+                    "sha256": "46b38c04ba02fb432cc2f5ddb2d7fcf4cd0786677ba55a32f08d64069db15df7"
+                }
+            ],
+            "peak_output_bytes": 7823184941,
+            "proof_counters": [
+                {
+                    "complete_addition_records_in_scanned_prefix": 471801,
+                    "complete_deletion_records_in_scanned_prefix": 395557,
+                    "error": null,
+                    "file_bytes": 7823184941,
+                    "scan_backlog_bytes": 7760270381,
+                    "scanned_bytes": 62914560,
+                    "scope": "Telemetry only; counts may lag; no ETA or validation claim"
+                }
+            ],
+            "reason": null,
+            "resource_pause_events": 0,
+            "returncode": 20,
+            "started_unix": 1791287708.7497091,
+            "supervisor": {
+                "birth": "42856000",
+                "cpu_s": 0.02,
+                "pid": 1454914,
+                "rss_bytes": 17690624,
+                "state": "R"
+            },
+            "supervisor_cpu_seconds": 23.047480699999998,
+            "target_cpu_s": 259200.0
+        },
+        {
+            "category": "checker",
+            "command": [
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/tools/cake_lpr/cake_lpr",
+                "--CML_HEAP_SIZE=24576",
+                "--CML_STACK_SIZE=1024",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+                "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/trimmed.lrat"
+            ],
+            "cpu_seconds": 747.913603,
+            "finished_unix": 1791288730.6419559,
+            "id": "seed_042_step_44_check",
+            "inputs": [
+                {
+                    "bytes": 36949731,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+                    "sha256": "baec336d801b67e7c380c2d2bd61524db8a216574ce5b38dd9dc5b10b093b820"
+                },
+                {
+                    "bytes": 7823184941,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_trim/trimmed.lrat",
+                    "sha256": "46b38c04ba02fb432cc2f5ddb2d7fcf4cd0786677ba55a32f08d64069db15df7"
+                }
+            ],
+            "log": {
+                "bytes": 17,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_check/output.log",
+                "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+            },
+            "max_rss_kib": 25216704,
+            "mean_background_cpu_equivalents": 0.002664566573683583,
+            "outputs": [],
+            "peak_output_bytes": 0,
+            "proof_counters": [],
+            "reason": null,
+            "resource_pause_events": 0,
+            "returncode": 0,
+            "started_unix": 1791287965.6507206,
+            "supervisor": {
+                "birth": "42880368",
+                "cpu_s": 0.02,
+                "pid": 1454937,
+                "rss_bytes": 17694720,
+                "state": "R"
+            },
+            "supervisor_cpu_seconds": 9.791335,
+            "target_cpu_s": 259200.0
+        }
+    ],
+    "format": "lrat",
+    "formula": {
+        "bytes": 36949731,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+        "sha256": "baec336d801b67e7c380c2d2bd61524db8a216574ce5b38dd9dc5b10b093b820"
+    },
+    "proof": {
+        "bytes": 14541823107,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/proof.lrat",
+        "sha256": "fa6664bc44d1c36fa5980b71e39957056e525dda82d93d8ebd9d4fb54cde134f"
+    },
+    "scope": "profile_346 plus listed units only; conditional census coverage, not general C2/C3",
+    "solver": {
+        "category": "solver",
+        "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/tools/cadical/build/cadical",
+            "--seed=0",
+            "--lrat=1",
+            "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+            "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/proof.lrat"
+        ],
+        "cpu_seconds": 22540.336579,
+        "finished_unix": 1791287691.5305712,
+        "id": "seed_042_step_44_solve",
+        "inputs": [
+            {
+                "bytes": 36949731,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/formulas/seed_042_step_44.cnf",
+                "sha256": "baec336d801b67e7c380c2d2bd61524db8a216574ce5b38dd9dc5b10b093b820"
+            }
+        ],
+        "log": {
+            "bytes": 196963,
+            "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/output.log",
+            "sha256": "f54b7be01c02c18310d302777176a279c3fce61c48bc1c134d86a5d8acac346b"
+        },
+        "max_rss_kib": 619452,
+        "mean_background_cpu_equivalents": 0.11559682617646437,
+        "outputs": [
+            {
+                "bytes": 14541823107,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_Continuation_1.0.0/work/jobs/seed_042_step_44_solve/proof.lrat",
+                "sha256": "fa6664bc44d1c36fa5980b71e39957056e525dda82d93d8ebd9d4fb54cde134f"
+            }
+        ],
+        "peak_output_bytes": 14541823107,
+        "proof_counters": [
+            {
+                "complete_addition_records_in_scanned_prefix": 62696984,
+                "complete_deletion_records_in_scanned_prefix": 3509628,
+                "error": null,
+                "file_bytes": 14541823107,
+                "scan_backlog_bytes": 7158915,
+                "scanned_bytes": 14534664192,
+                "scope": "Telemetry only; counts may lag; no ETA or validation claim"
+            }
+        ],
+        "reason": null,
+        "resource_pause_events": 0,
+        "returncode": 20,
+        "started_unix": 1791265135.9399776,
+        "supervisor": {
+            "birth": "40697844",
+            "cpu_s": 0.02,
+            "pid": 1454506,
+            "rss_bytes": 17747968,
+            "state": "R"
+        },
+        "supervisor_cpu_seconds": 293.19491569999997,
+        "target_cpu_s": 86400.0
+    },
+    "status": "UNSAT_VERIFIED",
+    "toolchain_sha256": "7f48f6a35638be01d430dee7ed2bfbecff2d9def7ff50ef59293e30cf209638e",
+    "units": [
+        631,
+        1288,
+        742,
+        1345,
+        796,
+        1398,
+        1657,
+        1447,
+        1678
+    ]
+}

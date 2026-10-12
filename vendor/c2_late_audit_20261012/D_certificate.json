@@ -1,0 +1,214 @@
+{
+    "candidate": "seed_172_step_45",
+    "checker": {
+        "allocated_cpu_s": 604800.0,
+        "category": "checker",
+        "command": [
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/tools/drat-trim/drat-trim",
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/formulas/candidate.cnf",
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/case/proof.drat",
+            "-t",
+            "2147483647"
+        ],
+        "cpu_seconds": 177390.282882,
+        "finished": {
+            "monotonic": 315662.243947963,
+            "monotonic_raw": 333403.129444,
+            "unix": 1791168985.906413
+        },
+        "id": "main_checker",
+        "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/main_checker_c9436266f22d/output.log",
+        "log_sha256": "fad2eaca8b564d56c359d7983e679ccf1588704643f762b0f2913e72cad4601d",
+        "max_rss_kib": 18658488,
+        "reason": null,
+        "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/main_checker_c9436266f22d/result.json",
+        "returncode": 0,
+        "started": {
+            "monotonic": 147490.933736907,
+            "monotonic_raw": 155958.1357963,
+            "unix": 1790991535.939686
+        }
+    },
+    "formula_sha256": "2f41dcd13e2a2d6feb9199f06300f7b4040f7bdd33ae6995af705fd43ff100c3",
+    "profile_sha256": "33fc424d5e0ce00179a5abbde52c56b40e4e1fcbc272c36d595ef29354e3b030",
+    "proof": {
+        "bytes": 14502080726,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/case/proof.drat",
+        "sha256": "ac25d846fedb264b64453e9b3510e91f9154a880c764591bdfb3d74d1b104eb7"
+    },
+    "scope": "Original profile_346 plus listed nine units only. No general C2 or C3 exclusion.",
+    "solver": {
+        "allocated_cpu_s": 86400.0,
+        "category": "solver",
+        "command": [
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/tools/cadical/build/cadical",
+            "--seed=0",
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/formulas/candidate.cnf",
+            "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/case/proof.drat"
+        ],
+        "cpu_seconds": 66985.441917,
+        "finished": {
+            "monotonic": 147448.21814897,
+            "monotonic_raw": 155915.4202751,
+            "unix": 1790991493.224098
+        },
+        "id": "main_solver",
+        "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/main_solver_7f99f5c351a3/output.log",
+        "log_sha256": "1ba5f5cce75415d53071ac3ba26c819aea8d09d4582f451450686fcf5ecb14a2",
+        "max_rss_kib": 577644,
+        "reason": null,
+        "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/main_solver_7f99f5c351a3/result.json",
+        "returncode": 20,
+        "started": {
+            "monotonic": 84483.733261284,
+            "monotonic_raw": 88913.9912489,
+            "unix": 1790924489.6874783
+        }
+    },
+    "status": "UNSAT_VERIFIED",
+    "toolchain": {
+        "binary_sha256": {
+            "checker": "890a7f1d66f482265518096a433a07cc949fdfba3595602755a018ca20ce2fdc",
+            "coverage": "6a1e2fe9e7561276e9e93843f6665d6d235f3957ada4fe3a94fe6f8d078bfcba",
+            "solver": "f40b39df0feece0f055c2b92b74912ba54cea80829f18ff711c9b27d26162db7"
+        },
+        "build_flags": {
+            "cadical": "default release configure",
+            "coverage": "-std=c++17 -O3",
+            "drat-trim": "-D_DEFAULT_SOURCE -std=c99 -O2"
+        },
+        "compiler_receipts": [
+            {
+                "allocated_cpu_s": 30,
+                "category": "aux",
+                "command": [
+                    "gcc",
+                    "--version"
+                ],
+                "cpu_seconds": 0.0020829999999999998,
+                "finished": {
+                    "monotonic": 84457.959142808,
+                    "monotonic_raw": 88887.2144165,
+                    "unix": 1790924462.6763027
+                },
+                "id": "version_gcc",
+                "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_gcc_dd4f39a5d6cd/output.log",
+                "log_sha256": "8497f84b2b8334c413d9c6166bd39d009ba55d2ff60a8f23e66dfa5819c2b048",
+                "max_rss_kib": 14144,
+                "reason": null,
+                "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_gcc_dd4f39a5d6cd/result.json",
+                "returncode": 0,
+                "started": {
+                    "monotonic": 84457.947520552,
+                    "monotonic_raw": 88887.2022739,
+                    "unix": 1790924462.66468
+                }
+            },
+            {
+                "allocated_cpu_s": 30,
+                "category": "aux",
+                "command": [
+                    "g++",
+                    "--version"
+                ],
+                "cpu_seconds": 0.002283,
+                "finished": {
+                    "monotonic": 84457.982041191,
+                    "monotonic_raw": 88887.2383372,
+                    "unix": 1790924462.6992009
+                },
+                "id": "version_g++",
+                "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_g++_5daf134b5c92/output.log",
+                "log_sha256": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8",
+                "max_rss_kib": 14144,
+                "reason": null,
+                "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_g++_5daf134b5c92/result.json",
+                "returncode": 0,
+                "started": {
+                    "monotonic": 84457.969812154,
+                    "monotonic_raw": 88887.2255619,
+                    "unix": 1790924462.686972
+                }
+            },
+            {
+                "allocated_cpu_s": 30,
+                "category": "aux",
+                "command": [
+                    "make",
+                    "--version"
+                ],
+                "cpu_seconds": 0.002133,
+                "finished": {
+                    "monotonic": 84458.004369454,
+                    "monotonic_raw": 88887.2616634,
+                    "unix": 1790924462.721529
+                },
+                "id": "version_make",
+                "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_make_8a4752621cf8/output.log",
+                "log_sha256": "8ee498ee2fc27e8dcdf99191b454077df95e3840d841ec94321748b6d7f36819",
+                "max_rss_kib": 14144,
+                "reason": null,
+                "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/version_make_8a4752621cf8/result.json",
+                "returncode": 0,
+                "started": {
+                    "monotonic": 84457.992433134,
+                    "monotonic_raw": 88887.2491941,
+                    "unix": 1790924462.7095928
+                }
+            }
+        ],
+        "solver_version_receipt": {
+            "allocated_cpu_s": 30,
+            "category": "aux",
+            "command": [
+                "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/tools/cadical/build/cadical",
+                "--version"
+            ],
+            "cpu_seconds": 0.002536,
+            "finished": {
+                "monotonic": 84457.936893898,
+                "monotonic_raw": 88887.1911722,
+                "unix": 1790924462.6540537
+            },
+            "id": "solver_version",
+            "log": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/solver_version_e79e626019d1/output.log",
+            "log_sha256": "fe650098093fad42070e8a2cacfb216a6c416af57bd26dd6ff479fef69f8bc71",
+            "max_rss_kib": 14144,
+            "reason": null,
+            "receipt_path": "/home/rb/conway99_workspace/Conway99_C2_Ryzen_1.0.0/work/operations/solver_version_e79e626019d1/result.json",
+            "returncode": 0,
+            "started": {
+                "monotonic": 84457.918973051,
+                "monotonic_raw": 88887.1724505,
+                "unix": 1790924462.6361327
+            }
+        },
+        "sources": [
+            {
+                "archive": "cadical.tar.gz",
+                "commit": "4198d817d0dcde5b1240eefbff70b555b7df2af9",
+                "name": "cadical",
+                "sha256": "5ec106dbf43386960c1eeca664c468a804409a171bc4191738b41b209c77fe9e",
+                "url": "https://github.com/arminbiere/cadical.git"
+            },
+            {
+                "archive": "drat-trim.tar.gz",
+                "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+                "name": "drat-trim",
+                "sha256": "29d2ddad9926786151c88ebadc312b9b86aab23b0a027e93ef6a20e1a36f93df",
+                "url": "https://github.com/marijnheule/drat-trim.git"
+            }
+        ]
+    },
+    "units": [
+        709,
+        771,
+        1345,
+        817,
+        1093,
+        1657,
+        1678,
+        1708,
+        1717
+    ]
+}

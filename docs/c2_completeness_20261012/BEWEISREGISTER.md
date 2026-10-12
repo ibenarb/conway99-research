@@ -19,9 +19,9 @@ Stand 12.10.2026. **LITERATUR** bedeutet geprüft verorteter veröffentlichter S
 | C4 | Der gegenseitige Ankergraph des uneingeschränkten C2-Modells ist C4-frei. | ENC, F0 plus acht Units, historisches Zertifikat, L5 | Formelbindung an F0, alle 105 Transporte, Proofhashes und Checkerbeleg NEU GEPRÜFT; Schluss HERGELEITET unter der ÜBERNOMMENEN historischen Checkerprüfung. Kein neuer Replay. |
 | CEN | Der Census enthält genau einen Vertreter jeder S7-Bahn schleifenfreier Pfeilgraphen mit Ausgraden in {3,4,6}, mindestens einem Grad 3 und C4-freiem gegenseitigem Graphen. | Strukturprüfung, unabhängige Isomorphieprüfung und vollständige beschriftete Zählung | NEU GEPRÜFT: 7.388.648 Bahnen, 37.030.041.152 beschriftete Graphen; Zählargument in CENSUS_VOLLSTAENDIGKEIT.md. Die mathematische Zulässigkeit der Filter gehört getrennt zu P46/C4. |
 | LINK | Rest234691 ist eine unveränderte Teilmenge des Originalcensus; Rest218 eine unveränderte Teilmenge davon. | Drei gehashte Originaldateien | NEU GEPRÜFT vollständig; keine exakte Komplementbildung beansprucht. |
-| COV | Historische Ausschlüsse lassen genau die jeweils angegebene Restmenge übrig. | ENC, L5, L9, konkrete Muster und Belege | Census bis Rest234691: exakte Komplemente, alle Muster-/Formelbindungen und 1.373 Belegdatensätze NEU GEPRÜFT; historische Checkerprüfungen ÜBERNOMMEN. Nachfolgende Übergänge bis Rest218 im Gesamtaudit noch OFFEN. |
+| COV | Historische Ausschlüsse lassen genau die jeweils angegebene Restmenge übrig. | ENC, L5, L9, konkrete Muster und Belege | Census bis Rest234691: exakte Komplemente, alle Muster-/Formelbindungen und 1.373 Belegdatensätze NEU GEPRÜFT; historische Checkerprüfungen ÜBERNOMMEN. Auch nachfolgende Übergänge bis Rest218 mit zwei Verfahren und vier Formel-/Checkerbindungen NEU GEPRÜFT; siehe späten Audit. |
 | R218 | Alle 218 Schlussprofile sind unter F346 abgedeckt. | Gemeinsame Basis, 42 Units, frühere Checkerbelege | Abschlussaudit ÜBERNOMMEN: vollständige Metadaten-/Formelrekonstruktionsprüfung; keine Wiederholung aller Checker. |
-| H346 | Kein Modell hat alle sieben Ankergrade in {3,4,6}. | ENC, P46, C4, CEN, COV, R218 | BEDINGTES ZIEL; nicht allein aus Restzahl null ableiten. |
+| H346 | Kein Modell hat alle sieben Ankergrade in {3,4,6}. | ENC, P46, C4, CEN, COV, R218 | HERGELEITET unter den gebundenen historischen UNSAT-Prüfungen und dem übernommenen R218-Abschlussaudit; vollständige Mengenverknüpfung bis Rest218 NEU GEPRÜFT. Kein neuer Proof-Replay. |
 | LOW | Die acht lokalen Typen eines Minimumankers mit d≤2 sind ausgeschlossen. | L7; uneingeschränkte Basis F0 | OFFEN; keine vollständige frühere Ausschlusskette gefunden. |
 | C2 | Es gibt keinen solchen Graphen mit Involution. | L1–L8, H346, LOW | OFFEN. |
 
@@ -30,7 +30,7 @@ Stand 12.10.2026. **LITERATUR** bedeutet geprüft verorteter veröffentlichter S
 1. **Frühes Strukturreview:** L1–L7, genaue Censusfilter und logische Reichweite von H346/LOW.
    Der Reviewer soll einen fehlenden Fall oder eine unzulässige Kombination aktiv suchen.
 2. **Eigene Fortsetzung:** Nach der neuen Bindung von ENC für F0/F46/F346 und C4/P46
-   die weiteren Coverage-Übergänge an ihre Basen, Muster, Listen und Zertifikate binden.
+   sind auch die weiteren Coverage-Übergänge bis Rest218 gebunden. Schwerpunkt jetzt LOW.
    Vor erneuten Rechnungen zunächst vorhandene historische Belege auswerten.
 3. **Niedrige Grade:** Nach vorhandenen Ausschlüssen suchen; andernfalls präzise neue
    Lemmas oder endliche Restaufgaben entwickeln. Kein neuer Solverlauf ohne konkrete

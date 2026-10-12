@@ -1,0 +1,212 @@
+{
+    "candidate": "seed_172_step_47",
+    "chain": "trim_cake",
+    "checked_proof": {
+        "bytes": 3240522112,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/trimmed.lrat",
+        "sha256": "98afc1bf06058cfa979e4eea1fa8e3455f10ef7b734aacd3cc6bd9b21f4cbea9"
+    },
+    "checks": [
+        {
+            "category": "checker",
+            "command": [
+                "stdbuf",
+                "-oL",
+                "-eL",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/tools/lrat",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/proof.lrat",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/trimmed.lrat"
+            ],
+            "cpu_seconds": 72.253329,
+            "finished_unix": 1791466190.7142956,
+            "id": "seed_172_step_47_trim",
+            "inputs": [
+                {
+                    "bytes": 36949731,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+                    "sha256": "f7336f06b61ec5a1dc0f7f0709843e63aa067f9c079a614d993b5b9dfc1591b6"
+                },
+                {
+                    "bytes": 5326200293,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/proof.lrat",
+                    "sha256": "2155557e7d349d49e2af46c24429e766afcfa12efe5a3b2f4c20ef43e932f5b0"
+                }
+            ],
+            "log": {
+                "bytes": 1374,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/output.log",
+                "sha256": "34cc8d6e321fd198af71ef01c98e8bf86f826237fb0c72d9856bc8b08d5b689f"
+            },
+            "max_rss_kib": 7234144,
+            "mean_background_cpu_equivalents": 1.0670317168091967,
+            "outputs": [
+                {
+                    "bytes": 3240522112,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/trimmed.lrat",
+                    "sha256": "98afc1bf06058cfa979e4eea1fa8e3455f10ef7b734aacd3cc6bd9b21f4cbea9"
+                }
+            ],
+            "peak_output_bytes": 3240522112,
+            "proof_counters": [
+                {
+                    "complete_addition_records_in_scanned_prefix": 100516,
+                    "complete_deletion_records_in_scanned_prefix": 100088,
+                    "error": null,
+                    "file_bytes": 3240522112,
+                    "scan_backlog_bytes": 3232133504,
+                    "scanned_bytes": 8388608,
+                    "scope": "Telemetry only; counts may lag; no ETA or validation claim"
+                }
+            ],
+            "reason": null,
+            "resource_pause_events": 0,
+            "returncode": 20,
+            "started_unix": 1791466113.7502234,
+            "supervisor": {
+                "birth": "59789492",
+                "cpu_s": 0.03,
+                "pid": 1508001,
+                "rss_bytes": 17735680,
+                "state": "R"
+            },
+            "supervisor_cpu_seconds": 8.8783687,
+            "target_cpu_s": 259200.0
+        },
+        {
+            "category": "checker",
+            "command": [
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/tools/cake",
+                "--CML_HEAP_SIZE=24576",
+                "--CML_STACK_SIZE=1024",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+                "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/trimmed.lrat"
+            ],
+            "cpu_seconds": 196.579542,
+            "finished_unix": 1791466397.910978,
+            "id": "seed_172_step_47_check",
+            "inputs": [
+                {
+                    "bytes": 36949731,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+                    "sha256": "f7336f06b61ec5a1dc0f7f0709843e63aa067f9c079a614d993b5b9dfc1591b6"
+                },
+                {
+                    "bytes": 3240522112,
+                    "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_trim/trimmed.lrat",
+                    "sha256": "98afc1bf06058cfa979e4eea1fa8e3455f10ef7b734aacd3cc6bd9b21f4cbea9"
+                }
+            ],
+            "log": {
+                "bytes": 17,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_check/output.log",
+                "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+            },
+            "max_rss_kib": 25219976,
+            "mean_background_cpu_equivalents": 0.41497554147569915,
+            "outputs": [],
+            "peak_output_bytes": 0,
+            "proof_counters": [],
+            "reason": null,
+            "resource_pause_events": 0,
+            "returncode": 0,
+            "started_unix": 1791466200.3221066,
+            "supervisor": {
+                "birth": "59797587",
+                "cpu_s": 0.03,
+                "pid": 1508317,
+                "rss_bytes": 17678336,
+                "state": "R"
+            },
+            "supervisor_cpu_seconds": 4.0136954000000005,
+            "target_cpu_s": 259200.0
+        }
+    ],
+    "format": "lrat",
+    "formula": {
+        "bytes": 36949731,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+        "sha256": "f7336f06b61ec5a1dc0f7f0709843e63aa067f9c079a614d993b5b9dfc1591b6"
+    },
+    "proof": {
+        "bytes": 5326200293,
+        "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/proof.lrat",
+        "sha256": "2155557e7d349d49e2af46c24429e766afcfa12efe5a3b2f4c20ef43e932f5b0"
+    },
+    "scope": "profile_346 plus listed units; conditional census/model coverage, not general C2/C3",
+    "solver": {
+        "category": "solver",
+        "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/tools/solver",
+            "--seed=0",
+            "--lrat=1",
+            "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+            "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/proof.lrat"
+        ],
+        "cpu_seconds": 9647.27555,
+        "finished_unix": 1791466104.1885087,
+        "id": "seed_172_step_47_solve",
+        "inputs": [
+            {
+                "bytes": 36949731,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/formulas/seed_172_step_47.cnf",
+                "sha256": "f7336f06b61ec5a1dc0f7f0709843e63aa067f9c079a614d993b5b9dfc1591b6"
+            }
+        ],
+        "log": {
+            "bytes": 124379,
+            "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/output.log",
+            "sha256": "694c8d5490dab864d3c155beb052daed2056acc793a5c9279e1443d107626046"
+        },
+        "max_rss_kib": 623284,
+        "mean_background_cpu_equivalents": 1.1512573410326186,
+        "outputs": [
+            {
+                "bytes": 5326200293,
+                "path": "/home/rb/conway99_workspace/Conway99_C2_C_1.0.0/work/jobs/seed_172_step_47_solve/proof.lrat",
+                "sha256": "2155557e7d349d49e2af46c24429e766afcfa12efe5a3b2f4c20ef43e932f5b0"
+            }
+        ],
+        "peak_output_bytes": 5326200293,
+        "proof_counters": [
+            {
+                "complete_addition_records_in_scanned_prefix": 23342752,
+                "complete_deletion_records_in_scanned_prefix": 1754864,
+                "error": null,
+                "file_bytes": 5326200293,
+                "scan_backlog_bytes": 9580005,
+                "scanned_bytes": 5316620288,
+                "scope": "Telemetry only; counts may lag; no ETA or validation claim"
+            }
+        ],
+        "reason": null,
+        "resource_pause_events": 0,
+        "returncode": 20,
+        "started_unix": 1791456439.37917,
+        "supervisor": {
+            "birth": "58878859",
+            "cpu_s": 0.02,
+            "pid": 1472486,
+            "rss_bytes": 17895424,
+            "state": "R"
+        },
+        "supervisor_cpu_seconds": 119.93862569999999,
+        "target_cpu_s": 86400.0
+    },
+    "status": "UNSAT_VERIFIED",
+    "toolchain_sha256": "34477277d40e9c521adb2340cd4f4706d21709b8860ddd6438c71addb45fc7ba",
+    "units": [
+        709,
+        771,
+        1345,
+        817,
+        1093,
+        1657,
+        1708,
+        1632,
+        1717
+    ]
+}
