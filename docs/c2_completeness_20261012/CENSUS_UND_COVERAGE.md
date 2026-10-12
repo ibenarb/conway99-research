@@ -14,7 +14,7 @@ Ankerpaaren mit 42 möglichen Pfeilen, modulo $S_7$, unter folgenden Bedingungen
 | Mindestens ein Grad 3 | Entfernt den Zweig Profile46 | Vollständigen früheren Ausschluss des Zweigs mit Graden nur 4 und 6 binden. |
 | Kein C4 im gegenseitigen Ankergraphen | Mathematisch begründeter Filter beansprucht | C4-Zertifikat an die richtige Basis, acht Pfeil-Units und zulässigen S7-Transport binden. |
 | Gradfolge absteigend sortiert | Umbenennung der sieben Anker | S7 erhält E1–E3 und alle vorangehenden Bedingungen. |
-| Ein kanonischer Vertreter je Bahn | Quotientierung | Vollständigkeit des Aufzählers, korrekte Kanonisierung und Dublettenfreiheit bis auf Isomorphie prüfen. |
+| Ein Vertreter je Bahn | Quotientierung | Vollständigkeit, Automorphismenordnungen und Isomorphiedublettenfreiheit sind neu geprüft; siehe CENSUS_VOLLSTAENDIGKEIT.md. |
 
 Der lokale Census ist eine Menge notwendiger Pfeilkonfigurationen. Seine Vertreter
 sind keine behaupteten SRG-Lösungen. Die Begriffe **Profile346** und **Rest234691**
@@ -34,15 +34,39 @@ Sie wurde am 12.10.2026 vollständig gelesen. Die neue Prüfung bestätigte:
 - die Summe 37.030.041.152 der Gewichte 5040/aut unter Verwendung der **gespeicherten** Automorphismenordnungen;
 - byteidentische Begleitdateien gegenüber dem älteren Profile346Pilot-1.0.1-Ergebnisarchiv.
 
-Diese Prüfung berechnete die Automorphismenordnungen nicht neu, schloss isomorphe
+Dieser erste Upload-Audit berechnete die Automorphismenordnungen nicht neu, schloss isomorphe
 Dubletten nicht neu aus und zählte die vollständige Suchmenge nicht erneut auf.
-Der ursprüngliche `census.py` enthält entsprechende historische Kontrollen. Ihre
-Korrektheit und ihre Bindung an den ursprünglichen Aufzählungslauf sind ein eigener Prüfauftrag.
+Die weiter unten beschriebenen zusätzlichen Prüfungen schließen diese Pflichten
+für die gehashte Vertreterliste, ohne auf die Korrektheit des historischen
+Kanonisierungsprogramms oder seiner Aufzählungsshards angewiesen zu sein.
 
 Belege: [census_upload_audit.json](../../results/c2_completeness_20261012/census_upload_audit.json)
 und [census_validation_output.txt](../../results/c2_completeness_20261012/census_validation_output.txt).
 Die Überschrift der historischen README nennt noch 1.0.0; Pfade und Korrekturabschnitt
 nennen 1.0.1. Die betreffende README ist byteidentisch mit dem früheren 1.0.1-Export.
+
+### Zusätzlicher vollständiger Isomorphie- und Zählaudit
+
+Eine neue Implementierung berechnete für sämtliche 7.388.648 Vertreter unabhängig
+die Automorphismenordnung. Alle gespeicherten Werte stimmen. Kanonisierung unter
+allen Permutationen innerhalb invariant geordneter Ausgrad-/Eingradklassen schloss
+isomorphe Dubletten aus. Die Summe der neu berechneten Bahngrößen beträgt
+37.030.041.152.
+
+Ein zweites neues Programm zählt ohne Kanonisierung sämtliche beschrifteten
+Pfeilgraphen der oben definierten Domäne. Es durchläuft alle Zeilenmasken für alle
+28 Gradprofile und verwirft nur Präfixe, deren gegenseitiger Graph bereits einen
+Vierzyklus enthält. Die Gesamtzahl ist ebenfalls 37.030.041.152; außerdem stimmen
+die Zahlen für jedes einzelne Gradprofil mit den historischen Begleitdaten überein.
+
+Zulässige, paarweise verschiedene Bahnen mit dieser Gesamtgröße füllen damit die
+gesamte unabhängig gezählte Domäne aus. Dies schließt die Censusvollständigkeit
+innerhalb seiner Bedingungen. Die Anwendung dieser Bedingungen auf SRG-Lösungen
+bedarf weiterhin der korrekt gebundenen Ausschlüsse P46 und C4.
+
+Beweis und Reproduktionshinweise: [CENSUS_VOLLSTAENDIGKEIT.md](CENSUS_VOLLSTAENDIGKEIT.md).
+Neue Berichte: [isomorphism_audit.json](../../results/c2_completeness_20261012/isomorphism_audit.json)
+und [labelled_census_audit.json](../../results/c2_completeness_20261012/labelled_census_audit.json).
 
 ## 3. Historische Abdeckungskette
 
@@ -52,7 +76,7 @@ keinen Mengenvergleich und keine Zertifikatsprüfung.
 
 | Stufe | Zusätzlich abgedeckt | Verbleibend | Belegstatus dieses Arbeitsstands |
 |---|---:|---:|---|
-| Ausgangscensus | — | 7.388.648 | Originaldatei neu vollständig auf Datensatzkonsistenz geprüft. |
+| Ausgangscensus | — | 7.388.648 | Struktur, Isomorphieklassen, Aut-Ordnungen und Vollständigkeit innerhalb der Censusbedingungen neu geprüft. |
 | Generalize: sechs Musterausschlüsse | 4.686.633 | 2.702.015 | Original-Coverage-JSON; Beweise und Musterabdeckung übernommen. |
 | One3: verbleibende Fälle mit genau einem Grad-3-Anker | 1.032 | 2.700.983 | Originalbelege: 48.252 Gesamtfälle, 47.220 vorher erfasst, 1.032 zertifiziert. |
 | Generalize2: neue Muster und übernommene Pilotfälle | 2.466.285 | 234.698 | Original-Coverage-JSON; Vereinigungsabdeckung übernommen. |
@@ -100,13 +124,12 @@ Abdeckungsalgorithmus gesondert zu prüfen.
 
 ## 5. Offene Übergänge
 
-- Vollständigkeit und Isomorphiekorrektheit des ursprünglichen Census.
 - Gemeinsame Zulässigkeit aller Filter; insbesondere C4 und Profile46 mit korrekter Basis.
 - Exakte Komplementbildung jeder historischen Coverage-Stufe, einschließlich Überschneidungen.
 - Encoderadäquanz und korrekte Variablenzuordnung sämtlicher verwendeter Formeln und Kerne.
 - Durchgehende Bindung der früheren Zertifikate an die konkret transportierten Musteraussagen.
 - Ausschluss oder anderweitige vollständige Behandlung der niedrigen Ankergrade 0, 1 und 2.
 
-Ein erfolgreicher Abschluss der ersten fünf Punkte würde den vollständigen
+Ein erfolgreicher Abschluss der ersten vier Punkte würde den vollständigen
 Profil346-Ausschluss tragen. Der letzte Punkt ist zusätzlich für den allgemeinen
 C2-Satz erforderlich. Diese Punkte sind Prüfaufträge, keine festgestellten Fehler.

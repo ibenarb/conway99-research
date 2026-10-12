@@ -1,6 +1,6 @@
 # Involutionen im Conway-99-Problem: Rahmenreduktion und bedingte Profilausschlüsse
 
-**Arbeitsfassung 0.1 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
+**Arbeitsfassung 0.2 vom 12.10.2026. Kein allgemeiner C2-Ausschluss.**
 
 ## Zusammenfassung und Aussagegrenze
 
@@ -16,8 +16,11 @@ acht lokale Matchingtypen. Deren vollständiger Ausschluss ist hier offen.
 Die abgeschlossenen Rechnungen decken eine Liste mit 234.691 Profilcodes unter
 übernommenen Voraussetzungen ab. Die Einordnung dieser Liste in einen Census
 mit 7.388.648 Vertretern und dessen historische Ausschlussstufen wird gesondert
-dokumentiert. Eine leere Restliste ersetzt weder den Vollständigkeitsnachweis des
-Census noch die Rechtfertigung seiner mathematischen Einschränkungen.
+dokumentiert. Die Vollständigkeit des Census innerhalb seiner definierten Bedingungen
+wurde inzwischen durch eine neue Isomorphieprüfung und eine unabhängige vollständige
+beschriftete Aufzählung bestätigt. Die Rechtfertigung seiner mathematischen Filter
+und die vollständige Verbindung mit den historischen Ausschlüssen bleiben davon
+getrennte Beweispflichten.
 
 ## 1. Begriffe und Ziel
 
@@ -258,6 +261,15 @@ Datenprüfungen stehen in [CENSUS_UND_COVERAGE.md](CENSUS_UND_COVERAGE.md).
 Der Census enthält C4-freie Pfeilgraphen mit allen Graden in $\{3,4,6\}$ und
 mindestens einem Grad 3. Der Zweig ohne Grad 3 benötigt den früheren Profile46-Ausschluss;
 der C4-Filter benötigt den korrekt gebundenen C4-Ausschluss.
+
+**Rechnerischer Satz CEN.** Die gehashte Vertreterliste enthält genau einen Vertreter
+jeder Isomorphieklasse dieser ausdrücklich eingeschränkten Pfeilgraphen. Es gibt
+7.388.648 Klassen und 37.030.041.152 beschriftete Graphen. Der Nachweis kombiniert
+eine vollständige Strukturprüfung, unabhängig neu berechnete Automorphismenordnungen,
+Isomorphiedublettenfreiheit und eine vollständige Zählung ohne Kanonisierung.
+Argument, Quellcode und ausgeführte Ergebnisse sind in
+[CENSUS_VOLLSTAENDIGKEIT.md](CENSUS_VOLLSTAENDIGKEIT.md) verbunden. Dieser Satz allein
+ist keine Aussage über die Existenz oder Nichtexistenz eines SRG.
 
 Der Status jeder Beweispflicht steht in [BEWEISREGISTER.md](BEWEISREGISTER.md).
 Die veröffentlichungsfähige Schlussfolgerung muss auf den schwächsten noch

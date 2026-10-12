@@ -17,7 +17,7 @@ Stand 12.10.2026. **LITERATUR** bedeutet geprüft verorteter veröffentlichter S
 | ENC | Jede mathematische Lösung erweitert sich auf eine erfüllende CNF-Belegung. | L4, Produkt- und Zählkodierungen, konkrete Generatoren | Allgemeine historische Encoderbeweise verortet; vollständige Implementierungs-/Formelbindung OFFEN. |
 | P46 | Alle Profile mit Graden ausschließlich 4 und 6 sind ausgeschlossen. | ENC, frühere 2.170 Fälle und gültige Vorfilter | ÜBERNOMMEN; Formeln, Coverage und ursprüngliche Zertifikate in die Gesamtkette binden. |
 | C4 | Der verwendete gegenseitige Vierzyklus ist unter der benötigten Basis unmöglich. | ENC, konkrete Formel und Zertifikat, L5 | Beweisarchiv und Hashes lokalisiert; genaue Formelstärke und globaler Transport noch zu auditieren. |
-| CEN | Der Census enthält jede durch die bewiesenen Filter erlaubte S7-Bahn. | L5, P46, C4, Aufzählung und Kanonisierung | Datenkonsistenz NEU GEPRÜFT; exhaustive Abdeckung, Aut-Ordnungen und Isomorphieaudit noch OFFEN. |
+| CEN | Der Census enthält genau einen Vertreter jeder S7-Bahn schleifenfreier Pfeilgraphen mit Ausgraden in {3,4,6}, mindestens einem Grad 3 und C4-freiem gegenseitigem Graphen. | Strukturprüfung, unabhängige Isomorphieprüfung und vollständige beschriftete Zählung | NEU GEPRÜFT: 7.388.648 Bahnen, 37.030.041.152 beschriftete Graphen; Zählargument in CENSUS_VOLLSTAENDIGKEIT.md. Die mathematische Zulässigkeit der Filter gehört getrennt zu P46/C4. |
 | LINK | Rest234691 ist eine unveränderte Teilmenge des Originalcensus; Rest218 eine unveränderte Teilmenge davon. | Drei gehashte Originaldateien | NEU GEPRÜFT vollständig; keine exakte Komplementbildung beansprucht. |
 | COV | Historische Ausschlüsse lassen genau die jeweils angegebene Restmenge übrig. | ENC, L5, L9, konkrete Muster und Belege | Zahlensaldo NEU GEPRÜFT; mengen- und zertifikatsbezogene Kette teilweise ÜBERNOMMEN, Gesamtaudit OFFEN. |
 | R218 | Alle 218 Schlussprofile sind unter F346 abgedeckt. | Gemeinsame Basis, 42 Units, frühere Checkerbelege | Abschlussaudit ÜBERNOMMEN: vollständige Metadaten-/Formelrekonstruktionsprüfung; keine Wiederholung aller Checker. |
@@ -29,7 +29,7 @@ Stand 12.10.2026. **LITERATUR** bedeutet geprüft verorteter veröffentlichter S
 
 1. **Frühes Strukturreview:** L1–L7, genaue Censusfilter und logische Reichweite von H346/LOW.
    Der Reviewer soll einen fehlenden Fall oder eine unzulässige Kombination aktiv suchen.
-2. **Eigene Fortsetzung:** E1 mit den konkreten Generatoren schließen und C4/P46 sowie
+2. **Eigene Fortsetzung:** ENC mit den konkreten Generatoren schließen und C4/P46 sowie
    die einzelnen Coverage-Übergänge an ihre Basen, Muster, Listen und Zertifikate binden.
    Vor erneuten Rechnungen zunächst vorhandene historische Belege auswerten.
 3. **Niedrige Grade:** Nach vorhandenen Ausschlüssen suchen; andernfalls präzise neue

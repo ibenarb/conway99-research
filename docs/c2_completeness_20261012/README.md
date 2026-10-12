@@ -1,6 +1,6 @@
 # C2-Vollständigkeitsprüfung und Publikationsentwicklung
 
-Stand **12.10.2026**, Arbeitsfassung **0.1**. Ausschließlich der C2-Symmetriezweig.
+Stand **12.10.2026**, Arbeitsfassung **0.2**. Ausschließlich der C2-Symmetriezweig.
 Der allgemeine C2-Ausschluss ist **offen**.
 
 ## Einstieg
@@ -13,6 +13,8 @@ Der allgemeine C2-Ausschluss ist **offen**.
    Bezugsstellen und ausdrücklich noch fehlende öffentliche Downloadadressen.
 5. [Herkunft der Quellkopien](../../results/c2_completeness_20261012/source_provenance.json):
    unveränderte ausgewählte Originaldateien aus den tatsächlich verwendeten Paketen.
+6. [Vollständigkeitsnachweis des Census](CENSUS_VOLLSTAENDIGKEIT.md): unabhängige
+   Isomorphieprüfung, Automorphismenordnungen und vollständige beschriftete Zählung.
 
 ## Gesicherter Ausgangsstand und heutige Fortschritte
 
@@ -26,6 +28,10 @@ Am 12.10.2026 wurden zusätzlich ausgeführt:
 
 - Originalsatz von Makhnev–Minakova zur Ein-Fixpunkt-Reduktion im Seitenscan verifiziert;
 - vollständige Konsistenzprüfung der wiedergefundenen 7.388.648 Censusdatensätze;
+- unabhängige Neuberechnung aller Automorphismenordnungen und Ausschluss isomorpher Dubletten;
+- unabhängige vollständige Zählung von 37.030.041.152 beschrifteten Graphen;
+  Übereinstimmung mit der neu berechneten Bahngrößensumme und damit Vollständigkeit
+  des Census innerhalb seiner definierten Bedingungen;
 - vollständige Einbettung aller 234.691 Restdatensätze in den Census und aller 218 Schlussdatensätze in die Restliste;
 - vollständige lokale Enumeration der 10.395 Matchings mit Bestätigung aller elf Typen;
 - neue Ausarbeitung der Kompatibilität von Minimumankerwahl und lokaler Matchingnormalform;
@@ -34,7 +40,7 @@ Am 12.10.2026 wurden zusätzlich ausgeführt:
 Dabei wurden keine neuen Solverläufe und keine neuen Checker-Replays gestartet.
 Ryzen- und Office-Prozesse wurden nicht angesprochen.
 
-## Reproduzierbare kleine Prüfungen
+## Reproduzierbare Prüfungen
 
 Der Quellbaum [src/c2_completeness_20261012](../../src/c2_completeness_20261012) enthält:
 
@@ -44,12 +50,18 @@ Der Quellbaum [src/c2_completeness_20261012](../../src/c2_completeness_20261012)
   einschließlich C4-Freiheit und exakter Codedublettenprüfung.
 - `audit_census.py`: Archiv-/Dateihashes, Abgleich mit historischen Begleitdateien
   und Vergleich der neu berechneten Profil-/Stratumzahlen.
+- `audit_isomorphism.cpp` und `run_isomorphism_audit.py`: vollständige unabhängige
+  Isomorphieprüfung und Neuberechnung sämtlicher Automorphismenordnungen.
+- `count_labelled.cpp` und `run_labelled_census.py`: vollständige beschriftete
+  Aufzählung ohne Kanonisierung und Abgleich mit der unabhängig bestimmten Bahngrößensumme.
 
 Die tatsächlich ausgeführten Ergebnisse liegen unter
 [results/c2_completeness_20261012](../../results/c2_completeness_20261012).
-Die Grenzen jeder Prüfung stehen im jeweiligen Ergebnis. Insbesondere bedeutet
-Codedublettenfreiheit nicht Isomorphiedublettenfreiheit; gespeicherte Aut-Ordnungen
-wurden im Upload-Audit nicht unabhängig berechnet.
+Die Grenzen jeder Prüfung stehen im jeweiligen Ergebnis. Der unveränderte frühere
+Upload-Audit prüfte nur Datensatzkonsistenz; die späteren Isomorphie- und Zählaudits
+schließen die dort noch offenen Censuspflichten. Unabhängig bedeutet hier:
+neue Implementierungen ohne Verwendung des historischen Kanonisierers oder seiner
+Aufzählungsshards, nicht bereits eine Prüfung durch eine andere Person.
 
 ## Zwei Reviewphasen
 
