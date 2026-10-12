@@ -77,8 +77,8 @@ unter `reviews/2026-10-12-c2-vollstaendigkeit` mit Forschungscommit
 `7dbacd7eed56e2bf73b3aa5f2648f00e5484adfa`. Ralph hat am 12.10.2026 um 14:43 Uhr
 mitgeteilt, dass er versandt wurde und in Arbeit ist.
 Das Abschlussreview folgt erst nach Schließen der für die endgültige Satzfassung
-notwendigen offenen Punkte. Eine Reviewerantwort liegt für diesen neuen Auftrag
-noch nicht vor.
+notwendigen offenen Punkte. Die Reviewerantwort vom 12.10.2026 zur Arbeitsfassung 0.3 ist inzwischen privat
+archiviert. Ihre Hinweise wurden mit dem fortgeschrittenen Stand 0.5 abgeglichen.
 
 ## Offener Kern
 
@@ -105,3 +105,16 @@ Alle 218 Schlussformelhashes sind erneut rekonstruiert und passen zum unverände
 übernommenen Abschlussaudit. Daraus folgt H346 unter den ausdrücklich benannten
 historischen Zertifikatsvoraussetzungen. Für den allgemeinen C2-Ausschluss
 bleiben die acht niedrigen Matchingtypen offen.
+
+## Lemma N und präzisierte LOW-Fallzerlegung
+
+[Partnermatching und LOW](../c2_lemma_n_20261012/LEMMA_N_UND_LOW.md) bestätigt
+Lemma N, zählt die gemeinsamen Matchingbahnen unabhängig und führt einen
+zusätzlichen notwendigen lokalen Kompatibilitätstest ein. Von 3.412 LOW-Bahnen
+bleiben nach diesem Test 3.152 Kandidatentypen. Keine neuen SAT-/Checkerläufe;
+der allgemeine C2-Ausschluss bleibt offen.
+
+Review-Eingang: privates Repository `ibenarb/conway99-review-exchange`, Branch
+`reviews/20261012-c2-review01-v2`, Commit
+`cfca3dd6a5388e14d23eeec62df1470898be241b`, Verzeichnis
+`reviews/2026-10-12-c2-vollstaendigkeit/incoming/review_01_v2/`.
