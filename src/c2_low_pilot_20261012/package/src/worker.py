@@ -109,13 +109,13 @@ def run(directory):
                 child.returncode = os.waitstatus_to_exitcode(status)
                 break
             config = read(root / 'config.json')
+            resources = host(work)
             live = proc(child.pid)
             if live:
                 require(state['child']['birth'] in (None, live['birth']), 'PID identity changed')
                 state['child'] = live
                 peak_rss = max(peak_rss, live['rss_bytes'])
             now = time.monotonic()
-            resources = host(work)
             sizes = sum(Path(p).stat().st_size for p in spec.get('outputs', []) if Path(p).exists())
             peak_outputs = max(peak_outputs, sizes)
             cpu_s = live['cpu_s'] if live else previous_cpu
@@ -144,14 +144,24 @@ def run(directory):
                 paused = want_pause
                 if paused:
                     pause_events += 1
+            # SIGSTOP delivery is asynchronous. Publish PAUSED only when /proc
+            # confirms it; sample CPU after the resource query and signal.
+            live = proc(child.pid)
+            if live:
+                require(state['child']['birth'] in (None, live['birth']), 'PID identity changed')
+                state['child'] = live
+                cpu_s = live['cpu_s']
+                peak_rss = max(peak_rss, live['rss_bytes'])
+            pause_confirmed = bool(paused and live and live['state'] in ('T', 't'))
+            now = time.monotonic()
             exceeded = cpu_s >= target
-            state.update(phase='STOP_REQUESTED' if stop_requested else 'RESOURCE_PAUSED' if paused else 'RUNNING',
+            state.update(phase='STOP_REQUESTED' if stop_requested else 'RESOURCE_PAUSED' if pause_confirmed else 'RESOURCE_PAUSE_PENDING' if paused else 'RUNNING',
                          child=state['child'], target_cpu_s=target, cpu_s=cpu_s,
                          time_extension_request=(f'Softbudget erreicht; läuft weiter. ETA unbekannt. Verlängerung möglich.'
                                                  if exceeded and not stop_requested else None),
                          time_budget_action='REQUEST_ONLY_KEEP_RUNNING',
                          resources=resources, resource_reasons=resource_reasons, resource_warnings=warnings,
-                         manual_pause=manual_pause, output_bytes=sizes, peak_output_bytes=peak_outputs,
+                         manual_pause=manual_pause, pause_confirmed=pause_confirmed, output_bytes=sizes, peak_output_bytes=peak_outputs,
                          peak_rss_bytes=peak_rss, updated_unix=time.time(), control_sequence=sequence,
                          eta=None, eta_scope='No prediction of SAT/UNSAT or checker completion')
             event_key = (state.get('phase'), state.get('control_sequence'), state.get('time_extension_request'),

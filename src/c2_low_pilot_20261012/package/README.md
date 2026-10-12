@@ -1,4 +1,4 @@
-# C2 LOW Pilot 1.0.1
+# C2 LOW Pilot 1.0.2
 
 Dieses Paket bereitet 72 Aufgaben vor: 32 vollständige R-Fälle, dieselben 32
 notwendigen X-Modelle und acht vollständige MIN-Vergleichsfälle. Es ist keine
@@ -6,7 +6,7 @@ vollständige Ausschlusskampagne für die 3.152 LOW-Wurzeln.
 
 ## Installation und erster Schritt
 
-Der Installer installiert nach ~/conway99_workspace/C2_LOW_Pilot_1.0.1,
+Der Installer installiert nach ~/conway99_workspace/C2_LOW_Pilot_1.0.2,
 prüft Dateihashes, entpackt die festgelegte F0-Basis, erzeugt die 72 Formeln
 und führt die Kontrollsuite aus. Er startet keine Pilotaufgaben.
 Eine bestehende Installation wird nicht überschrieben.
@@ -122,3 +122,12 @@ müssen mit 1.0.0 übereinstimmen. Keine historischen hohen Typen werden neu ger
 Die verbindlichen Rechenregeln liegen in MONITORING_POLICY.md. Diese Release erfüllt
 die dort für 1.0.0 noch als fehlend bezeichneten Punkte. Die Installation erzeugt
 einen eigenen Versionsordner; vorhandene Installationen bleiben erhalten.
+
+## Korrektur der Pausenmessung (1.0.2)
+
+1.0.1 konnte nach einer langsamen Ressourcenabfrage einen alten CPU-Wert als
+Pausenbeginn ausgeben. 1.0.2 misst nach der Abfrage und dem Stoppsignal neu und
+meldet RESOURCE_PAUSED erst nach bestätigtem Prozesszustand T/t; vorher steht
+RESOURCE_PAUSE_PENDING. Der Test prüft den realen Prozesszustand und CPU-Stillstand,
+auch bei künstlich um 0,4 Sekunden verzögerter Ressourcenabfrage. Die Toleranz
+von 0,05 CPU-Sekunden bleibt unverändert. Keine Änderung an mathematischen Formeln.

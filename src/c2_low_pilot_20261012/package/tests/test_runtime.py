@@ -39,11 +39,16 @@ class RuntimeTests(unittest.TestCase):
             self.process.stdout.close()
         self.temp.cleanup()
 
-    def launch(self, seconds=0.8, target=0.1):
+    def launch(self, seconds=0.8, target=0.1, host_delay=0, release_gate=False):
         script = 'import time; t=time.process_time();\nwhile time.process_time()-t<' + str(seconds) + ': pass\n'
+        if release_gate:
+            script = 'from pathlib import Path; p=Path(' + repr(str(self.job/'RELEASE_TEST_CHILD')) + ');\nwhile not p.exists(): pass\n'
         save(self.job / 'spec.json', {'id': 'test', 'root': str(self.root), 'command': [sys.executable, '-c', script],
              'category': 'solver', 'inputs': [], 'outputs': [], 'target_cpu_s': target})
-        self.process = subprocess.Popen([sys.executable, str(ROOT / 'src/worker.py'), str(self.job)],
+        bootstrap = ('import sys,time; sys.path.insert(0,sys.argv[1]); import worker; '
+                     'original=worker.host; delay=float(sys.argv[3]); '
+                     'worker.host=lambda p: (time.sleep(delay),original(p))[1]; worker.run(sys.argv[2])')
+        self.process = subprocess.Popen([sys.executable, '-c', bootstrap, str(ROOT / 'src'), str(self.job), str(host_delay)],
                                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
     def until(self, predicate, seconds=10):
@@ -80,16 +85,29 @@ class RuntimeTests(unittest.TestCase):
         self.assertLess(result['returncode'], 0)
 
     def test_resource_pause_then_resume(self):
+        self.pause_resume_check(0)
+
+    def test_resource_pause_after_slow_host_query(self):
+        self.pause_resume_check(0.4)
+
+    def pause_resume_check(self, host_delay):
         self.config['min_ram_gib'] = 10 ** 9
         save(self.root / 'config.json', self.config)
-        self.launch(seconds=0.5, target=100)
+        self.launch(target=100, host_delay=host_delay, release_gate=True)
         state = self.until(lambda s: s.get('phase') == 'RESOURCE_PAUSED')
-        first = state['cpu_s']
-        time.sleep(0.15)
-        second = read(self.job / 'state.json')['cpu_s']
-        self.assertLess(second - first, 0.05)
+        self.assertTrue(state['pause_confirmed'])
+        self.assertIn(state['child']['state'], ('T', 't'))
+        first = proc(state['child']['pid'])
+        self.assertIn(first['state'], ('T', 't'))
+        self.assertLess(abs(first['cpu_s'] - state['cpu_s']), 0.05)
+        time.sleep(0.2)
+        second = proc(state['child']['pid'])
+        self.assertIn(second['state'], ('T', 't'))
+        self.assertLess(second['cpu_s'] - first['cpu_s'], 0.05)
         self.config['min_ram_gib'] = 0
         save(self.root / 'config.json', self.config)
+        self.until(lambda s: s.get('phase') == 'RUNNING')
+        (self.job/'RELEASE_TEST_CHILD').touch()
         self.process.wait(timeout=10)
         self.assertEqual(read(self.job / 'result.json')['returncode'], 0)
         self.assertGreaterEqual(read(self.job / 'result.json')['resource_pause_events'], 1)

@@ -19,7 +19,7 @@ def digest(path):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--destination', type=Path, default=Path.home() / 'conway99_workspace/C2_LOW_Pilot_1.0.1')
+    p.add_argument('--destination', type=Path, default=Path.home() / 'conway99_workspace/C2_LOW_Pilot_1.0.2')
     args = p.parse_args()
     target = args.destination.resolve()
     if not target.exists():

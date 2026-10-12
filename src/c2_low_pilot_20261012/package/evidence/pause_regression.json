@@ -1,0 +1,16 @@
+{
+  "reported_failure_1_0_1": {
+    "test": "test_resource_pause_then_resume",
+    "cpu_delta_s": 0.41,
+    "limit_s": 0.05
+  },
+  "local_reproduction_1_0_1": {
+    "resource_query_delay_s": 0.4,
+    "reported_cpu_s": 0.0,
+    "actual_cpu_s": 0.39,
+    "actual_process_state": "T"
+  },
+  "fix": "Sample CPU after resource query and stop signal; publish RESOURCE_PAUSED only after T/t confirmation.",
+  "regression": "Slow resource query and actual /proc state plus unchanged CPU tolerance; test child held until explicit test release.",
+  "production_scope": "No production search executed; no mathematical change."
+}
