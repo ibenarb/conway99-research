@@ -118,3 +118,10 @@ Review-Eingang: privates Repository `ibenarb/conway99-review-exchange`, Branch
 `reviews/20261012-c2-review01-v2`, Commit
 `cfca3dd6a5388e14d23eeec62df1470898be241b`, Verzeichnis
 `reviews/2026-10-12-c2-vollstaendigkeit/incoming/review_01_v2/`.
+
+## Eigener LOW-Strategieentwurf vor Reviewabgleich
+
+[Eigener Plan für LOW](../c2_low_plan_20261012/EIGENER_PLAN_LOW.md): notwendige
+Zwischenstruktur auf 720 Verbindungsbits, negativer Hall-Vortest auf allen 3.152
+Kandidaten, kontrollierter Modellvergleich und adaptive Zerlegung schwerer Fälle.
+Keine neue Solverproduktion und keine Laufzeitprognose.
