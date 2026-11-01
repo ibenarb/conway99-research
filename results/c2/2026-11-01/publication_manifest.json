@@ -1,0 +1,99 @@
+{
+    "date": "2026-11-01",
+    "scope": "Public status, model summary, historical closure receipts, support representatives and two independently rerun small slice checks. Not the full C2 proof package.",
+    "text_encoding": "UTF-8 without BOM; LF line endings",
+    "files": [
+        {
+            "path": "README.md",
+            "bytes": 3177,
+            "sha256": "d34bbeb1426e7d180756a0aa5e58a1817ea181a048b068d9cb3faad2c7cfcedb"
+        },
+        {
+            "path": "docs/c2/MODEL_CONTRACT.md",
+            "bytes": 5120,
+            "sha256": "2e46cee996e5c3ba00509c6c732927aff178cd9f577705224e3b1313b0b9ba08"
+        },
+        {
+            "path": "docs/c2/SLICE_REVIEW_2026-11-01.md",
+            "bytes": 4773,
+            "sha256": "c54e224451a7f5cd6003135a1c0443509208af7d2164020c4486ee75ad344b10"
+        },
+        {
+            "path": "docs/c2/STATUS_2026-11-01.md",
+            "bytes": 5702,
+            "sha256": "48b51422990cb5bba428f432ee7375b7a82e130ac5005f7e80f5937a4e2e5e1e"
+        },
+        {
+            "path": "results/c2/2026-11-01/progress_snapshot.json",
+            "bytes": 694,
+            "sha256": "84d65fda9a130baca9edffeb62de3866760466e24520bb4a10fb38b69320774a"
+        },
+        {
+            "path": "results/c2/2026-11-01/slice_orbit_summary.json",
+            "bytes": 738,
+            "sha256": "e7edcd4ce9c62854d84200b17f1eb275ae0e1a3c17bd377c088be24cfeedaecb"
+        },
+        {
+            "path": "results/c2/2026-11-01/support_classes.jsonl",
+            "bytes": 1101,
+            "sha256": "79a014c6caf358fe1d5c095030d62e7caf18d657306de02185c7106e6755f2fa"
+        },
+        {
+            "path": "results/c2/2026-11-01/support_inputs.json",
+            "bytes": 607,
+            "sha256": "c129bec8182949e13383774e923445a8bb09647b8a00c31e0fa8ba1dff8d8d36"
+        },
+        {
+            "path": "results/c2/2026-11-01/t16_closure_audit.json",
+            "bytes": 9998,
+            "sha256": "22245fbe19eb48e10d39f7ec168101d882373b98874a9f02c446ae7da22c4b7e"
+        },
+        {
+            "path": "results/c2/2026-11-01/t18_closure_audit.json",
+            "bytes": 661,
+            "sha256": "62e37f76122c4b43bbffd6fa78264526f39624db6afac40608ff61a988681281"
+        },
+        {
+            "path": "results/c2/2026-11-01/t20_type_1_0_receipt.json",
+            "bytes": 1519,
+            "sha256": "45925dff7888e3d92b4aeb5db4f71aedd9257826fa0fb0069394e7570f7e1e3a"
+        },
+        {
+            "path": "verification/c2_slice/README.md",
+            "bytes": 1285,
+            "sha256": "f36b787ba2e69e0c7edc312dd2d801ae322f5548d6a92239c0a32561a935a2a3"
+        },
+        {
+            "path": "verification/c2_slice/audit_boundary.py",
+            "bytes": 4987,
+            "sha256": "174397119bc25937e24e1583fa20be2ae08dae2de1819c565ac81becc14f9392"
+        },
+        {
+            "path": "verification/c2_slice/audit_parity.py",
+            "bytes": 2524,
+            "sha256": "a0248d5d81a9530fa908277ae9d8f60d3f1b03704f50e06289fe24d06f2aa829"
+        },
+        {
+            "path": "verification/c2_slice/boundary_audit.json",
+            "bytes": 34233,
+            "sha256": "e917e51aa08b2b628afef38e7451c704d9c44cb9cba32bf0c91436745921dbbc"
+        },
+        {
+            "path": "verification/c2_slice/triple_parity_certificate.json",
+            "bytes": 7549,
+            "sha256": "f0793b8814450c9902ccf1feabe5fca6747209fe08828e3ae1c7d677c5ce5ab2"
+        }
+    ],
+    "small_checker_replay": [
+        {
+            "program": "audit_boundary.py",
+            "exit": 0,
+            "stored_json_matches_recomputed": true
+        },
+        {
+            "program": "audit_parity.py",
+            "exit": 0,
+            "stored_json_matches_recomputed": true
+        }
+    ]
+}
