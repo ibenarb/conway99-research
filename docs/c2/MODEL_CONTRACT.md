@@ -68,3 +68,19 @@ Let s_ij be the T entry joining the two lines of cell {i,j}. Through B=(H+D)/2 a
 These are necessary conditions only. They do not imply degree at most one or the existence of a Type-I-free slice. The numerical constants are specific to the 99-vertex case; they must not be copied unchanged to the 9- or 243-vertex positive controls.
 
 Notation: our H corresponds to the external slice project's global quotient B, and our T to its partner matching P_pi. Our reconstruction block B is a different object. T16/T18/T20 denote eigenfunction squared norms, not this matching T.
+
+## Review amendment of 3 November 2026
+
+The [reply audit](MIZOPL_REPLY_REVIEW_2026-11-03.md) confirms the following conditional reduction. Let S be the simple graph on the seven anchor indices with edge ij exactly when the same-cell T entry s_ij equals one. Its degree k_i is the Type-I count of slice i.
+
+If every slice with k_i >= 2 has been validly excluded, S is a matching. Therefore sum_i k_i = 2|E(S)| <= 6, |E(S)| <= 3, and at least one k_i equals zero. This is an existential choice of a Type-I-free root slice. It does not exclude individual slices with k_i=1 and does not prove s_ij=0 for every pair.
+
+**The degree-two exclusions supplied in the external reply have not been independently certified here. The active unconditional bound in this contract remains k_i <= 2 and sum_(i<j) s_ij <= 7.** A seven-cycle demonstrates why the old bound does not already imply a zero-degree root. Such auxiliary graphs are logical controls, not full SRG witnesses.
+
+After the prerequisite is discharged, selecting a particular zero-degree root must transport the entire marked state under the frame group, including Q, T, D and any fixed support. Independent normalization of the root and support is not licensed by the existential statement. The reduction also leaves the Type-I-free search space to be completed.
+
+For necessary slice searches, a safe general pruning rule is residual column capacity. If p(c) is the current number of ones in a column whose final sum is two, and a(c) counts distinct remaining row domains containing at least one candidate with a one there, then p(c)+a(c)>=2 is necessary. Failure excludes the partial assignment; success does not certify a joint completion. This rule requires complete candidate domains and correct domain updates. The [small independent checker](../../verification/c2_slice/audit_reply_20261103.py) validates its arithmetic and finite control cases, not a full external solver.
+
+For a connected component with 2k rows, the already confirmed slice identities give XX^T=9I+J-M, row sum ten, and full column sum two. Because M stays inside the component, its column-sum counts satisfy n0+n1+n2=60, n1+2n2=20k and n1+4n2=4k(k+4). Hence (n2,n1,n0)=(2k(k-1),4k(6-k),2(6-k)(5-k)). These formulas do not remove the coupling between components.
+
+No running solver, CNF, proof, or queue was changed by this documentation amendment.

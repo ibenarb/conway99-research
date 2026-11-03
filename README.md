@@ -2,7 +2,11 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
-## Aktueller Forschungsstand — 1. November 2026
+## Reviewupdate vom 3. November 2026
+
+Mizopl bestätigt die von uns identifizierte Überdeckungslücke. Die neue globale Reduktion ist bedingt nutzbar; ihr Lean-Satz behauptet weniger als die Mail. [Antwort, unabhängige Gegenprüfung und Konsequenzen für C2](docs/c2/MIZOPL_REPLY_REVIEW_2026-11-03.md), mit kleinem Prüfer und ergänztem Modellvertrag. Kein neuer T20-Ausschluss und kein vollständiger C2-Abschluss.
+
+## Forschungsstand vom 1. November 2026
 
 **C2 und das Conway99-Problem bleiben offen.** Unser aktueller Schwerpunkt ist die Involutionsanalyse mit vollständigen 99-Knoten-Modellen und unabhängig geprüften Ausschlusszertifikaten.
 

@@ -1,5 +1,7 @@
 # Independent slice review — 1 November 2026
 
+Update, 3 November: the author has acknowledged the coverage problem. The [reply audit](MIZOPL_REPLY_REVIEW_2026-11-03.md) assesses the proposed replacement argument and corrects the attribution of complete solver replays to us. The dated findings below remain the historical 1 November record.
+
 Scope: the central one-fixed-point involution of an SRG(99,14,1,2), compared with [mizopl/conway-99-graph at 2c5c9ab5381d95baea14816bdb8e538399642778](https://github.com/mizopl/conway-99-graph/tree/2c5c9ab5381d95baea14816bdb8e538399642778). Our initial audit used 1c219d2a4e7e036890293b19aa45ca7921fcc2a0 on 27 October. This is a partial independent audit, not an endorsement or refutation of the full program.
 
 ## What we confirmed
