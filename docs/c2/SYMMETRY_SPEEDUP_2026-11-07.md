@@ -70,3 +70,7 @@ Four paired batches used twelve task executions per variant, covering eight dist
 A separate comparison against the S2 single-task programs gave factor 1.268211 (62.383221 s versus 49.189957 s). This ratio must not be multiplied with ratios from other samples. Individual batch proofs matched the S2 single-task proofs byte for byte and were replayed by both checkers. Small controls covered 32 batches, SAT and UNKNOWN stops, ABA and reverse order, invalid requests and existing-output rejection.
 
 Production status: no batch deployment. The next integration candidate remains the uncached S2 single-task program, subject to complete case validation, six actual pilots, binary-bound native controls, a sealed Git contract, and one regular task through the real controller before the full run. Batch deployment additionally requires per-boundary replay receipts and a tested controller/final-audit path. The running case 77 and T20 remain unchanged; no new exclusion is inferred from these experiments.
+
+## Observed work and proof reduction
+
+In the same sixteen paired S2 single-task comparisons, search nodes decreased from 9,926,132 to 2,489,940 (3.986x), uncompressed proof bytes from 41,815,611 to 10,492,409 (3.985x), and gzip bytes from 16,228,725 to 5,037,405 (3.222x). Search wall time was 125.451 versus 43.644 seconds; independent replay 161.560 versus 46.338 seconds. These are aggregate counts for the measured sample, not storage or runtime guarantees for full cases.
