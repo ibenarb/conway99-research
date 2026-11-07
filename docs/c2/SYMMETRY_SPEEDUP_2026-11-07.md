@@ -60,3 +60,13 @@ The complete local research snapshot includes pilot proofs and production input/
 Precomputing each domain element's tau-image preserves the C2S2 format and proof bytes. Ninety-eight small comparisons, both assignment orders and crossed independent replays passed. Six paired real tasks gave 31.188 s without the cache and 29.826 s with it (ratio 1.046). Maximum observed RSS increased from 33116 to 48424 KiB. This small additional gain needs broader measurement; it is not included in the 3.188 production ratio. The uncached S2 implementation remains the performance-evidenced integration baseline.
 
 The standalone public_smoke.py regenerates small complete models and compares the cached candidate against exhaustive enumeration; it requires Python3 and g++ on Linux. No production input is needed for that regression check.
+
+## Serial prefix reuse
+
+The complete model and symmetry action are parsed and checked once per serial batch. Ordered candidate lists filtered against the first boundary row A are reused while A is unchanged. Conditions involving B, including saturated columns A&B, are applied separately for every task. A change clears the prefix cache. Each task has its own C2S2 proof and independent replay. SAT or UNKNOWN stops the batch; unprocessed tasks remain open.
+
+Four paired batches used twelve task executions per variant, covering eight distinct boundaries across cases 20 and 77. Orders AAA and ABA exercised reuse and invalidation. Direct comparison with the actual sealed production binaries, including independent replay and gzip, gave 193.971080 s versus 48.587427 s: factor 3.992207, or 74.95% less wall time in this pilot. Maximum observed RSS was 34180 KiB. This is not a whole-case runtime forecast, and repeated boundaries are not independent samples.
+
+A separate comparison against the S2 single-task programs gave factor 1.268211 (62.383221 s versus 49.189957 s). This ratio must not be multiplied with ratios from other samples. Individual batch proofs matched the S2 single-task proofs byte for byte and were replayed by both checkers. Small controls covered 32 batches, SAT and UNKNOWN stops, ABA and reverse order, invalid requests and existing-output rejection.
+
+Production status: no batch deployment. The next integration candidate remains the uncached S2 single-task program, subject to complete case validation, six actual pilots, binary-bound native controls, a sealed Git contract, and one regular task through the real controller before the full run. Batch deployment additionally requires per-boundary replay receipts and a tested controller/final-audit path. The running case 77 and T20 remain unchanged; no new exclusion is inferred from these experiments.
