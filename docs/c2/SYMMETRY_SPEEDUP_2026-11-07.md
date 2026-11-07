@@ -74,3 +74,8 @@ Production status: uncached S2 single-task search is deployed in case 78 after t
 ## Observed work and proof reduction
 
 In the same sixteen paired S2 single-task comparisons, search nodes decreased from 9,926,132 to 2,489,940 (3.986x), uncompressed proof bytes from 41,815,611 to 10,492,409 (3.985x), and gzip bytes from 16,228,725 to 5,037,405 (3.222x). Search wall time was 125.451 versus 43.644 seconds; independent replay 161.560 versus 46.338 seconds. These are aggregate counts for the measured sample, not storage or runtime guarantees for full cases.
+
+
+## Recoverable prefix batches, later 7 November update
+
+The incremental transaction prototype passed integrity, real process-kill and independent cross-replay controls. Three-task versus one-task chunks of the same research programs saved 24.73% in a bounded paired pilot; this is not a direct production-controller comparison. Receipt-file validation is now incremental with full startup/closure checks. An exhaustive pure-row screen found no additional such action in the 50 open cases beyond the known swap. [Full result, limits and reproduction](BATCH_RECOVERY_2026-11-07.md). Case78 remains on its unchanged sealed S2 production contract.
