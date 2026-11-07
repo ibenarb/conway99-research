@@ -2,6 +2,12 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
+## Beschleunigungsforschung vom 7. November 2026
+
+Geprüfte gekoppelte Symmetrien und sparsamerer unabhängiger Replay erreichen in 16 gepaarten Teilaufgaben **Faktor 3,19** gegenüber den versiegelten Produktionsprogrammen, einschließlich Komprimierungsprüfung. [Begründung, Messdaten, Kontrolltests und offene Integrationsgates](docs/c2/SYMMETRY_SPEEDUP_2026-11-07.md). Elf globale L62-Fälle sind abgeschlossen; Fall 77 läuft weiterhin mit unverändertem Verfahren. Kein neuer globaler Ausschluss, keine Vollfall-Laufzeitgarantie, C2 bleibt offen.
+
+Der [Überdeckungsbefund vom 6. November](docs/c2/BOUNDARY_COVERAGE_AUDIT_2026-11-06.md) betrifft die geprüfte externe Prefixauswahl; er ist kein SAT-Zeuge.
+
 ## Reviewupdate vom 3. November 2026
 
 Mizopl bestätigt die von uns identifizierte Überdeckungslücke. Die neue globale Reduktion ist bedingt nutzbar; ihr Lean-Satz behauptet weniger als die Mail. [Antwort, unabhängige Gegenprüfung und Konsequenzen für C2](docs/c2/MIZOPL_REPLY_REVIEW_2026-11-03.md), mit kleinem Prüfer und ergänztem Modellvertrag. Kein neuer T20-Ausschluss und kein vollständiger C2-Abschluss.
