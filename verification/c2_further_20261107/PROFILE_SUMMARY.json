@@ -1,0 +1,53 @@
+{
+    "status": "PASS",
+    "distinct_tasks": 8,
+    "case_final_counters": [
+        {
+            "case": 20,
+            "boundary": 12,
+            "report": {
+                "boundary": 12,
+                "status": "UNSAT_CANDIDATE",
+                "nodes": 38051,
+                "seconds": 0.621339,
+                "state_probes_cumulative": 158277,
+                "state_hits_cumulative": 0,
+                "skipped_cumulative": 109111,
+                "key_bytes": 23413248,
+                "entries": 50000,
+                "repeated_nodes_cumulative": 0
+            },
+            "proof_sha256": "e7ad171c60d005150fe8ed10518551b0ca87e6e093622ecca7f50bdb707482d5",
+            "baseline_byte_identical": true,
+            "replay": {
+                "returncode": 0,
+                "seconds": 1.3918272359878756,
+                "log_sha256": "b20d2e98efc17516a41213069af88b1cba881af515a2caa251ae01ae4c1440bc"
+            }
+        },
+        {
+            "case": 77,
+            "boundary": 12,
+            "report": {
+                "boundary": 12,
+                "status": "UNSAT_CANDIDATE",
+                "nodes": 247771,
+                "seconds": 3.38589,
+                "state_probes_cumulative": 965468,
+                "state_hits_cumulative": 1,
+                "skipped_cumulative": 916525,
+                "key_bytes": 16776360,
+                "entries": 50000,
+                "repeated_nodes_cumulative": 1
+            },
+            "proof_sha256": "2b16390ad6d3cff0e13801fa7b7277c3b2b49a395a534029d21cee30b5bfe7ef",
+            "baseline_byte_identical": true,
+            "replay": {
+                "returncode": 0,
+                "seconds": 4.007956885005115,
+                "log_sha256": "17738928a4fb6b0ca87b7ccdd480a40e8cdd4ad4330c3e4c6001d90b15f0d691"
+            }
+        }
+    ],
+    "scope": "Exact completed UNSAT states only; bounded diagnostics, no reuse; fixed model/action per process; incomplete children never inserted; hash collisions checked by full string equality; skipped keys and capacity limits mean no global absence claim."
+}

@@ -1,0 +1,1 @@
+First pair/cheap/profile diagnostic builds omitted -mpopcnt while baseline used it. Correctness/replay/byte comparisons remain valid, but algorithm speed comparisons from those builds are confounded and must not be used. Corrected paired tests use identical -O3 -mpopcnt -std=c++17 flags. Original logs retained.

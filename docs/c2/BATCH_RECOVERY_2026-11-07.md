@@ -44,3 +44,6 @@ Among all 62 algebraic contracts, 59 groups have order 2, cases18/63 have order8
 Case78 continues unchanged with the reviewed single-task S2 implementation. Twelve of62 cases are excluded;50 remain. Neither L62 nor C2 is closed. Heartbeat remains deleted.
 
 This is a reviewed recovery/scaling prototype, not a full-case production controller. Deployment still requires a newly sealed case-specific contract, complete coverage integration, final independent audit/archive binding, bounded scheduling and fresh case pilots. The live case78 contract is not modified. Local evidence archives retain real pilot inputs, proofs and failure-test artefacts; public scripts and reports are not a global exclusion certificate.
+
+
+Follow-up review clarification: the portable and reference row screens independently construct the specification, but use the same enumeration algorithm. [Further experiments and reviewer request](FURTHER_OPTIMISATION_2026-11-07.md) document bounded negative findings and small, unconfirmed timing effects.
