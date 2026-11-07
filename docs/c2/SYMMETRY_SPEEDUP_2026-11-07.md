@@ -1,6 +1,6 @@
 # C2 exclusion research: verified symmetry reductions and cheaper replay
 
-7 November 2026. Research result; no new global exclusion is claimed.
+7 November 2026. Research results and production status, updated 07:49 Berlin.
 
 ## Measured result
 
@@ -49,9 +49,9 @@ An authorised independent internal reviewer examined coverage, frame lifetimes a
 
 ## Status and integration gate
 
-The running case 77 and all T20 settings remain unchanged. Eleven global cases are counted closed; 51 remain, including case 77. Neither L62 nor C2 is closed. No heartbeat automation was created.
+Case 77 has now passed its original C2R1 final audit and complete byte-checked archive, with Git preservation. Twelve global cases are counted closed; 50 remain. Neither L62 nor C2 is closed. See [case 77 closure](CASE77_CLOSURE_2026-11-07.md).
 
-C2S1 and C2S2 have explicit new proof headers. Before production, new case-specific pilots, immutable model/source/binary/action hashes, checkpoint binding and a corresponding final archive audit are required. Existing sealed C2R1 cases must not be relabelled or silently accepted by a tolerant header check. Isolated integration templates are research work pending end-to-end validation.
+Case 78 is the first production deployment of uncached S2. Its complete domains, all 289,536 boundary transports, 9,072 representatives, six real pilots, binary-bound native controls and one regular controller-path task passed. An independent internal review checked the sealed contract and deployment gates. The fresh exclusive launch succeeded; the controller is running without reported errors. T20 is unchanged. Existing C2R1 certificates retain their original format and audit. C2S2 uses its own strictly bound final audit. No heartbeat automation is active.
 
 The complete local research snapshot includes pilot proofs and production input/binary bindings. Public source and small-model controls accompany this report; the timing records alone are not a global C2 proof.
 
@@ -69,7 +69,7 @@ Four paired batches used twelve task executions per variant, covering eight dist
 
 A separate comparison against the S2 single-task programs gave factor 1.268211 (62.383221 s versus 49.189957 s). This ratio must not be multiplied with ratios from other samples. Individual batch proofs matched the S2 single-task proofs byte for byte and were replayed by both checkers. Small controls covered 32 batches, SAT and UNKNOWN stops, ABA and reverse order, invalid requests and existing-output rejection.
 
-Production status: no batch deployment. The next integration candidate remains the uncached S2 single-task program, subject to complete case validation, six actual pilots, binary-bound native controls, a sealed Git contract, and one regular task through the real controller before the full run. Batch deployment additionally requires per-boundary replay receipts and a tested controller/final-audit path. The running case 77 and T20 remain unchanged; no new exclusion is inferred from these experiments.
+Production status: uncached S2 single-task search is deployed in case 78 after the complete integration gates described above. There is no batch deployment: it additionally requires per-boundary replay receipts and a tested controller/final-audit path. Research timings imply no additional exclusion and are not whole-case speed guarantees.
 
 ## Observed work and proof reduction
 
