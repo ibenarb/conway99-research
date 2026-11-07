@@ -1,0 +1,42 @@
+{
+    "status": "PASS",
+    "tests": [
+        {
+            "test": "original matrix altered",
+            "rejection": "Original matrix mismatch"
+        },
+        {
+            "test": "one valid domain value removed",
+            "rejection": "Incomplete or incorrect domain 0"
+        },
+        {
+            "test": "composed action altered",
+            "rejection": "Wrong composed block actions"
+        },
+        {
+            "test": "invalid S2 permutation",
+            "rejection": "Invalid permutation"
+        },
+        {
+            "test": "invalid old coupled action",
+            "rejection": "Boundary pair moved by old group"
+        },
+        {
+            "test": "coverage entry removed",
+            "rejection": "Incomplete boundary coverage count"
+        },
+        {
+            "test": "duplicate ordered coverage pair",
+            "rejection": "Duplicate covered ordered pair"
+        },
+        {
+            "test": "wrong explicit transport",
+            "rejection": "Incorrect coupled transport"
+        },
+        {
+            "test": "valid transports but nonminimal representative",
+            "rejection": "Nonminimal old representative"
+        }
+    ],
+    "scope": "Actual mathematical validator; complete components enumeration memoised by exact arguments inside test process only; no fabricated domains and no closure claim"
+}
