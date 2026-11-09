@@ -2,7 +2,12 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
-## Beschleunigungsforschung vom 7. November 2026
+## Stand vom 9. November 2026
+
+**13 von 62 L62-Fällen sind vollständig geprüft und abgeschlossen; 49 bleiben offen. L62 und C2 bleiben offen.** Nach dem vollständigen Abschluss von Fall 78 ist die gekoppelte Blocktausch-Optimierung mit Präfixbündelung nun in den Produktionsablauf integriert. Fall 1005 läuft seit 19:56 Uhr Berlin mit 9.072 Randvertretern. Unabhängiger Review, sechs echte Piloten, Abbruch-/Wiederanlauftests, feste Datenbindungen und ein regulärer Dreier-Checkpoint sind bestanden. Der Vollfall wird erst nach vollständigem frischem Replay, bytegeprüftem Archiv und Abschlussdokumentation gezählt. [Integrationsbericht und Grenzen der Laufzeitvergleiche](docs/c2/C2B1_PRODUCTION_2026-11-09.md). Keine Heartbeat-Meldungen.
+
+
+## Historischer Zwischenstand vom 7. November 2026
 
 Geprüfte gekoppelte Symmetrien und sparsamerer unabhängiger Replay erreichen in 16 gepaarten Teilaufgaben **Faktor 3,19** gegenüber den versiegelten Produktionsprogrammen, einschließlich Komprimierungsprüfung. [Begründung, Messdaten, Kontrolltests und offene Integrationsgates](docs/c2/SYMMETRY_SPEEDUP_2026-11-07.md). **12 von 62 L62-Fällen sind abgeschlossen; 50 bleiben offen.** [Fall 77 ist vollständig geprüft und archiviert](docs/c2/CASE77_CLOSURE_2026-11-07.md). Fall 78 läuft erstmals mit dem geprüften S2-Verfahren. Zusätzliche Präfixbündelung erreicht im begrenzten Forschungspiloten Faktor 3,99, ist aber noch nicht produktiv. Keine Vollfall-Laufzeitgarantie; L62 und C2 bleiben offen. Heartbeat abgeschaltet.
 
