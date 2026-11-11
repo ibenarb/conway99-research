@@ -2,10 +2,9 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
-## Stand vom 9. November 2026
+## Stand vom 11. November 2026
 
-**13 von 62 L62-Fällen sind vollständig geprüft und abgeschlossen; 49 bleiben offen. L62 und C2 bleiben offen.** Nach dem vollständigen Abschluss von Fall 78 ist die gekoppelte Blocktausch-Optimierung mit Präfixbündelung nun in den Produktionsablauf integriert. Fall 1005 läuft seit 19:56 Uhr Berlin mit 9.072 Randvertretern. Unabhängiger Review, sechs echte Piloten, Abbruch-/Wiederanlauftests, feste Datenbindungen und ein regulärer Dreier-Checkpoint sind bestanden. Der Vollfall wird erst nach vollständigem frischem Replay, bytegeprüftem Archiv und Abschlussdokumentation gezählt. [Integrationsbericht und Grenzen der Laufzeitvergleiche](docs/c2/C2B1_PRODUCTION_2026-11-09.md). Keine Heartbeat-Meldungen.
-
+**14 von 62 L62-Fällen sind vollständig geprüft und abgeschlossen; 48 bleiben offen. L62 und C2 bleiben offen.** Fall 1005 ist mit der gekoppelten Blocktausch-Optimierung und Präfixbündelung ausgeschlossen: vollständige Randüberdeckung, 9.072 frische unabhängige C2B1-Beweisprüfungen, vollständiges bytegeprüftes Archiv und unabhängiger Schlussreview bestanden. Der Rechen- und Archivlauf endete am 10. November um 00:19 Uhr Berlin; die formale Abschlussdokumentation folgte am 11. November. Gesamtdauer 4 Stunden 22 Minuten; daraus folgt kein kontrollierter Beschleunigungsfaktor gegenüber anderen Fällen. [Abschlussbericht und Nachweishashes](docs/c2/CASE1005_CLOSURE_2026-11-11.md). Keine weitere Fallkampagne wurde mit diesem Abschluss gestartet. Heartbeat bleibt aus.
 
 ## Historischer Zwischenstand vom 7. November 2026
 

@@ -1,3 +1,5 @@
+Current status, 11 November 2026: case 1005 is formally closed; 14/62 certified,48pending,no active case campaign. See CASE1005_CLOSURE.md and CASE1005_RELEASE.json. The integration/start narrative below is historical.
+
 # C2B1 production integration â€” 9 November 2026
 
 Update 19:57 Berlin: case 1005 is running with the reviewed C2B1 integration since 18:56:44 UTC. The first regular checkpoint and subsequent batches passed; the initial three receipts remain byte-identical. Pre-checkpoint seal commit ba26df76886ec2b066e175c5a614edf79000a977; start-contract commit a97e2da452cef10d99bd07ecb5dec5e952fa46f8. 13 of 62 L62 cases certified, 49 pending. Case identifiers are catalogue identifiers, not the number of cases completed. Neither L62 nor C2 is closed.
