@@ -1,0 +1,15 @@
+Exact transfer-free checks for 50 residual normal pairs — 13 November 2026
+
+Result: both residual pairs of lattice131, all16 of106 and all32 of111 are excluded by necessary conditions for the seven h-vectors in Theorem R. Each exclusion has a complete search certificate checked by a separately written verifier. No transfer to another lattice and no imported frame-search verdict are used.
+
+For each lattice, all integral vectors of norm at most4 were independently enumerated using exact rational LDL decomposition and arbitrary-precision arithmetic. The complete lists agree with the earlier reviewer enumeration. Selected norm8 characteristic vectors give necessary constraints; completeness of that characteristic subset is unnecessary. The verifier checks their norm, parity and lattice coordinates.
+
+Necessary conditions: h-vectors have norm4, are mutually orthogonal and orthogonal to both normals; u-candidates have norm3 and are orthogonal to the normals. At a norm8 characteristic vector z with a normal product of absolute value3, exactly one h has |(z,h)|=2, all other h have zero product and every u has |(z,u)|=1. This follows from the frame identity: at z/2 the44 odd half-integral normal/word products contribute at least11 of total14; one normal of height3/2 uses another2, leaving exactly1 for the h-squares. More generally each h product with z has absolute value at most2 and each u product at most3.
+
+Two h-candidates must be orthogonal, cannot cover the same forced point, and must admit both same-sign and opposite-sign endpoint words. These conditions are necessary for the two D7 columns associated with every h pair. Arbitrary choices of signs for h and u lines preserve these conditions.
+
+The certificate branches over every possible cover of a pending forced point; once all forced points are covered, ordered subset branching covers the remaining h choices. Terminal obstructions are checked directly. The verifier reconstructs candidate sets and compatibility, checks exact unimodular basis membership, validates integer overflow bounds, and verifies every branch and terminal obstruction. It does not invoke the search producer.
+
+Reproduction (Linux, Python3.12, numpy2.5.4, python-flint0.9.0): from this directory, run python verify_h.py 131 (and106 or111). To independently re-enumerate all short vectors, run python exact_shells.py 131 (and106 or111). Both programs include small positive and negative controls. Their outputs are new local reports; supplied certificates are compressed losslessly.
+
+Limits: the50 supplied pairs are excluded under Theorem R. This package does not prove completeness of the normal-pair enumeration, Theorem R itself, lattice classification, or T16/T18/T20. Earlier short-witness exclusions depend on their stated lemmas. Therefore neither a full lattice classification exclusion nor the global C2 theorem is claimed here. Original Djematene sources and pinned commits are identified in PROVENANCE.json. Private correspondence and reviewer source code are not included.

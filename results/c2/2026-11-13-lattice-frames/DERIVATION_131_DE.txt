@@ -1,0 +1,35 @@
+131: TRANSFERFREIER AUSSCHLUSS DER BEIDEN RESTPAARE
+Stand: 13.11.2026. Eigene Suche und getrennter Prüfer; keine Übernahme eines fremden Suchurteils.
+
+Gegenstand
+Die Restpaare mit Indizes 0 und21 aus der exakt nachgeprüften 65-Gitter-Reproduktion. Beide Normalen haben Norm7 und sind orthogonal. Die Zuordnung zur originalen Gitterbasis wird durch eine ganzzahlige Basiswechselmatrix mit Determinante +/-1 geprüft.
+
+Notwendige Bedingungen (nur Theorem R, R-i bis R-iii und R-v)
+Ein Rahmen enthält sieben paarweise orthogonale h-Vektoren von Norm4 und42 u-Vektoren von Norm3, sämtlich orthogonal zu beiden Normalen. Für jedes h-Paar müssen unter den u-Vektoren beide relativen Vorzeichenarten der Skalarprodukte +/-1 vorkommen (die beiden D7-Spalten). Ein Norm3-Vektorpaar u,-u kann nicht gleichzeitig gewählt werden; ebenso sind h,-h keine verschiedenen orthogonalen Rahmenvektoren. Daher genügt jeweils eine beliebige Orientierung pro Vektorlinie.
+
+Sei z ein charakteristischer Gittervektor mit Norm8 und beta=z/2. Die Produkte von beta mit den42 u und beiden Normalen sind halbzahlig und ungerade halbiert. Ihre44 Quadrate liefern mindestens11. Die Rahmenidentität liefert insgesamt14. Jedes Produkt vom Betrag3/2 kostet gegenüber1/2 weitere2. Die sieben ganzzahligen Produkte (beta,h) haben daher Quadratsumme1 oder3 und jeweils Betrag höchstens1. Falls eine Normale bereits Betrag3/2 erreicht, ist die Quadratsumme genau1: genau ein h trifft diesen Punkt, und kein u darf dort Betrag3/2 erreichen.
+
+Daraus folgen ausschließlich notwendige Filter:
+- h: Norm4, zu den Normalen orthogonal, Betrag(z,h)<=2 für alle verwendeten charakteristischen z.
+- u-Kandidaten: Norm3, zu den Normalen orthogonal, Betrag(z,u)<=3; an einem von einer Normalen mit Betrag3 getroffenen z sogar <=1.
+- Zwei h müssen orthogonal sein, dürfen keinen solchen Zielpunkt gemeinsam treffen und brauchen unter den u-Kandidaten beide relativen Vorzeichenarten.
+Jeder tatsächliche Rahmen liefert deshalb eine Siebenerclique im Kompatibilitätsgraphen, die jeden Zielpunkt genau einmal trifft. Diese Schlussrichtung braucht keine Transfers und keine T16/T18/T20-Ausschlüsse.
+Die charakteristischen z müssen nicht vollständig aufgelistet sein: Jede exakt gültige Teilmenge gibt notwendige Bedingungen. Ihr Norm-/Paritätsnachweis wird separat geführt.
+
+Vollständigkeit der kurzen Vektorlisten
+Ein neu geschriebenes Programm exact_shells.py verwendet ausschließlich Python-Ganzzahlen und rationale Zahlen (Fraction). Es zerlegt die positiv definite Gram-Matrix exakt als L D L^t und prüft die Zerlegung zurück. Die rekursive quadratische Ergänzung enumeriert sämtliche ganzzahligen Koordinaten mit Norm<=4. Jede Intervallgrenze wird aus einer exakten rationalen Restschranke und ganzzahliger Quadratwurzel nach außen begrenzt; jeder Zweig wird rational getestet. Kein Gleitkommatest entscheidet über die Zugehörigkeit oder über einen Suchabbruch.
+Ergebnis für131, einschließlich beider Vorzeichen: Norm0=1, Norm1=0, Norm2=240, Norm3=4096, Norm4=92496. Die gesamten Listen stimmen mit der früheren unabhängigen Gleitkommaenumeration überein. Drei kleine positive Enumerationskontrollen stimmen mit direktem Durchlaufen eines ausreichend großen ganzzahligen Kastens überein; eine indefinite Eingabe wird abgewiesen.
+
+Suchbelege und getrennte Prüfung
+Pro Restpaar4784 h-Kandidaten,144 Wortkandidaten und64 zwingend genau einmal zu treffende Punkte. Jeweils387623 Kompatibilitätskanten.
+Eine erste, einfache vollständige Cliquensuche fand keine Siebenerclique.
+Ein anderer Suchlauf erzeugt einen vollständigen Verzweigungsbaum: Wähle einen noch ungetroffenen Pflichtpunkt und verzweige über ALLE noch zulässigen h, die ihn treffen. Sind alle Pflichtpunkte erfüllt, werden verbleibende h geordnet vollständig ergänzt. Blätter dürfen nur durch zu wenige Kandidaten oder einen unerreichbaren Pflichtpunkt geschlossen werden.
+Je Paar820435 belegte Baumknoten, kein vollständiger Rahmenkandidat. Der getrennte Prüfer verify_h.py rekonstruiert Kandidaten und Kompatibilitäten, kontrolliert jede Verzweigungsmenge und jedes Blatt. Er benutzt die ursprüngliche Suchroutine nicht. Ergebnis für beide Paare: EXACT_COVER_CERTIFICATE_PASS.
+Die Vektorrechnungen im Prüfer verwenden ganzzahlige Matrizen; eine vorab berechnete Schranke stellt sicher, dass kein int64-Überlauf auftreten kann. Für131 beträgt die verwendete konservative Schranke2592000, weit unter2^63. Der Prüfer kontrolliert auch die Basiszugehörigkeit exakt mit rationaler Arithmetik. Ein gültiger Kontrollbeleg wird angenommen; zwei gezielt falsche Belege werden abgewiesen.
+Eine anfängliche Prüferfassung entpackte dieselbe Matrix unnötig oft. Dieser eigene Lauf wurde beendet und nach rein technischer Korrektur vollständig neu geprüft; kein abgebrochener Lauf wird als Beleg verwendet.
+
+Reichweite
+Die beiden konkret gespeicherten Restpaare sind unter Theorem R ausgeschlossen. Zusammen mit den früheren kurzen und charakteristischen Zeugen hat131 damit keinen offenen Fall innerhalb unserer bisherigen Paarliste. Die vollständige Paarlistenabdeckung sowie Theorem R und die für frühere Filter verwendeten T-Lemmata bleiben getrennte Beweispflichten. Kein vollständiger C2-Ausschluss wird behauptet.
+
+Nächste Kampagne
+Alle16 Restpaare von106 und32 von111; kein Sampling. Exakte Schalen beider Gitter bereits vollständig geprüft. Sechs Arbeiter mit je4GiB Adressraumlimit und je einem Rechenthread,35GiB tatsächliche Plattenreserve. Ohne künstlich kurze Fall-Zeitlimits. Jeder Fall erhält Suchbeleg und getrennte Prüfung. Findet die notwendige Relaxation noch Kandidaten, ist das ein offener Fall, kein Graph-Gegenbeispiel und kein Ausschluss.

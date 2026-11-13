@@ -2,6 +2,12 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
+## Geprüfte Gitter-Restpaare vom 13. November 2026
+
+Eigene transferfreie Suche und getrennte exakte Belegprüfung schließen die **50 gespeicherten Restpaare der Gitter 131, 106 und 111** aus. Vollständige kurze Vektorlisten wurden dafür zusätzlich mit rationaler Arithmetik neu enumeriert. [Öffentliches Prüfpaket mit Belegen, Prüfern, Herkunft und genauer Reichweite](results/c2/2026-11-13-lattice-frames/README.txt).
+
+**C2 bleibt offen:** Diese Ergebnisse beweisen weder die vollständige Normalenpaar-Abdeckung noch Theorem R oder die T-Lemmata. Die frühere unvollständige SAT-Kampagne wird nicht fortgesetzt; der Schwerpunkt liegt auf der unabhängigen Prüfung der Gitterkette. Historische Resultate bleiben gültig in ihrer dokumentierten Reichweite.
+
 ## Stand vom 11. November 2026
 
 **14 von 62 L62-Fällen sind vollständig geprüft und abgeschlossen; 48 bleiben offen. L62 und C2 bleiben offen.** Fall 1005 ist mit der gekoppelten Blocktausch-Optimierung und Präfixbündelung ausgeschlossen: vollständige Randüberdeckung, 9.072 frische unabhängige C2B1-Beweisprüfungen, vollständiges bytegeprüftes Archiv und unabhängiger Schlussreview bestanden. Der Rechen- und Archivlauf endete am 10. November um 00:19 Uhr Berlin; die formale Abschlussdokumentation folgte am 11. November. Gesamtdauer 4 Stunden 22 Minuten; daraus folgt kein kontrollierter Beschleunigungsfaktor gegenüber anderen Fällen. [Abschlussbericht und Nachweishashes](docs/c2/CASE1005_CLOSURE_2026-11-11.md). Keine weitere Fallkampagne wurde mit diesem Abschluss gestartet. Heartbeat bleibt aus.
