@@ -12,13 +12,13 @@ The partner notification explains that the following additional checks proceed i
 
 ## Five additional checks
 
-| ID | Task and acceptance condition | Status updated 22 November 2026, 21:10 CET |
+| ID | Task and acceptance condition | Status updated 22 November 2026, 21:34 CET |
 |---|---|---|
 | S1 | Independent singleton-root search: implement from the mathematical specification; account for all 3,580 first-layer charts and the second-layer cases; independently verify every pruning condition and coverage. | All-chart preliminary unary conditions independently enumerated without orbit pruning; 177,842 raw signs retained. Heavy-quartet and second-layer reimplementation still pending. |
-| S2 | Full second high-rank solver: all 3,156 chart/parity/mode jobs, including both rank-10 modes; fresh inputs, explicit exhaustion and coverage, no silent acceptance of empty or failed runs. | Pilot passed; all 98 strong chart/parity orbit sets regenerated exactly. Full second-solver queue running; 22 completed jobs captured in the current private evidence snapshot, not full coverage. |
-| S3 | Full second low-rank solver for ranks 8 and 9, with nonsplit and split complements; reproduce input domains before full search. | All six rank-8 domain counts reproduced and checked. Complete rank-8/9 second search remains to implement; domain agreement is not exclusion. |
-| S4 | Validate the referee's 31-class genus route: mass argument, automorphism orders, pairwise nonisometry, orthogonal dual units, regenerated atlas and every exact Farkas inequality. | New exact finite checker passed for all 31 classes, 465 nonisometry pairs, dual-unit frames and all 46 Farkas certificates; atlas totals 122/46/80 match. Five unimodular group orders and mass arithmetic also recomputed. Classification citation and manuscript integration remain. |
-| S5 | Fresh C3 Lean build at 9678dec98108003359cde7b404d57a6e09dd865c, statement comparison and independent checker runs; explain five archived-log checksum mismatches. | Fresh pinned Lean executable and all 28 copied source/configuration files verified. Kernel build/comparator and historical-log explanations remain; disk reserve is checked before cache downloads. |
+| S2 | Full second high-rank solver: all 3,156 chart/parity/mode jobs, including both rank-10 modes; fresh inputs, explicit exhaustion and coverage, no silent acceptance of empty or failed runs. | Pilot passed; all 98 strong chart/parity orbit sets regenerated exactly. Full second-solver queue running; 75 of 3,156 jobs closed at this snapshot, not full coverage. |
+| S3 | Full second low-rank solver for ranks 8 and 9, with nonsplit and split complements; reproduce input domains before full search. | New independent residual-Gram search implemented and tested: 2,366 finite-Gram controls and 3,200 exact pair controls pass. Pilot closes chart 306 in one parity (54 stars, 2,786 planes). Full queue for all 92 chart-parities now running; no full S3 closure claimed. |
+| S4 | Validate the referee's 31-class genus route: mass argument, automorphism orders, pairwise nonisometry, orthogonal dual units, regenerated atlas and every exact Farkas inequality. | New exact finite checker passed for all 31 classes, 465 nonisometry pairs, dual-unit frames and all 46 Farkas certificates; atlas totals 122/46/80 match. Five unimodular group orders and mass arithmetic also recomputed. The mass double count and completeness are now documented with Conway–Sloane (1982), Theorem 1/Table 1, §2.2 and Table 2. S4 assurance checks are complete; manuscript integration remains editorial. |
+| S5 | Fresh C3 Lean build at 9678dec98108003359cde7b404d57a6e09dd865c, statement comparison and independent checker runs; explain five archived-log checksum mismatches. | Fresh pinned Lean executable, all 28 source/configuration files and nine dependency Git revisions verified. Local cache-tool preparation running; kernel build/comparator and historical-log explanations remain. |
 
 ## Evidence and execution policy
 
@@ -35,3 +35,5 @@ The detailed private dossier and subsequent run records are maintained in [conwa
 - Complete referee report with asymmetry addendum retained verbatim in the private dossier.
 
 Earlier dated C2-open reports in this repository describe historical campaigns. They are superseded by this graph-specific audit and do not become general lattice exclusions retroactively.
+
+Published classification locator for S4: J. H. Conway and N. J. A. Sloane, *The Unimodular Lattices of Dimension up to 23 and the Minkowski–Siegel Mass Constants*, European Journal of Combinatorics 3 (1982), 219–231: [author-hosted paper](https://neilsloane.com/doc/Me102.pdf). The finite computation and the mathematical completeness argument are recorded separately in the private dossier.
