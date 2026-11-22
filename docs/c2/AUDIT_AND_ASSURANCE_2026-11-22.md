@@ -6,19 +6,19 @@ Combined with Dilan Djematene's prior exclusion of order-three automorphisms and
 
 ## Priority and publication
 
-The C2 proof, reductions and original search implementation are credited to Yongxian Zhang. Ralph Beckmann proposes that Zhang lead any publication and decide its timing in consultation with the partners. Djematene's earlier full C3 result is credited separately. No author list, contributor consent or publication decision is presumed. An English audit/reconstruction and the full referee report are being shared with the partners. Private drafts and correspondence are not published here.
+The C2 proof, reductions and original search implementation are credited to Yongxian Zhang. Ralph Beckmann proposes that Zhang lead any publication and decide its timing in consultation with the partners. Djematene's earlier full C3 result is credited separately. No author list, contributor consent or publication decision is presumed. The English audit/reconstruction, complete referee report/addendum and V3 evidence package were emailed to Zhang and Djematene on 22 November 2026. A short public notice was posted in the existing mizopl issue. Private drafts and correspondence are not published here.
 
 The partner notification explains that the following additional checks proceed independently of a decision to publish. They strengthen assurance; their incomplete status must not be described as completed independent verification.
 
 ## Five additional checks
 
-| ID | Task and acceptance condition | Status at registration |
+| ID | Task and acceptance condition | Status updated 22 November 2026, 21:10 CET |
 |---|---|---|
-| S1 | Independent singleton-root search: implement from the mathematical specification; account for all 3,580 first-layer charts and the second-layer cases; independently verify every pruning condition and coverage. | Specification and implementation preparation; no complete second search yet. |
-| S2 | Full second high-rank solver: all 3,156 chart/parity/mode jobs, including both rank-10 modes; fresh inputs, explicit exhaustion and coverage, no silent acceptance of empty or failed runs. | Portable runner and pilot preparation using the referee's distinct implementation. |
-| S3 | Full second low-rank solver for ranks 8 and 9, with nonsplit and split complements; reproduce input domains before full search. | Existing independent rank-7 and rank-8 domain checks available; complete rank-8/9 second search remains to implement. |
-| S4 | Validate the referee's 31-class genus route: mass argument, automorphism orders, pairwise nonisometry, orthogonal dual units, regenerated atlas and every exact Farkas inequality. | Partial exact project checks passed; full verification pending. Original packing route remains in the manuscript until replacement is justified. |
-| S5 | Fresh C3 Lean build at 9678dec98108003359cde7b404d57a6e09dd865c, statement comparison and independent checker runs; explain five archived-log checksum mismatches. | Sources and archived CI log match; fresh environment preparation pending. No mismatch has been identified in the Lean sources. |
+| S1 | Independent singleton-root search: implement from the mathematical specification; account for all 3,580 first-layer charts and the second-layer cases; independently verify every pruning condition and coverage. | All-chart preliminary unary conditions independently enumerated without orbit pruning; 177,842 raw signs retained. Heavy-quartet and second-layer reimplementation still pending. |
+| S2 | Full second high-rank solver: all 3,156 chart/parity/mode jobs, including both rank-10 modes; fresh inputs, explicit exhaustion and coverage, no silent acceptance of empty or failed runs. | Pilot passed; all 98 strong chart/parity orbit sets regenerated exactly. Full second-solver queue running; 22 completed jobs captured in the current private evidence snapshot, not full coverage. |
+| S3 | Full second low-rank solver for ranks 8 and 9, with nonsplit and split complements; reproduce input domains before full search. | All six rank-8 domain counts reproduced and checked. Complete rank-8/9 second search remains to implement; domain agreement is not exclusion. |
+| S4 | Validate the referee's 31-class genus route: mass argument, automorphism orders, pairwise nonisometry, orthogonal dual units, regenerated atlas and every exact Farkas inequality. | New exact finite checker passed for all 31 classes, 465 nonisometry pairs, dual-unit frames and all 46 Farkas certificates; atlas totals 122/46/80 match. Five unimodular group orders and mass arithmetic also recomputed. Classification citation and manuscript integration remain. |
+| S5 | Fresh C3 Lean build at 9678dec98108003359cde7b404d57a6e09dd865c, statement comparison and independent checker runs; explain five archived-log checksum mismatches. | Fresh pinned Lean executable and all 28 copied source/configuration files verified. Kernel build/comparator and historical-log explanations remain; disk reserve is checked before cache downloads. |
 
 ## Evidence and execution policy
 
