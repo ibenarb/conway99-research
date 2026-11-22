@@ -2,6 +2,10 @@
 
 Reproduzierbare Forschungsdokumentation zum Conway-99-Problem.
 
+## Aktueller Stand — 22. November 2026
+
+Der graphbezogene C2-Beweis von Yongxian Zhang (mxym) ist nach unserem Audit und dem positiven KI-gestützten Projektreview angenommen. Zusammen mit Dilan Djematenes C3-Ergebnis und der veröffentlichten Primteilerrestriktion wäre ein srg(99,14,1,2) asymmetrisch; seine Existenz bleibt offen. Fünf zusätzliche Absicherungen werden getrennt durchgeführt. [Prüfstand, Urheberschaft, Grenzen und Arbeitsplan](docs/c2/AUDIT_AND_ASSURANCE_2026-11-22.md). Frühere datierte Offen-Aussagen unten bleiben als historische Berichte erhalten.
+
 ## Geprüfte Gitter-Restpaare vom 13. November 2026
 
 Eigene transferfreie Suche und getrennte exakte Belegprüfung schließen die **50 gespeicherten Restpaare der Gitter 131, 106 und 111** aus. Vollständige kurze Vektorlisten wurden dafür zusätzlich mit rationaler Arithmetik neu enumeriert. [Öffentliches Prüfpaket mit Belegen, Prüfern, Herkunft und genauer Reichweite](results/c2/2026-11-13-lattice-frames/README.txt).
