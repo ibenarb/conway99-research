@@ -1,0 +1,86 @@
+{
+    "status": "RUNNING",
+    "chart": 835,
+    "identity": {
+        "pid": 93316,
+        "created": 134398954712081920,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795421875.5017812,
+    "resource": {
+        "measured_at": 1555413.609,
+        "intervals": [
+            {
+                "seconds": 2.0175977000035346,
+                "system_busy_cpu": 9.300974619453187,
+                "system_idle_cpu": 14.698792529327351,
+                "known_c2_cpu": 0.007744358550752029,
+                "conservative_other_cpu": 9.293230260902435,
+                "named_other_load": [
+                    {
+                        "pid": 11884,
+                        "created": 134398952048382882,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990222530470118
+                    },
+                    {
+                        "pid": 10412,
+                        "created": 134383416552955680,
+                        "name": "KoffBackend.exe",
+                        "logical_cpu_equivalents": 0.06969922695676826
+                    },
+                    {
+                        "pid": 99376,
+                        "created": 134398947906640741,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.03872179275376014
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0168441999703646,
+                "system_busy_cpu": 8.82411988008866,
+                "system_idle_cpu": 15.184613665473021,
+                "known_c2_cpu": 0.007747251870139297,
+                "conservative_other_cpu": 8.81637262821852,
+                "named_other_load": [
+                    {
+                        "pid": 11884,
+                        "created": 134398952048382882,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9993954912479692
+                    },
+                    {
+                        "pid": 40096,
+                        "created": 134398954570596212,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.09296702244167156
+                    },
+                    {
+                        "pid": 99376,
+                        "created": 134398947906640741,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.030989007480557187
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            9.293230260902435,
+            8.81637262821852
+        ],
+        "c2_worker_budget": 10,
+        "ram_free_gib": 34.565155029296875,
+        "disk_free_gib": 60.90616226196289,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93316,
+                "created": 134398954712081920,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

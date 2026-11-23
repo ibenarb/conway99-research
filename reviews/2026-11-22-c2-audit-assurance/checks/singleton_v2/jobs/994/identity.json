@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 994,
+    "identity": {
+        "pid": 100144,
+        "created": 134398974944920551,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795423898.7704654,
+    "resource": {
+        "measured_at": 1557436.875,
+        "intervals": [
+            {
+                "seconds": 2.015984700061381,
+                "system_busy_cpu": 2.185656468457247,
+                "system_idle_cpu": 21.91856912339395,
+                "known_c2_cpu": 0.007750554852685273,
+                "conservative_other_cpu": 2.1779059136045618,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016719799954444,
+                "system_busy_cpu": 2.1771120609314094,
+                "system_idle_cpu": 21.840850177101935,
+                "known_c2_cpu": 0.007747729754204305,
+                "conservative_other_cpu": 2.169364331177205,
+                "named_other_load": [
+                    {
+                        "pid": 93632,
+                        "created": 134398684844117364,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.01549545950840861
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.1779059136045618,
+            2.169364331177205
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 34.80246353149414,
+        "disk_free_gib": 59.11458969116211,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 100144,
+                "created": 134398974944920551,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

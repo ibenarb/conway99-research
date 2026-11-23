@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 931,
+    "identity": {
+        "pid": 97748,
+        "created": 134398967165112462,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795423120.7924762,
+    "resource": {
+        "measured_at": 1556658.906,
+        "intervals": [
+            {
+                "seconds": 2.0175958999898285,
+                "system_busy_cpu": 3.0900018185164977,
+                "system_idle_cpu": 20.948508569140667,
+                "known_c2_cpu": 0.015488730919882194,
+                "conservative_other_cpu": 3.0745130875966153,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0180361000820994,
+                "system_busy_cpu": 3.0738424351019487,
+                "system_idle_cpu": 20.95942436226946,
+                "known_c2_cpu": 0.007742676158946973,
+                "conservative_other_cpu": 3.0660997589430017,
+                "named_other_load": [
+                    {
+                        "pid": 16120,
+                        "created": 134393100641512042,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015485352317893946
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.0745130875966153,
+            3.0660997589430017
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 34.47121810913086,
+        "disk_free_gib": 59.29717254638672,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 97748,
+                "created": 134398967165112462,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

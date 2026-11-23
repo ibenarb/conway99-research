@@ -1,0 +1,80 @@
+{
+    "status": "RUNNING",
+    "chart": 915,
+    "identity": {
+        "pid": 75256,
+        "created": 134398964900257102,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795422894.3251445,
+    "resource": {
+        "measured_at": 1556432.437,
+        "intervals": [
+            {
+                "seconds": 2.0168233001604676,
+                "system_busy_cpu": 3.31585816143036,
+                "system_idle_cpu": 20.61565085879951,
+                "known_c2_cpu": 0.007747332152874674,
+                "conservative_other_cpu": 3.3081108292774855,
+                "named_other_load": [
+                    {
+                        "pid": 86384,
+                        "created": 134398963507320804,
+                        "name": "git.exe",
+                        "logical_cpu_equivalents": 0.1704413073632428
+                    },
+                    {
+                        "pid": 99012,
+                        "created": 134398963496028518,
+                        "name": "git-remote-https.exe",
+                        "logical_cpu_equivalents": 0.03873666076437337
+                    }
+                ]
+            },
+            {
+                "seconds": 2.01655469997786,
+                "system_busy_cpu": 3.34729328198938,
+                "system_idle_cpu": 20.69588045415193,
+                "known_c2_cpu": 0.00774836407867912,
+                "conservative_other_cpu": 3.339544917910701,
+                "named_other_load": [
+                    {
+                        "pid": 86384,
+                        "created": 134398963507320804,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.05423854855075384
+                    },
+                    {
+                        "pid": 58052,
+                        "created": 134398963507165263,
+                        "name": "git.exe",
+                        "logical_cpu_equivalents": 0.03099345631471648
+                    },
+                    {
+                        "pid": 99012,
+                        "created": 134398963496028518,
+                        "name": "git-remote-https.exe",
+                        "logical_cpu_equivalents": 0.01549672815735824
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.3081108292774855,
+            3.339544917910701
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 34.28539276123047,
+        "disk_free_gib": 59.49318313598633,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 75256,
+                "created": 134398964900257102,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
