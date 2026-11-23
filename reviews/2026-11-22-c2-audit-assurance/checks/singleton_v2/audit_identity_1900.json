@@ -1,0 +1,83 @@
+{
+    "start_utc": "2026-11-23T18:01:45.441306+00:00",
+    "identity": {
+        "pid": 97236,
+        "created": 134399305054370857,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_complete_1900_v1.json",
+    "resource_before_start": {
+        "measured_at": 1590442.343,
+        "intervals": [
+            {
+                "seconds": 2.016647399868816,
+                "system_busy_cpu": 0.26343226884112614,
+                "system_idle_cpu": 23.65466814035171,
+                "known_c2_cpu": 0.007748007907091945,
+                "conservative_other_cpu": 0.2556842609340342,
+                "named_other_load": [
+                    {
+                        "pid": 16676,
+                        "created": 134383400670681090,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.17820418186311474
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0159806001465768,
+                "system_busy_cpu": 0.15501141230093132,
+                "system_idle_cpu": 23.840755211883238,
+                "known_c2_cpu": 0.007750570615046567,
+                "conservative_other_cpu": 0.14726084168588477,
+                "named_other_load": [
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.03875285307523283
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.0232517118451397
+                    },
+                    {
+                        "pid": 87964,
+                        "created": 134399304989418548,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.0232517118451397
+                    },
+                    {
+                        "pid": 72332,
+                        "created": 134394188593313659,
+                        "name": "brave.exe",
+                        "logical_cpu_equivalents": 0.015501141230093133
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            0.2556842609340342,
+            0.14726084168588477
+        ],
+        "c2_worker_budget": 19,
+        "ram_free_gib": 33.130733489990234,
+        "disk_free_gib": 44.73722839355469,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 102496,
+                "created": 134399303972602101,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "admission_receipt": "final_s1_admission_1900_v1\\admission_0004.json",
+    "scope": "Final complete S1 evidence audit after natural termination; no search rerun or solver changes."
+}

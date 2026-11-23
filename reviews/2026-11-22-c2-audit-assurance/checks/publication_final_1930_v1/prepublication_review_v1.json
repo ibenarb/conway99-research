@@ -1,0 +1,123 @@
+{
+    "at_utc": "2026-11-23T18:39:15.160568+00:00",
+    "status": "FINAL_PUBLICATION_LOCAL_PREFLIGHT_PASS",
+    "resource": {
+        "measured_at": 1592692.171,
+        "intervals": [
+            {
+                "seconds": 2.0149346999824047,
+                "system_busy_cpu": 0.217128624567248,
+                "system_idle_cpu": 23.76782979637911,
+                "known_c2_cpu": 0.0,
+                "conservative_other_cpu": 0.217128624567248,
+                "named_other_load": [
+                    {
+                        "pid": 88656,
+                        "created": 134396696553864618,
+                        "name": "WINWORD.EXE",
+                        "logical_cpu_equivalents": 0.038772968672722855
+                    },
+                    {
+                        "pid": 19272,
+                        "created": 134383400639509126,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.015509187469089141
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0161959000397474,
+                "system_busy_cpu": 0.1317456304691243,
+                "system_idle_cpu": 23.876958086786583,
+                "known_c2_cpu": 0.007749742968772017,
+                "conservative_other_cpu": 0.12399588750035229,
+                "named_other_load": [
+                    {
+                        "pid": 88656,
+                        "created": 134396696553864618,
+                        "name": "WINWORD.EXE",
+                        "logical_cpu_equivalents": 0.030998971875088068
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            0.217128624567248,
+            0.12399588750035229
+        ],
+        "c2_worker_budget": 19,
+        "ram_free_gib": 35.98237228393555,
+        "disk_free_gib": 44.25176239013672,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 96204,
+                "created": 134399327498021444,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "repositories": [
+        {
+            "repository": "git-assurance",
+            "branch": "review/project/c2-assurance-20261122",
+            "base_commit": "9b27794066a45753304f61d12c24487f70fa2558",
+            "origin": "https://github.com/ibenarb/conway99-review-exchange.git",
+            "changed_files": 3498,
+            "no_workflows": true,
+            "no_existing_staged_edits": true,
+            "diff_check_pass": true
+        },
+        {
+            "repository": "git-research",
+            "branch": "main",
+            "base_commit": "eda127fdffb1c7554706d6b51dee127ac6d7b930",
+            "origin": "https://github.com/ibenarb/conway99-research.git",
+            "changed_files": 1,
+            "no_workflows": true,
+            "no_existing_staged_edits": true,
+            "diff_check_pass": true
+        }
+    ],
+    "source_syntax_and_hashes": [
+        {
+            "path": "accept_final_s1_v1.py",
+            "sha256": "717cc70ee89c91951ba113ce8414e4ba182783fd68e6d0f7575f5a8c23b97d7d"
+        },
+        {
+            "path": "accept_final_s1_v2.py",
+            "sha256": "5f266cbf266d80b21269a85eac421900b2c684444d36d77e00aa4a38ebcf1b09"
+        },
+        {
+            "path": "assemble_closing_receipts_v1.py",
+            "sha256": "a5f8d3ca523375c931dd04707dd162b2a10b366743c6a78524fbc45f2dc8431f"
+        },
+        {
+            "path": "assemble_metadata_1930_v1.py",
+            "sha256": "928e2878f29f400a77d98f56a36c3c70a60389a8c9233073278503346cc735be"
+        },
+        {
+            "path": "assemble_metadata_1930_v2.py",
+            "sha256": "34387b640e5832f1a6f82071b4dbe114cf7a1ed1a4ee3ece2a817a9a91af041a"
+        },
+        {
+            "path": "publish_verified_snapshots_1930_v1.py",
+            "sha256": "7c253e7f8aaad6ed52de82dbed4eb78729b8beb94f3d9629a2d73417c2681141"
+        },
+        {
+            "path": "stage_completed_payloads_1930_v1.py",
+            "sha256": "9a45464ad837f963b820c0445bacedb7d4a7301b94c2125f5a2cd11d2facf9c3"
+        },
+        {
+            "path": "stage_completed_payloads_1930_v2.py",
+            "sha256": "b3c836324936309204a4746525883cc0f083569e8ab371979504ed073217e7fa"
+        }
+    ],
+    "public_scope": "Own findings and explicit limitations only; private sources and correspondence retained privately.",
+    "selected_metadata": "assemble_metadata_1930_v2.py",
+    "selected_stage": "stage_completed_payloads_1930_v2.py",
+    "selected_acceptance": "accept_final_s1_v2.py",
+    "selected_publisher": "publish_verified_snapshots_1930_v1.py"
+}

@@ -1,0 +1,62 @@
+{
+    "start_utc": "2026-11-23T09:12:36.738152+00:00",
+    "identity": {
+        "pid": 96260,
+        "created": 134398987567344065,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_snapshot_1013_v1.json",
+    "resource_before_start": {
+        "measured_at": 1558694.843,
+        "intervals": [
+            {
+                "seconds": 2.0190882000606507,
+                "system_busy_cpu": 7.421357323345206,
+                "system_idle_cpu": 16.576170371851337,
+                "known_c2_cpu": 0.7042163883466251,
+                "conservative_other_cpu": 6.717140934998581,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016722100088373,
+                "system_busy_cpu": 6.105204083130971,
+                "system_idle_cpu": 17.812010389743783,
+                "known_c2_cpu": 0.20918846477733016,
+                "conservative_other_cpu": 5.8960156183536405,
+                "named_other_load": [
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015495441835357794
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            6.717140934998581,
+            5.8960156183536405
+        ],
+        "c2_worker_budget": 13,
+        "ram_free_gib": 34.137699127197266,
+        "disk_free_gib": 58.77724075317383,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 99032,
+                "created": 134398987524354876,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job coverage, arithmetic/ledger checks and full readbacks. No search rerun or changed solver/controller source."
+}

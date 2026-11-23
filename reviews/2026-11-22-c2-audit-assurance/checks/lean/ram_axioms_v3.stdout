@@ -1,0 +1,19 @@
+{"label": "axioms", "command": ["/mnt/c/Users/rb/.codex/.chatgpt-projects/g-p-6a834a51a9908191804a71a0d0060ea4/work/C2_AdditionalChecks_20261122/lean_v1/toolchain/lean-4.35.0-rc2-linux/bin/lake", "env", "lean", "C3formal/Check.lean"], "started": 1795384152.9285197}
+'C3.no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C3.no_free_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_free_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → (∀ (v : V), σ v ≠ v) → False
+'C3.Tri.no_triangle_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'C3.no_triangle_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_triangle_order3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } = 3 → False
+'C3.no_order3_fix_le3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_order3_fix_le3 : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → Fintype.card { v // σ v = v } ≤ 3 → False
+'C3.no_order3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@C3.no_order3 : ∀ {V : Type u_1} [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+  G.IsSRGWith 99 14 1 2 → ∀ (σ : G ≃g G), (∀ (v : V), σ (σ (σ v)) = v) → ∀ (v : V), σ v = v
+{"phase": "axioms", "status": "COMMANDS_PASSED", "records": [{"label": "axioms", "arguments": ["env", "lean", "C3formal/Check.lean"], "exit_code": 0, "started": 1795384152.9285197, "elapsed_seconds": 26.867549180984497}], "pinned_source_hashes_unchanged": true, "security_settings_changed": false, "root": "/dev/shm/conway99_c3_assurance_20261122_v1"}

@@ -1,0 +1,92 @@
+{
+    "start_utc": "2026-11-23T08:14:06.862569+00:00",
+    "identity": {
+        "pid": 96164,
+        "created": 134398952468578849,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_high_evidence_v2.py",
+    "auditor_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+    "output": "audit_snapshot_0914_v2.json",
+    "resource_before_start": {
+        "measured_at": 1555184.968,
+        "intervals": [
+            {
+                "seconds": 2.0214848001487553,
+                "system_busy_cpu": 10.048307065432924,
+                "system_idle_cpu": 14.044441490685864,
+                "known_c2_cpu": 1.058936975357162,
+                "conservative_other_cpu": 8.989370090075763,
+                "named_other_load": [
+                    {
+                        "pid": 89640,
+                        "created": 134394288728387615,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.08502413670750936
+                    },
+                    {
+                        "pid": 23816,
+                        "created": 134394288496601023,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.030917867893639765
+                    },
+                    {
+                        "pid": 94412,
+                        "created": 134398950527867678,
+                        "name": "audiodg.exe",
+                        "logical_cpu_equivalents": 0.030917867893639765
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0177126999478787,
+                "system_busy_cpu": 10.895691443369463,
+                "system_idle_cpu": 13.087219999498503,
+                "known_c2_cpu": 1.9746988756639752,
+                "conservative_other_cpu": 8.920992567705488,
+                "named_other_load": [
+                    {
+                        "pid": 89640,
+                        "created": 134394288728387615,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.05420742011626599
+                    },
+                    {
+                        "pid": 94412,
+                        "created": 134398950527867678,
+                        "name": "audiodg.exe",
+                        "logical_cpu_equivalents": 0.01548783431893314
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            8.989370090075763,
+            8.920992567705488
+        ],
+        "c2_worker_budget": 11,
+        "ram_free_gib": 33.69637680053711,
+        "disk_free_gib": 60.91496276855469,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 11884,
+                "created": 134398952048382882,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 49028,
+                "created": 134398952425423369,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Separate immutable ledger/readback audit; no new search or source changes."
+}

@@ -1,0 +1,98 @@
+{
+    "resource": {
+        "measured_at": 1520560.062,
+        "foreign_samples": [
+            6.118344078236638,
+            5.283100830147893
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 19.458423614501953,
+        "disk_free_gib": 35.79938888549805,
+        "intervals": [
+            {
+                "seconds": 2.0174984999466687,
+                "system_busy_cpu": 12.259922374491895,
+                "system_idle_cpu": 11.64034322732869,
+                "known_c2_cpu": 6.141578296255257,
+                "conservative_other_cpu": 6.118344078236638,
+                "named_other_load": [
+                    {
+                        "pid": 86508,
+                        "created": 134398606043043465,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990713748006661
+                    },
+                    {
+                        "pid": 20228,
+                        "created": 134398606092818628,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990713748006661
+                    },
+                    {
+                        "pid": 79112,
+                        "created": 134398605667624256,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.4182159243351626
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0170445998664945,
+                "system_busy_cpu": 11.29437098292614,
+                "system_idle_cpu": 12.696484253097353,
+                "known_c2_cpu": 6.011270152778247,
+                "conservative_other_cpu": 5.283100830147893,
+                "named_other_load": [
+                    {
+                        "pid": 86508,
+                        "created": 134398606043043465,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9992961980778271
+                    },
+                    {
+                        "pid": 20228,
+                        "created": 134398606092818628,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9992961980778271
+                    },
+                    {
+                        "pid": 91680,
+                        "created": 134398606133777421,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.08521130371206277
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "exit_code": 0,
+    "files": 16
+}

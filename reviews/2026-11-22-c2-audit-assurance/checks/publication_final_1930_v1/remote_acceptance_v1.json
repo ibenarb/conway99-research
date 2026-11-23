@@ -1,0 +1,137 @@
+{
+    "at_utc": "2026-11-23T18:44:03.608453+00:00",
+    "status": "BOTH_REMOTE_HEADS_INDEPENDENTLY_RECONFIRMED",
+    "publisher_exited": true,
+    "stderr_empty": true,
+    "resource": {
+        "measured_at": 1592979.89,
+        "intervals": [
+            {
+                "seconds": 2.0158481001853943,
+                "system_busy_cpu": 2.247813215481498,
+                "system_idle_cpu": 21.679770909316378,
+                "known_c2_cpu": 0.007751080053384476,
+                "conservative_other_cpu": 2.240062135428113,
+                "named_other_load": [
+                    {
+                        "pid": 80624,
+                        "created": 134399330264041954,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 1.2014174082745936
+                    },
+                    {
+                        "pid": 44992,
+                        "created": 134393232584873483,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.325545362242148
+                    },
+                    {
+                        "pid": 51676,
+                        "created": 134393232559433795,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.11626620080076713
+                    },
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.10076404069399819
+                    },
+                    {
+                        "pid": 85820,
+                        "created": 134393232559433852,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.07751080053384475
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.04650648032030685
+                    },
+                    {
+                        "pid": 87924,
+                        "created": 134393232538394082,
+                        "name": "WhatsApp.Root.exe",
+                        "logical_cpu_equivalents": 0.04650648032030685
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.015502160106768952
+                    }
+                ]
+            },
+            {
+                "seconds": 2.017703599995002,
+                "system_busy_cpu": 0.5188447896919017,
+                "system_idle_cpu": 23.526126434089516,
+                "known_c2_cpu": 0.007743952084953758,
+                "conservative_other_cpu": 0.511100837606948,
+                "named_other_load": [
+                    {
+                        "pid": 44992,
+                        "created": 134393232584873483,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.19359880212384395
+                    },
+                    {
+                        "pid": 51676,
+                        "created": 134393232559433795,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.046463712509722546
+                    },
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.023231856254861273
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.240062135428113,
+            0.511100837606948
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 35.506927490234375,
+        "disk_free_gib": 43.7126579284668,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 8308,
+                "created": 134399330375140427,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "repositories": [
+        {
+            "repository": "git-assurance",
+            "branch": "review/project/c2-assurance-20261122",
+            "commit": "f7ae0b8f4d9f21e71148a5a03cafabaaa3f4c187",
+            "origin": "https://github.com/ibenarb/conway99-review-exchange.git",
+            "remote_matches": true,
+            "worktree_clean": true
+        },
+        {
+            "repository": "git-research",
+            "branch": "main",
+            "commit": "ff92f84a3f5a30292c5a04f980a273fe49f3c8dd",
+            "origin": "https://github.com/ibenarb/conway99-research.git",
+            "remote_matches": true,
+            "worktree_clean": true
+        }
+    ],
+    "counts": {
+        "singleton": 3308,
+        "nonphysical": 272,
+        "high": 3156,
+        "low": 92
+    },
+    "all_five_assurance_checks_complete_with_documented_scope": true
+}

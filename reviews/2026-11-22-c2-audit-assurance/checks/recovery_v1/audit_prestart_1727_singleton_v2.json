@@ -1,0 +1,57 @@
+{
+  "at_utc": "2026-11-23T16:27:37.771250+00:00",
+  "resource": {
+    "measured_at": 1584795.875,
+    "intervals": [
+      {
+        "seconds": 2.019349800189957,
+        "system_busy_cpu": 10.128569601005237,
+        "system_idle_cpu": 13.834898736896383,
+        "known_c2_cpu": 1.2844480930228186,
+        "conservative_other_cpu": 8.844121507982418,
+        "named_other_load": []
+      },
+      {
+        "seconds": 2.018010800005868,
+        "system_busy_cpu": 10.15077570444144,
+        "system_idle_cpu": 13.890535174498813,
+        "known_c2_cpu": 0.44133807410614956,
+        "conservative_other_cpu": 9.709437630335291,
+        "named_other_load": []
+      }
+    ],
+    "foreign_samples": [
+      8.844121507982418,
+      9.709437630335291
+    ],
+    "c2_worker_budget": 10,
+    "ram_free_gib": 33.87002182006836,
+    "disk_free_gib": 46.30670928955078,
+    "reserve_cpu_equivalents": 4,
+    "roots_requested": [
+      {
+        "pid": 93632,
+        "created": 134398684844117364,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+      },
+      {
+        "pid": 102152,
+        "created": 134399248534837427,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+      }
+    ],
+    "missing_roots": [],
+    "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+  },
+  "active_research_count": 11,
+  "already_started_auditors": 0,
+  "guard_checks": {
+    "worker_budget": false,
+    "system_cpu": true,
+    "ram": true,
+    "disk": true
+  },
+  "duplicate_precheck": "Read-only Win32_Process inventory2026-11-23T17:27:09.1918854+01:00 found zero matching auditors; both1627identities exited.",
+  "source_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+  "admitted": false
+}

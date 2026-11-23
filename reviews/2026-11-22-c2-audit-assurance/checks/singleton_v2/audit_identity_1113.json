@@ -1,0 +1,55 @@
+{
+    "start_utc": "2026-11-23T10:12:31.703395+00:00",
+    "identity": {
+        "pid": 29836,
+        "created": 134399023516994491,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_snapshot_1113_v1.json",
+    "resource_before_start": {
+        "measured_at": 1562289.812,
+        "intervals": [
+            {
+                "seconds": 2.019447800004855,
+                "system_busy_cpu": 8.71989610226997,
+                "system_idle_cpu": 15.35846829015607,
+                "known_c2_cpu": 0.09284716346693847,
+                "conservative_other_cpu": 8.627048938803032,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0176586001180112,
+                "system_busy_cpu": 7.062641816195529,
+                "system_idle_cpu": 16.874447935844362,
+                "known_c2_cpu": 0.02323237439538003,
+                "conservative_other_cpu": 7.039409441800149,
+                "named_other_load": []
+            }
+        ],
+        "foreign_samples": [
+            8.627048938803032,
+            7.039409441800149
+        ],
+        "c2_worker_budget": 11,
+        "ram_free_gib": 32.326778411865234,
+        "disk_free_gib": 56.154239654541016,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 92136,
+                "created": 134399023473918676,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun and no solver/controller changes."
+}

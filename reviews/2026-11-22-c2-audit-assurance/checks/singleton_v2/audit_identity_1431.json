@@ -1,0 +1,70 @@
+{
+    "start_utc": "2026-11-23T13:32:26.252593+00:00",
+    "identity": {
+        "pid": 72576,
+        "created": 134399143462482132,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_snapshot_1431_v1.json",
+    "resource_before_start": {
+        "measured_at": 1574284.343,
+        "intervals": [
+            {
+                "seconds": 2.0162986000068486,
+                "system_busy_cpu": 3.215979518102118,
+                "system_idle_cpu": 20.799250666472492,
+                "known_c2_cpu": 1.9993318449887865,
+                "conservative_other_cpu": 1.2166476731133316,
+                "named_other_load": [
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.01549869647278129
+                    },
+                    {
+                        "pid": 16120,
+                        "created": 134393100641512042,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.01549869647278129
+                    }
+                ]
+            },
+            {
+                "seconds": 2.016450900118798,
+                "system_busy_cpu": 3.215736619035939,
+                "system_idle_cpu": 20.774433435265912,
+                "known_c2_cpu": 1.1390681518030916,
+                "conservative_other_cpu": 2.0766684672328477,
+                "named_other_load": []
+            }
+        ],
+        "foreign_samples": [
+            1.2166476731133316,
+            2.0766684672328477
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 32.42668914794922,
+        "disk_free_gib": 47.197265625,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 95700,
+                "created": 134399143419657936,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun or solver/controller changes.",
+    "duplicate_precheck": "Read-only Win32_Process inventory at2026-11-23T13:30:33Z found no audit_singleton_evidence or audit_high_evidence processes; prior1313 identities exited. First attempt refused before any process/log creation.",
+    "admission_followup": "recovery_v1/audit_admission_hold_1431_v1.json"
+}

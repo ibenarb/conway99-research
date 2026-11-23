@@ -1,0 +1,20 @@
+{
+    "time_utc": "2026-11-22T20:34:49.520Z",
+    "status": "CONTROLLER_RACE_REPAIRED_SEPARATE_VERSION",
+    "original_controller": "run_low_controller_v1.py",
+    "original_pid": 1140,
+    "cause": "Child finished after poll but before live identity read; identity assertion raised during status serialization.",
+    "checked_exited_pids": [
+        1140,
+        73660,
+        98032
+    ],
+    "completed_jobs_retained": [
+        "306.0",
+        "16.0",
+        "16.1"
+    ],
+    "search_modified": false,
+    "replacement": "run_low_controller_v2.py",
+    "fix": "Capture birth identity once after launch, tolerate already finished child, retain process handles for completion. Resume only verified completed directories; fail on incomplete existing directory."
+}

@@ -1,0 +1,11 @@
+S5 fresh pinned C3 verification, 22 November 2026
+
+All 24 project Lean modules were freshly built from the pinned 9678dec source. The 28 source/configuration hashes were checked repeatedly and independently after execution. Official pinned dependency caches supplied 2,209 modules; this is not a from-source rebuild of every Mathlib module.
+
+The normal comparator and the paranoid comparator succeeded with the original seven-statement configuration. All six kernels accepted: Lean default, Lean paranoid, lean4lean, nanoda, con-leche, con-ron. Sandboxing remained enabled and no security settings changed. The six C3 axiom reports use only propext, Quot.sound and Classical.choice. Challenge.lean intentionally contains unproved target statements; the comparator checks the separately compiled Solution against these targets and rejects disallowed axioms in its proof dependencies.
+
+The separate acceptance auditor verifies every command result, all seven statements, six kernel acceptance lines, source hashes, and all 192 members of the persistent fresh-build archive. Archive SHA-256:721d2ae08aad82c32c008b8b2e56170c69cd5f1bbbd23e5a85e307aeb54f644d. The initial archiver and the independent post-run audit both read every member completely.
+
+Five historical log/SHA256SUMS mismatches were present already at their respective first commits. The pre-commit cause remains unknown. Original logs and manifest were not rewritten. This provenance limitation is distinct from the newly reproduced formal check.
+
+The result is the full exclusion of order-three automorphisms, with or without fixed points. It neither completes the remaining C2 searches nor proves nonexistence of the graph.

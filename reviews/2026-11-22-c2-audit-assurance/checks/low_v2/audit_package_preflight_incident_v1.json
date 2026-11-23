@@ -1,0 +1,1137 @@
+{
+    "status": "MISSING_PACKAGED_COUNT_INPUT_DETECTED_BEFORE_COMMIT",
+    "missing_input": "star_counts_own.json",
+    "supplied_sha256": "8c9f896300faf9d410c152567784837767618a3b6095fcd2cc2fda9c162825a0",
+    "original_search_evidence_changed": false,
+    "generated_python_cache_excluded_from_evidence": true,
+    "missing_packaged_inputs": [
+        "star_counts_own.json",
+        "jobs_manifest.json"
+    ],
+    "complete_source_and_control_set_added": true,
+    "cause": "New audit was initially staged in checks/low (the earlier preliminary domain experiment), instead of checks/low_v2 (the full solver, whose sources and manifest were already present). Newly added files were reconciled into the correct namespace before commit; original tracked preliminary evidence unchanged.",
+    "relocation_records": [
+        {
+            "old": "checks/low/audit_controls_v2/controls_result.json",
+            "new": "checks/low_v2/audit_controls_v2/controls_result.json",
+            "bytes": 7685,
+            "sha256": "43924fce7ad08bf670bf0c8a929971fcd18a2c34b7c0c19968c7264f53f2e473"
+        },
+        {
+            "old": "checks/low/audit_controls_v3/controls_result.json",
+            "new": "checks/low_v2/audit_controls_v3/controls_result.json",
+            "bytes": 1802,
+            "sha256": "6059740f3e1896d0bf6009cb42ac5a6e95f9ad55b282e197007429202c3eeac3"
+        },
+        {
+            "old": "checks/low/audit_failure_v1.json",
+            "new": "checks/low_v2/audit_failure_v1.json",
+            "bytes": 1800,
+            "sha256": "be604e3a910ee675130e33d1c33909eba50e45c43ad5145a7a71778ac022d5f7"
+        },
+        {
+            "old": "checks/low/audit_inputs_v1/generic-low-1.tsv",
+            "new": "checks/low_v2/audit_inputs_v1/generic-low-1.tsv",
+            "bytes": 299,
+            "sha256": "b5588bf6c9cea9782fcabc90102507183221722e54256abe9551b3fa1bfb1fc2"
+        },
+        {
+            "old": "checks/low/audit_inputs_v1/generic-low.tsv",
+            "new": "checks/low_v2/audit_inputs_v1/generic-low.tsv",
+            "bytes": 298,
+            "sha256": "97a4a3db71a00d43a86e9afdcd28165d3bac57cfdfb5a2e1e9887604a8a80a77"
+        },
+        {
+            "old": "checks/low/audit_inputs_v1/independent-stars.tsv",
+            "new": "checks/low_v2/audit_inputs_v1/independent-stars.tsv",
+            "bytes": 1908,
+            "sha256": "f619b88135c111c7693995496338fb41a09698d975c17da01ac18bc470bfa38c"
+        },
+        {
+            "old": "checks/low/audit_inputs_v1/PROVENANCE.json",
+            "new": "checks/low_v2/audit_inputs_v1/PROVENANCE.json",
+            "bytes": 1677,
+            "sha256": "9a146c874acab3db9db2d8f956c93f2c4699641ae963cd81a41494ba772dba21"
+        },
+        {
+            "old": "checks/low/audit_inputs_v1/unary.log",
+            "new": "checks/low_v2/audit_inputs_v1/unary.log",
+            "bytes": 13219,
+            "sha256": "59502c3cfd34e93679442e85e46bec6807b0b24a9275e616265c66d2d8306504"
+        },
+        {
+            "old": "checks/low/audit_low_evidence_v1.py",
+            "new": "checks/low_v2/audit_low_evidence_v1.py",
+            "bytes": 11449,
+            "sha256": "a5102529dc73e21c1d271cb4ffcd447b31537be09def99cda07d9aae0d6cb512"
+        },
+        {
+            "old": "checks/low/audit_low_evidence_v2.py",
+            "new": "checks/low_v2/audit_low_evidence_v2.py",
+            "bytes": 12311,
+            "sha256": "398cb110f5e2150ad6b63258ea088df6331d31998af8a6e8cfa0a193e91b33a4"
+        },
+        {
+            "old": "checks/low/audit_package_preflight_incident_v1.json",
+            "new": "checks/low_v2/audit_package_preflight_incident_v1.json",
+            "bytes": 476,
+            "sha256": "c07a55d1fd9749b3b3da28362d514d00f3a2ac620e9e4e8f00adbff90225d3d5"
+        },
+        {
+            "old": "checks/low/audit_resource_2331_v1.json",
+            "new": "checks/low_v2/audit_resource_2331_v1.json",
+            "bytes": 4718,
+            "sha256": "85ca3f0c999d384a1992e2a36b24811c9d4175150c61bb26f6b06cb54bfc3850"
+        },
+        {
+            "old": "checks/low/audit_snapshot_2332_v2.json",
+            "new": "checks/low_v2/audit_snapshot_2332_v2.json",
+            "bytes": 8394,
+            "sha256": "12e6c4e5587682e49d26a88bb02e64e4bab367274ad3636b99f065262bf7c710"
+        },
+        {
+            "old": "checks/low/controller_incident_v1.json",
+            "new": "checks/low_v2/controller_incident_v1.json",
+            "bytes": 769,
+            "sha256": "d6bd9e044c5242e066609bf22a383784c72ae0ef1f755152fbf414c68c7c038b"
+        },
+        {
+            "old": "checks/low/gram_controls.stderr",
+            "new": "checks/low_v2/gram_controls.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/gram_controls.stdout",
+            "new": "checks/low_v2/gram_controls.stdout",
+            "bytes": 16562,
+            "sha256": "c1d52da733ba342d7915dbeede1813b860ef22bf0fef25564057d630a2504350"
+        },
+        {
+            "old": "checks/low/gram_controls_input.txt",
+            "new": "checks/low_v2/gram_controls_input.txt",
+            "bytes": 47522,
+            "sha256": "04b1145e13b76ca13a40d5f3c7417a60540a55015815425a659c71120ac29a2c"
+        },
+        {
+            "old": "checks/low/gram_controls_result.json",
+            "new": "checks/low_v2/gram_controls_result.json",
+            "bytes": 839,
+            "sha256": "e1944e9621044fe5ac8b880bdcd8b87495e917bcf480bafb0c83e05dea2e478c"
+        },
+        {
+            "old": "checks/low/jobs/16.0/identity.json",
+            "new": "checks/low_v2/jobs/16.0/identity.json",
+            "bytes": 4757,
+            "sha256": "8b721bb9d3b1cd15e6643531ce02301c2ee5668b33f26ae1d357c8523c1cca78"
+        },
+        {
+            "old": "checks/low/jobs/16.0/progress.json",
+            "new": "checks/low_v2/jobs/16.0/progress.json",
+            "bytes": 6159,
+            "sha256": "a80f0970efcf6cc8335b75d405931e9a30542c8d22c9e0881ba4ec04c6ae300c"
+        },
+        {
+            "old": "checks/low/jobs/16.0/result.json",
+            "new": "checks/low_v2/jobs/16.0/result.json",
+            "bytes": 7966,
+            "sha256": "821d96361ec82b3c446b73f24fefe72eec529c5557cf5f32a3d40978aece9fcf"
+        },
+        {
+            "old": "checks/low/jobs/16.0/setup.txt",
+            "new": "checks/low_v2/jobs/16.0/setup.txt",
+            "bytes": 1286946,
+            "sha256": "d1aa4888ad11b332676ab64ba4012fbaf1d8dcf6b6ac666e7ad64c8beceec334"
+        },
+        {
+            "old": "checks/low/jobs/16.0/solver.stderr",
+            "new": "checks/low_v2/jobs/16.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/16.0/solver.stdout",
+            "new": "checks/low_v2/jobs/16.0/solver.stdout",
+            "bytes": 1579810,
+            "sha256": "bbba7b4208de5c6c7613bf1b0db86652636de5694896be4dc8399245cd90d485"
+        },
+        {
+            "old": "checks/low/jobs/16.0/stars.stderr",
+            "new": "checks/low_v2/jobs/16.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/16.0/stars.txt",
+            "new": "checks/low_v2/jobs/16.0/stars.txt",
+            "bytes": 2342988,
+            "sha256": "d7e7aa3cc07fc7dc30eb6540977b15c53812600be01a25ad93f3c302d9d835d2"
+        },
+        {
+            "old": "checks/low/jobs/16.1/identity.json",
+            "new": "checks/low_v2/jobs/16.1/identity.json",
+            "bytes": 4767,
+            "sha256": "f82943a2ee567730378046a3bc778bda5d5d8077fd799343c92ad4665cf5b109"
+        },
+        {
+            "old": "checks/low/jobs/16.1/progress.json",
+            "new": "checks/low_v2/jobs/16.1/progress.json",
+            "bytes": 6169,
+            "sha256": "1a139ad1e4326d6cf0234c8480d481cb80a426a243ad742401b51a1d40fb601a"
+        },
+        {
+            "old": "checks/low/jobs/16.1/result.json",
+            "new": "checks/low_v2/jobs/16.1/result.json",
+            "bytes": 7976,
+            "sha256": "f560b742099502a8b569f2566811c9e3bc64b4fb31e991ab623d08ab7f2b6bf5"
+        },
+        {
+            "old": "checks/low/jobs/16.1/setup.txt",
+            "new": "checks/low_v2/jobs/16.1/setup.txt",
+            "bytes": 1286946,
+            "sha256": "77261f3c85b27ff3c84e4233b04bdfbcf53efa57294b8d47e9ecf2ce67b26a1a"
+        },
+        {
+            "old": "checks/low/jobs/16.1/solver.stderr",
+            "new": "checks/low_v2/jobs/16.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/16.1/solver.stdout",
+            "new": "checks/low_v2/jobs/16.1/solver.stdout",
+            "bytes": 1579810,
+            "sha256": "bbba7b4208de5c6c7613bf1b0db86652636de5694896be4dc8399245cd90d485"
+        },
+        {
+            "old": "checks/low/jobs/16.1/stars.stderr",
+            "new": "checks/low_v2/jobs/16.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/16.1/stars.txt",
+            "new": "checks/low_v2/jobs/16.1/stars.txt",
+            "bytes": 2343553,
+            "sha256": "30fb7340065e9ae2263e039a08f104ba468b6ee6581420950debe727cd9d8497"
+        },
+        {
+            "old": "checks/low/jobs/166.0/identity.json",
+            "new": "checks/low_v2/jobs/166.0/identity.json",
+            "bytes": 5302,
+            "sha256": "79520dc8d081404f7de14658d7b5a0883a40ce0fcb4c6f0390e96b3a3eca299b"
+        },
+        {
+            "old": "checks/low/jobs/166.0/progress.json",
+            "new": "checks/low_v2/jobs/166.0/progress.json",
+            "bytes": 6734,
+            "sha256": "c8c3daa6d75058915bf43005f7e44eff489e18aaf508ec533713cecb4e520028"
+        },
+        {
+            "old": "checks/low/jobs/166.0/result.json",
+            "new": "checks/low_v2/jobs/166.0/result.json",
+            "bytes": 8539,
+            "sha256": "fa4c356eaebce777f4fba7df5eb796abc1dabca07c8182b0f0ce0449ed6ab6a6"
+        },
+        {
+            "old": "checks/low/jobs/166.0/setup.txt",
+            "new": "checks/low_v2/jobs/166.0/setup.txt",
+            "bytes": 7755065,
+            "sha256": "50ceee267171fae419a339bbf18464351fea0c1f7d39f89496c755ee05b34a05"
+        },
+        {
+            "old": "checks/low/jobs/166.0/solver.stderr",
+            "new": "checks/low_v2/jobs/166.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/166.0/solver.stdout",
+            "new": "checks/low_v2/jobs/166.0/solver.stdout",
+            "bytes": 2988,
+            "sha256": "e12abc705505741bdf12343ac31fe4e06973f2313b930f3d5aec200d715818c0"
+        },
+        {
+            "old": "checks/low/jobs/166.0/stars.stderr",
+            "new": "checks/low_v2/jobs/166.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/166.0/stars.txt",
+            "new": "checks/low_v2/jobs/166.0/stars.txt",
+            "bytes": 4300,
+            "sha256": "3b973fbe09c9319790ff1e688aa11fb341338575becb4799ec180f0e45e1b1b8"
+        },
+        {
+            "old": "checks/low/jobs/166.1/identity.json",
+            "new": "checks/low_v2/jobs/166.1/identity.json",
+            "bytes": 6861,
+            "sha256": "57c2e81a8a864e9aae9baff50983ec51da5d6f200f615fb0154ca5f6361b5a16"
+        },
+        {
+            "old": "checks/low/jobs/166.1/progress.json",
+            "new": "checks/low_v2/jobs/166.1/progress.json",
+            "bytes": 8293,
+            "sha256": "acfcc9a52ab16f58a009dfec2ae3ff81f7f2a0f885b0511c3e5216987dc10d45"
+        },
+        {
+            "old": "checks/low/jobs/166.1/result.json",
+            "new": "checks/low_v2/jobs/166.1/result.json",
+            "bytes": 10099,
+            "sha256": "e50bc373713b2cb1890330288cafd345c5e3c444f2168792fab9f8ec63d2cded"
+        },
+        {
+            "old": "checks/low/jobs/166.1/setup.txt",
+            "new": "checks/low_v2/jobs/166.1/setup.txt",
+            "bytes": 7755065,
+            "sha256": "4acea73fa4d827cf22ef8a467e579960d5f19d38d2ba8ce45f440a0fd9d7ca29"
+        },
+        {
+            "old": "checks/low/jobs/166.1/solver.stderr",
+            "new": "checks/low_v2/jobs/166.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/166.1/solver.stdout",
+            "new": "checks/low_v2/jobs/166.1/solver.stdout",
+            "bytes": 2038,
+            "sha256": "b27f7184c93e76c76be8a5738551d76d5afda1fa2fac7056488a3facf11f5481"
+        },
+        {
+            "old": "checks/low/jobs/166.1/stars.stderr",
+            "new": "checks/low_v2/jobs/166.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/166.1/stars.txt",
+            "new": "checks/low_v2/jobs/166.1/stars.txt",
+            "bytes": 2860,
+            "sha256": "bcdfde5fba9d2e778db18394427c5730d8fda41e9425c2556592b3b2186854b5"
+        },
+        {
+            "old": "checks/low/jobs/167.0/identity.json",
+            "new": "checks/low_v2/jobs/167.0/identity.json",
+            "bytes": 5284,
+            "sha256": "d291668a047cfac2713d22ff3512dfe88b71e4462d313d498d2a55e5206f8f85"
+        },
+        {
+            "old": "checks/low/jobs/167.0/progress.json",
+            "new": "checks/low_v2/jobs/167.0/progress.json",
+            "bytes": 6708,
+            "sha256": "2576c8c8d55500562ebe3e2bf727b98774cdcf0779fe2aab50a324a03919b874"
+        },
+        {
+            "old": "checks/low/jobs/167.0/result.json",
+            "new": "checks/low_v2/jobs/167.0/result.json",
+            "bytes": 8513,
+            "sha256": "23354df6785d6c716c04eecbfda41832e2a70bea0cb6a46be2d77b195571a5c2"
+        },
+        {
+            "old": "checks/low/jobs/167.0/setup.txt",
+            "new": "checks/low_v2/jobs/167.0/setup.txt",
+            "bytes": 7261045,
+            "sha256": "16443f99ca17392c7ef143a81ebad76470242d4b6b5a8da9971773e5594e137a"
+        },
+        {
+            "old": "checks/low/jobs/167.0/solver.stderr",
+            "new": "checks/low_v2/jobs/167.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/167.0/solver.stdout",
+            "new": "checks/low_v2/jobs/167.0/solver.stdout",
+            "bytes": 2517,
+            "sha256": "f8479d83398e52e3124e2c5433b526c0dc57736e926e311493d024af6d95edca"
+        },
+        {
+            "old": "checks/low/jobs/167.0/stars.stderr",
+            "new": "checks/low_v2/jobs/167.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/167.0/stars.txt",
+            "new": "checks/low_v2/jobs/167.0/stars.txt",
+            "bytes": 3565,
+            "sha256": "7de2922d888fed3349e44e3f74fa22e280a854bb028e7929af90ec40b6fb9417"
+        },
+        {
+            "old": "checks/low/jobs/167.1/identity.json",
+            "new": "checks/low_v2/jobs/167.1/identity.json",
+            "bytes": 7106,
+            "sha256": "ef933022ca02d1225f78e1901808530ba19312b1edee2c0db5f99b10df52863c"
+        },
+        {
+            "old": "checks/low/jobs/167.1/progress.json",
+            "new": "checks/low_v2/jobs/167.1/progress.json",
+            "bytes": 8530,
+            "sha256": "a3271d286a3fb4328c25e47c645c6f69079623c7af7e5921240503792f0c7e6e"
+        },
+        {
+            "old": "checks/low/jobs/167.1/result.json",
+            "new": "checks/low_v2/jobs/167.1/result.json",
+            "bytes": 10336,
+            "sha256": "c5677751dd8b711e1beb4465b55d4d5a3a770aba0aad439130e41aecb6c85296"
+        },
+        {
+            "old": "checks/low/jobs/167.1/setup.txt",
+            "new": "checks/low_v2/jobs/167.1/setup.txt",
+            "bytes": 7261045,
+            "sha256": "36285a3cd8c10734026ba4e003890f58d0b7e160bf7d4645078b4eb376a4cf6b"
+        },
+        {
+            "old": "checks/low/jobs/167.1/solver.stderr",
+            "new": "checks/low_v2/jobs/167.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/167.1/solver.stdout",
+            "new": "checks/low_v2/jobs/167.1/solver.stdout",
+            "bytes": 1566,
+            "sha256": "c858ea6273b0f37a9a9b2ef3cb224ee8a68d46a9de0438fa5d5d5f6dd7e14c56"
+        },
+        {
+            "old": "checks/low/jobs/167.1/stars.stderr",
+            "new": "checks/low_v2/jobs/167.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/167.1/stars.txt",
+            "new": "checks/low_v2/jobs/167.1/stars.txt",
+            "bytes": 2162,
+            "sha256": "b14171152600894eaeabb68c0fd8a751a81e81f8bdb5f9c4a8f12851ae98cec3"
+        },
+        {
+            "old": "checks/low/jobs/197.0/identity.json",
+            "new": "checks/low_v2/jobs/197.0/identity.json",
+            "bytes": 7632,
+            "sha256": "fe19cb32bd163cccf28856abfa584308035f5d848553be524a42c17e02bf5f66"
+        },
+        {
+            "old": "checks/low/jobs/197.0/progress.json",
+            "new": "checks/low_v2/jobs/197.0/progress.json",
+            "bytes": 9053,
+            "sha256": "0c7d41635381b231c9a710d16c7e972bd399e128eadbe92597cfe8bfb80b0c46"
+        },
+        {
+            "old": "checks/low/jobs/197.0/result.json",
+            "new": "checks/low_v2/jobs/197.0/result.json",
+            "bytes": 10865,
+            "sha256": "919321a42fc3f2b78fe01d17720d6d3fa3e3385d7b694584c4e3bbd9c4c66196"
+        },
+        {
+            "old": "checks/low/jobs/197.0/setup.txt",
+            "new": "checks/low_v2/jobs/197.0/setup.txt",
+            "bytes": 1464546,
+            "sha256": "3b249ca2a7fd16ccd592610cecb22f8969bc7512a083c6a7f38593cf3fe489af"
+        },
+        {
+            "old": "checks/low/jobs/197.0/solver.stderr",
+            "new": "checks/low_v2/jobs/197.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/197.0/solver.stdout",
+            "new": "checks/low_v2/jobs/197.0/solver.stdout",
+            "bytes": 302400,
+            "sha256": "f69b1fbd19f5a3e28962ddf7b06f42c50ab015c3353d3bdae8611eb8347262c9"
+        },
+        {
+            "old": "checks/low/jobs/197.0/stars.stderr",
+            "new": "checks/low_v2/jobs/197.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/197.0/stars.txt",
+            "new": "checks/low_v2/jobs/197.0/stars.txt",
+            "bytes": 419509,
+            "sha256": "617e7eaf21c79dd0ebffd50ab32b991707caeae51c4cc8a9ddd85a3a54e56f92"
+        },
+        {
+            "old": "checks/low/jobs/197.1/identity.json",
+            "new": "checks/low_v2/jobs/197.1/identity.json",
+            "bytes": 7410,
+            "sha256": "af5e5292cb8d8b142a8ecb068680e6b581d7e454f8d58901c62fa5f0e6f93330"
+        },
+        {
+            "old": "checks/low/jobs/197.1/progress.json",
+            "new": "checks/low_v2/jobs/197.1/progress.json",
+            "bytes": 8831,
+            "sha256": "60f7125e82995d2881da41b9af5c27da8c30a3ae3d45bc7babc380378630d780"
+        },
+        {
+            "old": "checks/low/jobs/197.1/result.json",
+            "new": "checks/low_v2/jobs/197.1/result.json",
+            "bytes": 10643,
+            "sha256": "e4239166b565fc2ddbc8401a283dee26810840207b9a102c7d2eff25f123e0c5"
+        },
+        {
+            "old": "checks/low/jobs/197.1/setup.txt",
+            "new": "checks/low_v2/jobs/197.1/setup.txt",
+            "bytes": 1464546,
+            "sha256": "a74d494e00a3b904dd28a7e7240143775c8dd22192a7063cb26b51dd46e877c2"
+        },
+        {
+            "old": "checks/low/jobs/197.1/solver.stderr",
+            "new": "checks/low_v2/jobs/197.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/197.1/solver.stdout",
+            "new": "checks/low_v2/jobs/197.1/solver.stdout",
+            "bytes": 302400,
+            "sha256": "15dfacf39d6710a6cd941ecd4621a2298fac55a35fb2b37a0d2908fdbbc43786"
+        },
+        {
+            "old": "checks/low/jobs/197.1/stars.stderr",
+            "new": "checks/low_v2/jobs/197.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/197.1/stars.txt",
+            "new": "checks/low_v2/jobs/197.1/stars.txt",
+            "bytes": 419908,
+            "sha256": "6b8b47926b0608f355433446564d19bf7e794f9a3447384cf11b21204786e1bb"
+        },
+        {
+            "old": "checks/low/jobs/270.0/identity.json",
+            "new": "checks/low_v2/jobs/270.0/identity.json",
+            "bytes": 10005,
+            "sha256": "ffdbd2a735bf57faf78e427b9c51d9f14d12beef50fb9a953db83e88be5f86d2"
+        },
+        {
+            "old": "checks/low/jobs/270.0/progress.json",
+            "new": "checks/low_v2/jobs/270.0/progress.json",
+            "bytes": 11411,
+            "sha256": "d775e27990c10f0ec6226d95d77d040daf27fa3b9b932e0561e3d26c2e66f320"
+        },
+        {
+            "old": "checks/low/jobs/270.0/result.json",
+            "new": "checks/low_v2/jobs/270.0/result.json",
+            "bytes": 13215,
+            "sha256": "7dcb40d72f05832a55335b1e4ad5e80134749b9d9a6a710d4b3276776e86caf8"
+        },
+        {
+            "old": "checks/low/jobs/270.0/setup.txt",
+            "new": "checks/low_v2/jobs/270.0/setup.txt",
+            "bytes": 3320607,
+            "sha256": "253bb3ae53a30a0946605c464a66f2986e4cf184ae3380db4e13493c109623db"
+        },
+        {
+            "old": "checks/low/jobs/270.0/solver.stderr",
+            "new": "checks/low_v2/jobs/270.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/270.0/solver.stdout",
+            "new": "checks/low_v2/jobs/270.0/solver.stdout",
+            "bytes": 47070,
+            "sha256": "e27762a8ae5546b4dd33aa5163a4044e633d92bab67206e31f61ed91fbea3f84"
+        },
+        {
+            "old": "checks/low/jobs/270.0/stars.stderr",
+            "new": "checks/low_v2/jobs/270.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/270.0/stars.txt",
+            "new": "checks/low_v2/jobs/270.0/stars.txt",
+            "bytes": 72882,
+            "sha256": "274bc08b648f13af990bdcacea71480788cea817f7c47a9f1e02513deed6ad15"
+        },
+        {
+            "old": "checks/low/jobs/270.1/identity.json",
+            "new": "checks/low_v2/jobs/270.1/identity.json",
+            "bytes": 6616,
+            "sha256": "bf1263da41f0059f367c04920586a8b1203c2cde9f21ee9d814806a1d7344f88"
+        },
+        {
+            "old": "checks/low/jobs/270.1/progress.json",
+            "new": "checks/low_v2/jobs/270.1/progress.json",
+            "bytes": 8022,
+            "sha256": "5a7f94148a3ddfcca5861037758ad62f25e5c089c199b6b0c8375eb11409ec6f"
+        },
+        {
+            "old": "checks/low/jobs/270.1/result.json",
+            "new": "checks/low_v2/jobs/270.1/result.json",
+            "bytes": 9826,
+            "sha256": "0b0ea19317f2c9668219a05ca692d712db563fa0cb549013cd5d9771adb1eb17"
+        },
+        {
+            "old": "checks/low/jobs/270.1/setup.txt",
+            "new": "checks/low_v2/jobs/270.1/setup.txt",
+            "bytes": 3320607,
+            "sha256": "87844578db6f96768a3801193bbf5ffe680bd6c45060f83aa24421e39b42ecc6"
+        },
+        {
+            "old": "checks/low/jobs/270.1/solver.stderr",
+            "new": "checks/low_v2/jobs/270.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/270.1/solver.stdout",
+            "new": "checks/low_v2/jobs/270.1/solver.stdout",
+            "bytes": 47070,
+            "sha256": "e27762a8ae5546b4dd33aa5163a4044e633d92bab67206e31f61ed91fbea3f84"
+        },
+        {
+            "old": "checks/low/jobs/270.1/stars.stderr",
+            "new": "checks/low_v2/jobs/270.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/270.1/stars.txt",
+            "new": "checks/low_v2/jobs/270.1/stars.txt",
+            "bytes": 72887,
+            "sha256": "36e65490f61e70e89c23e9a82883c8623ad19c9a382cf0edc97ba80a804e9db7"
+        },
+        {
+            "old": "checks/low/jobs/28.0/identity.json",
+            "new": "checks/low_v2/jobs/28.0/identity.json",
+            "bytes": 5830,
+            "sha256": "f7a8781fcc5dad903332a3580428e76e8ad84a5b2f0b1d9f4d06f61e9c535242"
+        },
+        {
+            "old": "checks/low/jobs/28.0/progress.json",
+            "new": "checks/low_v2/jobs/28.0/progress.json",
+            "bytes": 7233,
+            "sha256": "9f2847a0b63207527ab5ded42e2af6fa4c0fba5e431bb37e1ada96e1d5e7f0d3"
+        },
+        {
+            "old": "checks/low/jobs/28.0/result.json",
+            "new": "checks/low_v2/jobs/28.0/result.json",
+            "bytes": 9038,
+            "sha256": "86cb1d445180fc2121b62c35b14df3bd7403d8ee63af047f49ac323624265455"
+        },
+        {
+            "old": "checks/low/jobs/28.0/setup.txt",
+            "new": "checks/low_v2/jobs/28.0/setup.txt",
+            "bytes": 1746603,
+            "sha256": "f4a5046c5348c6c518c729637ccc902bb9f3fa04e9bd99bd9a68bebdcc722cc4"
+        },
+        {
+            "old": "checks/low/jobs/28.0/solver.stderr",
+            "new": "checks/low_v2/jobs/28.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/28.0/solver.stdout",
+            "new": "checks/low_v2/jobs/28.0/solver.stdout",
+            "bytes": 276662,
+            "sha256": "e39a02679f3d2b7960400f4ebf8ef39d63a6aaec6d1a4402b578cd60be76f292"
+        },
+        {
+            "old": "checks/low/jobs/28.0/stars.stderr",
+            "new": "checks/low_v2/jobs/28.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/28.0/stars.txt",
+            "new": "checks/low_v2/jobs/28.0/stars.txt",
+            "bytes": 418666,
+            "sha256": "83d13ee5a2b50d427110da6fafe173358eb65fee02a485ad14bdf8d616ab0fe8"
+        },
+        {
+            "old": "checks/low/jobs/28.1/identity.json",
+            "new": "checks/low_v2/jobs/28.1/identity.json",
+            "bytes": 4773,
+            "sha256": "ec0dd26677395c5a220943dbe5f3689f58105a88f2a8db535d995f8c240e7b87"
+        },
+        {
+            "old": "checks/low/jobs/28.1/progress.json",
+            "new": "checks/low_v2/jobs/28.1/progress.json",
+            "bytes": 6176,
+            "sha256": "93e5a021792a1a62edd11c043f5bb30f99f45d027ea7260bbb8e7333b3620d08"
+        },
+        {
+            "old": "checks/low/jobs/28.1/result.json",
+            "new": "checks/low_v2/jobs/28.1/result.json",
+            "bytes": 7982,
+            "sha256": "faafeee6af15ebeabea871a2b73f9792c4159790106a32a41edfcbaf3d5521a8"
+        },
+        {
+            "old": "checks/low/jobs/28.1/setup.txt",
+            "new": "checks/low_v2/jobs/28.1/setup.txt",
+            "bytes": 1746603,
+            "sha256": "18defbe88dd1ad93c02c51ca4dc155d6f3fa1db00b8ac04d8fdffa16dfe486c8"
+        },
+        {
+            "old": "checks/low/jobs/28.1/solver.stderr",
+            "new": "checks/low_v2/jobs/28.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/28.1/solver.stdout",
+            "new": "checks/low_v2/jobs/28.1/solver.stdout",
+            "bytes": 276662,
+            "sha256": "e39a02679f3d2b7960400f4ebf8ef39d63a6aaec6d1a4402b578cd60be76f292"
+        },
+        {
+            "old": "checks/low/jobs/28.1/stars.stderr",
+            "new": "checks/low_v2/jobs/28.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/28.1/stars.txt",
+            "new": "checks/low_v2/jobs/28.1/stars.txt",
+            "bytes": 418781,
+            "sha256": "4907ba8d3c777ba6cb8b907c9f1ab575e4c082e7ac7f26aa6cb1b5944bd7fad5"
+        },
+        {
+            "old": "checks/low/jobs/289.0/identity.json",
+            "new": "checks/low_v2/jobs/289.0/identity.json",
+            "bytes": 7925,
+            "sha256": "516356e853fae9df00fe0afebf0339960955fad842773211db2d80ac152c8f1e"
+        },
+        {
+            "old": "checks/low/jobs/289.0/progress.json",
+            "new": "checks/low_v2/jobs/289.0/progress.json",
+            "bytes": 9360,
+            "sha256": "06a4d11379acec9b13817a5b2fcec1282b78adada3b306b32f55b853122e77da"
+        },
+        {
+            "old": "checks/low/jobs/289.0/result.json",
+            "new": "checks/low_v2/jobs/289.0/result.json",
+            "bytes": 11164,
+            "sha256": "53f0b4c61f11432a94de93d84297d737d26616089ae256570fefae0f29e18bd4"
+        },
+        {
+            "old": "checks/low/jobs/289.0/setup.txt",
+            "new": "checks/low_v2/jobs/289.0/setup.txt",
+            "bytes": 7950663,
+            "sha256": "e0e85ac048490196e44178318ecdce243139c400458ea89a5105563381c5f87e"
+        },
+        {
+            "old": "checks/low/jobs/289.0/solver.stderr",
+            "new": "checks/low_v2/jobs/289.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/289.0/solver.stdout",
+            "new": "checks/low_v2/jobs/289.0/solver.stdout",
+            "bytes": 2666,
+            "sha256": "94d339f76e22192c343e37a5699227305b474517e4425359ed7e639c2909b787"
+        },
+        {
+            "old": "checks/low/jobs/289.0/stars.stderr",
+            "new": "checks/low_v2/jobs/289.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/289.0/stars.txt",
+            "new": "checks/low_v2/jobs/289.0/stars.txt",
+            "bytes": 3814,
+            "sha256": "0817ab7f28634b0907e90e46d5811d0ef3cfb58758740c463c9b4edee37103d2"
+        },
+        {
+            "old": "checks/low/jobs/289.1/identity.json",
+            "new": "checks/low_v2/jobs/289.1/identity.json",
+            "bytes": 9220,
+            "sha256": "cf63aee9c4425bccc7bae78493c81bddc75484af1e763e709ad6a37334046491"
+        },
+        {
+            "old": "checks/low/jobs/289.1/progress.json",
+            "new": "checks/low_v2/jobs/289.1/progress.json",
+            "bytes": 10655,
+            "sha256": "c8a1b8412e498e31c325d7b673360d7521b0e8e828ff25791dd20ff2c92302a4"
+        },
+        {
+            "old": "checks/low/jobs/289.1/result.json",
+            "new": "checks/low_v2/jobs/289.1/result.json",
+            "bytes": 12461,
+            "sha256": "d5a5a00439b14d89ec8e20ba83cc655b6019cbf52b17af0b5a3cd9d9f8519950"
+        },
+        {
+            "old": "checks/low/jobs/289.1/setup.txt",
+            "new": "checks/low_v2/jobs/289.1/setup.txt",
+            "bytes": 7950663,
+            "sha256": "755c029c51cf48bce0f8f063d892eb5a6e5e2b6676cdf1b3fb7a66838ef5c69c"
+        },
+        {
+            "old": "checks/low/jobs/289.1/solver.stderr",
+            "new": "checks/low_v2/jobs/289.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/289.1/solver.stdout",
+            "new": "checks/low_v2/jobs/289.1/solver.stdout",
+            "bytes": 2666,
+            "sha256": "904d9407ced47be019aab6d0b084381b24c022c87da980915524d35edd021051"
+        },
+        {
+            "old": "checks/low/jobs/289.1/stars.stderr",
+            "new": "checks/low_v2/jobs/289.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/289.1/stars.txt",
+            "new": "checks/low_v2/jobs/289.1/stars.txt",
+            "bytes": 3806,
+            "sha256": "3cf3f69e0b93f34a1ee2530c61c9fc6c396a9bbafbe92499f1b9308104a9e747"
+        },
+        {
+            "old": "checks/low/jobs/306.0/identity.json",
+            "new": "checks/low_v2/jobs/306.0/identity.json",
+            "bytes": 5549,
+            "sha256": "5e5a34fb1fb5495e3578f825728daf8c5ed38570539b36b8a9ce5fdc17907b99"
+        },
+        {
+            "old": "checks/low/jobs/306.0/progress.json",
+            "new": "checks/low_v2/jobs/306.0/progress.json",
+            "bytes": 7021,
+            "sha256": "30531f887b49662ca813862c3a667cab1e8ac1c71b472a205623dd6b9b230615"
+        },
+        {
+            "old": "checks/low/jobs/306.0/result.json",
+            "new": "checks/low_v2/jobs/306.0/result.json",
+            "bytes": 8829,
+            "sha256": "8843e01f1e4a2667bb2d264aed44d929323a741679183af497dbadbedcca7b4b"
+        },
+        {
+            "old": "checks/low/jobs/306.0/setup.txt",
+            "new": "checks/low_v2/jobs/306.0/setup.txt",
+            "bytes": 7339843,
+            "sha256": "81cbd7c33ad3bed77e5e305f7938f77c16c760468ed33129b9940e4c6268ba66"
+        },
+        {
+            "old": "checks/low/jobs/306.0/solver.stderr",
+            "new": "checks/low_v2/jobs/306.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/306.0/solver.stdout",
+            "new": "checks/low_v2/jobs/306.0/solver.stdout",
+            "bytes": 4514,
+            "sha256": "191d19358525c274547aef4ac53d1cd519c57d471a1cb7bd3dad20b1ca95b34e"
+        },
+        {
+            "old": "checks/low/jobs/306.0/stars.stderr",
+            "new": "checks/low_v2/jobs/306.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/306.0/stars.txt",
+            "new": "checks/low_v2/jobs/306.0/stars.txt",
+            "bytes": 6450,
+            "sha256": "6dfe8305701f87db312c9ef181936a153657c08c132ba666e58f04c584095d92"
+        },
+        {
+            "old": "checks/low/jobs/306.1/identity.json",
+            "new": "checks/low_v2/jobs/306.1/identity.json",
+            "bytes": 6599,
+            "sha256": "c2b4e1180a979d588c31bc8091e40e66ee09ee25f0cf209fadbfe747d7c4efd2"
+        },
+        {
+            "old": "checks/low/jobs/306.1/progress.json",
+            "new": "checks/low_v2/jobs/306.1/progress.json",
+            "bytes": 8071,
+            "sha256": "8d151b9cb27368c7e191f457a07309043e394fc801843e66267f5e7b8e558703"
+        },
+        {
+            "old": "checks/low/jobs/306.1/result.json",
+            "new": "checks/low_v2/jobs/306.1/result.json",
+            "bytes": 9879,
+            "sha256": "3cd745de655bdd79eddfe01b08474f285594c87473e21a86bbff5e47ccb5f44e"
+        },
+        {
+            "old": "checks/low/jobs/306.1/setup.txt",
+            "new": "checks/low_v2/jobs/306.1/setup.txt",
+            "bytes": 7339843,
+            "sha256": "11b4eb042362dbfe28d96134a5f3cb29d87240e4e402f0d413ab4b3491c7e5fa"
+        },
+        {
+            "old": "checks/low/jobs/306.1/solver.stderr",
+            "new": "checks/low_v2/jobs/306.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/306.1/solver.stdout",
+            "new": "checks/low_v2/jobs/306.1/solver.stdout",
+            "bytes": 4514,
+            "sha256": "1c1e75a94c6bc48217d0a32d32a3496275b6734a7a5b87d7e805d19a10554250"
+        },
+        {
+            "old": "checks/low/jobs/306.1/stars.stderr",
+            "new": "checks/low_v2/jobs/306.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/306.1/stars.txt",
+            "new": "checks/low_v2/jobs/306.1/stars.txt",
+            "bytes": 6423,
+            "sha256": "ac5bf054bd2a7b9eb43abcb30bd2a1525f83b1f2b68e26055958ad23ddd34a82"
+        },
+        {
+            "old": "checks/low/jobs/307.0/identity.json",
+            "new": "checks/low_v2/jobs/307.0/identity.json",
+            "bytes": 5559,
+            "sha256": "05abed8a441a0643a4f95844c6a3b89a96d1970cb4d81461a32ebcce743d46e9"
+        },
+        {
+            "old": "checks/low/jobs/307.0/progress.json",
+            "new": "checks/low_v2/jobs/307.0/progress.json",
+            "bytes": 6988,
+            "sha256": "efdbfa986b70d71e5b29ab52df024ed482751a2d879952a988d4218380614716"
+        },
+        {
+            "old": "checks/low/jobs/307.0/result.json",
+            "new": "checks/low_v2/jobs/307.0/result.json",
+            "bytes": 8793,
+            "sha256": "1e79be5088444eb86c7af93d8924dd1aa5897ff0335e31b0bdf51bdb14996e39"
+        },
+        {
+            "old": "checks/low/jobs/307.0/setup.txt",
+            "new": "checks/low_v2/jobs/307.0/setup.txt",
+            "bytes": 8399824,
+            "sha256": "b9c5ac0ea829717fbacf3b3d85290d4a0e3a60eec9acf09e72a2c0c8c2c8863e"
+        },
+        {
+            "old": "checks/low/jobs/307.0/solver.stderr",
+            "new": "checks/low_v2/jobs/307.0/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/307.0/solver.stdout",
+            "new": "checks/low_v2/jobs/307.0/solver.stdout",
+            "bytes": 4076,
+            "sha256": "2749c6d8492f81e4f742e27c635e560b42ad8bdc9828c1c2da870de918c7e8c2"
+        },
+        {
+            "old": "checks/low/jobs/307.0/stars.stderr",
+            "new": "checks/low_v2/jobs/307.0/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/307.0/stars.txt",
+            "new": "checks/low_v2/jobs/307.0/stars.txt",
+            "bytes": 5977,
+            "sha256": "332d6a154c4882029143a9e77ad121ec23af81c33fd294ee2a67eacbdcba7723"
+        },
+        {
+            "old": "checks/low/jobs/307.1/identity.json",
+            "new": "checks/low_v2/jobs/307.1/identity.json",
+            "bytes": 8965,
+            "sha256": "663a3ae4e2c4a63f40124fecbe13ba91f98915c71ca780b20502369888befb34"
+        },
+        {
+            "old": "checks/low/jobs/307.1/progress.json",
+            "new": "checks/low_v2/jobs/307.1/progress.json",
+            "bytes": 10394,
+            "sha256": "daff6fd8c2392de6e8793cd1ef67cdce3f7118ffa8651ca27917ea34c4838b6b"
+        },
+        {
+            "old": "checks/low/jobs/307.1/result.json",
+            "new": "checks/low_v2/jobs/307.1/result.json",
+            "bytes": 12199,
+            "sha256": "11ee64c46dd1d071f4635cc732c5651aaafb7acbbf6a1e54e740dce1490c687f"
+        },
+        {
+            "old": "checks/low/jobs/307.1/setup.txt",
+            "new": "checks/low_v2/jobs/307.1/setup.txt",
+            "bytes": 8399824,
+            "sha256": "6c894f5e563038adc78ca9d6a87ddd99432072b90d1e74bcc03fc7f711736995"
+        },
+        {
+            "old": "checks/low/jobs/307.1/solver.stderr",
+            "new": "checks/low_v2/jobs/307.1/solver.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/307.1/solver.stdout",
+            "new": "checks/low_v2/jobs/307.1/solver.stdout",
+            "bytes": 4077,
+            "sha256": "b17d745038dd6a0d98c7cd49e7849f8aa9f40b21652508fec0907a23087327b1"
+        },
+        {
+            "old": "checks/low/jobs/307.1/stars.stderr",
+            "new": "checks/low_v2/jobs/307.1/stars.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/jobs/307.1/stars.txt",
+            "new": "checks/low_v2/jobs/307.1/stars.txt",
+            "bytes": 6006,
+            "sha256": "947092e57c829120e9b5f3182e98a50c9254cc32182b22c947b5065279cf54ca"
+        },
+        {
+            "old": "checks/low/jobs_manifest.json",
+            "new": "checks/low_v2/jobs_manifest.json",
+            "bytes": 87551,
+            "sha256": "f70ec397f5744bd82b1f2efa2e366b48e02e2cbf88bbdd2d3f1da0371c148fac"
+        },
+        {
+            "old": "checks/low/low_setup_v1.py",
+            "new": "checks/low_v2/low_setup_v1.py",
+            "bytes": 2382,
+            "sha256": "80f75e18413d615b55f78603d0fb85bc744fb27d97b5345f4bbfa603b8a1d72b"
+        },
+        {
+            "old": "checks/low/make_low_manifest_v1.py",
+            "new": "checks/low_v2/make_low_manifest_v1.py",
+            "bytes": 2007,
+            "sha256": "f076d2319c870ec0733510cbc72551b4a0106be495dd0f2ebfda49850b0bb913"
+        },
+        {
+            "old": "checks/low/METHOD_v1.md",
+            "new": "checks/low_v2/METHOD_v1.md",
+            "bytes": 3860,
+            "sha256": "4bc2e1d8149a65470107b39a466d4d8ee96f9817a3bbd708712ff38f64c79775"
+        },
+        {
+            "old": "checks/low/pair_controls.stderr",
+            "new": "checks/low_v2/pair_controls.stderr",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "old": "checks/low/pair_controls.stdout",
+            "new": "checks/low_v2/pair_controls.stdout",
+            "bytes": 10116,
+            "sha256": "7e2ab3ed92db8232a48602e80487a2e60b140ffeb1bd5c3a45b1a197dec87768"
+        },
+        {
+            "old": "checks/low/pair_controls_input.txt",
+            "new": "checks/low_v2/pair_controls_input.txt",
+            "bytes": 103918,
+            "sha256": "66e936ee658737e15879a095ab0b48e1f9e3b38b598acbd5366795911dacd94c"
+        },
+        {
+            "old": "checks/low/pair_controls_result.json",
+            "new": "checks/low_v2/pair_controls_result.json",
+            "bytes": 879,
+            "sha256": "ecf623ffce24178f01a46654f3fe121f810d97245740e9774719ff1a695b7c58"
+        },
+        {
+            "old": "checks/low/pair_probe_v1.cpp",
+            "new": "checks/low_v2/pair_probe_v1.cpp",
+            "bytes": 714,
+            "sha256": "026f731efd599038df9ea1379c0699bb97d1fb6fa1637d0497b20c0b88eb6505"
+        },
+        {
+            "old": "checks/low/pair_probe_v1_checked",
+            "new": "checks/low_v2/pair_probe_v1_checked",
+            "bytes": 244696,
+            "sha256": "397748946aed3e323be5124c6380a7ad9fcea7bc146582f5675e00304ed4ce83"
+        },
+        {
+            "old": "checks/low/residual_gram_v1.cpp",
+            "new": "checks/low_v2/residual_gram_v1.cpp",
+            "bytes": 15049,
+            "sha256": "706eea083f47304a82fdb867352eb4ee0be7de69b697ee9d6f7342a444a95939"
+        },
+        {
+            "old": "checks/low/residual_gram_v1_checked",
+            "new": "checks/low_v2/residual_gram_v1_checked",
+            "bytes": 230160,
+            "sha256": "fae1a635dcb385a8d5bbfa7587b8a7ae06814fe77d5297c12f6c16d473bdb55a"
+        },
+        {
+            "old": "checks/low/resource_before_build.json",
+            "new": "checks/low_v2/resource_before_build.json",
+            "bytes": 4253,
+            "sha256": "b5660a269b5b7e0bbf4205948d70d61b6dad8bf7f0f5b6bc69730858b4158eb1"
+        },
+        {
+            "old": "checks/low/resource_pair_controls.json",
+            "new": "checks/low_v2/resource_pair_controls.json",
+            "bytes": 4014,
+            "sha256": "282c47a558d547c3425750a10a1f34e3ce80cba3f2a44058ade61865a8b6a505"
+        },
+        {
+            "old": "checks/low/run_low_controller_v1.py",
+            "new": "checks/low_v2/run_low_controller_v1.py",
+            "bytes": 4218,
+            "sha256": "294137cb0d4c19493a13540229c88b30cb5ed941cacbc7ebfca8b127c555e939"
+        },
+        {
+            "old": "checks/low/run_low_controller_v2.py",
+            "new": "checks/low_v2/run_low_controller_v2.py",
+            "bytes": 4431,
+            "sha256": "0db7938ae2bb57bae98dde1e0b8c7c324f4adba8646314eec3176a8ad5bc69ef"
+        },
+        {
+            "old": "checks/low/run_one_low_v1.py",
+            "new": "checks/low_v2/run_one_low_v1.py",
+            "bytes": 5268,
+            "sha256": "928e3b7ccf548c9f71a75ae1e1e3cb274fd1b6d27402ee2c150c80b8de066a0d"
+        },
+        {
+            "old": "checks/low/S3_AUDIT_README_v1.txt",
+            "new": "checks/low_v2/S3_AUDIT_README_v1.txt",
+            "bytes": 1821,
+            "sha256": "7d005db9c0bf7dd5b704200dcbac6f73eebff005fc17299c17be94d36760354f"
+        },
+        {
+            "old": "checks/low/star_counts_own.json",
+            "new": "checks/low_v2/star_counts_own.json",
+            "bytes": 96519,
+            "sha256": "8c9f896300faf9d410c152567784837767618a3b6095fcd2cc2fda9c162825a0"
+        },
+        {
+            "old": "checks/low/star_dump.cpp",
+            "new": "checks/low_v2/star_dump.cpp",
+            "bytes": 1346,
+            "sha256": "de655e0c1cdf1a7b6764d8fe7ea78602e4f13f8fd913ff3ca121c1232445ae64"
+        },
+        {
+            "old": "checks/low/star_dump_checked",
+            "new": "checks/low_v2/star_dump_checked",
+            "bytes": 39592,
+            "sha256": "9c7dab35e32f9bfad173a5e55ecf1a2c7520a730ff9fcd15c5e3d35bed2e55aa"
+        },
+        {
+            "old": "checks/low/test_low_auditor_v2.py",
+            "new": "checks/low_v2/test_low_auditor_v2.py",
+            "bytes": 3640,
+            "sha256": "13956ca450f05f069ae0986c7f08290765c12b4eb2ecaf53296cc9d5166fe08c"
+        },
+        {
+            "old": "checks/low/test_low_auditor_v3.py",
+            "new": "checks/low_v2/test_low_auditor_v3.py",
+            "bytes": 3492,
+            "sha256": "567a6f2bcb69349098471c9f8d405cca2babfbc2777e0ecaa256fbf167e50568"
+        },
+        {
+            "old": "checks/low/validate_gram_v1.py",
+            "new": "checks/low_v2/validate_gram_v1.py",
+            "bytes": 4627,
+            "sha256": "334e7db21911bad257780fc07a07890725197758606865bb774f4fc53880366c"
+        },
+        {
+            "old": "checks/low/validate_pairs_v1.py",
+            "new": "checks/low_v2/validate_pairs_v1.py",
+            "bytes": 5269,
+            "sha256": "05ae50908dfc70ae67d1a2b996d1de385d6901da85d1dc76247424aefea3539b"
+        }
+    ]
+}

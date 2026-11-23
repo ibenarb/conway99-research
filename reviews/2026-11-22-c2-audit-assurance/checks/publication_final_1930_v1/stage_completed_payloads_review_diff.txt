@@ -1,0 +1,52 @@
+--- previous
++++ final
+@@ -23,13 +23,18 @@
+     assert released['bytes_preserved'] and released['released_bytes'] == 32139272868
+     assert not (ROOT / 'review/C2_Fall77_Abschluss_20261107_Vollstaendig.zip').exists()
+     controller = json.loads((BASE / 'recovery_v1/controller_identity_v1.json').read_text())
+-    resource = measure([controller['identity']])
+-    assert live(controller['identity'])
++    assert not live(controller['identity'])
++    assert sha(BASE / 'recovery_v1/finished.json') == '06c6c6990ecf1808ef4aa528195c25d2576650fd12d4815441951208911f8fb5'
++    assert (BASE / 'recovery_v1/finished.json').read_bytes() == (BASE / 'recovery_v1/progress.json').read_bytes()
++    accepted = json.loads((OUT / 'final_s1_acceptance_v1.json').read_text())
++    assert accepted['status'] == 'FULL_S1_COVERAGE_AND_FINAL_REPORT_INDEPENDENTLY_ACCEPTED'
++    assert accepted['singleton']['audited'] == 3308 and accepted['singleton']['full_S1_complete']
++    resource = measure([])
+     assert max(x['system_busy_cpu'] for x in resource['intervals']) + 1 <= 20
+     assert resource['ram_free_gib'] >= 10
+     groups = [
+         ('high_v1', 'high', 'audit_complete_1820_v2.json', 'passed', 'id'),
+-        ('singleton_v2', 'singleton_v2', 'audit_snapshot_1744_v1.json', 'checked', 'chart')
++        ('singleton_v2', 'singleton_v2', 'audit_complete_1900_v1.json', 'checked', 'chart')
+     ]
+     items = []
+     snapshots = []
+@@ -39,6 +44,9 @@
+         audit = json.loads((source / audit_name).read_text())
+         assert audit['status'] in ('COMPLETE_S2_LEDGER_AND_READBACK_PASS', 'SINGLETON_EVIDENCE_SNAPSHOT_PASS')
+         assert not audit.get('failures', [])
++        if source_folder == 'singleton_v2':
++            assert audit['full_S1_coverage'] and audit['audited_closed'] == 3308 and audit['remaining'] == 0
++            assert sha(source / audit_name) == accepted['singleton']['audit_sha256']
+         snapshots.append(dict(source_folder=source_folder, cases=len(audit[row_key]), audit=audit_name, sha256=sha(source / audit_name)))
+         items.append((source / audit_name, destination / audit_name))
+         for row in audit[row_key]:
+@@ -59,7 +67,7 @@
+         digest = sha(source)
+         if not destination.exists():
+             destination.parent.mkdir(parents=True, exist_ok=True)
+-            temporary = destination.with_name(destination.name + '.staging_1833')
++            temporary = destination.with_name(destination.name + '.staging_1930')
+             assert not temporary.exists()
+             shutil.copy2(source, temporary)
+             assert sha(temporary) == digest and temporary.stat().st_size == before.st_size
+@@ -70,7 +78,7 @@
+         assert (before.st_size, before.st_mtime_ns) == (after.st_size, after.st_mtime_ns)
+         checked.append(destination.relative_to(CHECKS).as_posix())
+     result = dict(at_utc=datetime.now(timezone.utc).isoformat(), status='AUDITED_SNAPSHOT_PAYLOADS_COPIED_AND_FULL_READBACK_PASS', source_sha256=sha(Path(__file__)), resource=resource, snapshots=snapshots, all_selected_files_checked=len(checked), new_files=len(added), new_bytes=new_bytes, added=added, no_new_search_or_mathematical_predicate_claim=True, copies_not_hardlinks=True)
+-    target = OUT / 'payload_staging_complete_1833_v1.json'
++    target = OUT / 'payload_staging_complete_1930_v1.json'
+     with target.open('x', encoding='utf-8') as stream:
+         json.dump(result, stream, indent=4)
+     print(json.dumps({k: result[k] for k in ('status', 'snapshots', 'all_selected_files_checked', 'new_files', 'new_bytes')}), flush=True)

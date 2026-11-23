@@ -1,0 +1,32 @@
+{
+    "status": "ONE_POSITIVE_FOUR_NEGATIVE_CONTROLS_PASS",
+    "records": [
+        {
+            "control": "positive",
+            "accepted": true,
+            "exception": null
+        },
+        {
+            "control": "wrong_key",
+            "accepted": false,
+            "exception": "AssertionError"
+        },
+        {
+            "control": "truncated_gzip",
+            "accepted": false,
+            "exception": "EOFError"
+        },
+        {
+            "control": "missing_summary",
+            "accepted": false,
+            "exception": "AssertionError"
+        },
+        {
+            "control": "open_summary",
+            "accepted": false,
+            "exception": "AssertionError"
+        }
+    ],
+    "audit_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+    "note": "Separate disposable fixtures only; actual evidence and live code untouched. v1 rejected valid summary suffixes; v2 accepts diagnostic fields and still rejects incomplete or open summaries."
+}

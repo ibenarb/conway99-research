@@ -1,0 +1,333 @@
+{
+    "at_utc": "2026-11-23T00:39:48.748999+00:00",
+    "resource": {
+        "error": "OSError(22, 'Falscher Parameter.', None, 87)"
+    },
+    "identities": {
+        "high": {
+            "error": "OSError(22, 'Falscher Parameter.', None, 87)",
+            "expected": {
+                "pid": 67304,
+                "created": 134398505069841988,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        },
+        "low": {
+            "error": "OSError(22, 'Falscher Parameter.', None, 87)",
+            "expected": {
+                "pid": 59900,
+                "created": 134398532958419938,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        },
+        "singleton": {
+            "error": "OSError(22, 'Falscher Parameter.', None, 87)",
+            "expected": {
+                "pid": 94700,
+                "created": 134398548590146259,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        },
+        "retry": {
+            "error": "OSError(22, 'Falscher Parameter.', None, 87)",
+            "expected": {
+                "pid": 54468,
+                "created": 134398552004565595,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        }
+    },
+    "queues": {
+        "high": {
+            "status": "RUNNING",
+            "updated": 1795394233.6488287,
+            "closed": 757,
+            "active": {
+                "1458.0.0": 20616,
+                "1458.1.0": 75076
+            },
+            "pending": 2397,
+            "admission_open": true,
+            "failures": []
+        },
+        "low": {
+            "status": "RUNNING",
+            "updated": 1795394238.9340234,
+            "closed": 18,
+            "active": {
+                "333.1": {
+                    "pid": 10360,
+                    "identity": {
+                        "pid": 10360,
+                        "created": 134398558326945140,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                },
+                "333.0": {
+                    "pid": 91316,
+                    "identity": {
+                        "pid": 91316,
+                        "created": 134398558749277471,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                }
+            },
+            "pending": 72,
+            "admission_open": true,
+            "failures": []
+        },
+        "singleton": {
+            "status": "RUNNING",
+            "updated": 1795394244.535071,
+            "closed": 343,
+            "active": {
+                "385": {
+                    "pid": 39652,
+                    "identity": {
+                        "pid": 39652,
+                        "created": 134398677991934134,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                },
+                "386": {
+                    "pid": 71076,
+                    "identity": {
+                        "pid": 71076,
+                        "created": 134398678082809646,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                }
+            },
+            "pending": 2953,
+            "admission_open": true,
+            "failures": [
+                {
+                    "chart": 12,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 202,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 337,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 338,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 339,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 340,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 349,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 351,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 364,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                },
+                {
+                    "chart": 382,
+                    "exit_code": 1,
+                    "status": "MISSING_RESULT"
+                }
+            ]
+        }
+    },
+    "retry": {
+        "status": "MONITORING_RESOURCE_REFUSALS",
+        "updated": 1795394238.8689654,
+        "resource": {
+            "measured_at": 1527776.984,
+            "foreign_samples": [
+                7.121065465330814,
+                7.161460820165802
+            ],
+            "legacy_allocation_unknown": true,
+            "legacy_reserved_slots": 0,
+            "ram_free_gib": 31.71117401123047,
+            "disk_free_gib": 36.481346130371094,
+            "intervals": [
+                {
+                    "seconds": 2.0164643998723477,
+                    "system_busy_cpu": 9.716883670864897,
+                    "system_idle_cpu": 14.319618041274586,
+                    "known_c2_cpu": 2.5958182055340835,
+                    "conservative_other_cpu": 7.121065465330814,
+                    "named_other_load": [
+                        {
+                            "pid": 88612,
+                            "created": 134396521421769916,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 1.0073324379684503
+                        },
+                        {
+                            "pid": 75076,
+                            "created": 134398678336448656,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 1.0073324379684503
+                        },
+                        {
+                            "pid": 59900,
+                            "created": 134398532958419938,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 0.015497422122591543
+                        }
+                    ]
+                },
+                {
+                    "seconds": 2.015999299939722,
+                    "system_busy_cpu": 9.285097470301547,
+                    "system_idle_cpu": 14.756949568826498,
+                    "known_c2_cpu": 2.123636650135746,
+                    "conservative_other_cpu": 7.161460820165802,
+                    "named_other_load": [
+                        {
+                            "pid": 88612,
+                            "created": 134396521421769916,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 0.9998143352828878
+                        },
+                        {
+                            "pid": 75076,
+                            "created": 134398678336448656,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 0.9998143352828878
+                        },
+                        {
+                            "pid": 12068,
+                            "created": 134383400417240469,
+                            "name": "explorer.exe",
+                            "logical_cpu_equivalents": 0.015500997446246322
+                        },
+                        {
+                            "pid": 9328,
+                            "created": 134383400562149780,
+                            "name": "Everything.exe",
+                            "logical_cpu_equivalents": 0.015500997446246322
+                        },
+                        {
+                            "pid": 94364,
+                            "created": 134398581820847470,
+                            "name": "brave.exe",
+                            "logical_cpu_equivalents": 0.015500997446246322
+                        }
+                    ]
+                }
+            ],
+            "legacy_before": {
+                "roots": [
+                    {
+                        "pid": 88520,
+                        "created": 134394874836427612,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                ],
+                "unknown": true,
+                "slots": 0,
+                "reason": "E028 has automatic later parallel phases without shared reservations",
+                "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+            },
+            "legacy_after": {
+                "roots": [
+                    {
+                        "pid": 88520,
+                        "created": 134394874836427612,
+                        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                    }
+                ],
+                "unknown": true,
+                "slots": 0,
+                "reason": "E028 has automatic later parallel phases without shared reservations",
+                "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+            },
+            "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+        },
+        "attempted": [
+            12,
+            202,
+            337,
+            338,
+            339,
+            340,
+            349,
+            351,
+            364,
+            382
+        ],
+        "results": [
+            {
+                "chart": 12,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 202,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 337,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 338,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 339,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 340,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 349,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 351,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 364,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            },
+            {
+                "chart": 382,
+                "exit_code": 0,
+                "status": "SECOND_SINGLETON_SOLVER_CLOSED"
+            }
+        ],
+        "active": null,
+        "main_status": "RUNNING"
+    }
+}

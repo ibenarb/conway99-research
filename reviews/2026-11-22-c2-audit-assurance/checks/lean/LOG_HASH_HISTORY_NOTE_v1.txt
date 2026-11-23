@@ -1,0 +1,34 @@
+Historical C3 log checksum follow-up — 22 November 2026
+
+Pinned revision: 9678dec98108003359cde7b404d57a6e09dd865c.
+This supplements audit_v2.json; it does not replace a fresh Lean build.
+
+GitHub commit history contains five commits from the initial laboratory
+upload to the pinned revision. The exact API records are preserved in
+log_history_evidence_v1.json.
+
+The four comparator/con-leche/challenge logs were introduced in
+67ca6c5f7f8ca57f9634967877868239d5c9e71b. The comparison from that commit to
+the pinned revision contains no modification of those four files or of
+lean_install.log. Their manifest expectations are unchanged since 67ca6c5.
+Therefore all four discrepancies were already present when those logs were
+first committed; they are not caused by a later change on that Git history.
+
+lean_install.log was already in the initial upload
+8f19b6da5facb26cff177df586974fef00dc2398. Neither subsequent comparison
+modifies it. The initial SHA256SUMS already expects
+6dc9f5dff7dcde4bff182e1dd9aad970c5f396960f6b8778368f0205139edfa4,
+the same expectation that fails at the pin. Its discrepancy likewise
+predates any later Git revision.
+
+The previous byte audit matched the pinned Git blobs and excluded simple
+LF/CRLF, BOM and several encoding/newline explanations. All Lean proof
+source entries and the archived GitHub Actions log match their manifest.
+
+Supported conclusion: the five mismatches originate in the committed
+historical evidence/manifest pairs, not in our download or subsequent
+repository edits. The pre-commit cause (for example an outdated manifest
+or changed log content) cannot be distinguished from these records.
+Do not claim the cause has been identified or regenerate the author's
+manifest in place. No email or issue post was made about this follow-up.
+A fresh local kernel/comparator check is still a separate outstanding task.

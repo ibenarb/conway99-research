@@ -1,0 +1,104 @@
+{
+    "resource": {
+        "measured_at": 1522279.421,
+        "foreign_samples": [
+            6.3127914390166175,
+            6.140989612865515
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 19.37874984741211,
+        "disk_free_gib": 35.290489196777344,
+        "intervals": [
+            {
+                "seconds": 2.01723359990865,
+                "system_busy_cpu": 12.43968472522784,
+                "system_idle_cpu": 11.54117698666842,
+                "known_c2_cpu": 6.126893286211223,
+                "conservative_other_cpu": 6.3127914390166175,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9992025713290108
+                    },
+                    {
+                        "pid": 37636,
+                        "created": 134398622971969021,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9992025713290108
+                    },
+                    {
+                        "pid": 40368,
+                        "created": 134398623269706370,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9992025713290108
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.015491512733783113
+                    }
+                ]
+            },
+            {
+                "seconds": 2.017691900022328,
+                "system_busy_cpu": 12.196795258843865,
+                "system_idle_cpu": 11.902523373233665,
+                "known_c2_cpu": 6.05580564597835,
+                "conservative_other_cpu": 6.140989612865515,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0067196086664778
+                    },
+                    {
+                        "pid": 37636,
+                        "created": 134398622971969021,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.0067196086664778
+                    },
+                    {
+                        "pid": 40368,
+                        "created": 134398623269706370,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0067196086664778
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "exit_code": 0,
+    "files": 16
+}

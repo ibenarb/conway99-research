@@ -1,0 +1,146 @@
+{
+    "resource": {
+        "measured_at": 1520189.89,
+        "foreign_samples": [
+            7.838859906110855,
+            6.720563978836408
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 16.109878540039062,
+        "disk_free_gib": 35.65903854370117,
+        "intervals": [
+            {
+                "seconds": 2.0211803999263793,
+                "system_busy_cpu": 15.840063064715132,
+                "system_idle_cpu": 8.117162624671005,
+                "known_c2_cpu": 8.001203158604277,
+                "conservative_other_cpu": 7.838859906110855,
+                "named_other_load": [
+                    {
+                        "pid": 57148,
+                        "created": 134398602324035525,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9972514081738663
+                    },
+                    {
+                        "pid": 19600,
+                        "created": 134383400654690495,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.20872703892011155
+                    },
+                    {
+                        "pid": 23408,
+                        "created": 134398602414776760,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.10049820392449815
+                    },
+                    {
+                        "pid": 67148,
+                        "created": 134398601971357483,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.0541144174978067
+                    },
+                    {
+                        "pid": 19912,
+                        "created": 134383400662285126,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.023191893213345728
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015461262142230484
+                    },
+                    {
+                        "pid": 67304,
+                        "created": 134398505069841988,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015461262142230484
+                    },
+                    {
+                        "pid": 94700,
+                        "created": 134398548590146259,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015461262142230484
+                    },
+                    {
+                        "pid": 54468,
+                        "created": 134398552004565595,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015461262142230484
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0180598001461476,
+                "system_busy_cpu": 14.86576363982247,
+                "system_idle_cpu": 9.105280229391262,
+                "known_c2_cpu": 8.145199660986062,
+                "conservative_other_cpu": 6.720563978836408,
+                "named_other_load": [
+                    {
+                        "pid": 57148,
+                        "created": 134398602324035525,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.42584218759908116
+                    },
+                    {
+                        "pid": 96192,
+                        "created": 134398601553879679,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.09291102274889043
+                    },
+                    {
+                        "pid": 24248,
+                        "created": 134398583465083470,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.06968326706166783
+                    },
+                    {
+                        "pid": 1144,
+                        "created": 134398602428104994,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.023227755687222608
+                    },
+                    {
+                        "pid": 91932,
+                        "created": 134398602427343018,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.015485170458148406
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "exit_code": 0,
+    "files": 16
+}

@@ -1,0 +1,1422 @@
+{
+    "status": "ALL_146_TOUCHED_FILES_FULL_READBACK_PASS_ALLOCATION_GUARD_INCIDENT",
+    "at_utc": "2026-11-22T23:49:15.537795+00:00",
+    "resource": {
+        "measured_at": 1524893.25,
+        "foreign_samples": [
+            5.069359754834329,
+            5.085448896759031
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 15.511726379394531,
+        "disk_free_gib": 35.266151428222656,
+        "intervals": [
+            {
+                "seconds": 2.0157871001865715,
+                "system_busy_cpu": 13.084219061407257,
+                "system_idle_cpu": 10.844089139163954,
+                "known_c2_cpu": 8.014859306572928,
+                "conservative_other_cpu": 5.069359754834329,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9999195846691565
+                    },
+                    {
+                        "pid": 73388,
+                        "created": 134398649510869051,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9766656408396412
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0216995999217033,
+                "system_busy_cpu": 13.200526923502165,
+                "system_idle_cpu": 10.781460806958735,
+                "known_c2_cpu": 8.115078026743134,
+                "conservative_other_cpu": 5.085448896759031,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9969953004284422
+                    },
+                    {
+                        "pid": 73388,
+                        "created": 134398649510869051,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9969953004284422
+                    },
+                    {
+                        "pid": 19272,
+                        "created": 134383400639509126,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.015457291479510731
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "records": [
+        {
+            "file": "bin/leanchecker-paranoid",
+            "before_allocated": 3981312,
+            "after_allocated": 2830336,
+            "sha256": "ccd20c9ba4ad795e0969b9cd2dc386e58e4d885f7dcde6ce9d32101634ccb744",
+            "bytes": 8816160,
+            "mtime_ns": 1795377775450997200,
+            "saved_bytes": 1150976
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Lemmas.olean.private",
+            "before_allocated": 3293184,
+            "after_allocated": 2564096,
+            "sha256": "5d73147c4fd0c322cd6dbeda96dd1da73582304ba809cfba7808511e55164174",
+            "bytes": 8703184,
+            "mtime_ns": 1795377758389347800,
+            "saved_bytes": 729088
+        },
+        {
+            "file": "lib/lean/Std/Data/Internal/List/Associative.olean.private",
+            "before_allocated": 2940928,
+            "after_allocated": 2387968,
+            "sha256": "6335f881e0a96872fbefd59b220b4bafd16c790fb201bf6876f9601b125042e2",
+            "bytes": 7403744,
+            "mtime_ns": 1795377758789125900,
+            "saved_bytes": 552960
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/FunInd.olean.private",
+            "before_allocated": 2457600,
+            "after_allocated": 1740800,
+            "sha256": "d4a3266a97977eda3b69f761e73073fc68cace5cdf74ea8fa87517368e51c3af",
+            "bytes": 7160576,
+            "mtime_ns": 1795377772622228000,
+            "saved_bytes": 716800
+        },
+        {
+            "file": "lib/lean/Init/Data/Array/Lemmas.olean.private",
+            "before_allocated": 2768896,
+            "after_allocated": 2236416,
+            "sha256": "3695f967945b59c43634cc87283c398221b3bce3b69e735ebc00cbc7e24e5262",
+            "bytes": 7034072,
+            "mtime_ns": 1795377761333935500,
+            "saved_bytes": 532480
+        },
+        {
+            "file": "lib/lean/Lean/Elab/App.olean.private",
+            "before_allocated": 2371584,
+            "after_allocated": 1708032,
+            "sha256": "2df0a39a3dfd3684add27834fbdc97b7d3be84a75ee8d9f2393cedcc5f092c30",
+            "bytes": 6965064,
+            "mtime_ns": 1795377767393665800,
+            "saved_bytes": 663552
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Structure.olean.private",
+            "before_allocated": 2359296,
+            "after_allocated": 1691648,
+            "sha256": "3098339f398b13049e111d5033d006d77dc222f783283c0f3ea34e3fbf9eddbb",
+            "bytes": 6847728,
+            "mtime_ns": 1795377769403725100,
+            "saved_bytes": 667648
+        },
+        {
+            "file": "lib/lean/Lean/Elab/MutualDef.olean.private",
+            "before_allocated": 2375680,
+            "after_allocated": 1699840,
+            "sha256": "c1dc1aa14a9ee0c18cd1f16e4f290a4e7a38a1f76c8854ecb3622bfbc250a7fe",
+            "bytes": 6800464,
+            "mtime_ns": 1795377767359130900,
+            "saved_bytes": 675840
+        },
+        {
+            "file": "lib/lean/Lean/Elab/DocString.olean.private",
+            "before_allocated": 2232320,
+            "after_allocated": 1617920,
+            "sha256": "e333a3ca517c62bc46cdeb2d4fd338d8cc45fd07d04ee904dba7e55cf4bd91bd",
+            "bytes": 6542192,
+            "mtime_ns": 1795377767877422400,
+            "saved_bytes": 614400
+        },
+        {
+            "file": "lib/lean/Init/Data/BitVec/Bitblast.olean.private",
+            "before_allocated": 2486272,
+            "after_allocated": 1990656,
+            "sha256": "893269d7da4548b650090c3833d98622aaf823f992ed404379611694fe18371c",
+            "bytes": 6433728,
+            "mtime_ns": 1795377762439294700,
+            "saved_bytes": 495616
+        },
+        {
+            "file": "lib/lean/Lean/Elab/DocString/Builtin.olean.private",
+            "before_allocated": 2187264,
+            "after_allocated": 1572864,
+            "sha256": "40752b8a9dc44272fe635212743865a75db6519759b28be7fd45284b2ac1b7b2",
+            "bytes": 6362552,
+            "mtime_ns": 1795377769303933100,
+            "saved_bytes": 614400
+        },
+        {
+            "file": "lib/lean/Lean/Elab/MutualInductive.olean.private",
+            "before_allocated": 2224128,
+            "after_allocated": 1601536,
+            "sha256": "fbb57a13cf5d24a88cba3e001be746d3793ceb94154b2e63f7b54ad5750e9cb0",
+            "bytes": 6336064,
+            "mtime_ns": 1795377767481043000,
+            "saved_bytes": 622592
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Balancing.olean.private",
+            "before_allocated": 2359296,
+            "after_allocated": 1921024,
+            "sha256": "8da0c2d92246dc3aa46d847fa2a1417316aa184a9538f0ebc4fbba88b7e1d7c1",
+            "bytes": 6154808,
+            "mtime_ns": 1795377758445101400,
+            "saved_bytes": 438272
+        },
+        {
+            "file": "bin/ld.lld",
+            "before_allocated": 2932736,
+            "after_allocated": 2256896,
+            "sha256": "621175cfcf8051bfda72fb921f32a35f7e761a0fdd217d67335dfbf3a2f5d9df",
+            "bytes": 6054672,
+            "mtime_ns": 1795377775485034500,
+            "saved_bytes": 675840
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Model.olean",
+            "before_allocated": 2351104,
+            "after_allocated": 1830912,
+            "sha256": "5b654ad9b538d763ee4d0ba55f5740ffa8ba11ca275a8ae7f428a1b67ffa798e",
+            "bytes": 6007288,
+            "mtime_ns": 1795377758346504500,
+            "saved_bytes": 520192
+        },
+        {
+            "file": "lib/lean/Init/Data/Array/Extract.olean.private",
+            "before_allocated": 2265088,
+            "after_allocated": 1896448,
+            "sha256": "1a11007663e092229c86094371e391e27efc026c57ce4a9a5ee8f8eebd24c6b2",
+            "bytes": 5990016,
+            "mtime_ns": 1795377761405453000,
+            "saved_bytes": 368640
+        },
+        {
+            "file": "lib/lean/Std/Data/DHashMap/Internal/RawLemmas.olean.private",
+            "before_allocated": 2166784,
+            "after_allocated": 1691648,
+            "sha256": "abea04eb3a5b81791445a05e11df509e298e72759be98c69f588a00328b8e47c",
+            "bytes": 5756560,
+            "mtime_ns": 1795377758964756100,
+            "saved_bytes": 475136
+        },
+        {
+            "file": "lib/lean/Lean/Elab/StructInst.olean.private",
+            "before_allocated": 1900544,
+            "after_allocated": 1413120,
+            "sha256": "7c1f4ec76906bb52c36703031919af64af9ab1884ba206c83c3f8e59ad68afe3",
+            "bytes": 5506376,
+            "mtime_ns": 1795377767924251200,
+            "saved_bytes": 487424
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Command.olean.private",
+            "before_allocated": 1789952,
+            "after_allocated": 1277952,
+            "sha256": "11d84a9c9688a1dd20680a8c888b21e60a7eea84c62163a21418e840453ac1f0",
+            "bytes": 5286736,
+            "mtime_ns": 1795377769442666100,
+            "saved_bytes": 512000
+        },
+        {
+            "file": "lib/lean/Lean/Parser/Term.olean.private",
+            "before_allocated": 1650688,
+            "after_allocated": 1142784,
+            "sha256": "f8cc197f139b3451c7471c2f09f8a482f38889f84a86fca8103ad1fe6b96a23a",
+            "bytes": 5282184,
+            "mtime_ns": 1795377773596810600,
+            "saved_bytes": 507904
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Do/Legacy.olean.private",
+            "before_allocated": 1662976,
+            "after_allocated": 1179648,
+            "sha256": "a115340969514ddd58f5080f421c20192de4c34927128e70eddfdfbaab55287f",
+            "bytes": 5143704,
+            "mtime_ns": 1795377767660409600,
+            "saved_bytes": 483328
+        },
+        {
+            "file": "lib/lean/Init/Data/Int/DivMod/Lemmas.olean.private",
+            "before_allocated": 1974272,
+            "after_allocated": 1581056,
+            "sha256": "1d28c67f1136f0dcacd6f9e4bf5bbfde7cbfbf32ee465bca50f78d02cafe1cf7",
+            "bytes": 5053152,
+            "mtime_ns": 1795377763313570900,
+            "saved_bytes": 393216
+        },
+        {
+            "file": "lib/lean/Init/Data/Iterators/Lemmas/Combinators/Monadic/FilterMap.olean.private",
+            "before_allocated": 1961984,
+            "after_allocated": 1589248,
+            "sha256": "5d3403c8af660179a1dfb1b9e4891fc6bd310c198b2f2e6a7c4e639b944f1beb",
+            "bytes": 4977728,
+            "mtime_ns": 1795377763901818200,
+            "saved_bytes": 372736
+        },
+        {
+            "file": "lib/lean/Init/Data/Vector/Extract.olean.private",
+            "before_allocated": 1789952,
+            "after_allocated": 1449984,
+            "sha256": "21ad966bd74ed9768fecdd11d7c45a9abb1f4d859c324e84a63f7ca790fd0f32",
+            "bytes": 4738936,
+            "mtime_ns": 1795377762264781400,
+            "saved_bytes": 339968
+        },
+        {
+            "file": "lib/lean/Lean/PrettyPrinter/Delaborator/Builtins.olean.private",
+            "before_allocated": 1585152,
+            "after_allocated": 1122304,
+            "sha256": "6d77c4c872aca9f7ea67d09e20a6dbe162420afc97ca95d224ce5e04b59e2fda",
+            "bytes": 4669512,
+            "mtime_ns": 1795377766122380600,
+            "saved_bytes": 462848
+        },
+        {
+            "file": "lib/lean/Lake/CLI/Main.olean.private",
+            "before_allocated": 1536000,
+            "after_allocated": 1085440,
+            "sha256": "20c0dfac48b9a45f8318a76d5cd6d3c984f49f4826b3455d700de7e18fc1caa5",
+            "bytes": 4637816,
+            "mtime_ns": 1795377764672523700,
+            "saved_bytes": 450560
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Sym/Simp/EvalGround.olean.private",
+            "before_allocated": 1413120,
+            "after_allocated": 962560,
+            "sha256": "8b80480ffc1770ba1c05fcd5857fdf05a4be8a8348a606b8d60735bb82366a65",
+            "bytes": 4600936,
+            "mtime_ns": 1795377773122229500,
+            "saved_bytes": 450560
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Term/TermElabM.olean.private",
+            "before_allocated": 1593344,
+            "after_allocated": 1146880,
+            "sha256": "793c2e2ed5c91e386557e08cde7a064ef36e966462ba645e9973691ef57b0473",
+            "bytes": 4589920,
+            "mtime_ns": 1795377767270683600,
+            "saved_bytes": 446464
+        },
+        {
+            "file": "lib/lean/Lean/Meta/ExprDefEq.olean.private",
+            "before_allocated": 1527808,
+            "after_allocated": 1089536,
+            "sha256": "3e703f19fa9e5db0fff8cfc51648055b8a502bef78277c3b9a13897524f7a548",
+            "bytes": 4579528,
+            "mtime_ns": 1795377770026835500,
+            "saved_bytes": 438272
+        },
+        {
+            "file": "lib/lean/Init/Data/List/Lemmas.olean.private",
+            "before_allocated": 1830912,
+            "after_allocated": 1474560,
+            "sha256": "41e47a8bb959e975e836c5e92fffb298706db8646868cff5302234f615cc4e4c",
+            "bytes": 4527856,
+            "mtime_ns": 1795377762685603100,
+            "saved_bytes": 356352
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Operations.olean.private",
+            "before_allocated": 1638400,
+            "after_allocated": 1294336,
+            "sha256": "fb4cd44264c33e5a9239c410edc6013407cbc70160bd34d4edbb1b4078a79e16",
+            "bytes": 4459256,
+            "mtime_ns": 1795377758503101700,
+            "saved_bytes": 344064
+        },
+        {
+            "file": "lib/lean/Lake/Build/Module.olean.private",
+            "before_allocated": 1437696,
+            "after_allocated": 1007616,
+            "sha256": "a39e7d407ff305cc5bc478d65ed464683055d2e1ce1dff1fe2761085c728454e",
+            "bytes": 4334816,
+            "mtime_ns": 1795377764581047000,
+            "saved_bytes": 430080
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Try.olean.private",
+            "before_allocated": 1458176,
+            "after_allocated": 1044480,
+            "sha256": "e122bff066522e9cfcdaf0af5454be67202ec916ac4648e0a345b398b8307894",
+            "bytes": 4317512,
+            "mtime_ns": 1795377769196840700,
+            "saved_bytes": 413696
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/LCNF/EmitC.olean.private",
+            "before_allocated": 1400832,
+            "after_allocated": 995328,
+            "sha256": "36c6e5d739e93bad56de04f61fe393807f759f97352a0d2419a73ad9543ac34e",
+            "bytes": 4313904,
+            "mtime_ns": 1795377766445356300,
+            "saved_bytes": 405504
+        },
+        {
+            "file": "lib/lean/Lean/Elab/BuiltinCommand.olean.private",
+            "before_allocated": 1449984,
+            "after_allocated": 1032192,
+            "sha256": "8b04f453bc05e1d368766a6bb64de02e9494644e224885743ebc03a2bcb64107",
+            "bytes": 4260352,
+            "mtime_ns": 1795377769717244200,
+            "saved_bytes": 417792
+        },
+        {
+            "file": "lib/lean/Std/Data/DHashMap/RawLemmas.olean.private",
+            "before_allocated": 1642496,
+            "after_allocated": 1294336,
+            "sha256": "421a46c7e819c1140900f3ae7cd1037f9a30e97b6e8f178842e6227719a84c6c",
+            "bytes": 4232944,
+            "mtime_ns": 1795377758901090800,
+            "saved_bytes": 348160
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/EMatchTheorem.olean.private",
+            "before_allocated": 1437696,
+            "after_allocated": 1040384,
+            "sha256": "9dbdc4f6b973632056b376ff2efc553265e5b0e3639db06589ce992f6de84dc3",
+            "bytes": 4187656,
+            "mtime_ns": 1795377770920986000,
+            "saved_bytes": 397312
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Basic.olean.private",
+            "before_allocated": 1404928,
+            "after_allocated": 1015808,
+            "sha256": "c7e50033b4850d70531aa8f00a4e59bb0b74752fe2290aa63227a3d26379b5e8",
+            "bytes": 4098432,
+            "mtime_ns": 1795377770372291900,
+            "saved_bytes": 389120
+        },
+        {
+            "file": "lib/lean/Init/Data/Vector/Lemmas.olean.private",
+            "before_allocated": 1605632,
+            "after_allocated": 1310720,
+            "sha256": "30e0e45454492514ea96368be6aa72fdc4a86a248aa785dc2795a0d0e56b1859",
+            "bytes": 4054392,
+            "mtime_ns": 1795377762220902000,
+            "saved_bytes": 294912
+        },
+        {
+            "file": "lib/lean/Lean/Parser/Command.olean.private",
+            "before_allocated": 1265664,
+            "after_allocated": 872448,
+            "sha256": "8ed23733a3e066a9494d69baa2f3c3e4ce1e6e5ee46754f3942174d53f0b3559",
+            "bytes": 4053368,
+            "mtime_ns": 1795377773721695800,
+            "saved_bytes": 393216
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Do/VCGen.olean.private",
+            "before_allocated": 1363968,
+            "after_allocated": 962560,
+            "sha256": "5c147027f3f795503be22cf3c27dfe08a658d2175edd616eb8d7ba6fa3789730",
+            "bytes": 4046256,
+            "mtime_ns": 1795377768713070000,
+            "saved_bytes": 401408
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Match.olean.private",
+            "before_allocated": 1396736,
+            "after_allocated": 1003520,
+            "sha256": "6d3b9934321708775b1cb595ba790a1f2305966b33445fa15d0f01be75872003",
+            "bytes": 4044072,
+            "mtime_ns": 1795377767714089000,
+            "saved_bytes": 393216
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/WF/Lemmas.olean.private",
+            "before_allocated": 1589248,
+            "after_allocated": 1261568,
+            "sha256": "bf1942b9d25baa3fdb7a2694b3f25fb23f7d8b21cb7c573b5f398e1e78c5dd98",
+            "bytes": 4032664,
+            "mtime_ns": 1795377758561210200,
+            "saved_bytes": 327680
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Match/Match.olean.private",
+            "before_allocated": 1396736,
+            "after_allocated": 1007616,
+            "sha256": "21fb237d2d30d51145aa9b389b15b4f4fed1945554fab5fb31bf72942c83dedd",
+            "bytes": 3995280,
+            "mtime_ns": 1795377772812665000,
+            "saved_bytes": 389120
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/BuiltinTactic.olean.private",
+            "before_allocated": 1343488,
+            "after_allocated": 950272,
+            "sha256": "40b5554a70f9f06ce4d6cb949574ab08164565edf73a0ebccb8c6bb91a684abe",
+            "bytes": 3964088,
+            "mtime_ns": 1795377769127004400,
+            "saved_bytes": 393216
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Model.olean.private",
+            "before_allocated": 1531904,
+            "after_allocated": 1216512,
+            "sha256": "9f100e4d6b8a2f30a6fc97ea70e94083cd9f99974ee1dabb3773ebe1d7bed805",
+            "bytes": 3908928,
+            "mtime_ns": 1795377758479102900,
+            "saved_bytes": 315392
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Simp.olean.private",
+            "before_allocated": 1298432,
+            "after_allocated": 929792,
+            "sha256": "b2fd531b2d327028da3069c05306459438e8cf34d91864ec0b0b73c0e9942d77",
+            "bytes": 3881384,
+            "mtime_ns": 1795377769160095100,
+            "saved_bytes": 368640
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Types.olean.private",
+            "before_allocated": 1351680,
+            "after_allocated": 987136,
+            "sha256": "f8ca59ca771a0e63c106d76c5d6fdc005d6f46b43195959d5ba691ddfd6b6efc",
+            "bytes": 3851408,
+            "mtime_ns": 1795377770882501900,
+            "saved_bytes": 364544
+        },
+        {
+            "file": "lib/lean/Init/Data/Range/Polymorphic/RangeIterator.olean.private",
+            "before_allocated": 1511424,
+            "after_allocated": 1245184,
+            "sha256": "fe971ffe204b58f542feab34724f986b89a3260dda5bb29d29be873952848a2a",
+            "bytes": 3831240,
+            "mtime_ns": 1795377763631396500,
+            "saved_bytes": 266240
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Quotation.olean.private",
+            "before_allocated": 1282048,
+            "after_allocated": 925696,
+            "sha256": "86e408d6424be7a566f405ba7d86583f34e7f8fb48d02885a45438cbe1b34289",
+            "bytes": 3805200,
+            "mtime_ns": 1795377767114002800,
+            "saved_bytes": 356352
+        },
+        {
+            "file": "lib/lean/Init/Data/UInt/Lemmas.olean.private",
+            "before_allocated": 1363968,
+            "after_allocated": 1036288,
+            "sha256": "55564010f94708e5f51296f5ee6c05bdccb7bc42f02638510f2146272c1b22d9",
+            "bytes": 3802536,
+            "mtime_ns": 1795377761718265400,
+            "saved_bytes": 327680
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/BVDecide/Normalize/Simproc.olean.private",
+            "before_allocated": 1171456,
+            "after_allocated": 806912,
+            "sha256": "3ee7a1514142482609a4bcb5cf21c4c5dcc03eeb5ead29aa46bfe700a23686cb",
+            "bytes": 3730816,
+            "mtime_ns": 1795377770698808300,
+            "saved_bytes": 364544
+        },
+        {
+            "file": "lib/lean/Lake/Load/Toml.olean.private",
+            "before_allocated": 1224704,
+            "after_allocated": 864256,
+            "sha256": "ff07ac55fc5082db82ecb8523d5689dd824d4ab2ae79003769fad9a13a92d2e6",
+            "bytes": 3677944,
+            "mtime_ns": 1795377764377607000,
+            "saved_bytes": 360448
+        },
+        {
+            "file": "lib/lean/Lean/Server/Watchdog.olean.private",
+            "before_allocated": 1249280,
+            "after_allocated": 901120,
+            "sha256": "4e7386bbd915fdcef917b3f8ceb0f4c1c6181fe3c8574c47979f1e609c5e1b98",
+            "bytes": 3656112,
+            "mtime_ns": 1795377765437194200,
+            "saved_bytes": 348160
+        },
+        {
+            "file": "bin/con-ron",
+            "before_allocated": 1609728,
+            "after_allocated": 1224704,
+            "sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+            "bytes": 3649920,
+            "mtime_ns": 1795377775410997300,
+            "saved_bytes": 385024
+        },
+        {
+            "file": "lib/lean/Lean/Environment.olean.private",
+            "before_allocated": 1269760,
+            "after_allocated": 933888,
+            "sha256": "540bacefecdae7cd873ecf53366fdafd1ce7c4668cb1842e6443cbb29e3edff9",
+            "bytes": 3602304,
+            "mtime_ns": 1795377766218009200,
+            "saved_bytes": 335872
+        },
+        {
+            "file": "lib/lean/Init/Prelude.olean",
+            "before_allocated": 1253376,
+            "after_allocated": 925696,
+            "sha256": "1ee5b181e2770acc3debd68ca91b587d8a1bcdd4f4c5ef8130978002aad5a103",
+            "bytes": 3440568,
+            "mtime_ns": 1795377761109064600,
+            "saved_bytes": 327680
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/EMatch.olean.private",
+            "before_allocated": 1191936,
+            "after_allocated": 868352,
+            "sha256": "450ba07b6efbee912cd71a950737a5e83e525b0f2f3b8e7a9e5a57309c3386ee",
+            "bytes": 3438728,
+            "mtime_ns": 1795377771950098100,
+            "saved_bytes": 323584
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Induction.olean.private",
+            "before_allocated": 1191936,
+            "after_allocated": 851968,
+            "sha256": "2ce5cf5486fa608cdd4f09e1ede3eff22fc6f1f37094411f44e25a5a1a038b17",
+            "bytes": 3432064,
+            "mtime_ns": 1795377768638889900,
+            "saved_bytes": 339968
+        },
+        {
+            "file": "lib/lean/Lean/Server/Test/Runner.olean.private",
+            "before_allocated": 1167360,
+            "after_allocated": 839680,
+            "sha256": "c2894ed4928e310adfb50b8ecb8461ad1495fcb7ecb274a7cc7f683c03c45f56",
+            "bytes": 3427824,
+            "mtime_ns": 1795377765565385200,
+            "saved_bytes": 327680
+        },
+        {
+            "file": "lib/lean/Init/Data/Range/Polymorphic/Lemmas.olean.private",
+            "before_allocated": 1351680,
+            "after_allocated": 1097728,
+            "sha256": "6f856941deb3a6200258eb1273ac47e25f5e9bbdf63911fd45886d8096790e1b",
+            "bytes": 3406352,
+            "mtime_ns": 1795377763467158000,
+            "saved_bytes": 253952
+        },
+        {
+            "file": "lib/lean/Init/Data/SInt/Lemmas.olean.private",
+            "before_allocated": 1277952,
+            "after_allocated": 1003520,
+            "sha256": "92858c927c372884ee30b44ef8b70c52e7940ec8f5033134bb3db3988b970950",
+            "bytes": 3357376,
+            "mtime_ns": 1795377762145107400,
+            "saved_bytes": 274432
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Sym/DSimp/EvalGround.olean.private",
+            "before_allocated": 1024000,
+            "after_allocated": 700416,
+            "sha256": "7e50740cfab0d7c7d167a049589ab6ea76bed47d3b4cd3a532afce11433606f3",
+            "bytes": 3356064,
+            "mtime_ns": 1795377773242755100,
+            "saved_bytes": 323584
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/Cutsat/Proof.olean.private",
+            "before_allocated": 1069056,
+            "after_allocated": 761856,
+            "sha256": "f8022447b907bf6206c11f650b505b852fa37af81f20ed31045fe7ac6f138144",
+            "bytes": 3261808,
+            "mtime_ns": 1795377771498114100,
+            "saved_bytes": 307200
+        },
+        {
+            "file": "lib/lean/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Impl/Expr.olean.private",
+            "before_allocated": 1179648,
+            "after_allocated": 888832,
+            "sha256": "f0d0d4dc9ce97723b118391f6dd292249af1e271998adb1dd27ccc314dbc21e4",
+            "bytes": 3215976,
+            "mtime_ns": 1795377757783659900,
+            "saved_bytes": 290816
+        },
+        {
+            "file": "lib/lean/Std/Tactic/BVDecide/Bitblast/BVExpr/Circuit/Lemmas/Expr.olean.private",
+            "before_allocated": 1245184,
+            "after_allocated": 983040,
+            "sha256": "5b96154b956d325bcacc538ee0f45b440f5fd4e342217373a23d78eb6d6ea27e",
+            "bytes": 3177160,
+            "mtime_ns": 1795377757621795900,
+            "saved_bytes": 262144
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Omega/Frontend.olean.private",
+            "before_allocated": 1056768,
+            "after_allocated": 749568,
+            "sha256": "fb55b1d33050b3ff9058e8f8351325483b698c9a3ecb862e2510a8e604c60611",
+            "bytes": 3145496,
+            "mtime_ns": 1795377768507438200,
+            "saved_bytes": 307200
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Lemmas.olean",
+            "before_allocated": 1159168,
+            "after_allocated": 856064,
+            "sha256": "0a8998cfb042d518b4fb13290298854fc9b4b073dd161ffc242d25b64fdc1d6f",
+            "bytes": 3145160,
+            "mtime_ns": 1795377758519146700,
+            "saved_bytes": 303104
+        },
+        {
+            "file": "lib/lean/Init/Data/String/Lemmas/Pattern/String/ForwardSearcher.olean.private",
+            "before_allocated": 1224704,
+            "after_allocated": 974848,
+            "sha256": "04922bd107d886e6120d5a66a011e8b4c7b970e7e68440ae3e8bbaabb5053ee7",
+            "bytes": 3125528,
+            "mtime_ns": 1795377763134795200,
+            "saved_bytes": 249856
+        },
+        {
+            "file": "lib/lean/Init/Data/Nat/Lemmas.olean.private",
+            "before_allocated": 1191936,
+            "after_allocated": 958464,
+            "sha256": "c9ed32f17acb34d20f5538af4e6e05c99d37e682fbbff53c6db81f72717e5b84",
+            "bytes": 3053664,
+            "mtime_ns": 1795377761594739000,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/LCNF/Basic.olean.private",
+            "before_allocated": 1093632,
+            "after_allocated": 811008,
+            "sha256": "5b4a7f22ee3d6853237b376a3e5e18d87eadaea10c1a34b3e72c5bce25f5e923",
+            "bytes": 3019968,
+            "mtime_ns": 1795377766662962900,
+            "saved_bytes": 282624
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Simp/Main.olean.private",
+            "before_allocated": 1011712,
+            "after_allocated": 720896,
+            "sha256": "0d4d0040e6722fd085c365bd4ad4e2a2d28b77e862c1afebbfa0f4e6f3fd6284",
+            "bytes": 2996072,
+            "mtime_ns": 1795377772421786100,
+            "saved_bytes": 290816
+        },
+        {
+            "file": "lib/lean/Lean/Elab/ConfigEval/DeriveEvalConfigItem.olean.private",
+            "before_allocated": 1019904,
+            "after_allocated": 729088,
+            "sha256": "142774396005b3e69ee6c82f2c5099d8005f03531cf2cf3be822bee987abf490",
+            "bytes": 2985496,
+            "mtime_ns": 1795377767535388800,
+            "saved_bytes": 290816
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Simp/BuiltinSimprocs/SInt.olean.private",
+            "before_allocated": 974848,
+            "after_allocated": 684032,
+            "sha256": "a086227ba6ee73476249fa7d18c6591da34ba7d384e238f877868c1eda7bfb97",
+            "bytes": 2928552,
+            "mtime_ns": 1795377772265401400,
+            "saved_bytes": 290816
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/AC/Eq.olean.private",
+            "before_allocated": 962560,
+            "after_allocated": 684032,
+            "sha256": "57d9a152a9ea81ff2bf6412f3914fe95a28f977ed597ce20f8fd60d3595748c1",
+            "bytes": 2874360,
+            "mtime_ns": 1795377771097241400,
+            "saved_bytes": 278528
+        },
+        {
+            "file": "lib/lean/Lean/Elab/DocString/Builtin/Keywords.olean.private",
+            "before_allocated": 970752,
+            "after_allocated": 696320,
+            "sha256": "d1a90487c5fece9683836c5d67e42f62fd9c4741380bfb2d4785d290fb601b3c",
+            "bytes": 2833400,
+            "mtime_ns": 1795377769329135300,
+            "saved_bytes": 274432
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/LCNF/Simp/ConstantFold.olean.private",
+            "before_allocated": 942080,
+            "after_allocated": 663552,
+            "sha256": "bee128b15c638bad0ec3d05889901a7875b496e195c4c11281c69f868fafedee",
+            "bytes": 2800416,
+            "mtime_ns": 1795377766625752400,
+            "saved_bytes": 278528
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/IR/EmitLLVM.olean.private",
+            "before_allocated": 933888,
+            "after_allocated": 663552,
+            "sha256": "8663b5ec4a4bc58d920aa3f0cca13e1e55653950f1fc762b3848450e880f25f4",
+            "bytes": 2772648,
+            "mtime_ns": 1795377766975368400,
+            "saved_bytes": 270336
+        },
+        {
+            "file": "lib/lean/Init/Grind/Ring/CommSolver.olean",
+            "before_allocated": 1056768,
+            "after_allocated": 806912,
+            "sha256": "22c5670b4f4b4910f15ac0c5f5021fec0cac17b8624920a6584ff7b0165700f2",
+            "bytes": 2772080,
+            "mtime_ns": 1795377760538906000,
+            "saved_bytes": 249856
+        },
+        {
+            "file": "lib/lean/Init/Grind/Ring/CommSolver.olean.private",
+            "before_allocated": 1044480,
+            "after_allocated": 815104,
+            "sha256": "55c53bbd774e19c284ba2224280edc90901dfd8e4eee77644209cd871918e508",
+            "bytes": 2757320,
+            "mtime_ns": 1795377760510590100,
+            "saved_bytes": 229376
+        },
+        {
+            "file": "lib/lean/Init/Data/String/Basic.olean.private",
+            "before_allocated": 1048576,
+            "after_allocated": 827392,
+            "sha256": "cbb469c78a002f609c032d4f958bcb3d4b6edcc7e33fc75276c22b4e43948c33",
+            "bytes": 2752336,
+            "mtime_ns": 1795377763010917000,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Elab/BuiltinTerm.olean.private",
+            "before_allocated": 925696,
+            "after_allocated": 663552,
+            "sha256": "9f8eaeb9cf7d64fbed0c64dc263cf0dcddd5b6df54088984caacb22175a7d6fb",
+            "bytes": 2746544,
+            "mtime_ns": 1795377767751985000,
+            "saved_bytes": 262144
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/LCNF/ToLCNF.olean.private",
+            "before_allocated": 929792,
+            "after_allocated": 663552,
+            "sha256": "fbed065d644c058403aa6ac10dafe26496b3a382e8ce5e24fa4c634c020e01ed",
+            "bytes": 2728496,
+            "mtime_ns": 1795377766802520700,
+            "saved_bytes": 266240
+        },
+        {
+            "file": "bin/leantar",
+            "before_allocated": 1417216,
+            "after_allocated": 1146880,
+            "sha256": "06d613dffd2a6fd996b095bfd835c2bb720886f9eb7e13ed2adddd7df4507bf3",
+            "bytes": 2692960,
+            "mtime_ns": 1795377775500289400,
+            "saved_bytes": 270336
+        },
+        {
+            "file": "lib/lean/Lean/Elab/BuiltinNotation.olean.private",
+            "before_allocated": 888832,
+            "after_allocated": 630784,
+            "sha256": "65d0b661fb1e5ff28f7960707cdd781cb7b78d4e7741458bdb2e822bcdac6d15",
+            "bytes": 2661264,
+            "mtime_ns": 1795377769763783600,
+            "saved_bytes": 258048
+        },
+        {
+            "file": "lib/lean/Lean/Meta/SynthInstance.olean.private",
+            "before_allocated": 897024,
+            "after_allocated": 638976,
+            "sha256": "72e436c23e90b2f78563dca83d20faf74de02af678bbacff90922b85e09e8100",
+            "bytes": 2630624,
+            "mtime_ns": 1795377770390342200,
+            "saved_bytes": 258048
+        },
+        {
+            "file": "lib/lean/Lake/CLI/Translate/Lean.olean.private",
+            "before_allocated": 860160,
+            "after_allocated": 606208,
+            "sha256": "a9fcbb6e6e96e51c38cbf81425ba30dcfe38904e69c737fcc155b3012c693c26",
+            "bytes": 2626864,
+            "mtime_ns": 1795377764728669000,
+            "saved_bytes": 253952
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/NormCast.olean.private",
+            "before_allocated": 856064,
+            "after_allocated": 634880,
+            "sha256": "f63e406eb4cf7db4126b62fc1e52947a1a2d2311e9d9cd328ed6e0e6c6cd80cd",
+            "bytes": 2625576,
+            "mtime_ns": 1795377769174857500,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lake/CLI/Shake.olean.private",
+            "before_allocated": 913408,
+            "after_allocated": 659456,
+            "sha256": "9eef1d260aec22f4452509bf00e56c5bc08cc8816aa9e55389bddf32ceced009",
+            "bytes": 2618696,
+            "mtime_ns": 1795377764602082900,
+            "saved_bytes": 253952
+        },
+        {
+            "file": "lib/lean/Lean/Data/Lsp/LanguageFeatures.olean.private",
+            "before_allocated": 856064,
+            "after_allocated": 606208,
+            "sha256": "0d2f49ec4131b6fe6f882ac600954bfe6dd16ea22ba9b746bd9bac1aeea65a08",
+            "bytes": 2610816,
+            "mtime_ns": 1795377773868339900,
+            "saved_bytes": 249856
+        },
+        {
+            "file": "lib/lean/Lean/Elab/PreDefinition/Main.olean.private",
+            "before_allocated": 901120,
+            "after_allocated": 655360,
+            "sha256": "aeb9e308c9ccbc4baeb04ff48eda281c994212496b31caa7859dcad133ae5da9",
+            "bytes": 2610248,
+            "mtime_ns": 1795377768139336900,
+            "saved_bytes": 245760
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/FunInd.ir",
+            "before_allocated": 749568,
+            "after_allocated": 503808,
+            "sha256": "86ed37c8512ca51e061ef2cf419e92e060c87eb0ed749133cd3e98d054222426",
+            "bytes": 2603672,
+            "mtime_ns": 1795377772736986400,
+            "saved_bytes": 245760
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Binders.olean.private",
+            "before_allocated": 884736,
+            "after_allocated": 630784,
+            "sha256": "03d79543904b3edf8fd831e9812820d4cc80cfa0e7fc0e9d86754c72b4a32a0b",
+            "bytes": 2593432,
+            "mtime_ns": 1795377767973032700,
+            "saved_bytes": 253952
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/CommRing/EqCnstr.olean.private",
+            "before_allocated": 856064,
+            "after_allocated": 610304,
+            "sha256": "8ba2bbc90c185f48eae55d0b2b4f39e726870f278e2c5488dc3bce4db6007103",
+            "bytes": 2550728,
+            "mtime_ns": 1795377771423798800,
+            "saved_bytes": 245760
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Syntax.olean.private",
+            "before_allocated": 856064,
+            "after_allocated": 606208,
+            "sha256": "ae94e93c6b1dcb0c0116498a94f406fdc080b723b3ac9989ad2f72337197844b",
+            "bytes": 2546488,
+            "mtime_ns": 1795377767200916500,
+            "saved_bytes": 249856
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/Cutsat/Types.olean",
+            "before_allocated": 917504,
+            "after_allocated": 647168,
+            "sha256": "8d7a92ac31749bd3f567f840f8f57f3d32b904f6ecfb13c4f0bf1436f2571e33",
+            "bytes": 2537416,
+            "mtime_ns": 1795377771839616100,
+            "saved_bytes": 270336
+        },
+        {
+            "file": "lib/lean/Lean/Meta/IndPredBelow.olean.private",
+            "before_allocated": 888832,
+            "after_allocated": 647168,
+            "sha256": "662d11e4ffca862a2c521c9d4ad62c5db333cf557c98601be0af806f3acc3df8",
+            "bytes": 2532008,
+            "mtime_ns": 1795377770339236600,
+            "saved_bytes": 241664
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/Grind/BuiltinTactic.olean.private",
+            "before_allocated": 872448,
+            "after_allocated": 643072,
+            "sha256": "cf5d91acc0b07c9399a952f12d022046bb8469b7d0833d6f3741789dba813876",
+            "bytes": 2531608,
+            "mtime_ns": 1795377768447231700,
+            "saved_bytes": 229376
+        },
+        {
+            "file": "lib/lean/Lean/Elab/PreDefinition/WF/GuessLex.olean.private",
+            "before_allocated": 884736,
+            "after_allocated": 634880,
+            "sha256": "55b0cb153cde33e16f90cdbcbb12ef7aeca685766afb6bdb20f31e418ea3bd82",
+            "bytes": 2519560,
+            "mtime_ns": 1795377768200402600,
+            "saved_bytes": 249856
+        },
+        {
+            "file": "lib/libc++.a",
+            "before_allocated": 708608,
+            "after_allocated": 512000,
+            "sha256": "21ec9522439e5f55ed4042c1feaea62d0d81d0002096f0e7ef1eee531e6817fe",
+            "bytes": 2480040,
+            "mtime_ns": 1795377774197743300,
+            "saved_bytes": 196608
+        },
+        {
+            "file": "lib/lean/Lean/Elab/App.ir",
+            "before_allocated": 729088,
+            "after_allocated": 491520,
+            "sha256": "e979b3f41cc91f0012c9c9f5d8a7cd99b670df82e9eadf4510d74be31dc41285",
+            "bytes": 2469264,
+            "mtime_ns": 1795377769750021700,
+            "saved_bytes": 237568
+        },
+        {
+            "file": "lib/lean/Init/Data/String/Decode.olean.private",
+            "before_allocated": 970752,
+            "after_allocated": 770048,
+            "sha256": "261b4c3776513eefe65f5898e1fa67103706c44a32f9565d6e751f45006f568c",
+            "bytes": 2464456,
+            "mtime_ns": 1795377763229477800,
+            "saved_bytes": 200704
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/CommRing/Proof.olean.private",
+            "before_allocated": 811008,
+            "after_allocated": 569344,
+            "sha256": "57c0c30ee07b77b199bc80443fe4028a115f9f929278662d635d102ee375d3f6",
+            "bytes": 2462840,
+            "mtime_ns": 1795377771357834600,
+            "saved_bytes": 241664
+        },
+        {
+            "file": "lib/lean/Lean/Server/FileWorker.olean.private",
+            "before_allocated": 831488,
+            "after_allocated": 598016,
+            "sha256": "556642693920a82dc4999073f5ca87b89cd47ffa8c53d1057a3ceff0e62e87be",
+            "bytes": 2428144,
+            "mtime_ns": 1795377765539384800,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Std/Data/ExtDTreeMap/Lemmas.olean.private",
+            "before_allocated": 983040,
+            "after_allocated": 761856,
+            "sha256": "f434953f905eb4c74fd8cbe2d17d6eb04e8457d6aebef082cf56141e65b38485",
+            "bytes": 2422784,
+            "mtime_ns": 1795377758214106700,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/WF/Lemmas.olean",
+            "before_allocated": 946176,
+            "after_allocated": 733184,
+            "sha256": "5b01251a9c2f3818a3d780727f662f306612ca0a2c47c40e4301646f163420b0",
+            "bytes": 2400016,
+            "mtime_ns": 1795377758577211200,
+            "saved_bytes": 212992
+        },
+        {
+            "file": "lib/lean/Lean/Meta/WHNF.olean.private",
+            "before_allocated": 827392,
+            "after_allocated": 593920,
+            "sha256": "7526c9ab04475f4cc5f0f91bab450bf4fb7f87cf6de122b34e6a1569a4df2cee",
+            "bytes": 2398904,
+            "mtime_ns": 1795377770309128900,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Inductive.olean.private",
+            "before_allocated": 827392,
+            "after_allocated": 593920,
+            "sha256": "9f14cf68b174b78f7e17cab78fd3e3134a1b84c5b9404aa5a7395102fedd01c0",
+            "bytes": 2395344,
+            "mtime_ns": 1795377767138699400,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Structure.ir",
+            "before_allocated": 729088,
+            "after_allocated": 495616,
+            "sha256": "9e7a542048c4820383941e8506eb1d53d644c02ccd888a1f4ad5699894606638",
+            "bytes": 2391288,
+            "mtime_ns": 1795377768277337300,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Internalize.olean.private",
+            "before_allocated": 806912,
+            "after_allocated": 573440,
+            "sha256": "ad3acb85341c1cdf2ccd25d53107cf42fe5aa4e3d40c79f3164ae4b273c2f239",
+            "bytes": 2389960,
+            "mtime_ns": 1795377770988084800,
+            "saved_bytes": 233472
+        },
+        {
+            "file": "lib/lean/Std/Time/Format/Basic.olean.private",
+            "before_allocated": 798720,
+            "after_allocated": 573440,
+            "sha256": "c513412d8a22415e8f0c2b8e964ad2e1cd9c4bc11b633cd6f966a9c78f1dc73b",
+            "bytes": 2383896,
+            "mtime_ns": 1795377757860835700,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Init/Data/List/ToArray.olean.private",
+            "before_allocated": 933888,
+            "after_allocated": 757760,
+            "sha256": "3fe66f894098f775ca0838ca7defc4db99056b939db28627bc95da6f797e9cc7",
+            "bytes": 2380344,
+            "mtime_ns": 1795377762628459200,
+            "saved_bytes": 176128
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Balancing.olean",
+            "before_allocated": 917504,
+            "after_allocated": 708608,
+            "sha256": "fa1387543bfe44109a68a8fb058443a81d8d2de0fd13d58ef97ab02bbdeb20c3",
+            "bytes": 2375536,
+            "mtime_ns": 1795377758399867000,
+            "saved_bytes": 208896
+        },
+        {
+            "file": "lib/lean/libleancpp.a",
+            "before_allocated": 737280,
+            "after_allocated": 569344,
+            "sha256": "fdab256afbab90724a7d3bf4fcb302c5772115c7c5e10b7d4c23e9cf2bae9a7e",
+            "bytes": 2373210,
+            "mtime_ns": 1795377756553273100,
+            "saved_bytes": 167936
+        },
+        {
+            "file": "lib/lean/Std/Data/Internal/List/Associative.olean",
+            "before_allocated": 913408,
+            "after_allocated": 688128,
+            "sha256": "71f082dc235e48973d853f2ce833241d781a3c71a8029e9bfdfce4b81a83e63e",
+            "bytes": 2362856,
+            "mtime_ns": 1795377758744513200,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Init/Data/Int/Linear.olean.private",
+            "before_allocated": 925696,
+            "after_allocated": 729088,
+            "sha256": "d2a9849dd6dae2f112abc2b398bf021c9588e0f024c2d367676587e43efd5052",
+            "bytes": 2361128,
+            "mtime_ns": 1795377763351416600,
+            "saved_bytes": 196608
+        },
+        {
+            "file": "lib/lean/Lean/Data/Lsp/LanguageFeatures.olean",
+            "before_allocated": 786432,
+            "after_allocated": 565248,
+            "sha256": "29502339ca5d0a1b78bbf188c6488cb67ceade71054d4e4d1480b951bc429ec8",
+            "bytes": 2348680,
+            "mtime_ns": 1795377773903389300,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Init/Data/List/Find.olean.private",
+            "before_allocated": 925696,
+            "after_allocated": 749568,
+            "sha256": "2491b62e32c1b2db90aa35d6d4e664f453895ba8b6014c123880a4a78d097b3c",
+            "bytes": 2347832,
+            "mtime_ns": 1795377762854238100,
+            "saved_bytes": 176128
+        },
+        {
+            "file": "lib/lean/Lean/Compiler/LCNF/Specialize.olean.private",
+            "before_allocated": 823296,
+            "after_allocated": 602112,
+            "sha256": "80782b34816461a0980e570e7a532b3a6edd37b1c28fb6180042efd1ed790189",
+            "bytes": 2345128,
+            "mtime_ns": 1795377766718908300,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Simp/BuiltinSimprocs/UInt.olean.private",
+            "before_allocated": 778240,
+            "after_allocated": 540672,
+            "sha256": "a4740a97ac2615fca26a54de37918594dd16a4010eeb92f60d296e0f156e4e2a",
+            "bytes": 2338944,
+            "mtime_ns": 1795377772338749200,
+            "saved_bytes": 237568
+        },
+        {
+            "file": "lib/lean/Lake/Config/Cache.olean.private",
+            "before_allocated": 802816,
+            "after_allocated": 581632,
+            "sha256": "9127a1a4b68bcf89151d34d70dfec9075acf70b7dc327f7c3c16abd8f60e5cb5",
+            "bytes": 2337696,
+            "mtime_ns": 1795377764245831300,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Deriving/Basic.olean.private",
+            "before_allocated": 802816,
+            "after_allocated": 577536,
+            "sha256": "580fa2eb4361f85bc200d1d9d0d4b1a1c3074c036c84ee321d80eebf6b71d4e0",
+            "bytes": 2334024,
+            "mtime_ns": 1795377769544253900,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/Cutsat/EqCnstr.olean.private",
+            "before_allocated": 778240,
+            "after_allocated": 557056,
+            "sha256": "5166dd91095eb5bc9f2ba4c646f8f771f22b8c04dc62411601ef96cdbe1a0d5f",
+            "bytes": 2320576,
+            "mtime_ns": 1795377771814709900,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Init/Data/Option/Lemmas.olean.private",
+            "before_allocated": 933888,
+            "after_allocated": 745472,
+            "sha256": "30554a8b9e9f4a4294462e81993c52326025822f6b5d76662cad08d60f5978c9",
+            "bytes": 2308520,
+            "mtime_ns": 1795377761847662800,
+            "saved_bytes": 188416
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Operations.olean",
+            "before_allocated": 843776,
+            "after_allocated": 626688,
+            "sha256": "9002a06c8ba1280fe6d360fb9705cef45fc6e9e45cbbe3473b075b4c3f102941",
+            "bytes": 2305032,
+            "mtime_ns": 1795377758542687000,
+            "saved_bytes": 217088
+        },
+        {
+            "file": "lib/lean/Lean/DocString/Parser.olean.private",
+            "before_allocated": 782336,
+            "after_allocated": 557056,
+            "sha256": "48067f4f22c1dc77a802e81f5a091c7a9f5e51c235078ae097e21b21b40f6af3",
+            "bytes": 2280744,
+            "mtime_ns": 1795377769831607200,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Lean/Meta/LazyDiscrTree.olean.private",
+            "before_allocated": 811008,
+            "after_allocated": 593920,
+            "sha256": "d0a5cc33a782b8dfb0325023cf7301f138261b6f6798a24f799fd7f5507f5f41",
+            "bytes": 2276376,
+            "mtime_ns": 1795377770137835700,
+            "saved_bytes": 217088
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Sym/Pattern.olean.private",
+            "before_allocated": 794624,
+            "after_allocated": 573440,
+            "sha256": "457b765418439697e192b143d89e30bc0be53ccef6315cbc8d08ed87089837b8",
+            "bytes": 2271920,
+            "mtime_ns": 1795377772941452700,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Declaration.olean.private",
+            "before_allocated": 774144,
+            "after_allocated": 548864,
+            "sha256": "5381c8baf97868cdb4164a9a245cbb52e1c89ca316bc59e376d846f4338e4194",
+            "bytes": 2270880,
+            "mtime_ns": 1795377768265619700,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Lean/Expr.olean.private",
+            "before_allocated": 819200,
+            "after_allocated": 598016,
+            "sha256": "d305bd2eb5de127ba39538d0890aaf25d083d04274ec1e7468185b45138eb9c1",
+            "bytes": 2267960,
+            "mtime_ns": 1795377773779262900,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Tactic/VCGen/Frontend.olean.private",
+            "before_allocated": 794624,
+            "after_allocated": 577536,
+            "sha256": "85b95645a319453ba14a1692feca2c02933633d9259ac4cf63d336b7ffdd414a",
+            "bytes": 2258416,
+            "mtime_ns": 1795377769046160100,
+            "saved_bytes": 217088
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Arith/Cutsat/Search.olean.private",
+            "before_allocated": 770048,
+            "after_allocated": 544768,
+            "sha256": "743f820c349e86a59680541561bc1a6e05a654ebff6ab3c0c1ab23ad34b7ff35",
+            "bytes": 2250144,
+            "mtime_ns": 1795377771476890200,
+            "saved_bytes": 225280
+        },
+        {
+            "file": "lib/lean/Lean/Elab/DocString.ir",
+            "before_allocated": 671744,
+            "after_allocated": 458752,
+            "sha256": "1ed32a17db367b62fa4edc47434e03e7b0cfd2cda994dd3dc01ee04ee3408253",
+            "bytes": 2246656,
+            "mtime_ns": 1795377767839827100,
+            "saved_bytes": 212992
+        },
+        {
+            "file": "lib/lean/Lean/Elab/Do/Basic.olean.private",
+            "before_allocated": 774144,
+            "after_allocated": 557056,
+            "sha256": "8b94ab2c04a020a7b6a192c371d87667abc1cb412214f102e9d757ed49556aad",
+            "bytes": 2241496,
+            "mtime_ns": 1795377767635247500,
+            "saved_bytes": 217088
+        },
+        {
+            "file": "lib/lean/Std/Sat/AIG/CNF.olean.private",
+            "before_allocated": 856064,
+            "after_allocated": 663552,
+            "sha256": "97fc80011ae2b6ff3b8f01ae3be7a268e906fd2ec4afd166765b32dbdf587a6f",
+            "bytes": 2240064,
+            "mtime_ns": 1795377757377734900,
+            "saved_bytes": 192512
+        },
+        {
+            "file": "lib/lean/Lean/Elab/SyntheticMVars.olean.private",
+            "before_allocated": 761856,
+            "after_allocated": 843776,
+            "sha256": "e50bf24f0273fbd9ffae9d19a69f917f9f5090ac1222d675075d34b5230813b1",
+            "bytes": 2239976,
+            "mtime_ns": 1795377767093464000,
+            "saved_bytes": -81920
+        },
+        {
+            "file": "lib/lean/Lean/Elab/BuiltinDo/For.olean.private",
+            "before_allocated": 765952,
+            "after_allocated": 544768,
+            "sha256": "0ba2f3297c6e5f44ef9bc84073b40be3250d5e1e50ecc8aab6bf787dccab8097",
+            "bytes": 2238000,
+            "mtime_ns": 1795377769679939300,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Elab/DocString/Builtin.ir",
+            "before_allocated": 671744,
+            "after_allocated": 458752,
+            "sha256": "68fb3a9e1413aa7d5efd5c1ba8066bb5d7b3d49978b651a90da28c89efb66c8b",
+            "bytes": 2237432,
+            "mtime_ns": 1795377769311932600,
+            "saved_bytes": 212992
+        },
+        {
+            "file": "lib/lean/Std/Data/DHashMap/Internal/RawLemmas.olean",
+            "before_allocated": 831488,
+            "after_allocated": 610304,
+            "sha256": "6696420437b9d9e09f871174aec92c1de2423899b7116a5a28d7e61ff4ed0667",
+            "bytes": 2231568,
+            "mtime_ns": 1795377758979768200,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Grind/Main.olean.private",
+            "before_allocated": 765952,
+            "after_allocated": 552960,
+            "sha256": "ce9e20196c18882454d73376131f93b3cc2b2903951a6e942c36411ae14fbe44",
+            "bytes": 2209944,
+            "mtime_ns": 1795377771905032500,
+            "saved_bytes": 212992
+        },
+        {
+            "file": "lib/lean/Lean/Meta/Tactic/Simp/Rewrite.olean.private",
+            "before_allocated": 749568,
+            "after_allocated": 528384,
+            "sha256": "20f35808138685ab5310e5c5e7f72c45ebf0b8a2ce67cd4b4236dac421c3f5dd",
+            "bytes": 2196640,
+            "mtime_ns": 1795377772440615400,
+            "saved_bytes": 221184
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Lemmas.olean",
+            "before_allocated": 790528,
+            "after_allocated": 598016,
+            "sha256": "c47f61e93f220e9a57e428b841268cae5518fcba26d25b7788f8cde61b2588a7",
+            "bytes": 2180656,
+            "mtime_ns": 1795377758596211400,
+            "saved_bytes": 192512
+        },
+        {
+            "file": "lib/lean/Std/Data/DTreeMap/Internal/Lemmas.ilean",
+            "before_allocated": 417792,
+            "after_allocated": 270336,
+            "sha256": "72687b440342a243e3c4031ab7630f1bf4e34b19a5e52fa06d437aafe946abe4",
+            "bytes": 2160713,
+            "mtime_ns": 1795377758463101400,
+            "saved_bytes": 147456
+        },
+        {
+            "file": "lib/lean/Std/Data/ExtDHashMap/Lemmas.olean.private",
+            "before_allocated": 847872,
+            "after_allocated": 679936,
+            "sha256": "b16be83a3dd251e1015fdad7e0448619f0e289e0db906484c798d8b521d71c72",
+            "bytes": 2152616,
+            "mtime_ns": 1795377758838936900,
+            "saved_bytes": 167936
+        },
+        {
+            "file": "lib/lean/Lean/Parser/Do.olean.private",
+            "before_allocated": 675840,
+            "after_allocated": 466944,
+            "sha256": "9b092686bdce3084bb2f42f802bd194567690135652bfc29c468414c8a93498f",
+            "bytes": 2149496,
+            "mtime_ns": 1795377773667518600,
+            "saved_bytes": 208896
+        },
+        {
+            "file": "lib/lean/Lean/Elab/MutualDef.ir",
+            "before_allocated": 647168,
+            "after_allocated": 446464,
+            "sha256": "90b477087e730a400627277fc211171134279c7d5525615ed39241ded74c6666",
+            "bytes": 2139728,
+            "mtime_ns": 1795377767737974600,
+            "saved_bytes": 200704
+        }
+    ],
+    "allocation_increases": [
+        {
+            "file": "lib/lean/Lean/Elab/SyntheticMVars.olean.private",
+            "before_allocated": 761856,
+            "after_allocated": 843776,
+            "sha256": "e50bf24f0273fbd9ffae9d19a69f917f9f5090ac1222d675075d34b5230813b1",
+            "bytes": 2239976,
+            "mtime_ns": 1795377767093464000,
+            "saved_bytes": -81920
+        }
+    ],
+    "saved_bytes": 47063040,
+    "finding": "LZX can be larger than XPRESS16K for individual files. Original controller exited on allocation nonincrease assertion after 128 completed full-run files and one 16-file batch. All146 touched files including2pilot now separately checked by full hash,size,mtime. No content failure.",
+    "unfinished_count": 4379
+}

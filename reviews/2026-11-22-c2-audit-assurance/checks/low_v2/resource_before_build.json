@@ -1,0 +1,106 @@
+{
+    "measured_at": 1512550.437,
+    "foreign_samples": [
+        3.8342720003006026,
+        3.5075284165062435
+    ],
+    "legacy_allocation_unknown": true,
+    "legacy_reserved_slots": 0,
+    "ram_free_gib": 18.566875457763672,
+    "disk_free_gib": 37.65536117553711,
+    "intervals": [
+        {
+            "seconds": 2.0171690999995917,
+            "system_busy_cpu": 11.843640178706305,
+            "system_idle_cpu": 12.107004316100689,
+            "known_c2_cpu": 8.009368178405703,
+            "conservative_other_cpu": 3.8342720003006026,
+            "named_other_load": [
+                {
+                    "pid": 72332,
+                    "created": 134394188593313659,
+                    "name": "brave.exe",
+                    "logical_cpu_equivalents": 0.03098401616404527
+                },
+                {
+                    "pid": 97076,
+                    "created": 134398492555677967,
+                    "name": "audiodg.exe",
+                    "logical_cpu_equivalents": 0.03098401616404527
+                },
+                {
+                    "pid": 12940,
+                    "created": 134394288493301306,
+                    "name": "chrome.exe",
+                    "logical_cpu_equivalents": 0.023238012123033953
+                },
+                {
+                    "pid": 9328,
+                    "created": 134383400562149780,
+                    "name": "Everything.exe",
+                    "logical_cpu_equivalents": 0.015492008082022635
+                },
+                {
+                    "pid": 88612,
+                    "created": 134396521421769916,
+                    "name": "python.exe",
+                    "logical_cpu_equivalents": 0.015492008082022635
+                }
+            ]
+        },
+        {
+            "seconds": 2.017980800010264,
+            "system_busy_cpu": 11.529160733284314,
+            "system_idle_cpu": 12.473793110356635,
+            "known_c2_cpu": 8.02163231677807,
+            "conservative_other_cpu": 3.5075284165062435,
+            "named_other_load": [
+                {
+                    "pid": 12068,
+                    "created": 134383400417240469,
+                    "name": "explorer.exe",
+                    "logical_cpu_equivalents": 0.01548577667331674
+                },
+                {
+                    "pid": 19600,
+                    "created": 134383400654690495,
+                    "name": "ChatGPT.exe",
+                    "logical_cpu_equivalents": 0.01548577667331674
+                },
+                {
+                    "pid": 97076,
+                    "created": 134398492555677967,
+                    "name": "audiodg.exe",
+                    "logical_cpu_equivalents": 0.01548577667331674
+                }
+            ]
+        }
+    ],
+    "legacy_before": {
+        "roots": [
+            {
+                "pid": 88520,
+                "created": 134394874836427612,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "unknown": true,
+        "slots": 0,
+        "reason": "E028 has automatic later parallel phases without shared reservations",
+        "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+    },
+    "legacy_after": {
+        "roots": [
+            {
+                "pid": 88520,
+                "created": 134394874836427612,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "unknown": true,
+        "slots": 0,
+        "reason": "E028 has automatic later parallel phases without shared reservations",
+        "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+    },
+    "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+}

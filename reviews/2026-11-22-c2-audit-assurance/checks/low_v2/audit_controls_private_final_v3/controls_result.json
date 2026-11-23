@@ -1,0 +1,54 @@
+{
+    "status": "ONE_POSITIVE_SIX_NEGATIVE_AUDITOR_CONTROLS_PASS",
+    "positive": {
+        "id": "306.0",
+        "result_sha256": "8843e01f1e4a2667bb2d264aed44d929323a741679183af497dbadbedcca7b4b",
+        "stars": 54,
+        "planes": 2786,
+        "maximum_depth": 2,
+        "evidence_files": 7,
+        "full_readback": true
+    },
+    "negative": [
+        {
+            "case": "wrong_key",
+            "rejected": true,
+            "diagnostic": "Result job key/rank mismatch",
+            "changed_evidence_hash_updated": false
+        },
+        {
+            "case": "open",
+            "rejected": true,
+            "diagnostic": "Result is not closed",
+            "changed_evidence_hash_updated": false
+        },
+        {
+            "case": "truncated_stars",
+            "rejected": true,
+            "diagnostic": "",
+            "changed_evidence_hash_updated": true
+        },
+        {
+            "case": "duplicate_star",
+            "rejected": true,
+            "diagnostic": "Malformed or duplicate star",
+            "changed_evidence_hash_updated": true
+        },
+        {
+            "case": "missing_final",
+            "rejected": true,
+            "diagnostic": "Missing progress/exhaustion line",
+            "changed_evidence_hash_updated": true
+        },
+        {
+            "case": "depth_cutoff",
+            "rejected": true,
+            "diagnostic": "",
+            "changed_evidence_hash_updated": false
+        }
+    ],
+    "original_evidence_unchanged": true,
+    "hardlinked_control_inputs_are_immutable": true,
+    "auditor_sha256": "398cb110f5e2150ad6b63258ea088df6331d31998af8a6e8cfa0a193e91b33a4",
+    "resource_admission": "Handled by caller before invocation; no search process launched."
+}

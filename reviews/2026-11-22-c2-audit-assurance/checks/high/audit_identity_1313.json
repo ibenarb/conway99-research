@@ -1,0 +1,81 @@
+{
+    "start_utc": "2026-11-23T12:12:47.413807+00:00",
+    "identity": {
+        "pid": 99848,
+        "created": 134399095674092580,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_high_evidence_v2.py",
+    "auditor_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+    "output": "audit_snapshot_1313_v2.json",
+    "resource_before_start": {
+        "measured_at": 1569505.515,
+        "intervals": [
+            {
+                "seconds": 2.016111899865791,
+                "system_busy_cpu": 4.293536485041446,
+                "system_idle_cpu": 19.646416948700477,
+                "known_c2_cpu": 2.6892728525440104,
+                "conservative_other_cpu": 1.6042636324974353,
+                "named_other_load": [
+                    {
+                        "pid": 2920,
+                        "created": 134394769500815918,
+                        "name": "OUTLOOK.EXE",
+                        "logical_cpu_equivalents": 0.0232501975724266
+                    },
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.0232501975724266
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0162778000812978,
+                "system_busy_cpu": 3.905711802055488,
+                "system_idle_cpu": 20.117515551857235,
+                "known_c2_cpu": 2.3790744508552275,
+                "conservative_other_cpu": 1.5266373512002605,
+                "named_other_load": [
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015498856357363047
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            1.6042636324974353,
+            1.5266373512002605
+        ],
+        "c2_worker_budget": 18,
+        "ram_free_gib": 32.738433837890625,
+        "disk_free_gib": 50.31069564819336,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 92696,
+                "created": 134399095633518332,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 55708,
+                "created": 134399095590783068,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun or solver/controller changes.",
+    "duplicate_precheck": "Read-only Win32_Process inventory immediately before this launch found no audit_singleton_evidence or audit_high_evidence process; prior1213 identities exited."
+}

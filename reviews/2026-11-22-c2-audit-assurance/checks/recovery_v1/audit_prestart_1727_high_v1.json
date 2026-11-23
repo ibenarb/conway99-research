@@ -1,0 +1,64 @@
+{
+  "at_utc": "2026-11-23T16:27:41.833563+00:00",
+  "resource": {
+    "measured_at": 1584799.937,
+    "intervals": [
+      {
+        "seconds": 2.0181227999273688,
+        "system_busy_cpu": 10.111500648391868,
+        "system_idle_cpu": 13.85105257272056,
+        "known_c2_cpu": 0.015484687057261665,
+        "conservative_other_cpu": 10.096015961334606,
+        "named_other_load": [
+          {
+            "pid": 21372,
+            "created": 134383400710633236,
+            "name": "codex.exe",
+            "logical_cpu_equivalents": 0.015484687057261665
+          }
+        ]
+      },
+      {
+        "seconds": 2.0173817998729646,
+        "system_busy_cpu": 10.200411742237296,
+        "system_idle_cpu": 13.80966904814662,
+        "known_c2_cpu": 0.02323556205521024,
+        "conservative_other_cpu": 10.177176180182085,
+        "named_other_load": []
+      }
+    ],
+    "foreign_samples": [
+      10.096015961334606,
+      10.177176180182085
+    ],
+    "c2_worker_budget": 9,
+    "ram_free_gib": 33.873321533203125,
+    "disk_free_gib": 46.306705474853516,
+    "reserve_cpu_equivalents": 4,
+    "roots_requested": [
+      {
+        "pid": 93632,
+        "created": 134398684844117364,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+      },
+      {
+        "pid": 102152,
+        "created": 134399248534837427,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+      }
+    ],
+    "missing_roots": [],
+    "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+  },
+  "active_research_count": 10,
+  "already_started_auditors": 0,
+  "guard_checks": {
+    "worker_budget": false,
+    "system_cpu": true,
+    "ram": true,
+    "disk": true
+  },
+  "duplicate_precheck": "Read-only Win32_Process inventory2026-11-23T17:27:09.1918854+01:00 found zero matching auditors; both1627identities exited.",
+  "source_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+  "admitted": false
+}

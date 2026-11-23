@@ -1,0 +1,93 @@
+{
+    "start_utc": "2026-11-23T11:12:20.314644+00:00",
+    "identity": {
+        "pid": 93472,
+        "created": 134399059403102580,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_snapshot_1213_v1.json",
+    "resource_before_start": {
+        "measured_at": 1565878.421,
+        "intervals": [
+            {
+                "seconds": 2.019323200220242,
+                "system_busy_cpu": 5.416418728218978,
+                "system_idle_cpu": 18.647955907153907,
+                "known_c2_cpu": 0.10059063352406675,
+                "conservative_other_cpu": 5.315828094694911,
+                "named_other_load": [
+                    {
+                        "pid": 87924,
+                        "created": 134393232538394082,
+                        "name": "WhatsApp.Root.exe",
+                        "logical_cpu_equivalents": 0.054164187282189774
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.0309509641612513
+                    },
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.023213223120938476
+                    },
+                    {
+                        "pid": 12940,
+                        "created": 134394288493301306,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.01547548208062565
+                    }
+                ]
+            },
+            {
+                "seconds": 2.016891799867153,
+                "system_busy_cpu": 4.679229694236261,
+                "system_idle_cpu": 19.197237056816977,
+                "known_c2_cpu": 0.9683836287740606,
+                "conservative_other_cpu": 3.7108460654622,
+                "named_other_load": [
+                    {
+                        "pid": 87924,
+                        "created": 134393232538394082,
+                        "name": "WhatsApp.Root.exe",
+                        "logical_cpu_equivalents": 0.030988276120769938
+                    },
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.02324120709057745
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            5.315828094694911,
+            3.7108460654622
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 32.111122131347656,
+        "disk_free_gib": 53.14320373535156,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 38308,
+                "created": 134399059360339352,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun or solver/controller changes."
+}

@@ -1,0 +1,11 @@
+{
+    "at_utc": "2026-11-23T18:36:36.703322+00:00",
+    "status": "PRE_ACCEPTANCE_BYTE_COMPARISON_FAILURE_IDENTIFIED",
+    "failed_program": "accept_final_s1_v1.py",
+    "assertion": "Raw byte equality of finished.json and progress.json",
+    "cause": "progress.json has one trailing newline; all other bytes and parsed JSON identical. No search, auditor, or result failure.",
+    "finished_sha256": "06c6c6990ecf1808ef4aa528195c25d2576650fd12d4815441951208911f8fb5",
+    "progress_sha256": "ef55a00938bfe48627829744a536493896cd179fccf7e16838c72145eed172e4",
+    "full_json_equal": true,
+    "correction": "Version2 checks semantic equality plus both known file hashes; originals unchanged."
+}

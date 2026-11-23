@@ -1,0 +1,78 @@
+{
+    "status": "FINISHED_RECONCILIATION_REQUIRED",
+    "updated_utc": "2026-11-23T18:01:36.196920+00:00",
+    "resource": {
+        "measured_at": 1590434.312,
+        "intervals": [
+            {
+                "seconds": 2.0168928999919444,
+                "system_busy_cpu": 0.10071184245867061,
+                "system_idle_cpu": 23.876453727509446,
+                "known_c2_cpu": 0.007747064804513123,
+                "conservative_other_cpu": 0.09296477765415749,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0160642999690026,
+                "system_busy_cpu": 0.12400398142253885,
+                "system_idle_cpu": 23.87076642383873,
+                "known_c2_cpu": 0.007750248838908678,
+                "conservative_other_cpu": 0.11625373258363017,
+                "named_other_load": [
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015500497677817356
+                    },
+                    {
+                        "pid": 24544,
+                        "created": 134383400866159805,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015500497677817356
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            0.09296477765415749,
+            0.11625373258363017
+        ],
+        "c2_worker_budget": 19,
+        "ram_free_gib": 33.12327575683594,
+        "disk_free_gib": 44.73748016357422,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "failures": [],
+    "families": {
+        "high": {
+            "total": 3156,
+            "closed": 3156,
+            "pending": 0,
+            "active": {}
+        },
+        "low": {
+            "total": 92,
+            "closed": 92,
+            "pending": 0,
+            "active": {}
+        },
+        "singleton": {
+            "total": 3308,
+            "closed": 3308,
+            "pending": 0,
+            "active": {}
+        }
+    },
+    "full_independent_evidence_audit_required": true,
+    "old_sources_unchanged": true
+}

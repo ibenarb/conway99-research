@@ -1,0 +1,56 @@
+{
+    "start_utc": "2026-11-23T12:12:43.356353+00:00",
+    "identity": {
+        "pid": 92696,
+        "created": 134399095633518332,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_singleton_evidence_v1.py",
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347",
+    "output": "audit_snapshot_1313_v1.json",
+    "resource_before_start": {
+        "measured_at": 1569501.453,
+        "intervals": [
+            {
+                "seconds": 2.0169148000422865,
+                "system_busy_cpu": 4.074911840513881,
+                "system_idle_cpu": 19.96396922624386,
+                "known_c2_cpu": 1.0148544697857764,
+                "conservative_other_cpu": 3.0600573707281047,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.01622510002926,
+                "system_busy_cpu": 4.440538410056531,
+                "system_idle_cpu": 19.544568708835204,
+                "known_c2_cpu": 2.2318936511278897,
+                "conservative_other_cpu": 2.2086447589286413,
+                "named_other_load": []
+            }
+        ],
+        "foreign_samples": [
+            3.0600573707281047,
+            2.2086447589286413
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 32.711158752441406,
+        "disk_free_gib": 50.300872802734375,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 55708,
+                "created": 134399095590783068,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun or solver/controller changes.",
+    "duplicate_precheck": "Read-only Win32_Process inventory immediately before this launch found no audit_singleton_evidence or audit_high_evidence process; prior1213 identities exited."
+}

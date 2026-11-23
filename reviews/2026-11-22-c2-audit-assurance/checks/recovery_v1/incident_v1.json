@@ -1,0 +1,18 @@
+{
+    "at_utc": "2026-11-23T00:48:51.056717+00:00",
+    "status": "RESOURCE_OBSERVER_LIFETIME_DEPENDENCY_IDENTIFIED_RECOVERY_STARTED",
+    "old_legacy_pid": 88520,
+    "legacy_exit_cause": "Not established; no restart or modification of E028 authorized by this recovery.",
+    "cause": "All four assurance controllers failed while their resource observer asserted existence/liveness of historical E028 PID88520.",
+    "no_machine_reboot": true,
+    "boot_time_observed": "2026-11-05T09:14:22.070789+01:00",
+    "surviving_jobs": [
+        "low_v2/jobs/333.0",
+        "low_v2/jobs/333.1"
+    ],
+    "recovery_controller": "recovery_v1/run_recovery_controller_v1.py",
+    "kernel_programs_unchanged": true,
+    "old_controllers_unchanged": true,
+    "prior_plan_generation_incident": "Initial reconciliation assumed all Singleton pilots had gzip inputs. The three original pilots have raw setup.txt, all recorded hashes match. Corrected before launch; no evidence changed.",
+    "proof_completion_claim": false
+}

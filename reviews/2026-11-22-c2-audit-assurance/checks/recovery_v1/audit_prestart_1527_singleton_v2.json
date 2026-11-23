@@ -1,0 +1,58 @@
+{
+    "at_utc": "2026-11-23T14:27:45.679968+00:00",
+    "resource": {
+        "measured_at": 1577603.781,
+        "intervals": [
+            {
+                "seconds": 2.017700299853459,
+                "system_busy_cpu": 6.566882108786086,
+                "system_idle_cpu": 17.48587240759314,
+                "known_c2_cpu": 1.3784257256650039,
+                "conservative_other_cpu": 5.188456383121082,
+                "named_other_load": [
+                    {
+                        "pid": 20352,
+                        "created": 134399162975059288,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.3639663432935684
+                    }
+                ]
+            },
+            {
+                "seconds": 2.016691999975592,
+                "system_busy_cpu": 6.206017081513427,
+                "system_idle_cpu": 17.680563021240502,
+                "known_c2_cpu": 1.743263225144221,
+                "conservative_other_cpu": 4.462753856369206,
+                "named_other_load": []
+            }
+        ],
+        "foreign_samples": [
+            5.188456383121082,
+            4.462753856369206
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 31.631694793701172,
+        "disk_free_gib": 48.332088470458984,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 95512,
+                "created": 134399176613942176,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "active_research_jobs": 6,
+    "already_started_auditors": 0,
+    "requested_new_auditors": 1,
+    "duplicate_inventory": "Read-only Win32_Process inventory2026-11-23T15:26:59.4921755+01:00 found zero matching auditors; previous1431identities exited.",
+    "reason": "Next approximately hourly evidence snapshot brought forward five minutes to this heartbeat; resources and duplicate checks pass."
+}

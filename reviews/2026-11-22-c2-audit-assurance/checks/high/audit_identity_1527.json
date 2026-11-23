@@ -1,0 +1,93 @@
+{
+    "start_utc": "2026-11-23T14:27:49.756781+00:00",
+    "identity": {
+        "pid": 77620,
+        "created": 134399176697524200,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_high_evidence_v2.py",
+    "auditor_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+    "output": "audit_snapshot_1527_v2.json",
+    "resource_before_start": {
+        "measured_at": 1577607.859,
+        "intervals": [
+            {
+                "seconds": 2.0181309999898076,
+                "system_busy_cpu": 6.10868422320566,
+                "system_idle_cpu": 17.86151394541883,
+                "known_c2_cpu": 1.5716893502037375,
+                "conservative_other_cpu": 4.536994873001923,
+                "named_other_load": [
+                    {
+                        "pid": 20352,
+                        "created": 134399162975059288,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.3329194190086735
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015484624139938301
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0180441001430154,
+                "system_busy_cpu": 5.89215319881133,
+                "system_idle_cpu": 18.187474197119336,
+                "known_c2_cpu": 1.0297718468356198,
+                "conservative_other_cpu": 4.86238135197571,
+                "named_other_load": [
+                    {
+                        "pid": 20352,
+                        "created": 134399162975059288,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.5342425370801337
+                    },
+                    {
+                        "pid": 2920,
+                        "created": 134394769500815918,
+                        "name": "OUTLOOK.EXE",
+                        "logical_cpu_equivalents": 0.038713227324647374
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.023227936394788422
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.536994873001923,
+            4.86238135197571
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 31.538677215576172,
+        "disk_free_gib": 48.351173400878906,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 91492,
+                "created": 134399176656822476,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 95512,
+                "created": 134399176613942176,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Immutable completed-job evidence, coverage, natural exhaustion and full readbacks. No search rerun or solver/controller changes.",
+    "duplicate_precheck": "Read-only Win32_Process inventory2026-11-23T15:26:59.4921755+01:00 found zero matching auditors; previous1431identities exited."
+}

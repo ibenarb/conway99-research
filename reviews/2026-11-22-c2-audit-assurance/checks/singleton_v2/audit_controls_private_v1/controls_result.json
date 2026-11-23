@@ -1,0 +1,94 @@
+{
+    "status": "THREE_POSITIVE_EIGHT_NEGATIVE_SINGLETON_AUDITOR_CONTROLS_PASS",
+    "positive": [
+        {
+            "chart": 0,
+            "raw_roots": 64,
+            "orbit_representatives": 1,
+            "group_order": 46080,
+            "attachments": 2880,
+            "first_survivors": 0,
+            "second_layer_calls": 0,
+            "full_input_readback": true,
+            "natural_exhaustion": true,
+            "result_sha256": "878c071ef54c4b667f4bcd264b80555071ce5f1f07b6c8e4f1282aaacb8f8832"
+        },
+        {
+            "chart": 12,
+            "raw_roots": 64,
+            "orbit_representatives": 2,
+            "group_order": 1536,
+            "attachments": 4800,
+            "first_survivors": 0,
+            "second_layer_calls": 0,
+            "full_input_readback": true,
+            "natural_exhaustion": true,
+            "result_sha256": "fd2997f76898eca57bd295bfc440386c0b44e0d9108c1c876fe27894fd1320aa"
+        },
+        {
+            "chart": 202,
+            "raw_roots": 68,
+            "orbit_representatives": 11,
+            "group_order": 4,
+            "attachments": 20562,
+            "first_survivors": 0,
+            "second_layer_calls": 0,
+            "full_input_readback": true,
+            "natural_exhaustion": true,
+            "result_sha256": "c508a5d285eb1214c49549aeeed910b415066aa3e5b1bc4eba2472ea4ab2efdb"
+        }
+    ],
+    "negative": [
+        {
+            "case": "wrong_chart",
+            "rejected": true,
+            "diagnostic": "wrong key or exit",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "open",
+            "rejected": true,
+            "diagnostic": "result not closed",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "omit_orbit_member",
+            "rejected": true,
+            "diagnostic": "orbit partition",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "duplicate_orbit_member",
+            "rejected": true,
+            "diagnostic": "orbit partition",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "wrong_input_roots",
+            "rejected": true,
+            "diagnostic": "input root list",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "missing_root_row",
+            "rejected": true,
+            "diagnostic": "missing/duplicate root completion",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "missing_final",
+            "rejected": true,
+            "diagnostic": "missing or mismatched FINAL",
+            "all_changed_file_hashes_updated": true
+        },
+        {
+            "case": "error_stream",
+            "rejected": true,
+            "diagnostic": "nonempty solver error stream",
+            "all_changed_file_hashes_updated": true
+        }
+    ],
+    "originals_unchanged": true,
+    "hardlinked_unchanged_inputs_are_not_independent_backups": true,
+    "auditor_sha256": "82ffe266b631aac9b1d39b6009e85a9349fe1cc3b4285f8d9ac9ef4726c32347"
+}

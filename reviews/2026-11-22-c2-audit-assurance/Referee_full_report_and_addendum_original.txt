@@ -1,0 +1,319 @@
+Referee report: excluding involutions in an srg(99,14,1,2)
+Response to the referee memorandum of 22 November 2026 (review dossier v1, frozen source mxym/math d73a176). Referee: Claude, for the Conway_99 project.
+Verdict
+The argument at revision d73a176 establishes Theorem 1.1 to the standard of a conventional computer-assisted proof. I found no mathematical gap, no uncovered case and no unsound pruning step. Every finite claim I recomputed with my own programs agrees with the frozen records.
+The affirmative verdict covers all three computational lemmas, with different depth of independent support:
+Computational lemma
+Independent support in this review
+Still resting on the one original implementation
+5.1 Binary atlas and singleton-root exclusion
+Atlas reproduced by a complete classification of the genus of L₀ (31 classes), with the same ten surviving models and the same root counts
+The singleton-root search itself (3,580 charts, two second-layer cases); replayed, read, not reimplemented
+6.1 Low local ranks
+Coverage reproduced (94 = 2 + 6 + 86 chart-parities, 64 nonsplit and 22 split at rank 9); rank 7 closed by my own program
+Ranks 8 and 9 (92 chart-parities)
+6.3 High local ranks
+Coverage ledger of all 3,156 jobs reproduced; automorphism pruning audited for all 49 strong charts; my own solver closes the six terminal jobs and random samples of 40 baseline and 8 strong jobs
+The remaining jobs
+Two qualifications matter for external submission.
+1.  Packing bounds. Section 4.3 depends on a four-week-old, unrefereed preprint. The dependency is removable: the genus classification below proves conclusion (11) and the atlas without any packing bound.
+2.  Single implementation. The three exhaustive searches exist in one implementation. Replays on three machines test the execution, not the program. A second implementation of the singleton-root search is the most valuable missing item; its absence does not invalidate the proof.
+The result is an exclusion of involutions only. It says nothing about existence of the graph.
+What was checked and how
+Every reduction was checked by hand; every finite statement that I could reach was recomputed with programs written for this review, which share no code with the frozen packets or the dossier. "Own" below means such a program.
+Manuscript part
+Check
+Result
+§2 one fixed vertex
+Own enumeration of the local types at a fixed vertex (f = 1 + 2a² + 2c, trace condition 7r = 4n − e)
+Only (f, n, e, p, d₀) = (1, 49, 7, 0, 42) survives. I could not consult the full text of Makhnev–Minakova
+§2 orbit equations, spectra, H = 14P, F = 28P
+By hand, including the sector multiplicities 27 and 22 from tr(Aσ) = 14
+Correct
+Lemma 3.1 rational forms
+By hand: projector denominators 63, 77, 105, 14, 21; evenness; transfer of the Arf invariant through T² ≡ L² (mod 2); scaling formula; Witt cancellation
+Correct
+Lemma 3.2 signed ambient space
+By hand
+Correct
+§4.1–4.2 gluing, Lemma 4.1, identity (9)
+By hand
+Correct
+§4.3 packing step
+Taylor and Bernstein verifiers rerun on n014.json and n015.json (pinned hashes); rational gaps recomputed
+Both certificates pass. The theorem behind them is unrefereed
+Lemma 4.2 (D₁₂⁺)
+By hand and own enumeration: residues 992, 1024, 1056, 1024; 7,944 vectors cover all 991 classes
+Correct
+Conclusion (11)
+Own classification of the genus of L₀ with mass check
+Confirmed without packing bounds
+§5.1 binary atlas
+Own code enumeration (10,064 multiplicity vectors, 20 types); own intrinsic test of all 31 × 8 geometries
+Same ten surviving models, same root counts per K₈ vertex
+§5.1 singleton-root search
+Full replay on my machine; predicates in SingletonSearch.md and Appendix A checked by hand; code read in part
+Ledger identical; predicates are necessary conditions; no second implementation
+Proposition 5.2
+Own: 168 circuits, 28 cosets of six, GL₄(2) induces exactly the 20,160 even permutations of the eight vertices
+Correct
+§6.1 catalogue
+Own orbit enumeration and Burnside count under the group of order 46,080
+3,580 orbits; ranks 3, 5, 97, 637, 2,838; 272 invalid bases; the frozen list has one representative per orbit
+§6.1–6.3 star formulas, domains, common complement
+By hand
+Correct
+Unary stage and coverage
+Own count of 12-word stars for all 7,160 chart-parities
+Agrees on all 6,616 physical chart-parities
+Computational Lemma 6.1
+Replay with FULL_LOW=1; determinant types recomputed; own program for rank 7
+Chart 288 closed independently in both parities
+Lemma 6.2 even axis
+By hand
+Correct
+Computational Lemma 6.3
+Full replay; kernel sources read line by line (caps.hpp, real.hpp, matrix.hpp, splanemask.hpp, splanereal.hpp, sautprefix.hpp); own orbit counts; own solver
+See next section
+§6.7 integer Cauchy test
+By hand; code matches the text
+Sound
+Independent results
+The lattice step without packing bounds
+The lattices L₀ of §4.3 (rank 15, determinant 2⁸, elementary discriminant group, integral norms on the dual) fall into exactly 31 isometry classes, and each class has seven pairwise orthogonal dual units. This proves (11) without the packing step and without Lemma 4.2.
+Every such lattice is {v ∈ V : (v, c) even for all c ∈ C} for a unimodular V of rank 15 and a 4-space C of V/2V on which the norm vanishes modulo 4, and conversely. Counting the pairs (V, C) in two ways gives the mass.
+\sum_{[L_0]} \frac{1}{|\mathrm{Aut}(L_0)|} \;=\; \frac{N\, m_{15}}{2295} \;=\; \frac{116980081}{898948399104000}, \qquad N = 3876193035,\quad m_{15} = \frac{29713}{385648863215616000}
+Here N counts the totally singular 4-spaces, 2295 the Lagrangians of L₀*/L₀, and m₁₅ is the mass of the five unimodular lattices. I found 20 classes from the 20 doubly-even codes in ℤ¹⁵ and 11 more from ℤ⁷ ⟂ E₈. Their masses add up to the target exactly. Sampling the other three unimodular lattices gave nothing new, as the mass requires.
+The atlas of §5.1 then becomes an intrinsic test on X = L₀/2L₀*. For each class and each of the eight vertices of K₈ I asked for two norm-5 vectors in each of the 21 required classes, pairing at most 1 with every dual unit, such that every dual unit meets exactly 14 of the 42.
+Outcome over 31 × 8 = 248 geometries
+Count
+Excluded: a required class has no admissible vector
+122
+Excluded: exact integer Farkas certificate
+46
+Not excluded: all eight geometries of ten classes
+80
+The ten surviving classes are the Hamming lattice (no roots), two further ℤ¹⁵ classes with 4 and 2 root lines at every K₈ vertex, and seven ℤ⁷ ⟂ E₈ classes with 4, 3, 5, 2, 1, 3, 7. These are the numbers of the frozen rootedges.txt. So every surviving model except the Hamming lattice has a singleton-cut root for every omitted vertex, as Computational Lemma 5.1 needs.
+Coverage of the even axis
+My count of 12-word stars, done for every chart and both parities without any outside-label test, already reproduces the ledger. A chart-parity is rejected at the unary stage exactly when it has no star at all.
+Even-degree chart-parities
+Count
+Invalid 39-vertex base
+476
+No 12-word star
+3,212
+Low rank, live
+88
+High rank, live
+2,638
+Total
+6,414
+The 2,638 high-rank entries are 2 + 4 + 62 + 2,570 for degrees 0, 2, 4, 6; with two modes at rank 10 they give the 3,156 jobs. The raw star counts of the terminal charts are 422,400 and 80,448, as recorded.
+Low ranks
+For chart 288 (rank 7, square pivot determinant) my program finds 688 stars in each parity and no 2-plane of 𝔽₇⁴ that leaves every outside label a candidate. For the three rank-8 charts my numbers of viable (star, plane) pairs equal the frozen ones exactly: 2,786 and 2,786; 2,420 and 2,416; 27,645 and 27,645. Two implementations therefore agree on attachments, words and residual-anchor pairings before any search.
+High ranks: automorphism pruning and an independent solver
+For all 49 charts that occur in strong jobs, in both parities, my own group construction gives the same group order and the same number of orbits as the packet retains representatives (98 of 98). The packet's own audit, run on all 49, confirms that the orbits of its representatives cover every raw star.
+My solver decides whether all 30 outside labels can be chosen pairwise consistently. It uses the exact rational Cauchy inequality and literal 43-vertex capacities; it has no depth cut-off. A closed result is therefore at least as strong as the packet's eight-label test.
+Jobs given to my solver
+Stars searched
+Result
+Chart 0, both parities (degree 0)
+42 + 42 orbit representatives
+All closed
+Chart 1, both parities (degree 2)
+210 + 210 orbit representatives
+All closed
+Chart 11, both parities (degree 2)
+210 + 210 orbit representatives
+All closed
+40 baseline jobs drawn at random (35 mode 0, 5 mode 1)
+6,323 raw stars
+All closed
+8 strong jobs of degree 4 drawn at random
+3,839 orbit representatives
+All closed
+No star ever reached a third consistent label. The 40 baseline jobs took 2,088 s of wall time on a shared core, so a complete second run of the 3,050 baseline jobs is of the order of one to two CPU-days.
+Replays on a fresh machine
+Environment: Linux 6.18, 2 vCPU Xeon at 2.1 GHz, GCC 13.3.0, Python 3.13.18. The frozen sources were taken from the pinned commit and the archive hashes checked first.
+Replay
+Result
+Unsigned packet, bash replay.sh full
+Passed in 3,968 s. first.log (3,580 lines) and pair.log equal the dossier's transcripts apart from timing; the seven other outputs are byte-identical
+Main packet, FULL_LOW=1 JOBS=2 python3 -B replay.py full
+Manifest, audits, the complete low-rank replay, controls, orbit transports, scalar references and the star ledger passed. A restart of my machine then interrupted the last stage. I reran that stage with the unmodified sources and the same commands, saving every row: all 3,050 baseline rows and all 286 strong blocks equal the frozen ledgers apart from timing
+Author's uniform transcripts, uniform-shards.py check
+Passed: 3,156 keys, 446,227 anchors, none open
+Packing certificates n014, n015 (Taylor, Bernstein)
+Passed
+The nine priorities of the memorandum
+1.  Fixed point and metrics: confirmed; the factors 2/7 and 7 in the physical forms are right.
+2.  Dependency order: no circularity; only rank ≤ 13, with square determinant at 13, is used.
+3.  Gluing and simultaneous units: correct as written, and confirmed by the classification.
+4.  Packing and classification: normalisations right; certificates pass; see A1.
+5.  Unsigned atlas: reproduced in full by another route.
+6.  Upstream singleton search: predicates sound; implementation not independently recomputed; see B1.
+7.  Common residual space: one space for all labels in the text and in the code; both rank-10 modes and the split rank-9 case are present.
+8.  Parities and pruning: both parities searched directly; pruning audited on all strong charts; the finite-field normalisation is applied to one label only.
+9.  Coverage and exhaustion: all 6,414 entries reconciled; all 106 strong chains start at zero, are contiguous and end in natural exhaustion.
+Findings by category
+A. Mathematical gaps
+None found. Two dependencies should be made independent of sources a reader cannot check.
+ID
+Statement and source
+Finding
+What is needed
+A1
+§4.3, bounds (10); Zubrilina, arXiv:2610.35830v1; certificates n014.json, n015.json
+The certificates verify, but the theorem that turns a certificate into a lattice bound is a preprint of 26 October 2026 without review. The general three-point bound (0.033757) misses the needed 0.033715 in rank 15, so the argument as written has no fallback.
+Add the genus classification as a second proof of (11), or as the primary one. No new computation is needed; my scripts are in the evidence package.
+A2
+§2, "Makhnev and Minakova imply…"; frozen README.md and check_fixed.py
+The one-fixed-vertex statement is essential and I could not read the cited theorem. The frozen repository proves it from the parameters in half a page; my own enumeration agrees.
+Put that counting proof into the manuscript and cite the paper for priority only.
+B. Enumeration and implementation
+ID
+Statement and source
+Finding
+What is needed
+B1
+Computational Lemma 5.1; hsym-frozen.cpp, hpair.cpp, hookpair.hpp, hmod.hpp, srank.hpp
+The singleton-root search has the most intricate predicates of the whole proof (determinant divisibility by (16·7)² and 2¹⁰·7², comparison primes 97, 257, 1031, sign-word orbits). Each predicate is a valid necessary condition. Apart from the author's own audit of the sign-word and Schur stage (auditroot.cpp), only the four terminal lifts have a second implementation.
+A second implementation of the first layer over all 3,580 charts. As a cheaper intermediate step: a rerun with the arithmetic predicates switched off (literal capacities, positive semidefiniteness and rank ≤ 13 only) and a per-predicate count of rejections, to show what the closure depends on.
+B2
+Computational Lemmas 6.1 and 6.3; slowgen9line.cpp, shyp.cpp, srerun.cpp, sstrong-range.cpp
+One implementation. My solver covers the terminal jobs and a sample; it searches all 30 labels with an exact rational Cauchy test and literal 43-vertex capacities.
+Run a second solver on all 3,156 high-rank jobs and on ranks 8 and 9. My program is offered as a starting point.
+B3
+§6.7 first reduction; sautprefix.hpp; seven-orbit.log
+The packet audits the automorphism pruning on charts 0, 1 and 11 only, while 102 of the 106 strong jobs use it. I ran the packet's own audit on all 49 strong charts in both parities: every union of orbits equals the raw set. My independent group construction gives the same group orders and orbit counts in all 98 cases.
+Ship the audit for all 49 charts.
+B4
+real.hpp (assert p > 0), matrix.hpp (assert t < rank), several abort() paths
+Correctness relies on assertions being active. The replay scripts compile without NDEBUG, so the frozen runs are fine.
+State in the packet README that NDEBUG must not be defined.
+B5
+Two label parities, §5 end and §6.7
+My star counts equal the packet's with the two parities interchanged; 954 charts have different counts in the two parities. The parities are inequivalent, so testing both is necessary and is done.
+Nothing.
+C. Reproducibility
+ID
+Item
+Finding
+What is needed
+C1
+Fresh-machine replay (memorandum §5)
+Done here for all three packets; results in the previous section. The main packet's last stage ran under my own restartable driver, not under replay.py.
+Nothing further for this item.
+C2
+review_code/ and records/ of the dossier
+The scripts are not runnable from the bundle and the records are exports. An outside referee can read them but not rerun them.
+Ship runnable versions, or present them as internal notes only.
+C3
+Manuscript §7.2–7.3; review_index.json (optional_uniform_replay_completed: false)
+The frozen revision already contains the author's completed uniform replay (Conway99_NoInvolution_UniformReplay.zip, SHA-256 01fdafd0…) and AlternateTerminal.tsv. The packet's checker accepts the three transcripts: 3,156 keys, 446,227 anchors, none open.
+Say "completed by the author, not re-executed by the project".
+C4
+Reference [mm]
+Russian original, page 96, not accessible to me.
+Covered by A2.
+D. Presentation
+ID
+Place
+Correction
+D1
+§1, paragraph after Corollary 1.2
+State the consequence precisely: with Crnković–Maksimović the group has order 1 or 3. If Djematene's exclusion of order 3 (manuscript of 23 September 2026) is accepted, the graph would be asymmetric. Say that this second step is not part of the present paper.
+D2
+§6.4, "its nonsplit type has Witt index two"
+Add the reason: at chart 288 the pivot determinant is a square, −1 is a nonsquare modulo 7, hence the six-dimensional complement is nonsplit. I confirmed the determinant.
+D3
+§5.1, "125 of 160 … eleven more"
+The split depends on the relaxation used. The invariant statement is 136 excluded and 24 retained. Add that the 20 + 11 types are pairwise non-isometric lattices and exhaust the genus.
+D4
+§6.5–6.6, "6414 raw even chart-parity entries"
+Give the decomposition: 476 physical + 3,212 unary + 88 low rank + 2,638 high rank; the 2,638 become 3,156 jobs because 518 rank-10 entries have two modes.
+D5
+Lemma 3.1, proof
+Two one-line reasons are missing: the rank-20 lattices are even because the column sums of T are 12; the two reductions modulo 2 coincide because both projectors reduce to T² and L ≡ T.
+D6
+Appendix A, relation for 7r
+The relation uses that the twelve star vectors sum to zero (second identity in (7)). Say so.
+Actions before external submission
+In priority order. Items 1 to 3 change the assurance of the result; items 4 to 6 are editorial.
+1.  Second implementation of the singleton-root search (B1). This is the one computational lemma without any independent recomputation of its search. Until it exists, describe Computational Lemma 5.1 as replayed, not as independently verified.
+2.  Second solver on all high-rank and low-rank jobs (B2). A full-depth solver with literal tests is simple; mine is an 8 kB C++ program plus a Python setup. The sample timings below give the cost of a complete run.
+3.  Remove or double the packing dependency (A1). Insert the genus classification, with its mass identity, next to or instead of §4.3 and Lemma 4.2.
+4.  Make §2 self-contained (A2) by including the fixed-vertex count.
+5.  Ship the orbit audit for all strong charts (B3) and the NDEBUG note (B4).
+6.  Text corrections D1 to D6 and C2, C3.
+Authorship, consent and priority statements are outside a referee's remit. I checked only that the attribution matches the frozen history: the proof, the reductions and all search programs are in the repository mxym/math at the pinned revision, committed by mxym on 21 November 2026.
+Not checked
+• The implementation of the singleton-root search, beyond its helper headers and the documented predicates.
+• The low-rank programs for ranks 8 and 9, beyond their design in Theorem.md and the generic kernel slowext.hpp.
+• The mixed-atlas scripts code7e8.py, wittcheck.py and roots7e8.py. My classification reaches the same eleven mixed lattices by another route.
+• The full text of Makhnev–Minakova, and Theorem 7.3 of Crnković–Maksimović beyond its abstract.
+• Zubrilina's proof of her Theorem 1. I read the statement and rederived only the first cap B(s).
+• The PARI and Descartes packing verifiers.
+• The uniform replay and the scalar terminal replay were not re-executed by me; I checked the author's transcripts for coverage only.
+• My own programs are unreviewed. They are in the evidence package with a README.
+Sources
+• Frozen proof: mxym/math at d73a176, conway-99-involution. The three archive hashes of the dossier match the files at that revision.
+• Packing: Zubrilina, arXiv:2610.35830, Table 1 (0.0352392080 and 0.0256118267); certificates at 340a0e9, hashes as in the manuscript.
+• Fixed points and group order: Makhnev–Minakova (abstract only), Cesarz–Woldar, Crnković–Maksimović (abstract only).
+• Review dossier: C2_Review_Package_v1.zip, SHA-256 6d1c2890…3ec8286; all 1,378 manifest entries verified.
+Addendum: the combined asymmetry conclusion
+Added on 22 November 2026 in response to the supplementary request. It replaces item D1 above and changes nothing else in the report.
+The conclusion Aut(Γ) = 1 is correctly derived. It rests on three inputs of different standing, and the text should name all three. I did not see version 2 of the manuscript; the wording below refers to the passages as they stood in version 1.
+The chain and its inputs
+Link
+Source
+What I checked
+Standing
+No prime other than 2 and 3 divides the group order
+Computer search of Behbahani and Lam (Behbahani's thesis, 2009; Discrete Math. 2011). Crnković–Maksimović quote it as their Theorem 7.1 and build Theorem 7.3 on it
+Statement of Theorem 7.3 and its derivation read; the search not replayed
+Published, computer-based, not replayed by anyone in this project
+No element of order 2
+Zhang, Theorem 1.1 of the manuscript
+This report
+Computer-assisted; accepted above with the two stated qualifications
+No element of order 3
+Djematene, manuscript of 23 September 2026, Corollary 3: Theorem 1 (no fixed point), Lemma 7 (at most three fixed points), Proposition 2 (fixed triangle)
+Complete paper proof, see below
+Hand proof with a public Lean formalization; no external review on record
+Hence the group is trivial
+Cauchy's theorem, twice
+Trivial
+
+Two remarks on the first link.
+• The exponent bound b ≤ 1 and the exclusion of groups of order six in Theorem 7.3 are not needed. Only the restriction of the prime divisors is used.
+• Without the computer search the chain does not close. Makhnev–Minakova give a group order dividing 2·3³·7·11, and Cesarz–Woldar reduce the case of 7 to a group of order 7 but do not exclude it. The published exclusion of orders 7 and 11 is therefore load-bearing.
+Earlier results taken over
+On 9 and 10 November I reviewed Djematene's manuscript in the version dated 23 September 2026 (file preuve_c3.tex, unchanged in the repository since 11 October; SHA-256 4db92733…). I checked the fixed-point-free case line by line, condensed it to seven steps, and tested its mechanism on 24 real graph actions. I had followed the counting lemma for at most three fixed points. I had checked the fixed-triangle case (his Section 4) only in part and had not looked at the Lean sources, which were not public then.
+So my earlier verdict covered the fixed-point-free case in full. For the remaining case it relied on Behbahani and Lam.
+Checked now
+• Section 4, the fixed triangle. All four points verified by hand. The fixed coordinates of every invariant integral 3-eigenvector are divisible by 3, because the last three rows of 11(Ã + 4I) − 2·jwᵀ vanish modulo 3. The weighted Gram matrix is integral with determinant 7ᵃ·11ᵇ. Both lattices reduce to bases of the same kernel over 𝔽₃, so the determinant is 1 modulo 3. The norm 99 of the all-ones vector forces b odd, so the determinant is 2 modulo 3. The step r = r′, which the text passes over with "word for word", holds: r ≤ r′ because the reduced basis is independent inside the kernel, and r′ ≤ r because 2(Q̄ + I) has rank r′ and factors through an r × r matrix.
+• Lemma 7, at most three fixed points. Rechecked in full. My own count agrees: a fixed vertex has 2a fixed neighbours with a in {1, 4, 7}, the fixed set has 1 + 2a² vertices, and the case of 33 is impossible.
+• Scope of the formal statement. In the pinned Lean revision 9678dec the file Challenge.lean states, for Mathlib's IsSRGWith 99 14 1 2, that every automorphism σ with σ³ = 1 is the identity. That is the full statement, with or without fixed points. The Lean sources (3,871 lines in all) contain no sorry outside that file, where the statements are deliberately left unproved, and no added axiom or native_decide. The archived logs record acceptance by the Lean kernel and five further checkers, locally and in GitHub Actions.
+• The link to the group order. Statement and proof structure of Crnković–Maksimović, Section 7, as in the table.
+Not done: a Lean rebuild, a replay of the Behbahani–Lam search, a review of Zhang's order-three route. His route treats the fixed-point-free case and takes the absence of fixed points from Behbahani's thesis, so it is supporting evidence for one case only.
+Verdict and remaining conditions
+The paper proof of the order-three exclusion is complete and correct as far as I can check it by hand. Together with the archived formal verification this suffices to use it as a cited result, provided its status is stated: an unpublished manuscript that its own title page marks as not yet read by a third party.
+The asymmetry conclusion then holds under three conditions.
+1.  Theorem 1.1 of the manuscript, with the qualifications of this report (three searches in one implementation, the singleton-root search the least supported).
+2.  Djematene's exclusion of order 3.
+3.  The published computer search excluding automorphisms of orders 7 and 11.
+Two concrete residual items, neither a precondition for citing:
+• One Lean rebuild at the pinned revision (lake exe cache get, lake build, lake comparator --paranoid). It would turn archived logs into a reproduced formal check.
+• Five log files at the pinned revision do not match SHA256SUMS (the two local comparator logs, the local con-leche log, lean_challenge_solution and lean_install). All Lean sources and the GitHub Actions log match. The list should be regenerated or the difference explained.
+Proposed wording
+The sentence under review is correct. I suggest naming the inputs in the same breath:
+Using Theorem 1.1, Djematene's exclusion of automorphisms of order three, and the published computer search of Behbahani and Lam that leaves 2 and 3 as the only possible prime divisors of the group order, every strongly regular graph with parameters (99,14,1,2) is asymmetric. Whether such a graph exists remains open.
+Replacement for the paragraph after Corollary 1.2:
+Corollary 1.3 (conditional on the cited results). A strongly regular graph Γ with parameters (99,14,1,2), if one exists, has trivial automorphism group.
+Derivation. By the computer search of Behbahani and Lam [B; BL], the order of Aut(Γ) has no prime divisor other than 2 and 3; Crnković and Maksimović [CM, Theorem 7.3] record this as |Aut(Γ)| = 2ᵃ3ᵇ. Corollary 1.2 gives a = 0. Djematene [D] proves that Γ has no automorphism of order three, with or without fixed points, so b = 0 by Cauchy's theorem.
+The three inputs differ in standing. The exclusion of the primes 7 and 11 is a published computer search that we have not replayed. Djematene's result is a hand proof dated 23 September 2026 with a public Lean 4 formalization of the full statement; it has not appeared in a refereed publication. In this project its paper proof was checked in full and the formalization was not rebuilt. Theorem 1.1 is the computer-assisted result of the present paper. Zhang's separate computer-assisted exclusion of fixed-point-free automorphisms of order three (18 November 2026) supports one case of [D] and is not used here.
+For the abstract, in place of the sentence that the result is not a nonexistence proof:
+Combined with Djematene's exclusion of automorphisms of order three and the published restriction of the prime divisors of the group order, a graph with these parameters would be asymmetric. Its existence remains open.
+For the attribution paragraph:
+The exclusion of order two is due to Zhang and is the subject of this paper. The exclusion of order three is due to Djematene and predates it. Zhang's later route to the fixed-point-free order-three case is a separate, supplementary result. None of the three has completed external peer review.

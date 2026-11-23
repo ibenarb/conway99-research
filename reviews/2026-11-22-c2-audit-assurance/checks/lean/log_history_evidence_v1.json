@@ -1,0 +1,314 @@
+{
+    "retrieved_utc": "2026-11-22T21:02:29.135Z",
+    "commits": {
+        "commits": [
+            {
+                "sha": "9678dec98108003359cde7b404d57a6e09dd865c",
+                "message": "PDF : contexte complet, corollaire 8 (|Aut| <= 2), vérification formelle, bibliographie vérifiée\n\n- Paragraphe « Contexte » : Makhnev–Minakova, Behbahani–Lam (le cas sans point fixe laissé ouvert,\n  table 21 de la thèse), Crnković–Maksimović, Makhnev 2010, Cesarz–Woldar (Algebr. Comb. 2025),\n  Ishida, Thakkar–Severini (v2 du 18 septembre 2026), Keramatipour ; Conway, Wilbrink, Brouwer–Van Maldeghem.\n- Corollaire 8 : |Aut| dans {1, 2, 7, 11} sans ordinateur, {1, 2} avec Behbahani–Lam ; placé après\n  le lemme 7 pour ne décaler aucun numéro cité dans les fichiers Lean.\n- Section « Vérification formelle » : énoncé isolé (Challenge.lean), lake comparator, six vérificateurs.\n- 18 références complètes, vérifiées (DOI via Crossref, arXiv). Compilation sans avertissement.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GxNV5zdDrYsihV6hAFfWXZ",
+                "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/9678dec98108003359cde7b404d57a6e09dd865c",
+                "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/9678dec98108003359cde7b404d57a6e09dd865c",
+                "diff": null,
+                "files": null,
+                "repository_full_name": "amazing-source/conway99-c3-experimental",
+                "comments": null,
+                "author": null,
+                "committer": null,
+                "created_at": "2026-09-23T15:57:25Z",
+                "git_author_email": null,
+                "display_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/9678dec98108003359cde7b404d57a6e09dd865c",
+                "display_title": "PDF : contexte complet, corollaire 8 (|Aut| <= 2), vérification formelle, bibliographie vérifiée"
+            },
+            {
+                "sha": "a2b851318570625c73f9a17f74ef1abdcbf4a07a",
+                "message": "État de la littérature sur l'ordre 3 ; correction de la conséquence sur |Aut|\n\nLittérature revérifiée le 2026-09-23 (AUDIT_ENONCE.md, section 9) : le cas « automorphisme d'ordre 3\nsans point fixe » est laissé ouvert par Behbahani (2009, table 21) et encore déclaré inconnu par\nThakkar–Severini (arXiv:2608.11211, v2 du 18 septembre 2026) ; aucune source ne l'exclut.\nCorrection : Cesarz–Woldar (7 | |Aut| => Aut = Z7) exclut 77 ; la conséquence est |Aut| dans\n{1, 2, 7, 11} sans ordinateur, et {1, 2} avec le calcul de Behbahani–Lam.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GxNV5zdDrYsihV6hAFfWXZ",
+                "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/a2b851318570625c73f9a17f74ef1abdcbf4a07a",
+                "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/a2b851318570625c73f9a17f74ef1abdcbf4a07a",
+                "diff": null,
+                "files": null,
+                "repository_full_name": "amazing-source/conway99-c3-experimental",
+                "comments": null,
+                "author": null,
+                "committer": null,
+                "created_at": "2026-09-23T15:40:25Z",
+                "git_author_email": null,
+                "display_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/a2b851318570625c73f9a17f74ef1abdcbf4a07a",
+                "display_title": "État de la littérature sur l'ordre 3 ; correction de la conséquence sur |Aut|"
+            },
+            {
+                "sha": "734db9598bf65163eb0419151c353f906cbf6e5c",
+                "message": "Vérification avec bac à sable sur GitHub Actions : réussie\n\nRun 35880776817 (Linux neuve, 2 cœurs, 7 Go ; commit 67ca6c5) : recompilation depuis le dépôt,\nlake comparator puis lake comparator --paranoid : « Your solution is okay! », six vérificateurs,\n26 552 déclarations comme sur la machine d'origine. Journal archivé dans logs/.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GxNV5zdDrYsihV6hAFfWXZ",
+                "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/734db9598bf65163eb0419151c353f906cbf6e5c",
+                "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/734db9598bf65163eb0419151c353f906cbf6e5c",
+                "diff": null,
+                "files": null,
+                "repository_full_name": "amazing-source/conway99-c3-experimental",
+                "comments": null,
+                "author": null,
+                "committer": null,
+                "created_at": "2026-09-23T15:29:38Z",
+                "git_author_email": null,
+                "display_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/734db9598bf65163eb0419151c353f906cbf6e5c",
+                "display_title": "Vérification avec bac à sable sur GitHub Actions : réussie"
+            },
+            {
+                "sha": "67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+                "message": "Énoncé Lean isolé et contrôlé par lake comparator\n\n- c3formal/Challenge.lean : l'énoncé seul (n'importe que Mathlib, aucune définition, preuves sorry),\n  sous forme graphe, groupe et élémentaire (matrice booléenne, List.countP), avec trois tests de\n  non-vacuité sur srg(9, 4, 1, 2).\n- c3formal/Solution.lean : les mêmes énoncés, démontrés à partir de C3.no_order3.\n- c3formal/comparator.json : lake comparator ; localement (Windows, sans bac à sable),\n  « Your solution is okay! » : énoncés identiques, axiomes standard, preuve acceptée par le noyau\n  de Lean, leanchecker-paranoid, lean4lean, nanoda, con-leche et con-ron.\n- .github/workflows/lean-verify.yml : la même vérification avec bac à sable, sur Linux.\n- AUDIT_ENONCE.md : ce qui est garanti, les définitions de Mathlib citées, ce qui reste à relire.\n- logs/ : journaux des exécutions, y compris le leanchecker groupé interrompu faute de mémoire.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01GxNV5zdDrYsihV6hAFfWXZ",
+                "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+                "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+                "diff": null,
+                "files": null,
+                "repository_full_name": "amazing-source/conway99-c3-experimental",
+                "comments": null,
+                "author": null,
+                "committer": null,
+                "created_at": "2026-09-23T15:19:58Z",
+                "git_author_email": null,
+                "display_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+                "display_title": "Énoncé Lean isolé et contrôlé par lake comparator"
+            },
+            {
+                "sha": "8f19b6da5facb26cff177df586974fef00dc2398",
+                "message": "Laboratoire C3 : preuve, formalisation Lean complète, journal, scripts, données\n\nÉtat exact du laboratoire Desktop/c3_experimental (branche C3 de Conway 99), pour relecture humaine.\n\n- Énoncé : un srg(99,14,1,2) n'a aucun automorphisme d'ordre 3.\n- pdf/preuve_c3.pdf : preuve mathématique (6 pages).\n- c3formal/ : formalisation Lean 4 / Mathlib v4.35.0-rc2, énoncé final C3.no_order3,\n  sans sorry ni axiome supplémentaire, sans entrée extérieure.\n- JOURNAL.md, IDEES.md, notes/, scripts/, logs/, data/ : toute la recherche, y compris les pistes abandonnées.\n- Fichiers stockés octet par octet (.gitattributes : * -text) ; empreintes dans SHA256SUMS.\n- Exclus car régénérables à l'identique : .venv/ et c3formal/.lake/ (voir ENVIRONNEMENT.md).\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01BuaWVPusLMxw9VoPMAdMV8",
+                "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/8f19b6da5facb26cff177df586974fef00dc2398",
+                "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/8f19b6da5facb26cff177df586974fef00dc2398",
+                "diff": null,
+                "files": null,
+                "repository_full_name": "amazing-source/conway99-c3-experimental",
+                "comments": null,
+                "author": null,
+                "committer": null,
+                "created_at": "2026-09-23T14:01:58Z",
+                "git_author_email": null,
+                "display_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/8f19b6da5facb26cff177df586974fef00dc2398",
+                "display_title": "Laboratoire C3 : preuve, formalisation Lean complète, journal, scripts, données"
+            }
+        ]
+    },
+    "comparison_initial_to_comparator": {
+        "repository_full_name": "amazing-source/conway99-c3-experimental",
+        "base": "8f19b6da5facb26cff177df586974fef00dc2398",
+        "head": "67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "too_large": null,
+        "base_commit": {
+            "sha": "8f19b6da5facb26cff177df586974fef00dc2398",
+            "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/8f19b6da5facb26cff177df586974fef00dc2398",
+            "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/8f19b6da5facb26cff177df586974fef00dc2398"
+        },
+        "merge_base_commit": {
+            "sha": "8f19b6da5facb26cff177df586974fef00dc2398",
+            "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/8f19b6da5facb26cff177df586974fef00dc2398",
+            "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/8f19b6da5facb26cff177df586974fef00dc2398"
+        },
+        "files": [
+            {
+                "filename": ".github/workflows/lean-verify.yml",
+                "status": "added",
+                "additions": 64,
+                "deletions": 0,
+                "changes": 64,
+                "previous_filename": null
+            },
+            {
+                "filename": "AUDIT_ENONCE.md",
+                "status": "added",
+                "additions": 166,
+                "deletions": 0,
+                "changes": 166,
+                "previous_filename": null
+            },
+            {
+                "filename": "ENVIRONNEMENT.md",
+                "status": "modified",
+                "additions": 13,
+                "deletions": 1,
+                "changes": 14,
+                "previous_filename": null
+            },
+            {
+                "filename": "JOURNAL.md",
+                "status": "modified",
+                "additions": 25,
+                "deletions": 0,
+                "changes": 25,
+                "previous_filename": null
+            },
+            {
+                "filename": "README.md",
+                "status": "modified",
+                "additions": 13,
+                "deletions": 6,
+                "changes": 19,
+                "previous_filename": null
+            },
+            {
+                "filename": "SHA256SUMS",
+                "status": "modified",
+                "additions": 15,
+                "deletions": 5,
+                "changes": 20,
+                "previous_filename": null
+            },
+            {
+                "filename": "c3formal/Challenge.lean",
+                "status": "added",
+                "additions": 98,
+                "deletions": 0,
+                "changes": 98,
+                "previous_filename": null
+            },
+            {
+                "filename": "c3formal/README.md",
+                "status": "modified",
+                "additions": 11,
+                "deletions": 3,
+                "changes": 14,
+                "previous_filename": null
+            },
+            {
+                "filename": "c3formal/Solution.lean",
+                "status": "added",
+                "additions": 197,
+                "deletions": 0,
+                "changes": 197,
+                "previous_filename": null
+            },
+            {
+                "filename": "c3formal/comparator.json",
+                "status": "added",
+                "additions": 15,
+                "deletions": 0,
+                "changes": 15,
+                "previous_filename": null
+            },
+            {
+                "filename": "c3formal/lakefile.toml",
+                "status": "modified",
+                "additions": 8,
+                "deletions": 0,
+                "changes": 8,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/comparateur_local_2026-09-23.log",
+                "status": "added",
+                "additions": 388,
+                "deletions": 0,
+                "changes": 388,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/comparateur_local_2026-09-23_essai1.log",
+                "status": "added",
+                "additions": 380,
+                "deletions": 0,
+                "changes": 380,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/con-leche_local_2026-09-23.log",
+                "status": "added",
+                "additions": 87,
+                "deletions": 0,
+                "changes": 87,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/lean_challenge_solution_2026-09-23.log",
+                "status": "added",
+                "additions": 33,
+                "deletions": 0,
+                "changes": 33,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/leanchecker.log",
+                "status": "added",
+                "additions": 3,
+                "deletions": 0,
+                "changes": 3,
+                "previous_filename": null
+            }
+        ]
+    },
+    "comparison_comparator_to_pin": {
+        "repository_full_name": "amazing-source/conway99-c3-experimental",
+        "base": "67ca6c5",
+        "head": "9678dec98108003359cde7b404d57a6e09dd865c",
+        "status": "ahead",
+        "ahead_by": 3,
+        "behind_by": 0,
+        "total_commits": 3,
+        "too_large": null,
+        "base_commit": {
+            "sha": "67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+            "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+            "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/67ca6c5f7f8ca57f9634967877868239d5c9e71b"
+        },
+        "merge_base_commit": {
+            "sha": "67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+            "url": "https://api.github.com/repos/amazing-source/conway99-c3-experimental/commits/67ca6c5f7f8ca57f9634967877868239d5c9e71b",
+            "html_url": "https://github.com/amazing-source/conway99-c3-experimental/commit/67ca6c5f7f8ca57f9634967877868239d5c9e71b"
+        },
+        "files": [
+            {
+                "filename": "AUDIT_ENONCE.md",
+                "status": "modified",
+                "additions": 41,
+                "deletions": 7,
+                "changes": 48,
+                "previous_filename": null
+            },
+            {
+                "filename": "JOURNAL.md",
+                "status": "modified",
+                "additions": 14,
+                "deletions": 1,
+                "changes": 15,
+                "previous_filename": null
+            },
+            {
+                "filename": "SHA256SUMS",
+                "status": "modified",
+                "additions": 5,
+                "deletions": 4,
+                "changes": 9,
+                "previous_filename": null
+            },
+            {
+                "filename": "logs/github_actions_run_35880776817.log",
+                "status": "added",
+                "additions": 1685,
+                "deletions": 0,
+                "changes": 1685,
+                "previous_filename": null
+            },
+            {
+                "filename": "pdf/preuve_c3.pdf",
+                "status": "modified",
+                "additions": 0,
+                "deletions": 0,
+                "changes": 0,
+                "previous_filename": null
+            },
+            {
+                "filename": "pdf/preuve_c3.tex",
+                "status": "modified",
+                "additions": 113,
+                "deletions": 26,
+                "changes": 139,
+                "previous_filename": null
+            }
+        ]
+    },
+    "initial_manifest": {
+        "content": "e1e1e4d5dd5375013913d499cbfb141f28008a82ff2f93f3d6adbf5f258f4494 *.gitattributes\n24f8e9d87f6ba79f828ae4469c17e23e8cd0a3d0fdffe052868fb066c5aaff9a *.gitignore\n1b237ddbd03813b2a0c7cb921a0d22f8ab56344d6d995916eddaeeef6795e139 *ENVIRONNEMENT.md\n3ab0b969f7a3547de1db827fd45f4e39287e29560c47a5b4c8aed57f870399ca *IDEES.md\n782e9c0b70c22b0069cb93a6c684b4e98e0e395e85f6b005fc8eb2092edb3cf1 *JOURNAL.md\n3e9209a3c13a6dd381b2710458c4b37bd67899edba63fdf752691c79b5cf9252 *README.md\n491f1c02bb31774c3f711155a4cc24da5923dc8ba7016e9aaff13969e2ea49ca *c3formal/.github/workflows/create-release.yml\n27c305b340e38c4adc482ea8109aa3e36dfd89c8e56eaf90d57aa7368be2b627 *c3formal/.github/workflows/lean_action_ci.yml\n608304be502130030682762aa4a9bbec3e127d6b1eb2acf054818b84b6c81a4f *c3formal/.github/workflows/update.yml\nb3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e *c3formal/.gitignore\nd3b05fc3e72d6c8b866d51c6b158707f9c19ec4b23adb112c9097240f72ce6ed *c3formal/C3formal.lean\na88fef4d3efa63c9f9f5c948dd5ba1de3ea09d828ce8388ee83fa3d039e734a4 *c3formal/C3formal/Basic.lean\n3a3d653daae45c701baeaaf8593c2e3d6d85ddffcb50b23d172ad16d379dff7e *c3formal/C3formal/Bridge.lean\n6183d216bb6ab2e6e757e338deeaea4e1f9075b50259931c97fab76d354bea1a *c3formal/C3formal/Check.lean\nc2e28a08468936ae378bd44702b3a918719d3c504f5d9008f250f6725f21e24e *c3formal/C3formal/Eis.lean\nde1e5cb4b733fccb0f548e06611ebbba23177ebc24dbef2ffa0579fb232c91d7 *c3formal/C3formal/EisComplex.lean\n66c0d3f294292c523fa1befebc923ef2591d6aa70fb33eba0ffe63bf1bed46db *c3formal/C3formal/EisEuclid.lean\nb0cc96ac188f0dcc30548e75edcc259b1fe951130a28d03574400993b844a270 *c3formal/C3formal/FixLemma.lean\n03c01df7eec71ff43aa553b740012c1228fe776aae38fb452d571d796c6f02b3 *c3formal/C3formal/GenLemmas.lean\n9f673c8356dbfe048483585e6da6aa042a5308d150edda275c70b7c5eecbcc8f *c3formal/C3formal/Graph.lean\n5bdf055500ea6f180c610232f2698201c22bd179dd900930d46ed459586c0896 *c3formal/C3formal/IntPart.lean\ncce1bc5fcd8f4db071fe1d09bb7c7a026121eb8b3889f9867ab51caf99b07671 *c3formal/C3formal/Main.lean\n732172d1ba9bcb759d0812d67f39845ae53c69f265120d52f702495c4303c27f *c3formal/C3formal/NumberTheory.lean\n4e91c891105e7357dc15c321a339b4f741ebc16966678519ceee4aedb973cb7c *c3formal/C3formal/Saturated.lean\n776e352eb1873a87927a8fa48c595324c6ca87579b5ab98db8694b99a3e9a46d *c3formal/C3formal/SaturatedGen.lean\n2e2204ff086f265d8724a87fb2961291705b4441cce72e1860e5c98b0d4191dc *c3formal/C3formal/Step5.lean\n324a50152167fcebc617f84fba999006052b9f7b1686a1787e06ff5b531228c1 *c3formal/C3formal/TriangleBridge.lean\nf2b553dc9e4e214f39488f67c8880235375e9e99e1b0c556d848d5db0e060058 *c3formal/C3formal/TriangleGraph.lean\nf84e8b73a7bc2cb1c9f099b2bec4eb0e1f86194346c28a60c2cd07eabe9850a7 *c3formal/C3formal/TriangleMain.lean\n760db26db4db88513a3b50c0afd3f8e1a81c647b9e14203fa6e38c3d40c5b734 *c3formal/C3formal/TriangleMatrix.lean\n03c07a08478b78fed35642f5061deb9e66afd071655df4162382af75e970a88f *c3formal/C3formal/TriangleStep4.lean\n628223b70b3f489c13ec2c61117111d5ceefe2ece08cc69a6fe9ccb7db427d3f *c3formal/C3formal/TriangleStep5.lean\n4475b5ca0f3565da935bcf29291b895aa958a2c1422c1fbdbed6ce3f518396dc *c3formal/README.md\n45c782f0febf98b914a3a7c3f2be4befe5d7923c5c21f55674fd8628253f4e02 *c3formal/lake-manifest.json\n52c26324cc9134dbe3ad76364e6bd7cc225004c9763fa6fe15876db3a7c9f5d4 *c3formal/lakefile.toml\n8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a *c3formal/lean-toolchain\na69348ace958a14d7541e69db8d6c8b6186eec0eb7ab883bd518a66acf9ec13c *data/brouwer_srgtab.html\na80443c99ec0536b55194a3f5b71bc77957c87f1b29564cad955fb5f2a9abb6a *data/brouwer_srgtab101-150.html\n1302bbff55986c37f755253c7904089330f19ab04c0719fe4c5bf412b25d4dea *data/brouwer_srgtab1101-1150.html\nba8b21c8bab0ee4404b1a43d0867e313b277f21ca10b98d38bdda2c6367f9758 *data/brouwer_srgtab1201-1250.html\nb587f0b0e14d4888c16d3b3c5e4c9f22fa969d51e231610add5f2477fb90e923 *data/brouwer_srgtab251-300.html\ndb88468cc47bb5aa9108d488596557de3a68ec80dcf5f7ffea9f2e16d3f60f89 *data/brouwer_srgtab51-100.html\ncdb872b4780973429e14c95cad96067f1c4ad5c3f672cf9cbb9ecd571c46ce6b *data/brouwer_srgtab701-750.html\naafc5e0fe208fe409437a989b1998d8dc0853d35f3d886db0cd0a21e947e8f1f *data/ishida_text.txt\n4d9e0cf94502cb147b0a5643a6c95db0125a90f0db411800d1a2ee3d353ad96a *logs/D10_dS.log\n86abd077fdd9eed28331f3ec719c8fe3a29b14c4e13c08e9691bf996528d3005 *logs/criterion_scan2_1300.log\n6a2a3354a31433016ac8b8cdd2174616fd29957314d565da39b04dfbe4f10175 *logs/criterion_scan_1300.log\nd8761cbc1ed4cc7518df7ca4e8b3d68927a41162fce37978fa6d777562eb1652 *logs/glue_T.log\nc7df819e0b8209de97c29c80d0b4546272629b2a0207ca085108ef3060782368 *logs/glue_T15_21.log\n785915d237ff685dacb13ae8430f7a9a2661b0c9a6d131b9a5388f7f065e9930 *logs/glue_T_more.log\nf1e826ad49bbbf0af838f8762f25b7cf92bb0b96276b449c6024ec6366ccb2e0 *logs/glue_crosscheck.log\nebaa0beb296a51fc4670031752ac883603e5388052c8c547c80ede1b6cb948da *logs/glue_fixed_3.log\n507b36f5cb53fab244debce24f1ffbb7f7cebd7fcc96c98015747fbafd258da2 *logs/glue_fp.log\nc1eb0a1f020694873bbec048392f6f1606a0e90746af88bec3327971dfd98904 *logs/glue_random_1.log\n76b764ad884357637c07358780c1e4f692a7133da17547b4cf02bddab3423a17 *logs/glue_random_7.log\n1faf9ef99e5df15d6ab3835b43aba8459b7a0fd60c75aa96a9c17da0fd5bcd1b *logs/lean_axioms.log\n7b622a30c02ed508e8ba8f15b09a06153d2ef5dfd2f3ab9c952c0df0e2ade13f *logs/lean_axioms2.log\nf3579a2cfcc5da650dd02386b020011e471cc0243c84d64945a01f7018c3a4bd *logs/lean_axioms_final.log\n2fa0441789721f9c710ce3d9cc481551d48f6a9e3bb9b9b955d5f8f6a5728632 *logs/lean_bridge1.log\ne5aa8e60f0fd6f7da041d0835779d54cfd6599d28acaa8e10941c17b10f541d9 *logs/lean_bridge2.log\n2fbb31dd98d06938b8dde7805448ed02f5814a2477dab2237e0fd8cdcfee3af4 *logs/lean_bridge3.log\nd81dea4d7589654746964dd034fa6b25c41a764906078d4cd0a589fb516a8ba5 *logs/lean_build3.log\n091771baf5f86e2e811faa688f960d9e9c44175a20dc6a3f85ab0d723742b513 *logs/lean_build4.log\n593bdb45cfc5eb880410f3a4f59f2ae3319a5f5635f75fda06c81589519d38be *logs/lean_build5.log\n24e80b40e5739a0a2f607b792ee350a097359ebbe8dcfc40ff819af8c8543b2f *logs/lean_build6.log\nc5e38736f8ffed2e77ac38e7853112f69fd48199aa4bae2de2d589d9b37b27d1 *logs/lean_build7.log\n8fb56e79384e09ab91e56a017d807bd974b5b50a152a12b3341721122324f2df *logs/lean_build8.log\nc7c4488884c94a4169ac8361b8a9931f3b6fe354dfc3b145d1657cd27da310b0 *logs/lean_build9.log\n1c20de462a461c69d152a47b8af7e0f41409695e4624be3a678d5cf98e9eb99b *logs/lean_fix1.log\n5693ed564f61c41612105399581a66566f3fca8f7bd43be58bac0d3aceb9fa41 *logs/lean_fix2.log\n7d7930667256842e866af64ed1d9d544f857917f9e651771b6c36dc1b7802c03 *logs/lean_full.log\nc44c9f405b57fa7d0550cc5e36015cdb545a1234d875bd12aa77d48bfbd6130a *logs/lean_graph1.log\na8984208bb56a32cedbd44ed43c6d37d09c65db7b723813342334cbf02c140ca *logs/lean_graph2.log\n83269b63e86b12edc56aa5b7ee4eea25f0365feb1e94c8b34460bb9c630c4ef7 *logs/lean_graph3.log\n6dc9f5dff7dcde4bff182e1dd9aad970c5f396960f6b8778368f0205139edfa4 *logs/lean_install.log\naa2bebfb0e7395994995a1c0c8cb9066b2783d425cd2fa998fbba5d4c7eecb04 *logs/lean_step5_build1.log\n6b723a73517c8dff94eb5027365a1eadfe956dd54c96dfeaf647760fc1954f3e *logs/lean_step5_build2.log\n8036a0821b3ceb220b75ff83e2f7a2f1e9005ef3f9fe62993599d90b3362368c *logs/lean_tri1.log\n376c9c13765d0f1009c570f80e631b17e761be4bcdc0132e05ed5f4321c9e3db *logs/lean_tri2.log\n283d6b08aa31675150a2d55cc4bed840705cf4408237c26937c306484b126931 *logs/lean_tri3.log\n6f71b17c41162e3e8f2dee500874622981b67203df36b189110d425f99a61086 *logs/lean_tri4.log\nd9cb2bec6cca5474480879c4653305cb00a48f78cc2b58f73c2e5be63d9e546e *logs/lean_tri5.log\n6adb4c5e024a58b0a88fef16da02c1f51cd34e3b4461b4dd13cb1b785b978bc5 *logs/lean_tri6.log\n40232fe7375423b7d2a14a3b9052035998375f8c3da0305e2e873334a11396e8 *logs/lean_tri7.log\n26191d6d6716ece03707b3e27119700b6d316130aaef7b157aa1c4b51d8d05cc *logs/lean_tri8.log\nb67f58b202487145636325b1a854c88dfc7adc10a03e70f907be1fdf01850774 *logs/pdf_p1.png\na51ecff3277f294bf5dd8264ad84a870a93aada8617412f33467f4c6a72bbed5 *logs/pdf_p2.png\ne0a0ec9b9246ac65659ffa9557bf14c93cb7142c75b208aea3d1c5d009455faf *logs/pdf_p3.png\n2624bf04af2d24b6cb6c6b8b0caeb8504674206947dcf499ae63a111eac8bdaf *logs/pdf_p4.png\n43d2b151df260f976a11ac375d8062d784ec75870f5f4e7df76f151738ea13ce *logs/pdf_p5.png\nb13527cadfe0b496b8f78fb159f0b72363d37ca11ee40d3b679b6b1b4c3aad66 *logs/pdf_p6.png\n88b55a886cfb5a6b4a7bcd22d43324eea29ec3e3d8b1243465bc4bb24cc0da96 *notes/P1_recollement.md\n0ada530440b1ff021ec5f73712b679837c389ee7ba353f60b2d302b724b44c89 *pdf/preuve_c3.pdf\n324b2a235d51d6aac0b135b9df39945e8f0f4338f5c4e40707d16fcd2ea652a5 *pdf/preuve_c3.tex\na00cb2c8f4927d4d4cdd1d1b49070fa759c46362d063d00c3a0bab69a72e17b3 *pdf/preuve_c3_v1_ishida.tex\nbb81472f2247a4b28bf115f6bdf45c53adbe153f5cdc9fcee120e67a8628e2a7 *pdf/preuve_c3_v2_avant_lemme_fix.tex\n1586e985e55dfe7d9d2adb3cf95648d828a92d94ac1519c0113ff771d05c3ab7 *requirements.txt\n8ed7c6ba70913827682977fa30cc63421f926a99157c1de5597fb3b44db2c06c *scripts/__pycache__/criterion_scan.cpython-314.pyc\n750e0eed781c01f205befe82e92f30d906f759fb839c2ec2e4918ad1138744e7 *scripts/__pycache__/glue.cpython-314.pyc\n93ffb6010f4f34c71c2b963871d30388924c40a0738f421380481fa038b8360e *scripts/__pycache__/glue_fp.cpython-314.pyc\n8f18f10078d9064e34d5f986638e0b66cd200c4ac3c191c80d80791a694be62a *scripts/__pycache__/glue_random.cpython-314.pyc\n5d2ebf2d9eeaec19aa64c706c09718c6f7d220abfca500493faa83ad6f6ec0a0 *scripts/criterion_scan.py\nef3f115eae08da48373b734b95396e8c468aab5deff1131cfc37053f6f99a11e *scripts/criterion_scan2.py\n1b776b878c13d75a49b6da89517dda133ebf55366e1c880062cc3e5df0da7ebf *scripts/glue.py\n38c2f507fd3fb6d388a3189254b54cc08ffd8c8c661c2ba38f8b5f38a62e2108 *scripts/glue_crosscheck.py\n324e69fbed09d9096bd1c8f6838cda90c35f49a6a3529b0debec51b3b8a94c29 *scripts/glue_fixed.py\nbf46275a1a21820caaa0fad4bd8e5a9a4f7ea9b7d3d272d8a71c5f29a08199ef *scripts/glue_fp.py\nc15dd9e4792f38f749c78165def2c21be26daa92a0c78e9074085e24dd2c46fe *scripts/glue_random.py\n4962943ea642ae7babac335e1c53231ce3023d3a798825d9c257ceae280596a6 *scripts/pdf_fix_bel.py\n1b1320bf649a0408047f73cd1bbeb7984e274804ea142a1efe00e8a923297a9a *scripts/pdf_fixlemma.py\n26c787950c47ed65bdd10b1775a84ebb10b604f70f1d478951b4c5f592849728 *scripts/pdf_fixlemma2.py\nb50bdecb851526438f75ea766d924cc0b8f92b99d8a20c21e8f5f99936504c9f *scripts/pdf_relax.py\n6584465b03ce395d1f10cb4326c424a69fa49b6f96c3680df0b8496e9d7cb770 *scripts/pdf_tighten.py\n215598344866bf9869ce23814e0098beafe985e4713952465cf6326c6f22211e *scripts/pdf_tighten2.py\nad9223bbe1130bf5b251ad8a28f81aca9940e9438bc78980bd64294977c718e8 *scripts/pdf_update_triangle.py\nfad2e980a191c15884cc1d80d170ffc5fa84f3774541020145b66d1a644c6111 *tools/elan.zip\n320f91a39ddf3225443b2f84778f090c77b96cafb8c71abdd58463726faa2c58 *tools/elan_pkg/elan-init.exe\n86caa884c31e9c6afd58f5cbe72e039fbb2348ad93e0d19181f81e7186dc5cd9 *tools/install_lean.sh\nf61ce51f0b0ade1015b7de7ef368541c5424e9756ecbd0d7af97d6d48030845f *tools/tectonic.zip\n99ffcfdbf1ebf8bdda9e791942e3d06aedb12463fddc33f07de6f5211c8bf08d *tools/tectonic_pkg/tectonic.exe\n",
+        "encoding": "utf-8",
+        "sha": "b329d048f8b2e64f72fa5cfb75442191b451da66",
+        "display_url": "https://github.com/amazing-source/conway99-c3-experimental/blob/8f19b6da5facb26cff177df586974fef00dc2398/SHA256SUMS",
+        "display_title": "SHA256SUMS"
+    }
+}

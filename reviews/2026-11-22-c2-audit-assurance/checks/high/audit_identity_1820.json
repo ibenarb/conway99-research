@@ -1,0 +1,61 @@
+{
+    "start_utc": "2026-11-23T17:19:47.837933+00:00",
+    "identity": {
+        "pid": 99984,
+        "created": 134399279878341421,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "script": "audit_high_evidence_v2.py",
+    "auditor_sha256": "7317bd2ba11113300416fc750d59a95414645efacd0a233ba4837422f0dce8ea",
+    "output": "audit_complete_1820_v2.json",
+    "resource_before_start": {
+        "measured_at": 1587925.937,
+        "intervals": [
+            {
+                "seconds": 2.0164249998051673,
+                "system_busy_cpu": 2.549375751885987,
+                "system_idle_cpu": 21.332618373684262,
+                "known_c2_cpu": 1.3405532069187713,
+                "conservative_other_cpu": 1.2088225449672159,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0172279002144933,
+                "system_busy_cpu": 2.4321743713133825,
+                "system_idle_cpu": 21.64945021599014,
+                "known_c2_cpu": 1.2703076334248242,
+                "conservative_other_cpu": 1.1618667378885583,
+                "named_other_load": []
+            }
+        ],
+        "foreign_samples": [
+            1.2088225449672159,
+            1.1618667378885583
+        ],
+        "c2_worker_budget": 18,
+        "ram_free_gib": 33.0355339050293,
+        "disk_free_gib": 45.26167297363281,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 96288,
+                "created": 134399279147686522,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 26032,
+                "created": 134399279835447900,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "scope": "Final full3156-job ledger and immutable evidence readback after natural research completion. No search rerun or source changes.",
+    "duplicate_precheck": "Read-only Win32_Process inventory2026-11-23T18:19:22.0886503+01:00 found zero matching auditors;1744highidentity exited."
+}

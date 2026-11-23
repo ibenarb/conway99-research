@@ -1,0 +1,246 @@
+{
+    "at_utc": "2026-11-23T11:11:53.535673+00:00",
+    "controller_live": true,
+    "all32bound_files_and_controller_plan_match": true,
+    "both_auditors_match_published_sources": true,
+    "previous_auditor_identities_exited": true,
+    "resource": {
+        "measured_at": 1565851.64,
+        "intervals": [
+            {
+                "seconds": 2.0159797000233084,
+                "system_busy_cpu": 2.3019205004625523,
+                "system_idle_cpu": 21.74811085622196,
+                "known_c2_cpu": 0.713052814958097,
+                "conservative_other_cpu": 1.5888676855044552,
+                "named_other_load": [
+                    {
+                        "pid": 100044,
+                        "created": 134399059106400053,
+                        "name": "Zoom.exe",
+                        "logical_cpu_equivalents": 0.3410252593277855
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0154119001235813,
+                "system_busy_cpu": 2.558410020147161,
+                "system_idle_cpu": 21.34334177413677,
+                "known_c2_cpu": 1.3024632829840093,
+                "conservative_other_cpu": 1.2559467371631519,
+                "named_other_load": [
+                    {
+                        "pid": 100044,
+                        "created": 134399059106400053,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.07752757636809579
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.015505515273619158
+                    },
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.015505515273619158
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            1.5888676855044552,
+            1.2559467371631519
+        ],
+        "c2_worker_budget": 18,
+        "ram_free_gib": 32.264652252197266,
+        "disk_free_gib": 53.15771484375,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 93632,
+                "created": 134398684844117364,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            },
+            {
+                "pid": 56364,
+                "created": 134399059092640244,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "controller_progress": {
+        "status": "RUNNING",
+        "updated_utc": "2026-11-23T11:11:52.934046+00:00",
+        "resource": {
+            "measured_at": 1565851.031,
+            "intervals": [
+                {
+                    "seconds": 2.0168159999884665,
+                    "system_busy_cpu": 2.7967970305829866,
+                    "system_idle_cpu": 21.057325011425366,
+                    "known_c2_cpu": 0.4880836923178065,
+                    "conservative_other_cpu": 2.30871333826518,
+                    "named_other_load": [
+                        {
+                            "pid": 21216,
+                            "created": 134383400710028416,
+                            "name": "ChatGPT.exe",
+                            "logical_cpu_equivalents": 0.2866523272342673
+                        },
+                        {
+                            "pid": 95648,
+                            "created": 134399059090132958,
+                            "name": "pwsh.exe",
+                            "logical_cpu_equivalents": 0.178189284496977
+                        },
+                        {
+                            "pid": 100044,
+                            "created": 134399059106400053,
+                            "name": "Zoom.exe",
+                            "logical_cpu_equivalents": 0.15494720391041478
+                        },
+                        {
+                            "pid": 56364,
+                            "created": 134399059092640244,
+                            "name": "python.exe",
+                            "logical_cpu_equivalents": 0.08522096215072812
+                        },
+                        {
+                            "pid": 21372,
+                            "created": 134383400710633236,
+                            "name": "codex.exe",
+                            "logical_cpu_equivalents": 0.05423152136864517
+                        },
+                        {
+                            "pid": 29068,
+                            "created": 134399059090307864,
+                            "name": "conhost.exe",
+                            "logical_cpu_equivalents": 0.030989440782082954
+                        }
+                    ]
+                },
+                {
+                    "seconds": 2.016865599900484,
+                    "system_busy_cpu": 2.494588633098929,
+                    "system_idle_cpu": 21.552626016401305,
+                    "known_c2_cpu": 1.0071320568411826,
+                    "conservative_other_cpu": 1.4874565762577465,
+                    "named_other_load": [
+                        {
+                            "pid": 100044,
+                            "created": 134399059106400053,
+                            "name": "exited-retained",
+                            "logical_cpu_equivalents": 0.26340376871230925
+                        },
+                        {
+                            "pid": 21372,
+                            "created": 134383400710633236,
+                            "name": "codex.exe",
+                            "logical_cpu_equivalents": 0.015494339336018192
+                        }
+                    ]
+                }
+            ],
+            "foreign_samples": [
+                2.30871333826518,
+                1.4874565762577465
+            ],
+            "c2_worker_budget": 17,
+            "ram_free_gib": 32.28129196166992,
+            "disk_free_gib": 53.15772247314453,
+            "reserve_cpu_equivalents": 4,
+            "roots_requested": [
+                {
+                    "pid": 81312,
+                    "created": 134399058917215321,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                },
+                {
+                    "pid": 96384,
+                    "created": 134399058987837376,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                },
+                {
+                    "pid": 30144,
+                    "created": 134399059058552636,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                },
+                {
+                    "pid": 93632,
+                    "created": 134398684844117364,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "missing_roots": [
+                {
+                    "pid": 81312,
+                    "created": 134399058917215321,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+        },
+        "failures": [],
+        "families": {
+            "high": {
+                "total": 3156,
+                "closed": 1910,
+                "pending": 1244,
+                "active": {
+                    "2644.0.0": {
+                        "identity": {
+                            "pid": 96384,
+                            "created": 134399058987837376,
+                            "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                        },
+                        "adopted": false
+                    },
+                    "2644.1.0": {
+                        "identity": {
+                            "pid": 12532,
+                            "created": 134399059129292240,
+                            "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                        },
+                        "adopted": false
+                    }
+                }
+            },
+            "low": {
+                "total": 92,
+                "closed": 92,
+                "pending": 0,
+                "active": {}
+            },
+            "singleton": {
+                "total": 3308,
+                "closed": 1502,
+                "pending": 1804,
+                "active": {
+                    "1616": {
+                        "identity": {
+                            "pid": 81312,
+                            "created": 134399058917215321,
+                            "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                        },
+                        "adopted": false
+                    },
+                    "1617": {
+                        "identity": {
+                            "pid": 30144,
+                            "created": 134399059058552636,
+                            "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                        },
+                        "adopted": false
+                    }
+                }
+            }
+        },
+        "full_independent_evidence_audit_required": true,
+        "old_sources_unchanged": true
+    }
+}

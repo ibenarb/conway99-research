@@ -1,0 +1,125 @@
+{
+    "status": "ALL_FIVE_ASSURANCE_CHECKS_COMPLETE_WITH_DOCUMENTED_SCOPE",
+    "at_utc": "2026-11-23T18:44:36.985386+00:00",
+    "frozen_c2": "d73a176f942b1fd67bac3b60c07d181487d84b66",
+    "frozen_c3": "9678dec98108003359cde7b404d57a6e09dd865c",
+    "final_s1_acceptance": {
+        "at_utc": "2026-11-23T18:36:41.925107+00:00",
+        "status": "FULL_S1_COVERAGE_AND_FINAL_REPORT_INDEPENDENTLY_ACCEPTED",
+        "source_sha256": "5f266cbf266d80b21269a85eac421900b2c684444d36d77e00aa4a38ebcf1b09",
+        "resource": {
+            "measured_at": 1592539.078,
+            "intervals": [
+                {
+                    "seconds": 2.0160620999522507,
+                    "system_busy_cpu": 0.10850360214855533,
+                    "system_idle_cpu": 23.847541700793197,
+                    "known_c2_cpu": 0.007750257296325381,
+                    "conservative_other_cpu": 0.10075334485222995,
+                    "named_other_load": [
+                        {
+                            "pid": 88656,
+                            "created": 134396696553864618,
+                            "name": "WINWORD.EXE",
+                            "logical_cpu_equivalents": 0.023250771888976143
+                        }
+                    ]
+                },
+                {
+                    "seconds": 2.016798899974674,
+                    "system_busy_cpu": 0.10846396237262275,
+                    "system_idle_cpu": 23.939545980814593,
+                    "known_c2_cpu": 0.007747425883758768,
+                    "conservative_other_cpu": 0.10071653648886399,
+                    "named_other_load": [
+                        {
+                            "pid": 88656,
+                            "created": 134396696553864618,
+                            "name": "WINWORD.EXE",
+                            "logical_cpu_equivalents": 0.023242277651276306
+                        }
+                    ]
+                }
+            ],
+            "foreign_samples": [
+                0.10075334485222995,
+                0.10071653648886399
+            ],
+            "c2_worker_budget": 19,
+            "ram_free_gib": 36.01964569091797,
+            "disk_free_gib": 44.7781867980957,
+            "reserve_cpu_equivalents": 4,
+            "roots_requested": [
+                {
+                    "pid": 99660,
+                    "created": 134399325967175660,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "missing_roots": [],
+            "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+        },
+        "auditor_exited": true,
+        "stderr_empty": true,
+        "final_stdout_matches_report": true,
+        "frozen32files_unchanged": true,
+        "singleton": {
+            "audited": 3308,
+            "nonphysical": 272,
+            "total_charts": 3580,
+            "full_S1_complete": true,
+            "audit_sha256": "f24e41b8fe1646cb789418d35e0ed26e209603500367b6a238cf268c815bf785",
+            "old2738rows_and_bindings_retained": true,
+            "all3308planned_results_rebound": true,
+            "totals": {
+                "raw_roots": 177842,
+                "orbit_representatives": 62705,
+                "attachments": 104942290,
+                "first_survivors": 0,
+                "second_layer_calls": 0
+            },
+            "scope": "Full base partition; exact unary roots and complete stabilizer orbits for audited jobs; all bytes and exhaustive transcript rows reread. Attachment completeness and search predicate correctness retain the separately documented implementation/review dependencies. No independent reproduction of the original second-layer survivor ledger is claimed."
+        },
+        "high": {
+            "audited": 3156,
+            "full_S2_complete": true,
+            "prior_acceptance_retained": "recovery_v1/audit_acceptance_1831_v1.json"
+        },
+        "low": {
+            "audited": 92,
+            "prior_complete_audit_retained": true
+        },
+        "no_second_layer_survivor_ledger_reproduction_claim": true,
+        "no_formal_search_correctness_or_third_solver_claim": true
+    },
+    "verified_evidence_commit": "f7ae0b8f4d9f21e71148a5a03cafabaaa3f4c187",
+    "verified_public_status_commit": "ff92f84a3f5a30292c5a04f980a273fe49f3c8dd",
+    "final_manifest_readback": {
+        "status": "FINAL_CLOSING_MANIFEST_FULL_READBACK_PASS",
+        "at_utc": "2026-11-23T18:44:36.973386+00:00",
+        "count": 48256,
+        "total_bytes": 12778418628,
+        "manifest_sha256": "83c2b5546c982cba1a290767c4d9daedc15f2c3947e0ef1376910d331d3f2518",
+        "previous_entries_verified_unchanged": 48229,
+        "previous_entries_updated": [
+            "progress.json"
+        ],
+        "counts": {
+            "singleton": 3308,
+            "nonphysical": 272,
+            "high": 3156,
+            "low": 92
+        },
+        "all_final_audits_and_main_publication_receipts_preserved": true
+    },
+    "scope_limitations": [
+        "All3580charts reconciled:3308physical searches naturally exhaust and272nonphysical cases independently reconstructed. Exact unary roots and full stabilizer orbits, input/output byte readbacks, source/result bindings and complete ROOT/FINAL transcripts pass. All cases close under stronger exact first-layer conditions, including original second-layer cases183/3377. No reproduction of the original second-layer survivor ledger is claimed. Attachment completeness and search predicate validity retain separately documented implementation/review dependencies.",
+        "All3156 unique high-rank jobs (3050baseline and106strong) naturally exhausted, both packet parities and both rank-10 modes, all98strong orbit regenerations retained. Final separate ledger and full input-readback audit passes with no open job, missing key or failure. Referee implementation/input dependency retained; the auditor is not a third solver or formal proof of the search predicates.",
+        "Completed: all 92 chart-parities close under the second full-depth residual-Gram solver: six rank-8 cases, 64 nonsplit rank-9 cases and 22 split rank-9 cases. Both packet parities are covered. The separate auditor reconciles all 204 raw entries and all 92 live keys, verifies the source/input/output hashes, exact finite-field determinants, literal base capacities, canonical star Gram data and natural search exhaustion. All 96,722 stars close, with no open result or depth cutoff. Both chart-333 parities close all 10,424 stars each. The same complete audit passes from the assembled private dossier. Previously completed 2,366 finite-Gram controls, 3,200 exact pair controls and one positive/six negative auditor controls are retained. Input generation retains the disclosed referee-code dependency; the new residual search is a second implementation relative to Zhang, and the evidence auditor is not a third search or a formal proof of solver correctness. S3 assurance is complete.",
+        "All31 classes,465 nonisometry pairs,seven-unit frames,all248 atlas geometries and46 Farkas certificates checked; mass double count proved using Conway-Sloane1982 Theorem1,Table1,Section2.2 and Table2. Exact m15 agrees.",
+        "All24project modules freshly rebuilt;28pinned source/configuration files unchanged. Normal and paranoid comparators accept all7statements with all6kernels. A separate auditor reread all192 archived fresh build files and validated phase logs and axiom reports. Five historical log mismatches present at first commits; pre-commit cause remains unknown."
+    ],
+    "remaining_research": [],
+    "automation": "Pause after this closing receipt commit has been pushed and independently verified.",
+    "receipt_boundary": "This closing commit contains all main publication receipts and uses Git content addressing for its own identity; its own post-push acknowledgement is retained locally, avoiding recursive self-referential manifests."
+}

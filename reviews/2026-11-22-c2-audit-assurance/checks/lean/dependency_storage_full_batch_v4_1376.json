@@ -1,0 +1,104 @@
+{
+    "resource": {
+        "measured_at": 1522518.421,
+        "foreign_samples": [
+            3.2399766961824197,
+            3.3798822577251952
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 18.598018646240234,
+        "disk_free_gib": 35.26768112182617,
+        "intervals": [
+            {
+                "seconds": 2.015832400182262,
+                "system_busy_cpu": 10.371025883952335,
+                "system_idle_cpu": 13.673011703506665,
+                "known_c2_cpu": 7.131049187769915,
+                "conservative_other_cpu": 3.2399766961824197,
+                "named_other_load": [
+                    {
+                        "pid": 79584,
+                        "created": 134398625681906330,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9766436931076189
+                    },
+                    {
+                        "pid": 19272,
+                        "created": 134383400639509126,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.023253421264467118
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.023253421264467118
+                    },
+                    {
+                        "pid": 19360,
+                        "created": 134383400649957323,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.015502280842978078
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0202256999909878,
+                "system_busy_cpu": 10.394878156482061,
+                "system_idle_cpu": 13.558200452613878,
+                "known_c2_cpu": 7.014995898756866,
+                "conservative_other_cpu": 3.3798822577251952,
+                "named_other_load": [
+                    {
+                        "pid": 79584,
+                        "created": 134398625681906330,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.997722680198055
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.07734284342620582
+                    },
+                    {
+                        "pid": 26476,
+                        "created": 134398625723475163,
+                        "name": "codex-windows-sandbox-setup.exe",
+                        "logical_cpu_equivalents": 0.015468568685241163
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "exit_code": 0,
+    "files": 16
+}

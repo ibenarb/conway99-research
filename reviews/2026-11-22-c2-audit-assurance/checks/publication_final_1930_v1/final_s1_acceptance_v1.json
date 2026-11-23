@@ -1,0 +1,89 @@
+{
+    "at_utc": "2026-11-23T18:36:41.925107+00:00",
+    "status": "FULL_S1_COVERAGE_AND_FINAL_REPORT_INDEPENDENTLY_ACCEPTED",
+    "source_sha256": "5f266cbf266d80b21269a85eac421900b2c684444d36d77e00aa4a38ebcf1b09",
+    "resource": {
+        "measured_at": 1592539.078,
+        "intervals": [
+            {
+                "seconds": 2.0160620999522507,
+                "system_busy_cpu": 0.10850360214855533,
+                "system_idle_cpu": 23.847541700793197,
+                "known_c2_cpu": 0.007750257296325381,
+                "conservative_other_cpu": 0.10075334485222995,
+                "named_other_load": [
+                    {
+                        "pid": 88656,
+                        "created": 134396696553864618,
+                        "name": "WINWORD.EXE",
+                        "logical_cpu_equivalents": 0.023250771888976143
+                    }
+                ]
+            },
+            {
+                "seconds": 2.016798899974674,
+                "system_busy_cpu": 0.10846396237262275,
+                "system_idle_cpu": 23.939545980814593,
+                "known_c2_cpu": 0.007747425883758768,
+                "conservative_other_cpu": 0.10071653648886399,
+                "named_other_load": [
+                    {
+                        "pid": 88656,
+                        "created": 134396696553864618,
+                        "name": "WINWORD.EXE",
+                        "logical_cpu_equivalents": 0.023242277651276306
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            0.10075334485222995,
+            0.10071653648886399
+        ],
+        "c2_worker_budget": 19,
+        "ram_free_gib": 36.01964569091797,
+        "disk_free_gib": 44.7781867980957,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 99660,
+                "created": 134399325967175660,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "auditor_exited": true,
+    "stderr_empty": true,
+    "final_stdout_matches_report": true,
+    "frozen32files_unchanged": true,
+    "singleton": {
+        "audited": 3308,
+        "nonphysical": 272,
+        "total_charts": 3580,
+        "full_S1_complete": true,
+        "audit_sha256": "f24e41b8fe1646cb789418d35e0ed26e209603500367b6a238cf268c815bf785",
+        "old2738rows_and_bindings_retained": true,
+        "all3308planned_results_rebound": true,
+        "totals": {
+            "raw_roots": 177842,
+            "orbit_representatives": 62705,
+            "attachments": 104942290,
+            "first_survivors": 0,
+            "second_layer_calls": 0
+        },
+        "scope": "Full base partition; exact unary roots and complete stabilizer orbits for audited jobs; all bytes and exhaustive transcript rows reread. Attachment completeness and search predicate correctness retain the separately documented implementation/review dependencies. No independent reproduction of the original second-layer survivor ledger is claimed."
+    },
+    "high": {
+        "audited": 3156,
+        "full_S2_complete": true,
+        "prior_acceptance_retained": "recovery_v1/audit_acceptance_1831_v1.json"
+    },
+    "low": {
+        "audited": 92,
+        "prior_complete_audit_retained": true
+    },
+    "no_second_layer_survivor_ledger_reproduction_claim": true,
+    "no_formal_search_correctness_or_third_solver_claim": true
+}
