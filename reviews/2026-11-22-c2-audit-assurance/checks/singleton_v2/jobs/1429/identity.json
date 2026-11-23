@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 1429,
+    "identity": {
+        "pid": 71668,
+        "created": 134399033098594747,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795429714.150991,
+    "resource": {
+        "measured_at": 1563252.265,
+        "intervals": [
+            {
+                "seconds": 2.0167268000077456,
+                "system_busy_cpu": 2.184852207043154,
+                "system_idle_cpu": 21.840774367569683,
+                "known_c2_cpu": 0.007747702861855155,
+                "conservative_other_cpu": 2.177104504181299,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016946899937466,
+                "system_busy_cpu": 2.308563502660563,
+                "system_idle_cpu": 21.77641612744578,
+                "known_c2_cpu": 0.007746857391478399,
+                "conservative_other_cpu": 2.3008166452690846,
+                "named_other_load": [
+                    {
+                        "pid": 96608,
+                        "created": 134399033123131801,
+                        "name": "backgroundTaskHost.exe",
+                        "logical_cpu_equivalents": 0.10070914608921919
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.177104504181299,
+            2.3008166452690846
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 32.909549713134766,
+        "disk_free_gib": 54.90292739868164,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 71668,
+                "created": 134399033098594747,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

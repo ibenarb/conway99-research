@@ -1,0 +1,61 @@
+{
+    "status": "RUNNING",
+    "chart": 1495,
+    "identity": {
+        "pid": 47356,
+        "created": 134399042152251115,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795430619.5224445,
+    "resource": {
+        "measured_at": 1564157.64,
+        "intervals": [
+            {
+                "seconds": 2.017176700057462,
+                "system_busy_cpu": 6.0573523378749785,
+                "system_idle_cpu": 17.8932019187867,
+                "known_c2_cpu": 0.007745974856617619,
+                "conservative_other_cpu": 6.049606363018361,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0173710000235587,
+                "system_busy_cpu": 6.06451416217301,
+                "system_idle_cpu": 17.968930850882995,
+                "known_c2_cpu": 0.007745228815035773,
+                "conservative_other_cpu": 6.056768933357974,
+                "named_other_load": [
+                    {
+                        "pid": 85120,
+                        "created": 134399041232495756,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.06970705933532195
+                    },
+                    {
+                        "pid": 58420,
+                        "created": 134399041884359198,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.015490457630071546
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            6.049606363018361,
+            6.056768933357974
+        ],
+        "c2_worker_budget": 13,
+        "ram_free_gib": 32.67849349975586,
+        "disk_free_gib": 53.61860656738281,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 47356,
+                "created": 134399042152251115,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

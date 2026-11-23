@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 1475,
+    "identity": {
+        "pid": 70072,
+        "created": 134399039322881424,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795430336.5738528,
+    "resource": {
+        "measured_at": 1563874.687,
+        "intervals": [
+            {
+                "seconds": 2.0175900999456644,
+                "system_busy_cpu": 3.1054994769099724,
+                "system_idle_cpu": 20.95631317835009,
+                "known_c2_cpu": 0.007744387722967512,
+                "conservative_other_cpu": 3.0977550891870047,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0180833998601884,
+                "system_busy_cpu": 2.6556756774131802,
+                "system_idle_cpu": 21.33831535554147,
+                "known_c2_cpu": 0.015484989372671606,
+                "conservative_other_cpu": 2.6401906880405086,
+                "named_other_load": [
+                    {
+                        "pid": 100168,
+                        "created": 134399039040111663,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.11613742029503704
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.0977550891870047,
+            2.6401906880405086
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 32.94166946411133,
+        "disk_free_gib": 53.72663497924805,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 70072,
+                "created": 134399039322881424,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
