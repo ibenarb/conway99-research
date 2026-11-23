@@ -1,0 +1,57 @@
+{
+    "status": "RUNNING",
+    "chart": 3523,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795398658.6655724,
+    "identity": {
+        "pid": 98164,
+        "created": 134398722543822873,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1532196.781,
+        "intervals": [
+            {
+                "seconds": 2.0150987999513745,
+                "system_busy_cpu": 2.062553955220604,
+                "system_idle_cpu": 21.951467094847857,
+                "known_c2_cpu": 0.007753962237671443,
+                "conservative_other_cpu": 2.0547999929829324,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.014492099871859,
+                "system_busy_cpu": 1.977855857689114,
+                "system_idle_cpu": 22.01237225145767,
+                "known_c2_cpu": 0.007756297481133781,
+                "conservative_other_cpu": 1.9700995602079803,
+                "named_other_load": [
+                    {
+                        "pid": 10360,
+                        "created": 134398558326945140,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.023268892443401343
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.0547999929829324,
+            1.9700995602079803
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 34.064666748046875,
+        "disk_free_gib": 35.47750473022461,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 98164,
+                "created": 134398722543822873,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
