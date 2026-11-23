@@ -1,0 +1,274 @@
+{
+    "status": "SECOND_SINGLETON_SOLVER_CLOSED",
+    "chart": 56,
+    "identity": {
+        "pid": 84140,
+        "created": 134398557889076228,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795382193.2182815,
+    "resource": {
+        "measured_at": 1515739.25,
+        "foreign_samples": [
+            5.150365262465023,
+            5.409278231336748
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 20.775550842285156,
+        "disk_free_gib": 35.957427978515625,
+        "intervals": [
+            {
+                "seconds": 2.0174539999570698,
+                "system_busy_cpu": 15.303942494181777,
+                "system_idle_cpu": 8.689789209753012,
+                "known_c2_cpu": 10.153577231716755,
+                "conservative_other_cpu": 5.150365262465023,
+                "named_other_load": [
+                    {
+                        "pid": 94600,
+                        "created": 134398557623261117,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990934118165229
+                    },
+                    {
+                        "pid": 55900,
+                        "created": 134398557764064297,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990934118165229
+                    },
+                    {
+                        "pid": 30848,
+                        "created": 134398557842489875,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9990934118165229
+                    },
+                    {
+                        "pid": 9636,
+                        "created": 134398557798264434,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.4569496999780996
+                    },
+                    {
+                        "pid": 98148,
+                        "created": 134398557901340404,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.023234730507360996
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.015489820338240664
+                    },
+                    {
+                        "pid": 56200,
+                        "created": 134398557901932040,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015489820338240664
+                    }
+                ]
+            },
+            {
+                "seconds": 2.021988800028339,
+                "system_busy_cpu": 15.485990822284052,
+                "system_idle_cpu": 8.623935008816867,
+                "known_c2_cpu": 10.076712590947304,
+                "conservative_other_cpu": 5.409278231336748,
+                "named_other_load": [
+                    {
+                        "pid": 94600,
+                        "created": 134398557623261117,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0045802429625383
+                    },
+                    {
+                        "pid": 55900,
+                        "created": 134398557764064297,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0045802429625383
+                    },
+                    {
+                        "pid": 30848,
+                        "created": 134398557842489875,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.4404697988374206
+                    },
+                    {
+                        "pid": 68928,
+                        "created": 134398557701236428,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.1854609679315455
+                    },
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.030910161321924253
+                    },
+                    {
+                        "pid": 82396,
+                        "created": 134398557923547747,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.02318262099144319
+                    },
+                    {
+                        "pid": 29336,
+                        "created": 134395031583049110,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015455080660962127
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.015455080660962127
+                    },
+                    {
+                        "pid": 54468,
+                        "created": 134398552004565595,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015455080660962127
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "setup": {
+        "chart": 56,
+        "raw_root_signs": 26,
+        "root_representatives": 9,
+        "orbit_audit": {
+            "stabilizer_order": 2,
+            "orbits": [
+                {
+                    "representative": 486,
+                    "members": [
+                        486,
+                        729,
+                        3366,
+                        3609
+                    ]
+                },
+                {
+                    "representative": 870,
+                    "members": [
+                        870,
+                        921,
+                        3174,
+                        3225
+                    ]
+                },
+                {
+                    "representative": 1446,
+                    "members": [
+                        1446,
+                        2649
+                    ]
+                },
+                {
+                    "representative": 1625,
+                    "members": [
+                        1625,
+                        2470
+                    ]
+                },
+                {
+                    "representative": 1685,
+                    "members": [
+                        1685,
+                        1705,
+                        2390,
+                        2410
+                    ]
+                },
+                {
+                    "representative": 1686,
+                    "members": [
+                        1686,
+                        1706,
+                        2389,
+                        2409
+                    ]
+                },
+                {
+                    "representative": 1689,
+                    "members": [
+                        1689,
+                        2406
+                    ]
+                },
+                {
+                    "representative": 1690,
+                    "members": [
+                        1690,
+                        2405
+                    ]
+                },
+                {
+                    "representative": 1702,
+                    "members": [
+                        1702,
+                        2393
+                    ]
+                }
+            ]
+        },
+        "attachments": 27443,
+        "unsigned_patterns": 11119,
+        "unsigned_star_rank": 11,
+        "signed_star_rank": 11,
+        "unsigned_basis_determinant": "449280",
+        "signed_basis_determinant": "4014489600",
+        "setup_sha256": "8e519a6f2603a1c5625cbeef1dfc7471a2058f5bb2bff0e840905b7ac2c52902",
+        "source_sha256": "570a6c38e9e75ffd8885a34f3233d7735ddd6d5862962532d3f80c61881f4e12",
+        "catalogue_sha256": "2b776dcaadb5edea804fa38b7821ab91b703216d4ab99ca9f7497f5e9743ccce",
+        "elapsed_seconds": 6.17158842086792
+    },
+    "roots_completed": 9,
+    "roots_planned": 9,
+    "exit_code": 0,
+    "final_line": "FINAL chart 56 roots 9 planned 9 open 0 matches 106377 quartets 372402 tcaps 30121 hpsd 4534 hdet 2098 lifts 24431 fpsd 4503 fdet 2 rank 0 first 0 second 0 pair_calls 0 pair_pass 0",
+    "lossless_input_archive": {
+        "file": "setup.txt.gz",
+        "uncompressed_bytes": 2940805,
+        "uncompressed_sha256": "8e519a6f2603a1c5625cbeef1dfc7471a2058f5bb2bff0e840905b7ac2c52902",
+        "archive_sha256": "14f8ff8418307a024d88f781e5ef8f05a2b4ceb8a5836894a8d01f0ebf5ed7bd",
+        "full_readback": true
+    },
+    "elapsed_seconds": 15.623313665390015,
+    "hashes": {
+        "identity.json": "94d54f85a07186e76fc84c9c208d2162b428bc7108e69a99e3f523469f92f585",
+        "setup.txt.gz": "14f8ff8418307a024d88f781e5ef8f05a2b4ceb8a5836894a8d01f0ebf5ed7bd",
+        "setup.txt.json": "6d146dd9aa05e8894eaf68648c786b7557460f8abf2aa7509b00b1894c3d3bec",
+        "solver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solver.stdout": "56f8f589ba6b7290ede1938495c1db32578e9c0fdd90eb9e740d7a986a6aa05f"
+    }
+}

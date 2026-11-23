@@ -1,0 +1,161 @@
+{
+    "status": "RUNNING",
+    "chart": 28,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795379704.5182962,
+    "identity": {
+        "pid": 25872,
+        "created": 134398533001871011,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1513250.546,
+        "foreign_samples": [
+            6.358545719704488,
+            6.129590995238906
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 20.896251678466797,
+        "disk_free_gib": 37.2354736328125,
+        "intervals": [
+            {
+                "seconds": 2.017462099902332,
+                "system_busy_cpu": 13.35991640254597,
+                "system_idle_cpu": 10.649208726667078,
+                "known_c2_cpu": 7.001370682841482,
+                "conservative_other_cpu": 6.358545719704488,
+                "named_other_load": [
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.00683427961216
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.17038733962667324
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.03097951629575877
+                    },
+                    {
+                        "pid": 27096,
+                        "created": 134394970287509683,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015489758147879385
+                    },
+                    {
+                        "pid": 67304,
+                        "created": 134398505069841988,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015489758147879385
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0188949001021683,
+                "system_busy_cpu": 13.257562341975056,
+                "system_idle_cpu": 10.73452362423783,
+                "known_c2_cpu": 7.1279713467361505,
+                "conservative_other_cpu": 6.129590995238906,
+                "named_other_load": [
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.0293378817762302
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.16252703396466794
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 27720,
+                "int64_bound": 14742000
+            },
+            "unsigned": {
+                "denominator": 65880,
+                "int64_bound": 45536256
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 288,
+            "(0, 1, 1)": 288,
+            "(0, 2, 0)": 288,
+            "(0, 2, 1)": 288,
+            "(0, 3, 0)": 220,
+            "(0, 3, 1)": 220,
+            "(0, 4, 0)": 322,
+            "(0, 4, 1)": 322,
+            "(0, 5, 0)": 322,
+            "(0, 5, 1)": 322,
+            "(1, 2, 0)": 208,
+            "(1, 2, 1)": 208,
+            "(1, 3, 0)": 276,
+            "(1, 3, 1)": 276,
+            "(1, 4, 0)": 376,
+            "(1, 4, 1)": 376,
+            "(1, 5, 0)": 376,
+            "(1, 5, 1)": 376,
+            "(2, 3, 0)": 276,
+            "(2, 3, 1)": 276,
+            "(2, 4, 0)": 376,
+            "(2, 4, 1)": 376,
+            "(2, 5, 0)": 376,
+            "(2, 5, 1)": 376,
+            "(3, 4, 0)": 264,
+            "(3, 4, 1)": 248,
+            "(3, 5, 0)": 264,
+            "(3, 5, 1)": 248,
+            "(4, 5, 0)": 280,
+            "(4, 5, 1)": 288
+        },
+        "determinant": 3,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 3528,
+    "phase": "FULL_SEARCH"
+}

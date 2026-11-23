@@ -1,0 +1,185 @@
+{
+    "status": "RUNNING",
+    "chart": 28,
+    "own_parity": 1,
+    "packet_parity": 0,
+    "started": 1795379718.609149,
+    "identity": {
+        "pid": 71556,
+        "created": 134398533142584056,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1513264.64,
+        "foreign_samples": [
+            9.447189849445392,
+            7.228552170407802
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 20.78543472290039,
+        "disk_free_gib": 37.233421325683594,
+        "intervals": [
+            {
+                "seconds": 2.0177957999985665,
+                "system_busy_cpu": 16.455146254156933,
+                "system_idle_cpu": 7.557751879556313,
+                "known_c2_cpu": 7.007956404711541,
+                "conservative_other_cpu": 9.447189849445392,
+                "named_other_load": [
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 2.1836947029045906
+                    },
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9989241726052913
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.30974392949001284
+                    },
+                    {
+                        "pid": 25872,
+                        "created": 134398533001871011,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.046461589423501926
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.038717991186251605
+                    },
+                    {
+                        "pid": 93404,
+                        "created": 134398533147064636,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.023230794711750963
+                    },
+                    {
+                        "pid": 87504,
+                        "created": 134398533147898554,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.023230794711750963
+                    },
+                    {
+                        "pid": 26468,
+                        "created": 134383401755837336,
+                        "name": "codex-code-mode-host.exe",
+                        "logical_cpu_equivalents": 0.015487196474500642
+                    }
+                ]
+            },
+            {
+                "seconds": 2.018903600051999,
+                "system_busy_cpu": 14.348753451751673,
+                "system_idle_cpu": 9.620011079033079,
+                "known_c2_cpu": 7.120201281343871,
+                "conservative_other_cpu": 7.228552170407802,
+                "named_other_load": [
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.0061153984507645
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.20896242890900493
+                    },
+                    {
+                        "pid": 27096,
+                        "created": 134394970287509683,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.01547869843770407
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 27720,
+                "int64_bound": 14742000
+            },
+            "unsigned": {
+                "denominator": 65880,
+                "int64_bound": 45536256
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 288,
+            "(0, 1, 1)": 288,
+            "(0, 2, 0)": 288,
+            "(0, 2, 1)": 288,
+            "(0, 3, 0)": 220,
+            "(0, 3, 1)": 220,
+            "(0, 4, 0)": 322,
+            "(0, 4, 1)": 322,
+            "(0, 5, 0)": 322,
+            "(0, 5, 1)": 322,
+            "(1, 2, 0)": 208,
+            "(1, 2, 1)": 208,
+            "(1, 3, 0)": 276,
+            "(1, 3, 1)": 276,
+            "(1, 4, 0)": 376,
+            "(1, 4, 1)": 376,
+            "(1, 5, 0)": 376,
+            "(1, 5, 1)": 376,
+            "(2, 3, 0)": 276,
+            "(2, 3, 1)": 276,
+            "(2, 4, 0)": 376,
+            "(2, 4, 1)": 376,
+            "(2, 5, 0)": 376,
+            "(2, 5, 1)": 376,
+            "(3, 4, 0)": 264,
+            "(3, 4, 1)": 248,
+            "(3, 5, 0)": 264,
+            "(3, 5, 1)": 248,
+            "(4, 5, 0)": 280,
+            "(4, 5, 1)": 288
+        },
+        "determinant": 3,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 3528,
+    "phase": "FULL_SEARCH"
+}

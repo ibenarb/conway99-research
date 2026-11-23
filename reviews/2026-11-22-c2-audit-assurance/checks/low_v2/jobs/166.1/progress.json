@@ -1,0 +1,209 @@
+{
+    "status": "RUNNING",
+    "chart": 166,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795379732.679324,
+    "identity": {
+        "pid": 72916,
+        "created": 134398533283385798,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1513278.718,
+        "foreign_samples": [
+            7.230616879391007,
+            7.257852946967168
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 20.756603240966797,
+        "disk_free_gib": 37.233394622802734,
+        "intervals": [
+            {
+                "seconds": 2.0226489999331534,
+                "system_busy_cpu": 14.430333686647865,
+                "system_idle_cpu": 9.687172614055902,
+                "known_c2_cpu": 7.199716807256858,
+                "conservative_other_cpu": 7.230616879391007,
+                "named_other_load": [
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9965273263263248
+                    },
+                    {
+                        "pid": 33988,
+                        "created": 134398533290181602,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.7570517672866653
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.26265061314027166
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.13905032460367323
+                    },
+                    {
+                        "pid": 71556,
+                        "created": 134398533142584056,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.11587527050306103
+                    },
+                    {
+                        "pid": 3524,
+                        "created": 134398533291867351,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.023175054100612203
+                    },
+                    {
+                        "pid": 29336,
+                        "created": 134395031583049110,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015450036067074803
+                    },
+                    {
+                        "pid": 67304,
+                        "created": 134398505069841988,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015450036067074803
+                    },
+                    {
+                        "pid": 61216,
+                        "created": 134398533292552366,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015450036067074803
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0236701001413167,
+                "system_busy_cpu": 14.237745568305806,
+                "system_idle_cpu": 9.66684243574776,
+                "known_c2_cpu": 6.979892621338638,
+                "conservative_other_cpu": 7.257852946967168,
+                "named_other_load": [
+                    {
+                        "pid": 89628,
+                        "created": 134398532979409650,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9960245001688987
+                    },
+                    {
+                        "pid": 33988,
+                        "created": 134398533290181602,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9960245001688987
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.27023920547218183
+                    },
+                    {
+                        "pid": 3524,
+                        "created": 134398533291867351,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.023163360469044155
+                    },
+                    {
+                        "pid": 24544,
+                        "created": 134383400866159805,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015442240312696103
+                    },
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015442240312696103
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 12090456,
+                "int64_bound": 5725713600
+            },
+            "unsigned": {
+                "denominator": 292536,
+                "int64_bound": 242007552
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 921,
+            "(0, 1, 1)": 905,
+            "(0, 2, 0)": 892,
+            "(0, 2, 1)": 898,
+            "(0, 3, 0)": 1136,
+            "(0, 3, 1)": 1084,
+            "(0, 4, 0)": 1114,
+            "(0, 4, 1)": 1052,
+            "(0, 5, 0)": 1148,
+            "(0, 5, 1)": 1137,
+            "(1, 2, 0)": 898,
+            "(1, 2, 1)": 892,
+            "(1, 3, 0)": 1084,
+            "(1, 3, 1)": 1136,
+            "(1, 4, 0)": 1148,
+            "(1, 4, 1)": 1137,
+            "(1, 5, 0)": 1114,
+            "(1, 5, 1)": 1052,
+            "(2, 3, 0)": 1139,
+            "(2, 3, 1)": 1124,
+            "(2, 4, 0)": 1106,
+            "(2, 4, 1)": 1054,
+            "(2, 5, 0)": 1054,
+            "(2, 5, 1)": 1106,
+            "(3, 4, 0)": 1422,
+            "(3, 4, 1)": 1441,
+            "(3, 5, 0)": 1441,
+            "(3, 5, 1)": 1422,
+            "(4, 5, 0)": 1396,
+            "(4, 5, 1)": 1414
+        },
+        "determinant": 5,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 24,
+    "phase": "FULL_SEARCH"
+}

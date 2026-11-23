@@ -1,0 +1,243 @@
+{
+    "status": "SECOND_LOW_SOLVER_CLOSED",
+    "chart": 167,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795379774.959968,
+    "identity": {
+        "pid": 92116,
+        "created": 134398533705802418,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1513321.0,
+        "foreign_samples": [
+            6.988435512415078,
+            9.66322953811852
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 22.51746368408203,
+        "disk_free_gib": 37.07279968261719,
+        "intervals": [
+            {
+                "seconds": 2.0211962999310344,
+                "system_busy_cpu": 16.07958613476036,
+                "system_idle_cpu": 8.032062497123082,
+                "known_c2_cpu": 9.09115062234528,
+                "conservative_other_cpu": 6.988435512415078,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0049741334225224
+                    },
+                    {
+                        "pid": 79424,
+                        "created": 134398533424230567,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0049741334225224
+                    },
+                    {
+                        "pid": 83644,
+                        "created": 134398533713396773,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.75759588519544
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.20099482668450447
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.015461140514192652
+                    },
+                    {
+                        "pid": 67304,
+                        "created": 134398505069841988,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015461140514192652
+                    }
+                ]
+            },
+            {
+                "seconds": 2.038979300064966,
+                "system_busy_cpu": 18.652102058509495,
+                "system_idle_cpu": 5.2645826270320555,
+                "known_c2_cpu": 8.988872520390975,
+                "conservative_other_cpu": 9.66322953811852,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9885460828051457
+                    },
+                    {
+                        "pid": 83644,
+                        "created": 134398533713396773,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9885460828051457
+                    },
+                    {
+                        "pid": 79424,
+                        "created": 134398533424230567,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9732197869477016
+                    },
+                    {
+                        "pid": 89056,
+                        "created": 134396640003102575,
+                        "name": "node.exe",
+                        "logical_cpu_equivalents": 0.5823992425828766
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.3218522130063265
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.20690499407549562
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.17625240236060738
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.03065259171488824
+                    },
+                    {
+                        "pid": 27096,
+                        "created": 134394970287509683,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.01532629585744412
+                    },
+                    {
+                        "pid": 87212,
+                        "created": 134398533749076941,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.01532629585744412
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 173880,
+                "int64_bound": 82526400
+            },
+            "unsigned": {
+                "denominator": 6120,
+                "int64_bound": 4852224
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 915,
+            "(0, 1, 1)": 897,
+            "(0, 2, 0)": 915,
+            "(0, 2, 1)": 897,
+            "(0, 3, 0)": 1185,
+            "(0, 3, 1)": 1134,
+            "(0, 4, 0)": 1177,
+            "(0, 4, 1)": 1168,
+            "(0, 5, 0)": 1185,
+            "(0, 5, 1)": 1134,
+            "(1, 2, 0)": 897,
+            "(1, 2, 1)": 915,
+            "(1, 3, 0)": 1134,
+            "(1, 3, 1)": 1185,
+            "(1, 4, 0)": 1185,
+            "(1, 4, 1)": 1134,
+            "(1, 5, 0)": 1177,
+            "(1, 5, 1)": 1168,
+            "(2, 3, 0)": 1177,
+            "(2, 3, 1)": 1168,
+            "(2, 4, 0)": 1185,
+            "(2, 4, 1)": 1134,
+            "(2, 5, 0)": 1134,
+            "(2, 5, 1)": 1185,
+            "(3, 4, 0)": 1488,
+            "(3, 4, 1)": 1535,
+            "(3, 5, 0)": 1535,
+            "(3, 5, 1)": 1488,
+            "(4, 5, 0)": 1488,
+            "(4, 5, 1)": 1535
+        },
+        "determinant": 5,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 18,
+    "phase": "FULL_SEARCH",
+    "stars": 18,
+    "open": 0,
+    "closed": 18,
+    "viable_planes": 144,
+    "closed_planes": 144,
+    "full_depth": 30,
+    "depth_cutoff": false,
+    "elapsed_seconds": 32.125831842422485,
+    "source_hashes": {
+        "residual_gram_v1.cpp": "706eea083f47304a82fdb867352eb4ee0be7de69b697ee9d6f7342a444a95939",
+        "residual_gram_v1_checked": "fae1a635dcb385a8d5bbfa7587b8a7ae06814fe77d5297c12f6c16d473bdb55a",
+        "low_setup_v1.py": "80f75e18413d615b55f78603d0fb85bc744fb27d97b5345f4bbfa603b8a1d72b",
+        "own_setup.py": "8f3179d112054b64db045ed9cea00b42af91ce50f506a5678ed3080346046810",
+        "own_local.py": "598ca0b991659ad05e639f9f0a9d07cb9207e96b912da83e68d50e9da4b7abd4",
+        "star_dump_checked": "9c7dab35e32f9bfad173a5e55ecf1a2c7520a730ff9fcd15c5e3d35bed2e55aa",
+        "geometry_own.json": "3c00c2eaf0553f89cb135072438705ef201d8d7e729365648a8ca3bd9dddc64f",
+        "layouts.tsv": "2b776dcaadb5edea804fa38b7821ab91b703216d4ab99ca9f7497f5e9743ccce",
+        "run_one_low_v1.py": "928e3b7ccf548c9f71a75ae1e1e3cb274fd1b6d27402ee2c150c80b8de066a0d"
+    },
+    "evidence_hashes": {
+        "identity.json": "ef933022ca02d1225f78e1901808530ba19312b1edee2c0db5f99b10df52863c",
+        "progress.json": "a3271d286a3fb4328c25e47c645c6f69079623c7af7e5921240503792f0c7e6e",
+        "setup.txt": "36285a3cd8c10734026ba4e003890f58d0b7e160bf7d4645078b4eb376a4cf6b",
+        "solver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solver.stdout": "c858ea6273b0f37a9a9b2ef3cb224ee8a68d46a9de0438fa5d5d5f6dd7e14c56",
+        "stars.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stars.txt": "b14171152600894eaeabb68c0fd8a751a81e81f8bdb5f9c4a8f12851ae98cec3"
+    }
+}

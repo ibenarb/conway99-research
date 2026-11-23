@@ -1,0 +1,110 @@
+{
+    "status": "RUNNING",
+    "chart": 126,
+    "identity": {
+        "pid": 87528,
+        "created": 134398570680637899,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795383472.39437,
+    "resource": {
+        "measured_at": 1517018.421,
+        "foreign_samples": [
+            6.164865377889615,
+            6.30950630919574
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 14.912193298339844,
+        "disk_free_gib": 36.07121658325195,
+        "intervals": [
+            {
+                "seconds": 2.0174811999313533,
+                "system_busy_cpu": 14.172994524545224,
+                "system_idle_cpu": 9.804924080914892,
+                "known_c2_cpu": 8.008129146655609,
+                "conservative_other_cpu": 6.164865377889615,
+                "named_other_load": [
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.4182195105603509
+                    }
+                ]
+            },
+            {
+                "seconds": 2.018283899873495,
+                "system_busy_cpu": 14.415092941990757,
+                "system_idle_cpu": 9.561031032953053,
+                "known_c2_cpu": 8.105586632795017,
+                "conservative_other_cpu": 6.30950630919574,
+                "named_other_load": [
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.37160282557226443
+                    },
+                    {
+                        "pid": 54560,
+                        "created": 134398569709398563,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.0851589808603106
+                    },
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.030966902131022035
+                    },
+                    {
+                        "pid": 29336,
+                        "created": 134395031583049110,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015483451065511017
+                    },
+                    {
+                        "pid": 59900,
+                        "created": 134398532958419938,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015483451065511017
+                    },
+                    {
+                        "pid": 54468,
+                        "created": 134398552004565595,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015483451065511017
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    }
+}

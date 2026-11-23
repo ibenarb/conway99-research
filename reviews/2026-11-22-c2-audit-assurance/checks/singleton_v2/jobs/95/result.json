@@ -1,0 +1,341 @@
+{
+    "status": "SECOND_SINGLETON_SOLVER_CLOSED",
+    "chart": 95,
+    "identity": {
+        "pid": 91276,
+        "created": 134398564420960547,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795382846.48254,
+    "resource": {
+        "measured_at": 1516392.515,
+        "foreign_samples": [
+            5.370148926932417,
+            5.167959807910158
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 25.02393341064453,
+        "disk_free_gib": 35.59357833862305,
+        "intervals": [
+            {
+                "seconds": 2.022173900157213,
+                "system_busy_cpu": 15.51548064069107,
+                "system_idle_cpu": 8.40679429137046,
+                "known_c2_cpu": 10.145331713758653,
+                "conservative_other_cpu": 5.370148926932417,
+                "named_other_load": [
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.5176978102222618
+                    },
+                    {
+                        "pid": 18384,
+                        "created": 134398564330115664,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.5176978102222618
+                    },
+                    {
+                        "pid": 19600,
+                        "created": 134383400654690495,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.03090733195356787
+                    },
+                    {
+                        "pid": 67304,
+                        "created": 134398505069841988,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.03090733195356787
+                    },
+                    {
+                        "pid": 1232,
+                        "created": 134398564435932459,
+                        "name": "wslhost.exe",
+                        "logical_cpu_equivalents": 0.03090733195356787
+                    },
+                    {
+                        "pid": 33204,
+                        "created": 134398564435305607,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.023180498965175902
+                    },
+                    {
+                        "pid": 30144,
+                        "created": 134398564436086045,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.023180498965175902
+                    },
+                    {
+                        "pid": 19912,
+                        "created": 134383400662285126,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015453665976783935
+                    },
+                    {
+                        "pid": 53264,
+                        "created": 134398063941162584,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.015453665976783935
+                    },
+                    {
+                        "pid": 12912,
+                        "created": 134398564425374129,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015453665976783935
+                    },
+                    {
+                        "pid": 73468,
+                        "created": 134398564435013096,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015453665976783935
+                    }
+                ]
+            },
+            {
+                "seconds": 2.019655799958855,
+                "system_busy_cpu": 15.217630152933054,
+                "system_idle_cpu": 8.889200328276603,
+                "known_c2_cpu": 10.049670345022896,
+                "conservative_other_cpu": 5.167959807910158,
+                "named_other_load": [
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.4022962724720482
+                    },
+                    {
+                        "pid": 24544,
+                        "created": 134383400866159805,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.01547293355661724
+                    },
+                    {
+                        "pid": 27096,
+                        "created": 134394970287509683,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.01547293355661724
+                    },
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.01547293355661724
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    },
+    "setup": {
+        "chart": 95,
+        "raw_root_signs": 64,
+        "root_representatives": 16,
+        "orbit_audit": {
+            "stabilizer_order": 2,
+            "orbits": [
+                {
+                    "representative": 485,
+                    "members": [
+                        485,
+                        486,
+                        3609,
+                        3610
+                    ]
+                },
+                {
+                    "representative": 725,
+                    "members": [
+                        725,
+                        726,
+                        3369,
+                        3370
+                    ]
+                },
+                {
+                    "representative": 729,
+                    "members": [
+                        729,
+                        730,
+                        3365,
+                        3366
+                    ]
+                },
+                {
+                    "representative": 741,
+                    "members": [
+                        741,
+                        742,
+                        3353,
+                        3354
+                    ]
+                },
+                {
+                    "representative": 917,
+                    "members": [
+                        917,
+                        918,
+                        3177,
+                        3178
+                    ]
+                },
+                {
+                    "representative": 921,
+                    "members": [
+                        921,
+                        922,
+                        3173,
+                        3174
+                    ]
+                },
+                {
+                    "representative": 933,
+                    "members": [
+                        933,
+                        934,
+                        3161,
+                        3162
+                    ]
+                },
+                {
+                    "representative": 937,
+                    "members": [
+                        937,
+                        938,
+                        3157,
+                        3158
+                    ]
+                },
+                {
+                    "representative": 1381,
+                    "members": [
+                        1381,
+                        1382,
+                        2713,
+                        2714
+                    ]
+                },
+                {
+                    "representative": 1621,
+                    "members": [
+                        1621,
+                        1622,
+                        2473,
+                        2474
+                    ]
+                },
+                {
+                    "representative": 1625,
+                    "members": [
+                        1625,
+                        1626,
+                        2469,
+                        2470
+                    ]
+                },
+                {
+                    "representative": 1637,
+                    "members": [
+                        1637,
+                        1638,
+                        2457,
+                        2458
+                    ]
+                },
+                {
+                    "representative": 1813,
+                    "members": [
+                        1813,
+                        1814,
+                        2281,
+                        2282
+                    ]
+                },
+                {
+                    "representative": 1817,
+                    "members": [
+                        1817,
+                        1818,
+                        2277,
+                        2278
+                    ]
+                },
+                {
+                    "representative": 1829,
+                    "members": [
+                        1829,
+                        1830,
+                        2265,
+                        2266
+                    ]
+                },
+                {
+                    "representative": 1833,
+                    "members": [
+                        1833,
+                        1834,
+                        2261,
+                        2262
+                    ]
+                }
+            ]
+        },
+        "attachments": 19588,
+        "unsigned_patterns": 6642,
+        "unsigned_star_rank": 10,
+        "signed_star_rank": 11,
+        "unsigned_basis_determinant": "215040",
+        "signed_basis_determinant": "6072606720",
+        "setup_sha256": "94b4869c4c6bbec49ac85c44d572e506da20897e1d0dad2346af760c5075d491",
+        "source_sha256": "570a6c38e9e75ffd8885a34f3233d7735ddd6d5862962532d3f80c61881f4e12",
+        "catalogue_sha256": "2b776dcaadb5edea804fa38b7821ab91b703216d4ab99ca9f7497f5e9743ccce",
+        "elapsed_seconds": 6.721025705337524
+    },
+    "roots_completed": 16,
+    "roots_planned": 16,
+    "exit_code": 0,
+    "final_line": "FINAL chart 95 roots 16 planned 16 open 0 matches 100148 quartets 351408 tcaps 40088 hpsd 8460 hdet 8460 lifts 164844 fpsd 15961 fdet 0 rank 0 first 0 second 0 pair_calls 0 pair_pass 0",
+    "lossless_input_archive": {
+        "file": "setup.txt.gz",
+        "uncompressed_bytes": 2099349,
+        "uncompressed_sha256": "94b4869c4c6bbec49ac85c44d572e506da20897e1d0dad2346af760c5075d491",
+        "archive_sha256": "1ce9a31455f3d71063c7cfbcd8fd8b544525aaac340c0116102c0ed585e6bfcb",
+        "full_readback": true
+    },
+    "elapsed_seconds": 28.41985011100769,
+    "hashes": {
+        "identity.json": "ee73c348d61553ed84c0f8028089f03c3e037d30bfe3451aaf66bf55c438cd6e",
+        "setup.txt.gz": "1ce9a31455f3d71063c7cfbcd8fd8b544525aaac340c0116102c0ed585e6bfcb",
+        "setup.txt.json": "23a00641ebf1879793d0b869c4b9632fdaae06635a23fafd68af8cc5eb670254",
+        "solver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solver.stdout": "cb8d7fda1c37c9ea9065e28a02140164dde6a29e82c17eb1b035218728027342"
+    }
+}
