@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 2093,
+    "identity": {
+        "pid": 86404,
+        "created": 134399116475461757,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795438051.8280742,
+    "resource": {
+        "measured_at": 1571589.937,
+        "intervals": [
+            {
+                "seconds": 2.0158906998112798,
+                "system_busy_cpu": 3.0616119220043965,
+                "system_idle_cpu": 20.811210153371658,
+                "known_c2_cpu": 0.007750916258238978,
+                "conservative_other_cpu": 3.0538610057461577,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016067099990323,
+                "system_busy_cpu": 3.162097134579796,
+                "system_idle_cpu": 20.879141373916593,
+                "known_c2_cpu": 0.00775023807495048,
+                "conservative_other_cpu": 3.1543468965048453,
+                "named_other_load": [
+                    {
+                        "pid": 76640,
+                        "created": 134393232554376058,
+                        "name": "msedgewebview2.exe",
+                        "logical_cpu_equivalents": 0.046501428449702883
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.0538610057461577,
+            3.1543468965048453
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 32.6082878112793,
+        "disk_free_gib": 47.98311233520508,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 86404,
+                "created": 134399116475461757,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

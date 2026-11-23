@@ -1,0 +1,104 @@
+{
+    "status": "RUNNING",
+    "chart": 2037,
+    "identity": {
+        "pid": 25740,
+        "created": 134399108981105157,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795437302.4009564,
+    "resource": {
+        "measured_at": 1570840.515,
+        "intervals": [
+            {
+                "seconds": 2.016808800166473,
+                "system_busy_cpu": 4.416011076144081,
+                "system_idle_cpu": 19.639628207061836,
+                "known_c2_cpu": 0.007747387852884354,
+                "conservative_other_cpu": 4.408263688291197,
+                "named_other_load": [
+                    {
+                        "pid": 96080,
+                        "created": 134399108973808217,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9684234816105443
+                    },
+                    {
+                        "pid": 100332,
+                        "created": 134399107820264204,
+                        "name": "git.exe",
+                        "logical_cpu_equivalents": 0.17818992061634015
+                    },
+                    {
+                        "pid": 75060,
+                        "created": 134399107807973546,
+                        "name": "git-remote-https.exe",
+                        "logical_cpu_equivalents": 0.03873693926442177
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0162886998150498,
+                "system_busy_cpu": 3.4407275112122404,
+                "system_idle_cpu": 20.473878568970132,
+                "known_c2_cpu": 0.007749386286514054,
+                "conservative_other_cpu": 3.4329781249257265,
+                "named_other_load": [
+                    {
+                        "pid": 100332,
+                        "created": 134399107820264204,
+                        "name": "git.exe",
+                        "logical_cpu_equivalents": 0.1549877257302811
+                    },
+                    {
+                        "pid": 75060,
+                        "created": 134399107807973546,
+                        "name": "git-remote-https.exe",
+                        "logical_cpu_equivalents": 0.030997545146056217
+                    },
+                    {
+                        "pid": 96080,
+                        "created": 134399108973808217,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.030997545146056217
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015498772573028109
+                    },
+                    {
+                        "pid": 19600,
+                        "created": 134383400654690495,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015498772573028109
+                    },
+                    {
+                        "pid": 2920,
+                        "created": 134394769500815918,
+                        "name": "OUTLOOK.EXE",
+                        "logical_cpu_equivalents": 0.015498772573028109
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.408263688291197,
+            3.4329781249257265
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 32.787452697753906,
+        "disk_free_gib": 48.56089782714844,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 25740,
+                "created": 134399108981105157,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

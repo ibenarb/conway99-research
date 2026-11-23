@@ -1,0 +1,79 @@
+{
+    "status": "RUNNING",
+    "chart": 2074,
+    "identity": {
+        "pid": 81208,
+        "created": 134399113930113535,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795437797.295722,
+    "resource": {
+        "measured_at": 1571335.406,
+        "intervals": [
+            {
+                "seconds": 2.0171227999962866,
+                "system_busy_cpu": 4.066745465380245,
+                "system_idle_cpu": 19.86895641657205,
+                "known_c2_cpu": 0.0077461818388195125,
+                "conservative_other_cpu": 4.058999283541425,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016922000097111,
+                "system_busy_cpu": 3.904464327138498,
+                "system_idle_cpu": 20.08784920688517,
+                "known_c2_cpu": 0.007746953030036703,
+                "conservative_other_cpu": 3.8967173741084613,
+                "named_other_load": [
+                    {
+                        "pid": 80624,
+                        "created": 134399113859498439,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.3098781212014681
+                    },
+                    {
+                        "pid": 15908,
+                        "created": 134399113965164115,
+                        "name": "SDXHelper.exe",
+                        "logical_cpu_equivalents": 0.09296343636044044
+                    },
+                    {
+                        "pid": 83372,
+                        "created": 134399113966196928,
+                        "name": "SDXHelper.exe",
+                        "logical_cpu_equivalents": 0.06972257727033032
+                    },
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.038734765150183516
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.015493906060073406
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.058999283541425,
+            3.8967173741084613
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 32.831546783447266,
+        "disk_free_gib": 48.050697326660156,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 81208,
+                "created": 134399113930113535,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "status": "RUNNING",
+    "chart": 2059,
+    "identity": {
+        "pid": 52968,
+        "created": 134399111950551434,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795437599.3392184,
+    "resource": {
+        "measured_at": 1571137.453,
+        "intervals": [
+            {
+                "seconds": 2.015281300060451,
+                "system_busy_cpu": 3.0470312009622695,
+                "system_idle_cpu": 20.94930866412227,
+                "known_c2_cpu": 0.007753260053339108,
+                "conservative_other_cpu": 3.0392779409089306,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.015907400054857,
+                "system_busy_cpu": 4.255217774272058,
+                "system_idle_cpu": 19.764672722028685,
+                "known_c2_cpu": 0.007750852047854386,
+                "conservative_other_cpu": 4.247466922224204,
+                "named_other_load": [
+                    {
+                        "pid": 88360,
+                        "created": 134399111973905718,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 0.9998599141732157
+                    },
+                    {
+                        "pid": 12940,
+                        "created": 134394288493301306,
+                        "name": "chrome.exe",
+                        "logical_cpu_equivalents": 0.02325255614356316
+                    },
+                    {
+                        "pid": 2920,
+                        "created": 134394769500815918,
+                        "name": "OUTLOOK.EXE",
+                        "logical_cpu_equivalents": 0.02325255614356316
+                    },
+                    {
+                        "pid": 93632,
+                        "created": 134398684844117364,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015501704095708772
+                    },
+                    {
+                        "pid": 96852,
+                        "created": 134399008917476371,
+                        "name": "ctfmon.exe",
+                        "logical_cpu_equivalents": 0.015501704095708772
+                    },
+                    {
+                        "pid": 81432,
+                        "created": 134399111973930669,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015501704095708772
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.0392779409089306,
+            4.247466922224204
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 32.767173767089844,
+        "disk_free_gib": 48.102386474609375,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 52968,
+                "created": 134399111950551434,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

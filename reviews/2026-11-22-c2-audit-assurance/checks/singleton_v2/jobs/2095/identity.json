@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 2095,
+    "identity": {
+        "pid": 72532,
+        "created": 134399116758302223,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795438080.112451,
+    "resource": {
+        "measured_at": 1571618.218,
+        "intervals": [
+            {
+                "seconds": 2.017172700027004,
+                "system_busy_cpu": 4.051152883385049,
+                "system_idle_cpu": 19.976908769120534,
+                "known_c2_cpu": 0.007745990216797415,
+                "conservative_other_cpu": 4.043406893168251,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.017318499973044,
+                "system_busy_cpu": 3.7332974441570013,
+                "system_idle_cpu": 20.17684614528836,
+                "known_c2_cpu": 0.007745430382068467,
+                "conservative_other_cpu": 3.7255520137749327,
+                "named_other_load": [
+                    {
+                        "pid": 93360,
+                        "created": 134399116546157967,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.3253080760468756
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.043406893168251,
+            3.7255520137749327
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 32.60850143432617,
+        "disk_free_gib": 47.97663497924805,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 72532,
+                "created": 134399116758302223,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
