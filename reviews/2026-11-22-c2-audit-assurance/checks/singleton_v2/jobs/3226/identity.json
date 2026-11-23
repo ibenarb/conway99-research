@@ -1,0 +1,104 @@
+{
+    "status": "RUNNING",
+    "chart": 3226,
+    "identity": {
+        "pid": 75076,
+        "created": 134399278856086623,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795454289.8876388,
+    "resource": {
+        "measured_at": 1587828.0,
+        "intervals": [
+            {
+                "seconds": 2.0180760000366718,
+                "system_busy_cpu": 2.191134030591339,
+                "system_idle_cpu": 21.810687505921564,
+                "known_c2_cpu": 0.01548504615258897,
+                "conservative_other_cpu": 2.1756489844387503,
+                "named_other_load": [
+                    {
+                        "pid": 86928,
+                        "created": 134399278785282969,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.006527999918283
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.1006527999918283
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.01548504615258897
+                    }
+                ]
+            },
+            {
+                "seconds": 2.018107600044459,
+                "system_busy_cpu": 2.183357319452605,
+                "system_idle_cpu": 21.903254811104325,
+                "known_c2_cpu": 0.007742401842030514,
+                "conservative_other_cpu": 2.175614917610574,
+                "named_other_load": [
+                    {
+                        "pid": 86928,
+                        "created": 134399278785282969,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.30969607368122054
+                    },
+                    {
+                        "pid": 19600,
+                        "created": 134383400654690495,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015484803684061028
+                    },
+                    {
+                        "pid": 93632,
+                        "created": 134398684844117364,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015484803684061028
+                    },
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.015484803684061028
+                    },
+                    {
+                        "pid": 100688,
+                        "created": 134399278884987894,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.015484803684061028
+                    },
+                    {
+                        "pid": 98908,
+                        "created": 134399278886021594,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015484803684061028
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.1756489844387503,
+            2.175614917610574
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 33.27181625366211,
+        "disk_free_gib": 45.65977096557617,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 75076,
+                "created": 134399278856086623,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

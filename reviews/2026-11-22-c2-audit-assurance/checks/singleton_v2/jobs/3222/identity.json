@@ -1,0 +1,104 @@
+{
+    "status": "RUNNING",
+    "chart": 3222,
+    "identity": {
+        "pid": 100608,
+        "created": 134399278643802824,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795454268.6660004,
+    "resource": {
+        "measured_at": 1587806.781,
+        "intervals": [
+            {
+                "seconds": 2.0164120998233557,
+                "system_busy_cpu": 2.0767084269960683,
+                "system_idle_cpu": 21.95266781223829,
+                "known_c2_cpu": 0.0,
+                "conservative_other_cpu": 2.0767084269960683,
+                "named_other_load": [
+                    {
+                        "pid": 102516,
+                        "created": 134399278572868486,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9996096532928836
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.015497824082060211
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0171086001209915,
+                "system_busy_cpu": 1.9985289833964295,
+                "system_idle_cpu": 22.08451989016752,
+                "known_c2_cpu": 0.015492472739507206,
+                "conservative_other_cpu": 1.9830365106569223,
+                "named_other_load": [
+                    {
+                        "pid": 102516,
+                        "created": 134399278572868486,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.3098494547901441
+                    },
+                    {
+                        "pid": 21404,
+                        "created": 134399278502027220,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.07746236369753602
+                    },
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.03098494547901441
+                    },
+                    {
+                        "pid": 21372,
+                        "created": 134383400710633236,
+                        "name": "codex.exe",
+                        "logical_cpu_equivalents": 0.02323870910926081
+                    },
+                    {
+                        "pid": 85108,
+                        "created": 134399278673443491,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.02323870910926081
+                    },
+                    {
+                        "pid": 19600,
+                        "created": 134383400654690495,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015492472739507206
+                    },
+                    {
+                        "pid": 100592,
+                        "created": 134399278672655301,
+                        "name": "wsl.exe",
+                        "logical_cpu_equivalents": 0.015492472739507206
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.0767084269960683,
+            1.9830365106569223
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 33.38003158569336,
+        "disk_free_gib": 45.665000915527344,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 100608,
+                "created": 134399278643802824,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
