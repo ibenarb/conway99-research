@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 3542,
+    "identity": {
+        "pid": 103736,
+        "created": 134399301354776122,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795456539.7669027,
+    "resource": {
+        "measured_at": 1590077.875,
+        "intervals": [
+            {
+                "seconds": 2.0178638000506908,
+                "system_busy_cpu": 3.1050782514868454,
+                "system_idle_cpu": 20.914754008144563,
+                "known_c2_cpu": 0.007743337285503355,
+                "conservative_other_cpu": 3.097334914201342,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0177050998900086,
+                "system_busy_cpu": 3.2911771895516355,
+                "system_idle_cpu": 20.684080643040982,
+                "known_c2_cpu": 0.007743946328356789,
+                "conservative_other_cpu": 3.283433243223279,
+                "named_other_load": [
+                    {
+                        "pid": 16676,
+                        "created": 134383400670681090,
+                        "name": "ChatGPT Classic.exe",
+                        "logical_cpu_equivalents": 0.19359865820891972
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.097334914201342,
+            3.283433243223279
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 32.996177673339844,
+        "disk_free_gib": 44.75613021850586,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 103736,
+                "created": 134399301354776122,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
