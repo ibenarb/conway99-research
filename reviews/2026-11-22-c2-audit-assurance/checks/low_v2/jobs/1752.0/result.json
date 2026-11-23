@@ -1,0 +1,160 @@
+{
+    "status": "SECOND_LOW_SOLVER_CLOSED",
+    "chart": 1752,
+    "own_parity": 1,
+    "packet_parity": 0,
+    "started": 1795395783.8850944,
+    "identity": {
+        "pid": 28388,
+        "created": 134398693796096316,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1529322.0,
+        "intervals": [
+            {
+                "seconds": 2.0156465999316424,
+                "system_busy_cpu": 5.147231662709054,
+                "system_idle_cpu": 18.852511150163284,
+                "known_c2_cpu": 0.007751854913718456,
+                "conservative_other_cpu": 5.139479807795336,
+                "named_other_load": [
+                    {
+                        "pid": 97960,
+                        "created": 134398693583924686,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9999892838696808
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.015503709827436912
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0154520000796765,
+                "system_busy_cpu": 4.628304221401072,
+                "system_idle_cpu": 19.32724024112709,
+                "known_c2_cpu": 0.007752603385931443,
+                "conservative_other_cpu": 4.62055161801514,
+                "named_other_load": [
+                    {
+                        "pid": 97960,
+                        "created": 134398693583924686,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0000858367851562
+                    },
+                    {
+                        "pid": 76432,
+                        "created": 134398693725404212,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.279093721893532
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.031010413543725773
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            5.139479807795336,
+            4.62055161801514
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 34.03599548339844,
+        "disk_free_gib": 36.07577133178711,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 28388,
+                "created": 134398693796096316,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 1709400,
+                "int64_bound": 837496800
+            },
+            "unsigned": {
+                "denominator": 250344,
+                "int64_bound": 139627008
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 1649,
+            "(0, 1, 1)": 1651,
+            "(0, 2, 0)": 1761,
+            "(0, 2, 1)": 1738,
+            "(0, 3, 0)": 1804,
+            "(0, 3, 1)": 1801,
+            "(0, 4, 0)": 1738,
+            "(0, 4, 1)": 1761,
+            "(0, 5, 0)": 1801,
+            "(0, 5, 1)": 1804,
+            "(1, 2, 0)": 1801,
+            "(1, 2, 1)": 1804,
+            "(1, 3, 0)": 1738,
+            "(1, 3, 1)": 1761,
+            "(1, 4, 0)": 1804,
+            "(1, 4, 1)": 1801,
+            "(1, 5, 0)": 1761,
+            "(1, 5, 1)": 1738,
+            "(2, 3, 0)": 1539,
+            "(2, 3, 1)": 1562,
+            "(2, 4, 0)": 1734,
+            "(2, 4, 1)": 1737,
+            "(2, 5, 0)": 1749,
+            "(2, 5, 1)": 1756,
+            "(3, 4, 0)": 1749,
+            "(3, 4, 1)": 1756,
+            "(3, 5, 0)": 1734,
+            "(3, 5, 1)": 1737,
+            "(4, 5, 0)": 1539,
+            "(4, 5, 1)": 1562
+        },
+        "determinant": 2,
+        "common_image": "whole_F7_squared_both_cases"
+    },
+    "expected_stars": 158,
+    "phase": "FULL_SEARCH",
+    "stars": 158,
+    "open": 0,
+    "closed": 158,
+    "viable_planes": 158,
+    "closed_planes": 158,
+    "full_depth": 30,
+    "depth_cutoff": false,
+    "execution_driver_sha256": "df11b91d90899cfbaa8f4076ce12886b27fb0c00ef27def420ab50327bf2ef46",
+    "elapsed_seconds": 201.3795132637024,
+    "source_hashes": {
+        "residual_gram_v1.cpp": "706eea083f47304a82fdb867352eb4ee0be7de69b697ee9d6f7342a444a95939",
+        "residual_gram_v1_checked": "fae1a635dcb385a8d5bbfa7587b8a7ae06814fe77d5297c12f6c16d473bdb55a",
+        "low_setup_v1.py": "80f75e18413d615b55f78603d0fb85bc744fb27d97b5345f4bbfa603b8a1d72b",
+        "own_setup.py": "8f3179d112054b64db045ed9cea00b42af91ce50f506a5678ed3080346046810",
+        "own_local.py": "598ca0b991659ad05e639f9f0a9d07cb9207e96b912da83e68d50e9da4b7abd4",
+        "star_dump_checked": "9c7dab35e32f9bfad173a5e55ecf1a2c7520a730ff9fcd15c5e3d35bed2e55aa",
+        "geometry_own.json": "3c00c2eaf0553f89cb135072438705ef201d8d7e729365648a8ca3bd9dddc64f",
+        "layouts.tsv": "2b776dcaadb5edea804fa38b7821ab91b703216d4ab99ca9f7497f5e9743ccce",
+        "run_one_low_v1.py": "928e3b7ccf548c9f71a75ae1e1e3cb274fd1b6d27402ee2c150c80b8de066a0d"
+    },
+    "evidence_hashes": {
+        "identity.json": "f30ec1701a63e308190d3f1ebbe002efea37dce8767137e56a942751b99bcd05",
+        "progress.json": "7bbf84e50280498ccfc251735ad045dd53bbc976edd67b966dbfab4de2e270aa",
+        "setup.txt": "c5149a3536df52cd0fcc6e1043455a35d1c6883e2ba0e298562cbeb0f707e847",
+        "solver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solver.stdout": "c2346179a5f2408408e8f1416fa6454da9b0c89d0ee44b502c1096057f934e96",
+        "stars.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stars.txt": "38d8b6ab14c003d29090d207c669255a58fac3f3d34ce9f6ab65658406ee98b6"
+    }
+}

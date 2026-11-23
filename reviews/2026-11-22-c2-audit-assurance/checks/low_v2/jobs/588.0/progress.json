@@ -1,0 +1,119 @@
+{
+    "status": "RUNNING",
+    "chart": 588,
+    "own_parity": 1,
+    "packet_parity": 0,
+    "started": 1795395246.4994876,
+    "identity": {
+        "pid": 16540,
+        "created": 134398688422129162,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1528784.609,
+        "intervals": [
+            {
+                "seconds": 2.01598810008727,
+                "system_busy_cpu": 7.0374919372717715,
+                "system_idle_cpu": 16.958185417126252,
+                "known_c2_cpu": 0.0077505417811363116,
+                "conservative_other_cpu": 7.029741395490635,
+                "named_other_load": [
+                    {
+                        "pid": 97404,
+                        "created": 134398688210153018,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9998198897665842
+                    }
+                ]
+            },
+            {
+                "seconds": 2.015263599809259,
+                "system_busy_cpu": 7.047775289219881,
+                "system_idle_cpu": 17.003048635048625,
+                "known_c2_cpu": 0.007753328150956965,
+                "conservative_other_cpu": 7.040021961068923,
+                "named_other_load": [
+                    {
+                        "pid": 97404,
+                        "created": 134398688210153018,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0001793314734484
+                    },
+                    {
+                        "pid": 8836,
+                        "created": 134398688351506560,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.1318065785662684
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            7.029741395490635,
+            7.040021961068923
+        ],
+        "c2_worker_budget": 12,
+        "ram_free_gib": 33.81525802612305,
+        "disk_free_gib": 36.339752197265625,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 16540,
+                "created": 134398688422129162,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 10799880,
+                "int64_bound": 5246218800
+            },
+            "unsigned": {
+                "denominator": 2289600,
+                "int64_bound": 1986188544
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 959,
+            "(0, 1, 1)": 946,
+            "(0, 2, 0)": 1188,
+            "(0, 2, 1)": 1140,
+            "(0, 3, 0)": 1150,
+            "(0, 3, 1)": 1094,
+            "(0, 4, 0)": 1209,
+            "(0, 4, 1)": 1191,
+            "(0, 5, 0)": 1195,
+            "(0, 5, 1)": 1214,
+            "(1, 2, 0)": 1195,
+            "(1, 2, 1)": 1214,
+            "(1, 3, 0)": 1209,
+            "(1, 3, 1)": 1191,
+            "(1, 4, 0)": 1150,
+            "(1, 4, 1)": 1094,
+            "(1, 5, 0)": 1188,
+            "(1, 5, 1)": 1140,
+            "(2, 3, 0)": 1447,
+            "(2, 3, 1)": 1466,
+            "(2, 4, 0)": 1453,
+            "(2, 4, 1)": 1436,
+            "(2, 5, 0)": 1497,
+            "(2, 5, 1)": 1492,
+            "(3, 4, 0)": 1420,
+            "(3, 4, 1)": 1442,
+            "(3, 5, 0)": 1453,
+            "(3, 5, 1)": 1436,
+            "(4, 5, 0)": 1447,
+            "(4, 5, 1)": 1466
+        },
+        "determinant": 6,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 48,
+    "phase": "FULL_SEARCH"
+}

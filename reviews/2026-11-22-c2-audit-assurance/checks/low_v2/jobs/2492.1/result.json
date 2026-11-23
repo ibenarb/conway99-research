@@ -1,0 +1,160 @@
+{
+    "status": "SECOND_LOW_SOLVER_CLOSED",
+    "chart": 2492,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795398171.4285448,
+    "identity": {
+        "pid": 95740,
+        "created": 134398717671518551,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1531709.546,
+        "intervals": [
+            {
+                "seconds": 2.0152823000680655,
+                "system_busy_cpu": 2.0623661508165005,
+                "system_idle_cpu": 21.902948782167723,
+                "known_c2_cpu": 0.0,
+                "conservative_other_cpu": 2.0623661508165005,
+                "named_other_load": [
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015506512412154139
+                    },
+                    {
+                        "pid": 16120,
+                        "created": 134393100641512042,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015506512412154139
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0156689998693764,
+                "system_busy_cpu": 6.495982227661649,
+                "system_idle_cpu": 17.503493878353225,
+                "known_c2_cpu": 0.0,
+                "conservative_other_cpu": 6.495982227661649,
+                "named_other_load": [
+                    {
+                        "pid": 77560,
+                        "created": 134398714820605344,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.08526945644901926
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.02325530630427798
+                    },
+                    {
+                        "pid": 90136,
+                        "created": 134398717699433271,
+                        "name": "compact.exe",
+                        "logical_cpu_equivalents": 0.01550353753618532
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.0623661508165005,
+            6.495982227661649
+        ],
+        "c2_worker_budget": 13,
+        "ram_free_gib": 34.00059509277344,
+        "disk_free_gib": 35.273067474365234,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 95740,
+                "created": 134398717671518551,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 7925400,
+                "int64_bound": 4235817600
+            },
+            "unsigned": {
+                "denominator": 87768,
+                "int64_bound": 53835264
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 1578,
+            "(0, 1, 1)": 1610,
+            "(0, 2, 0)": 1491,
+            "(0, 2, 1)": 1482,
+            "(0, 3, 0)": 1488,
+            "(0, 3, 1)": 1432,
+            "(0, 4, 0)": 1665,
+            "(0, 4, 1)": 1654,
+            "(0, 5, 0)": 1537,
+            "(0, 5, 1)": 1542,
+            "(1, 2, 0)": 1482,
+            "(1, 2, 1)": 1491,
+            "(1, 3, 0)": 1665,
+            "(1, 3, 1)": 1654,
+            "(1, 4, 0)": 1488,
+            "(1, 4, 1)": 1432,
+            "(1, 5, 0)": 1542,
+            "(1, 5, 1)": 1537,
+            "(2, 3, 0)": 1537,
+            "(2, 3, 1)": 1542,
+            "(2, 4, 0)": 1542,
+            "(2, 4, 1)": 1537,
+            "(2, 5, 0)": 1180,
+            "(2, 5, 1)": 1193,
+            "(3, 4, 0)": 1578,
+            "(3, 4, 1)": 1610,
+            "(3, 5, 0)": 1491,
+            "(3, 5, 1)": 1482,
+            "(4, 5, 0)": 1482,
+            "(4, 5, 1)": 1491
+        },
+        "determinant": 3,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 160,
+    "phase": "FULL_SEARCH",
+    "stars": 160,
+    "open": 0,
+    "closed": 160,
+    "viable_planes": 1262,
+    "closed_planes": 1262,
+    "full_depth": 30,
+    "depth_cutoff": false,
+    "execution_driver_sha256": "df11b91d90899cfbaa8f4076ce12886b27fb0c00ef27def420ab50327bf2ef46",
+    "elapsed_seconds": 35.44260883331299,
+    "source_hashes": {
+        "residual_gram_v1.cpp": "706eea083f47304a82fdb867352eb4ee0be7de69b697ee9d6f7342a444a95939",
+        "residual_gram_v1_checked": "fae1a635dcb385a8d5bbfa7587b8a7ae06814fe77d5297c12f6c16d473bdb55a",
+        "low_setup_v1.py": "80f75e18413d615b55f78603d0fb85bc744fb27d97b5345f4bbfa603b8a1d72b",
+        "own_setup.py": "8f3179d112054b64db045ed9cea00b42af91ce50f506a5678ed3080346046810",
+        "own_local.py": "598ca0b991659ad05e639f9f0a9d07cb9207e96b912da83e68d50e9da4b7abd4",
+        "star_dump_checked": "9c7dab35e32f9bfad173a5e55ecf1a2c7520a730ff9fcd15c5e3d35bed2e55aa",
+        "geometry_own.json": "3c00c2eaf0553f89cb135072438705ef201d8d7e729365648a8ca3bd9dddc64f",
+        "layouts.tsv": "2b776dcaadb5edea804fa38b7821ab91b703216d4ab99ca9f7497f5e9743ccce",
+        "run_one_low_v1.py": "928e3b7ccf548c9f71a75ae1e1e3cb274fd1b6d27402ee2c150c80b8de066a0d"
+    },
+    "evidence_hashes": {
+        "identity.json": "5fe24c464b92f1af844e80bcef369d1b042c4d1f2ea6bb32f598d13d1e517433",
+        "progress.json": "3ee3cf4ed59bf39c7a801d97fc8fb43ff8f6178787774f146fac3a51869a9491",
+        "setup.txt": "9d2c9626385297a5fe23ded1b162cff8cb35fd3896b660e732b2acc8b9f0857b",
+        "solver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solver.stdout": "978f4964b2299f0599b666972ef3a83e4fbcd380ba87c79d77da723a65df58ad",
+        "stars.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stars.txt": "d771ecad7aed7d0c1aa60b91eb1a2f3e9e0c89ea290a8d4cd0d6ace5fb469026"
+    }
+}

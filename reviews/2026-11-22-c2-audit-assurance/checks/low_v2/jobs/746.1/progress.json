@@ -1,0 +1,125 @@
+{
+    "status": "RUNNING",
+    "chart": 746,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795395494.0094423,
+    "identity": {
+        "pid": 96016,
+        "created": 134398690897134859,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1529032.125,
+        "intervals": [
+            {
+                "seconds": 2.0154784000478685,
+                "system_busy_cpu": 5.1786712275120905,
+                "system_idle_cpu": 18.823074461675684,
+                "known_c2_cpu": 0.00775250183759295,
+                "conservative_other_cpu": 5.170918725674498,
+                "named_other_load": [
+                    {
+                        "pid": 7784,
+                        "created": 134398690755832584,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.05426751286315065
+                    },
+                    {
+                        "pid": 16900,
+                        "created": 134383400614011854,
+                        "name": "netbird-ui.exe",
+                        "logical_cpu_equivalents": 0.03876250918796475
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0152839000802487,
+                "system_busy_cpu": 4.078209526544984,
+                "system_idle_cpu": 20.018891630302566,
+                "known_c2_cpu": 0.007753250050465749,
+                "conservative_other_cpu": 4.070456276494518,
+                "named_other_load": [
+                    {
+                        "pid": 58432,
+                        "created": 134398690826516680,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.18607800121117798
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.03876625025232874
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            5.170918725674498,
+            4.070456276494518
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 33.97189712524414,
+        "disk_free_gib": 36.21782302856445,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 96016,
+                "created": 134398690897134859,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 83160,
+                "int64_bound": 44226000
+            },
+            "unsigned": {
+                "denominator": 65880,
+                "int64_bound": 34467840
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 558,
+            "(0, 1, 1)": 528,
+            "(0, 2, 0)": 558,
+            "(0, 2, 1)": 528,
+            "(0, 3, 0)": 562,
+            "(0, 3, 1)": 562,
+            "(0, 4, 0)": 562,
+            "(0, 4, 1)": 562,
+            "(0, 5, 0)": 562,
+            "(0, 5, 1)": 562,
+            "(1, 2, 0)": 576,
+            "(1, 2, 1)": 588,
+            "(1, 3, 0)": 779,
+            "(1, 3, 1)": 779,
+            "(1, 4, 0)": 779,
+            "(1, 4, 1)": 779,
+            "(1, 5, 0)": 779,
+            "(1, 5, 1)": 779,
+            "(2, 3, 0)": 779,
+            "(2, 3, 1)": 779,
+            "(2, 4, 0)": 779,
+            "(2, 4, 1)": 779,
+            "(2, 5, 0)": 779,
+            "(2, 5, 1)": 779,
+            "(3, 4, 0)": 548,
+            "(3, 4, 1)": 564,
+            "(3, 5, 0)": 564,
+            "(3, 5, 1)": 548,
+            "(4, 5, 0)": 548,
+            "(4, 5, 1)": 564
+        },
+        "determinant": 3,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 1692,
+    "phase": "FULL_SEARCH"
+}

@@ -1,0 +1,149 @@
+{
+    "status": "RUNNING",
+    "chart": 1781,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795396186.8918188,
+    "identity": {
+        "pid": 75200,
+        "created": 134398697826105617,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1529725.0,
+        "intervals": [
+            {
+                "seconds": 2.015920199919492,
+                "system_busy_cpu": 4.828750165998016,
+                "system_idle_cpu": 19.245243438480053,
+                "known_c2_cpu": 0.007750802834667762,
+                "conservative_other_cpu": 4.820999363163348,
+                "named_other_load": [
+                    {
+                        "pid": 75444,
+                        "created": 134398697472574293,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.7518278749627729
+                    },
+                    {
+                        "pid": 72040,
+                        "created": 134398697684650452,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.08525883118134538
+                    },
+                    {
+                        "pid": 32604,
+                        "created": 134398697781823521,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.015501605669335524
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0156948999501765,
+                "system_busy_cpu": 4.93006158831162,
+                "system_idle_cpu": 19.030347797649416,
+                "known_c2_cpu": 0.007751669164011982,
+                "conservative_other_cpu": 4.922309919147608,
+                "named_other_load": [
+                    {
+                        "pid": 94712,
+                        "created": 134398697755479984,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.31781843572449126
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.11627503746017973
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.062013353312095856
+                    },
+                    {
+                        "pid": 12068,
+                        "created": 134383400417240469,
+                        "name": "explorer.exe",
+                        "logical_cpu_equivalents": 0.015503338328023964
+                    },
+                    {
+                        "pid": 95600,
+                        "created": 134398697848657271,
+                        "name": "conhost.exe",
+                        "logical_cpu_equivalents": 0.015503338328023964
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.820999363163348,
+            4.922309919147608
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 34.272953033447266,
+        "disk_free_gib": 35.936954498291016,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 75200,
+                "created": 134398697826105617,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 840,
+                "int64_bound": 554400
+            },
+            "unsigned": {
+                "denominator": 480,
+                "int64_bound": 232704
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 244,
+            "(0, 1, 1)": 268,
+            "(0, 2, 0)": 524,
+            "(0, 2, 1)": 524,
+            "(0, 3, 0)": 524,
+            "(0, 3, 1)": 524,
+            "(0, 4, 0)": 524,
+            "(0, 4, 1)": 524,
+            "(0, 5, 0)": 524,
+            "(0, 5, 1)": 524,
+            "(1, 2, 0)": 524,
+            "(1, 2, 1)": 524,
+            "(1, 3, 0)": 524,
+            "(1, 3, 1)": 524,
+            "(1, 4, 0)": 524,
+            "(1, 4, 1)": 524,
+            "(1, 5, 0)": 524,
+            "(1, 5, 1)": 524,
+            "(2, 3, 0)": 504,
+            "(2, 3, 1)": 504,
+            "(2, 4, 0)": 504,
+            "(2, 4, 1)": 504,
+            "(2, 5, 0)": 500,
+            "(2, 5, 1)": 544,
+            "(3, 4, 0)": 500,
+            "(3, 4, 1)": 544,
+            "(3, 5, 0)": 504,
+            "(3, 5, 1)": 504,
+            "(4, 5, 0)": 504,
+            "(4, 5, 1)": 504
+        },
+        "determinant": 5,
+        "common_image": "8_lines"
+    },
+    "expected_stars": 688,
+    "phase": "FULL_SEARCH"
+}

@@ -1,0 +1,82 @@
+{
+    "status": "RUNNING",
+    "chart": 2510,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795398312.7183244,
+    "identity": {
+        "pid": 94068,
+        "created": 134398719084246256,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1531850.828,
+        "intervals": [
+            {
+                "seconds": 2.0153635998722166,
+                "system_busy_cpu": 5.062672066046507,
+                "system_idle_cpu": 18.948193766336388,
+                "known_c2_cpu": 0.007752943439581174,
+                "conservative_other_cpu": 5.054919122606925,
+                "named_other_load": [
+                    {
+                        "pid": 82892,
+                        "created": 134398718974495333,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.0001297037059715
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015505886879162349
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0151065001264215,
+                "system_busy_cpu": 4.497280912662158,
+                "system_idle_cpu": 19.408093317919622,
+                "known_c2_cpu": 0.007753932608038204,
+                "conservative_other_cpu": 4.48952698005412,
+                "named_other_load": [
+                    {
+                        "pid": 82892,
+                        "created": 134398718974495333,
+                        "name": "powershell.exe",
+                        "logical_cpu_equivalents": 1.0002573064369282
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.015507865216076408
+                    },
+                    {
+                        "pid": 93632,
+                        "created": 134398684844117364,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015507865216076408
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            5.054919122606925,
+            4.48952698005412
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 34.097259521484375,
+        "disk_free_gib": 35.54804611206055,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 94068,
+                "created": 134398719084246256,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

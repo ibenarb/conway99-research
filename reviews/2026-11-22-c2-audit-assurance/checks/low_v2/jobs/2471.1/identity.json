@@ -1,0 +1,57 @@
+{
+    "status": "RUNNING",
+    "chart": 2471,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795397219.338277,
+    "identity": {
+        "pid": 94676,
+        "created": 134398708150634381,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1530757.453,
+        "intervals": [
+            {
+                "seconds": 2.0160295001696795,
+                "system_busy_cpu": 4.076701258244618,
+                "system_idle_cpu": 19.902982568768397,
+                "known_c2_cpu": 0.007750382620236916,
+                "conservative_other_cpu": 4.068950875624381,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0160664999857545,
+                "system_busy_cpu": 4.634643748143239,
+                "system_idle_cpu": 19.383351194157598,
+                "known_c2_cpu": 0.007750240381510435,
+                "conservative_other_cpu": 4.626893507761729,
+                "named_other_load": [
+                    {
+                        "pid": 97016,
+                        "created": 134398708095770036,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.0697521634335939
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            4.068950875624381,
+            4.626893507761729
+        ],
+        "c2_worker_budget": 15,
+        "ram_free_gib": 34.11333084106445,
+        "disk_free_gib": 35.54051208496094,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 94676,
+                "created": 134398708150634381,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

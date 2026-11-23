@@ -1,0 +1,106 @@
+{
+    "status": "RUNNING",
+    "chart": 1754,
+    "own_parity": 0,
+    "packet_parity": 1,
+    "started": 1795395974.7850082,
+    "identity": {
+        "pid": 42888,
+        "created": 134398695704987521,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1529512.89,
+        "intervals": [
+            {
+                "seconds": 2.0154075000900775,
+                "system_busy_cpu": 6.031658609713759,
+                "system_idle_cpu": 17.970931436139452,
+                "known_c2_cpu": 0.007752774562614086,
+                "conservative_other_cpu": 6.023905835151145,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0149672999978065,
+                "system_busy_cpu": 5.90890482441723,
+                "system_idle_cpu": 18.098928950380337,
+                "known_c2_cpu": 0.007754468273513426,
+                "conservative_other_cpu": 5.901150356143717,
+                "named_other_load": [
+                    {
+                        "pid": 94360,
+                        "created": 134398695563449783,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.0930536192821611
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            6.023905835151145,
+            5.901150356143717
+        ],
+        "c2_worker_budget": 13,
+        "ram_free_gib": 34.019649505615234,
+        "disk_free_gib": 36.0109977722168,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 42888,
+                "created": 134398695704987521,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 4200,
+                "int64_bound": 2138400
+            },
+            "unsigned": {
+                "denominator": 1080,
+                "int64_bound": 585216
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 1551,
+            "(0, 1, 1)": 1694,
+            "(0, 2, 0)": 1748,
+            "(0, 2, 1)": 1660,
+            "(0, 3, 0)": 1827,
+            "(0, 3, 1)": 1725,
+            "(0, 4, 0)": 1660,
+            "(0, 4, 1)": 1748,
+            "(0, 5, 0)": 1725,
+            "(0, 5, 1)": 1827,
+            "(1, 2, 0)": 1827,
+            "(1, 2, 1)": 1725,
+            "(1, 3, 0)": 1748,
+            "(1, 3, 1)": 1660,
+            "(1, 4, 0)": 1725,
+            "(1, 4, 1)": 1827,
+            "(1, 5, 0)": 1660,
+            "(1, 5, 1)": 1748,
+            "(2, 3, 0)": 1551,
+            "(2, 3, 1)": 1694,
+            "(2, 4, 0)": 1748,
+            "(2, 4, 1)": 1660,
+            "(2, 5, 0)": 1827,
+            "(2, 5, 1)": 1725,
+            "(3, 4, 0)": 1827,
+            "(3, 4, 1)": 1725,
+            "(3, 5, 0)": 1748,
+            "(3, 5, 1)": 1660,
+            "(4, 5, 0)": 1551,
+            "(4, 5, 1)": 1694
+        },
+        "determinant": 4,
+        "common_image": "whole_F7_squared_both_cases"
+    },
+    "expected_stars": 108,
+    "phase": "FULL_SEARCH"
+}

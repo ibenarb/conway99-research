@@ -1,0 +1,131 @@
+{
+    "status": "RUNNING",
+    "chart": 1752,
+    "own_parity": 1,
+    "packet_parity": 0,
+    "started": 1795395783.8850944,
+    "identity": {
+        "pid": 28388,
+        "created": 134398693796096316,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "resource_at_admission": {
+        "measured_at": 1529322.0,
+        "intervals": [
+            {
+                "seconds": 2.0156465999316424,
+                "system_busy_cpu": 5.147231662709054,
+                "system_idle_cpu": 18.852511150163284,
+                "known_c2_cpu": 0.007751854913718456,
+                "conservative_other_cpu": 5.139479807795336,
+                "named_other_load": [
+                    {
+                        "pid": 97960,
+                        "created": 134398693583924686,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9999892838696808
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.015503709827436912
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0154520000796765,
+                "system_busy_cpu": 4.628304221401072,
+                "system_idle_cpu": 19.32724024112709,
+                "known_c2_cpu": 0.007752603385931443,
+                "conservative_other_cpu": 4.62055161801514,
+                "named_other_load": [
+                    {
+                        "pid": 97960,
+                        "created": 134398693583924686,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0000858367851562
+                    },
+                    {
+                        "pid": 76432,
+                        "created": 134398693725404212,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.279093721893532
+                    },
+                    {
+                        "pid": 90600,
+                        "created": 134398503049227597,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.031010413543725773
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            5.139479807795336,
+            4.62055161801514
+        ],
+        "c2_worker_budget": 14,
+        "ram_free_gib": 34.03599548339844,
+        "disk_free_gib": 36.07577133178711,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 28388,
+                "created": 134398693796096316,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    },
+    "rank": 9,
+    "setup": {
+        "bounds": {
+            "signed": {
+                "denominator": 1709400,
+                "int64_bound": 837496800
+            },
+            "unsigned": {
+                "denominator": 250344,
+                "int64_bound": 139627008
+            }
+        },
+        "attachments": {
+            "(0, 1, 0)": 1649,
+            "(0, 1, 1)": 1651,
+            "(0, 2, 0)": 1761,
+            "(0, 2, 1)": 1738,
+            "(0, 3, 0)": 1804,
+            "(0, 3, 1)": 1801,
+            "(0, 4, 0)": 1738,
+            "(0, 4, 1)": 1761,
+            "(0, 5, 0)": 1801,
+            "(0, 5, 1)": 1804,
+            "(1, 2, 0)": 1801,
+            "(1, 2, 1)": 1804,
+            "(1, 3, 0)": 1738,
+            "(1, 3, 1)": 1761,
+            "(1, 4, 0)": 1804,
+            "(1, 4, 1)": 1801,
+            "(1, 5, 0)": 1761,
+            "(1, 5, 1)": 1738,
+            "(2, 3, 0)": 1539,
+            "(2, 3, 1)": 1562,
+            "(2, 4, 0)": 1734,
+            "(2, 4, 1)": 1737,
+            "(2, 5, 0)": 1749,
+            "(2, 5, 1)": 1756,
+            "(3, 4, 0)": 1749,
+            "(3, 4, 1)": 1756,
+            "(3, 5, 0)": 1734,
+            "(3, 5, 1)": 1737,
+            "(4, 5, 0)": 1539,
+            "(4, 5, 1)": 1562
+        },
+        "determinant": 2,
+        "common_image": "whole_F7_squared_both_cases"
+    },
+    "expected_stars": 158,
+    "phase": "FULL_SEARCH"
+}
