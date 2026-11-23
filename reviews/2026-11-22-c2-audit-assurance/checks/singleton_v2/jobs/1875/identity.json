@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 1875,
+    "identity": {
+        "pid": 61892,
+        "created": 134399091444317916,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795435548.7151756,
+    "resource": {
+        "measured_at": 1569086.828,
+        "intervals": [
+            {
+                "seconds": 2.016752199968323,
+                "system_busy_cpu": 3.083546902835994,
+                "system_idle_cpu": 20.903039054903296,
+                "known_c2_cpu": 0.0077476052835075224,
+                "conservative_other_cpu": 3.0757992975524866,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.016358300112188,
+                "system_busy_cpu": 3.0918983990360873,
+                "system_idle_cpu": 20.907122507767827,
+                "known_c2_cpu": 0.00774911879457666,
+                "conservative_other_cpu": 3.0841492802415105,
+                "named_other_load": [
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.01549823758915332
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            3.0757992975524866,
+            3.0841492802415105
+        ],
+        "c2_worker_budget": 16,
+        "ram_free_gib": 32.73017120361328,
+        "disk_free_gib": 50.412147521972656,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 61892,
+                "created": 134399091444317916,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

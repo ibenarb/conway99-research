@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 1689,
+    "identity": {
+        "pid": 89416,
+        "created": 134399067969776211,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795433201.2558794,
+    "resource": {
+        "measured_at": 1566739.359,
+        "intervals": [
+            {
+                "seconds": 2.0160611998289824,
+                "system_busy_cpu": 2.154572490343284,
+                "system_idle_cpu": 21.97198924504752,
+                "known_c2_cpu": 0.007750260756630519,
+                "conservative_other_cpu": 2.1468222295866535,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0164423000533134,
+                "system_busy_cpu": 2.1386676920465217,
+                "system_idle_cpu": 21.851604679605767,
+                "known_c2_cpu": 0.007748795985675804,
+                "conservative_other_cpu": 2.130918896060846,
+                "named_other_load": [
+                    {
+                        "pid": 47420,
+                        "created": 134398919216666132,
+                        "name": "dllhost.exe",
+                        "logical_cpu_equivalents": 0.030995183942703217
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            2.1468222295866535,
+            2.130918896060846
+        ],
+        "c2_worker_budget": 17,
+        "ram_free_gib": 32.72150802612305,
+        "disk_free_gib": 52.93600082397461,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 89416,
+                "created": 134399067969776211,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}
