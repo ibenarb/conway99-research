@@ -1,0 +1,55 @@
+{
+    "status": "RUNNING",
+    "chart": 457,
+    "identity": {
+        "pid": 72300,
+        "created": 134398696553321213,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795396059.6165614,
+    "resource": {
+        "measured_at": 1529597.734,
+        "intervals": [
+            {
+                "seconds": 2.015994500136003,
+                "system_busy_cpu": 7.091723216028369,
+                "system_idle_cpu": 16.90387796082828,
+                "known_c2_cpu": 0.007750517175987289,
+                "conservative_other_cpu": 7.083972698852382,
+                "named_other_load": []
+            },
+            {
+                "seconds": 2.0159819999244064,
+                "system_busy_cpu": 6.735241187921886,
+                "system_idle_cpu": 17.26050877503112,
+                "known_c2_cpu": 0.0,
+                "conservative_other_cpu": 6.735241187921886,
+                "named_other_load": [
+                    {
+                        "pid": 84628,
+                        "created": 134398696482690917,
+                        "name": "exited-retained",
+                        "logical_cpu_equivalents": 0.31777317457399007
+                    }
+                ]
+            }
+        ],
+        "foreign_samples": [
+            7.083972698852382,
+            6.735241187921886
+        ],
+        "c2_worker_budget": 12,
+        "ram_free_gib": 33.95198059082031,
+        "disk_free_gib": 35.973873138427734,
+        "reserve_cpu_equivalents": 4,
+        "roots_requested": [
+            {
+                "pid": 72300,
+                "created": 134398696553321213,
+                "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+            }
+        ],
+        "missing_roots": [],
+        "limitations": "Unattributed VM/Linux CPU remains conservatively foreign. Missing historical processes never imply a mathematical result or authorize a restart."
+    }
+}

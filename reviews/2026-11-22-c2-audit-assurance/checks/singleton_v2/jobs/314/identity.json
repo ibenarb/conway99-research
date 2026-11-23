@@ -1,0 +1,134 @@
+{
+    "status": "RUNNING",
+    "chart": 314,
+    "identity": {
+        "pid": 73016,
+        "created": 134398616293082850,
+        "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+    },
+    "started": 1795388033.6562958,
+    "resource": {
+        "measured_at": 1521579.687,
+        "foreign_samples": [
+            5.3637671650495236,
+            5.534466957109201
+        ],
+        "legacy_allocation_unknown": true,
+        "legacy_reserved_slots": 0,
+        "ram_free_gib": 12.686805725097656,
+        "disk_free_gib": 35.57405090332031,
+        "intervals": [
+            {
+                "seconds": 2.0216667999047786,
+                "system_busy_cpu": 14.406429388548004,
+                "system_idle_cpu": 9.707336540781274,
+                "known_c2_cpu": 9.04266222349848,
+                "conservative_other_cpu": 5.3637671650495236,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 1.0047402470553866
+                    },
+                    {
+                        "pid": 97056,
+                        "created": 134398616309364514,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.2936933029854207
+                    },
+                    {
+                        "pid": 21216,
+                        "created": 134383400710028416,
+                        "name": "ChatGPT.exe",
+                        "logical_cpu_equivalents": 0.21640559167346787
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.0386438556559764
+                    },
+                    {
+                        "pid": 27096,
+                        "created": 134394970287509683,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015457542262390562
+                    },
+                    {
+                        "pid": 29336,
+                        "created": 134395031583049110,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015457542262390562
+                    },
+                    {
+                        "pid": 54468,
+                        "created": 134398552004565595,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.015457542262390562
+                    }
+                ]
+            },
+            {
+                "seconds": 2.0186000000685453,
+                "system_busy_cpu": 14.699234617552975,
+                "system_idle_cpu": 9.211210739804129,
+                "known_c2_cpu": 9.164767660443774,
+                "conservative_other_cpu": 5.534466957109201,
+                "named_other_load": [
+                    {
+                        "pid": 88612,
+                        "created": 134396521421769916,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9985262062476745
+                    },
+                    {
+                        "pid": 97056,
+                        "created": 134398616309364514,
+                        "name": "python.exe",
+                        "logical_cpu_equivalents": 0.9985262062476745
+                    },
+                    {
+                        "pid": 9328,
+                        "created": 134383400562149780,
+                        "name": "Everything.exe",
+                        "logical_cpu_equivalents": 0.030962052906904635
+                    },
+                    {
+                        "pid": 94364,
+                        "created": 134398581820847470,
+                        "name": "brave.exe",
+                        "logical_cpu_equivalents": 0.030962052906904635
+                    }
+                ]
+            }
+        ],
+        "legacy_before": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "legacy_after": {
+            "roots": [
+                {
+                    "pid": 88520,
+                    "created": 134394874836427612,
+                    "image": "c:\\users\\rb\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+                }
+            ],
+            "unknown": true,
+            "slots": 0,
+            "reason": "E028 has automatic later parallel phases without shared reservations",
+            "inventory_sha256": "bdf22453010f402d00553db7a3971114e977874dd89e416081d3a0d8e7664242"
+        },
+        "limitations": "Callback not integrated into a research controller. Other work is measured by CPU time including all threads; unexplained busy time remains foreign. Uncoordinated legacy future starts prevent new shared-reservation launches. Completed legacy receipts affect occupancy only, never mathematical exclusion."
+    }
+}
